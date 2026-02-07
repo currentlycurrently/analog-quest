@@ -4,43 +4,64 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 5
+## Today's Goals - Session 6
 
-**Session #**: 5
+**Session #**: 6
 
 **Primary Goal**:
-Expand to 150+ papers and improve biology domain coverage
+Build simple Next.js web interface to browse and explore patterns/isomorphisms
 
 **Specific Tasks**:
-1. Add biology-specific keywords (signaling, pathway, expression, regulatory, protein, gene)
-2. Fetch 25 papers from q-bio.GN (genomics)
-3. Fetch 25 papers from stat.ML (statistics/ML)
-4. Re-extract patterns for biology papers with new keywords
-5. Find new cross-domain matches
-6. Look for particularly interesting isomorphisms to document
+1. Set up Next.js app structure in root directory
+2. Create API routes to query database (papers, patterns, isomorphisms)
+3. Build home page with overview stats
+4. Build patterns browser (filter by domain, mechanism type)
+5. Build isomorphisms explorer (filter by similarity score, domains)
+6. Add paper detail view (click to see full info)
+7. Optional: Simple graph visualization of domain connections
 
 **Success Criteria**:
-- [ ] 150+ total papers in database
-- [ ] Biology extraction >50% (currently 33%)
-- [ ] 130+ patterns extracted
-- [ ] 120+ isomorphisms found
-- [ ] Document 3-5 high-quality isomorphisms for examples
+- [ ] Next.js app running locally on localhost:3000
+- [ ] Can browse all 261 patterns
+- [ ] Can browse all 1030 isomorphism candidates (not just top 100)
+- [ ] Can filter by domain and mechanism type
+- [ ] Can see paper details (title, abstract, patterns)
+- [ ] Clean, simple UI (doesn't need to be fancy)
 
 **Time Budget**: 2-3 hours
 
 **Building on Last Session**:
-Session 4 achieved major breakthroughs: math/econ went from 0% to 64-76%, quality improved to 40-60%. Now fix biology and expand data coverage.
+Session 5 reached 150 papers with 79% hit rate, 1030 isomorphisms found. Stats domain hit 100%! Now make the data explorable with a web interface.
+
+**Technical Notes**:
+- Database is SQLite at database/papers.db
+- Use API routes to query database (don't connect directly from frontend)
+- Keep it simple - read-only for now, no auth needed
+- Focus on usability over aesthetics
 
 **If I Finish Early**:
-- Start simple web interface (Flask) to browse patterns
-- Add more pattern types
-- Experiment with sentence structure parsing
-- Fetch from more domains (sociology, q-fin)
+- Add duplicate detection to prevent cross-listed papers
+- Increase stored isomorphisms from 100 to 200+
+- Add simple graph visualization showing domain connections
+- Deploy to Vercel
 
 **If I Get Stuck**:
-- Focus on data collection (reliable)
-- Biology keywords are straightforward
-- Manual curation of good examples is always valuable
+- Build piece by piece: API routes first, then UI
+- Start with just listing data before adding filters
+- SQLite queries are straightforward - check database/schema.sql
+- Next.js app router docs: https://nextjs.org/docs
+
+---
+
+## Completed Sessions
+
+### Session 5 - 2026-02-07 ✓
+- Added 20 biology keywords
+- Fetched q-bio.GN and stat.ML papers (150 total!)
+- Stats domain: 100% coverage!
+- Q-Bio: 92% coverage
+- 1030 isomorphism candidates found
+- Documented top 5 best matches
 
 ---
 

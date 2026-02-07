@@ -97,6 +97,24 @@ def simple_extract(abstract):
         'inhibit': 'inhibition',
         'activation': 'activation',
         'binding': 'binding',
+
+        # Materials science keywords (added Session 9)
+        'crystal': 'crystal_structure',
+        'crystalline': 'crystal_structure',
+        'lattice': 'lattice',
+        'defect': 'defect',
+        'dislocation': 'dislocation',
+        'grain boundary': 'grain_boundary',
+        'nucleation': 'nucleation',
+        'elastic': 'elastic',
+        'plastic': 'plastic',
+        'deformation': 'deformation',
+        'fracture': 'fracture',
+        'annealing': 'annealing',
+        'microstructure': 'microstructure',
+        'strain': 'strain',
+        'interface': 'interface',
+        'morphology': 'morphology',
     }
 
     abstract_lower = abstract.lower()

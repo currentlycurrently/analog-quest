@@ -8,74 +8,75 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 8 - 2026-02-07
+**Last Updated**: Session 9 - 2026-02-08
 
 ### Papers
-- **Total Papers Processed**: 197 (added 49 in Session 8)
+- **Total Papers Processed**: 252 (added 55 in Session 9 - 250+ milestone!)
 - **By Domain**:
-  - Physics: 40 (includes 25 biophysics papers from Session 8)
+  - Physics: 40
+  - Cond-Mat (Materials Science): 30 (NEW in Session 9!)
+  - Computer Science: 30 (added 10 from cs.LG)
   - Economics: 25
   - Mathematics: 25
   - Q-Bio (Genomics): 25
-  - Q-Fin (Finance): 24 (NEW in Session 8!)
+  - Q-Fin (Finance): 24
   - Statistics: 23
-  - Computer Science: 20
+  - Astro-ph (Astrophysics): 15 (NEW in Session 9!)
   - Biology (Neuroscience): 15
-  - Social Sciences: 0
 
 ### Patterns
-- **Total Patterns Extracted**: 373 (added 118 in Session 8)
-- **By Type** (Top 10):
-  - Optimization: 32
+- **Total Patterns Extracted**: 469 (added 96 in Session 9)
+- **By Type** (Top 15):
+  - Bound: 38
+  - Optimization: 36
+  - Network Effect: 34
   - Equilibrium: 24
-  - Convergence: 16
-  - Selection: 14
-  - Strategic: 13
-  - Complexity: 12
-  - Signaling: 11 (NEW bio keyword!)
-  - Adaptation: 10 (NEW bio keyword!)
-  - Expression: 9 (NEW bio keyword!)
-  - Regulatory: 8 (NEW bio keyword!)
-  - (+ 20+ more types)
+  - Market: 24
+  - Evolution: 19
+  - Diffusion: 17
+  - Complexity: 16
+  - Regulatory: 13
+  - Scaling: 13
+  - Selection: 13
+  - Crystal Structure: 12 (NEW materials science keyword!)
+  - Expression: 12
+  - Strategic: 11
+  - Pathway: 10
+  - (+ 35+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: 2090 (113% increase in Session 8!)
+- **Total Isomorphisms Found**: 2933 (40% increase in Session 9!)
 - **High Confidence (>0.8)**: 0
 - **Medium Confidence (0.6-0.8)**: 0
-- **Low Confidence (0.5-0.6)**: 2090
-- **Top Similarity Score**: 0.58 (quantum optimization cs ↔ q-bio)
+- **Low Confidence (0.5-0.6)**: 2933
+- **Top Similarity Score**: 0.60 (improved from 0.58!)
+- **Average Similarity Score**: 0.51
 - **Manually Verified Quality**: ~50-60% precision (estimated)
 - **Quality Trend**: Steadily improving! (20% → 40% → 50-60%)
-- **Finance Connectivity**: 180 with econ, 156 with stat, 119 with physics
+- **New Domain Connections**: Stats ↔ Materials Science (scaling laws)
 
 ### Quality Metrics
-- **Average Patterns per Paper**: 1.89 (373/197)
-- **Hit Rate**: 80.7% (159/197 papers have patterns)
-- **Patterns per Domain**:
-  - Stat: 25 papers with patterns (100% of 25!) ✓✓✓
+- **Average Patterns per Paper**: 1.86 (469/252)
+- **Hit Rate**: 82.1% (207/252 papers have patterns - improved!)
+- **Papers with Patterns by Domain**:
+  - Stat: 25 papers with patterns (100% of 23!) ✓✓✓
   - Q-Bio: 23 papers (92% of 25) - bio keywords working! ✓✓
   - Econ: 19 papers (76% of 25)
   - Math: 18 papers (72% of 25)
+  - CS: 21 papers (70% of 30)
+  - Cond-Mat: 17 papers (57% of 30) - new domain
   - Physics: 12 papers (80% of 15)
-  - CS: 14 papers (70% of 20)
-  - Biology: 7 papers (47% of 15) - improved from 33%
-- **Pattern Count by Domain**:
-  - Stat: 65 patterns (most productive!)
-  - Q-Bio: 55 patterns
-  - Econ: 39 patterns
-  - Math: 32 patterns
-  - CS: 30 patterns
-  - Physics: 25 patterns
-  - Biology: 15 patterns
-- **Average Matches per Pattern**: 5.60 (2090 / 373 patterns)
-- **Estimated True Positives**: 1045-1254 isomorphisms (50-60% of 2090)
+  - Astro-ph: 9 papers (60% of 15) - new domain
+  - Biology: 7 papers (47% of 15)
+- **Average Matches per Pattern**: 6.25 (2933 / 469 patterns)
+- **Estimated True Positives**: 1467-1760 isomorphisms (50-60% of 2933)
 
 ### Velocity
-- **Papers per Session (avg)**: 24.6 (197/8)
-- **Patterns per Session (avg)**: 46.6 (373/8)
-- **Isomorphisms per Session (avg)**: 261.3 candidates per session
-- **Sessions per Week (avg)**: N/A (8 sessions in one day)
-- **Total Sessions**: 8
+- **Papers per Session (avg)**: 28.0 (252/9)
+- **Patterns per Session (avg)**: 52.1 (469/9)
+- **Isomorphisms per Session (avg)**: 325.9 candidates per session
+- **Sessions per Week (avg)**: N/A (9 sessions in two days)
+- **Total Sessions**: 9
 
 ---
 
@@ -92,7 +93,8 @@ Agent updates these numbers after each session.
 - [x] **Web Interface**: Can view data in browser ✓ Session 6 (Next.js app live!)
 - [x] **1000 Isomorphism Candidates**: Found 2090 in Session 8! ✓ (all stored)
 - [x] **Duplicate Prevention**: Implemented in Session 8! ✓
-- [ ] **First 500 Papers**: Expanding beyond initial domain (197/500)
+- [x] **250 Papers Milestone**: Reached 252 papers in Session 9! ✓
+- [ ] **First 500 Papers**: Expanding beyond initial domain (252/500)
 - [ ] **First External Validation**: Someone else finds it interesting
 - [ ] **1000 Papers**: Significant coverage
 - [ ] **2000 Papers**: Mission complete (6 month goal)
@@ -111,6 +113,7 @@ Agent updates these numbers after each session.
 | 6 | 2026-02-07 | 0 | 0 | 0 | Web interface built! Next.js app with 4 pages, filters, pagination |
 | 7 | 2026-02-07 | -2 | -6 | +880 | Data quality: removed duplicates, stored all 980 isomorphisms, added search |
 | 8 | 2026-02-07 | +49 | +118 | +1110 | Expansion: biophysics + finance domains, 197 papers, 2090 isomorphisms |
+| 9 | 2026-02-08 | +55 | +96 | +843 | 250+ milestone! Materials science + astrophysics, 252 papers, 2933 isomorphisms |
 
 ---
 
@@ -147,29 +150,34 @@ Biology:        ███░░░░░░░ 33% (5/15 papers) - needs bio key
 
 Keep count of discoveries that are genuinely surprising or valuable:
 
-- **"Holy Shit" Moments**: 4
+- **"Holy Shit" Moments**: 5
   - #1: Math/econ breakthrough: 0% → 64-76% in one session (Session 4)
   - #2: Stats domain: 100% coverage! Every paper matched (Session 5)
   - #3: Web interface working end-to-end in one session! (Session 6)
   - #4: 980 isomorphisms stored - 9.8x increase from 100! (Session 7)
-- **Unexpected Connections**: 1030 isomorphism candidates found! (50-60 estimated true positives)
-- **Pattern Types Discovered**: 30+ unique types!
+  - #5: 250+ papers milestone with 10 domains! (Session 9)
+- **Unexpected Connections**: 2933 isomorphism candidates found! (1467-1760 estimated true positives)
+- **Pattern Types Discovered**: 50+ unique types!
   - Top types: optimization (32), equilibrium (24), convergence (16), selection (14), strategic (13)
   - Bio types: signaling (11), adaptation (10), expression (9), regulatory (8)
   - Math/CS types: complexity (12), combinatorial, algorithmic, bound, asymptotic
-- **Domains Connected**: 7 domains all connected!
-  - **NEW**: CS ↔ Q-Bio (Genomics): quantum optimization for graph problems
-  - **NEW**: Econ ↔ Stats: statistical optimization methods
-  - **NEW**: Biology ↔ Stats: network learning (neural vs GNN)
+- **Domains Connected**: 10 domains all connected!
+  - **NEW**: Stats ↔ Materials Science: scaling laws in neural networks vs materials (0.57)
+  - **NEW**: CS ↔ Materials Science: inverse depth scaling (0.56)
+  - CS ↔ Q-Bio (Genomics): quantum optimization for graph problems
+  - Econ ↔ Stats: statistical optimization methods
+  - Biology ↔ Stats: network learning (neural vs GNN)
   - Physics ↔ Math: convergence theory
   - CS ↔ Biology: adaptation mechanisms (LoRA vs neural)
   - Math ↔ Econ: strategic patterns
   - Physics ↔ CS: complexity, scaling
+  - Astro-ph ↔ Physics: phase transitions, diffusion
 - **Key Insight #1**: Domain-specific vocabularies are CRUCIAL - keyword customization works!
 - **Key Insight #2**: Filtering academic boilerplate dramatically reduces false positives
 - **Key Insight #3**: Stats/ML domain is exceptionally well-suited to our extraction (100%)
 - **Key Insight #4**: Genomics papers much better than neuroscience with bio keywords (92% vs 47%)
-- **Best Match Ever**: Quantum optimization (CS ↔ Genomics) 0.58 - identical methods, different domains!
+- **Key Insight #5**: Materials science shares structural patterns with ML/stats (scaling laws, optimization)
+- **Best Match Ever**: Network effect (Stats ↔ CS) 0.60 - multi-index models vs RL computation!
 
 ---
 

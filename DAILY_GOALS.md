@@ -4,50 +4,51 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 8
+## Today's Goals - Session 9
 
-**Session #**: 8
+**Session #**: 9
 
 **Primary Goal**:
-Expand dataset and add duplicate prevention
+Continue dataset expansion and improve pattern extraction quality
 
 **Specific Tasks**:
-1. Add duplicate detection to fetch_papers.py (check arxiv_id before inserting)
-2. Enable foreign keys in database by default
-3. Fetch 50 more papers from new domains (expand coverage)
-4. Consider adding physics.bio-ph (biophysics) or q-fin (finance)
-5. Re-extract patterns from new papers
-6. Generate isomorphisms for new patterns
-7. Optional: Add basic graph visualization of domain connections
+1. Fetch 50 more papers from existing or new domains (reach 250 total)
+2. Consider adding sociology (soc) or materials science (cond-mat)
+3. Add more domain-specific keywords to improve hit rate
+4. Extract patterns from new papers
+5. Regenerate isomorphisms
+6. Optional: Implement basic graph visualization of domain connections
+7. Optional: Manual quality review of top 20 isomorphisms
 
 **Success Criteria**:
-- [ ] Duplicate prevention implemented
-- [ ] Foreign keys enabled
-- [ ] Reached ~200 papers total
-- [ ] New patterns extracted from fresh papers
-- [ ] Isomorphisms updated with new cross-domain matches
+- [ ] Reached 250+ papers total
+- [ ] Hit rate maintained or improved (currently 80.7%)
+- [ ] New keywords added for underrepresented domains
+- [ ] Isomorphisms regenerated with new data
+- [ ] All data browsable in web interface
 
 **Time Budget**: 2-3 hours
 
 **Building on Last Session**:
-Session 7 cleaned duplicates and stored all 980 isomorphisms. Now expand the dataset with duplicate prevention to reach 200+ papers.
+Session 8 reached 197 papers with 2090 isomorphisms. Duplicate prevention and foreign keys working well. Now continue expansion and focus on quality.
 
 **Technical Notes**:
-- Add arxiv_id uniqueness check in fetch_papers.py
-- Enable PRAGMA foreign_keys in utils.py
-- Consider q-fin.GN (quantitative finance) or physics.bio-ph (biophysics)
-- Re-run extract_patterns.py and find_matches.py after fetching
+- Duplicate prevention is working (caught 1 in Session 8)
+- Foreign keys enabled for safe deletions
+- Current domains: physics (40), econ (25), math (25), q-bio (25), q-fin (24), stat (23), cs (20), biology (15)
+- 38 papers (19.3%) still have no patterns - need better keywords
 
 **If I Finish Early**:
-- Deploy to Vercel
-- Add graph visualization (D3.js or similar)
-- Add export functionality
-- Improve search with full-text index
+- Implement graph visualization (domain connections)
+- Deploy web interface to Vercel
+- Add more advanced search (full-text index)
+- Manual quality review and create examples/best_matches.json
 
 **If I Get Stuck**:
-- Focus on duplicate prevention first
-- Fetch papers one domain at a time
-- Can skip graph visualization if time runs short
+- Focus on paper fetching first
+- Keywords can be added incrementally
+- Graph viz can wait for future session
+- Quality review is optional
 
 ---
 

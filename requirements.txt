@@ -1,0 +1,34 @@
+# requirements.txt
+# Python dependencies for analog.quest
+
+# Core dependencies
+requests>=2.31.0          # HTTP requests for API calls
+arxiv>=2.1.0              # arXiv API client
+biopython>=1.83           # For PubMed/NCBI access (Bio.Entrez)
+
+# Database
+# sqlite3 - Built into Python, no pip install needed
+
+# NLP and text processing
+nltk>=3.8.1              # Natural language processing
+spacy>=3.7.0             # Advanced NLP
+scikit-learn>=1.4.0      # Machine learning for pattern matching
+numpy>=1.26.0            # Numerical operations
+scipy>=1.12.0            # Scientific computing
+
+# Web interface (optional, for later)
+flask>=3.0.0             # Simple web framework
+jinja2>=3.1.0            # Templating for Flask
+
+# Utilities
+python-dateutil>=2.8.2   # Date parsing
+tqdm>=4.66.0             # Progress bars
+colorama>=0.4.6          # Colored terminal output
+
+# Optional but recommended
+pandas>=2.2.0            # Data manipulation (if needed)
+jupyter>=1.0.0           # For interactive exploration (optional)
+
+# Development
+pytest>=8.0.0            # Testing framework
+black>=24.0.0            # Code formatter

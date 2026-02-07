@@ -1,0 +1,66 @@
+# .gitignore for analog.quest
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+
+# Database backups (keep schema, ignore data backups)
+database/backup/*.db
+database/*.db-journal
+database/*.db-wal
+
+# Keep the main database in git (it's the core data)
+# Uncomment this if database gets too large:
+# database/papers.db
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Claude Code specific
+.claude/cache/
+.claude/sessions/
+
+# Downloaded papers (if we cache PDFs)
+papers_cache/
+*.pdf
+
+# Python virtual environment
+.venv/

@@ -75,6 +75,28 @@ def simple_extract(abstract):
         'welfare': 'welfare',
         'auction': 'auction',
         'mechanism design': 'mechanism_design',
+
+        # Biology-specific keywords (added Session 5)
+        'signaling': 'signaling',
+        'signal transduction': 'signaling',
+        'pathway': 'pathway',
+        'regulatory': 'regulatory',
+        'regulation': 'regulatory',
+        'expression': 'expression',
+        'gene expression': 'expression',
+        'protein': 'protein',
+        'enzyme': 'enzyme',
+        'metabol': 'metabolism',
+        'synthesis': 'synthesis',
+        'transcription': 'transcription',
+        'mutation': 'mutation',
+        'adaptation': 'adaptation',
+        'evolution': 'evolution',
+        'selection': 'selection',
+        'homeostasis': 'homeostasis',
+        'inhibit': 'inhibition',
+        'activation': 'activation',
+        'binding': 'binding',
     }
 
     abstract_lower = abstract.lower()

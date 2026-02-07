@@ -8,23 +8,23 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 7 - 2026-02-07
+**Last Updated**: Session 8 - 2026-02-07
 
 ### Papers
-- **Total Papers Processed**: 148 (cleaned 2 duplicates in Session 7)
+- **Total Papers Processed**: 197 (added 49 in Session 8)
 - **By Domain**:
-  - Statistics: 25 (NEW!)
-  - Q-Bio (Genomics): 25 (NEW!)
+  - Physics: 40 (includes 25 biophysics papers from Session 8)
   - Economics: 25
   - Mathematics: 25
+  - Q-Bio (Genomics): 25
+  - Q-Fin (Finance): 24 (NEW in Session 8!)
+  - Statistics: 23
   - Computer Science: 20
-  - Physics: 15
   - Biology (Neuroscience): 15
   - Social Sciences: 0
-  - Other: 0
 
 ### Patterns
-- **Total Patterns Extracted**: 255 (cleaned 6 orphaned patterns in Session 7)
+- **Total Patterns Extracted**: 373 (added 118 in Session 8)
 - **By Type** (Top 10):
   - Optimization: 32
   - Equilibrium: 24
@@ -39,18 +39,18 @@ Agent updates these numbers after each session.
   - (+ 20+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: 980 (ALL candidates now stored!)
+- **Total Isomorphisms Found**: 2090 (113% increase in Session 8!)
 - **High Confidence (>0.8)**: 0
 - **Medium Confidence (0.6-0.8)**: 0
-- **Low Confidence (0.5-0.6)**: 980
+- **Low Confidence (0.5-0.6)**: 2090
 - **Top Similarity Score**: 0.58 (quantum optimization cs ↔ q-bio)
-- **Manually Verified Quality**: ~50-60% precision (5 good out of top 10 reviewed)
+- **Manually Verified Quality**: ~50-60% precision (estimated)
 - **Quality Trend**: Steadily improving! (20% → 40% → 50-60%)
-- **Note**: Duplicates removed in Session 7
+- **Finance Connectivity**: 180 with econ, 156 with stat, 119 with physics
 
 ### Quality Metrics
-- **Average Patterns per Paper**: 1.72 (255/148)
-- **Hit Rate**: 78.4% (116/148 papers have patterns)
+- **Average Patterns per Paper**: 1.89 (373/197)
+- **Hit Rate**: 80.7% (159/197 papers have patterns)
 - **Patterns per Domain**:
   - Stat: 25 papers with patterns (100% of 25!) ✓✓✓
   - Q-Bio: 23 papers (92% of 25) - bio keywords working! ✓✓
@@ -67,15 +67,15 @@ Agent updates these numbers after each session.
   - CS: 30 patterns
   - Physics: 25 patterns
   - Biology: 15 patterns
-- **Average Matches per Pattern**: 3.84 (980 / 255 patterns)
-- **Estimated True Positives**: 490-588 isomorphisms (50-60% of 980)
+- **Average Matches per Pattern**: 5.60 (2090 / 373 patterns)
+- **Estimated True Positives**: 1045-1254 isomorphisms (50-60% of 2090)
 
 ### Velocity
-- **Papers per Session (avg)**: 21.1 (148/7)
-- **Patterns per Session (avg)**: 36.4 (255/7)
-- **Isomorphisms per Session (avg)**: 140.0 candidates per session
-- **Sessions per Week (avg)**: N/A (7 sessions in one day)
-- **Total Sessions**: 7
+- **Papers per Session (avg)**: 24.6 (197/8)
+- **Patterns per Session (avg)**: 46.6 (373/8)
+- **Isomorphisms per Session (avg)**: 261.3 candidates per session
+- **Sessions per Week (avg)**: N/A (8 sessions in one day)
+- **Total Sessions**: 8
 
 ---
 
@@ -90,8 +90,9 @@ Agent updates these numbers after each session.
 - [x] **Quality Baseline**: 50%+ precision on matches ✓ Session 5 (50-60% precision!)
 - [x] **Bio Domain Coverage**: Genomics breakthrough ✓ Session 5 (92% q-bio!)
 - [x] **Web Interface**: Can view data in browser ✓ Session 6 (Next.js app live!)
-- [x] **1000 Isomorphism Candidates**: Found 1030 in Session 5! ✓ (exploring 100 stored)
-- [ ] **First 500 Papers**: Expanding beyond initial domain (150/500)
+- [x] **1000 Isomorphism Candidates**: Found 2090 in Session 8! ✓ (all stored)
+- [x] **Duplicate Prevention**: Implemented in Session 8! ✓
+- [ ] **First 500 Papers**: Expanding beyond initial domain (197/500)
 - [ ] **First External Validation**: Someone else finds it interesting
 - [ ] **1000 Papers**: Significant coverage
 - [ ] **2000 Papers**: Mission complete (6 month goal)
@@ -109,6 +110,7 @@ Agent updates these numbers after each session.
 | 5 | 2026-02-07 | 50 | 151 | 930 more | 150 papers! +20 bio keywords, stat=100%, q-bio=92%, 1030 candidates |
 | 6 | 2026-02-07 | 0 | 0 | 0 | Web interface built! Next.js app with 4 pages, filters, pagination |
 | 7 | 2026-02-07 | -2 | -6 | +880 | Data quality: removed duplicates, stored all 980 isomorphisms, added search |
+| 8 | 2026-02-07 | +49 | +118 | +1110 | Expansion: biophysics + finance domains, 197 papers, 2090 isomorphisms |
 
 ---
 

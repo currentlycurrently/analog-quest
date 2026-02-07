@@ -33,6 +33,13 @@ def fetch_arxiv_papers(query, max_results=10):
         try:
             # Extract domain from query (e.g., 'cat:physics.gen-ph' -> 'physics')
             domain = query.split(':')[1].split('.')[0] if ':' in query else 'unknown'
+            arxiv_id = result.entry_id.split('/')[-1]
+
+            # Check if paper already exists (duplicate prevention)
+            cursor.execute('SELECT id FROM papers WHERE arxiv_id = ?', (arxiv_id,))
+            if cursor.fetchone():
+                skipped += 1
+                continue
 
             cursor.execute('''
                 INSERT INTO papers
@@ -44,7 +51,7 @@ def fetch_arxiv_papers(query, max_results=10):
                 result.summary,
                 domain,
                 query,
-                result.entry_id.split('/')[-1],
+                arxiv_id,
                 json.dumps([author.name for author in result.authors]),
                 result.published.strftime('%Y-%m-%d'),
                 'arXiv',
@@ -53,7 +60,7 @@ def fetch_arxiv_papers(query, max_results=10):
             count += 1
 
         except sqlite3.IntegrityError:
-            # Paper already in database
+            # Paper already in database (backup check)
             skipped += 1
             pass
         except Exception as e:

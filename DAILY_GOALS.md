@@ -53,6 +53,15 @@ Session 7 cleaned duplicates and stored all 980 isomorphisms. Now expand the dat
 
 ## Completed Sessions
 
+### Session 8 - 2026-02-07 ✓
+- Added duplicate prevention to fetch_papers.py (checks arxiv_id)
+- Enabled foreign keys in database by default
+- Fetched 25 biophysics + 24 finance papers (49 total)
+- Extracted 118 new patterns from 81 papers
+- Regenerated all isomorphisms: 2090 total (113% increase!)
+- Tested web interface - all working
+- Updated all documentation
+
 ### Session 7 - 2026-02-07 ✓
 - Identified and removed 2 duplicate papers (cross-listed arXiv)
 - Cleaned 6 orphaned patterns and 7 orphaned isomorphisms
@@ -164,4 +173,4 @@ Session 7 cleaned duplicates and stored all 980 isomorphisms. Now expand the dat
 
 ---
 
-**Last Updated**: Session 7 - 2026-02-07
+**Last Updated**: Session 8 - 2026-02-07

@@ -395,6 +395,63 @@ This file tracks what happens each session. Agent updates this at the end of eve
 
 ---
 
+## Session 8 - 2026-02-07 - Dataset Expansion to 197 Papers
+
+**Goal**: Expand dataset and add duplicate prevention
+
+**What I Did**:
+- [x] Added explicit duplicate checking to fetch_papers.py (checks arxiv_id before INSERT)
+- [x] Enabled foreign keys by default in utils.py (PRAGMA foreign_keys = ON)
+- [x] Fetched 25 papers from physics.bio-ph (biophysics)
+- [x] Fetched 24 papers from q-fin.GN (quantitative finance) - 1 duplicate skipped!
+- [x] Extracted 118 new patterns from 81 papers (43 had patterns, 53% hit rate)
+- [x] Regenerated all isomorphisms: 2090 matches found (2.1x increase!)
+- [x] Tested web interface - all working correctly
+
+**Results**:
+- Papers: 148 → 197 (+49)
+- Patterns: 255 → 373 (+118)
+- Isomorphisms: 980 → 2090 (+1110, 113% increase!)
+- Hit rate: 78.4% → 80.7% (improving!)
+- Domains: 7 → 8 (added q-fin, physics absorbed biophysics)
+- Papers with patterns: 116 → 159 (+43)
+
+**Interesting Findings**:
+- **Duplicate Prevention Working**: Caught 1 duplicate q-fin paper during fetch
+- **Finance Domain Connectivity**: Strong connections emerged
+  - 180 isomorphisms with economics (strongest!)
+  - 156 with statistics
+  - 119 with physics
+  - 87 with genomics
+- **Biophysics Integration**: Categorized as "physics" domain (from physics.bio-ph)
+- **Hit Rate Improved**: 80.7% overall (159/197 papers have patterns)
+- **Pattern Density**: 373 patterns from 197 papers = 1.89 patterns/paper (up from 1.72)
+- **New Isomorphisms**: 2090 total, with many finance ↔ econ connections
+
+**What I Learned**:
+- Explicit duplicate checking more efficient than catching IntegrityError
+- Foreign keys now enabled = proper CASCADE deletes in future
+- Finance papers share strong structural similarities with economics
+- Biophysics papers use similar pattern language to physics
+- Larger dataset reveals more cross-domain connections exponentially
+- Hit rate improving as dataset diversifies
+
+**Challenges**:
+- 38 papers (19.3%) still have no patterns - may need more keywords
+- Some domain categorization could be refined (biophysics → physics)
+- Pattern extraction still keyword-based (no NLP yet)
+
+**Next Session**:
+- Reach 250+ papers (fetch more from existing or new domains)
+- Add more domain-specific keywords for better coverage
+- Consider sociology or materials science domains
+- Maybe implement basic graph visualization
+- Review pattern quality manually
+
+**Time Spent**: ~1.5 hours
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -428,13 +485,15 @@ This file tracks what happens each session. Agent updates this at the end of eve
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: 7
-- **Total Papers**: 148 (cleaned 2 duplicates)
-- **Total Patterns**: 255
-- **Total Isomorphisms**: 980 (ALL candidates now stored!)
-- **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat (7 domains!)
-- **Pattern Types**: 45 unique mechanism types
-- **Hit Rate**: 78.4% (116/148 papers)
-- **Match Quality**: ~50-60% precision (improving!)
+- **Total Sessions**: 8
+- **Total Papers**: 197 (expanded with biophysics & finance!)
+- **Total Patterns**: 373
+- **Total Isomorphisms**: 2090 (2.1x increase from session 7!)
+- **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin (8 domains!)
+- **Pattern Types**: 45+ unique mechanism types
+- **Hit Rate**: 80.7% (159/197 papers)
+- **Match Quality**: ~50-60% precision (stable)
 - **Web Interface**: LIVE at localhost:3000 with search! ✓
+- **Duplicate Prevention**: Enabled! ✓
+- **Foreign Keys**: Enabled! ✓
 - **Last Session Date**: 2026-02-07

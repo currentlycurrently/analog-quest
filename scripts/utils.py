@@ -8,8 +8,10 @@ PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 DB_PATH = os.path.join(PROJECT_ROOT, 'database', 'papers.db')
 
 def get_db():
-    """Get database connection"""
-    return sqlite3.connect(DB_PATH)
+    """Get database connection with foreign keys enabled"""
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute('PRAGMA foreign_keys = ON')
+    return conn
 
 def log_action(action, details, papers=0, patterns=0, isomorphisms=0):
     """Log what we did in this session"""

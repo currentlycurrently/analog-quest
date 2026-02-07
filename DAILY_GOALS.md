@@ -4,48 +4,54 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 4
+## Today's Goals - Session 5
 
-**Session #**: 4
+**Session #**: 5
 
 **Primary Goal**:
-Improve pattern extraction quality and add domain-specific keywords for math/econ
+Expand to 150+ papers and improve biology domain coverage
 
 **Specific Tasks**:
-1. Add math-specific keywords to extract_patterns.py (combinatorial, graph, algorithmic, asymptotic, proof, lemma)
-2. Add econ-specific keywords (equilibrium, incentive, allocation, strategic, market, optimal)
-3. Re-run extraction on all 100 papers to find new patterns
-4. Filter generic academic stopwords from find_matches.py ("critical", "significant", "key", "important", "novel")
-5. Re-run matching with improved algorithm
-6. Manually verify 10 more matches to refine quality estimates
+1. Add biology-specific keywords (signaling, pathway, expression, regulatory, protein, gene)
+2. Fetch 25 papers from q-bio.GN (genomics)
+3. Fetch 25 papers from stat.ML (statistics/ML)
+4. Re-extract patterns for biology papers with new keywords
+5. Find new cross-domain matches
+6. Look for particularly interesting isomorphisms to document
 
 **Success Criteria**:
-- [ ] Pattern extraction working on math papers (>10 patterns from 25 papers)
-- [ ] Pattern extraction working on econ papers (>10 patterns from 25 papers)
-- [ ] 70+ total patterns (up from 44)
-- [ ] Reduced false positive rate in matching
-- [ ] 10 more manually verified matches
-- [ ] Updated precision estimate
+- [ ] 150+ total papers in database
+- [ ] Biology extraction >50% (currently 33%)
+- [ ] 130+ patterns extracted
+- [ ] 120+ isomorphisms found
+- [ ] Document 3-5 high-quality isomorphisms for examples
 
 **Time Budget**: 2-3 hours
 
 **Building on Last Session**:
-We have 100 papers but only 44 patterns due to vocabulary gap in math/econ. Session 3 identified quality issues (20-40% precision). Now improving both extraction and matching.
+Session 4 achieved major breakthroughs: math/econ went from 0% to 64-76%, quality improved to 40-60%. Now fix biology and expand data coverage.
 
 **If I Finish Early**:
-- Start implementing structural pattern extraction (input → transformation → output)
-- Experiment with cause-effect pattern detection
-- Add more domains (sociology, q-fin)
-- Start planning web interface
+- Start simple web interface (Flask) to browse patterns
+- Add more pattern types
+- Experiment with sentence structure parsing
+- Fetch from more domains (sociology, q-fin)
 
 **If I Get Stuck**:
-- Focus on adding keywords (straightforward improvement)
-- Document what works and what doesn't
-- Manual review is valuable even if code improvements are slow
+- Focus on data collection (reliable)
+- Biology keywords are straightforward
+- Manual curation of good examples is always valuable
 
 ---
 
 ## Completed Sessions
+
+### Session 4 - 2026-02-07 ✓
+- Added 23 domain-specific keywords (math + econ)
+- Math/econ breakthrough: 0% → 64-76%!
+- Patterns: 44 → 110 (150% increase)
+- Match quality: 20-40% → 40-60%
+- 100+ isomorphisms milestone reached
 
 ### Session 3 - 2026-02-07 ✓
 - Reached 100 papers milestone (math + econ)

@@ -22,12 +22,12 @@ def simple_extract(abstract):
         'cascade': 'cascade',
         'cascading': 'cascade',
         'threshold': 'threshold',
-        'critical': 'threshold',
+        'critical point': 'threshold',  # More specific than just "critical"
         'network': 'network_effect',
         'oscillat': 'oscillation',
         'periodic': 'oscillation',
         'equilib': 'equilibrium',
-        'stable': 'equilibrium',
+        'stability': 'equilibrium',  # Changed from "stable" to "stability"
         'bifurcation': 'bifurcation',
         'phase transition': 'phase_transition',
         'emergence': 'emergence',
@@ -45,8 +45,36 @@ def simple_extract(abstract):
         'collaborative': 'cooperation',
         'saturation': 'saturation',
         'decay': 'decay',
-        'exponential': 'decay',
+        'exponential growth': 'growth',
+        'exponential decay': 'decay',
         'resonance': 'resonance',
+
+        # Math-specific keywords (added Session 4)
+        'combinatorial': 'combinatorial',
+        'graph theory': 'graph',
+        'algorithmic': 'algorithmic',
+        'asymptotic': 'asymptotic',
+        'polynomial': 'complexity',
+        'complexity': 'complexity',
+        'bound': 'bound',
+        'convergence': 'convergence',
+        'approximation': 'approximation',
+        'recursive': 'recursion',
+        'induction': 'induction',
+
+        # Economics-specific keywords (added Session 4)
+        'incentive': 'incentive',
+        'allocation': 'allocation',
+        'strategic': 'strategic',
+        'market': 'market',
+        'supply and demand': 'supply_demand',
+        'pricing': 'pricing',
+        'game theor': 'game_theory',
+        'nash equilibrium': 'equilibrium',
+        'pareto': 'pareto',
+        'welfare': 'welfare',
+        'auction': 'auction',
+        'mechanism design': 'mechanism_design',
     }
 
     abstract_lower = abstract.lower()

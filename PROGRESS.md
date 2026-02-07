@@ -162,6 +162,70 @@ This file tracks what happens each session. Agent updates this at the end of eve
 
 ---
 
+## Session 4 - 2026-02-07 - Quality Improvements + Math/Econ Coverage
+
+**Goal**: Improve pattern extraction for math/econ domains and reduce false positives in matching
+
+**What I Did**:
+- [x] Added 11 math-specific keywords (combinatorial, algorithmic, asymptotic, convergence, complexity, etc.)
+- [x] Added 12 econ-specific keywords (incentive, allocation, strategic, market, game theory, etc.)
+- [x] Refined existing keywords ("critical" → "critical point", "stable" → "stability")
+- [x] Cleared and re-extracted all patterns with improved keywords
+- [x] Added 40+ academic stopwords to find_matches.py (critical, significant, robust, etc.)
+- [x] Re-ran matching with improved algorithm
+- [x] Manually reviewed top 10 matches for quality assessment
+
+**Results**:
+- Papers processed: 100 (re-extracted all)
+- Patterns extracted: 110 (up from 44 = 150% increase!)
+- Papers with patterns: 62/100 (62% hit rate, up from 44%)
+- Isomorphisms found: 100+ (limit reached, 223 candidates)
+- Quality improvement: ~40-60% precision (up from 20-40%)
+
+**Interesting Findings**:
+- **Math Domain Breakthrough**: 16/25 papers now have patterns (64%, was 0%)
+- **Econ Domain Breakthrough**: 19/25 papers now have patterns (76%, was 0%)
+- **New Cross-Domain Connections**:
+  - Physics ↔ Math: convergence, combinatorial structures, bounds
+  - CS ↔ Econ: market mechanisms
+  - Math ↔ Econ: strategic patterns
+- **Quality Improvement**: Stopword filtering reduced false positives
+- **Best Matches**: convergence (physics/math), complexity (cs/math), market (cs/econ), optimization (cs/bio)
+- **Pattern Distribution by Domain**:
+  - Econ: 34 patterns (most productive!)
+  - Math: 26 patterns
+  - CS: 24 patterns
+  - Physics: 19 patterns
+  - Biology: 7 patterns
+
+**What I Learned**:
+- Domain-specific vocabularies are crucial - keyword customization works!
+- Math papers use: combinatorial, algorithmic, asymptotic, convergence, bound
+- Econ papers use: incentive, strategic, allocation, market, game theory
+- Filtering academic boilerplate ("critical", "significant") reduces false positives significantly
+- Stopword list now has 80+ terms (was ~30)
+- Match quality improved from ~30% to ~50% precision
+- Still getting some keyword-only matches without structural similarity
+
+**Challenges**:
+- Biology hit rate dropped to 33% (5/15 papers) - may need bio-specific keywords
+- Some matches still weak: keyword overlap without structural alignment
+- "Bound", "combinatorial", "strategic" trigger on different meanings
+- Need better semantic understanding beyond keywords
+- Similarity scores still cluster (0.53-0.56) - not great discrimination
+
+**Next Session**:
+- Hit 100+ isomorphisms milestone ✓ (already reached!)
+- Add biology-specific keywords (signaling, pathway, expression, regulatory)
+- Experiment with requiring 2+ shared technical terms (not just mechanism type)
+- Consider extracting cause-effect relationships: "A leads to B", "X increases Y"
+- Maybe add confidence scores based on word overlap beyond mechanism type
+- Start thinking about simple web interface to explore connections
+
+**Time Spent**: ~1.5 hours
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -195,9 +259,10 @@ This file tracks what happens each session. Agent updates this at the end of eve
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: 3
+- **Total Sessions**: 4
 - **Total Papers**: 100
-- **Total Patterns**: 44
-- **Total Isomorphisms**: 78
-- **Domains Covered**: physics, cs, biology, math, econ
+- **Total Patterns**: 110
+- **Total Isomorphisms**: 100+
+- **Domains Covered**: physics, cs, biology, math, econ (all 5 working!)
+- **Match Quality**: ~40-60% precision
 - **Last Session Date**: 2026-02-07

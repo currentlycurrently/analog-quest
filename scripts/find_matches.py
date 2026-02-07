@@ -20,11 +20,23 @@ def calculate_similarity(pattern1, pattern2):
     desc1 = pattern1['structural_description'].lower()
     desc2 = pattern2['structural_description'].lower()
 
-    # Extract key words (remove common words)
+    # Extract key words (remove common words and academic boilerplate)
     common_words = {'the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'of', 'and', 'or',
                     'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had',
                     'do', 'does', 'did', 'will', 'would', 'should', 'could', 'may', 'might',
-                    'can', 'this', 'that', 'these', 'those', 'with', 'from', 'by'}
+                    'can', 'this', 'that', 'these', 'those', 'with', 'from', 'by', 'as', 'we',
+                    'our', 'their', 'its', 'his', 'her', 'them', 'us', 'it', 'they', 'which',
+                    'who', 'where', 'when', 'how', 'what', 'why', 'there', 'here', 'show',
+                    'shows', 'shown', 'present', 'presents', 'presented', 'describe', 'describes',
+
+                    # Academic boilerplate (added Session 4 to reduce false positives)
+                    'critical', 'critically', 'significant', 'significantly', 'key', 'important',
+                    'importantly', 'novel', 'new', 'effective', 'effectively', 'efficient',
+                    'efficiently', 'robust', 'robustly', 'stable', 'stably', 'strong', 'strongly',
+                    'comprehensive', 'extensively', 'approach', 'method', 'propose', 'proposed',
+                    'framework', 'model', 'system', 'results', 'result', 'findings', 'finding',
+                    'analysis', 'study', 'research', 'paper', 'work', 'investigate', 'examined',
+                    'demonstrate', 'demonstrated', 'provide', 'provides', 'using', 'used', 'based'}
 
     words1 = set(re.findall(r'\w+', desc1)) - common_words
     words2 = set(re.findall(r'\w+', desc2)) - common_words

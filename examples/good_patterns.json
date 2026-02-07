@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "created": "2026-02-07",
+    "session": 3,
+    "purpose": "Document examples of good, medium, and poor pattern matches to guide future improvements"
+  },
+
+  "good_matches": [
+    {
+      "mechanism_type": "optimization",
+      "similarity_score": 0.53,
+      "domains": ["cs", "biology"],
+      "pattern_1": {
+        "description": "hybrid quantum-classical reinforcement learning... complex combinatorial optimization problems",
+        "paper": "Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem",
+        "domain": "cs"
+      },
+      "pattern_2": {
+        "description": "bias-resistant machine learning framework... nested cross-validation, and calibrated decision-threshold optimization",
+        "paper": "A Reproducible Framework for Bias-Resistant Machine Learning on Small-Sample Neuroimaging Data",
+        "domain": "biology"
+      },
+      "why_good": "Both papers use ML/optimization techniques to solve complex problems. True structural isomorphism - same approach (optimization) applied to different domains (routing vs. neuroimaging).",
+      "structural_elements": {
+        "input": "Complex problem space (routing/neuroimaging)",
+        "transformation": "Machine learning optimization",
+        "output": "Optimized solution",
+        "constraint": "Complexity/sample size limitations"
+      }
+    }
+  ],
+
+  "medium_matches": [
+    {
+      "mechanism_type": "scaling",
+      "similarity_score": 0.54,
+      "domains": ["physics", "cs"],
+      "pattern_1": {
+        "description": "exploiting the close interrelation between scaling and inversion transformations",
+        "paper": "Discrete dynamical systems with scaling and inversion symmetries",
+        "domain": "physics"
+      },
+      "pattern_2": {
+        "description": "exponential scaling associated with higher dimensional algebras",
+        "paper": "Clifford Kolmogorov-Arnold Networks",
+        "domain": "cs"
+      },
+      "why_medium": "Both mention 'scaling' but physics refers to symmetry transformations while CS refers to computational complexity growth. Keyword match but different structural concepts.",
+      "improvement_needed": "Need to distinguish between 'scaling as symmetry' vs 'scaling as growth' vs 'scaling as complexity'"
+    },
+    {
+      "mechanism_type": "threshold",
+      "similarity_score": 0.53,
+      "domains": ["cs", "biology"],
+      "pattern_1": {
+        "description": "critical finding: every hallucination (100%) exhibited compound failure modes",
+        "paper": "Compound Deception in Elite Peer Review",
+        "domain": "cs"
+      },
+      "pattern_2": {
+        "description": "critical challenge... understand how labels are encoded... disentangle the distinct effect",
+        "paper": "Multi-Integration of Labels across Categories",
+        "domain": "biology"
+      },
+      "why_medium": "Both use 'critical' but one describes a failure threshold phenomenon, the other describes a classification challenge. Weak structural similarity.",
+      "improvement_needed": "Filter out generic academic language like 'critical', 'significant', 'important'"
+    }
+  ],
+
+  "false_positives": [
+    {
+      "mechanism_type": "equilibrium",
+      "similarity_score": 0.53,
+      "domains": ["physics", "cs"],
+      "pattern_1": {
+        "description": "metastable stochastic transitions in Landau-type gradient systems",
+        "paper": "Metastable Transitions in Landau-QCD Gradient Systems",
+        "domain": "physics"
+      },
+      "pattern_2": {
+        "description": "unified evaluation framework... pairwise comparison paradigm to ensure stable and human-aligned evaluation",
+        "paper": "GenArena",
+        "domain": "cs"
+      },
+      "why_false_positive": "Physics talks about thermodynamic metastability (energy states), CS talks about evaluation stability (consistency). Both use 'stable' but completely different structural mechanisms.",
+      "improvement_needed": "Context-aware keyword matching - 'stable' means different things in thermodynamics vs. evaluation systems"
+    },
+    {
+      "mechanism_type": "threshold",
+      "similarity_score": 0.52,
+      "domains": ["physics", "cs"],
+      "pattern_1": {
+        "description": "bipartite separability... hinges critically on the combinatorial structure",
+        "paper": "On the quantum separability of qubit registers",
+        "domain": "physics"
+      },
+      "pattern_2": {
+        "description": "key failure modes... distributional collapse... variance regularization... are critical",
+        "paper": "Better Source, Better Flow",
+        "domain": "cs"
+      },
+      "why_false_positive": "Both use 'critical' but physics describes quantum state conditions, CS describes generative model failure modes. No structural similarity.",
+      "improvement_needed": "Remove generic intensifiers like 'critical', 'key', 'essential' from matching"
+    }
+  ],
+
+  "learnings": {
+    "pattern_extraction": {
+      "strengths": [
+        "58% hit rate across physics/cs/biology domains",
+        "Successfully identifies common mechanism types (threshold, optimization, network_effect, etc.)",
+        "Simple keyword matching works for initial pattern discovery"
+      ],
+      "weaknesses": [
+        "0% hit rate on math and economics papers - need domain-specific keywords",
+        "Captures sentence fragments rather than structural descriptions",
+        "Misses patterns without explicit keyword mentions"
+      ],
+      "next_steps": [
+        "Add math-specific keywords: 'combinatorial', 'graph', 'algorithmic', 'asymptotic'",
+        "Add econ-specific keywords: 'equilibrium', 'incentive', 'allocation', 'strategic'",
+        "Extract structure: components, relationships, dynamics, outcomes",
+        "Use dependency parsing to identify cause-effect relationships"
+      ]
+    },
+    "isomorphism_matching": {
+      "strengths": [
+        "Mechanism type matching is a strong signal (0.5 weight)",
+        "Successfully finds some genuine cross-domain isomorphisms"
+      ],
+      "weaknesses": [
+        "High false positive rate from generic academic language",
+        "Text similarity (Jaccard) treats all words equally",
+        "No semantic understanding of domain-specific terminology",
+        "Similarity scores cluster around 0.52-0.54 (low discrimination)"
+      ],
+      "next_steps": [
+        "Filter stopwords: 'critical', 'significant', 'key', 'important', 'novel'",
+        "Weight domain-specific technical terms higher",
+        "Use word embeddings (word2vec/BERT) for semantic similarity",
+        "Extract cause-effect patterns: 'A increases B', 'X leads to Y'",
+        "Require structural components match: both have input/transformation/output"
+      ]
+    }
+  },
+
+  "quality_assessment": {
+    "total_isomorphisms": 78,
+    "manually_reviewed": 5,
+    "quality_distribution": {
+      "good": 1,
+      "medium": 2,
+      "false_positive": 2
+    },
+    "estimated_precision": "~20-40% (1-2 good out of 5)",
+    "recommendation": "Current system is good for discovery phase. Need better filtering for production quality."
+  }
+}

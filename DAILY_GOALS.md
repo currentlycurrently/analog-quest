@@ -4,47 +4,55 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 3
+## Today's Goals - Session 4
 
-**Session #**: 3
+**Session #**: 4
 
 **Primary Goal**:
-Reach 100 papers milestone and improve pattern/match quality
+Improve pattern extraction quality and add domain-specific keywords for math/econ
 
 **Specific Tasks**:
-1. Fetch 25 papers from math.CO (combinatorics/discrete math)
-2. Fetch 25 papers from econ.GN (economics - general)
-3. Extract patterns from all new papers
-4. Run find_matches.py to find new isomorphisms
-5. Manually review top 10 isomorphisms for quality
-6. Create examples/good_patterns.json with best examples
+1. Add math-specific keywords to extract_patterns.py (combinatorial, graph, algorithmic, asymptotic, proof, lemma)
+2. Add econ-specific keywords (equilibrium, incentive, allocation, strategic, market, optimal)
+3. Re-run extraction on all 100 papers to find new patterns
+4. Filter generic academic stopwords from find_matches.py ("critical", "significant", "key", "important", "novel")
+5. Re-run matching with improved algorithm
+6. Manually verify 10 more matches to refine quality estimates
 
 **Success Criteria**:
-- [ ] 100+ total papers in database (milestone!)
-- [ ] 5 domains represented (physics, cs, biology, math, economics)
-- [ ] 70+ patterns extracted
-- [ ] 100+ isomorphisms found (milestone!)
-- [ ] At least 3 manually verified good matches documented
+- [ ] Pattern extraction working on math papers (>10 patterns from 25 papers)
+- [ ] Pattern extraction working on econ papers (>10 patterns from 25 papers)
+- [ ] 70+ total patterns (up from 44)
+- [ ] Reduced false positive rate in matching
+- [ ] 10 more manually verified matches
+- [ ] Updated precision estimate
 
 **Time Budget**: 2-3 hours
 
 **Building on Last Session**:
-We have 50 papers and 61 isomorphisms. Now expanding to math and economics to hit the 100-paper milestone and improve cross-domain coverage.
+We have 100 papers but only 44 patterns due to vocabulary gap in math/econ. Session 3 identified quality issues (20-40% precision). Now improving both extraction and matching.
 
 **If I Finish Early**:
-- Improve pattern extraction to capture more nuanced patterns
-- Add more pattern types (feedback loops, cascades, bottlenecks)
-- Start planning simple web interface
-- Fetch papers from sociology or other domains
+- Start implementing structural pattern extraction (input → transformation → output)
+- Experiment with cause-effect pattern detection
+- Add more domains (sociology, q-fin)
+- Start planning web interface
 
 **If I Get Stuck**:
-- Focus on hitting 100 papers (data collection is reliable)
-- Simple pattern extraction is good enough for now
-- Document quality issues for future improvement
+- Focus on adding keywords (straightforward improvement)
+- Document what works and what doesn't
+- Manual review is valuable even if code improvements are slow
 
 ---
 
 ## Completed Sessions
+
+### Session 3 - 2026-02-07 ✓
+- Reached 100 papers milestone (math + econ)
+- Found 78 isomorphisms
+- Manually reviewed quality: ~20-40% precision
+- Created examples/good_patterns.json
+- Identified vocabulary gap in math/econ domains
 
 ### Session 2 - 2026-02-07 ✓
 - Expanded to cs.AI and q-bio.NC domains

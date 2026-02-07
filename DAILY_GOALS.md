@@ -4,51 +4,62 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 7
+## Today's Goals - Session 8
 
-**Session #**: 7
+**Session #**: 8
 
 **Primary Goal**:
-Clean up data quality issues and improve isomorphism storage
+Expand dataset and add duplicate prevention
 
 **Specific Tasks**:
-1. Add duplicate detection to identify cross-listed arXiv papers
-2. Clean duplicate papers from database
-3. Modify isomorphisms table to store all 1030 candidates (not just top 100)
-4. Re-run find_matches.py to populate all isomorphisms
-5. Add simple search functionality to web interface
-6. Optional: Add graph visualization of domain connections
+1. Add duplicate detection to fetch_papers.py (check arxiv_id before inserting)
+2. Enable foreign keys in database by default
+3. Fetch 50 more papers from new domains (expand coverage)
+4. Consider adding physics.bio-ph (biophysics) or q-fin (finance)
+5. Re-extract patterns from new papers
+6. Generate isomorphisms for new patterns
+7. Optional: Add basic graph visualization of domain connections
 
 **Success Criteria**:
-- [ ] Duplicates identified and removed
-- [ ] All 1030 isomorphisms stored and browsable
-- [ ] Search functionality working (search papers by title/abstract)
-- [ ] Database cleaned and optimized
+- [ ] Duplicate prevention implemented
+- [ ] Foreign keys enabled
+- [ ] Reached ~200 papers total
+- [ ] New patterns extracted from fresh papers
+- [ ] Isomorphisms updated with new cross-domain matches
 
 **Time Budget**: 2-3 hours
 
 **Building on Last Session**:
-Session 6 built web interface - now visible that we have duplicate papers (similarity 1.0) and only 100 of 1030 isomorphisms stored. Clean up data quality.
+Session 7 cleaned duplicates and stored all 980 isomorphisms. Now expand the dataset with duplicate prevention to reach 200+ papers.
 
 **Technical Notes**:
-- Check for duplicates by arxiv_id or title similarity
-- isomorphisms table has no LIMIT - just need to update find_matches.py
-- Search can be simple SQL LIKE query initially
+- Add arxiv_id uniqueness check in fetch_papers.py
+- Enable PRAGMA foreign_keys in utils.py
+- Consider q-fin.GN (quantitative finance) or physics.bio-ph (biophysics)
+- Re-run extract_patterns.py and find_matches.py after fetching
 
 **If I Finish Early**:
-- Deploy to Vercel or similar
-- Add graph visualization showing domain connections
-- Fetch more papers to reach 200+
-- Add export functionality (CSV/JSON)
+- Deploy to Vercel
+- Add graph visualization (D3.js or similar)
+- Add export functionality
+- Improve search with full-text index
 
 **If I Get Stuck**:
-- Start with duplicate detection first
-- Re-run find_matches.py without LIMIT
-- Search can wait if other tasks take longer
+- Focus on duplicate prevention first
+- Fetch papers one domain at a time
+- Can skip graph visualization if time runs short
 
 ---
 
 ## Completed Sessions
+
+### Session 7 - 2026-02-07 ✓
+- Identified and removed 2 duplicate papers (cross-listed arXiv)
+- Cleaned 6 orphaned patterns and 7 orphaned isomorphisms
+- Updated find_matches.py to store ALL isomorphisms (removed limit)
+- Re-ran matching: 980 isomorphisms stored (9.8x increase!)
+- Added search functionality to papers API and UI
+- All changes tested and working
 
 ### Session 6 - 2026-02-07 ✓
 - Built Next.js web interface with TypeScript and Tailwind CSS
@@ -153,4 +164,4 @@ Session 6 built web interface - now visible that we have duplicate papers (simil
 
 ---
 
-**Last Updated**: Session 6 - 2026-02-07
+**Last Updated**: Session 7 - 2026-02-07

@@ -9,6 +9,8 @@ export default function PapersPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [domain, setDomain] = useState('all');
+  const [search, setSearch] = useState('');
+  const [searchInput, setSearchInput] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [total, setTotal] = useState(0);
@@ -33,6 +35,7 @@ export default function PapersPage() {
       limit: '20',
     });
     if (domain !== 'all') params.append('domain', domain);
+    if (search) params.append('search', search);
 
     fetch(`/api/papers?${params}`)
       .then((res) => res.json())
@@ -50,7 +53,13 @@ export default function PapersPage() {
         setError(err.message);
         setLoading(false);
       });
-  }, [domain, page]);
+  }, [domain, search, page]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSearch(searchInput);
+    setPage(1);
+  };
 
   return (
     <div className="space-y-6">
@@ -64,6 +73,37 @@ export default function PapersPage() {
       {/* Filters */}
       <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">Search</label>
+            <form onSubmit={handleSearch} className="flex gap-2">
+              <input
+                type="text"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                placeholder="Search titles and abstracts..."
+                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800"
+              />
+              <button
+                type="submit"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+              >
+                Search
+              </button>
+              {search && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSearch('');
+                    setSearchInput('');
+                    setPage(1);
+                  }}
+                  className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  Clear
+                </button>
+              )}
+            </form>
+          </div>
           <div>
             <label className="block text-sm font-medium mb-2">Domain</label>
             <select

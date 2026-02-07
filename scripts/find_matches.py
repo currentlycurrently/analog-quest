@@ -50,13 +50,13 @@ def calculate_similarity(pattern1, pattern2):
 
     return score
 
-def find_cross_domain_matches(min_similarity=0.5, limit=100):
+def find_cross_domain_matches(min_similarity=0.5, limit=None):
     """
     Find cross-domain pattern matches (isomorphisms).
 
     Args:
         min_similarity: Minimum similarity score to store (0-1)
-        limit: Maximum number of matches to find
+        limit: Maximum number of matches to find (None = no limit)
 
     Returns:
         Number of isomorphisms found
@@ -110,9 +110,11 @@ def find_cross_domain_matches(min_similarity=0.5, limit=100):
     print(f"[MATCH] Made {comparisons} cross-domain comparisons")
     print(f"[MATCH] Found {len(matches)} potential isomorphisms")
 
-    # Sort by similarity (highest first) and limit
+    # Sort by similarity (highest first) and apply limit if specified
     matches.sort(key=lambda x: x[2], reverse=True)
-    matches = matches[:limit]
+    if limit is not None:
+        matches = matches[:limit]
+        print(f"[MATCH] Limiting to top {limit} matches")
 
     # Store in database
     stored = 0

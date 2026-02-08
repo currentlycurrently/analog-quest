@@ -59,74 +59,66 @@ Resume scaling to 1200-1300 papers with clean ≥0.80 threshold
 2. Extract patterns using current keyword library
 3. Normalize patterns with canonical mechanisms
 4. Run false positive filter
-5. Generate isomorphisms with V2 algorithm (all matches ≥0.80 automatically!)
+5. Generate isomorphisms with V2.2 algorithm (all matches ≥0.77 automatically!)
 6. Update all documentation
 
 **Success Criteria**:
 - [ ] 1200-1300 papers total
 - [ ] 90%+ hit rate maintained
 - [ ] 3,000-3,500 active patterns
-- [ ] All new matches ≥0.80 with 90%+ precision
-- [ ] High-confidence matches continue growing
+- [ ] ~220-260 total matches (proportional growth from 186 baseline)
+- [ ] 68% precision maintained
 
 **Time Budget**: 2-3 hours
 
 **Building on Session 19.6**:
-Session 19.6 raised quality threshold to ≥0.80 based on Session 19.5 validation. Matches reduced from 71,985 to ~20,000 but precision improved from 41.7% to 90%+. All false positives in 0.70-0.75 range removed. Ready to scale with confidence.
+Session 19.6 optimized threshold through empirical testing (tested 0.75, 0.77, 0.78, 0.79, 0.80). Selected 0.77 as optimal balance: 186 matches with 68% precision. Removed equation bonus. Database reduced from 71,985 to 186 matches (-99.7%) but precision improved 41.7% → 68% (+26pp!). Ready to scale with balanced quality/quantity.
 
 **Technical Notes**:
-- Current: **1,114 papers**, **3,254 active patterns** (31 FP), **71,985 isomorphisms**, **91.7% hit rate**
-- V2 Algorithm + FP Exclusion: **2,567 high-confidence matches** (≥0.7, +23.5%!)
-- Very high (≥0.8): **29** (stable), Ultra high (≥0.9): **14** (stable)
-- Top similarity: **0.9960**, avg similarity: ~0.61
-- Algorithm: V2 with false positive exclusion + synonym normalization + context filtering
-- **Methodology: v2.1** (Audit Trail + Expanded Validation)
-- **Precision validated**:
-  - Ultra-high (≥0.85): 100% precision
-  - High-value mechanisms: 90% precision
-  - Top-20 (≥0.8): 95% precision
-  - Overall (≥0.7): 41.7% precision
-- **ALL matches now have match_details JSON automatically!**
-- **ALL patterns preserve description_original!**
+- Current: **1,114 papers**, **3,254 active patterns** (31 FP), **186 isomorphisms**, **91.7% hit rate**
+- Algorithm: **V2.2** (threshold=0.77, equation bonus removed)
+- Precision: **68%** (validated via 20-match sample)
+- Ultra high (≥0.9): **14** (7.5%), Very high (≥0.8): **18** (9.7%)
+- Top similarity: **0.9960**, avg similarity: **0.79**
+- **Methodology: v2.2** (Threshold Optimization)
+- **Precision by threshold** (Session 19.6 testing):
+  - 0.75: ~25-30% precision (too noisy)
+  - 0.77: ~68% precision (optimal balance) ✓
+  - 0.78: ~70-80% precision (too sparse)
+  - 0.80: 100% precision (too conservative, only 18 matches)
 - Hit rate: **91.7%** (SUSTAINED above 90%!)
 - **Perfect coverage (100%)**: nlin, astro-ph, nucl-th
 
-**Key Successes from Session 19.5**:
-- **Methodology hardening complete!**
-- Backfilled 71,985 matches with complete audit trail
-- 60-match stratified validation across 5 buckets
-- Precision by bucket: 100% (ultra-high), 90% (high-value), 40% (cross-domain-far), 0% (medium 0.7-0.75)
-- Reproducibility guaranteed with description_original + version tracking
-- Can now answer "why did these match?" for any pair
-- Launch-ready and defensible to academic reviewers
+**Key Successes from Sessions 19.5 & 19.6**:
+- **Methodology hardening complete!** (Session 19.5)
+- **Threshold empirically optimized!** (Session 19.6)
+- 60-match stratified validation showed 0.70-0.75 range = 0% precision
+- Tested 5 thresholds, found 0.77 optimal for balanced growth
+- Precision improved: 41.7% → 68% (+26pp)
+- Database cleaned: 71,985 → 186 matches (-99.7% noise)
+- Launch-ready with balanced quality/quantity
+
+**Known Issues (To Fix Later)**:
+- Transformer/attention matches include technique-only overlaps (~11% of matches)
+- Will implement technique filter after reaching 2,000 papers (Session 25-30)
+- Target: 68% → 75-80% precision
+- Current impact is acceptable for scaling phase
 
 **Outstanding Challenges**:
 - 92 papers without patterns (8.3%) - highly specialized
-  - Physics: 30 papers (13.6%) - computational physics, biomaterials
-  - CS: 25 papers (7.1%) - security, hardware co-design
-  - Math: 16 papers (13.2%) - statistical geometry
-- Medium similarity (0.7-0.75) has 0% precision - consider raising threshold
 - Could add keywords from gap analysis if hit rate drops below 90%
 
 **If I Finish Early**:
-- Implement graph visualization of domain connections
-- Add natural language search interface
-- Deploy web interface to Vercel
-- Add "researcher onboarding" flow to UI
-- Consider context-aware synonym groups
-
-**DETAILED EXECUTION PLAN**:
-See `SESSION_19.5_PLAN.md` for complete implementation details including:
-- Full Python code for all scripts
-- Database schema changes
-- Step-by-step execution checklist
-- Expected deliverables
+- Add more papers (stretch to 1,400 if time permits)
+- Document interesting new isomorphisms
+- Create examples/session20_best_matches.json
+- Check if any new mechanism types emerged
 
 **If I Get Stuck**:
-- Focus on database updates first (match_details backfill)
-- Stratified sampling is well-defined in the plan
-- Manual review is the most time-consuming part (~1.5 hours)
-- Documentation can be concise - focus on precision results
+- Standard workflow: fetch → extract → normalize → filter → match
+- All scripts are working (just run them in sequence)
+- Don't modify algorithm - just scale the database
+- If hit rate drops below 90%, check domain-specific keywords
 
 ---
 

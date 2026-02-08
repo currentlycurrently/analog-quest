@@ -1,0 +1,264 @@
+{
+  "session": 10,
+  "date": "2026-02-08",
+  "total_isomorphisms": 2933,
+  "reviewed": 20,
+  "methodology": "Manual review of top 20 highest-similarity cross-domain matches",
+
+  "quality_breakdown": {
+    "excellent": 3,
+    "good": 9,
+    "medium": 6,
+    "weak": 2
+  },
+
+  "precision_estimate": "60% (12/20 are good or excellent)",
+
+  "matches": [
+    {
+      "rank": 1,
+      "similarity": 0.595,
+      "mechanism": "network_effect",
+      "domains": "stat ↔ cs",
+      "quality": "GOOD",
+      "paper1": "Limitations of SGD for Multi-Index Models Beyond Statistical Queries",
+      "paper2": "On Computation and Reinforcement Learning",
+      "structural_connection": "Both examine neural network architectures and computational properties",
+      "notes": "Strong connection - both about neural networks in different learning contexts"
+    },
+    {
+      "rank": 2,
+      "similarity": 0.58,
+      "mechanism": "optimization",
+      "domains": "cs ↔ q-bio",
+      "quality": "EXCELLENT",
+      "paper1": "Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem",
+      "paper2": "Accelerating De Novo Genome Assembly via Quantum-Assisted Graph Optimization",
+      "structural_connection": "IDENTICAL: Hybrid quantum-classical optimization for complex combinatorial graph problems",
+      "notes": "Textbook isomorphism! Same method (quantum-classical hybrid) applied to different domains (logistics vs genomics)"
+    },
+    {
+      "rank": 3,
+      "similarity": 0.571,
+      "mechanism": "optimization",
+      "domains": "econ ↔ stat",
+      "quality": "MEDIUM",
+      "paper1": "Applications of structural equation modeling to liquor consumer behaviors",
+      "paper2": "CFRecs: Counterfactual Recommendations on Real Estate",
+      "structural_connection": "Both optimize for actionable insights but use different methodologies",
+      "notes": "Connection is weak - both mention 'optimization' but structural similarity is limited"
+    },
+    {
+      "rank": 4,
+      "similarity": 0.568,
+      "mechanism": "network_effect",
+      "domains": "stat ↔ cond-mat",
+      "quality": "EXCELLENT",
+      "paper1": "Optimal scaling laws in learning hierarchical multi-index models",
+      "paper2": "Broken neural scaling laws in materials science",
+      "structural_connection": "Both study neural network scaling laws - one theoretical, one applied to materials",
+      "notes": "Fascinating cross-domain connection! Scaling laws theory meets materials science application"
+    },
+    {
+      "rank": 5,
+      "similarity": 0.562,
+      "mechanism": "network_effect",
+      "domains": "stat ↔ cs",
+      "quality": "MEDIUM",
+      "paper1": "Optimal scaling laws in learning hierarchical multi-index models",
+      "paper2": "Pseudo-Invertible Neural Networks",
+      "structural_connection": "Both about neural network architectures but different specific mechanisms",
+      "notes": "Generic neural network connection - not a strong structural isomorphism"
+    },
+    {
+      "rank": 6,
+      "similarity": 0.561,
+      "mechanism": "scaling",
+      "domains": "cs ↔ cond-mat",
+      "quality": "GOOD",
+      "paper1": "Inverse Depth Scaling From Most Layers Being Similar",
+      "paper2": "Broken neural scaling laws in materials science",
+      "structural_connection": "Both study scaling behaviors in neural networks",
+      "notes": "Good connection on scaling laws across LLMs and materials modeling"
+    },
+    {
+      "rank": 7,
+      "similarity": 0.561,
+      "mechanism": "optimization",
+      "domains": "cs ↔ stat",
+      "quality": "GOOD",
+      "paper1": "Quantum Reinforcement Learning with Transformers for CVRP",
+      "paper2": "$f$-GRPO: Divergence-Based RL for LLM Alignment",
+      "structural_connection": "Both use reinforcement learning for optimization in different contexts",
+      "notes": "Good structural match - RL optimization applied to different problems"
+    },
+    {
+      "rank": 8,
+      "similarity": 0.56,
+      "mechanism": "network_effect",
+      "domains": "biology ↔ cs",
+      "quality": "GOOD",
+      "paper1": "Path Integration in Predictive Sequence Models",
+      "paper2": "On Computation and Reinforcement Learning",
+      "structural_connection": "Both examine neural networks forming world models/representations",
+      "notes": "Interesting cognitive science ↔ AI connection on world model formation"
+    },
+    {
+      "rank": 9,
+      "similarity": 0.56,
+      "mechanism": "network_effect",
+      "domains": "biology ↔ stat",
+      "quality": "MEDIUM",
+      "paper1": "Path Integration in Predictive Sequence Models",
+      "paper2": "Counterfactual Recommendations on Real Estate Graphs",
+      "structural_connection": "Both use neural networks but for very different purposes",
+      "notes": "Weak connection - generic 'neural networks' overlap"
+    },
+    {
+      "rank": 10,
+      "similarity": 0.56,
+      "mechanism": "convergence",
+      "domains": "physics ↔ math",
+      "quality": "EXCELLENT",
+      "paper1": "Metastable Transitions and Γ-Convergent Eyring-Kramers Asymptotics",
+      "paper2": "Spectral Theory for Borel PMP Graphs",
+      "structural_connection": "Both use advanced convergence theory in dynamical systems",
+      "notes": "Strong mathematical isomorphism - convergence methods in different physical/graph systems"
+    },
+    {
+      "rank": 11,
+      "similarity": 0.559,
+      "mechanism": "network_effect",
+      "domains": "stat ↔ cs",
+      "quality": "MEDIUM",
+      "paper1": "Limitations of SGD for Multi-Index Models",
+      "paper2": "Pseudo-Invertible Neural Networks",
+      "structural_connection": "Both about neural network theory but different aspects",
+      "notes": "Generic neural network connection"
+    },
+    {
+      "rank": 12,
+      "similarity": 0.557,
+      "mechanism": "adaptation",
+      "domains": "biology ↔ cs",
+      "quality": "GOOD",
+      "paper1": "Biologically-inspired foveated interface for vision models",
+      "paper2": "Layer-wise LoRA fine-tuning with similarity metrics",
+      "structural_connection": "Both use adaptation mechanisms (biological foveation vs LoRA fine-tuning)",
+      "notes": "Interesting bio-inspired AI connection on parameter adaptation"
+    },
+    {
+      "rank": 13,
+      "similarity": 0.556,
+      "mechanism": "scaling",
+      "domains": "stat ↔ cond-mat",
+      "quality": "GOOD",
+      "paper1": "Optimal scaling laws in neural networks",
+      "paper2": "Broken neural scaling laws in materials science",
+      "structural_connection": "Same scaling law theory in different contexts",
+      "notes": "Another instance of the scaling laws isomorphism - strong pattern!"
+    },
+    {
+      "rank": 14,
+      "similarity": 0.556,
+      "mechanism": "emergence",
+      "domains": "q-bio ↔ cond-mat",
+      "quality": "GOOD",
+      "paper1": "Retrieval-Augmented Genomic Foundation Models",
+      "paper2": "Structure formation in magnetic fluids",
+      "structural_connection": "Both study emergence of structured patterns (latent representations vs physical aggregates)",
+      "notes": "Fascinating! Emergence in neural networks mirrors emergence in physical systems"
+    },
+    {
+      "rank": 15,
+      "similarity": 0.556,
+      "mechanism": "strategic",
+      "domains": "econ ↔ q-fin",
+      "quality": "GOOD",
+      "paper1": "Interpretability in Political Communication",
+      "paper2": "Funding mechanics in crypto markets",
+      "structural_connection": "Both analyze strategic behavior and positioning",
+      "notes": "Good connection on strategic decision-making across political and financial domains"
+    },
+    {
+      "rank": 16,
+      "similarity": 0.556,
+      "mechanism": "diffusion",
+      "domains": "cs ↔ stat",
+      "quality": "GOOD",
+      "paper1": "Condition-Dependent Source Distribution for Flow Matching",
+      "paper2": "Confidence Estimation for Deep CT Reconstruction",
+      "structural_connection": "Both use diffusion-based generative models",
+      "notes": "Strong technical connection - diffusion models in different applications"
+    },
+    {
+      "rank": 17,
+      "similarity": 0.554,
+      "mechanism": "network_effect",
+      "domains": "q-bio ↔ cond-mat",
+      "quality": "MEDIUM",
+      "paper1": "Spatial transcriptomics foundation model with GCNs",
+      "paper2": "Broken neural scaling laws in materials science",
+      "structural_connection": "Both use GNNs but for different purposes",
+      "notes": "Weak - just both use graph neural networks"
+    },
+    {
+      "rank": 18,
+      "similarity": 0.554,
+      "mechanism": "diffusion",
+      "domains": "q-bio ↔ cond-mat",
+      "quality": "WEAK",
+      "paper1": "Masked Discrete Diffusion for Single-Cell Modeling",
+      "paper2": "Time-Resolved Thermal Transport in STEM",
+      "structural_connection": "Both mention 'diffusion' but in completely different contexts (generative models vs heat)",
+      "notes": "False positive - diffusion models vs heat diffusion are not structurally similar"
+    },
+    {
+      "rank": 19,
+      "similarity": 0.553,
+      "mechanism": "optimization",
+      "domains": "stat ↔ q-fin",
+      "quality": "WEAK",
+      "paper1": "Solving Stochastic Variational Inequalities",
+      "paper2": "Constraints on Adaptive Market Efficiency",
+      "structural_connection": "Both mention optimization but very different mathematical frameworks",
+      "notes": "False positive - weak structural connection despite both being optimization"
+    },
+    {
+      "rank": 20,
+      "similarity": 0.553,
+      "mechanism": "evolution",
+      "domains": "physics ↔ econ",
+      "quality": "MEDIUM",
+      "paper1": "Discrete dynamical systems with scaling and inversion symmetries",
+      "paper2": "Mathematical Modeling of Common-Pool Resources",
+      "structural_connection": "Both study temporal evolution of systems",
+      "notes": "Generic 'evolution' connection - limited structural similarity"
+    }
+  ],
+
+  "key_insights": [
+    "Scaling laws appear as a strong recurring isomorphism across stats, CS, and materials science",
+    "Quantum-classical hybrid optimization is genuinely reused across logistics and genomics",
+    "Convergence theory provides strong mathematical bridges between physics and pure math",
+    "Neural network mentions create some false positives when used generically",
+    "Diffusion can mean different things (generative models vs physical diffusion) - source of false positives",
+    "Emergence patterns appear in both biological/neural and physical systems",
+    "Strategic behavior isomorphisms cross political science, economics, and finance"
+  ],
+
+  "false_positive_patterns": [
+    "Generic 'neural network' mentions without specific structural mechanisms",
+    "Diffusion in generative models vs diffusion in physics (different meanings)",
+    "'Optimization' mentioned but with very different mathematical frameworks",
+    "Generic academic language about 'evolution' or 'complexity'"
+  ],
+
+  "recommendations": [
+    "Add context-aware filtering: 'diffusion model' vs 'heat diffusion'",
+    "Require stronger structural overlap beyond mechanism type matching",
+    "Weight shared technical terms more heavily (e.g., 'quantum-classical', 'scaling law')",
+    "Filter out matches where only generic methodological terms overlap (e.g., just 'neural network')",
+    "Current 60% precision is good but could reach 70-80% with these improvements"
+  ]
+}

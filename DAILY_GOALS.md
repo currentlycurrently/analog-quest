@@ -4,32 +4,82 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 20
+## Today's Goals - Session 19.6 (THRESHOLD ADJUSTMENT)
+
+**Session #**: 19.6
+
+**READ THIS FIRST**: Session 19.5 validation revealed that the 0.70 threshold is too low (0.70-0.75 range has 0% precision). This quick session raises the threshold to 0.80 before resuming scaling. See `SESSION_19.6_PLAN.md` for complete details.
+
+**Primary Goal**:
+Raise quality threshold to ≥0.80 based on Session 19.5 validation evidence
+
+**Specific Tasks**:
+1. Update find_matches_v2.py: MIN_SIMILARITY = 0.70 → 0.80
+2. Remove equation bonus (0% precision in validation)
+3. Delete all 71,985 old matches
+4. Regenerate matches with new threshold
+5. Quick validation: sample 20 matches, verify ≥90% precision
+6. Update documentation
+
+**Success Criteria**:
+- [ ] MIN_SIMILARITY raised to 0.80
+- [ ] Equation bonus removed
+- [ ] ~15,000-25,000 new matches generated (down from 71,985)
+- [ ] Precision: 41.7% → 90%+
+- [ ] 20-match validation confirms improvement
+- [ ] Documentation updated
+
+**Time Budget**: 2-3 hours
+
+**Building on Last Session**:
+Session 19.5 conducted 60-match stratified validation that revealed **critical threshold issues**: medium similarity (0.70-0.75) had 0% precision (all 15 samples were weak), while ≥0.80 had 95% precision and ≥0.85 had 100% precision. The evidence is clear: raise threshold before scaling further.
+
+**Why This Session is Critical**:
+- **0.70-0.75 range = 0% precision** (pure noise, all 15 validation samples weak)
+- **≥0.80 threshold = 95% precision** (validated in Sessions 17, 19)
+- **≥0.85 threshold = 100% precision** (validated in Session 19.5)
+- Current: 71,985 matches × 41.7% = ~30K real + ~42K false positives
+- After adjustment: ~20K matches × 90% = ~18K real + ~2K false positives
+- **Result**: Retain 60% of signal, remove 95% of noise, 13x better signal-to-noise!
+
+**If I Finish Early**:
+- Start Session 20: Resume scaling with clean threshold
+- Add 100-150 papers with confidence
+- All new matches will be high quality from the start
+
+**If I Get Stuck**:
+- Follow SESSION_19.6_PLAN.md step-by-step
+- The changes are straightforward (just threshold adjustment)
+- If validation shows <90% precision, raise to 0.85 and retry
+
+---
+
+## Upcoming: Session 20 (After 19.6 Complete)
 
 **Session #**: 20
 
 **Primary Goal**:
-Resume scaling to 1200-1300 papers with hardened methodology
+Resume scaling to 1200-1300 papers with clean ≥0.80 threshold
 
 **Specific Tasks**:
 1. Fetch 100-150 new papers from diverse domains
 2. Extract patterns using current keyword library
 3. Normalize patterns with canonical mechanisms
 4. Run false positive filter
-5. Generate isomorphisms with V2 algorithm (all new matches will have match_details automatically!)
+5. Generate isomorphisms with V2 algorithm (all matches ≥0.80 automatically!)
 6. Update all documentation
 
 **Success Criteria**:
 - [ ] 1200-1300 papers total
 - [ ] 90%+ hit rate maintained
 - [ ] 3,000-3,500 active patterns
+- [ ] All new matches ≥0.80 with 90%+ precision
 - [ ] High-confidence matches continue growing
-- [ ] All new matches have complete audit trail
 
 **Time Budget**: 2-3 hours
 
-**Building on Last Session**:
-Session 19.5 achieved **METHODOLOGY HARDENING** - added complete audit trail to all 71,985 matches, preserved pre-normalization data for all 3,285 patterns, and conducted 60-match stratified validation. **Key findings**: Ultra-high (≥0.85) = 100% precision, high-value mechanisms = 90% precision, overall (≥0.7) = 41.7% precision. Methodology is now **launch-ready** and defensible to academic reviewers.
+**Building on Session 19.6**:
+Session 19.6 raised quality threshold to ≥0.80 based on Session 19.5 validation. Matches reduced from 71,985 to ~20,000 but precision improved from 41.7% to 90%+. All false positives in 0.70-0.75 range removed. Ready to scale with confidence.
 
 **Technical Notes**:
 - Current: **1,114 papers**, **3,254 active patterns** (31 FP), **71,985 isomorphisms**, **91.7% hit rate**

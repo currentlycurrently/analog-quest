@@ -4,31 +4,40 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 20
+## Today's Goals - Session 19.5 (SPECIAL: Methodology Hardening)
 
-**Session #**: 20
+**Session #**: 19.5
+
+**READ THIS FIRST**: This is a special session that addresses methodology gaps identified by external review. See `SESSION_19.5_PLAN.md` for complete details.
 
 **Primary Goal**:
-Continue expansion to 1200-1300 papers OR focus on UI/UX improvements for researchers
+Add complete audit trail to all matches + expand validation beyond top-20
 
 **Specific Tasks**:
-1. Decide on session focus: expansion vs UI/UX improvements
-2. If expansion: Fetch 100+ new papers from diverse domains
-3. If UI/UX: Add graph visualization or natural language search
-4. Extract patterns from new papers (if expansion)
-5. Re-run matching if new patterns added
-6. Document findings and update all tracking files
+1. Update database schema (match_details, description_original, synonym_dict_version)
+2. Create generate_match_details.py and backfill all 71,985 matches
+3. Create stratified validation sample (70 matches across 6 buckets)
+4. Manually review all samples and rate as excellent/good/weak/false_positive
+5. Calculate precision by bucket
+6. Document methodology improvements
 
 **Success Criteria**:
-- [ ] Reached 1200+ papers total OR implemented meaningful UI improvement
-- [ ] Hit rate maintained above 90%
-- [ ] Quality maintained at 95% precision
-- [ ] All improvements documented with metrics
+- [ ] All 71,985 matches have match_details JSON
+- [ ] All 3,254 patterns have description_original preserved
+- [ ] 70 stratified samples reviewed
+- [ ] Precision calculated across different match types
+- [ ] Methodology report created
 
-**Time Budget**: 2-3 hours
+**Time Budget**: 3-4 hours
 
 **Building on Last Session**:
-Session 19 achieved **1100+ PAPERS MILESTONE!** (1,114 total) and **QUALITY SUSTAINED!** Hit rate: 90.8% → 91.7% (+0.9pp sustained above 90%). **95% precision at ≥0.8 VALIDATED!** (11 excellent, 8 good, 1 weak). Session 18 keywords (dynamical_system, sensitive_dependence, gauge_theory, yang_mills) **validated beautifully** in ultra-high-conf matches. High-conf matches: 2,079 → 2,567 (+488, +23.5%!). Fetched 111 papers from 9 domains (cs.DB, cs.PL, q-bio.OT, physics.atom-ph, med-ph, cs.MS, cs.IT, cs.CC, math.AG). Vocabulary gap analysis completed: identified keywords for computational physics, security, biomaterials, statistical geometry (LOW priority - 91.7% is excellent).
+Session 19 achieved **1100+ PAPERS MILESTONE!** (1,114 total) and **QUALITY SUSTAINED!** Hit rate: 90.8% → 91.7%. External review identified critical methodology gaps: (1) match scores are opaque - no breakdown of components, (2) can't reproduce past results - normalized descriptions lose originals, (3) validation is narrow - only top-20 matches reviewed. Session 19.5 fixes these gaps by adding complete audit trail, preserving pre-normalization data, and expanding validation across different match types.
+
+**WHY THIS SESSION IS CRITICAL**:
+- Academic credibility requires audit trail - must be able to explain WHY any two patterns matched
+- Reproducibility requires pre-normalization data - must preserve original text before synonyms applied
+- Comprehensive validation required - need precision across far cross-domain, near cross-domain, with/without equations, ultra-high vs medium similarity
+- This session makes methodology launch-ready and defensible to academic reviewers
 
 **Technical Notes**:
 - Current: **1,114 papers**, **3,254 active patterns** (31 FP), **71,985 isomorphisms**, **91.7% hit rate**
@@ -66,10 +75,18 @@ Session 19 achieved **1100+ PAPERS MILESTONE!** (1,114 total) and **QUALITY SUST
 - Add "researcher onboarding" flow to UI
 - Consider context-aware synonym groups
 
+**DETAILED EXECUTION PLAN**:
+See `SESSION_19.5_PLAN.md` for complete implementation details including:
+- Full Python code for all scripts
+- Database schema changes
+- Step-by-step execution checklist
+- Expected deliverables
+
 **If I Get Stuck**:
-- Focus on expansion - it's the proven path
-- UI improvements can wait until we have more data
-- Quality is already excellent - no urgent fixes needed
+- Focus on database updates first (match_details backfill)
+- Stratified sampling is well-defined in the plan
+- Manual review is the most time-consuming part (~1.5 hours)
+- Documentation can be concise - focus on precision results
 
 ---
 

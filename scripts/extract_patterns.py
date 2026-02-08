@@ -115,6 +115,59 @@ def simple_extract(abstract):
         'strain': 'strain',
         'interface': 'interface',
         'morphology': 'morphology',
+
+        # CS/NLP keywords (added Session 13)
+        'embedding': 'embedding',
+        'attention': 'attention',
+        'transformer': 'transformer',
+        'language model': 'language_model',
+        'tokenization': 'tokenization',
+        'parsing': 'parsing',
+        'semantic': 'semantic',
+        'encoder': 'encoder',
+        'decoder': 'decoder',
+        'fine-tuning': 'fine_tuning',
+        'pre-training': 'pre_training',
+        'representation learning': 'representation_learning',
+
+        # Computer vision keywords (added Session 13)
+        'convolution': 'convolution',
+        'segmentation': 'segmentation',
+        'object detection': 'detection',
+        'image classification': 'classification',
+        'feature extraction': 'feature_extraction',
+        'visual recognition': 'recognition',
+        'backbone': 'backbone',
+        'anchor': 'anchor',
+        'bounding box': 'bounding_box',
+        'pixel': 'pixel',
+        'convolutional neural': 'cnn',
+
+        # Game theory keywords (added Session 13)
+        'payoff': 'payoff',
+        'dominant strategy': 'strategy',
+        'mixed strategy': 'strategy',
+        'pure strategy': 'strategy',
+        'cooperative game': 'cooperation',
+        'bargaining': 'bargaining',
+        'coalition': 'coalition',
+        'zero-sum': 'zero_sum',
+        'equilibrium strategy': 'equilibrium',
+
+        # Social science keywords (added Session 13)
+        'social network': 'network_effect',
+        'opinion dynamics': 'opinion_dynamics',
+        'voting': 'voting',
+        'consensus': 'consensus',
+        'polarization': 'polarization',
+        'influence': 'influence',
+        'diffusion of innovation': 'diffusion',
+        'collective behavior': 'collective',
+        'cooperation': 'cooperation',
+        'social contagion': 'contagion',
+        'norm': 'norm',
+        'trust': 'trust',
+        'reciprocity': 'reciprocity',
     }
 
     abstract_lower = abstract.lower()

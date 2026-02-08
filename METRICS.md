@@ -8,10 +8,10 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 15 - 2026-02-08
+**Last Updated**: Session 16 - 2026-02-08
 
 ### Papers
-- **Total Papers Processed**: 771 (added 113 in Session 15 - **700+ MILESTONE!** 🎉🎉🎉)
+- **Total Papers Processed**: 856 (added 85 in Session 16 - **800+ MILESTONE!** 🎉🎉🎉)
 - **By Domain**:
   - Computer Science: 240 (added 41: cs.MA, cs.HC, cs.IR)
   - Physics: 167 (added 28: physics.plasm-ph, physics.geo-ph)
@@ -29,38 +29,38 @@ Agent updates these numbers after each session.
   - Nucl-TH (Nuclear Theory): 9
 
 ### Patterns
-- **Total Patterns Extracted**: 1,864 (added 280 in Session 15)
+- **Total Patterns Extracted**: 2,101 (added 237 in Session 16)
 - **By Type** (Top 20 canonical mechanisms):
-  - Optimization: 133 (unchanged)
-  - Adaptation: 111 (unchanged)
-  - Network Effect: 108 (unchanged)
-  - Bound: 105 (unchanged)
-  - Strain: 79 (unchanged)
-  - Equilibrium: 68 (unchanged)
-  - Complexity: 60 (unchanged)
-  - Scaling: 48 (unchanged)
-  - Diffusion Process: 47 (unchanged)
-  - Language Model: 36 (unchanged)
-  - Convergence: 34 (unchanged)
-  - Market: 32 (unchanged)
-  - Oscillation: 31 (unchanged)
-  - Negative Feedback: 31 (unchanged)
-  - Norm: 28 (unchanged)
-  - Expression: 28 (unchanged)
-  - Threshold Dynamics: 27 (unchanged)
-  - Approximation: 27 (unchanged)
-  - Feedback Loop: 24 (unchanged)
-  - Emergence: 24 (unchanged)
-  - (+ 30+ more types, 280 new patterns distributed across all types)
+  - Optimization: 158 (+25)
+  - Adaptation: 148 (+37)
+  - Bound: 130 (+25)
+  - Network Effect: 129 (+21)
+  - Strain: 109 (+30)
+  - Equilibrium: 95 (+27)
+  - Language Model: 75 (+39)
+  - Complexity: 66 (+6)
+  - Scaling: 63 (+15)
+  - Diffusion Process: 61 (+14)
+  - Convergence: 55 (+21)
+  - Norm: 47 (+19)
+  - Negative Feedback: 40 (+9)
+  - Approximation: 39 (+12)
+  - Oscillation: 36 (+5)
+  - Market: 35 (+3)
+  - Threshold Dynamics: 34 (+7)
+  - Expression: 34 (+6)
+  - Feedback Loop: 33 (+9)
+  - Semantic: 31 (+31 NEW!)
+  - (+ 30+ more types including new: instability, fluid_dynamics, wave_propagation, random_process, etc.)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: 46,184 (V2 algorithm with min_similarity=0.6, +130% from Session 14!)
+- **Total Isomorphisms Found**: 34,165 (V2 + false positive filtering, **-26% noise from Session 15!**)
 - **Ultra High Confidence (≥0.9)**: Unknown
 - **Very High Confidence (≥0.8)**: Unknown
-- **High Confidence (≥0.7)**: 538 (1.2% - **STABLE!**) ✓✓✓
-- **Medium Confidence (0.6-0.7)**: 45,646 (98.8%)
-- **Top Similarity Score**: 0.9375 (stable at ~0.93-0.94)
-- **Average Similarity Score**: 0.604 (stable)
+- **High Confidence (≥0.7)**: 869 (2.5% - **+61% from Session 15!**) ✓✓✓
+- **Medium Confidence (0.6-0.7)**: 33,296 (97.5%)
+- **Top Similarity Score**: 0.94 (stable at ~0.93-0.94)
+- **Average Similarity Score**: ~0.60 (stable)
 - **Algorithm Version**: V2 with synonym normalization + context filtering + raised min_similarity
 - **Manually Verified Quality**: 50% precision at ≥0.7 (Sessions 10, 12, 15 - consistent!)
 - **V2 Improvements**:
@@ -74,8 +74,8 @@ Agent updates these numbers after each session.
 - **Top Mechanisms in High-Confidence Matches**: bound (139), complexity (62), equilibrium (45), scaling (40)
 
 ### Quality Metrics
-- **Average Patterns per Paper**: 2.42 (1,864/771)
-- **Hit Rate**: **89.8%** (692/771 papers have patterns - SUSTAINED above 89%! 🎉)
+- **Average Patterns per Paper**: 2.45 (2,101/856)
+- **Hit Rate**: **90.0%** (770/856 papers have patterns - SUSTAINED at 90%! 🎉)
 - **Papers with Patterns by Domain**: (Session 15 - to be updated)
   - Stat: 23 papers with patterns (100% of 23!) ✓✓✓
   - Nucl-TH: 9 papers (100% of 9!) ✓✓✓
@@ -90,16 +90,16 @@ Agent updates these numbers after each session.
   - GR-QC: 11 papers (73.3% of 15)
   - HEP-TH: 10 papers (71.4% of 14)
   - Astro-ph: 9 papers (60% of 15)
-- **Average Matches per Pattern**: 24.8 (46,184 / 1,864 patterns)
-- **Estimated True Positives**: 23,092-27,710 isomorphisms (50-60% of 46,184)
-- **High-Confidence True Positives**: 269-323 excellent matches (50-60% of 538 high-conf)
+- **Average Matches per Pattern**: 16.3 (34,165 / 2,101 patterns)
+- **Estimated True Positives**: 17,083-20,499 isomorphisms (50-60% of 34,165)
+- **High-Confidence True Positives**: 435-521 excellent matches (50-60% of 869 high-conf)
 
 ### Velocity
-- **Papers per Session (avg)**: 51.4 (771/15)
-- **Patterns per Session (avg)**: 124.3 (1,864/15)
-- **Isomorphisms per Session (avg)**: 3,079 candidates per session (with V2 algorithm)
-- **Sessions per Week (avg)**: N/A (15 sessions in two days)
-- **Total Sessions**: 15
+- **Papers per Session (avg)**: 53.5 (856/16)
+- **Patterns per Session (avg)**: 131.3 (2,101/16)
+- **Isomorphisms per Session (avg)**: 2,135 candidates per session (with V2 + improvements)
+- **Sessions per Week (avg)**: N/A (16 sessions in two days)
+- **Total Sessions**: 16
 
 ---
 
@@ -125,7 +125,9 @@ Agent updates these numbers after each session.
 - [x] **600 Papers Milestone**: Reached 658 papers in Session 14! ✓
 - [x] **500+ High-Confidence Matches**: Reached 536 in Session 14! ✓
 - [x] **700 Papers Milestone**: Reached 771 papers in Session 15! ✓
-- [ ] **First 1000 Papers**: Major coverage expansion (771/1000)
+- [x] **800 Papers Milestone**: Reached 856 papers in Session 16! ✓
+- [x] **Quality Concentration**: High-conf matches increased 61% while reducing noise 26%! ✓
+- [ ] **First 1000 Papers**: Major coverage expansion (856/1000)
 - [ ] **First External Validation**: Someone else finds it interesting
 - [ ] **1000 Papers**: Significant coverage
 - [ ] **2000 Papers**: Mission complete (6 month goal)
@@ -151,6 +153,7 @@ Agent updates these numbers after each session.
 | 13 | 2026-02-08 | +105 | +384 | +87840 | **500+ papers!** +43 keywords, **90.1% hit rate!**, 104,633 isomorphisms (6.23x!), CS 94.6% |
 | 14 | 2026-02-08 | +152 | +411 | V2 update | **600+ papers!** V2 min_similarity=0.6, 20,032 isomorphisms, **536 high-conf (4x!)**, 90.0% hit rate |
 | 15 | 2026-02-08 | +113 | +280 | +26152 | **700+ papers!** 771 total, 46,184 isomorphisms (+130%), 538 high-conf (stable!), 89.8% hit rate, 50% precision |
+| 16 | 2026-02-08 | +85 | +237 | -11919 | **HYBRID SUCCESS!** 856 papers, 34,165 isos (-26% noise!), 869 high-conf (+61%!), 90.0% hit rate, quality concentration! |
 
 ---
 

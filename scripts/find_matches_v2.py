@@ -84,7 +84,7 @@ def calculate_similarity_v2(pattern1, pattern2):
 
     return min(score, 1.0)  # Cap at 1.0
 
-def find_cross_domain_matches_v2(min_similarity=0.80, limit=None):
+def find_cross_domain_matches_v2(min_similarity=0.77, limit=None):
     """
     Find cross-domain pattern matches using improved algorithm.
 
@@ -255,7 +255,7 @@ def show_top_matches(limit=10):
 if __name__ == '__main__':
     import sys
 
-    min_similarity = float(sys.argv[1]) if len(sys.argv) > 1 else 0.80
+    min_similarity = float(sys.argv[1]) if len(sys.argv) > 1 else 0.77
 
     count = find_cross_domain_matches_v2(min_similarity=min_similarity)
     print(f'\n[SUCCESS] Found and stored {count} cross-domain isomorphisms (v2 algorithm)')

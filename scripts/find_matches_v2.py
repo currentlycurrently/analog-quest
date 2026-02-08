@@ -102,12 +102,14 @@ def find_cross_domain_matches_v2(min_similarity=0.5, limit=None):
     cursor = db.cursor()
 
     # Get all patterns with their canonical mechanisms
+    # Exclude patterns marked as false positives (extraction_method contains '_FP')
     cursor.execute('''
         SELECT p.id, p.structural_description, p.mechanism_type,
                p.canonical_mechanism, p.has_equation,
                pap.domain, pap.id as paper_id, pap.title
         FROM patterns p
         JOIN papers pap ON p.paper_id = pap.id
+        WHERE (p.extraction_method IS NULL OR p.extraction_method NOT LIKE '%_FP%')
         ORDER BY p.id
     ''')
 

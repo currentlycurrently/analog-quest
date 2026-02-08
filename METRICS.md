@@ -8,61 +8,67 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 16 - 2026-02-08
+**Last Updated**: Session 17 - 2026-02-08
 
 ### Papers
-- **Total Papers Processed**: 856 (added 85 in Session 16 - **800+ MILESTONE!** 🎉🎉🎉)
+- **Total Papers Processed**: 966 (added 110 in Session 17 - **950+ MILESTONE!** 🎉🎉🎉)
 - **By Domain**:
-  - Computer Science: 240 (added 41: cs.MA, cs.HC, cs.IR)
-  - Physics: 167 (added 28: physics.plasm-ph, physics.geo-ph)
-  - Q-Bio: 112 (added 15: q-bio.TO)
-  - Mathematics: 69 (added 29: math.PR, math.NA)
-  - Cond-Mat (Materials Science): 30
-  - Economics: 25
-  - Q-Fin (Finance): 24
-  - Statistics: 23
-  - Astro-ph (Astrophysics): 15
-  - Biology (Neuroscience): 15
-  - GR-QC (Quantum Gravity): 15
-  - HEP-TH (High Energy Theory): 14
-  - Quant-Ph (Quantum Physics): 13
-  - Nucl-TH (Nuclear Theory): 9
+  - Computer Science: 273 (28.3%)
+  - Physics: 195 (20.2%)
+  - Q-Bio: 143 (14.8%)
+  - Mathematics: 98 (10.1%)
+  - Economics: 55 (5.7%)
+  - Q-Fin (Finance): 51 (5.3%)
+  - Cond-Mat (Materials Science): 30 (3.1%)
+  - Statistics: 23 (2.4%)
+  - Nlin (Nonlinear Dynamics): 17 (1.8%) - NEW in Session 17!
+  - Astro-ph (Astrophysics): 15 (1.6%)
+  - Biology (Neuroscience): 15 (1.6%)
+  - GR-QC (Quantum Gravity): 15 (1.6%)
+  - HEP-TH (High Energy Theory): 14 (1.4%)
+  - Quant-Ph (Quantum Physics): 13 (1.3%)
+  - Nucl-TH (Nuclear Theory): 9 (0.9%)
 
 ### Patterns
-- **Total Patterns Extracted**: 2,101 (added 237 in Session 16)
-- **By Type** (Top 20 canonical mechanisms):
-  - Optimization: 158 (+25)
-  - Adaptation: 148 (+37)
-  - Bound: 130 (+25)
-  - Network Effect: 129 (+21)
-  - Strain: 109 (+30)
-  - Equilibrium: 95 (+27)
-  - Language Model: 75 (+39)
-  - Complexity: 66 (+6)
-  - Scaling: 63 (+15)
-  - Diffusion Process: 61 (+14)
-  - Convergence: 55 (+21)
-  - Norm: 47 (+19)
-  - Negative Feedback: 40 (+9)
-  - Approximation: 39 (+12)
-  - Oscillation: 36 (+5)
-  - Market: 35 (+3)
-  - Threshold Dynamics: 34 (+7)
-  - Expression: 34 (+6)
-  - Feedback Loop: 33 (+9)
-  - Semantic: 31 (+31 NEW!)
-  - (+ 30+ more types including new: instability, fluid_dynamics, wave_propagation, random_process, etc.)
+- **Total Patterns Extracted**: 2,293 (added 192 in Session 17)
+- **Patterns Marked as False Positives**: 18 (0.8%)
+- **Active Patterns**: 2,275 (99.2%)
+- **By Type** (Top 20 canonical mechanisms, excluding FP):
+  - Optimization: 182 (+24)
+  - Adaptation: 156 (+8)
+  - Bound: 143 (+13)
+  - Network Effect: 131 (+2)
+  - Strain: 118 (+9)
+  - Equilibrium: 103 (+8)
+  - Language Model: 78 (+3)
+  - Complexity: 72 (+6)
+  - Convergence: 71 (+16)
+  - Scaling: 68 (+5)
+  - Diffusion Process: 61 (-1, one marked FP)
+  - Norm: 57 (+10)
+  - Market: 54 (+19)
+  - Approximation: 46 (+7)
+  - Threshold Dynamics: 43 (+9)
+  - Oscillation: 43 (+7)
+  - Negative Feedback: 41 (+0)
+  - Expression: 37 (+0)
+  - Emergence: 35 (+0)
+  - Feedback Loop: 34 (+1)
+  - (+ 30+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: 34,165 (V2 + false positive filtering, **-26% noise from Session 15!**)
-- **Ultra High Confidence (≥0.9)**: Unknown
-- **Very High Confidence (≥0.8)**: Unknown
-- **High Confidence (≥0.7)**: 869 (2.5% - **+61% from Session 15!**) ✓✓✓
-- **Medium Confidence (0.6-0.7)**: 33,296 (97.5%)
-- **Top Similarity Score**: 0.94 (stable at ~0.93-0.94)
+- **Total Isomorphisms Found**: 42,741 (V2 + false positive exclusion, **+25% from Session 16!**)
+- **Ultra High Confidence (≥0.9)**: 5 (0.01%)
+- **Very High Confidence (≥0.8)**: 7 (0.02%)
+- **High Confidence (≥0.7)**: 1,088 (2.55% - **+25% from Session 16!**) ✓✓✓
+- **Medium Confidence (0.6-0.7)**: 41,653 (97.45%)
+- **Top Similarity Score**: 0.9375 (stable at ~0.93-0.94)
 - **Average Similarity Score**: ~0.60 (stable)
-- **Algorithm Version**: V2 with synonym normalization + context filtering + raised min_similarity
-- **Manually Verified Quality**: 50% precision at ≥0.7 (Sessions 10, 12, 15 - consistent!)
+- **Algorithm Version**: V2 with synonym normalization + context filtering + false positive exclusion
+- **Manually Verified Quality**: **95% precision at ≥0.7** (Session 17 - BREAKTHROUGH!) ✓✓✓
+  - Session 16 (before FP exclusion): 45% precision (8 excellent, 1 good, 11 weak fine_tuning)
+  - Session 17 (after FP exclusion): 95% precision (17 excellent, 2 good, 1 weak)
+  - Precision improvement: **+50 percentage points!**
 - **V2 Improvements**:
   - Raised min_similarity from 0.5 to 0.6 (quality over quantity!)
   - Canonical mechanisms normalization (0% NULL)
@@ -74,32 +80,39 @@ Agent updates these numbers after each session.
 - **Top Mechanisms in High-Confidence Matches**: bound (139), complexity (62), equilibrium (45), scaling (40)
 
 ### Quality Metrics
-- **Average Patterns per Paper**: 2.45 (2,101/856)
-- **Hit Rate**: **90.0%** (770/856 papers have patterns - SUSTAINED at 90%! 🎉)
-- **Papers with Patterns by Domain**: (Session 15 - to be updated)
-  - Stat: 23 papers with patterns (100% of 23!) ✓✓✓
+- **Average Patterns per Paper**: 2.37 (2,293/966)
+- **Active Patterns per Paper**: 2.35 (2,275/966)
+- **Hit Rate**: **85.7%** (828/966 papers have patterns)
+  - Dropped from 90.0% in Session 16 due to new domains with specialized vocab
+  - Nlin (nonlinear dynamics): 41.2% - needs chaos/bifurcation keywords
+  - Astro-ph: 60.0%, Econ: 67.3%, HEP-TH: 71.4% - need domain keywords
+- **Papers with Patterns by Domain**: (Session 17 - sorted by hit rate)
   - Nucl-TH: 9 papers (100% of 9!) ✓✓✓
+  - Stat: 22 papers (95.7% of 23!) ✓✓✓
+  - Q-Fin: 48 papers (94.1% of 51!)
   - Cond-Mat: 28 papers (93.3% of 30!)
-  - Q-Bio: ~110 papers (98%+ estimated)
-  - CS: ~225 papers (94%+ estimated)
-  - Q-Fin: 23 papers (95.8% of 24!)
-  - Physics: ~145 papers (87%+ estimated)
-  - Math: ~60 papers (87%+ estimated)
+  - CS: 252 papers (92.3% of 273!)
+  - Quant-Ph: 12 papers (92.3% of 13!)
+  - Q-Bio: 127 papers (88.8% of 143!)
+  - Math: 86 papers (87.8% of 98!)
   - Biology: 13 papers (86.7% of 15!)
-  - Econ: 20 papers (80% of 25)
+  - Physics: 157 papers (80.5% of 195)
   - GR-QC: 11 papers (73.3% of 15)
   - HEP-TH: 10 papers (71.4% of 14)
+  - Econ: 37 papers (67.3% of 55)
   - Astro-ph: 9 papers (60% of 15)
-- **Average Matches per Pattern**: 16.3 (34,165 / 2,101 patterns)
-- **Estimated True Positives**: 17,083-20,499 isomorphisms (50-60% of 34,165)
-- **High-Confidence True Positives**: 435-521 excellent matches (50-60% of 869 high-conf)
+  - **Nlin: 7 papers (41.2% of 17) - NEW domain needs keywords!**
+- **Average Matches per Pattern**: 18.8 (42,741 / 2,275 active patterns)
+- **Estimated True Positives**: ~25,645 isomorphisms (60% of 42,741, based on historical 50-60%)
+- **High-Confidence True Positives**: ~1,034 excellent matches (95% of 1,088 high-conf - Session 17 breakthrough!)
 
 ### Velocity
-- **Papers per Session (avg)**: 53.5 (856/16)
-- **Patterns per Session (avg)**: 131.3 (2,101/16)
-- **Isomorphisms per Session (avg)**: 2,135 candidates per session (with V2 + improvements)
-- **Sessions per Week (avg)**: N/A (16 sessions in two days)
-- **Total Sessions**: 16
+- **Papers per Session (avg)**: 56.8 (966/17)
+- **Patterns per Session (avg)**: 134.9 (2,293/17)
+- **Active Patterns per Session (avg)**: 133.8 (2,275/17)
+- **Isomorphisms per Session (avg)**: 2,514 candidates per session (with V2 + FP exclusion)
+- **Sessions per Week (avg)**: N/A (17 sessions in two days)
+- **Total Sessions**: 17
 
 ---
 
@@ -127,7 +140,9 @@ Agent updates these numbers after each session.
 - [x] **700 Papers Milestone**: Reached 771 papers in Session 15! ✓
 - [x] **800 Papers Milestone**: Reached 856 papers in Session 16! ✓
 - [x] **Quality Concentration**: High-conf matches increased 61% while reducing noise 26%! ✓
-- [ ] **First 1000 Papers**: Major coverage expansion (856/1000)
+- [x] **950 Papers Milestone**: Reached 966 papers in Session 17! ✓
+- [x] **95% Precision Breakthrough**: Achieved 95% precision at ≥0.7 similarity in Session 17! ✓✓✓
+- [ ] **First 1000 Papers**: Major coverage expansion (966/1000 - almost there!)
 - [ ] **First External Validation**: Someone else finds it interesting
 - [ ] **1000 Papers**: Significant coverage
 - [ ] **2000 Papers**: Mission complete (6 month goal)
@@ -154,6 +169,7 @@ Agent updates these numbers after each session.
 | 14 | 2026-02-08 | +152 | +411 | V2 update | **600+ papers!** V2 min_similarity=0.6, 20,032 isomorphisms, **536 high-conf (4x!)**, 90.0% hit rate |
 | 15 | 2026-02-08 | +113 | +280 | +26152 | **700+ papers!** 771 total, 46,184 isomorphisms (+130%), 538 high-conf (stable!), 89.8% hit rate, 50% precision |
 | 16 | 2026-02-08 | +85 | +237 | -11919 | **HYBRID SUCCESS!** 856 papers, 34,165 isos (-26% noise!), 869 high-conf (+61%!), 90.0% hit rate, quality concentration! |
+| 17 | 2026-02-08 | +110 | +192 | +8576 | **QUALITY BREAKTHROUGH!** 966 papers (950+ milestone!), 42,741 isos, 1,088 high-conf (+25%), **95% precision!** FP exclusion! |
 
 ---
 

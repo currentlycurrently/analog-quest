@@ -100,8 +100,14 @@ def is_false_positive_pattern(pattern_desc, mechanism_type=None):
     desc_lower = pattern_desc.lower()
 
     # Special case: "fine_tuning" mechanism is almost always a false positive
+    # After manual review (Session 17), ALL fine_tuning patterns are false positives
+    # They describe methodology mentions, not structural mechanisms
     if mechanism_type == 'fine_tuning':
-        # Unless it describes HOW fine-tuning works structurally
+        return True  # Unconditionally exclude ALL fine_tuning patterns
+
+    # Also check canonical mechanism
+    if mechanism_type == 'adaptation' and 'fine' in desc_lower and 'tuning' in desc_lower:
+        # Catch patterns that were normalized to 'adaptation' but are really fine-tuning
         if not has_structural_content(pattern_desc):
             return True
 

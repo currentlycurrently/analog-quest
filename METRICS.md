@@ -8,10 +8,10 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 17 - 2026-02-08
+**Last Updated**: Session 18 - 2026-02-08
 
 ### Papers
-- **Total Papers Processed**: 966 (added 110 in Session 17 - **950+ MILESTONE!** 🎉🎉🎉)
+- **Total Papers Processed**: **1,003** (added 37 in Session 18 - **1000+ MILESTONE!** 🎉🎉🎉🎉)
 - **By Domain**:
   - Computer Science: 273 (28.3%)
   - Physics: 195 (20.2%)
@@ -30,9 +30,9 @@ Agent updates these numbers after each session.
   - Nucl-TH (Nuclear Theory): 9 (0.9%)
 
 ### Patterns
-- **Total Patterns Extracted**: 2,293 (added 192 in Session 17)
-- **Patterns Marked as False Positives**: 18 (0.8%)
-- **Active Patterns**: 2,275 (99.2%)
+- **Total Patterns Extracted**: **2,981** (added 688 in Session 18 - **re-extracted all with new keywords!**)
+- **Patterns Marked as False Positives**: 28 (0.9%)
+- **Active Patterns**: **2,953** (99.1%)
 - **By Type** (Top 20 canonical mechanisms, excluding FP):
   - Optimization: 182 (+24)
   - Adaptation: 156 (+8)
@@ -57,12 +57,12 @@ Agent updates these numbers after each session.
   - (+ 30+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: 42,741 (V2 + false positive exclusion, **+25% from Session 16!**)
-- **Ultra High Confidence (≥0.9)**: 5 (0.01%)
-- **Very High Confidence (≥0.8)**: 7 (0.02%)
-- **High Confidence (≥0.7)**: 1,088 (2.55% - **+25% from Session 16!**) ✓✓✓
-- **Medium Confidence (0.6-0.7)**: 41,653 (97.45%)
-- **Top Similarity Score**: 0.9375 (stable at ~0.93-0.94)
+- **Total Isomorphisms Found**: **58,761** (V2 + false positive exclusion, **+37.5% from Session 17!**)
+- **Ultra High Confidence (≥0.9)**: **14** (0.02% - **+180%!**)
+- **Very High Confidence (≥0.8)**: **29** (0.05% - **+314%!**)
+- **High Confidence (≥0.7)**: **2,079** (3.54% - **+91.1% from Session 17!**) ✓✓✓
+- **Medium Confidence (0.6-0.7)**: 56,682 (96.46%)
+- **Top Similarity Score**: **0.9960** (near-perfect matches!)
 - **Average Similarity Score**: ~0.60 (stable)
 - **Algorithm Version**: V2 with synonym normalization + context filtering + false positive exclusion
 - **Manually Verified Quality**: **95% precision at ≥0.7** (Session 17 - BREAKTHROUGH!) ✓✓✓
@@ -80,12 +80,14 @@ Agent updates these numbers after each session.
 - **Top Mechanisms in High-Confidence Matches**: bound (139), complexity (62), equilibrium (45), scaling (40)
 
 ### Quality Metrics
-- **Average Patterns per Paper**: 2.37 (2,293/966)
-- **Active Patterns per Paper**: 2.35 (2,275/966)
-- **Hit Rate**: **85.7%** (828/966 papers have patterns)
-  - Dropped from 90.0% in Session 16 due to new domains with specialized vocab
-  - Nlin (nonlinear dynamics): 41.2% - needs chaos/bifurcation keywords
-  - Astro-ph: 60.0%, Econ: 67.3%, HEP-TH: 71.4% - need domain keywords
+- **Average Patterns per Paper**: **2.97** (2,981/1,003)
+- **Active Patterns per Paper**: **2.94** (2,953/1,003)
+- **Hit Rate**: **90.8%** (911/1,003 papers have patterns - **RECOVERED AND EXCEEDED 90%!** ✓✓✓)
+  - Recovered from 85.7% in Session 17 with specialized keywords (+5.1pp)
+  - **Nlin (nonlinear dynamics): 100.0%** (41.2% → 100.0%, +58.8pp!) ✓✓✓
+  - **Astro-ph: 100.0%** (60.0% → 100.0%, +40.0pp!) ✓✓✓
+  - Econ: 85.5% (67.3% → 85.5%, +18.2pp)
+  - HEP-TH: 85.7% (71.4% → 85.7%, +14.3pp)
 - **Papers with Patterns by Domain**: (Session 17 - sorted by hit rate)
   - Nucl-TH: 9 papers (100% of 9!) ✓✓✓
   - Stat: 22 papers (95.7% of 23!) ✓✓✓
@@ -170,6 +172,7 @@ Agent updates these numbers after each session.
 | 15 | 2026-02-08 | +113 | +280 | +26152 | **700+ papers!** 771 total, 46,184 isomorphisms (+130%), 538 high-conf (stable!), 89.8% hit rate, 50% precision |
 | 16 | 2026-02-08 | +85 | +237 | -11919 | **HYBRID SUCCESS!** 856 papers, 34,165 isos (-26% noise!), 869 high-conf (+61%!), 90.0% hit rate, quality concentration! |
 | 17 | 2026-02-08 | +110 | +192 | +8576 | **QUALITY BREAKTHROUGH!** 966 papers (950+ milestone!), 42,741 isos, 1,088 high-conf (+25%), **95% precision!** FP exclusion! |
+| 18 | 2026-02-08 | +37 | +688 | +16020 | **1000+ MILESTONE!** 1,003 papers, 58,761 isos (+37.5%), **2,079 high-conf (+91.1%)!**, hit rate 85.7%→90.8%! Keywords BREAKTHROUGH! |
 
 ---
 

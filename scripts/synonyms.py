@@ -214,6 +214,60 @@ MECHANISM_SYNONYMS = {
     'self_similarity': [
         'fractal', 'self-similar', 'self-similarity', 'scale invariance',
         'power law'
+    ],
+
+    # Nonlinear dynamics (Session 18)
+    'dynamical_system': [
+        'dynamical system', 'dynamic system', 'nonlinear dynamics',
+        'trajectory', 'phase space'
+    ],
+
+    # Astrophysics (Session 18)
+    'stellar_dynamics': [
+        'stellar', 'stellar dynamics', 'stellar evolution', 'star formation'
+    ],
+
+    'galactic_structure': [
+        'galactic', 'galaxy', 'galactic structure', 'galactic dynamics'
+    ],
+
+    'cosmological_process': [
+        'cosmological', 'cosmology', 'universe evolution', 'cosmic'
+    ],
+
+    'black_hole_physics': [
+        'black hole', 'event horizon', 'accretion', 'accretion disk',
+        'gravitational collapse'
+    ],
+
+    'dark_matter': [
+        'dark matter', 'dark energy', 'missing mass'
+    ],
+
+    'astrophysical_redshift': [
+        'redshift', 'blue shift', 'doppler shift', 'luminosity'
+    ],
+
+    # Particle physics (Session 18)
+    'gauge_theory': [
+        'gauge', 'gauge theory', 'gauge field', 'gauge symmetry',
+        'yang-mills'
+    ],
+
+    'quantum_field_theory': [
+        'field theory', 'quantum field', 'quantum field theory', 'qft'
+    ],
+
+    'renormalization': [
+        'renormalization', 'renormalization group', 'rg flow'
+    ],
+
+    'elementary_particles': [
+        'quark', 'gluon', 'lepton', 'boson', 'higgs'
+    ],
+
+    'supersymmetry': [
+        'supersymmetry', 'susy', 'superpartner', 'supersymmetric'
     ]
 }
 
@@ -244,7 +298,17 @@ HIGH_VALUE_TECHNICAL_TERMS = [
     'lora', 'fine-tuning', 'transformer', 'attention mechanism',
 
     # Mathematical structures
-    'bifurcation', 'dynamical system', 'chaotic', 'strange attractor'
+    'bifurcation', 'dynamical system', 'chaotic', 'strange attractor',
+
+    # Nonlinear dynamics (Session 18)
+    'lyapunov exponent', 'attractor basin', 'phase space', 'strange attractor',
+
+    # Astrophysics (Session 18)
+    'black hole', 'accretion disk', 'dark matter', 'supernova', 'redshift',
+
+    # Particle physics (Session 18)
+    'gauge theory', 'renormalization', 'quantum field theory', 'yang-mills',
+    'supersymmetry', 'higgs boson'
 ]
 
 # Generic terms that should NOT drive matches (avoid false positives)

@@ -168,6 +168,42 @@ def simple_extract(abstract):
         'norm': 'norm',
         'trust': 'trust',
         'reciprocity': 'reciprocity',
+
+        # Nonlinear dynamics keywords (added Session 18)
+        'chaos': 'chaos',
+        'chaotic': 'chaos',
+        'attractor': 'attractor',
+        'strange attractor': 'attractor',
+        'lyapunov': 'lyapunov',
+        'fractal': 'fractal',
+        'nonlinear dynamics': 'nonlinear',
+        'dynamical system': 'dynamical_system',
+        'trajectory': 'trajectory',
+
+        # Astrophysics keywords (added Session 18)
+        'stellar': 'stellar',
+        'galactic': 'galactic',
+        'galaxy': 'galactic',
+        'cosmological': 'cosmological',
+        'redshift': 'redshift',
+        'luminosity': 'luminosity',
+        'supernova': 'supernova',
+        'black hole': 'black_hole',
+        'accretion': 'accretion',
+        'dark matter': 'dark_matter',
+        'gravitational': 'gravitational',
+
+        # Particle physics keywords (added Session 18)
+        'gauge': 'gauge',
+        'gauge theory': 'gauge',
+        'renormalization': 'renormalization',
+        'field theory': 'field_theory',
+        'quantum field': 'field_theory',
+        'quark': 'quark',
+        'gluon': 'gluon',
+        'higgs': 'higgs',
+        'supersymmetry': 'supersymmetry',
+        'yang-mills': 'yang_mills',
     }
 
     abstract_lower = abstract.lower()

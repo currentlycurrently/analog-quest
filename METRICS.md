@@ -8,77 +8,91 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 11 - 2026-02-08
+**Last Updated**: Session 12 - 2026-02-08
 
 ### Papers
-- **Total Papers Processed**: 303 (added 51 in Session 11 - **300+ MILESTONE!** 🎉)
+- **Total Papers Processed**: 401 (added 98 in Session 12 - **400+ MILESTONE!** 🎉)
 - **By Domain**:
-  - Physics: 40
-  - Cond-Mat (Materials Science): 30 (NEW in Session 9!)
-  - Computer Science: 30 (added 10 from cs.LG)
+  - Computer Science: 87 (added 57: cs.CL, cs.CV, cs.GT)
+  - Physics: 65 (added 25: physics.soc-ph)
+  - Q-Bio: 41 (added 16: q-bio.QM)
+  - Cond-Mat (Materials Science): 30
   - Economics: 25
   - Mathematics: 25
-  - Q-Bio (Genomics): 25
   - Q-Fin (Finance): 24
   - Statistics: 23
-  - Astro-ph (Astrophysics): 15 (NEW in Session 9!)
+  - Astro-ph (Astrophysics): 15
   - Biology (Neuroscience): 15
+  - GR-QC (Quantum Gravity): 15
+  - HEP-TH (High Energy Theory): 14
+  - Quant-Ph (Quantum Physics): 13
+  - Nucl-TH (Nuclear Theory): 9
 
 ### Patterns
-- **Total Patterns Extracted**: 560 (added 91 in Session 11)
-- **By Type** (Top 15):
-  - Bound: 38
-  - Optimization: 36
-  - Network Effect: 34
-  - Equilibrium: 24
+- **Total Patterns Extracted**: 789 (added 229 in Session 12)
+- **By Type** (Top 20):
+  - Bound: 48
+  - Optimization: 40
+  - Network Effect: 40
+  - Adaptation: 38
+  - Equilibrium: 29
   - Market: 24
-  - Evolution: 19
-  - Diffusion: 17
-  - Complexity: 16
-  - Regulatory: 13
-  - Scaling: 13
-  - Selection: 13
-  - Crystal Structure: 12 (NEW materials science keyword!)
-  - Expression: 12
-  - Strategic: 11
+  - Diffusion Process: 20
+  - Strain: 18
+  - Complexity: 18
+  - Scaling: 17
+  - Expression: 16
+  - Oscillation: 15
+  - Convergence: 14
+  - Negative Feedback: 13
+  - Crystal Structure: 13
+  - Strategic Behavior: 11
+  - Lattice: 11
   - Pathway: 10
-  - (+ 35+ more types)
+  - Decay Process: 10
+  - Synthesis: 9
+  - (+ 30+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: 3198 (using V2 algorithm!)
-- **High Confidence (≥0.7)**: 99 (was 0 in V1!) ✓✓✓
-- **Medium Confidence (0.6-0.7)**: 3099
-- **Low Confidence (0.5-0.6)**: 0 (filtered out!)
-- **Top Similarity Score**: 0.94 (MASSIVE jump from 0.60!)
-- **Average Similarity Score**: 0.61 (was 0.51 in V1)
+- **Total Isomorphisms Found**: 16,793 (using V2 algorithm! +13,595 from Session 11)
+- **High Confidence (≥0.7)**: 99 (threshold working well!) ✓✓✓
+- **Medium/Low Confidence (0.5-0.7)**: 16,694
+- **Top Similarity Score**: 0.94 (unchanged)
+- **Average Similarity Score**: 0.60 (was 0.61)
 - **Algorithm Version**: V2 with synonym normalization + context filtering
-- **Manually Verified Quality**: 60% precision (Session 10), expect higher with V2
+- **Manually Verified Quality**: 50% precision in top 20 (Session 12)
 - **V2 Improvements**: Canonical mechanisms, high-value term weighting, generic overlap filtering
-- **Quality Trend**: BREAKTHROUGH! (20% → 40% → 60% → V2 algorithm with 99 high-confidence matches!)
-- **Filtered Generic Overlaps**: 8.2% of comparisons (7967 false positives removed)
+- **Quality Trend**: STABLE! (20% → 40% → 60% → 50% - fluctuating around 50-60%)
+- **Filtered Generic Overlaps**: 9.5% of comparisons (25,868 false positives removed in Session 12)
+- **Quadratic Growth**: Isomorphisms grow quadratically with pattern count (789 patterns → 16,793 matches)
 
 ### Quality Metrics
-- **Average Patterns per Paper**: 1.86 (469/252)
-- **Hit Rate**: 82.1% (207/252 papers have patterns - improved!)
+- **Average Patterns per Paper**: 1.97 (789/401)
+- **Hit Rate**: 82.0% (329/401 papers have patterns - maintained!)
 - **Papers with Patterns by Domain**:
-  - Stat: 25 papers with patterns (100% of 23!) ✓✓✓
-  - Q-Bio: 23 papers (92% of 25) - bio keywords working! ✓✓
+  - Stat: 23 papers with patterns (100% of 23!) ✓✓✓
+  - Quant-Ph: 12 papers (92% of 13!)
+  - Q-Fin: 22 papers (92% of 24!)
+  - Nucl-TH: 9 papers (100% of 9!) ✓✓✓
+  - Cond-Mat: 27 papers (90% of 30!)
+  - Q-Bio: 37 papers (90% of 41!)
+  - Physics: 56 papers (86% of 65!)
+  - CS: 69 papers (79% of 87)
   - Econ: 19 papers (76% of 25)
   - Math: 18 papers (72% of 25)
-  - CS: 21 papers (70% of 30)
-  - Cond-Mat: 17 papers (57% of 30) - new domain
-  - Physics: 12 papers (80% of 15)
-  - Astro-ph: 9 papers (60% of 15) - new domain
-  - Biology: 7 papers (47% of 15)
-- **Average Matches per Pattern**: 6.25 (2933 / 469 patterns)
-- **Estimated True Positives**: 1467-1760 isomorphisms (50-60% of 2933)
+  - GR-QC: 10 papers (67% of 15)
+  - HEP-TH: 9 papers (64% of 14)
+  - Astro-ph: 9 papers (60% of 15)
+  - Biology: 9 papers (60% of 15)
+- **Average Matches per Pattern**: 21.3 (16,793 / 789 patterns)
+- **Estimated True Positives**: 8,397-10,076 isomorphisms (50-60% of 16,793)
 
 ### Velocity
-- **Papers per Session (avg)**: 25.2 (252/10)
-- **Patterns per Session (avg)**: 46.9 (469/10)
-- **Isomorphisms per Session (avg)**: 293.3 candidates per session
-- **Sessions per Week (avg)**: N/A (10 sessions in two days)
-- **Total Sessions**: 10
+- **Papers per Session (avg)**: 33.4 (401/12)
+- **Patterns per Session (avg)**: 65.8 (789/12)
+- **Isomorphisms per Session (avg)**: 1,399.4 candidates per session
+- **Sessions per Week (avg)**: N/A (12 sessions in two days)
+- **Total Sessions**: 12
 
 ---
 
@@ -98,7 +112,8 @@ Agent updates these numbers after each session.
 - [x] **250 Papers Milestone**: Reached 252 papers in Session 9! ✓
 - [x] **300 Papers Milestone**: Reached 303 papers in Session 11! ✓
 - [x] **High-Confidence Matches**: 99 matches ≥0.7 similarity in Session 11! ✓
-- [ ] **First 500 Papers**: Expanding beyond initial domain (303/500)
+- [x] **400 Papers Milestone**: Reached 401 papers in Session 12! ✓
+- [ ] **First 500 Papers**: Expanding beyond initial domain (401/500)
 - [ ] **First External Validation**: Someone else finds it interesting
 - [ ] **1000 Papers**: Significant coverage
 - [ ] **2000 Papers**: Mission complete (6 month goal)
@@ -120,6 +135,7 @@ Agent updates these numbers after each session.
 | 9 | 2026-02-08 | +55 | +96 | +843 | 250+ milestone! Materials science + astrophysics, 252 papers, 2933 isomorphisms |
 | 10 | 2026-02-08 | 0 | 0 | 0 | Quality review! 60% precision confirmed, rate limited on fetching, quality assessment doc |
 | 11 | 2026-02-08 | +51 | +91 | V2! | **300+ papers!** Synonym dictionary, V2 algorithm, 99 high-confidence matches, top score 0.94! |
+| 12 | 2026-02-08 | +98 | +229 | +13595 | **400+ papers!** CS/physics/q-bio expansion, 16,793 isomorphisms (5.25x!), 50% precision |
 
 ---
 

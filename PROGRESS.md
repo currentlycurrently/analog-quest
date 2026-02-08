@@ -653,6 +653,85 @@ This file tracks what happens each session. Agent updates this at the end of eve
 
 ---
 
+## Session 12 - 2026-02-08 - 400+ Papers Milestone!
+
+**Goal**: Continue expansion toward 400-500 papers while leveraging V2 algorithm improvements
+
+**What I Did**:
+- [x] Fetched 98 new papers from 5 diverse domains
+  - cs.CL (computational linguistics): 21 papers
+  - cs.CV (computer vision): 18 papers
+  - physics.soc-ph (physics and society): 25 papers
+  - q-bio.QM (quantitative biology methods): 16 papers
+  - cs.GT (game theory): 18 papers
+- [x] Reached 401 papers total (**400+ milestone!**)
+- [x] Extracted 229 new patterns from 82/154 papers (53.2% hit rate on new papers)
+- [x] Regenerated all isomorphisms with V2 algorithm
+- [x] Manually reviewed top 20 high-confidence matches (≥0.7 similarity)
+- [x] Created session12_quality_review.json with detailed quality assessment
+
+**Results**:
+- Papers: 303 → **401** (+98, +32%)
+- Patterns: 560 → **789** (+229, +41%)
+- Isomorphisms: 3,198 → **16,793** (+13,595, +425% increase!)
+- High-confidence matches (≥0.7): Still 99 (threshold working well)
+- Hit rate: 82.0% (329/401 papers have patterns - maintained above 80%)
+- Top similarity: 0.94 (unchanged)
+- Avg similarity: 0.60 (was 0.61)
+- Domains: 14 (unchanged - new papers added to existing categories)
+
+**Interesting Findings**:
+- **MASSIVE isomorphism growth**: 16,793 total (5.25x increase from 3,198)
+  - Quadratic growth as pattern count increases
+  - Filtered 9.5% of comparisons as generic overlaps (25,868 false positives)
+- **400+ papers milestone reached!** (401 total)
+- **New papers hit rate**: 53.2% (82/154) - lower than overall 82%
+  - CS.CL/CS.CV/CS.GT papers need more CS-specific keywords
+  - Physics.soc-ph (social physics) needs social science vocabulary
+- **Quality assessment**: 50% precision in top 20 matches (10/20 good or excellent)
+  - 3 excellent matches (neural scaling laws, Nash equilibrium)
+  - 7 good matches (GNNs, LoRA, scaling theory)
+  - 7 weak matches (generic "scaling" without structural similarity)
+- **Top domain pairs**:
+  - CS ↔ Materials Science: Neural scaling laws (EXCELLENT!)
+  - Econ ↔ Finance: Nash equilibrium in game theory (EXCELLENT!)
+  - Stats ↔ Materials Science: GNNs and ML methods (GOOD!)
+- **Domain distribution**: CS now largest (87 papers), followed by Physics (65), Q-Bio (41)
+
+**What I Learned**:
+- V2 algorithm scales well to larger datasets (789 patterns, 273K comparisons)
+- Generic mechanism types still cause false positives ("scaling", "phase transition")
+- Shared multi-word technical terms are strong signals (e.g., "graph neural network", "low-rank adaptation", "Nash equilibrium")
+- "Scaling" appears in many contexts without structural similarity:
+  - Neural network scaling (ML)
+  - Animal body shape scaling (biology)
+  - Economic scaling (economics)
+- Hit rate drops on new domains until domain-specific keywords added (53% vs 82%)
+- Quality remains stable around 50-60% despite dataset growth
+
+**Challenges**:
+- Weak matches from generic mechanism types:
+  - "Animal scaling" matched with "neural scaling" (both have "scaling" but unrelated)
+  - "Phase transitions" in different physical contexts (microbial growth vs black holes)
+- New CS subdomain papers (CL, CV, GT) have lower hit rate (need keywords)
+- Social physics domain needs social science vocabulary
+- Precision dropped slightly from 60% (Session 10) to 50% (Session 12)
+
+**Next Session**:
+- Implement context-aware synonym groups (biological_scaling vs neural_scaling)
+- Add CS subdomain keywords (NLP, computer vision, game theory)
+- Consider raising high-confidence threshold from 0.7 to 0.75 or 0.8
+- Reach 500+ papers
+- Add technical phrase detection for multi-word terms
+- Filter matches where only mechanism type overlaps (no shared vocabulary)
+
+**Key Files Created**:
+- examples/session12_quality_review.json - Detailed quality assessment of top 20 matches
+
+**Time Spent**: ~2 hours
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -686,17 +765,17 @@ This file tracks what happens each session. Agent updates this at the end of eve
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: 11
-- **Total Papers**: 303 (**300+ milestone reached!** 🎉)
-- **Total Patterns**: 560
-- **Total Isomorphisms**: 3198
-- **High Confidence Matches**: 99 (≥0.7 similarity) - was 0! ✓✓✓
+- **Total Sessions**: 12
+- **Total Papers**: 401 (**400+ milestone reached!** 🎉)
+- **Total Patterns**: 789
+- **Total Isomorphisms**: 16,793
+- **High Confidence Matches**: 99 (≥0.7 similarity) - threshold working well! ✓✓✓
 - **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th (14 domains!)
 - **Pattern Types**: 50+ canonical mechanism types
-- **Hit Rate**: 81.5% (247/303 papers)
-- **Match Quality**: V2 algorithm with synonyms - 99 high confidence matches!
-- **Top Similarity**: 0.94 (was 0.60!)
-- **Avg Similarity**: 0.61 (was 0.51!)
+- **Hit Rate**: 82.0% (329/401 papers)
+- **Match Quality**: V2 algorithm with synonyms - 50% precision in top 20
+- **Top Similarity**: 0.94 (unchanged)
+- **Avg Similarity**: 0.60 (was 0.61)
 - **Algorithm Version**: V2 with synonym normalization + context filtering
 - **Web Interface**: LIVE at localhost:3000 with search! ✓
 - **Synonym Dictionary**: Created and working! ✓

@@ -4,65 +4,74 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## Today's Goals - Session 12
+## Today's Goals - Session 13
 
-**Session #**: 12
+**Session #**: 13
 
 **Primary Goal**:
-Continue expansion toward 400-500 papers while leveraging V2 algorithm improvements
+Implement context-aware improvements to reduce false positives and reach 500+ papers
 
 **Specific Tasks**:
-1. Fetch 50-100 more papers from diverse domains (reach 400+ total)
-2. Consider adding more physics keywords (quantum, gauge, symmetry, field)
-3. Extract patterns from new papers using existing extraction
-4. Regenerate isomorphisms with V2 algorithm
-5. Manually review top 20 high-confidence matches (≥0.7 similarity)
-6. Optional: Add more synonym mappings as patterns emerge
-7. Optional: Start graph visualization of domain connections
+1. Add CS subdomain keywords (NLP, computer vision, game theory specific terms)
+2. Add social science keywords for physics.soc-ph papers
+3. Fetch 100+ more papers to reach 500+ total
+4. Extract patterns from new papers
+5. Consider implementing context-aware synonym groups (biological_scaling vs neural_scaling)
+6. Optional: Raise high-confidence threshold from 0.7 to 0.75
+7. Optional: Add technical phrase detection for multi-word terms
 
 **Success Criteria**:
-- [ ] Reached 400+ papers total
-- [ ] Hit rate maintained above 80% (currently 81.5%)
-- [ ] V2 algorithm used for matching
-- [ ] High-confidence matches reviewed for quality
+- [ ] Reached 500+ papers total
+- [ ] Hit rate maintained above 80%
+- [ ] Added domain-specific keywords for CS subdomains
+- [ ] Quality improvements implemented (context-aware filtering or phrase detection)
 - [ ] All data browsable in web interface
 
 **Time Budget**: 2-3 hours
 
 **Building on Last Session**:
-Session 11 was a BREAKTHROUGH! Implemented V2 algorithm with synonym normalization and context filtering. Reached 303 papers with 99 high-confidence matches (≥0.7 similarity). Top score jumped from 0.60 → 0.94! The incremental structure approach validated.
+Session 12 reached 401 papers (**400+ milestone!**) with 789 patterns and 16,793 isomorphisms (5.25x increase!). Quality review showed 50% precision in top 20, with weak matches from generic "scaling" and "phase transition" types. Need context-aware filtering to distinguish biological/neural/economic scaling.
 
 **Technical Notes**:
-- Current: 303 papers, 560 patterns, 3198 isomorphisms, 81.5% hit rate
-- V2 Algorithm working: 99 high-confidence matches, top score 0.94, avg 0.61
-- Synonym dictionary created and normalizing mechanisms beautifully
-- Generic overlap filtering removing 8.2% false positives
-- Scaling laws dominating top matches (universal across domains!)
-- 14 domains currently (added 4 physics domains in Session 11)
-- 56 papers still have no patterns (18.5%) - physics papers need more keywords
+- Current: 401 papers, 789 patterns, 16,793 isomorphisms, 82.0% hit rate
+- V2 Algorithm working: 99 high-confidence matches, top score 0.94, avg 0.60
+- New papers hit rate: 53.2% (needs domain-specific keywords)
+- CS now largest domain (87 papers), followed by Physics (65), Q-Bio (41)
+- Quality: 50% precision in top 20 (3 excellent, 7 good, 7 weak)
+- False positives: Generic mechanism types without structural similarity
+- Best matches: Neural scaling laws, Nash equilibrium, GNNs, LoRA
 
-**Key Files Created in Session 11**:
-- scripts/synonyms.py - mechanism synonym dictionary
-- scripts/find_matches_v2.py - improved matching algorithm
-- scripts/update_canonical_mechanisms.py - batch normalization
-- examples/verified_isomorphisms.json - documented excellent matches
+**Key Issues Identified in Session 12**:
+- Generic "scaling" matches (animal vs neural) - need context
+- CS subdomains (CL, CV, GT) have lower hit rate - need keywords
+- Social physics papers need social science vocabulary
+- Precision dropped from 60% to 50% (still acceptable but room for improvement)
 
 **If I Finish Early**:
 - Implement graph visualization showing domain connections
-- Add more domain-specific keywords (chemistry, neuroscience, etc.)
+- Add more synonym mappings based on new patterns
 - Manual quality review of top 50 matches
 - Consider deploying web interface to Vercel
-- Add physics keywords to improve coverage
+- Implement technical phrase extraction
 
 **If I Get Stuck**:
-- Focus on paper fetching and pattern extraction first
-- Use existing V2 algorithm (don't modify it unless issues found)
-- Quality review can be done in next session
+- Focus on paper fetching and keyword addition first
+- Context-aware filtering can be done in next session
+- Quality improvements are incremental, not blocking
 - Visualization is nice-to-have
 
 ---
 
 ## Completed Sessions
+
+### Session 12 - 2026-02-08 ✓ - 400+ Papers Milestone!
+- Fetched 98 papers from 5 diverse domains (cs.CL, cs.CV, physics.soc-ph, q-bio.QM, cs.GT)
+- Reached 401 papers total (400+ milestone!)
+- Extracted 229 patterns from 82/154 papers (53.2% hit rate on new)
+- Regenerated isomorphisms: 16,793 total (5.25x increase!)
+- Manually reviewed top 20 high-confidence matches
+- Quality: 50% precision (3 excellent, 7 good, 7 weak)
+- Identified false positive patterns (generic "scaling" without context)
 
 ### Session 11 - 2026-02-08 ✓ - BREAKTHROUGH SESSION!
 - Created synonym dictionary (20+ mechanism types)

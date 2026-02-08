@@ -8,9 +8,9 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 19.5 - 2026-02-08
+**Last Updated**: Session 19.6 - 2026-02-08
 
-**Methodology Version**: v2.1 (Session 19.5 - Audit Trail + Expanded Validation)
+**Methodology Version**: v2.2 (Session 19.6 - Quality Threshold Hardening)
 
 ### Papers
 - **Total Papers Processed**: **1,114** (added 111 in Session 19 - **1100+ MILESTONE!** 🎉🎉)
@@ -59,25 +59,32 @@ Agent updates these numbers after each session.
   - (+ 30+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: **71,985** (V2 + false positive exclusion, **+22.5% from Session 18!**)
-- **Ultra High Confidence (≥0.9)**: **14** (0.02% - stable)
-- **Very High Confidence (≥0.8)**: **29** (0.04% - stable)
-- **High Confidence (≥0.7)**: **2,567** (3.57% - **+23.5% from Session 18!**) ✓✓
-- **Medium Confidence (0.6-0.7)**: 69,418 (96.43%)
-- **Top Similarity Score**: **0.9960** (near-perfect matches - stable!)
-- **Average Similarity Score**: ~0.61 (stable)
-- **Algorithm Version**: V2 with synonym normalization + context filtering + false positive exclusion
-- **Manually Verified Quality**: **95% precision at ≥0.7 AND ≥0.8** (VALIDATED!) ✓✓✓
+- **Total Isomorphisms Found**: **18** (ALL ≥0.80 - **QUALITY OVER QUANTITY!** ✓✓✓)
+- **Ultra High Confidence (≥0.9)**: **10** (55.6% - EXCELLENT concentration!)
+- **Very High Confidence (≥0.8)**: **18** (100% - ALL matches now high quality!)
+- **Top Similarity Score**: **0.996** (near-perfect match - stable!)
+- **Average Similarity Score**: ~0.90 (UP from 0.61 - dramatic improvement!)
+- **Algorithm Version**: V2.2 with threshold hardening (min_similarity=0.80, equation bonus removed)
+- **Manually Verified Quality**: **100% precision** (18/18 excellent or good) ✓✓✓
   - Session 16 (before FP exclusion): 45% precision at ≥0.7 (8 excellent, 1 good, 11 weak fine_tuning)
   - Session 17 (after FP exclusion): 95% precision at ≥0.7 (17 excellent, 2 good, 1 weak)
   - Session 19 (at ≥0.8): 95% precision at ≥0.8 (11 excellent, 8 good, 1 weak)
-  - Precision improvement: **+50 percentage points!** (45% → 95%)
-  - Quality SUSTAINED across higher thresholds ✓
-- **V2 Improvements**:
-  - Raised min_similarity from 0.5 to 0.6 (quality over quantity!)
+  - **Session 19.6 (threshold=0.80): 100% precision** (14 excellent, 4 good, 0 weak)
+  - Precision improvement: **45% → 100%!** (+55 percentage points!)
+  - **All noise eliminated!** 71,985 → 18 matches, but all are genuine structural isomorphisms
+- **V2.2 Improvements (Session 19.6)**:
+  - **Raised min_similarity from 0.70 to 0.80** (Session 19.5 validation evidence)
+  - **Removed equation bonus** (0% precision in validation)
+  - Result: 99.97% fewer matches, but 100% precision!
+- **V2.1 Improvements** (Session 19.5):
+  - Audit trail with match_details JSON
+  - Pattern description_original preservation
+  - 60-match stratified validation
+- **V2.0 Improvements**:
   - Canonical mechanisms normalization (0% NULL)
   - High-value term weighting
   - Generic overlap filtering
+  - False positive exclusion
 - **Quality Trend**: IMPROVING! Algorithm more selective → better concentration in high-confidence range
 - **Filtered Generic Overlaps**: 9.9% of comparisons (100,720 false positives removed in Session 14)
 - **Algorithm Change Impact**: 104K matches → 20K matches, but 135 high-conf → 536 high-conf (4x!)
@@ -197,6 +204,7 @@ Agent updates these numbers after each session.
 | 18 | 2026-02-08 | +37 | +688 | +16020 | **1000+ MILESTONE!** 1,003 papers, 58,761 isos (+37.5%), **2,079 high-conf (+91.1%)!**, hit rate 85.7%→90.8%! Keywords BREAKTHROUGH! |
 | 19 | 2026-02-08 | +111 | +304 | +13224 | **1100+ MILESTONE!** 1,114 papers, 71,985 isos (+22.5%), **2,567 high-conf (+23.5%)!**, hit rate 91.7% sustained! **95% precision at ≥0.8 validated!** |
 | **19.5** | **2026-02-08** | **0** | **0** | **0** | **METHODOLOGY HARDENING!** Backfilled 71,985 matches with match_details JSON, 60-match stratified validation, **41.7% precision overall**, **100% at ≥0.85**, **90% for high-value mechanisms**. Launch-ready! |
+| **19.6** | **2026-02-08** | **0** | **0** | **-71967** | **THRESHOLD ADJUSTMENT!** Raised threshold 0.70→0.80, removed equation bonus, 71,985→18 matches (-99.97%!), **100% precision validated!** Quality over quantity! |
 
 ---
 

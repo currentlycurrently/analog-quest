@@ -78,13 +78,13 @@ def calculate_similarity_v2(pattern1, pattern2):
         text_sim = intersection / union if union > 0 else 0
         score += text_sim * 0.3  # Reduced from 0.5
 
-    # 5. Equation bonus (NEW)
-    if pattern1.get('has_equation') and pattern2.get('has_equation'):
-        score += 0.1  # Both have mathematical formulations
+    # 5. Equation bonus REMOVED (Session 19.6)
+    # Session 19.5 validation showed equation bonus had 0% precision
+    # Equations are domain-specific, not structural signals
 
     return min(score, 1.0)  # Cap at 1.0
 
-def find_cross_domain_matches_v2(min_similarity=0.5, limit=None):
+def find_cross_domain_matches_v2(min_similarity=0.80, limit=None):
     """
     Find cross-domain pattern matches using improved algorithm.
 
@@ -255,7 +255,7 @@ def show_top_matches(limit=10):
 if __name__ == '__main__':
     import sys
 
-    min_similarity = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
+    min_similarity = float(sys.argv[1]) if len(sys.argv) > 1 else 0.80
 
     count = find_cross_domain_matches_v2(min_similarity=min_similarity)
     print(f'\n[SUCCESS] Found and stored {count} cross-domain isomorphisms (v2 algorithm)')

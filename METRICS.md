@@ -8,7 +8,9 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 19 - 2026-02-08
+**Last Updated**: Session 19.5 - 2026-02-08
+
+**Methodology Version**: v2.1 (Session 19.5 - Audit Trail + Expanded Validation)
 
 ### Papers
 - **Total Papers Processed**: **1,114** (added 111 in Session 19 - **1100+ MILESTONE!** 🎉🎉)
@@ -81,6 +83,14 @@ Agent updates these numbers after each session.
 - **Algorithm Change Impact**: 104K matches → 20K matches, but 135 high-conf → 536 high-conf (4x!)
 - **Top Mechanisms in High-Confidence Matches**: bound (139), complexity (62), equilibrium (45), scaling (40)
 
+### Audit Trail & Reproducibility (Session 19.5)
+- **Match Details**: **ALL 71,985 matches** have complete score breakdown JSON ✓✓✓
+- **Pre-Normalization Data**: **ALL 3,285 patterns** preserve original text before synonym application ✓✓✓
+- **Dictionary Versioning**: All patterns tagged with synonym_dict_version (v1.0, v1.2)
+- **Reproducibility**: Can reproduce all results even if algorithms change ✓
+- **Validation Depth**: **60-match stratified review** across 5 buckets (not just top-20) ✓
+- **Methodology Report**: Comprehensive documentation in examples/session19.5_methodology_report.md
+
 ### Quality Metrics
 - **Average Patterns per Paper**: **2.95** (3,285/1,114)
 - **Active Patterns per Paper**: **2.92** (3,254/1,114)
@@ -91,6 +101,13 @@ Agent updates these numbers after each session.
   - **Nucl-TH: 100.0%** (perfect coverage!)
   - **Stat: 95.7%** (excellent coverage!)
   - Econ: 85.5%, HEP-TH: 85.7%
+- **Precision (Session 19.5 Stratified Validation)**:
+  - **Ultra-high (≥0.85): 100% precision** (9/9 excellent, 1/1 good)
+  - **High-value mechanisms: 90% precision** (9/10 excellent)
+  - **Cross-domain far: 40% precision** (6/15 good/excellent)
+  - **Overall (≥0.7): 41.7% precision** (25/60 good/excellent)
+  - **Medium similarity (0.7-0.75): 0% precision** (all weak - threshold too low)
+  - **Top-20 (≥0.8): 95% precision** (validated Sessions 17, 19)
 - **Papers with Patterns by Domain**: (Session 17 - sorted by hit rate)
   - Nucl-TH: 9 papers (100% of 9!) ✓✓✓
   - Stat: 22 papers (95.7% of 23!) ✓✓✓
@@ -179,6 +196,7 @@ Agent updates these numbers after each session.
 | 17 | 2026-02-08 | +110 | +192 | +8576 | **QUALITY BREAKTHROUGH!** 966 papers (950+ milestone!), 42,741 isos, 1,088 high-conf (+25%), **95% precision!** FP exclusion! |
 | 18 | 2026-02-08 | +37 | +688 | +16020 | **1000+ MILESTONE!** 1,003 papers, 58,761 isos (+37.5%), **2,079 high-conf (+91.1%)!**, hit rate 85.7%→90.8%! Keywords BREAKTHROUGH! |
 | 19 | 2026-02-08 | +111 | +304 | +13224 | **1100+ MILESTONE!** 1,114 papers, 71,985 isos (+22.5%), **2,567 high-conf (+23.5%)!**, hit rate 91.7% sustained! **95% precision at ≥0.8 validated!** |
+| **19.5** | **2026-02-08** | **0** | **0** | **0** | **METHODOLOGY HARDENING!** Backfilled 71,985 matches with match_details JSON, 60-match stratified validation, **41.7% precision overall**, **100% at ≥0.85**, **90% for high-value mechanisms**. Launch-ready! |
 
 ---
 

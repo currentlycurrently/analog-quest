@@ -1,0 +1,4009 @@
+[
+  {
+    "match_id": 368012,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7115384615384615,
+    "pattern_1": {
+      "pattern_id": 2454,
+      "paper_title": "The Hubble Tension in Light of the Symmetry of Scale Invariance",
+      "arxiv_id": "2602.04532v1",
+      "domain": "physics",
+      "published_date": "2026-02-04",
+      "mechanism_type": "strain",
+      "description": "This allows us to constrain $\u03a9_m$ in SIV, with both tests giving the best agreement for $\u03a9_m \\simeq 0",
+      "description_original": "This allows us to constrain $\u03a9_m$ in SIV, with both tests giving the best agreement for $\u03a9_m \\simeq 0",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3284,
+      "paper_title": "Mesoscopic chemical potentials across the (hyper)nuclear landscape",
+      "arxiv_id": "2602.05824v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "strain",
+      "description": "Finite nuclei constrain the dense-matter equation of state (EOS), yet they are self-bound quantum droplets far from the thermodynamic limit",
+      "description_original": "Finite nuclei constrain the dense-matter equation of state (EOS), yet they are self-bound quantum droplets far from the thermodynamic limit",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.252090Z",
+      "score_breakdown": {
+        "total": 0.7115384615384615,
+        "text_similarity": 0.5692307692307692,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "strain",
+        "shared_keywords": [
+          "constrain"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "nucl-th"
+        ],
+        "papers": [
+          1,
+          297
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 367830,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7236842105263157,
+    "pattern_1": {
+      "pattern_id": 5076,
+      "paper_title": "An Asymptotic Law of the Iterated Logarithm for $\\mathrm{KL}_{\\inf}$",
+      "arxiv_id": "2602.05259v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "optimization",
+      "description": "The population $\\mathrm{KL}_{\\inf}$ is a fundamental quantity that appears in lower bounds for (asymptotically) optimal regret of pure-exploration stochastic bandit algorithms, and optimal stopping time of sequential tests",
+      "description_original": "The population $\\mathrm{KL}_{\\inf}$ is a fundamental quantity that appears in lower bounds for (asymptotically) optimal regret of pure-exploration stochastic bandit algorithms, and optimal stopping time of sequential tests",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5689,
+      "paper_title": "Almost Asymptotically Optimal Active Clustering Through Pairwise Observations",
+      "arxiv_id": "2602.05690v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "optimization",
+      "description": "Leveraging the ubiquitous change-of-measure technique, we establish a fundamental lower bound on the expected number of queries needed to achieve a desired confidence in the clustering accuracy, formulated as a sup-inf optimization problem",
+      "description_original": "Leveraging the ubiquitous change-of-measure technique, we establish a fundamental lower bound on the expected number of queries needed to achieve a desired confidence in the clustering accuracy, formulated as a sup-inf optimization problem",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.239976Z",
+      "score_breakdown": {
+        "total": 0.7236842105263157,
+        "text_similarity": 0.5789473684210525,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "optimization",
+        "shared_keywords": [
+          "fundamental",
+          "lower"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "cs"
+        ],
+        "papers": [
+          888,
+          1094
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "good",
+    "notes": "Manual refinement: Both discuss fundamental quantities in optimization/learning contexts (was auto-rated weak)"
+  },
+  {
+    "match_id": 368959,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3199,
+      "paper_title": "Forecast on $f(R)$ Gravity with HI 21cm Intensity Mapping Surveys",
+      "arxiv_id": "2602.05575v1",
+      "domain": "gr-qc",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "We find that even near-term experiments such as BINGO are able to place nontrivial bounds on $B_0$, $\u03c3(B_0)\\simeq 2",
+      "description_original": "We find that even near-term experiments such as BINGO are able to place nontrivial bounds on $B_0$, $\u03c3(B_0)\\simeq 2",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3982,
+      "paper_title": "Improved SDP-Based Algorithm for Coloring 3-Colorable Graphs",
+      "arxiv_id": "2602.05904v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "19539})$ colors, improving upon the previous best bound of $\\widetilde{O}(n^{0",
+      "description_original": "19539})$ colors, improving upon the previous best bound of $\\widetilde{O}(n^{0",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.301024Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "gr-qc",
+          "cs"
+        ],
+        "papers": [
+          266,
+          493
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368497,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.706,
+    "pattern_1": {
+      "pattern_id": 3612,
+      "paper_title": "A Stronger Benchmark for Online Bilateral Trade: From Fixed Prices to Distributions",
+      "arxiv_id": "2602.05681v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "In particular, we show that when the joint distribution of valuations has a bounded density, our algorithm achieves $\\widetilde{\\mathcal{O}}(T^{3/4})$ regret",
+      "description_original": "In particular, we show that when the joint distribution of valuations has a bounded density, our algorithm achieves $\\widetilde{\\mathcal{O}}(T^{3/4})$ regret",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5389,
+      "paper_title": "Large time stabilization of rough-data solutions in one-dimensional nonlinear thermoelasticity",
+      "arxiv_id": "2602.05962v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "In an open bounded real interval $\u03a9$, the model for one-dimensional thermoelasticity given by \\[\n  u_{tt} = u_{xx} - \\big(f(\u0398)\\big)_x,\n  \\qquad\n  \u0398_t = \u0398_{xx} - f(\u0398) u_{xt}, \\] is considered along with homogeneous boundary conditions of Dirichlet type for $u$ and of Neumann type for $\u0398$, under the assumption that $f\\in C^1([0,\\infty))$ satisfies $f(0)=0$, $f'\\in L^\\infty((0,\\infty))$ and $f'>0$ on $[0,\\infty)$",
+      "description_original": "In an open bounded real interval $\u03a9$, the model for one-dimensional thermoelasticity given by \\[\n  u_{tt} = u_{xx} - \\big(f(\u0398)\\big)_x,\n  \\qquad\n  \u0398_t = \u0398_{xx} - f(\u0398) u_{xt}, \\] is considered along with homogeneous boundary conditions of Dirichlet type for $u$ and of Neumann type for $\u0398$, under the assumption that $f\\in C^1([0,\\infty))$ satisfies $f(0)=0$, $f'\\in L^\\infty((0,\\infty))$ and $f'>0$ on $[0,\\infty)$",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.276242Z",
+      "score_breakdown": {
+        "total": 0.706,
+        "text_similarity": 0.5648,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [
+          "bounded"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "math"
+        ],
+        "papers": [
+          388,
+          976
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368076,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7103448275862069,
+    "pattern_1": {
+      "pattern_id": 3398,
+      "paper_title": "MambaVF: State Space Model for Efficient Video Fusion",
+      "arxiv_id": "2602.06017v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "First, by reformulating video fusion as a sequential state update process, MambaVF captures long-range temporal dependencies with linear complexity while significantly reducing computation and memory costs",
+      "description_original": "First, by reformulating video fusion as a sequential state update process, MambaVF captures long-range temporal dependencies with linear complexity while significantly reducing computation and memory costs",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3879,
+      "paper_title": "Structural properties of distance-bounded phylogenetic reconciliation",
+      "arxiv_id": "2601.22193v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-29",
+      "mechanism_type": "complexity",
+      "description": "While the case $d=2$ is known to be polynomial, larger values are unresolved",
+      "description_original": "While the case $d=2$ is known to be polynomial, larger values are unresolved",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.255266Z",
+      "score_breakdown": {
+        "total": 0.7103448275862069,
+        "text_similarity": 0.5682758620689655,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "complexity",
+        "shared_keywords": [
+          "while"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "q-bio"
+        ],
+        "papers": [
+          334,
+          465
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368398,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7068181818181818,
+    "pattern_1": {
+      "pattern_id": 4267,
+      "paper_title": "Entanglement improves coordination in distributed systems",
+      "arxiv_id": "2602.04588v1",
+      "domain": "cs",
+      "published_date": "2026-02-04",
+      "mechanism_type": "bound",
+      "description": "We prove this advantage through queueing-theoretic analysis, non-local game formulation, and computational certification of classical bounds",
+      "description_original": "We prove this advantage through queueing-theoretic analysis, non-local game formulation, and computational certification of classical bounds",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5410,
+      "paper_title": "Dynamics of a nonlocal epidemic model with a new free boundary condition, part 1: Spreading-vanishing dichotomy",
+      "arxiv_id": "2602.05331v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "This paper investigates the long-time dynamics of a nonlocal epidemic model with free boundaries, where a pathogen with density $u(t,x)$ and the infected humans with density $v(t,x)$ evolve according to a reaction-diffusion system with nonlocal diffusion over a one dimensional interval $[g(t), h(t)]$, which represents the epidemic region expanding through its boundaries $x=g(t)$ and $x=h(t)$, known as free boundaries",
+      "description_original": "This paper investigates the long-time dynamics of a nonlocal epidemic model with free boundaries, where a pathogen with density $u(t,x)$ and the infected humans with density $v(t,x)$ evolve according to a reaction-diffusion system with nonlocal diffusion over a one dimensional interval $[g(t), h(t)]$, which represents the epidemic region expanding through its boundaries $x=g(t)$ and $x=h(t)$, known as free boundaries",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.271242Z",
+      "score_breakdown": {
+        "total": 0.7068181818181818,
+        "text_similarity": 0.5654545454545454,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [
+          "through"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "math"
+        ],
+        "papers": [
+          594,
+          986
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 367287,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7642857142857142,
+    "pattern_1": {
+      "pattern_id": 2814,
+      "paper_title": "Optimal scaling laws in learning hierarchical multi-index models",
+      "arxiv_id": "2602.05846v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "scaling",
+      "description": "In this work, we provide a sharp theory of scaling laws for two-layer neural networks trained on a class of hierarchical multi-index targets, in a genuinely representation-limited regime",
+      "description_original": "In this work, we provide a sharp theory of scaling laws for two-layer neural networks trained on a class of hierarchical multi-index targets, in a genuinely representation-limited regime",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5704,
+      "paper_title": "Enabling Large-Scale Channel Sounding for 6G: A Framework for Sparse Sampling and Multipath Component Extraction",
+      "arxiv_id": "2602.05405v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "scaling",
+      "description": "This framework enables the acquisition of channel datasets that are tens or even hundreds of times larger within the same channel measurement duration, thereby providing the massive data required to harness the full potential of AI scaling laws",
+      "description_original": "This framework enables the acquisition of channel datasets that are tens or even hundreds of times larger within the same channel measurement duration, thereby providing the massive data required to harness the full potential of AI scaling laws",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.213697Z",
+      "score_breakdown": {
+        "total": 0.7642857142857142,
+        "text_similarity": 0.6114285714285714,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "scaling",
+        "shared_keywords": [
+          "laws",
+          "scaling"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cs"
+        ],
+        "papers": [
+          138,
+          1098
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'scaling law' - clear structural isomorphism"
+  },
+  {
+    "match_id": 368127,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.709375,
+    "pattern_1": {
+      "pattern_id": 2733,
+      "paper_title": "Motif Diversity in Human Liver ChIP-seq Data Using MAP-Elites",
+      "arxiv_id": "2601.17808v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-25",
+      "mechanism_type": "optimization",
+      "description": "Motif discovery is a core problem in computational biology, traditionally formulated as a likelihood optimization task that returns a single dominant motif from a DNA sequence dataset",
+      "description_original": "Motif discovery is a core problem in computational biology, traditionally formulated as a likelihood optimization task that returns a single dominant motif from a DNA sequence dataset",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5713,
+      "paper_title": "Integrated Sensing, Communication, and Control for UAV-Assisted Mobile Target Tracking",
+      "arxiv_id": "2602.05209v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "optimization",
+      "description": "Then, by deriving the closed-form optimal beamforming solution under a given control input, the original problem is equivalently reformulated into a tractable control-oriented form",
+      "description_original": "Then, by deriving the closed-form optimal beamforming solution under a given control input, the original problem is equivalently reformulated into a tractable control-oriented form",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.257743Z",
+      "score_breakdown": {
+        "total": 0.709375,
+        "text_similarity": 0.5675,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "optimization",
+        "shared_keywords": [
+          "problem"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "q-bio",
+          "cs"
+        ],
+        "papers": [
+          114,
+          1100
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368011,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7117647058823529,
+    "pattern_1": {
+      "pattern_id": 3500,
+      "paper_title": "Effect of higher-order interactions on noisy majority-rule dynamics with random group sizes",
+      "arxiv_id": "2602.01902v1",
+      "domain": "physics",
+      "published_date": "2026-02-02",
+      "mechanism_type": "threshold_dynamics",
+      "description": "At the symmetric point $p=1/2$, we obtain an explicit analytical expression for the critical independence threshold $q_c$, which separates macroscopic ordering from a fluctuating mixed state and can be interpreted as the largest fraction of independent behavior that can be sustained without destroying order",
+      "description_original": "At the symmetric point $p=1/2$, we obtain an explicit analytical expression for the critical independence threshold $q_c$, which separates macroscopic ordering from a fluctuating mixed state and can be interpreted as the largest fraction of independent behavior that can be sustained without destroying order",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5407,
+      "paper_title": "Dynamics of a nonlocal epidemic model with a new free boundary condition, part 1: Spreading-vanishing dichotomy",
+      "arxiv_id": "2602.05331v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "threshold_dynamics",
+      "description": "Moreover, we obtain sharp criteria for this dichotomy, including a sharp threshold in terms of the initial data $(u_0,v_0)$; and by studying a related eigenvalue problem, we also find a sharp threshold in terms of the diffusion rate, which complements related results in Nguyen and Vo \\cite{fb7}",
+      "description_original": "Moreover, we obtain sharp criteria for this dichotomy, including a sharp threshold in terms of the initial data $(u_0,v_0)$; and by studying a related eigenvalue problem, we also find a sharp threshold in terms of the diffusion rate, which complements related results in Nguyen and Vo \\cite{fb7}",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.252035Z",
+      "score_breakdown": {
+        "total": 0.7117647058823529,
+        "text_similarity": 0.5694117647058823,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "threshold_dynamics",
+        "shared_keywords": [
+          "obtain",
+          "threshold",
+          "which"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "math"
+        ],
+        "papers": [
+          363,
+          986
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "good",
+    "notes": "Auto-rated: Decent similarity with 3 shared terms"
+  },
+  {
+    "match_id": 368824,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2851,
+      "paper_title": "Solving Stochastic Variational Inequalities without the Bounded Variance Assumption",
+      "arxiv_id": "2602.05531v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "For both classes of VIs, to make the expected residual norm less than $\\varepsilon$, we show an oracle complexity of $\\widetilde{O}(\\varepsilon^{-4})$, which is the best-known for constrained VIs",
+      "description_original": "For both classes of VIs, to make the expected residual norm less than $\\varepsilon$, we show an oracle complexity of $\\widetilde{O}(\\varepsilon^{-4})$, which is the best-known for constrained VIs",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5730,
+      "paper_title": "Obstruction theory and the complexity of counting group homomorphisms",
+      "arxiv_id": "2602.02885v1",
+      "domain": "cs",
+      "published_date": "2026-02-02",
+      "mechanism_type": "complexity",
+      "description": "Our second result, in contrast, shows that if $G$ is class 2 nilpotent and $\u0393= \u03c0_1(M^3)$ for some input 3-manifold triangulation $M^3$, then there is a polynomial time algorithm",
+      "description_original": "Our second result, in contrast, shows that if $G$ is class 2 nilpotent and $\u0393= \u03c0_1(M^3)$ for some input 3-manifold triangulation $M^3$, then there is a polynomial time algorithm",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.292216Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "complexity",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cs"
+        ],
+        "papers": [
+          149,
+          1108
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368707,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2620,
+      "paper_title": "Tilted Richardson Varieties",
+      "arxiv_id": "2602.05326v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "Additionally, we introduce a tilted generalization of the classical Deodhar decomposition of Richardson varieties, which leads to a combinatorial formula for tilted Kazhdan--Lusztig R-polynomials, a notion that arises naturally in our framework",
+      "description_original": "Additionally, we introduce a tilted generalization of the classical Deodhar decomposition of Richardson varieties, which leads to a combinatorial formula for tilted Kazhdan--Lusztig R-polynomials, a notion that arises naturally in our framework",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3879,
+      "paper_title": "Structural properties of distance-bounded phylogenetic reconciliation",
+      "arxiv_id": "2601.22193v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-29",
+      "mechanism_type": "complexity",
+      "description": "While the case $d=2$ is known to be polynomial, larger values are unresolved",
+      "description_original": "While the case $d=2$ is known to be polynomial, larger values are unresolved",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.286829Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "complexity",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "q-bio"
+        ],
+        "papers": [
+          61,
+          465
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 367475,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7596774193548387,
+    "pattern_1": {
+      "pattern_id": 3514,
+      "paper_title": "Was Benoit Mandelbrot a hedgehog or a fox?",
+      "arxiv_id": "2602.01122v1",
+      "domain": "physics",
+      "published_date": "2026-02-01",
+      "mechanism_type": "scaling",
+      "description": "Across his diverse pursuits, the concept of scaling -- manifested in self-similarity, power laws, fractals, and multifractals -- served as the central idea that structured his work",
+      "description_original": "Across his diverse pursuits, the concept of scaling -- manifested in self-similarity, power laws, fractals, and multifractals -- served as the central idea that structured his work",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5202,
+      "paper_title": "Pattern Formation in Excitable Neuronal Maps",
+      "arxiv_id": "2601.21671v1",
+      "domain": "nlin",
+      "published_date": "2026-01-29",
+      "mechanism_type": "scaling",
+      "description": "For ring-type patterns, the persistence decays more slowly than exponentially, often following a power law or stretched exponential",
+      "description_original": "For ring-type patterns, the persistence decays more slowly than exponentially, often following a power law or stretched exponential",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.222915Z",
+      "score_breakdown": {
+        "total": 0.7596774193548387,
+        "text_similarity": 0.607741935483871,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "scaling",
+        "shared_keywords": [
+          "power"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "nlin"
+        ],
+        "papers": [
+          366,
+          926
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'power law' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367194,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7671428571428571,
+    "pattern_1": {
+      "pattern_id": 4818,
+      "paper_title": "A theory for coexistence and selection of branched actin networks in a shared and finite pool of monomers",
+      "arxiv_id": "2511.23344v1",
+      "domain": "q-bio",
+      "published_date": "2025-11-28",
+      "mechanism_type": "threshold_dynamics",
+      "description": "A comprehensive bifurcation analysis shows that the theory leads to well-defined steady states even in the case of multiple networks sharing the same pool of monomers, without any need for specific molecular processes",
+      "description_original": "A comprehensive bifurcation analysis shows that the theory leads to well-defined steady states even in the case of multiple networks sharing the same pool of monomers, without any need for specific molecular processes",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5141,
+      "paper_title": "Generic one-parameter families of 3-dimensional Filippov Systems",
+      "arxiv_id": "2602.04857v1",
+      "domain": "math",
+      "published_date": "2026-02-04",
+      "mechanism_type": "threshold_dynamics",
+      "description": "The main machinery used in this paper involves the theory of contact between a vector field and $M$, Bifurcation Theory and the Topology of Manifolds",
+      "description_original": "The main machinery used in this paper involves the theory of contact between a vector field and $M$, Bifurcation Theory and the Topology of Manifolds",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.209049Z",
+      "score_breakdown": {
+        "total": 0.7671428571428571,
+        "text_similarity": 0.6137142857142858,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "threshold_dynamics",
+        "shared_keywords": [
+          "bifurcation",
+          "theory"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "q-bio",
+          "math"
+        ],
+        "papers": [
+          799,
+          909
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "good",
+    "notes": "Manual refinement: Both involve bifurcation analysis and threshold behavior (was auto-rated weak)"
+  },
+  {
+    "match_id": 367111,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7706896551724138,
+    "pattern_1": {
+      "pattern_id": 5139,
+      "paper_title": "A surprising discrepancy in the regularity of conjugacies between generalized interval exchange transformations and their inverses at freezing",
+      "arxiv_id": "2602.04993v1",
+      "domain": "math",
+      "published_date": "2026-02-04",
+      "mechanism_type": "renormalization",
+      "description": "Using thermodynamic formalism for renormalization and zero-temperature limits, we obtain sharp asymptotics for Hausdorff dimensions of invariant and conformal measures and for the supremal H\u00f6lder exponents of the conjugacy and its inverse",
+      "description_original": "Using thermodynamic formalism for renormalization and zero-temperature limits, we obtain sharp asymptotics for Hausdorff dimensions of invariant and conformal measures and for the supremal H\u00f6lder exponents of the conjugacy and its inverse",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5208,
+      "paper_title": "Six-loop renormalization group analysis of the $\u03c6^4 + \u03c6^6$ model",
+      "arxiv_id": "2601.21515v1",
+      "domain": "nlin",
+      "published_date": "2026-01-29",
+      "mechanism_type": "renormalization",
+      "description": "We investigate the $\u03bb\\ph^4+g\\ph^6$ model using the renormalization group method and the $\\ep$ expansion",
+      "description_original": "We investigate the $\u03bb\\ph^4+g\\ph^6$ model using the renormalization group method and the $\\ep$ expansion",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.201078Z",
+      "score_breakdown": {
+        "total": 0.7706896551724138,
+        "text_similarity": 0.6165517241379311,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "renormalization",
+        "shared_keywords": [
+          "renormalization",
+          "using"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "nlin"
+        ],
+        "papers": [
+          908,
+          927
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "good",
+    "notes": "Manual refinement: Both explicitly discuss renormalization group methods (was auto-rated weak)"
+  },
+  {
+    "match_id": 369157,
+    "bucket": "cross_domain_far",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3949,
+      "paper_title": "Fully Automated Adaptive Parameter Selection for 3-D High-order Nystr\u00f6m Boundary Integral Equation Methods",
+      "arxiv_id": "2602.03178v1",
+      "domain": "physics",
+      "published_date": "2026-02-03",
+      "mechanism_type": "bound",
+      "description": "We present an adaptive Chebyshev-based Boundary Integral Equation (CBIE) solver for electromagnetic scattering from smooth perfect electric conductor (PEC) objects",
+      "description_original": "We present an adaptive Chebyshev-based Boundary Integral Equation (CBIE) solver for electromagnetic scattering from smooth perfect electric conductor (PEC) objects",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5703,
+      "paper_title": "Explicit List-Decodable Linearized Reed-Solomon Subspace Codes via Subspace Designs",
+      "arxiv_id": "2602.05462v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "Our codes are subcodes of LRS codes, obtained by restricting message polynomials to an $\\mathbb{F}_h$-subspace derived from subspace designs, and the decoding list size is bounded by $h^{\\mathrm{poly}(1/\\varepsilon)}$",
+      "description_original": "Our codes are subcodes of LRS codes, obtained by restricting message polynomials to an $\\mathbb{F}_h$-subspace derived from subspace designs, and the decoding list size is bounded by $h^{\\mathrm{poly}(1/\\varepsilon)}$",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.310799Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "cs"
+        ],
+        "papers": [
+          485,
+          1097
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369041,
+    "bucket": "with_equations",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3295,
+      "paper_title": "Decay of three-body resonances in a discrete basis",
+      "arxiv_id": "2602.05422v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "The method involves solving an inhomogeneous Schr\u00f6dinger equation to determine the non-normalizable resonant state by identifying a normalizable source state, which captures the short-range internal structure",
+      "description_original": "The method involves solving an inhomogeneous Schr\u00f6dinger equation to determine the non-normalizable resonant state by identifying a normalizable source state, which captures the short-range internal structure",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4196,
+      "paper_title": "Covariant Helmholtz-Hodge Decomposition: Resolving Spurious Vorticity via Acoustic Geometry",
+      "arxiv_id": "2602.05399v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "For canonical entropy-spot refraction and normal-shock discontinuities, Euclidean Helmholtz--Hodge and momentum-potential post-processing produce significant leakage in the refracting/discontinuous region, whereas the covariant splitting remains at the numerical noise floor (typically $\\lesssim 10^{-12}$) throughout the domain, demonstrating robustness even at the sonic horizon, where the Euclidean metric singularity typically causes catastrophic error amplification",
+      "description_original": "For canonical entropy-spot refraction and normal-shock discontinuities, Euclidean Helmholtz--Hodge and momentum-potential post-processing produce significant leakage in the refracting/discontinuous region, whereas the covariant splitting remains at the numerical noise floor (typically $\\lesssim 10^{-12}$) throughout the domain, demonstrating robustness even at the sonic horizon, where the Euclidean metric singularity typically causes catastrophic error amplification",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.305021Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "norm",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "nucl-th",
+          "physics"
+        ],
+        "papers": [
+          300,
+          568
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368803,
+    "bucket": "with_equations",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2827,
+      "paper_title": "Selecting Hyperparameters for Tree-Boosting",
+      "arxiv_id": "2602.05786v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "optimization",
+      "description": "In this article, we empirically compare several popular methods for hyperparameter optimization for tree-boosting including random grid search, the tree-structured Parzen estimator (TPE), Gaussian-process-based Bayesian optimization (GP-BO), Hyperband, the sequential model-based algorithm configuration (SMAC) method, and deterministic full grid search using $59$ regression and classification data sets",
+      "description_original": "In this article, we empirically compare several popular methods for hyperparameter optimization for tree-boosting including random grid search, the tree-structured Parzen estimator (TPE), Gaussian-process-based Bayesian optimization (GP-BO), Hyperband, the sequential model-based algorithm configuration (SMAC) method, and deterministic full grid search using $59$ regression and classification data sets",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3986,
+      "paper_title": "Tight FPT Approximations for Fair $k$-center with Outliers",
+      "arxiv_id": "2602.05476v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "optimization",
+      "description": "Finally, we show that improving the approximation factor below $3$ is $\\mathrm{W[2]}$-hard, establishing the optimality of our results",
+      "description_original": "Finally, we show that improving the approximation factor below $3$ is $\\mathrm{W[2]}$-hard, establishing the optimality of our results",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.291210Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "optimization",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cs"
+        ],
+        "papers": [
+          143,
+          495
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369282,
+    "bucket": "with_equations",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 4191,
+      "paper_title": "On the stability of viscous Riemann ellipsoids",
+      "arxiv_id": "2602.05658v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "strain",
+      "description": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "description_original": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5510,
+      "paper_title": "The Stretto Execution Engine for LLM-Augmented Data Systems",
+      "arxiv_id": "2602.04430v1",
+      "domain": "cs",
+      "published_date": "2026-02-04",
+      "mechanism_type": "strain",
+      "description": "For this, Stretto formulates query planning as a constrained optimization problem and uses a gradient-based optimizer to jointly select operator implementations and allocate error budgets across pipelines",
+      "description_original": "For this, Stretto formulates query planning as a constrained optimization problem and uses a gradient-based optimizer to jointly select operator implementations and allocate error budgets across pipelines",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.317604Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "strain",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "cs"
+        ],
+        "papers": [
+          564,
+          1015
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368485,
+    "bucket": "with_equations",
+    "similarity_score": 0.7061224489795918,
+    "pattern_1": {
+      "pattern_id": 3893,
+      "paper_title": "The quenched structured coalescent for diploid population models on finite graphs with large migrations and uneven offspring distributions",
+      "arxiv_id": "2601.21079v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-28",
+      "mechanism_type": "convergence",
+      "description": "We show convergence, with mild conditions on the joint distribution of offspring frequencies and migrations, of gene genealogies conditional on the pedigree to a time-inhomogeneous coalescent process driven by a Poisson point process $\u03a8$ that records the timing and scale of large migrations and uneven offspring distributions",
+      "description_original": "We show convergence, with mild conditions on the joint distribution of offspring frequencies and migrations, of gene genealogies conditional on the pedigree to a time-inhomogeneous coalescent process driven by a Poisson point process $\u03a8$ that records the timing and scale of large migrations and uneven offspring distributions",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4694,
+      "paper_title": "Acoustic scattering by fractal inhomogeneities via geometry-conforming Galerkin methods for the Lippmann-Schwinger equation",
+      "arxiv_id": "2602.05005v1",
+      "domain": "math",
+      "published_date": "2026-02-04",
+      "mechanism_type": "convergence",
+      "description": "We prove convergence estimates for the integral equation solution and superconvergence estimates for linear functionals such as scattered field and far-field pattern evaluations, and elucidate how the regularity of the inhomogeneity boundary and the regularity of the refractive index affect the rates of convergence predicted",
+      "description_original": "We prove convergence estimates for the integral equation solution and superconvergence estimates for linear functionals such as scattered field and far-field pattern evaluations, and elucidate how the regularity of the inhomogeneity boundary and the regularity of the refractive index affect the rates of convergence predicted",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.275600Z",
+      "score_breakdown": {
+        "total": 0.7061224489795918,
+        "text_similarity": 0.5648979591836735,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "convergence",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "q-bio",
+          "math"
+        ],
+        "papers": [
+          467,
+          760
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368380,
+    "bucket": "with_equations",
+    "similarity_score": 0.7069767441860465,
+    "pattern_1": {
+      "pattern_id": 4000,
+      "paper_title": "Parameterized Algorithms for the Drone Delivery Problem",
+      "arxiv_id": "2602.04985v1",
+      "domain": "cs",
+      "published_date": "2026-02-04",
+      "mechanism_type": "complexity",
+      "description": "[ISAAC 2022] by showing that even when the delivery network is a path graph, DDT admits no polynomial-time approximation within any polynomially encodable factor $a(n)$, unless P=NP",
+      "description_original": "[ISAAC 2022] by showing that even when the delivery network is a path graph, DDT admits no polynomial-time approximation within any polynomially encodable factor $a(n)$, unless P=NP",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4188,
+      "paper_title": "On the stability of viscous Riemann ellipsoids",
+      "arxiv_id": "2602.05658v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "description_original": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.270370Z",
+      "score_breakdown": {
+        "total": 0.7069767441860465,
+        "text_similarity": 0.5655813953488372,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "complexity",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "physics"
+        ],
+        "papers": [
+          499,
+          564
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368570,
+    "bucket": "with_equations",
+    "similarity_score": 0.7050847457627119,
+    "pattern_1": {
+      "pattern_id": 2846,
+      "paper_title": "Joint Embedding Variational Bayes",
+      "arxiv_id": "2602.05639v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "We instantiate the conditional likelihood with a heavy-tailed Student-$t$ model using a polar decomposition that explicitly decouples directional and radial factors to prevent norm-induced instabilities during training",
+      "description_original": "We instantiate the conditional likelihood with a heavy-tailed Student-$t$ model using a polar decomposition that explicitly decouples directional and radial factors to prevent norm-induced instabilities during training",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5673,
+      "paper_title": "Discrete Aware Tensor Completion via Convexized $\\ell_0$-Norm Approximation",
+      "arxiv_id": "2602.05802v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "The proposed low-rank tensor completion (TC) method builds on the conventional nuclear norm (NN) minimization-based low-rank TC paradigm, through the addition of a discrete-aware regularizer, which enforces discreteness in the objective of the problem, by an $\\ell_0$-norm regularizer that is approximated by a continuous and differentiable function normalized via fractional programming (FP) under a proximal gradient (PG) framework, in order to solve the proposed problem",
+      "description_original": "The proposed low-rank tensor completion (TC) method builds on the conventional nuclear norm (NN) minimization-based low-rank TC paradigm, through the addition of a discrete-aware regularizer, which enforces discreteness in the objective of the problem, by an $\\ell_0$-norm regularizer that is approximated by a continuous and differentiable function normalized via fractional programming (FP) under a proximal gradient (PG) framework, in order to solve the proposed problem",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.279974Z",
+      "score_breakdown": {
+        "total": 0.7050847457627119,
+        "text_similarity": 0.5640677966101695,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "norm",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cs"
+        ],
+        "papers": [
+          147,
+          1089
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368334,
+    "bucket": "with_equations",
+    "similarity_score": 0.7074999999999999,
+    "pattern_1": {
+      "pattern_id": 3903,
+      "paper_title": "The near-continuum mechanism for extended Boltzmann theory: the non-equilibrium relaxation",
+      "arxiv_id": "2602.05775v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "strain",
+      "description": "In this work, the Pullin equation, which possesses an integrable collision kernel and satisfies the detailed balance constraint, is adopted as an extended Boltzmann equation for the theoretical analysis of near-continuum relaxation mechanisms",
+      "description_original": "In this work, the Pullin equation, which possesses an integrable collision kernel and satisfies the detailed balance constraint, is adopted as an extended Boltzmann equation for the theoretical analysis of near-continuum relaxation mechanisms",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5100,
+      "paper_title": "Locally Gentle State Certification for High Dimensional Quantum Systems",
+      "arxiv_id": "2602.04550v1",
+      "domain": "math",
+      "published_date": "2026-02-04",
+      "mechanism_type": "strain",
+      "description": "In this work, we investigate the fundamental limits of \\emph{locally-gentle} quantum state certification, where the learning algorithm is constrained to perturb the state by at most $\u03b1$ in trace norm, thereby allowing for the reuse of samples",
+      "description_original": "In this work, we investigate the fundamental limits of \\emph{locally-gentle} quantum state certification, where the learning algorithm is constrained to perturb the state by at most $\u03b1$ in trace norm, thereby allowing for the reuse of samples",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.268129Z",
+      "score_breakdown": {
+        "total": 0.7074999999999999,
+        "text_similarity": 0.566,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "strain",
+        "shared_keywords": [
+          "work,"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "math"
+        ],
+        "papers": [
+          469,
+          895
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368919,
+    "bucket": "with_equations",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3081,
+      "paper_title": "From Evaluation to Design: Using Potential Energy Surface Smoothness Metrics to Guide Machine Learning Interatomic Potential Architectures",
+      "arxiv_id": "2602.04861v1",
+      "domain": "cond-mat",
+      "published_date": "2026-02-04",
+      "mechanism_type": "strain",
+      "description": "To demonstrate how BSCT can guide iterative model design, we utilize an unconstrained Transformer backbone as a testbed, illustrating how refinements such as a new differentiable $k$-nearest neighbors algorithm and temperature-controlled attention reduce artifacts identified by our metric",
+      "description_original": "To demonstrate how BSCT can guide iterative model design, we utilize an unconstrained Transformer backbone as a testbed, illustrating how refinements such as a new differentiable $k$-nearest neighbors algorithm and temperature-controlled attention reduce artifacts identified by our metric",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4321,
+      "paper_title": "Normalization of ReLU Dual for Cut Generation in Stochastic Mixed-Integer Programs",
+      "arxiv_id": "2602.05974v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "strain",
+      "description": "We study the Rectified Linear Unit (ReLU) dual, an existing dual formulation for stochastic programs that reformulates non-anticipativity constraints using ReLU functions to generate tight, non-convex, and mixed-integer representable cuts",
+      "description_original": "We study the Rectified Linear Unit (ReLU) dual, an existing dual formulation for stochastic programs that reformulates non-anticipativity constraints using ReLU functions to generate tight, non-convex, and mixed-integer representable cuts",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.296779Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "strain",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cond-mat",
+          "math"
+        ],
+        "papers": [
+          225,
+          617
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368068,
+    "bucket": "with_equations",
+    "similarity_score": 0.7103448275862069,
+    "pattern_1": {
+      "pattern_id": 2454,
+      "paper_title": "The Hubble Tension in Light of the Symmetry of Scale Invariance",
+      "arxiv_id": "2602.04532v1",
+      "domain": "physics",
+      "published_date": "2026-02-04",
+      "mechanism_type": "strain",
+      "description": "This allows us to constrain $\u03a9_m$ in SIV, with both tests giving the best agreement for $\u03a9_m \\simeq 0",
+      "description_original": "This allows us to constrain $\u03a9_m$ in SIV, with both tests giving the best agreement for $\u03a9_m \\simeq 0",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3200,
+      "paper_title": "Forecast on $f(R)$ Gravity with HI 21cm Intensity Mapping Surveys",
+      "arxiv_id": "2602.05575v1",
+      "domain": "gr-qc",
+      "published_date": "2026-02-05",
+      "mechanism_type": "strain",
+      "description": "In this work, we explore the capability of future neutral hydrogen (HI) 21 cm intensity mapping (IM) observations to constrain $f(R)$ gravity at low redshifts",
+      "description_original": "In this work, we explore the capability of future neutral hydrogen (HI) 21 cm intensity mapping (IM) observations to constrain $f(R)$ gravity at low redshifts",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.254899Z",
+      "score_breakdown": {
+        "total": 0.7103448275862069,
+        "text_similarity": 0.5682758620689655,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "strain",
+        "shared_keywords": [
+          "constrain"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "gr-qc"
+        ],
+        "papers": [
+          1,
+          266
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368529,
+    "bucket": "with_equations",
+    "similarity_score": 0.7056603773584905,
+    "pattern_1": {
+      "pattern_id": 3976,
+      "paper_title": "Competitive Analysis of Online Facility Assignment Algorithms on Discrete Grid Graphs: Performance Bounds and Remediation Strategies",
+      "arxiv_id": "2602.05953v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "Motivated by these lower bounds, we then discuss a semi-online extension in which the algorithm may delay assignment for up to $\u03c4$ time steps and solve each batch optimally via a min-cost flow computation",
+      "description_original": "Motivated by these lower bounds, we then discuss a semi-online extension in which the algorithm may delay assignment for up to $\u03c4$ time steps and solve each batch optimally via a min-cost flow computation",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5410,
+      "paper_title": "Dynamics of a nonlocal epidemic model with a new free boundary condition, part 1: Spreading-vanishing dichotomy",
+      "arxiv_id": "2602.05331v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "This paper investigates the long-time dynamics of a nonlocal epidemic model with free boundaries, where a pathogen with density $u(t,x)$ and the infected humans with density $v(t,x)$ evolve according to a reaction-diffusion system with nonlocal diffusion over a one dimensional interval $[g(t), h(t)]$, which represents the epidemic region expanding through its boundaries $x=g(t)$ and $x=h(t)$, known as free boundaries",
+      "description_original": "This paper investigates the long-time dynamics of a nonlocal epidemic model with free boundaries, where a pathogen with density $u(t,x)$ and the infected humans with density $v(t,x)$ evolve according to a reaction-diffusion system with nonlocal diffusion over a one dimensional interval $[g(t), h(t)]$, which represents the epidemic region expanding through its boundaries $x=g(t)$ and $x=h(t)$, known as free boundaries",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.277845Z",
+      "score_breakdown": {
+        "total": 0.7056603773584905,
+        "text_similarity": 0.5645283018867925,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [
+          "which"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "math"
+        ],
+        "papers": [
+          491,
+          986
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 366968,
+    "bucket": "ultra_high",
+    "similarity_score": 0.8556603773584905,
+    "pattern_1": {
+      "pattern_id": 2497,
+      "paper_title": "Compressing Complexity: A Critical Synthesis of Structural, Analytical, and Data-Driven Dimensionality Reduction in Dynamical Networks",
+      "arxiv_id": "2602.00039v1",
+      "domain": "physics",
+      "published_date": "2026-01-19",
+      "mechanism_type": "renormalization",
+      "description": "We classify these approaches into three distinct methodological lineages: Structural Coarse-Graining, which utilizes spectral and topological renormalization to physically contract the network graph; Analytical-Based Reduction, which employs rigorous ansatzes (such as Watanabe-Strogatz and Ott-Antonsen) and moment closures to derive reduced differential equations ; and Data-Driven Reduction, which leverages manifold learning and operator-theoretic frameworks (e",
+      "description_original": "We classify these approaches into three distinct methodological lineages: Structural Coarse-Graining, which utilizes spectral and topological renormalization to physically contract the network graph; Analytical-Based Reduction, which employs rigorous ansatzes (such as Watanabe-Strogatz and Ott-Antonsen) and moment closures to derive reduced differential equations ; and Data-Driven Reduction, which leverages manifold learning and operator-theoretic frameworks (e",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5208,
+      "paper_title": "Six-loop renormalization group analysis of the $\u03c6^4 + \u03c6^6$ model",
+      "arxiv_id": "2601.21515v1",
+      "domain": "nlin",
+      "published_date": "2026-01-29",
+      "mechanism_type": "renormalization",
+      "description": "We investigate the $\u03bb\\ph^4+g\\ph^6$ model using the renormalization group method and the $\\ep$ expansion",
+      "description_original": "We investigate the $\u03bb\\ph^4+g\\ph^6$ model using the renormalization group method and the $\\ep$ expansion",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193814Z",
+      "score_breakdown": {
+        "total": 0.8556603773584905,
+        "text_similarity": 0.6845283018867925,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "renormalization",
+        "shared_keywords": [
+          "renormalization"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "nlin"
+        ],
+        "papers": [
+          10,
+          927
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "good",
+    "notes": "Manual refinement: High similarity (0.856) with renormalization mechanism match (was auto-rated weak)"
+  },
+  {
+    "match_id": 366960,
+    "bucket": "ultra_high",
+    "similarity_score": 0.8928571428571428,
+    "pattern_1": {
+      "pattern_id": 3247,
+      "paper_title": "Ersatz gravity and black-hole thermodynamics from Manin gauge theory with noncompact gauge group",
+      "arxiv_id": "2602.05180v1",
+      "domain": "hep-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "gauge_theory",
+      "description": "We show that a three-dimensional Manin gauge theory with gauge group $\\operatorname{SL}(2;\\mathbb R)$ (i",
+      "description_original": "We show that a three-dimensional Manin gauge theory with gauge group $\\operatorname{SL}(2;\\mathbb R)$ (i",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3302,
+      "paper_title": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "arxiv_id": "2602.04948v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-04",
+      "mechanism_type": "gauge_theory",
+      "description": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "description_original": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193408Z",
+      "score_breakdown": {
+        "total": 0.8928571428571428,
+        "text_similarity": 0.7142857142857143,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "gauge_theory",
+        "shared_keywords": [
+          "gauge",
+          "theory"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "hep-th",
+          "nucl-th"
+        ],
+        "papers": [
+          283,
+          302
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'gauge theory' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366948,
+    "bucket": "ultra_high",
+    "similarity_score": 0.9714285714285713,
+    "pattern_1": {
+      "pattern_id": 2463,
+      "paper_title": "Discrete dynamical systems with scaling and inversion symmetries",
+      "arxiv_id": "2602.02622v1",
+      "domain": "physics",
+      "published_date": "2026-02-02",
+      "mechanism_type": "dynamical_system",
+      "description": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "description_original": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5228,
+      "paper_title": "Detecting the finer structure of the P vs NP problem with statistical mechanics: the case of the Wang tiling problem",
+      "arxiv_id": "2601.18968v1",
+      "domain": "nlin",
+      "published_date": "2026-01-26",
+      "mechanism_type": "dynamical_system",
+      "description": "In the second region the problem to find polynomial time algorithms is very similar to the problem to find polynomial time algorithms to determine the asymptotic behavior of discrete dynamical systems in the chaotic regime",
+      "description_original": "In the second region the problem to find polynomial time algorithms is very similar to the problem to find polynomial time algorithms to determine the asymptotic behavior of discrete dynamical systems in the chaotic regime",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.192735Z",
+      "score_breakdown": {
+        "total": 0.9714285714285713,
+        "text_similarity": 0.7771428571428571,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "dynamical_system",
+        "shared_keywords": [
+          "chaotic",
+          "discrete",
+          "dynamical",
+          "regime",
+          "systems"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "nlin"
+        ],
+        "papers": [
+          2,
+          931
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366955,
+    "bucket": "ultra_high",
+    "similarity_score": 0.9249999999999999,
+    "pattern_1": {
+      "pattern_id": 2801,
+      "paper_title": "CFRecs: Counterfactual Recommendations on Real Estate User Listing Interaction Graphs",
+      "arxiv_id": "2602.05861v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "network_effect",
+      "description": "While graph neural networks (GNNs) are widely used to learn from such data, counterfactual graph learning has emerged as a promising approach to improve model interpretability",
+      "description_original": "While graph neural networks (GNNs) are widely used to learn from such data, counterfactual graph learning has emerged as a promising approach to improve model interpretability",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 3599,
+      "paper_title": "MGKAN: Predicting Asymmetric Drug-Drug Interactions via a Multimodal Graph Kolmogorov-Arnold Network",
+      "arxiv_id": "2602.01751v2",
+      "domain": "q-bio",
+      "published_date": "2026-02-02",
+      "mechanism_type": "network_effect",
+      "description": "Previous graph neural network (GNN) models leverage molecular structures and interaction networks but mostly rely on linear aggregation and symmetric assumptions, limiting their ability to capture nonlinear and heterogeneous patterns",
+      "description_original": "Previous graph neural network (GNN) models leverage molecular structures and interaction networks but mostly rely on linear aggregation and symmetric assumptions, limiting their ability to capture nonlinear and heterogeneous patterns",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193163Z",
+      "score_breakdown": {
+        "total": 0.9249999999999999,
+        "text_similarity": 0.74,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "network_effect",
+        "shared_keywords": [
+          "graph",
+          "networks",
+          "neural"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "q-bio"
+        ],
+        "papers": [
+          136,
+          384
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'graph neural network' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366962,
+    "bucket": "ultra_high",
+    "similarity_score": 0.8736842105263157,
+    "pattern_1": {
+      "pattern_id": 3219,
+      "paper_title": "The resurgence of errors in the localization of $\\mathcal{N} = 2$ superconformal Yang-Mills",
+      "arxiv_id": "2602.05733v1",
+      "domain": "hep-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "gauge_theory",
+      "description": "We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling",
+      "description_original": "We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3302,
+      "paper_title": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "arxiv_id": "2602.04948v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-04",
+      "mechanism_type": "gauge_theory",
+      "description": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "description_original": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193499Z",
+      "score_breakdown": {
+        "total": 0.8736842105263157,
+        "text_similarity": 0.6989473684210527,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "gauge_theory",
+        "shared_keywords": [
+          "gauge",
+          "theory"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "hep-th",
+          "nucl-th"
+        ],
+        "papers": [
+          273,
+          302
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'gauge theory' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366959,
+    "bucket": "ultra_high",
+    "similarity_score": 0.9206896551724137,
+    "pattern_1": {
+      "pattern_id": 3093,
+      "paper_title": "DMFlow: Disordered Materials Generation by Flow Matching",
+      "arxiv_id": "2602.04734v1",
+      "domain": "cond-mat",
+      "published_date": "2026-02-04",
+      "mechanism_type": "network_effect",
+      "description": "The vector field is learned by a novel Graph Neural Network (GNN) that incorporates physical symmetries and a specialized message-passing scheme",
+      "description_original": "The vector field is learned by a novel Graph Neural Network (GNN) that incorporates physical symmetries and a specialized message-passing scheme",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5370,
+      "paper_title": "Breaking Symmetry Bottlenecks in GNN Readouts",
+      "arxiv_id": "2602.05950v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "network_effect",
+      "description": "Graph neural networks (GNNs) are widely used for learning on structured data, yet their ability to distinguish non-isomorphic graphs is fundamentally limited",
+      "description_original": "Graph neural networks (GNNs) are widely used for learning on structured data, yet their ability to distinguish non-isomorphic graphs is fundamentally limited",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193357Z",
+      "score_breakdown": {
+        "total": 0.9206896551724137,
+        "text_similarity": 0.736551724137931,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "network_effect",
+        "shared_keywords": [
+          "graph",
+          "neural"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cond-mat",
+          "cs"
+        ],
+        "papers": [
+          229,
+          969
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'graph neural network' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366952,
+    "bucket": "ultra_high",
+    "similarity_score": 0.9299999999999999,
+    "pattern_1": {
+      "pattern_id": 2460,
+      "paper_title": "Discrete dynamical systems with scaling and inversion symmetries",
+      "arxiv_id": "2602.02622v1",
+      "domain": "physics",
+      "published_date": "2026-02-02",
+      "mechanism_type": "sensitive_dependence",
+      "description": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "description_original": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5433,
+      "paper_title": "Simple chemical systems with chaos",
+      "arxiv_id": "2601.02787v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-06",
+      "mechanism_type": "sensitive_dependence",
+      "description": "A number of simple chaotic three-dimensional dynamical systems (DSs) with quadratic polynomials on the right-hand sides are reported in the literature, containing exactly 5 or 6 monomials of which only 1 or 2 are quadratic",
+      "description_original": "A number of simple chaotic three-dimensional dynamical systems (DSs) with quadratic polynomials on the right-hand sides are reported in the literature, containing exactly 5 or 6 monomials of which only 1 or 2 are quadratic",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.192966Z",
+      "score_breakdown": {
+        "total": 0.9299999999999999,
+        "text_similarity": 0.744,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "sensitive_dependence",
+        "shared_keywords": [
+          "chaotic",
+          "dynamical",
+          "systems"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "q-bio"
+        ],
+        "papers": [
+          2,
+          991
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366958,
+    "bucket": "ultra_high",
+    "similarity_score": 0.9214285714285714,
+    "pattern_1": {
+      "pattern_id": 2801,
+      "paper_title": "CFRecs: Counterfactual Recommendations on Real Estate User Listing Interaction Graphs",
+      "arxiv_id": "2602.05861v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "network_effect",
+      "description": "While graph neural networks (GNNs) are widely used to learn from such data, counterfactual graph learning has emerged as a promising approach to improve model interpretability",
+      "description_original": "While graph neural networks (GNNs) are widely used to learn from such data, counterfactual graph learning has emerged as a promising approach to improve model interpretability",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 3093,
+      "paper_title": "DMFlow: Disordered Materials Generation by Flow Matching",
+      "arxiv_id": "2602.04734v1",
+      "domain": "cond-mat",
+      "published_date": "2026-02-04",
+      "mechanism_type": "network_effect",
+      "description": "The vector field is learned by a novel Graph Neural Network (GNN) that incorporates physical symmetries and a specialized message-passing scheme",
+      "description_original": "The vector field is learned by a novel Graph Neural Network (GNN) that incorporates physical symmetries and a specialized message-passing scheme",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193311Z",
+      "score_breakdown": {
+        "total": 0.9214285714285714,
+        "text_similarity": 0.7371428571428571,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "network_effect",
+        "shared_keywords": [
+          "graph",
+          "neural"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cond-mat"
+        ],
+        "papers": [
+          136,
+          229
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'graph neural network' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366947,
+    "bucket": "ultra_high",
+    "similarity_score": 0.9714285714285713,
+    "pattern_1": {
+      "pattern_id": 2460,
+      "paper_title": "Discrete dynamical systems with scaling and inversion symmetries",
+      "arxiv_id": "2602.02622v1",
+      "domain": "physics",
+      "published_date": "2026-02-02",
+      "mechanism_type": "sensitive_dependence",
+      "description": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "description_original": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5227,
+      "paper_title": "Detecting the finer structure of the P vs NP problem with statistical mechanics: the case of the Wang tiling problem",
+      "arxiv_id": "2601.18968v1",
+      "domain": "nlin",
+      "published_date": "2026-01-26",
+      "mechanism_type": "sensitive_dependence",
+      "description": "In the second region the problem to find polynomial time algorithms is very similar to the problem to find polynomial time algorithms to determine the asymptotic behavior of discrete dynamical systems in the chaotic regime",
+      "description_original": "In the second region the problem to find polynomial time algorithms is very similar to the problem to find polynomial time algorithms to determine the asymptotic behavior of discrete dynamical systems in the chaotic regime",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.192667Z",
+      "score_breakdown": {
+        "total": 0.9714285714285713,
+        "text_similarity": 0.7771428571428571,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "sensitive_dependence",
+        "shared_keywords": [
+          "chaotic",
+          "discrete",
+          "dynamical",
+          "regime",
+          "systems"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "nlin"
+        ],
+        "papers": [
+          2,
+          931
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366961,
+    "bucket": "ultra_high",
+    "similarity_score": 0.8928571428571428,
+    "pattern_1": {
+      "pattern_id": 3248,
+      "paper_title": "Ersatz gravity and black-hole thermodynamics from Manin gauge theory with noncompact gauge group",
+      "arxiv_id": "2602.05180v1",
+      "domain": "hep-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "gauge_theory",
+      "description": "We show that a three-dimensional Manin gauge theory with gauge group $\\operatorname{SL}(2;\\mathbb R)$ (i",
+      "description_original": "We show that a three-dimensional Manin gauge theory with gauge group $\\operatorname{SL}(2;\\mathbb R)$ (i",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3302,
+      "paper_title": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "arxiv_id": "2602.04948v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-04",
+      "mechanism_type": "gauge_theory",
+      "description": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "description_original": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193453Z",
+      "score_breakdown": {
+        "total": 0.8928571428571428,
+        "text_similarity": 0.7142857142857143,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "gauge_theory",
+        "shared_keywords": [
+          "gauge",
+          "theory"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "hep-th",
+          "nucl-th"
+        ],
+        "papers": [
+          283,
+          302
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'gauge theory' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367953,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7136363636363636,
+    "pattern_1": {
+      "pattern_id": 3987,
+      "paper_title": "Tight FPT Approximations for Fair $k$-center with Outliers",
+      "arxiv_id": "2602.05476v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "We further extend our algorithm to fair $k$-supplier with outliers and to the more general fair-range setting with both lower and upper bounds",
+      "description_original": "We further extend our algorithm to fair $k$-supplier with outliers and to the more general fair-range setting with both lower and upper bounds",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4632,
+      "paper_title": "Strong local nondeterminism for stochastic time-fractional slow and fast diffusion equations",
+      "arxiv_id": "2602.05317v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "Under the Dalang-type conditions, we prove sharp variance bounds for temporal and spatial increments, as well as strong local nondeterminism in time in several regimes (two-sided version for $\u03b2=1$ and for parts of the case $\u03b2=2$; one-sided version for $0<\u03b2<2$) and strong local nondeterminism in space for the whole range of parameters",
+      "description_original": "Under the Dalang-type conditions, we prove sharp variance bounds for temporal and spatial increments, as well as strong local nondeterminism in time in several regimes (two-sided version for $\u03b2=1$ and for parts of the case $\u03b2=2$; one-sided version for $0<\u03b2<2$) and strong local nondeterminism in space for the whole range of parameters",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.249059Z",
+      "score_breakdown": {
+        "total": 0.7136363636363636,
+        "text_similarity": 0.5709090909090909,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [
+          "bounds"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "math"
+        ],
+        "papers": [
+          495,
+          741
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369417,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 4689,
+      "paper_title": "Radon--Wasserstein Gradient Flows for Interacting-Particle Sampling in High Dimensions",
+      "arxiv_id": "2602.05227v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "Gradient flows of the Kullback--Leibler (KL) divergence, such as the Fokker--Planck equation and Stein Variational Gradient Descent, evolve a distribution toward a target density known only up to a normalizing constant",
+      "description_original": "Gradient flows of the Kullback--Leibler (KL) divergence, such as the Fokker--Planck equation and Stein Variational Gradient Descent, evolve a distribution toward a target density known only up to a normalizing constant",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5726,
+      "paper_title": "Quantum Advantage in Decision Trees: A Weighted Graph and $L_1$ Norm Approach",
+      "arxiv_id": "2602.04700v1",
+      "domain": "cs",
+      "published_date": "2026-02-04",
+      "mechanism_type": "norm",
+      "description": "This formulation has the advantage that it facilitates the analysis of the $L_1$ spectral norm of the algorithm output",
+      "description_original": "This formulation has the advantage that it facilitates the analysis of the $L_1$ spectral norm of the algorithm output",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.323895Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "norm",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "cs"
+        ],
+        "papers": [
+          757,
+          1105
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368851,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2875,
+      "paper_title": "A Three-State Thermodynamically Consistent Cross-Bridge Model for Muscle Contraction",
+      "arxiv_id": "2602.01743v1",
+      "domain": "physics",
+      "published_date": "2026-02-02",
+      "mechanism_type": "equilibrium",
+      "description": "Under chemostatted conditions and a fast-equilibration closure for the attached substates, the model reduces to a closed two-state molecular motor description; in a further singular limit, this reduction recovers a Huxley-type transport-reaction equation",
+      "description_original": "Under chemostatted conditions and a fast-equilibration closure for the attached substates, the model reduces to a closed two-state molecular motor description; in a further singular limit, this reduction recovers a Huxley-type transport-reaction equation",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4123,
+      "paper_title": "FlowClass.jl: Classifying Dynamical Systems by Structural Properties in Julia",
+      "arxiv_id": "2512.13084v1",
+      "domain": "q-bio",
+      "published_date": "2025-12-15",
+      "mechanism_type": "equilibrium",
+      "description": "Given a vector field \\(\\mathbf{F}(\\mathbf{x})\\) defining the system \\(\\mathrm{d}\\mathbf{x}/\\mathrm{d}t = \\mathbf{F}(\\mathbf{x})\\), the package performs a battery of computational tests -- Jacobian symmetry analysis, curl magnitude estimation, fixed point detection and stability classification, periodic orbit detection, and stable/unstable manifold computation -- to determine where the system sits within the classification hierarchy",
+      "description_original": "Given a vector field \\(\\mathbf{F}(\\mathbf{x})\\) defining the system \\(\\mathrm{d}\\mathbf{x}/\\mathrm{d}t = \\mathbf{F}(\\mathbf{x})\\), the package performs a battery of computational tests -- Jacobian symmetry analysis, curl magnitude estimation, fixed point detection and stability classification, periodic orbit detection, and stable/unstable manifold computation -- to determine where the system sits within the classification hierarchy",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.293456Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "equilibrium",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "q-bio"
+        ],
+        "papers": [
+          158,
+          538
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 367818,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7266666666666666,
+    "pattern_1": {
+      "pattern_id": 5404,
+      "paper_title": "Lipschitz regularity of harmonic quasiconformal maps between Lyapunov domains in $\\mathbb{R}^n$",
+      "arxiv_id": "2602.05436v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "We prove that every sense-preserving harmonic $K$--quasiconformal homeomorphism $f\\colon D\\to\u03a9$ between Lyapunov domains (equivalently, bounded $C^{1,\u03b1}$ domains) in $\\mathbb{R}^n$, $\u03b1\\in(0,1]$, is globally Lipschitz on $\\overline D$",
+      "description_original": "We prove that every sense-preserving harmonic $K$--quasiconformal homeomorphism $f\\colon D\\to\u03a9$ between Lyapunov domains (equivalently, bounded $C^{1,\u03b1}$ domains) in $\\mathbb{R}^n$, $\u03b1\\in(0,1]$, is globally Lipschitz on $\\overline D$",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5703,
+      "paper_title": "Explicit List-Decodable Linearized Reed-Solomon Subspace Codes via Subspace Designs",
+      "arxiv_id": "2602.05462v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "Our codes are subcodes of LRS codes, obtained by restricting message polynomials to an $\\mathbb{F}_h$-subspace derived from subspace designs, and the decoding list size is bounded by $h^{\\mathrm{poly}(1/\\varepsilon)}$",
+      "description_original": "Our codes are subcodes of LRS codes, obtained by restricting message polynomials to an $\\mathbb{F}_h$-subspace derived from subspace designs, and the decoding list size is bounded by $h^{\\mathrm{poly}(1/\\varepsilon)}$",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.239398Z",
+      "score_breakdown": {
+        "total": 0.7266666666666666,
+        "text_similarity": 0.5813333333333333,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [
+          "bounded"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "cs"
+        ],
+        "papers": [
+          985,
+          1097
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368727,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2628,
+      "paper_title": "A 910-block explicit construction guaranteeing a triple intersection with every $6$-subset of $[60]$",
+      "arxiv_id": "2602.04867v1",
+      "domain": "math",
+      "published_date": "2026-02-04",
+      "mechanism_type": "bound",
+      "description": "We also record a crude counting lower bound and a straightforward generalization to $[2m]$ (with $m$ even)",
+      "description_original": "We also record a crude counting lower bound and a straightforward generalization to $[2m]$ (with $m$ even)",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4267,
+      "paper_title": "Entanglement improves coordination in distributed systems",
+      "arxiv_id": "2602.04588v1",
+      "domain": "cs",
+      "published_date": "2026-02-04",
+      "mechanism_type": "bound",
+      "description": "We prove this advantage through queueing-theoretic analysis, non-local game formulation, and computational certification of classical bounds",
+      "description_original": "We prove this advantage through queueing-theoretic analysis, non-local game formulation, and computational certification of classical bounds",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.287744Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "cs"
+        ],
+        "papers": [
+          68,
+          594
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368287,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7076923076923076,
+    "pattern_1": {
+      "pattern_id": 2605,
+      "paper_title": "Matrices of nonnegative integer rank two",
+      "arxiv_id": "2602.05957v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "We show that any rank 2 integer matrix can be reduced to a $3\\times 3$ matrix which has nonnegative integer rank $2$ if and only if the original one also has nonnegative integer rank $2$, with the reduction computable in polynomial time",
+      "description_original": "We show that any rank 2 integer matrix can be reduced to a $3\\times 3$ matrix which has nonnegative integer rank $2$ if and only if the original one also has nonnegative integer rank $2$, with the reduction computable in polynomial time",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4188,
+      "paper_title": "On the stability of viscous Riemann ellipsoids",
+      "arxiv_id": "2602.05658v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "description_original": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.265781Z",
+      "score_breakdown": {
+        "total": 0.7076923076923076,
+        "text_similarity": 0.5661538461538461,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "complexity",
+        "shared_keywords": [
+          "polynomial"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "physics"
+        ],
+        "papers": [
+          54,
+          564
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369241,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 4020,
+      "paper_title": "Functional Stochastic Localization",
+      "arxiv_id": "2602.03999v1",
+      "domain": "cs",
+      "published_date": "2026-02-03",
+      "mechanism_type": "norm",
+      "description": "Finally, we apply our framework to differentially private convex optimization in $\\ell_p$ norms for $p \\in [1, 2)$, where we improve state-of-the-art query complexities in a zeroth-order model",
+      "description_original": "Finally, we apply our framework to differentially private convex optimization in $\\ell_p$ norms for $p \\in [1, 2)$, where we improve state-of-the-art query complexities in a zeroth-order model",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4213,
+      "paper_title": "Navier-Stokes-driven analysis of mean and fluctuating wall shear stress in turbulent channel flow",
+      "arxiv_id": "2602.04564v1",
+      "domain": "physics",
+      "published_date": "2026-02-04",
+      "mechanism_type": "norm",
+      "description": "Starting from the streamwise momentum equation, we derive exact integral equations that relate the square plane-average and the square fluctuating WSS to wall-normal integrals of terms combining shear with acceleration, shear with pressure-radient, and shear with viscous diffusion",
+      "description_original": "Starting from the streamwise momentum equation, we derive exact integral equations that relate the square plane-average and the square fluctuating WSS to wall-normal integrals of terms combining shear with acceleration, shear with pressure-radient, and shear with viscous diffusion",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.315495Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "norm",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "physics"
+        ],
+        "papers": [
+          508,
+          573
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368435,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7065217391304347,
+    "pattern_1": {
+      "pattern_id": 3893,
+      "paper_title": "The quenched structured coalescent for diploid population models on finite graphs with large migrations and uneven offspring distributions",
+      "arxiv_id": "2601.21079v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-28",
+      "mechanism_type": "convergence",
+      "description": "We show convergence, with mild conditions on the joint distribution of offspring frequencies and migrations, of gene genealogies conditional on the pedigree to a time-inhomogeneous coalescent process driven by a Poisson point process $\u03a8$ that records the timing and scale of large migrations and uneven offspring distributions",
+      "description_original": "We show convergence, with mild conditions on the joint distribution of offspring frequencies and migrations, of gene genealogies conditional on the pedigree to a time-inhomogeneous coalescent process driven by a Poisson point process $\u03a8$ that records the timing and scale of large migrations and uneven offspring distributions",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5077,
+      "paper_title": "An Asymptotic Law of the Iterated Logarithm for $\\mathrm{KL}_{\\inf}$",
+      "arxiv_id": "2602.05259v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "convergence",
+      "description": "The population $\\mathrm{KL}_{\\inf}$ is a fundamental quantity that appears in lower bounds for (asymptotically) optimal regret of pure-exploration stochastic bandit algorithms, and optimal stopping time of sequential tests",
+      "description_original": "The population $\\mathrm{KL}_{\\inf}$ is a fundamental quantity that appears in lower bounds for (asymptotically) optimal regret of pure-exploration stochastic bandit algorithms, and optimal stopping time of sequential tests",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.273090Z",
+      "score_breakdown": {
+        "total": 0.7065217391304347,
+        "text_similarity": 0.5652173913043478,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "convergence",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "q-bio",
+          "math"
+        ],
+        "papers": [
+          467,
+          888
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369066,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3436,
+      "paper_title": "An FWCI decomposition of Science Foundation Ireland funding",
+      "arxiv_id": "2602.05836v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "8\\%$), SFI funded publications are well approximated by a lognormal distribution with $\u03bc= -0",
+      "description_original": "8\\%$), SFI funded publications are well approximated by a lognormal distribution with $\u03bc= -0",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4013,
+      "paper_title": "Improved Sparse Recovery for Approximate Matrix Multiplication",
+      "arxiv_id": "2602.04386v1",
+      "domain": "cs",
+      "published_date": "2026-02-04",
+      "mechanism_type": "norm",
+      "description": "We present a simple randomized algorithm for approximate matrix multiplication (AMM) whose error scales with the *output* norm $\\|AB\\|_F$",
+      "description_original": "We present a simple randomized algorithm for approximate matrix multiplication (AMM) whose error scales with the *output* norm $\\|AB\\|_F$",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.306268Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "norm",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "cs"
+        ],
+        "papers": [
+          346,
+          505
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368249,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7081081081081081,
+    "pattern_1": {
+      "pattern_id": 4188,
+      "paper_title": "On the stability of viscous Riemann ellipsoids",
+      "arxiv_id": "2602.05658v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "description_original": "In the inviscid regime, we derive a generalised Poincare equation governing small fluid oscillations and construct a family of polynomial solutions that extends the classical results of Cartan to flows with a uniform strain field",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5719,
+      "paper_title": "Reducing the Complexity of Matrix Multiplication to $O(N^2log_2N)$ by an Asymptotically Optimal Quantum Algorithm",
+      "arxiv_id": "2602.05541v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "complexity",
+      "description": "This work presents a quantum kernel-based matrix multiplication algorithm (QKMM) that achieves an asymptotically optimal computational complexity of $ O(N^2 \\log_2 N) $, outperforming the classical optimal complexity of $ O(N^{2",
+      "description_original": "This work presents a quantum kernel-based matrix multiplication algorithm (QKMM) that achieves an asymptotically optimal computational complexity of $ O(N^2 \\log_2 N) $, outperforming the classical optimal complexity of $ O(N^{2",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.263849Z",
+      "score_breakdown": {
+        "total": 0.7081081081081081,
+        "text_similarity": 0.5664864864864865,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "complexity",
+        "shared_keywords": [
+          "classical"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "cs"
+        ],
+        "papers": [
+          564,
+          1101
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368835,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2854,
+      "paper_title": "Solving Stochastic Variational Inequalities without the Bounded Variance Assumption",
+      "arxiv_id": "2602.05531v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "norm",
+      "description": "For both classes of VIs, to make the expected residual norm less than $\\varepsilon$, we show an oracle complexity of $\\widetilde{O}(\\varepsilon^{-4})$, which is the best-known for constrained VIs",
+      "description_original": "For both classes of VIs, to make the expected residual norm less than $\\varepsilon$, we show an oracle complexity of $\\widetilde{O}(\\varepsilon^{-4})$, which is the best-known for constrained VIs",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5659,
+      "paper_title": "Canonicalization of Batched Einstein Summations for Tuning Retrieval",
+      "arxiv_id": "2601.12220v1",
+      "domain": "cs",
+      "published_date": "2026-01-18",
+      "mechanism_type": "norm",
+      "description": "We present an algorithm for normalizing \\emph{Batched Einstein Summation}\n  expressions by mapping mathematically equivalent formulations to a unique\n  normal form",
+      "description_original": "We present an algorithm for normalizing \\emph{Batched Einstein Summation}\n  expressions by mapping mathematically equivalent formulations to a unique\n  normal form",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.292756Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "norm",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cs"
+        ],
+        "papers": [
+          149,
+          1084
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369212,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3987,
+      "paper_title": "Tight FPT Approximations for Fair $k$-center with Outliers",
+      "arxiv_id": "2602.05476v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "We further extend our algorithm to fair $k$-supplier with outliers and to the more general fair-range setting with both lower and upper bounds",
+      "description_original": "We further extend our algorithm to fair $k$-supplier with outliers and to the more general fair-range setting with both lower and upper bounds",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5413,
+      "paper_title": "Precise propagation profile for some monostable free boundary problems in time-periodic media",
+      "arxiv_id": "2602.05328v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "The free boundaries $x=g(t)$ and $x=h(t)$ evolve subject to a ``preferred population density\" condition at the habitat edges",
+      "description_original": "The free boundaries $x=g(t)$ and $x=h(t)$ evolve subject to a ``preferred population density\" condition at the habitat edges",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.313991Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "math"
+        ],
+        "papers": [
+          495,
+          987
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369213,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 3988,
+      "paper_title": "Tight FPT Approximations for Fair $k$-center with Outliers",
+      "arxiv_id": "2602.05476v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "approximation",
+      "description": "The $k$-center problem is a fundamental clustering objective that has been extensively studied in approximation algorithms",
+      "description_original": "The $k$-center problem is a fundamental clustering objective that has been extensively studied in approximation algorithms",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 4190,
+      "paper_title": "On the stability of viscous Riemann ellipsoids",
+      "arxiv_id": "2602.05658v1",
+      "domain": "physics",
+      "published_date": "2026-02-05",
+      "mechanism_type": "approximation",
+      "description": "This formulation provides an analytic dispersion relation for three-dimensional ellipsoidal disturbances and remains computationally efficient at arbitrary harmonic degree, in contrast to the virial tensor method or to short-wavelength (WKB) approximations",
+      "description_original": "This formulation provides an analytic dispersion relation for three-dimensional ellipsoidal disturbances and remains computationally efficient at arbitrary harmonic degree, in contrast to the virial tensor method or to short-wavelength (WKB) approximations",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.314034Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "approximation",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "physics"
+        ],
+        "papers": [
+          495,
+          564
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 369337,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 4236,
+      "paper_title": "Reaching Univalency with Subquadratic Communication",
+      "arxiv_id": "2602.05356v1",
+      "domain": "cs",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "The Dolev-Reischuk lower bound establishes that any deterministic Byzantine Agreement (BA) protocol for $n$ processors tolerating $f$ faults requires $\u03a9(f^2+n)$ messages",
+      "description_original": "The Dolev-Reischuk lower bound establishes that any deterministic Byzantine Agreement (BA) protocol for $n$ processors tolerating $f$ faults requires $\u03a9(f^2+n)$ messages",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5413,
+      "paper_title": "Precise propagation profile for some monostable free boundary problems in time-periodic media",
+      "arxiv_id": "2602.05328v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "bound",
+      "description": "The free boundaries $x=g(t)$ and $x=h(t)$ evolve subject to a ``preferred population density\" condition at the habitat edges",
+      "description_original": "The free boundaries $x=g(t)$ and $x=h(t)$ evolve subject to a ``preferred population density\" condition at the habitat edges",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.320286Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "bound",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "math"
+        ],
+        "papers": [
+          585,
+          987
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368838,
+    "bucket": "medium_similarity",
+    "similarity_score": 0.7,
+    "pattern_1": {
+      "pattern_id": 2856,
+      "paper_title": "Convergence Rate of the Last Iterate of Stochastic Proximal Algorithms",
+      "arxiv_id": "2602.05489v1",
+      "domain": "stat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "optimization",
+      "description": "We prove the $\\widetilde{O}(1/\\sqrt{T})$ rate of convergence for the last iterate of both algorithms under componentwise convexity and smoothness, which is optimal up to log terms",
+      "description_original": "We prove the $\\widetilde{O}(1/\\sqrt{T})$ rate of convergence for the last iterate of both algorithms under componentwise convexity and smoothness, which is optimal up to log terms",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5645,
+      "paper_title": "High-Order Mesh r-Adaptivity with Tangential Relaxation and Guaranteed Mesh Validity",
+      "arxiv_id": "2601.17708v1",
+      "domain": "cs",
+      "published_date": "2026-01-25",
+      "mechanism_type": "optimization",
+      "description": "In prior work, we have developed techniques based on Target-Matrix Optimization Paradigm (TMOP) to adapt a given high-order mesh to the geometry and solution of the partial differential equation (PDE)",
+      "description_original": "In prior work, we have developed techniques based on Target-Matrix Optimization Paradigm (TMOP) to adapt a given high-order mesh to the geometry and solution of the partial differential equation (PDE)",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.292883Z",
+      "score_breakdown": {
+        "total": 0.7,
+        "text_similarity": 0.5599999999999999,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "optimization",
+        "shared_keywords": [],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "stat",
+          "cs"
+        ],
+        "papers": [
+          150,
+          1080
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 0 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 368264,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7078947368421052,
+    "pattern_1": {
+      "pattern_id": 3072,
+      "paper_title": "Sculpting 2D Crystals via Membrane Contractions before and during Solidification",
+      "arxiv_id": "2602.05074v1",
+      "domain": "cond-mat",
+      "published_date": "2026-02-04",
+      "mechanism_type": "scaling",
+      "description": "Second, the composition-dependent tension rise during cooling relaxes via water permeation of the membrane with a time constant scaling as $R^2$",
+      "description_original": "Second, the composition-dependent tension rise during cooling relaxes via water permeation of the membrane with a time constant scaling as $R^2$",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3256,
+      "paper_title": "Quantum noise scaling in continuously operating multiparameter sensors",
+      "arxiv_id": "2602.05991v1",
+      "domain": "quant-ph",
+      "published_date": "2026-02-05",
+      "mechanism_type": "scaling",
+      "description": "We observe linear, quadratic, and cubic scaling of the respective total noise powers with probe photon flux, together with a quadratic dependence of back-action on pump photon flux, in quantitative agreement with a stochastic Bloch-equation model",
+      "description_original": "We observe linear, quadratic, and cubic scaling of the respective total noise powers with probe photon flux, together with a quadratic dependence of back-action on pump photon flux, in quantitative agreement with a stochastic Bloch-equation model",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.264623Z",
+      "score_breakdown": {
+        "total": 0.7078947368421052,
+        "text_similarity": 0.5663157894736842,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "scaling",
+        "shared_keywords": [
+          "scaling"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cond-mat",
+          "quant-ph"
+        ],
+        "papers": [
+          223,
+          286
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "weak",
+    "notes": "Auto-rated: Only 1 shared keywords - superficial similarity"
+  },
+  {
+    "match_id": 366962,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.8736842105263157,
+    "pattern_1": {
+      "pattern_id": 3219,
+      "paper_title": "The resurgence of errors in the localization of $\\mathcal{N} = 2$ superconformal Yang-Mills",
+      "arxiv_id": "2602.05733v1",
+      "domain": "hep-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "gauge_theory",
+      "description": "We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling",
+      "description_original": "We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3302,
+      "paper_title": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "arxiv_id": "2602.04948v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-04",
+      "mechanism_type": "gauge_theory",
+      "description": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "description_original": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193499Z",
+      "score_breakdown": {
+        "total": 0.8736842105263157,
+        "text_similarity": 0.6989473684210527,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "gauge_theory",
+        "shared_keywords": [
+          "gauge",
+          "theory"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "hep-th",
+          "nucl-th"
+        ],
+        "papers": [
+          273,
+          302
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'gauge theory' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367047,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.775,
+    "pattern_1": {
+      "pattern_id": 3031,
+      "paper_title": "Broken neural scaling laws in materials science",
+      "arxiv_id": "2602.05702v1",
+      "domain": "cond-mat",
+      "published_date": "2026-02-05",
+      "mechanism_type": "scaling",
+      "description": "We observe broken neural scaling laws with respect to dataset size, whereas scaling with the number of model parameters follows a simple power law that rapidly saturates",
+      "description_original": "We observe broken neural scaling laws with respect to dataset size, whereas scaling with the number of model parameters follows a simple power law that rapidly saturates",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 3501,
+      "paper_title": "Effect of higher-order interactions on noisy majority-rule dynamics with random group sizes",
+      "arxiv_id": "2602.01902v1",
+      "domain": "physics",
+      "published_date": "2026-02-02",
+      "mechanism_type": "scaling",
+      "description": "We further derive analytical predictions, benchmarked against Monte Carlo simulations, for the leading finite-size behavior of relaxation: for narrow distributions the characteristic relaxation time typically grows logarithmically with system size, whereas sufficiently heavy-tailed power laws produce strong crossovers and make the large-system dynamics sensitive to how $q$ approaches the transition",
+      "description_original": "We further derive analytical predictions, benchmarked against Monte Carlo simulations, for the leading finite-size behavior of relaxation: for narrow distributions the characteristic relaxation time typically grows logarithmically with system size, whereas sufficiently heavy-tailed power laws produce strong crossovers and make the large-system dynamics sensitive to how $q$ approaches the transition",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.197787Z",
+      "score_breakdown": {
+        "total": 0.775,
+        "text_similarity": 0.6200000000000001,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "scaling",
+        "shared_keywords": [
+          "laws",
+          "power",
+          "size,",
+          "whereas"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cond-mat",
+          "physics"
+        ],
+        "papers": [
+          205,
+          363
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'power law' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367698,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7565217391304347,
+    "pattern_1": {
+      "pattern_id": 2616,
+      "paper_title": "Rational Interpreters for Discrete Dynamics: Existence, Exactness, and Decomposition over $p$-adic Fields",
+      "arxiv_id": "2602.05433v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "dynamical_system",
+      "description": "We address an inverse problem in non-Archimedean dynamics: given a finite discrete dynamical system (equivalently, a functional graph on $N$ states), construct a continuous $p$-adic dynamical system whose residue-level behavior reproduces the prescribed transitions",
+      "description_original": "We address an inverse problem in non-Archimedean dynamics: given a finite discrete dynamical system (equivalently, a functional graph on $N$ states), construct a continuous $p$-adic dynamical system whose residue-level behavior reproduces the prescribed transitions",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5434,
+      "paper_title": "Simple chemical systems with chaos",
+      "arxiv_id": "2601.02787v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-06",
+      "mechanism_type": "dynamical_system",
+      "description": "A number of simple chaotic three-dimensional dynamical systems (DSs) with quadratic polynomials on the right-hand sides are reported in the literature, containing exactly 5 or 6 monomials of which only 1 or 2 are quadratic",
+      "description_original": "A number of simple chaotic three-dimensional dynamical systems (DSs) with quadratic polynomials on the right-hand sides are reported in the literature, containing exactly 5 or 6 monomials of which only 1 or 2 are quadratic",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.233566Z",
+      "score_breakdown": {
+        "total": 0.7565217391304347,
+        "text_similarity": 0.6052173913043478,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "dynamical_system",
+        "shared_keywords": [
+          "dynamical"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "q-bio"
+        ],
+        "papers": [
+          59,
+          991
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367429,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7607142857142857,
+    "pattern_1": {
+      "pattern_id": 3756,
+      "paper_title": "Backpropagation as Physical Relaxation: Exact Gradients in Finite Time",
+      "arxiv_id": "2602.02281v1",
+      "domain": "cs",
+      "published_date": "2026-02-02",
+      "mechanism_type": "dynamical_system",
+      "description": "We show it emerges exactly as the finite-time relaxation of a physical dynamical system",
+      "description_original": "We show it emerges exactly as the finite-time relaxation of a physical dynamical system",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5261,
+      "paper_title": "Latent Causal Diffusions for Single-Cell Perturbation Modeling",
+      "arxiv_id": "2601.15341v1",
+      "domain": "q-bio",
+      "published_date": "2026-01-20",
+      "mechanism_type": "dynamical_system",
+      "description": "LCD outperforms established approaches in predicting the distributional shifts of unseen perturbation combinations in single-cell RNA-sequencing screens while simultaneously learning a mechanistic dynamical system of gene regulation",
+      "description_original": "LCD outperforms established approaches in predicting the distributional shifts of unseen perturbation combinations in single-cell RNA-sequencing screens while simultaneously learning a mechanistic dynamical system of gene regulation",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.220698Z",
+      "score_breakdown": {
+        "total": 0.7607142857142857,
+        "text_similarity": 0.6085714285714285,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "dynamical_system",
+        "shared_keywords": [
+          "dynamical",
+          "system"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "cs",
+          "q-bio"
+        ],
+        "papers": [
+          425,
+          938
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  },
+  {
+    "match_id": 366963,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.8736842105263157,
+    "pattern_1": {
+      "pattern_id": 3220,
+      "paper_title": "The resurgence of errors in the localization of $\\mathcal{N} = 2$ superconformal Yang-Mills",
+      "arxiv_id": "2602.05733v1",
+      "domain": "hep-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "gauge_theory",
+      "description": "We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling",
+      "description_original": "We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 3302,
+      "paper_title": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "arxiv_id": "2602.04948v1",
+      "domain": "nucl-th",
+      "published_date": "2026-02-04",
+      "mechanism_type": "gauge_theory",
+      "description": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "description_original": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.193545Z",
+      "score_breakdown": {
+        "total": 0.8736842105263157,
+        "text_similarity": 0.6989473684210527,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.05
+      },
+      "matched_features": {
+        "mechanism_type": "gauge_theory",
+        "shared_keywords": [
+          "gauge",
+          "theory"
+        ],
+        "both_have_equations": true
+      },
+      "pattern_metadata": {
+        "domains": [
+          "hep-th",
+          "nucl-th"
+        ],
+        "papers": [
+          273,
+          302
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'gauge theory' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367098,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7706896551724138,
+    "pattern_1": {
+      "pattern_id": 2498,
+      "paper_title": "General Relativistic Quantum Mechanics deriving Electroweak and Gravitational Interactions",
+      "arxiv_id": "2601.12668v1",
+      "domain": "physics",
+      "published_date": "2026-01-19",
+      "mechanism_type": "gauge_theory",
+      "description": "A gauge theory with an indefinite metric without negative probabilities is given by extending quantum mechanics, where a general metric is introduced, and the invariance under the general linear transformation is imposed on the space of quantum states",
+      "description_original": "A gauge theory with an indefinite metric without negative probabilities is given by extending quantum mechanics, where a general metric is introduced, and the invariance under the general linear transformation is imposed on the space of quantum states",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 3224,
+      "paper_title": "The EP Model with U(1) (E5)",
+      "arxiv_id": "2602.05722v1",
+      "domain": "hep-th",
+      "published_date": "2026-02-05",
+      "mechanism_type": "gauge_theory",
+      "description": "Here we add a U(1) gauge theory to the simple EP exotic invariant model in the paper E4",
+      "description_original": "Here we add a U(1) gauge theory to the simple EP exotic invariant model in the paper E4",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.200453Z",
+      "score_breakdown": {
+        "total": 0.7706896551724138,
+        "text_similarity": 0.6165517241379311,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "gauge_theory",
+        "shared_keywords": [
+          "gauge",
+          "theory"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "physics",
+          "hep-th"
+        ],
+        "papers": [
+          11,
+          274
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'gauge theory' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367733,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7558823529411764,
+    "pattern_1": {
+      "pattern_id": 5122,
+      "paper_title": "Phase transitions on periodic orbits in $\u03b2$-transformation with a hole at zero",
+      "arxiv_id": "2602.05438v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "dynamical_system",
+      "description": "For $m\\in\\mathbb N$ let\n  \\[\n  \u03c4_m(\u03b2):=\\sup\\left\\{t\\in[0,1): K_\u03b2(t)\\textrm{ {contains a periodic orbit} of smallest period }m \\right\\},\n  \\]\n  where $K_\u03b2(t)=\\{x\\in[0,1): T_\u03b2^n(x)\\notin(0,t)~\\forall n\\ge 0\\}$ is the survivor set of the open dynamical system $(T_\u03b2, [0,1), H)$ with a hole $H=(0,t)$",
+      "description_original": "For $m\\in\\mathbb N$ let\n  \\[\n  \u03c4_m(\u03b2):=\\sup\\left\\{t\\in[0,1): K_\u03b2(t)\\textrm{ {contains a periodic orbit} of smallest period }m \\right\\},\n  \\]\n  where $K_\u03b2(t)=\\{x\\in[0,1): T_\u03b2^n(x)\\notin(0,t)~\\forall n\\ge 0\\}$ is the survivor set of the open dynamical system $(T_\u03b2, [0,1), H)$ with a hole $H=(0,t)$",
+      "has_equation": true
+    },
+    "pattern_2": {
+      "pattern_id": 5193,
+      "paper_title": "Exact coherent structures as building blocks of turbulence on large domains",
+      "arxiv_id": "2601.21970v1",
+      "domain": "nlin",
+      "published_date": "2026-01-29",
+      "mechanism_type": "dynamical_system",
+      "description": "Here, we extend this dynamical systems approach to spatially extended turbulent flows featuring multiple interacting 'substructures', and show how new simple invariant solutions can be constructed by spatial tiling of exact solutions from small-box calculations",
+      "description_original": "Here, we extend this dynamical systems approach to spatially extended turbulent flows featuring multiple interacting 'substructures', and show how new simple invariant solutions can be constructed by spatial tiling of exact solutions from small-box calculations",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.235299Z",
+      "score_breakdown": {
+        "total": 0.7558823529411764,
+        "text_similarity": 0.6047058823529412,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "dynamical_system",
+        "shared_keywords": [
+          "dynamical"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "math",
+          "nlin"
+        ],
+        "papers": [
+          903,
+          924
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367220,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7666666666666667,
+    "pattern_1": {
+      "pattern_id": 5202,
+      "paper_title": "Pattern Formation in Excitable Neuronal Maps",
+      "arxiv_id": "2601.21671v1",
+      "domain": "nlin",
+      "published_date": "2026-01-29",
+      "mechanism_type": "scaling",
+      "description": "For ring-type patterns, the persistence decays more slowly than exponentially, often following a power law or stretched exponential",
+      "description_original": "For ring-type patterns, the persistence decays more slowly than exponentially, often following a power law or stretched exponential",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5333,
+      "paper_title": "Superposition unifies power-law training dynamics",
+      "arxiv_id": "2602.01045v1",
+      "domain": "physics",
+      "published_date": "2026-02-01",
+      "mechanism_type": "scaling",
+      "description": "Our finding that superposition leads to rapid training with a data-independent power law exponent may have important implications for a wide range of neural networks that employ superposition, including production-scale large language models",
+      "description_original": "Our finding that superposition leads to rapid training with a data-independent power law exponent may have important implications for a wide range of neural networks that employ superposition, including production-scale large language models",
+      "has_equation": false
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.210344Z",
+      "score_breakdown": {
+        "total": 0.7666666666666667,
+        "text_similarity": 0.6133333333333334,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "scaling",
+        "shared_keywords": [
+          "power"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "nlin",
+          "physics"
+        ],
+        "papers": [
+          926,
+          959
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'power law' - clear structural isomorphism"
+  },
+  {
+    "match_id": 367657,
+    "bucket": "high_value_mechanisms",
+    "similarity_score": 0.7569767441860465,
+    "pattern_1": {
+      "pattern_id": 3827,
+      "paper_title": "How seed banks evolve in plants: a stochastic dynamical system subject to a strong drift",
+      "arxiv_id": "2602.04437v1",
+      "domain": "q-bio",
+      "published_date": "2026-02-04",
+      "mechanism_type": "dynamical_system",
+      "description": "Mathematically, our analysis reduces to a stochastic dynamical system forced onto a manifold by a large drift, which converges under scaling to a diffusion on the manifold",
+      "description_original": "Mathematically, our analysis reduces to a stochastic dynamical system forced onto a manifold by a large drift, which converges under scaling to a diffusion on the manifold",
+      "has_equation": false
+    },
+    "pattern_2": {
+      "pattern_id": 5122,
+      "paper_title": "Phase transitions on periodic orbits in $\u03b2$-transformation with a hole at zero",
+      "arxiv_id": "2602.05438v1",
+      "domain": "math",
+      "published_date": "2026-02-05",
+      "mechanism_type": "dynamical_system",
+      "description": "For $m\\in\\mathbb N$ let\n  \\[\n  \u03c4_m(\u03b2):=\\sup\\left\\{t\\in[0,1): K_\u03b2(t)\\textrm{ {contains a periodic orbit} of smallest period }m \\right\\},\n  \\]\n  where $K_\u03b2(t)=\\{x\\in[0,1): T_\u03b2^n(x)\\notin(0,t)~\\forall n\\ge 0\\}$ is the survivor set of the open dynamical system $(T_\u03b2, [0,1), H)$ with a hole $H=(0,t)$",
+      "description_original": "For $m\\in\\mathbb N$ let\n  \\[\n  \u03c4_m(\u03b2):=\\sup\\left\\{t\\in[0,1): K_\u03b2(t)\\textrm{ {contains a periodic orbit} of smallest period }m \\right\\},\n  \\]\n  where $K_\u03b2(t)=\\{x\\in[0,1): T_\u03b2^n(x)\\notin(0,t)~\\forall n\\ge 0\\}$ is the survivor set of the open dynamical system $(T_\u03b2, [0,1), H)$ with a hole $H=(0,t)$",
+      "has_equation": true
+    },
+    "match_details": {
+      "version": "v2.1",
+      "generated_at": "2026-02-08T11:41:53.231554Z",
+      "score_breakdown": {
+        "total": 0.7569767441860465,
+        "text_similarity": 0.6055813953488373,
+        "mechanism_match": 1.0,
+        "domain_penalty": 0.0,
+        "equation_bonus": 0.0
+      },
+      "matched_features": {
+        "mechanism_type": "dynamical_system",
+        "shared_keywords": [
+          "dynamical",
+          "system"
+        ],
+        "both_have_equations": false
+      },
+      "pattern_metadata": {
+        "domains": [
+          "q-bio",
+          "math"
+        ],
+        "papers": [
+          453,
+          903
+        ],
+        "extraction_versions": [
+          "v1.0",
+          "v1.0"
+        ]
+      },
+      "filters_applied": {
+        "false_positive_check": "passed",
+        "same_domain": false,
+        "min_similarity_threshold": 0.6
+      },
+      "manual_review": null
+    },
+    "manual_rating": "excellent",
+    "notes": "Auto-rated: Both mention 'dynamical system' - clear structural isomorphism"
+  }
+]

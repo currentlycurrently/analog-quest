@@ -1,0 +1,47 @@
+{
+  "buckets": {
+    "cross_domain_far": {
+      "total": 15,
+      "excellent": 2,
+      "good": 4,
+      "weak": 9,
+      "fp": 0
+    },
+    "with_equations": {
+      "total": 10,
+      "excellent": 0,
+      "good": 0,
+      "weak": 10,
+      "fp": 0
+    },
+    "ultra_high": {
+      "total": 10,
+      "excellent": 9,
+      "good": 1,
+      "weak": 0,
+      "fp": 0
+    },
+    "medium_similarity": {
+      "total": 15,
+      "excellent": 0,
+      "good": 0,
+      "weak": 15,
+      "fp": 0
+    },
+    "high_value_mechanisms": {
+      "total": 10,
+      "excellent": 9,
+      "good": 0,
+      "weak": 1,
+      "fp": 0
+    }
+  },
+  "overall": {
+    "total": 60,
+    "excellent": 20,
+    "good": 5,
+    "weak": 35,
+    "false_positive": 0,
+    "precision": 0.4166666666666667
+  }
+}

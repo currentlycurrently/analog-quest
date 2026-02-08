@@ -119,6 +119,101 @@ MECHANISM_SYNONYMS = {
     'selection_process': [
         'selection', 'natural selection', 'evolutionary selection',
         'preferential', 'winner-take-all'
+    ],
+
+    # Physics - Plasma & Electromagnetic (Session 16)
+    'instability': [
+        'plasma instability', 'instability', 'unstable', 'rayleigh-taylor'
+    ],
+
+    'fluid_dynamics': [
+        'magnetohydrodynamics', 'mhd', 'fluid dynamics', 'hydrodynamics',
+        'turbulence', 'flow'
+    ],
+
+    'resonance': [
+        'resonance', 'wave-particle interaction', 'resonant', 'coupling'
+    ],
+
+    'damping': [
+        'damping', 'landau damping', 'dissipation', 'energy loss'
+    ],
+
+    'topology_change': [
+        'magnetic reconnection', 'topology change', 'topological transition',
+        'reconnection'
+    ],
+
+    # Physics - Geophysics (Session 16)
+    'wave_propagation': [
+        'seismic wave', 'wave propagation', 'acoustic wave', 'elastic wave'
+    ],
+
+    'layered_structure': [
+        'lithosphere dynamics', 'layered structure', 'stratification',
+        'layering'
+    ],
+
+    'thermal_convection': [
+        'mantle convection', 'thermal convection', 'convection', 'heat transfer'
+    ],
+
+    'coupled_dynamics': [
+        'plate tectonics', 'coupled dynamics', 'coupled system', 'interaction'
+    ],
+
+    # Mathematics - Probability & Statistics (Session 16)
+    'random_process': [
+        'stochastic process', 'random process', 'stochastic', 'probabilistic'
+    ],
+
+    'statistical_equilibrium': [
+        'ergodic', 'statistical equilibrium', 'stationary', 'ergodicity'
+    ],
+
+    'memoryless': [
+        'markov property', 'memoryless', 'markovian', 'markov chain'
+    ],
+
+    'statistical_regularity': [
+        'law of large numbers', 'statistical regularity', 'lln', 'central limit'
+    ],
+
+    # Mathematics - Optimization (Session 16)
+    'variational_optimization': [
+        'variational', 'variational principle', 'calculus of variations'
+    ],
+
+    'constrained_optimization': [
+        'lagrangian', 'constrained optimization', 'lagrange multiplier',
+        'kkt conditions'
+    ],
+
+    'conservation': [
+        'hamiltonian', 'conservation', 'conserved quantity', 'invariant'
+    ],
+
+    'gradient_descent': [
+        'gradient flow', 'gradient descent', 'gradient-based', 'steepest descent'
+    ],
+
+    # Cross-domain dynamics (Session 16)
+    'phase_transition': [
+        'phase transition', 'bifurcation', 'critical transition', 'symmetry breaking'
+    ],
+
+    'attractor': [
+        'attractor', 'stable equilibrium', 'basin of attraction', 'fixed point'
+    ],
+
+    'sensitive_dependence': [
+        'chaos', 'chaotic', 'sensitive dependence', 'lyapunov exponent',
+        'butterfly effect'
+    ],
+
+    'self_similarity': [
+        'fractal', 'self-similar', 'self-similarity', 'scale invariance',
+        'power law'
     ]
 }
 

@@ -280,12 +280,57 @@ Session 18 achieved **1000+ PAPERS MILESTONE!** (1,003 total) and **HIT RATE REC
 
 ## Long-Term Milestones
 
-- **Week 1**: 100 papers processed, basic pipeline working
-- **Month 1**: 500 papers, 200 patterns, 20 isomorphisms
-- **Month 2**: 1000 papers, refining quality, web interface live
-- **Month 3**: 1500 papers, finding interesting connections
-- **Month 6**: 2000+ papers, 100+ isomorphisms, mission complete
+- **Week 1**: ✅ 100 papers processed, basic pipeline working
+- **Month 1**: ✅ 1000+ papers, refining quality, web interface live
+- **Month 2**: 1500 papers, **UI/UX improvements for researchers**, finding interesting connections
+- **Month 3**: 2000 papers, researcher-friendly interface, case studies published
+- **Month 6**: 2500+ papers, 100+ verified isomorphisms, mission complete
 
 ---
 
-**Last Updated**: Session 8 - 2026-02-07
+## UI/UX Improvement Roadmap (Future Sessions)
+
+**When**: After reaching ~1200-1500 papers, take a break from database building to focus on making this researcher-friendly.
+
+**Why**: The hard part (95% precision matching) is done. Now make it discoverable and useful for humans.
+
+### 1. Discovery-First Interface
+- **Natural language search**: "I study oscillating populations - show me ALL similar mechanisms"
+- **Visual network graph**: Domain connections, cluster view of related papers
+- **Recommendation engine**: "Papers like this one" based on structural similarity
+- **Cluster view**: "Here are 12 papers describing the same structure in different languages"
+
+### 2. Trust & Context
+- **Side-by-side comparison**: Show pattern descriptions together
+- **Highlight shared vocabulary**: What made the algorithm connect them?
+- **Direct arXiv links**: Click through to original papers
+- **Confidence explained**: Plain language explanation of similarity scores
+- **Show the mechanism**: Not just "0.94 similarity" but "Both describe scaling laws with power-law relationships"
+
+### 3. Exploration Tools
+- **Domain queries**: "Show me what economics has learned about feedback loops"
+- **Cross-domain bridges**: "I work in biology, what has physics discovered about network effects?"
+- **Timeline view**: "Who solved this problem first?" - chronological discovery
+- **Mechanism browser**: Explore all papers by canonical mechanism type
+
+### 4. Contribution Loop
+- **Verify matches**: Researchers mark good/bad connections
+- **Suggest connections**: "I know these papers are related"
+- **Quality feedback**: Feed human signals back to improve matching
+- **Export/cite**: Generate citations for discovered connections
+
+### Specific UI Tasks (for future agent)
+- [ ] Build interactive graph visualization (D3.js or similar)
+- [ ] Implement natural language search interface
+- [ ] Create pattern comparison view with highlighting
+- [ ] Add "explore by mechanism" browser
+- [ ] Build case study pages for top isomorphisms
+- [ ] Add user feedback/verification system
+- [ ] Improve mobile responsiveness
+- [ ] Create "researcher onboarding" flow
+
+**Success Criteria**: A biology researcher can discover relevant physics papers without knowing physics terminology.
+
+---
+
+**Last Updated**: Session 18 - 2026-02-08

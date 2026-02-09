@@ -731,3 +731,119 @@ ORDER BY i.similarity DESC;
 
 ---
 
+
+---
+
+## ✅ Session 31 COMPLETE - QUALITY REVIEW CRISIS! 🚨
+
+**Session #**: 31 ✓
+
+**CRITICAL FINDINGS**:
+- ✓ Reviewed all 43 ultra-high confidence matches (≥0.9 similarity)
+- ✓ **0% precision (0/43 genuine)** - ALL are technique matches (GNN, chaos, neural scaling)
+- ✓ Sampled 20 medium-high matches (0.77-0.85): **~35% precision (7/20 potentially genuine)**
+- ✓ **Estimated overall precision: ~30-35%** (200-300 genuine out of 616 total)
+- ✓ Created comprehensive crisis report (SESSION31_QUALITY_CRISIS.md)
+- ✓ Identified root causes: pattern extraction + vocabulary matching = technique matches
+- ✓ Proposed three options with timelines
+
+**Impact**:
+- **Launch timeline BLOCKED** - cannot launch with 0% precision on top matches
+- **Database-wide issue confirmed** - problem pervasive, not just ultra-high matches
+- **Root causes identified**: (1) Pattern extraction extracts technique mentions not structures, (2) Matching rewards vocabulary overlap, (3) FP filter misses technique terms
+- **Silver lining**: Found the problem BEFORE launch through rigorous manual review ✓✓✓
+- **Path forward**: Three options proposed (Filter, Fix, or Pivot to Assisted Discovery)
+- **Recommended**: Option 3 (Assisted Discovery) - honest, fast, user-driven improvement
+
+**Time Spent**: ~3.5 hours
+
+**Building on Session 30**:
+Session 30 reached 2000+ papers milestone. Session 31 performed quality review as planned and discovered catastrophic finding: ultra-high matches have 0% precision, all are technique matches. Database-wide issue confirmed through sampling. Launch timeline must be revised to address quality issues first.
+
+---
+
+## Upcoming: Session 32 - TECHNIQUE FILTER + DECISION POINT
+
+**Session #**: 32
+
+**Primary Goal**:
+Build technique overlap detector, sample filtered matches, and make data-driven decision on path forward
+
+**Context from Session 31**:
+- Ultra-high matches (≥0.9): 0% precision (all GNN/chaos/neural scaling technique matches)
+- Medium-high matches (0.77-0.85): ~35% precision (65% technique, 35% potentially genuine)
+- Three options proposed: (1) Filter and Launch, (2) Fix and Re-Run, (3) Assisted Discovery
+- Need to test if filtering can surface genuine matches efficiently
+
+**Specific Tasks**:
+1. **Create technique taxonomy** (~1 hour):
+   - List 100-200 technical terms that indicate same-technique matches
+   - Organize by domain: ML (GNN, transformer, LSTM, ResNet, BERT, attention), Physics (black hole, chaos, bifurcation), Chemistry, etc.
+   - Include variations and acronyms
+   - Store in data/technique_terms.json
+
+2. **Implement technique overlap detector** (~1 hour):
+   - Script: scripts/detect_technique_overlap.py
+   - For each match, count shared specialized terms between abstracts/patterns
+   - Calculate "technique overlap score" (0-1, where 1 = many shared terms)
+   - Flag matches where score > threshold (e.g., 0.3)
+   - Add technique_overlap_score column to isomorphisms table
+
+3. **Sample filtered matches** (~1 hour):
+   - Take 20 matches with LOW technique overlap (score < 0.2)
+   - Manual review: read abstracts, verify structural similarity
+   - Rate quality (Excellent/Good/Weak/False Positive)
+   - Calculate precision of filtered matches
+
+4. **Decision point** (~30 min):
+   - If filtered precision 60-80% → **proceed with Option 1** (Filter and Launch)
+   - If filtered precision 40-60% → **proceed with Option 3** (Assisted Discovery)
+   - If filtered precision <40% → **deep dive into Option 2** (Fix and Re-Run)
+   - Document decision and rationale
+
+**Success Criteria**:
+- [ ] Technique taxonomy created with 100-200 terms
+- [ ] Technique overlap detector implemented and run on all 616 matches
+- [ ] 20 low-overlap matches sampled and reviewed
+- [ ] Precision of filtered matches calculated
+- [ ] Data-driven decision made on path forward
+- [ ] Session 32 report documents findings and next steps
+
+**Time Budget**: 3-4 hours
+
+**Building on Session 31**:
+Session 31 identified the problem (technique matches) and proposed solutions. Session 32 tests if simple filtering can surface genuine matches, or if more fundamental changes are needed. This is the critical decision point that determines the path forward.
+
+**Technical Notes**:
+- Current: **2,021 papers**, **6,064 active patterns**, **616 isomorphisms**, **92.2% hit rate**
+- **Ultra-high precision**: ~0% (0/43 genuine)
+- **Medium-high precision**: ~35% (7/20 potentially genuine)
+- **Overall precision**: ~30-35% estimated (200-300 genuine out of 616)
+- **Key insight**: Lower similarities may be better (inverse U-shaped relationship)
+
+**WHAT NOT TO DO:**
+- ❌ Do NOT fetch new papers
+- ❌ Do NOT build UI yet (wait for decision)
+- ❌ Do NOT re-run matching algorithm yet
+- ❌ Do NOT launch or promote the project
+
+**DO:**
+- ✓ Build filters and test them
+- ✓ Sample and review manually
+- ✓ Make data-driven decision
+- ✓ Be honest about findings
+- ✓ Document clearly
+
+**If I Finish Early**:
+- Prototype Option 3 UI mockup (confidence flags, user feedback)
+- Draft launch copy for "assisted discovery" positioning
+- Create examples/genuine_matches.json with the 7 potentially genuine matches from Session 31 sample
+
+**If I Get Stuck**:
+- Focus on technique taxonomy first - this is mechanical
+- Technique detector can be simple: count term overlap, normalize by doc length
+- Manual review of 20 is tractable - same process as Session 31
+- Decision criteria are clear - just need the precision number
+
+---
+

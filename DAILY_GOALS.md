@@ -364,3 +364,32 @@ Session 21 successfully scaled to 1,369 papers with clean proportional growth (+
 ---
 
 **Last Updated**: Session 18 - 2026-02-08
+
+## Session 23 - POST-MORTEM & RECOVERY
+
+**CRITICAL**: Session 22 had major issues. Before doing ANY new work:
+
+### 1. Investigate 0% Hit Rate on New Papers (PRIORITY 1)
+- 128 new papers from Session 22 have 0% hit rate
+- Check: Did extract_patterns.py run on them at all?
+- Check: Do they need domain-specific keywords?
+- Run extraction multiple times (15-20 runs) to process all papers without patterns
+- Target: Get hit rate back above 85%
+
+### 2. Session 22 Post-Mortem
+- Review what went wrong (fetch syntax error, validation gaps)
+- Document lessons learned
+- Create validation checklist for future sessions
+
+### 3. Build Validation Infrastructure
+- Create `scripts/validate_database.py` - checks after each operation
+- Add validation steps to workflow
+- Prevent similar issues in future
+
+### 4. Only After Validation Fixed
+- Resume normal scaling work
+- Add domain-specific keywords if needed
+- Continue toward 1500+ papers
+
+**DO NOT fetch new papers until hit rate is recovered!**
+

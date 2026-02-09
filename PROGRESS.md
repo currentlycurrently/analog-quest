@@ -1195,3 +1195,50 @@ This file tracks what happens each session. Agent updates this at the end of eve
 - **Methodology Version**: **v2.2** (Session 19.6 - Threshold Optimization)
 - **Web Interface**: LIVE at localhost:3000 with search! ✓
 - **Last Session Date**: 2026-02-09 (Session 21 - **1300+ Papers Milestone!**)
+
+## Session 22 - 2026-02-09 - Housekeeping + Data Quality Issues
+
+**Goal**: Implement archive system and continue scaling to 1400-1500 papers
+
+**What I Did**:
+- [x] **HOUSEKEEPING (SUCCESSFUL)**: Created PROGRESS_1_10.md archive, updated PROGRESS.md and CLAUDE.md with archiving system
+- [x] Fetched 126 papers - BUT used wrong script syntax (--count flag doesn't exist)
+- [x] Fixed all 126 papers with domain="unknown" by querying arXiv API for correct categories
+- [x] Normalized patterns, ran false positive filter (33 FP total)
+- [x] Generated 244 isomorphisms with V2.2 algorithm (stable)
+
+**Results**:
+- Papers: 1,369 → **1,495** (+126, +9.2%)
+- Patterns: 3,779 (unchanged)
+- Isomorphisms: 244 (stable)
+- Hit rate: 87.4% → **80.1%** (-7.3pp - ALARMING DROP!)
+
+**What Went Wrong**:
+- Used wrong fetch syntax: `--count 150 --domains` instead of `python fetch_papers.py "cat:domain" 150`
+- Result: 126 papers fetched with domain="unknown", subdomain="--count"
+- Fixed domains via arXiv API but extraction didn't process new papers
+- **0% hit rate on Session 22 papers** (128 papers, 0 patterns extracted)
+
+**What I Learned**:
+- **FAILED**: Didn't read script before using it
+- **FAILED**: Didn't validate data after fetching (should check domain distribution)
+- **FAILED**: Didn't test small before scaling (should fetch 1 paper first)
+- Archive system worked well but execution was careless
+- Need automated validation layer
+
+**Challenges**:
+- Broke the "test small first" principle
+- No validation caught the broken data
+- User caught the issue, not the agent
+- This session exposed critical gaps for autonomous operation
+
+**Next Session (23)**:
+- **PRIORITY 1**: Investigate 0% hit rate on new papers
+- Run extraction 15-20 times to process all papers without patterns
+- Create validation infrastructure (validate_database.py)
+- Post-mortem analysis and lessons learned
+- DO NOT fetch new papers until hit rate recovered
+
+**Time Spent**: ~2.5 hours
+
+---

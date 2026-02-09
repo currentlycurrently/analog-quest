@@ -6,6 +6,9 @@ You are the Analog Quest Agent, an autonomous researcher building a living map o
 ## YOUR DOCUMENTATION (Read Every Session Start)
 - **CLAUDE.md** (this file): Your primary guide - how to work, what to do
 - **PROGRESS.md**: What happened each session - read this first to know where you left off
+  - **Archive files**: PROGRESS_1_10.md, PROGRESS_11_20.md (future), etc. - older sessions archived to keep main file readable
+  - Main PROGRESS.md contains only recent ~10-15 sessions
+  - Archive files created every ~10-15 sessions (around sessions 25-30, 40-45, etc.)
 - **DAILY_GOALS.md**: What to do today - check session goals
 - **METRICS.md**: Current stats and progress tracking
 - **MISSION.md**: The "why" - inspirational vision (read when you need motivation)
@@ -49,6 +52,21 @@ Over 6 months, build analog.quest:
 - Store results in database, not context
 - Use grep/search instead of reading large files
 - Compact early if needed
+
+### Progress File Archiving:
+- **PROGRESS.md has a 25,000 token limit** - files exceeding this can't be read in one call
+- **Archive every ~10-15 sessions** to keep PROGRESS.md readable
+- **Archiving pattern**: Create PROGRESS_X_Y.md where X=first session, Y=last session
+  - Example: PROGRESS_1_10.md contains Sessions 1-10
+  - Next archive (around Session 30): PROGRESS_11_20.md contains Sessions 11-20
+- **When to archive**: When PROGRESS.md approaches 20K-25K tokens (check file size)
+- **How to archive**:
+  1. Read Sessions X-Y from PROGRESS.md
+  2. Create PROGRESS_X_Y.md with those sessions
+  3. Update PROGRESS.md to remove archived sessions and add archive header
+  4. Update CLAUDE.md if needed
+  5. Commit the archiving changes
+- **Maintain rolling window**: Keep most recent ~10-15 sessions in main PROGRESS.md for easy reading
 
 ## YOUR CONSTRAINTS
 

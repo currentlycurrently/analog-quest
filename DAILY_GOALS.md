@@ -646,68 +646,88 @@ Session 29 reached 1,895 papers with sustained hit rate at 92.5%. Session 30 suc
 
 ## Upcoming: Session 31
 
-**Session #**: 31
+🚨 🚨 🚨 **CRITICAL: READ SESSION31_STRATEGY.md BEFORE STARTING** 🚨 🚨 🚨
+
+**This is a STRATEGIC PIVOT SESSION - not a scaling session.**
 
 **Primary Goal**:
-Continue scaling to 2,100-2,200 papers OR manual quality review of ultra-high matches OR UI/UX improvements (NOW is a good time!)
+Manual quality review of top 30 ultra-high confidence matches (≥0.9 similarity)
 
 **Specific Tasks**:
-1. **RUN VALIDATION FIRST**: Confirm 92.2% hit rate baseline
-2. **Option A (Scaling)**: Fetch 50-150 new papers from new domains OR wait for fresh papers
-   - Explore new domains: math.NA (numerical analysis), cs.SC (symbolic computation), physics.data-an, cs.MS (mathematical software)
-   - OR continue with existing domains (check for new papers since last session)
-   - Extract patterns (use limit=300 to process ALL papers without patterns)
-3. **Option B (Quality Review - RECOMMENDED)**: Manual review of ultra-high confidence matches (≥0.9)
-   - Document top 30 ultra-high matches
-   - Create examples/session31_best_matches.json
-   - Analyze structural patterns across domains
-4. **Option C (UI/UX - RECOMMENDED)**: Begin researcher-friendly interface improvements
-   - Natural language search or visual network graph
-   - Case study pages for top isomorphisms
-   - Researcher onboarding flow
-5. Standard pipeline: normalize → filter → match → validate
-6. Update all documentation
+1. **READ SESSION31_STRATEGY.md FIRST** - This explains the strategic pivot
+2. **Manual Quality Review (MANDATORY)**:
+   - Retrieve all 30 ultra-high confidence matches (≥0.9) from database
+   - For each match: read abstracts, verify structural similarity, rate quality
+   - Document in `examples/top_30_discoveries.md` with format from strategy doc
+   - Include: quality ratings, explanations, precision calculation
+3. **Update documentation** with quality review findings
+
+**WHAT NOT TO DO:**
+- ❌ Do NOT fetch new papers (even if you finish early)
+- ❌ Do NOT build UI yet (that's Session 32-33)
+- ❌ Do NOT add features or refine methodology
+- ❌ Do NOT scale "just a little"
+
+**Alternative Options (ONLY if primary goal blocked):**
+- Option B (UI/UX): Begin researcher-friendly interface improvements
+  - Natural language search or visual network graph
+  - Case study pages for top isomorphisms
+- Option C (Scaling - NOT RECOMMENDED): Fetch 50-150 new papers
+  - Read SESSION31_STRATEGY.md section "Why We're Not Scaling" first
+  - Only do this if quality review is blocked for technical reasons
 
 **Success Criteria**:
-- [ ] 2,100-2,200 papers total (if scaling), OR
-- [ ] Quality analysis documented (if manual review), OR
-- [ ] UI improvements shipped (if UI work)
-- [ ] **Validation passes before AND after session** ✓✓
-- [ ] Hit rate maintained >92%
-- [ ] 68% precision maintained
+- [ ] **All 30 ultra-high matches manually reviewed** ✓✓✓
+- [ ] **Each match has quality rating + explanation**
+- [ ] **Precision calculated (expect 80-90%)**
+- [ ] **`examples/top_30_discoveries.md` created and committed**
+- [ ] **False positives identified (if any)**
+- [ ] Documentation updated
 
-**Time Budget**: 2-3 hours
+**Time Budget**: 3-4 hours (quality review is slower than scaling)
 
 **Building on Session 30**:
-Session 30 reached major 2000+ papers milestone (2,021 total) with 10 NEW domains added in one session. Hit rate sustained above 92% (92.2%, -0.3pp). TWO perfect 1.00 matches maintained. Database maturity level reached - NOW is excellent time for UI/UX improvements or quality review!
+Session 30 reached major 2000+ papers milestone (2,021 total). Database maturity achieved. **Now switching from building mode to shipping mode.** Session 31 focuses on verifying quality of top matches before launch preparation.
 
 **Technical Notes**:
-- Current: **2,021 papers**, **6,064 active patterns** (61 FP), **616 isomorphisms**, **92.2% hit rate**
-- Algorithm: **V2.2** (threshold=0.77, equation bonus removed)
-- Precision: **68%** (validated, stable)
-- Ultra high (≥0.9): **30** matches (4.9%)
-- Very high (≥0.8): **40** matches (6.5%)
-- Top similarity: **1.00** (TWO perfect matches!), avg similarity: **~0.79**
-- **Validation script available**: Run before AND after every operation!
-- **Archive system working**: Sessions 1-10 (PROGRESS_1_10.md), 11-20 (PROGRESS_11_20.md), 21-30 (PROGRESS.md)
+- Current: **2,021 papers**, **6,064 active patterns**, **616 isomorphisms**, **92.2% hit rate**
+- **30 ultra-high matches (≥0.9)** - these are your showcase examples
+- **40 very-high matches (≥0.8)** - also high quality
+- TWO PERFECT 1.00 matches - verify these especially carefully
+- Precision: **68%** overall (expect 80-90% for ultra-high subset)
+- **These 30 matches will define your launch credibility**
 
-**Key Successes from Session 30**:
-- **2000+ PAPERS MILESTONE REACHED!** (2,021 total) - major achievement! 🎉🎉🎉
-- **10 NEW DOMAINS ADDED** - largest domain expansion yet (cs.GT, cs.IT, math.ST, cs.DS, cs.CC, cs.CG, math.PR, cs.FL, physics.bio-ph, cs.SI, q-bio.PE)
-- **Hit rate sustained above 92%**: 92.2% (-0.3pp from Session 29)
-- **TWO perfect 1.00 matches maintained**: Structural similarity algorithm working perfectly
-- **Database maturity level reached**: 2000+ papers enables meaningful cross-domain discovery
+**Key Context from Session 30**:
+- **2000+ papers milestone = strategic inflection point**
+- Enough data to demonstrate value (2,021 papers, 616 matches)
+- Bottleneck shifted: not data quantity, but presentation quality
+- Launch plan: Sessions 31-35 prepare, Session 36 launch
+- **Your muscle memory will say "scale" - resist this**
+
+**How to Query Ultra-High Matches**:
+```sql
+SELECT i.*, p1.title as title1, p1.abstract as abstract1, p1.arxiv_id as arxiv1,
+       p2.title as title2, p2.abstract as abstract2, p2.arxiv_id as arxiv2
+FROM isomorphisms i
+JOIN patterns pat1 ON i.pattern_1_id = pat1.id
+JOIN patterns pat2 ON i.pattern_2_id = pat2.id
+JOIN papers p1 ON pat1.paper_id = p1.id
+JOIN papers p2 ON pat2.paper_id = p2.id
+WHERE i.similarity >= 0.9
+ORDER BY i.similarity DESC;
+```
 
 **If I Finish Early**:
-- Continue scaling to 2,100-2,200 papers if desired
-- Manual quality review of ultra-high matches (30 matches ≥0.9)
-- Begin UI/UX improvements (graph visualization, case studies)
-- Document top isomorphisms
+- Review the 40 very-high matches (≥0.8) as well
+- Start drafting launch content (HN post, website copy)
+- Create case study pages for top 5 discoveries
+- **Do NOT fetch more papers**
 
 **If I Get Stuck**:
-- Run validation script to check database health
-- Standard workflow: validate → fetch → extract (limit=300!) → normalize → filter → match → validate
-- Consider pivoting to quality review or UI work instead of scaling
+- If database query issues: check schema, use sqlite3 directly
+- If abstracts unclear: focus on mathematical structure and mechanism
+- If unsure about rating: err toward "Good" rather than "Excellent"
+- **Do NOT pivot to scaling - stay focused on quality review**
 
 ---
 

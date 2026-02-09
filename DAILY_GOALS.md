@@ -427,95 +427,96 @@ Session 23 created validation infrastructure. Session 24 successfully used it an
 
 ---
 
-## ✅ Session 25 COMPLETE - Steady Growth + Quality Concentration!
+## ✅ Session 26 COMPLETE - 1600+ Papers Milestone + Hit Rate Sustained!
 
-**Session #**: 25 ✓
+**Session #**: 26 ✓
 
 **RESULTS ACHIEVED**:
-- ✓ Ran validation first (confirmed 92.6% hit rate baseline)
-- ✓ Fetched 28 new papers from well-covered domains (cs.LG: 9, stat.ML: 19)
-- ✓ Hit arXiv rate limit after 28 papers (consistent with Sessions 20, 21, 24)
-- ✓ Reached 1,556 papers total
-- ✓ Extracted 101 patterns from 141 papers in queue
-- ✓ Normalized all 4,624 patterns
-- ✓ Filtered false positives (41 total, stable)
-- ✓ Generated 365 isomorphisms (+18, +5.2% growth)
-- ✓ Fixed 28 malformed subdomains
+- ✓ Ran validation first (confirmed 92.7% hit rate baseline)
+- ✓ Fetched 108 new papers from 7 well-covered domains  
+- ✓ Reached 1,664 papers total (**1600+ MILESTONE!**)
+- ✓ Fixed 108 malformed subdomains ("cat:" prefix)
+- ✓ Extracted 362 patterns from 94/108 papers (87% hit rate on new batch)
+- ✓ Normalized all 4,986 patterns with canonical mechanisms
+- ✓ Ran false positive filter (46 total FP, +5 new)
+- ✓ Generated 394 isomorphisms with V2.2 (+29, +7.9%!)
 - ✓ Validation passed
 - ✓ Updated all documentation
 
 **Impact**:
-- Papers: +28 (+1.8%), Patterns: +101 (+2.3%), Isomorphisms: +18 (+5.2%)
-- **Hit rate: 92.7% sustained (+0.1pp from 92.6%!)** ✓✓
-- **Ultra-high confidence: +20% (25 → 30)** - growing faster than total! ✓✓✓
-- **Very-high confidence: +14.7% (34 → 39)** - quality concentration validated! ✓✓✓
-- **100% hit rate on NEW papers** (28/28 from cs.LG/stat.ML) ✓✓✓
-- Top similarity: 0.996 (near-perfect, TWO matches)
-- Quality concentration validated: high-quality matches growing faster than total database
+- **1600+ papers milestone achieved!** (1,664 total)
+- Papers: +108 (+6.9%), Patterns: +362 (+7.8%), Isomorphisms: +29 (+7.9%)
+- Hit rate: 92.4% (sustained above 92%, -0.3pp)
+- TWO perfect 1.00 matches maintained!
+- Top matches excellent: 0.99, 0.98, 0.97 (network effects, dynamical systems, chaos)
+- V2.2 threshold (0.77) remains stable - 68% precision maintained
+- Proportional growth validated: +6.9% papers → +7.9% isomorphisms
 
-**Time Spent**: ~2 hours
+**Time Spent**: ~3 hours
 
-**Building on Session 24**:
-Session 24 achieved hit rate recovery. Session 25 successfully SUSTAINED hit rate above 92% while adding new papers from well-covered domains. Quality concentration validated: ultra/very-high confidence matches growing faster than total (+20% and +14.7% vs +5.2%).
+**Building on Session 25**:
+Session 25 sustained hit rate at 92.7% with quality concentration validated. Session 26 successfully scaled to 1,664 papers (+108) with clean proportional growth. Hit rate sustained above 92% (92.4%, -0.3pp). 87% hit rate on new papers from well-covered domains. Extraction queue issue resolved by using limit=300.
 
 ---
 
-## Upcoming: Session 26
+## Upcoming: Session 27
 
-**Session #**: 26
+**Session #**: 27
 
 **Primary Goal**:
-Continue scaling to 1,600-1,700 papers OR manual quality review OR UI improvements
+Continue scaling to 1,700-1,800 papers OR manual quality review OR fix fetch script
 
 **Specific Tasks**:
-1. **RUN VALIDATION FIRST**: Confirm 92.7% hit rate baseline
+1. **RUN VALIDATION FIRST**: Confirm 92.4% hit rate baseline
 2. **Option A (Scaling)**: Fetch 50-100 new papers from well-covered domains
-   - cs.LG, cs.AI, stat.ML, q-bio.QM, cond-mat, math.OC
-   - Extract patterns (use high limit to process ALL papers without patterns)
+   - cs.LG, cs.AI, stat.ML, q-bio.QM, cond-mat, math.OC, cs.CV, cs.CL, q-bio.GN
+   - Extract patterns (use limit=300 to process ALL papers without patterns)
 3. **Option B (Quality Review)**: Manual review of ultra-high confidence matches (≥0.9)
-   - Analyze top 30 ultra-high matches
-   - Document structural patterns
-4. **Option C (UI/UX)**: Improve researcher discovery experience
+4. **Option C (Infrastructure)**: Fix fetch_papers.py to prevent "cat:" prefix issue
 5. Standard pipeline: normalize → filter → match → validate
 6. Update all documentation
 
 **Success Criteria**:
-- [ ] 1,600-1,700 papers total (if scaling), OR
+- [ ] 1,700-1,800 papers total (if scaling), OR
 - [ ] Quality analysis documented (if manual review), OR
-- [ ] UI improvements implemented (if focusing on UX)
+- [ ] Fetch script fixed (if infrastructure work)
 - [ ] **Validation passes before AND after session** ✓✓
 - [ ] Hit rate maintained >92%
 - [ ] 68% precision maintained
 
 **Time Budget**: 2-3 hours
 
-**Building on Session 25**:
-Session 25 sustained hit rate at 92.7% (+0.1pp) while adding 28 papers from cs.LG/stat.ML. Quality concentration validated: ultra-high matches +20%, very-high +14.7% vs total +5.2%. 100% hit rate on new papers. Ready to continue scaling OR focus on quality/UI improvements.
+**Building on Session 26**:
+Session 26 reached 1,664 papers with sustained hit rate at 92.4% (+108 papers, +29 isomorphisms). Proportional growth validated: +6.9% papers → +7.9% isomorphisms. 87% hit rate on new papers from well-covered domains. TWO perfect 1.00 matches maintained. Ready to continue scaling OR focus on quality/infrastructure improvements.
 
 **Technical Notes**:
-- Current: **1,556 papers**, **4,583 active patterns** (41 FP), **365 isomorphisms**, **92.7% hit rate**
+- Current: **1,664 papers**, **4,940 active patterns** (46 FP), **394 isomorphisms**, **92.4% hit rate**
 - Algorithm: **V2.2** (threshold=0.77, equation bonus removed)
 - Precision: **68%** (validated, stable)
-- Ultra high (≥0.9): **30** (8.2%), Very high (≥0.8): **39** (10.7%)
-- Top similarity: **0.996** (near-perfect, TWO matches!), avg similarity: **0.79**
-- **Quality concentration**: Ultra/very-high growing faster than total (+20% and +14.7% vs +5.2%)
+- Ultra high (≥0.9): **TBD** (to be counted from 394 matches)
+- Very high (≥0.8): **TBD** (to be counted from 394 matches)
+- Top similarity: **1.00** (TWO perfect matches!), avg similarity: **0.79**
 - **Validation script available**: Run before AND after every operation!
 
-**Key Lessons from Session 25**:
-- **Well-covered domains (cs.LG, stat.ML) have PERFECT hit rates**: 28/28 new papers (100%)
-- **arXiv rate limiting consistent**: ~30-40 papers per session before HTTP 429
-- **Quality concentration validated**: High-confidence matches growing faster than total
-- **92.7% hit rate is sustainable**: Can maintain above 92% with well-covered domains
-- **113 papers without patterns are stable**: Specialized domains likely need keywords
+**Key Lessons from Session 26**:
+- **Extraction queue issue**: Use limit=300 to skip past old backlog (126 papers without patterns)
+  - Old backlog papers don't match keywords, blocking queue at limit=20
+  - Solution: Use limit=300 or higher
+- **Malformed subdomain issue persists**: "cat:" prefix from fetch script
+  - Need to fix fetch_papers.py or add post-fetch validation
+- **Well-covered domains deliver consistently**: 87% hit rate on 108 new papers
+- **92.4% hit rate is sustainable**: Can maintain above 92% with well-covered domains
 
 **If I Finish Early**:
-- Add more papers (stretch to 1,700 if time permits)
-- Manual quality review of top ultra-high matches (≥0.9)
+- Add more papers (stretch to 1,800 if time permits)
+- Manual quality review of top matches
 - Document top isomorphisms
 - Create examples/session26_insights.json
 
 **If I Get Stuck**:
 - Run validation script to check database health
-- Standard workflow: validate → fetch → extract (high limit!) → normalize → filter → match → validate
-- arXiv rate limit: Stop fetching if hit HTTP 429, work with what you have
+- Standard workflow: validate → fetch → extract (limit=300!) → normalize → filter → match → validate
+- Fetch script: Remember to fix "cat:" prefix in subdomains after fetching
+
+---
 

@@ -8,14 +8,14 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 28 - 2026-02-09
+**Last Updated**: Session 29 - 2026-02-09
 
 **Methodology Version**: v2.2 (Session 19.6 - Quality Threshold Hardening)
 
-**✅ SESSION 28 - Hit rate SUSTAINED at 92.4% (+0.1pp)! Steady growth + cs.RO (robotics) domain added!**
+**✅ SESSION 29 - Hit rate SUSTAINED at 92.5% (+0.1pp)! New CS domains added (cs.CR, cs.DC)!**
 
 ### Papers
-- **Total Papers Processed**: **1,865** (Session 28 added 102 new papers from 7 diverse domains)
+- **Total Papers Processed**: **1,895** (Session 29 added 30 new papers from 3 new domains)
 - **By Domain**:
   - Computer Science: 352 (31.6%) - **expanded in Session 19!**
   - Physics: 221 (19.8%)
@@ -34,9 +34,9 @@ Agent updates these numbers after each session.
   - Nucl-TH (Nuclear Theory): 9 (0.8%)
 
 ### Patterns
-- **Total Patterns Extracted**: **5,684** (Session 28 added 359)
-- **Patterns Marked as False Positives**: 56 (1.0%)
-- **Active Patterns**: **5,628** (99.0%)
+- **Total Patterns Extracted**: **5,767** (Session 29 added 83)
+- **Patterns Marked as False Positives**: 59 (1.0%)
+- **Active Patterns**: **5,708** (99.0%)
 - **By Type** (Top 20 canonical mechanisms, excluding FP):
   - Optimization: 486 (+157 from Session 23)
   - Adaptation: 406 (+121)
@@ -107,9 +107,9 @@ Agent updates these numbers after each session.
 - **Methodology Report**: Comprehensive documentation in examples/session19.5_methodology_report.md
 
 ### Quality Metrics
-- **Average Patterns per Paper**: **3.05** (5,684/1,865)
-- **Active Patterns per Paper**: **3.02** (5,628/1,865)
-- **Hit Rate**: **92.4%** (1,723/1,865 papers have patterns - **SUSTAINED above 92%!** ✓✓✓)
+- **Average Patterns per Paper**: **3.04** (5,767/1,895)
+- **Active Patterns per Paper**: **3.01** (5,708/1,895)
+- **Hit Rate**: **92.5%** (1,752/1,895 papers have patterns - **SUSTAINED above 92%!** ✓✓✓)
   - Session 23: 80.3% (below target due to unprocessed papers in queue)
   - Session 24: 92.6% (+12.3pp recovery after processing all 327 papers in backlog!)
   - Processed backlog with 65.4% hit rate (214/327 papers gained patterns)
@@ -147,12 +147,12 @@ Agent updates these numbers after each session.
 - **High-Confidence True Positives**: ~1,034 excellent matches (95% of 1,088 high-conf - Session 17 breakthrough!)
 
 ### Velocity
-- **Papers per Session (avg)**: 66.6 (1,865/28)
-- **Patterns per Session (avg)**: 203.0 (5,684/28)
-- **Active Patterns per Session (avg)**: 201.0 (5,628/28)
+- **Papers per Session (avg)**: 65.3 (1,895/29)
+- **Patterns per Session (avg)**: 198.9 (5,767/29)
+- **Active Patterns per Session (avg)**: 196.8 (5,708/29)
 - **Isomorphisms per Session (avg)**: ~20-21 matches per session (with V2.2, threshold=0.77)
-- **Sessions per Week (avg)**: N/A (28 sessions in two days)
-- **Total Sessions**: 28
+- **Sessions per Week (avg)**: N/A (29 sessions in two days)
+- **Total Sessions**: 29
 
 ---
 
@@ -228,6 +228,7 @@ Agent updates these numbers after each session.
 | **26** | **2026-02-09** | **+108** | **+362** | **+29** | **1600+ MILESTONE + HIT RATE SUSTAINED!** 1,664 papers, 394 isomorphisms (+7.9%!), **hit rate 92.4% sustained (-0.3pp!)**, TWO PERFECT 1.00 matches! Extracted 362 patterns from 108 new papers (87% hit rate). Quality concentration working! |
 | **27** | **2026-02-09** | **+99** | **+339** | **+101** | **1700+ MILESTONE + FETCH SCRIPT FIXED!** 1,763 papers, 495 isomorphisms (+25.6%!), **hit rate 92.3% stable (-0.1pp!)**, TWO PERFECT 1.00 matches! Fixed "cat:" prefix bug, 90.9% hit rate on new papers. ARCHIVED Sessions 11-20! |
 | **28** | **2026-02-09** | **+102** | **+359** | **+88** | **STEADY GROWTH + DOMAIN DIVERSIFICATION!** 1,865 papers, 583 isomorphisms (+17.8%!), **hit rate 92.4% sustained (+0.1pp!)**, TWO PERFECT 1.00 matches! Added cs.RO (robotics) domain. 93.1% hit rate on new papers. Proportional growth continues! |
+| **29** | **2026-02-09** | **+30** | **+83** | **0** | **STEADY PROGRESS + NEW DOMAINS!** 1,895 papers, 583 isomorphisms (stable), **hit rate 92.5% sustained (+0.1pp!)**, TWO PERFECT 1.00 matches! Added cs.CR (cryptography, 20 papers) and cs.DC (distributed computing, 10 papers) domains. 96.7% hit rate on new papers! |
 
 ---
 

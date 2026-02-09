@@ -8,12 +8,14 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 21 - 2026-02-09
+**Last Updated**: Session 22 - 2026-02-09
 
 **Methodology Version**: v2.2 (Session 19.6 - Quality Threshold Hardening)
 
+**⚠️ SESSION 22 HAD DATA QUALITY ISSUES - See PROGRESS.md for details**
+
 ### Papers
-- **Total Papers Processed**: **1,369** (added 117 in Session 21 - **1300+ MILESTONE!** 🎉🎉🎉)
+- **Total Papers Processed**: **1,495** (added 126 in Session 22 - BUT 0% hit rate on new papers!)
 - **By Domain**:
   - Computer Science: 352 (31.6%) - **expanded in Session 19!**
   - Physics: 221 (19.8%)

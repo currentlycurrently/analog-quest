@@ -33,6 +33,8 @@ def fetch_arxiv_papers(query, max_results=10):
         try:
             # Extract domain from query (e.g., 'cat:physics.gen-ph' -> 'physics')
             domain = query.split(':')[1].split('.')[0] if ':' in query else 'unknown'
+            # Extract subdomain from query (e.g., 'cat:physics.gen-ph' -> 'physics.gen-ph')
+            subdomain = query.split(':')[1] if ':' in query else query
             arxiv_id = result.entry_id.split('/')[-1]
 
             # Check if paper already exists (duplicate prevention)
@@ -50,7 +52,7 @@ def fetch_arxiv_papers(query, max_results=10):
                 result.title,
                 result.summary,
                 domain,
-                query,
+                subdomain,
                 arxiv_id,
                 json.dumps([author.name for author in result.authors]),
                 result.published.strftime('%Y-%m-%d'),

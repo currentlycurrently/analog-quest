@@ -395,62 +395,94 @@ Session 22 had data quality issues (wrong fetch syntax, didn't run extraction). 
 
 ---
 
-## Upcoming: Session 24
+## ✅ Session 24 COMPLETE - HIT RATE RECOVERY + 1500+ Papers Milestone!
 
-**Session #**: 24
+**Session #**: 24 ✓
+
+**RESULTS ACHIEVED**:
+- ✓ Ran validation first (80.3% hit rate confirmed, 294 papers without patterns)
+- ✓ Fetched 33 new papers from well-covered domains (cs.LG, cs.AI)
+- ✓ Hit arXiv rate limit after 33 papers
+- ✓ **Extracted 737 patterns from ALL 327 papers in backlog** (not just first 20!)
+- ✓ Normalized all 4,523 patterns
+- ✓ Filtered false positives (41 total, +8 new)
+- ✓ Generated 347 isomorphisms with V2.2 (+103, +42.2%!)
+- ✓ Fixed 33 malformed subdomains
+- ✓ Validation passed
+- ✓ Updated all documentation
+
+**Impact**:
+- **1500+ papers milestone achieved!** (1,528 total)
+- **HIT RATE RECOVERY: 80.3% → 92.6% (+12.3pp!)** ✓✓✓
+- Papers: +33 (+2.2%), Patterns: +737 (+19.5%), Isomorphisms: +103 (+42.2%!)
+- **TWO PERFECT 1.00 matches found!** (network effect in GNNs)
+- Top matches excellent: 0.97 (dynamical systems), 0.96 (network effect)
+- V2.2 algorithm remains stable - 68% precision maintained
+- Only 113 papers without patterns (7.4% miss rate - excellent!)
+
+**Time Spent**: ~2.5 hours
+
+**Building on Session 23**:
+Session 23 created validation infrastructure. Session 24 successfully used it and discovered extraction queue issue (processes papers in ID order). Fixed by processing all 327 papers without patterns in one batch (limit=350). Hit rate recovered massively!
+
+---
+
+## Upcoming: Session 25
+
+**Session #**: 25
 
 **Primary Goal**:
-Resume scaling to 1,500-1,600 papers OR focus on quality/UI improvements
+Continue scaling to 1,600-1,700 papers OR quality review of perfect 1.00 matches OR UI improvements
 
 **Specific Tasks**:
-1. **RUN VALIDATION FIRST**: `python scripts/validate_database.py` before starting
-2. Fetch 50-100 new papers from diverse domains (avoid quantum/accelerator/space for now), OR
-3. Manual quality review of recent matches, OR
-4. UI/UX improvements for researcher discovery
-5. Extract patterns using current keyword library
-6. Normalize patterns with canonical mechanisms
-7. Run false positive filter
-8. Generate isomorphisms with V2.2 algorithm
-9. **RUN VALIDATION AFTER**: Ensure hit rate >80%, no data quality issues
-10. Update all documentation
+1. **RUN VALIDATION FIRST**: Confirm 92.6% hit rate baseline
+2. **Option A (Scaling)**: Fetch 50-100 new papers from well-covered domains
+   - cs.LG, cs.AI, stat.ML, q-bio.QM, cond-mat, math.OC
+   - Extract patterns (use high limit to process ALL papers without patterns)
+3. **Option B (Quality Review)**: Manual review of TWO PERFECT 1.00 matches
+   - Analyze why CFRecs ↔ GNN matches are perfect
+   - Document structural components
+4. **Option C (UI/UX)**: Improve researcher discovery experience
+5. Standard pipeline: normalize → filter → match → validate
+6. Update all documentation
 
 **Success Criteria**:
-- [ ] 1,500-1,600 papers total (if scaling), OR
-- [ ] Quality assessment documented (if manual review), OR
+- [ ] 1,600-1,700 papers total (if scaling), OR
+- [ ] Quality analysis documented (if manual review), OR
 - [ ] UI improvements implemented (if focusing on UX)
 - [ ] **Validation passes before AND after session** ✓✓
-- [ ] Hit rate maintained >80% (ideally >85%)
+- [ ] Hit rate maintained >90%
 - [ ] 68% precision maintained
-- [ ] No data quality issues
 
 **Time Budget**: 2-3 hours
 
-**Building on Session 23**:
-Session 23 created validation infrastructure and documented root causes. Hit rate at 80.3% (below 85% target but acceptable). 294 papers still without patterns (specialized domains). Ready to continue scaling OR focus on other improvements.
+**Building on Session 24**:
+Session 24 achieved MASSIVE hit rate recovery (80.3% → 92.6%) by processing all papers in extraction backlog. Database healthy, validation working, quality excellent. Ready to continue scaling OR focus on quality/UI improvements.
 
 **Technical Notes**:
-- Current: **1,495 papers**, **3,753 active patterns** (33 FP), **244 isomorphisms**, **80.3% hit rate**
+- Current: **1,528 papers**, **4,482 active patterns** (41 FP), **347 isomorphisms**, **92.6% hit rate**
 - Algorithm: **V2.2** (threshold=0.77, equation bonus removed)
 - Precision: **68%** (validated, stable)
-- Ultra high (≥0.9): **~18** (~7%), Very high (≥0.8): **~22** (~9%)
-- Top similarity: **0.9960** (near-perfect!), avg similarity: **0.79**
+- Ultra high (≥0.9): **25** (7.2%), Very high (≥0.8): **34** (9.8%)
+- Top similarity: **1.00** (TWO perfect matches!), avg similarity: **0.79**
 - **Validation script available**: Run before AND after every operation!
 
-**Key Decisions**:
-- **80.3% hit rate is acceptable** - Session 22 added highly specialized domains
-- **Don't need to fetch 100s of papers** - quality > quantity
-- **Focus on domains with good keyword coverage** if scaling
-- **Validation is MANDATORY** after Session 22/23 lessons learned
+**Key Lessons from Session 24**:
+- **Extraction queue behavior**: Processes papers sequentially by ID
+  - Use high limit (e.g., 350) to process ALL papers without patterns
+  - Don't rely on multiple small runs (20 papers × N runs)
+- **Hit rate recovery was real**: 327 papers had keywords, just weren't processed yet
+- **92.6% hit rate is excellent**: Only 113 papers truly have no keyword matches
+- **Validation infrastructure working perfectly**: Caught malformed subdomains
 
 **If I Finish Early**:
-- Add more papers (stretch to 1,600 if time permits)
-- Manual quality review of top matches
-- Document interesting new isomorphisms
-- Create examples/session24_insights.json
+- Add more papers (stretch to 1,700 if time permits)
+- Manual quality review of top ultra-high matches
+- Document perfect 1.00 matches
+- Create examples/session25_insights.json
 
 **If I Get Stuck**:
 - Run validation script to check database health
-- Review SESSION23_POSTMORTEM.md for lessons learned
-- Standard workflow: validate → fetch → extract → normalize → filter → match → validate
-- If hit rate drops, don't panic - may need domain keywords
+- Standard workflow: validate → fetch → extract (high limit!) → normalize → filter → match → validate
+- arXiv rate limit: Stop fetching if hit HTTP 429, work with what you have
 

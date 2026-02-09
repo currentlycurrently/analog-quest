@@ -8,14 +8,14 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 27 - 2026-02-09
+**Last Updated**: Session 28 - 2026-02-09
 
 **Methodology Version**: v2.2 (Session 19.6 - Quality Threshold Hardening)
 
-**✅ SESSION 27 - Hit rate STABLE at 92.3% (-0.1pp)! 1700+ papers milestone + fetch script FIXED!**
+**✅ SESSION 28 - Hit rate SUSTAINED at 92.4% (+0.1pp)! Steady growth + cs.RO (robotics) domain added!**
 
 ### Papers
-- **Total Papers Processed**: **1,763** (Session 27 added 99 new papers from 7 well-covered domains)
+- **Total Papers Processed**: **1,865** (Session 28 added 102 new papers from 7 diverse domains)
 - **By Domain**:
   - Computer Science: 352 (31.6%) - **expanded in Session 19!**
   - Physics: 221 (19.8%)
@@ -34,37 +34,37 @@ Agent updates these numbers after each session.
   - Nucl-TH (Nuclear Theory): 9 (0.8%)
 
 ### Patterns
-- **Total Patterns Extracted**: **5,325** (Session 27 added 339)
-- **Patterns Marked as False Positives**: 54 (1.0%)
-- **Active Patterns**: **5,271** (99.0%)
+- **Total Patterns Extracted**: **5,684** (Session 28 added 359)
+- **Patterns Marked as False Positives**: 56 (1.0%)
+- **Active Patterns**: **5,628** (99.0%)
 - **By Type** (Top 20 canonical mechanisms, excluding FP):
-  - Optimization: 329 (+100 from Session 23)
-  - Adaptation: 285 (+105)
-  - Network Effect: 250 (+70)
-  - Strain: 235 (+59)
-  - Bound: 234 (+61)
-  - Language Model: 166 (+43)
-  - Equilibrium: 160 (+37)
-  - Complexity: 151 (+54)
-  - Norm: 123 (+25)
-  - Scaling: 116 (+37)
-  - Convergence: 114 (+25)
-  - Diffusion Process: 89 (+19)
-  - Semantic: 77 (+31)
-  - Oscillation: 75 (+19)
-  - Attention: 74 (+23)
-  - Approximation: 74 (+19)
-  - Influence: 70 (+11)
-  - Threshold Dynamics: 68 (+12)
-  - Embedding: 64 (+13)
-  - Market: 57 (+1)
+  - Optimization: 486 (+157 from Session 23)
+  - Adaptation: 406 (+121)
+  - Network Effect: 306 (+56)
+  - Strain: 288 (+53)
+  - Bound: 276 (+42)
+  - Language Model: 231 (+65)
+  - Equilibrium: 182 (+22)
+  - Complexity: 175 (+24)
+  - Convergence: 144 (+30)
+  - Norm: 140 (+17)
+  - Scaling: 137 (+21)
+  - Diffusion Process: 114 (+25)
+  - Semantic: 110 (+33)
+  - Attention: 99 (+25)
+  - Oscillation: 98 (+23)
+  - Approximation: 92 (+18)
+  - Embedding: 88 (+24)
+  - Threshold Dynamics: 80 (+12)
+  - Influence: 76 (+6)
+  - Competition: 71 (+14)
   - (+ 30+ more types)
 
 ### Isomorphisms
-- **Total Isomorphisms Found**: **495** (ALL ≥0.77 - **BALANCED QUALITY!** ✓✓✓)
-- **Ultra High Confidence (≥0.9)**: **30/495** (6.1% - excellent!)
-- **Very High Confidence (≥0.8)**: **40/495** (8.1% - excellent!)
-- **High Confidence (≥0.77)**: **495** (100% - threshold optimized!)
+- **Total Isomorphisms Found**: **583** (ALL ≥0.77 - **BALANCED QUALITY!** ✓✓✓)
+- **Ultra High Confidence (≥0.9)**: **30/583** (5.1% - excellent!)
+- **Very High Confidence (≥0.8)**: **40/583** (6.9% - excellent!)
+- **High Confidence (≥0.77)**: **583** (100% - threshold optimized!)
 - **Top Similarity Score**: **1.00** (TWO perfect matches!)
 - **Average Similarity Score**: 0.787 (stable - UP from 0.61 pre-threshold optimization!)
 - **Algorithm Version**: V2.2 with threshold optimization (min_similarity=0.77, equation bonus removed)
@@ -107,9 +107,9 @@ Agent updates these numbers after each session.
 - **Methodology Report**: Comprehensive documentation in examples/session19.5_methodology_report.md
 
 ### Quality Metrics
-- **Average Patterns per Paper**: **3.02** (5,325/1,763)
-- **Active Patterns per Paper**: **2.99** (5,271/1,763)
-- **Hit Rate**: **92.3%** (1,628/1,763 papers have patterns - **SUSTAINED above 92%!** ✓✓✓)
+- **Average Patterns per Paper**: **3.05** (5,684/1,865)
+- **Active Patterns per Paper**: **3.02** (5,628/1,865)
+- **Hit Rate**: **92.4%** (1,723/1,865 papers have patterns - **SUSTAINED above 92%!** ✓✓✓)
   - Session 23: 80.3% (below target due to unprocessed papers in queue)
   - Session 24: 92.6% (+12.3pp recovery after processing all 327 papers in backlog!)
   - Processed backlog with 65.4% hit rate (214/327 papers gained patterns)
@@ -147,12 +147,12 @@ Agent updates these numbers after each session.
 - **High-Confidence True Positives**: ~1,034 excellent matches (95% of 1,088 high-conf - Session 17 breakthrough!)
 
 ### Velocity
-- **Papers per Session (avg)**: 65.2 (1,369/21)
-- **Patterns per Session (avg)**: 180.0 (3,779/21)
-- **Active Patterns per Session (avg)**: 178.4 (3,746/21)
-- **Isomorphisms per Session (avg)**: ~11-12 matches per session (with V2.2, threshold=0.77)
-- **Sessions per Week (avg)**: N/A (21 sessions in two days)
-- **Total Sessions**: 21
+- **Papers per Session (avg)**: 66.6 (1,865/28)
+- **Patterns per Session (avg)**: 203.0 (5,684/28)
+- **Active Patterns per Session (avg)**: 201.0 (5,628/28)
+- **Isomorphisms per Session (avg)**: ~20-21 matches per session (with V2.2, threshold=0.77)
+- **Sessions per Week (avg)**: N/A (28 sessions in two days)
+- **Total Sessions**: 28
 
 ---
 
@@ -227,6 +227,7 @@ Agent updates these numbers after each session.
 | **25** | **2026-02-09** | **+28** | **+101** | **+18** | **STEADY GROWTH + QUALITY CONCENTRATION!** 1,556 papers, 365 isomorphisms (+5.2%), **hit rate 92.7% sustained (+0.1pp!)**, **ultra-high +20%, very-high +14.7%** (growing faster than total!). 100% hit rate on new cs.LG/stat.ML papers! |
 | **26** | **2026-02-09** | **+108** | **+362** | **+29** | **1600+ MILESTONE + HIT RATE SUSTAINED!** 1,664 papers, 394 isomorphisms (+7.9%!), **hit rate 92.4% sustained (-0.3pp!)**, TWO PERFECT 1.00 matches! Extracted 362 patterns from 108 new papers (87% hit rate). Quality concentration working! |
 | **27** | **2026-02-09** | **+99** | **+339** | **+101** | **1700+ MILESTONE + FETCH SCRIPT FIXED!** 1,763 papers, 495 isomorphisms (+25.6%!), **hit rate 92.3% stable (-0.1pp!)**, TWO PERFECT 1.00 matches! Fixed "cat:" prefix bug, 90.9% hit rate on new papers. ARCHIVED Sessions 11-20! |
+| **28** | **2026-02-09** | **+102** | **+359** | **+88** | **STEADY GROWTH + DOMAIN DIVERSIFICATION!** 1,865 papers, 583 isomorphisms (+17.8%!), **hit rate 92.4% sustained (+0.1pp!)**, TWO PERFECT 1.00 matches! Added cs.RO (robotics) domain. 93.1% hit rate on new papers. Proportional growth continues! |
 
 ---
 

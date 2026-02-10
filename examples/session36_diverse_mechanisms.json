@@ -1,0 +1,155 @@
+[
+  {
+    "paper_id": 87,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "title": "Strategic Interactions in Science and Technology Networks",
+    "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence.",
+    "mechanism_type": "network_effect,asymmetric_feedback",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 100,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "title": "Human-AI Cooperation in Public Goods Game",
+    "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback.",
+    "mechanism_type": "reciprocal_dynamics,behavioral_feedback",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 644,
+    "domain": "cs",
+    "subdomain": "cs.SI",
+    "title": "Semantic Memory to Collective Creativity",
+    "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+    "mechanism_type": "network_topology,feedback_loop,diversity_effect",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 814,
+    "domain": "econ",
+    "subdomain": "econ.EM",
+    "title": "DeFi Credit Exposures and Contagion",
+    "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+    "mechanism_type": "contagion,cascade,network_propagation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 916,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Chaotic Dynamics in Black Holes",
+    "mechanism": "Particle motion in extremal configurations exhibits positive Lyapunov exponents indicating sensitivity to initial conditions. Chaos persists even at zero temperature. System parameters (spin, charge) modulate chaos strength - increasing one parameter strengthens chaotic behavior while the other weakens it.",
+    "mechanism_type": "chaos,sensitive_dependence,parameter_modulation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 917,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Critical Slowing Down at Bifurcations",
+    "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes.",
+    "mechanism_type": "critical_slowing,bifurcation,universality",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 918,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Thermalization in Discrete Systems",
+    "mechanism": "Local ergodicity in subsystems, rather than global ergodicity, enables thermalization. Subsystem dynamics appear pseudorandom due to local interactions. Statistical properties of observables emerge from this effective local randomization without requiring the entire system to be ergodic.",
+    "mechanism_type": "local_ergodicity,emergence,statistical_mechanics",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 921,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Parametrically Excited Oscillator",
+    "mechanism": "Time-periodic stiffness variation induces parametric excitation in coupled components. Nonlinear restoring forces and friction interact to produce a spectrum of dynamic responses including periodic, quasi-periodic, and chaotic behaviors. System parameters (stiffness degree, mass symmetry, friction) determine stability boundaries and response amplitude.",
+    "mechanism_type": "parametric_excitation,nonlinear_response,bifurcation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 922,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Controlling Extreme Events in Networks",
+    "mechanism": "A single driving signal applied to one network component suppresses extreme events throughout the system. In coupled components, drive breaks phase-locking between elements. In networked systems, drive disrupts protoevent frequency dynamics causing frequency decoupling that prevents extreme event cascades.",
+    "mechanism_type": "drive_suppression,frequency_decoupling,control",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 950,
+    "domain": "econ",
+    "subdomain": "econ.TH",
+    "title": "Group Selection and AI Substitution",
+    "mechanism": "AI use reduces cultural variance in populations. Under individual selection, agents relying heavily on AI (substitutes) outcompete those using AI as complement, despite reducing variance more. Group selection can favor agents that maintain variance through complementary AI use when group boundaries are strong, creating selection-level competition.",
+    "mechanism_type": "selection_dynamics,variance_reduction,multi_level_selection",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 953,
+    "domain": "econ",
+    "subdomain": "econ.TH",
+    "title": "R&D Spillovers and Regional Innovation",
+    "mechanism": "R&D spillovers from one entity enhance innovation in neighboring entities. Strategic interactions follow Stackelberg dynamics where leaders and followers reach Nash equilibrium. Highly-qualified employment amplifies spillover effects, creating synergies between different types of R&D investment and regional innovation output.",
+    "mechanism_type": "spillover,strategic_equilibrium,amplification",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1943,
+    "domain": "cs",
+    "subdomain": "cs.SI",
+    "title": "Seed Node Position and Network Damage",
+    "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+    "mechanism_type": "cascade,topological_amplification,localized_propagation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1969,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Growth Models Under Catastrophes",
+    "mechanism": "Catastrophic events trigger population dispersal strategies. Dispersion affects survival probability and extinction time. Spatial constraints modulate the effectiveness of dispersal - unconstrained dispersion improves survival while spatial limits reduce the benefit, creating a trade-off between mobility and stability.",
+    "mechanism_type": "catastrophe_response,dispersal,survival_tradeoff",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1970,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Habitat Heterogeneity and Metacommunity Dynamics",
+    "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel.",
+    "mechanism_type": "spatial_heterogeneity,threshold_dynamics,coexistence",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1971,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Fish Migration and Feller Condition",
+    "mechanism": "The ratio between diffusion and drift (Feller condition) determines qualitative migration properties. High diffusion relative to drift creates randomized, intermittent movement patterns. Low ratio produces more deterministic, continuous movement. This ratio acts as a control parameter governing timescale-dependent behavioral transitions.",
+    "mechanism_type": "diffusion_drift_balance,timescale_transition,control_parameter",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1972,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Threshold Resource Redistribution in Kinship Networks",
+    "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+    "mechanism_type": "threshold_dynamics,network_feedback,reciprocal_altruism",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1973,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Free-Rider Problem in Shared Resources",
+    "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria.",
+    "mechanism_type": "cooperation_dilemma,multi_stability,hysteresis",
+    "extraction_quality": "excellent"
+  }
+]

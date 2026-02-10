@@ -4,84 +4,83 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 36 - Diverse Sample Test (DECISIVE VALIDATION) 🎯
+## UPCOMING: Session 37 - Manual Curation Path: Candidate Generation 🎯
 
-**Session #**: 36
+**Session #**: 37
 
-**STATUS**: ⚠️ **READY TO BEGIN - READ SESSION36_PLAN.md FIRST** ⚠️
+**STATUS**: ⚠️ **READY TO BEGIN** ⚠️
 
 **Primary Goal**:
-Test if semantic embeddings can find cross-domain isomorphisms with TRULY diverse sample
+Generate embedding-based candidates for manual curation with relaxed threshold
 
-**Context from Sessions 33-35**:
-- Session 33: LLM extraction validated (12 papers, 100% success, 5 matches)
-- Session 34: Scaled to 40 papers → 9 mechanisms (22.5% hit rate), TF-IDF failed (0 matches)
-- Session 35: Tested embeddings on 9 mechanisms → max similarity 0.657 (vs 0.75 target)
-  - **Problem**: Sample too biology-heavy (77.8%), need true domain diversity
-  - **Solution**: Test with truly diverse 20-30 paper sample
+**Context from Sessions 33-36**:
+- Session 33: LLM extraction validated (12 papers, 100% success)
+- Session 34: TF-IDF failed (max similarity 0.139)
+- Session 35: Embeddings work 4.7x better (max 0.657) but sample too biology-heavy
+- **Session 36**: DECISIVE TEST - Found 4 good/excellent matches BUT max similarity only 0.544
+  - **Domain Diversity Paradox**: More diverse domains → better structural matches but LOWER scores
+  - **Best match**: Tragedy of commons (econ ↔ biology) at 0.453 similarity - EXCELLENT!
+  - **Decision**: Pivot to manual curation (Outcome B - Partial Success)
 
 **Specific Tasks**:
 
-### PART 1: Strategic Paper Selection (30 min)
-Select 20-30 mechanism-rich papers from TRULY diverse domains:
-- 5 economics (tragedy of commons, game theory, markets)
-- 5 ecology (predator-prey, resource competition, Allee effects)
-- 5 sociology/networks (collective behavior, social tipping points)
-- 5 physics (phase transitions, chaos, critical phenomena)
-- 5 control/engineering (feedback control, optimization)
+### Option A: COMPREHENSIVE APPROACH (Recommended)
+Generate large candidate pool for manual review in Session 38
 
-**Key**: Papers must describe MECHANISMS (not methods/empirics)
+**PART 1**: Extend Session 36 sample (1 hour)
+- Select 30-50 MORE mechanism-rich papers (add to Session 36's 17)
+- Target: ~50-70 total papers across diverse domains
+- Extract mechanisms using LLM (expect ~30-50 mechanisms total)
 
-### PART 2: LLM Extraction (1 hour)
-Extract mechanisms from selected papers using Session 33 prompt
-- Expected hit rate: ~60% (12-18 mechanisms from 20-30 papers)
-- Quality over quantity
-
-### PART 3: Semantic Embedding Matching (30 min)
-- Generate embeddings (sentence-transformers, already installed)
+**PART 2**: Generate all candidate pairs (30 min)
+- Generate embeddings for all mechanisms
 - Calculate cross-domain similarities
-- Target: ≥3 matches at ≥0.65 similarity (relaxed from 0.75)
+- Use **relaxed threshold (≥0.35-0.40)** to cast wide net
+- Save top 100-150 candidates for manual review
 
-### PART 4: Manual Quality Review (30 min)
-Review top 5-10 pairs:
-- Rate: Excellent / Good / Weak / False
-- Assess genuine structural similarity
-- Cross-domain validation
+**PART 3**: Initial filtering (30 min)
+- Quick triage of top 100 candidates
+- Remove obvious false positives
+- Identify promising clusters
+- Prepare for deep manual review in Session 38
+
+### Option B: FOCUSED APPROACH (Faster)
+Use Session 36's 17 papers + add 10-20 more
+
+**PART 1**: Add 10-20 targeted papers (30 min)
+- Focus on domains underrepresented in Session 36
+- Extract mechanisms (expect ~25-30 total)
+
+**PART 2**: Generate candidates at ≥0.35 threshold (15 min)
+- Embeddings for all mechanisms
+- Top 50 candidates for manual review
+
+**PART 3**: Full manual review (1.5 hours)
+- Review all 50 candidates
+- Rate and document each
+- Select 15-20 verified matches
 
 **Success Criteria**:
-- [ ] 20-30 mechanism-rich papers selected from diverse domains
-- [ ] 12-18 mechanisms extracted (60% hit rate)
-- [ ] Embeddings generated and matched
-- [ ] ≥3 good/excellent matches at ≥0.65 similarity
-- [ ] SESSION36_DIVERSE_SAMPLE_TEST.md created with clear recommendation
+- [ ] Candidate pool generated (50-150 pairs depending on option)
+- [ ] Relaxed threshold used (≥0.35-0.40)
+- [ ] Initial filtering complete
+- [ ] Ready for Session 38 manual curation
 
-**Decision Tree**:
-- **Outcome A (≥3 good matches)**: ✅ Scale to all 2,021 papers (Sessions 37-39)
-- **Outcome B (1-2 matches)**: ⚠️ Pivot to manual curation (Option C)
-- **Outcome C (0 matches)**: ❌ Post-mortem and pivot
+**Time Budget**: 2-2.5 hours
 
-**Time Budget**: 2.5-3 hours
+**Building on Session 36**:
+Session 36 proved embeddings find genuine matches (tragedy of commons!) but need relaxed thresholds (0.35-0.45 vs 0.65) and manual verification. Session 37 generates large candidate pool for curation.
 
-**Building on Session 35**:
-Session 35 proved embeddings work 4.7x better than TF-IDF but identified sample was too biology-heavy. Session 36 tests with truly diverse domains to validate if algorithmic matching can find structural isomorphisms or if manual curation is needed.
-
-**KEY FILES TO READ**:
-1. **SESSION36_PLAN.md** - Complete detailed plan (MUST READ FIRST!)
-2. **SESSION35_EMBEDDING_TEST.md** - Context on what didn't work
-3. **SESSION34_RESULTS.md** - LLM extraction approach
-4. **SESSION33_EXPERIMENTS.md** - Original validation
+**KEY INSIGHT FROM SESSION 36**:
+- Domain diversity paradox: Better matches = lower scores
+- Best match was at 0.453 similarity (tragedy of commons)
+- Need threshold ≥0.35 to capture excellent matches
 
 **Files to Create**:
-1. `examples/session36_selected_papers.json` - Selected papers with reasoning
-2. `examples/session36_diverse_mechanisms.json` - Extracted mechanisms
-3. `examples/session36_embedding_matches.json` - Match results
-4. `SESSION36_DIVERSE_SAMPLE_TEST.md` - Complete report + recommendation
-
-**This is the DECISIVE TEST. Session 36 determines:**
-- Can algorithmic matching work with diverse sample?
-- Or do we pivot to manual curation?
-
-**Make decision based on empirical data.** 🚀
+1. `examples/session37_extended_papers.json` - Additional selected papers
+2. `examples/session37_all_mechanisms.json` - All mechanisms (Session 36 + new)
+3. `examples/session37_candidates.json` - Top 50-150 candidates for manual review
+4. `SESSION37_CANDIDATE_GENERATION.md` - Brief report
 
 ---
 

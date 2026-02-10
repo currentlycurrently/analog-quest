@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": 644,
+    "domain": "cs",
+    "subdomain": "cs.SI",
+    "title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models"
+  },
+  {
+    "paper_id": 1943,
+    "domain": "cs",
+    "subdomain": "cs.SI",
+    "title": "Impact of seed node position on network robustness under localized attacks"
+  },
+  {
+    "paper_id": 87,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?"
+  },
+  {
+    "paper_id": 100,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups"
+  },
+  {
+    "paper_id": 814,
+    "domain": "econ",
+    "subdomain": "econ.EM",
+    "title": "DeXposure-FM: A Time-series, Graph Foundation Model for Credit Exposures and Stability on Decentralized Financial Networks"
+  },
+  {
+    "paper_id": 950,
+    "domain": "econ",
+    "subdomain": "econ.TH",
+    "title": "Group Selection as a Safeguard Against AI Substitution"
+  },
+  {
+    "paper_id": 953,
+    "domain": "econ",
+    "subdomain": "econ.TH",
+    "title": "The relationship between R&D spillovers and regional innovation: Licensing patents through royalties and the Stackelberg duopoly with subgame perfect Nash equilibrium"
+  },
+  {
+    "paper_id": 916,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Chaotic Dynamics in Extremal Black Holes: A Challenge to the Chaos Bound"
+  },
+  {
+    "paper_id": 917,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "A phenomenological description of critical slowing down at period-doubling bifurcations"
+  },
+  {
+    "paper_id": 918,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Thermalization in classical systems with discrete phase space"
+  },
+  {
+    "paper_id": 921,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Analytical and numerical study of a parametrically excited 2DOF oscillator with nonlinear restoring magnetic force and rotating rectangular rod"
+  },
+  {
+    "paper_id": 922,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Controlling extreme events in neuronal networks: A single driving signal approach"
+  },
+  {
+    "paper_id": 1969,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Growth Models Under Uniform Catastrophes"
+  },
+  {
+    "paper_id": 1970,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Habitat heterogeneity and dispersal network structure as drivers of metacommunity dynamics"
+  },
+  {
+    "paper_id": 1971,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Multiple timescales in collective motion: daily and intraday upstream fish migration focusing on Feller condition"
+  },
+  {
+    "paper_id": 1972,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks"
+  },
+  {
+    "paper_id": 1973,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "To clean or not to clean: The free-rider problem in sequentially shared resources"
+  }
+]

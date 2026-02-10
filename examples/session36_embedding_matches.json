@@ -1,0 +1,238 @@
+{
+  "total_cross_domain_pairs": 105,
+  "statistics": {
+    "max_similarity": 0.5442764163017273,
+    "mean_similarity": 0.2291391401063828,
+    "median_similarity": 0.22171682119369507,
+    "min_similarity": -0.005740303546190262
+  },
+  "threshold_counts": {
+    "ge_0_75": 0,
+    "ge_0_70": 0,
+    "ge_0_65": 0,
+    "ge_0_60": 0,
+    "ge_0_55": 0
+  },
+  "top_20_matches": [
+    {
+      "paper_1_id": 814,
+      "paper_1_domain": "econ",
+      "paper_1_title": "DeFi Credit Exposures and Contagion",
+      "paper_1_mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+      "paper_2_id": 1943,
+      "paper_2_domain": "cs",
+      "paper_2_title": "Seed Node Position and Network Damage",
+      "paper_2_mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+      "similarity": 0.5442764163017273
+    },
+    {
+      "paper_1_id": 87,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Strategic Interactions in Science and Technology Networks",
+      "paper_1_mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence.",
+      "paper_2_id": 644,
+      "paper_2_domain": "cs",
+      "paper_2_title": "Semantic Memory to Collective Creativity",
+      "paper_2_mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+      "similarity": 0.5339189767837524
+    },
+    {
+      "paper_1_id": 87,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Strategic Interactions in Science and Technology Networks",
+      "paper_1_mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence.",
+      "paper_2_id": 1972,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Threshold Resource Redistribution in Kinship Networks",
+      "paper_2_mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+      "similarity": 0.4831657111644745
+    },
+    {
+      "paper_1_id": 644,
+      "paper_1_domain": "cs",
+      "paper_1_title": "Semantic Memory to Collective Creativity",
+      "paper_1_mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+      "paper_2_id": 814,
+      "paper_2_domain": "econ",
+      "paper_2_title": "DeFi Credit Exposures and Contagion",
+      "paper_2_mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+      "similarity": 0.4641266465187073
+    },
+    {
+      "paper_1_id": 814,
+      "paper_1_domain": "econ",
+      "paper_1_title": "DeFi Credit Exposures and Contagion",
+      "paper_1_mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+      "paper_2_id": 922,
+      "paper_2_domain": "nlin",
+      "paper_2_title": "Controlling Extreme Events in Networks",
+      "paper_2_mechanism": "A single driving signal applied to one network component suppresses extreme events throughout the system. In coupled components, drive breaks phase-locking between elements. In networked systems, drive disrupts protoevent frequency dynamics causing frequency decoupling that prevents extreme event cascades.",
+      "similarity": 0.46404749155044556
+    },
+    {
+      "paper_1_id": 100,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Human-AI Cooperation in Public Goods Game",
+      "paper_1_mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback.",
+      "paper_2_id": 1972,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Threshold Resource Redistribution in Kinship Networks",
+      "paper_2_mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+      "similarity": 0.4629146456718445
+    },
+    {
+      "paper_1_id": 100,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Human-AI Cooperation in Public Goods Game",
+      "paper_1_mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback.",
+      "paper_2_id": 1973,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Free-Rider Problem in Shared Resources",
+      "paper_2_mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria.",
+      "similarity": 0.45332208275794983
+    },
+    {
+      "paper_1_id": 87,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Strategic Interactions in Science and Technology Networks",
+      "paper_1_mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence.",
+      "paper_2_id": 1973,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Free-Rider Problem in Shared Resources",
+      "paper_2_mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria.",
+      "similarity": 0.44351235032081604
+    },
+    {
+      "paper_1_id": 950,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Group Selection and AI Substitution",
+      "paper_1_mechanism": "AI use reduces cultural variance in populations. Under individual selection, agents relying heavily on AI (substitutes) outcompete those using AI as complement, despite reducing variance more. Group selection can favor agents that maintain variance through complementary AI use when group boundaries are strong, creating selection-level competition.",
+      "paper_2_id": 1972,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Threshold Resource Redistribution in Kinship Networks",
+      "paper_2_mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+      "similarity": 0.4139542877674103
+    },
+    {
+      "paper_1_id": 917,
+      "paper_1_domain": "nlin",
+      "paper_1_title": "Critical Slowing Down at Bifurcations",
+      "paper_1_mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes.",
+      "paper_2_id": 1971,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Fish Migration and Feller Condition",
+      "paper_2_mechanism": "The ratio between diffusion and drift (Feller condition) determines qualitative migration properties. High diffusion relative to drift creates randomized, intermittent movement patterns. Low ratio produces more deterministic, continuous movement. This ratio acts as a control parameter governing timescale-dependent behavioral transitions.",
+      "similarity": 0.4042966663837433
+    },
+    {
+      "paper_1_id": 1943,
+      "paper_1_domain": "cs",
+      "paper_1_title": "Seed Node Position and Network Damage",
+      "paper_1_mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+      "paper_2_id": 1970,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Habitat Heterogeneity and Metacommunity Dynamics",
+      "paper_2_mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel.",
+      "similarity": 0.3991865813732147
+    },
+    {
+      "paper_1_id": 916,
+      "paper_1_domain": "nlin",
+      "paper_1_title": "Chaotic Dynamics in Black Holes",
+      "paper_1_mechanism": "Particle motion in extremal configurations exhibits positive Lyapunov exponents indicating sensitivity to initial conditions. Chaos persists even at zero temperature. System parameters (spin, charge) modulate chaos strength - increasing one parameter strengthens chaotic behavior while the other weakens it.",
+      "paper_2_id": 1971,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Fish Migration and Feller Condition",
+      "paper_2_mechanism": "The ratio between diffusion and drift (Feller condition) determines qualitative migration properties. High diffusion relative to drift creates randomized, intermittent movement patterns. Low ratio produces more deterministic, continuous movement. This ratio acts as a control parameter governing timescale-dependent behavioral transitions.",
+      "similarity": 0.3931095600128174
+    },
+    {
+      "paper_1_id": 922,
+      "paper_1_domain": "nlin",
+      "paper_1_title": "Controlling Extreme Events in Networks",
+      "paper_1_mechanism": "A single driving signal applied to one network component suppresses extreme events throughout the system. In coupled components, drive breaks phase-locking between elements. In networked systems, drive disrupts protoevent frequency dynamics causing frequency decoupling that prevents extreme event cascades.",
+      "paper_2_id": 1943,
+      "paper_2_domain": "cs",
+      "paper_2_title": "Seed Node Position and Network Damage",
+      "paper_2_mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+      "similarity": 0.3901035189628601
+    },
+    {
+      "paper_1_id": 644,
+      "paper_1_domain": "cs",
+      "paper_1_title": "Semantic Memory to Collective Creativity",
+      "paper_1_mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+      "paper_2_id": 1972,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Threshold Resource Redistribution in Kinship Networks",
+      "paper_2_mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+      "similarity": 0.39008796215057373
+    },
+    {
+      "paper_1_id": 100,
+      "paper_1_domain": "econ",
+      "paper_1_title": "Human-AI Cooperation in Public Goods Game",
+      "paper_1_mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback.",
+      "paper_2_id": 1971,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Fish Migration and Feller Condition",
+      "paper_2_mechanism": "The ratio between diffusion and drift (Feller condition) determines qualitative migration properties. High diffusion relative to drift creates randomized, intermittent movement patterns. Low ratio produces more deterministic, continuous movement. This ratio acts as a control parameter governing timescale-dependent behavioral transitions.",
+      "similarity": 0.35978350043296814
+    },
+    {
+      "paper_1_id": 644,
+      "paper_1_domain": "cs",
+      "paper_1_title": "Semantic Memory to Collective Creativity",
+      "paper_1_mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+      "paper_2_id": 950,
+      "paper_2_domain": "econ",
+      "paper_2_title": "Group Selection and AI Substitution",
+      "paper_2_mechanism": "AI use reduces cultural variance in populations. Under individual selection, agents relying heavily on AI (substitutes) outcompete those using AI as complement, despite reducing variance more. Group selection can favor agents that maintain variance through complementary AI use when group boundaries are strong, creating selection-level competition.",
+      "similarity": 0.3558385670185089
+    },
+    {
+      "paper_1_id": 1943,
+      "paper_1_domain": "cs",
+      "paper_1_title": "Seed Node Position and Network Damage",
+      "paper_1_mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+      "paper_2_id": 1972,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Threshold Resource Redistribution in Kinship Networks",
+      "paper_2_mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+      "similarity": 0.351071834564209
+    },
+    {
+      "paper_1_id": 814,
+      "paper_1_domain": "econ",
+      "paper_1_title": "DeFi Credit Exposures and Contagion",
+      "paper_1_mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+      "paper_2_id": 1972,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Threshold Resource Redistribution in Kinship Networks",
+      "paper_2_mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+      "similarity": 0.3476216197013855
+    },
+    {
+      "paper_1_id": 921,
+      "paper_1_domain": "nlin",
+      "paper_1_title": "Parametrically Excited Oscillator",
+      "paper_1_mechanism": "Time-periodic stiffness variation induces parametric excitation in coupled components. Nonlinear restoring forces and friction interact to produce a spectrum of dynamic responses including periodic, quasi-periodic, and chaotic behaviors. System parameters (stiffness degree, mass symmetry, friction) determine stability boundaries and response amplitude.",
+      "paper_2_id": 1971,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Fish Migration and Feller Condition",
+      "paper_2_mechanism": "The ratio between diffusion and drift (Feller condition) determines qualitative migration properties. High diffusion relative to drift creates randomized, intermittent movement patterns. Low ratio produces more deterministic, continuous movement. This ratio acts as a control parameter governing timescale-dependent behavioral transitions.",
+      "similarity": 0.3427334725856781
+    },
+    {
+      "paper_1_id": 814,
+      "paper_1_domain": "econ",
+      "paper_1_title": "DeFi Credit Exposures and Contagion",
+      "paper_1_mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+      "paper_2_id": 1970,
+      "paper_2_domain": "q-bio",
+      "paper_2_title": "Habitat Heterogeneity and Metacommunity Dynamics",
+      "paper_2_mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel.",
+      "similarity": 0.3404867649078369
+    }
+  ]
+}

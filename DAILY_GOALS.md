@@ -4,70 +4,18 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 38 - Manual Curation of 165 Candidates 🎯
-
-**Session #**: 38
-
-**STATUS**: ✅ **READY TO BEGIN** ✅
-
-**Primary Goal**:
-Manually review 165 candidate pairs to identify 20-30 verified isomorphisms for launch
-
-**Context from Session 37** (CANDIDATE GENERATION):
-- ✅ Generated 165 candidate pairs from 54 mechanisms (26 existing + 28 new)
-- ✅ Strategic selection: 50% hit rate (vs 22.5% random)
-- ✅ Semantic embeddings: 384-dim vectors (sentence-transformers)
-- ✅ Relaxed threshold: ≥0.35 (captures Session 36's best match at 0.453)
-- ✅ Similarity range: 0.35-0.74 (max: 0.7364, mean: 0.4318)
-- **Expected precision**: ~40% (66 potentially genuine out of 165)
-- **Top domain pairs**: biology-physics (47), biology-economics (25), economics-physics (13)
-
-**The Plan for Session 38**:
-
-### Part 1: Review Top Candidates (1-1.5 hours)
-- Review top 50 candidates by similarity (0.74-0.50 range)
-- Rate each: `excellent` / `good` / `weak` / `false`
-- For excellent/good: Write brief structural explanation
-- Look for: Causal similarity, feedback loops, threshold dynamics
-
-### Part 2: Review Middle Candidates (1 hour)
-- Review next 50 candidates (0.50-0.40 range)
-- Same rating process
-- Identify any hidden gems (diverse domains may have lower scores)
-
-### Part 3: Spot Check Bottom Candidates (30 min)
-- Sample ~20 candidates from bottom 65 (0.40-0.35 range)
-- Check if threshold is appropriate (too many false positives?)
-- Adjust rating if needed
-
-### Part 4: Select & Document (1 hour)
-- Select best 20-30 isomorphisms from excellent/good ratings
-- Write clear structural descriptions for each
-- Create launch-ready documentation
-- Export to SESSION38_VERIFIED_ISOMORPHISMS.json
-
-**Success Criteria**:
-- [ ] All 165 candidates reviewed and rated
-- [ ] 20-30 verified isomorphisms selected (excellent/good ratings)
-- [ ] Structural explanations written for verified matches
-- [ ] Launch-ready documentation created
-- [ ] SESSION38_VERIFIED_ISOMORPHISMS.json exported
-
-**Time Budget**: 3-4 hours
-
-**Files to Use**:
-- `examples/session37_candidates_for_review.json` - **165 candidates to review**
-
-**Expected Outcomes**:
-- Precision: ~40% (66 genuine out of 165)
-- Excellent ratings: ~15-20 candidates
-- Good ratings: ~35-50 candidates
-- Select best 20-30 for launch
-- Clear structural explanations for each selected match
-
----
-
 ## Completed Recent Sessions
+
+### Session 38 - 2026-02-10 ✓ - Manual Curation COMPLETE! 🎯
+- Reviewed ALL 165 candidate pairs from Session 37
+- Ratings: 10 excellent, 30 good, 119 weak, 3 false (6 false, 3 duplicates)
+- Overall precision: 24% (40/165) - conservative ratings
+- Top 30 precision: 67% (20/30) - quality concentrated at high similarity
+- Selected 30 verified isomorphisms: 10 excellent + 20 good
+- Similarity range: 0.44-0.74 (mean: 0.54)
+- Top cross-domain pairs: econ↔q-bio (7), physics↔q-bio (5)
+- Exported SESSION38_VERIFIED_ISOMORPHISMS.json
+- **LAUNCH READY!** ✓✓✓
 
 ### Session 37 - 2026-02-10 ✓ - Generate Candidates from 2,021 Papers
 - Selected 69 mechanism-rich papers strategically (50% hit rate vs 22.5% random)

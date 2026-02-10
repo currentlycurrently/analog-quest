@@ -4,79 +4,93 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 42 - First Expansion Cycle 📈
+## UPCOMING: Session 42 - User Interview & Polish 🎨
 
-**Status**: 🎯 **READY FOR GROWTH** 🎯
+**Status**: 🎯 **READY FOR FEEDBACK** 🎯
 
-**Context**: Session 41 completed v1 launch (45 pages, filtering, SEO, ready to deploy). Now it's time to expand the collection of verified isomorphisms.
+**Context**: analog.quest v1 is LIVE! Session 41 deployed the site. Now gather Chuck's feedback and polish into the "real v1" ready for public launch.
 
-**Timeline**: 6-8 hours (expansion cycle)
+**Timeline**: 3-4 hours
+
+**⚠️ IMPORTANT FOR SESSION 42 AGENT**: Read **SESSION42_PREP.md** before starting!
 
 ---
 
-### Session 42: First Expansion Cycle (6-8 hours)
+### Session 42: User Interview & Polish (3-4 hours)
 
-**Goal**: Extract mechanisms from high-precision domain pairs and add 20-30 new verified isomorphisms
+**Goal**: Interview Chuck about the live site, gather feedback, implement polish improvements
 
-**Mission**: Follow GROWTH_STRATEGY.md to sustainably expand the collection
+**Mission**: Transform analog.quest from "works" to "ready to share publicly"
 
 **Tasks**:
 
-**Part 1: Review GROWTH_STRATEGY.md (30 min)**
-- [ ] Review Session 39 analysis (domain pair precision, mechanism types)
-- [ ] Identify Tier 1 priorities:
-  - cs↔physics (100% precision, n=2 - need more!)
-  - econ↔physics (58% precision, n=12)
-  - cs↔econ (40% precision, n=5)
-- [ ] Target mechanism types:
-  - Coevolution (63% precision)
-  - Strategic interactions (56% precision)
-  - Cooperation (50% precision)
-- [ ] Set target: Extract 30-40 new mechanisms from cs/physics domains
+**Part 1: Context & Preparation (15-20 min)**
+- [ ] Read SESSION42_PREP.md (your complete playbook)
+- [ ] Read PROGRESS.md Sessions 37-41 (understand the v1 build)
+- [ ] Visit analog.quest and browse the live site
+- [ ] Review GROWTH_STRATEGY.md (context for Session 43)
 
-**Part 2: Strategic Paper Selection (1 hour)**
-- [ ] Select 50-100 cs papers (theory, algorithms, systems)
-- [ ] Select 30-50 physics papers (complex systems, statistical mechanics)
-- [ ] Filter for mechanism-rich papers (theory papers > empirical)
-- [ ] Export paper list for extraction
+**Part 2: User Interview (60-75 min)**
+Conduct structured interview with Chuck covering:
+- [ ] First impressions and UX (navigation, layout, clarity)
+- [ ] Content quality (which discoveries work? which don't?)
+- [ ] Missing features (search? visualizations? examples?)
+- [ ] Launch readiness (what's blocking public share?)
+- [ ] Technical issues (bugs, performance, SEO)
+- [ ] Future vision (expansion priorities, community features)
 
-**Part 3: Manual Mechanism Extraction (3-4 hours)**
-- [ ] Extract 30-40 domain-neutral mechanisms from selected papers
-- [ ] Target: 50-60% hit rate (based on strategic selection)
-- [ ] Focus on causal, structural patterns (not techniques)
-- [ ] Document all extractions in JSON format
+**Part 3: Synthesize & Prioritize (15 min)**
+- [ ] Categorize feedback:
+  - Critical (blocks launch)
+  - Important (improves quality significantly)
+  - Nice-to-have (future iterations)
+- [ ] Create improvement plan
+- [ ] Get Chuck's approval on priorities
 
-**Part 4: Generate Candidates (30 min)**
-- [ ] Generate embeddings for new mechanisms
-- [ ] Match against existing 54 mechanisms
-- [ ] Use ≥0.47 threshold (60% precision target)
-- [ ] Export candidates for manual review
+**Part 4: Implement Polish (90-120 min)**
+- [ ] Fix all critical issues
+- [ ] Implement 2-4 most important improvements
+- [ ] Test changes thoroughly (build, mobile, filtering)
+- [ ] Verify no regressions
 
-**Part 5: Manual Curation (1-2 hours)**
-- [ ] Review all candidates
-- [ ] Rate: excellent / good / weak / false
-- [ ] Write structural explanations for good+ matches
-- [ ] Target: 20-30 new verified isomorphisms
-- [ ] Export SESSION42_VERIFIED_ISOMORPHISMS.json
-
-**Part 6: Update Frontend (30 min)**
-- [ ] Merge new discoveries into app/data/discoveries.json
-- [ ] Update metadata (total count, date)
-- [ ] Test filtering/sorting with new data
-- [ ] Rebuild and deploy
+**Part 5: Documentation & Handoff (15 min)**
+- [ ] Update PROGRESS.md with Session 42 summary
+- [ ] Update DAILY_GOALS.md with Session 43 expansion plan
+- [ ] Commit all changes
+- [ ] Brief Chuck on what's ready
 
 **Success Criteria**:
-- [ ] ✅ 30-40 new mechanisms extracted from cs/physics
-- [ ] ✅ 50-60% hit rate maintained
-- [ ] ✅ 20-30 new verified isomorphisms added
-- [ ] ✅ Total discoveries: 50-60 (was 30)
-- [ ] ✅ Frontend updated with new discoveries
-- [ ] ✅ GROWTH_STRATEGY.md validated with real data
-- [ ] ✅ Expansion cycle documented
+- [ ] ✅ Comprehensive feedback gathered from Chuck
+- [ ] ✅ All critical issues fixed (nothing blocks launch)
+- [ ] ✅ 2-4 important improvements implemented
+- [ ] ✅ Site tested and verified working
+- [ ] ✅ Chuck feels confident site is ready for Session 44 launch
+- [ ] ✅ Session 43 plan ready
 
-**Time Budget**: 6-8 hours
+**Time Budget**: 3-4 hours
 
-**Deliverable**: 50-60 total verified isomorphisms on analog.quest!
+**Deliverable**: analog.quest "real v1" - polished, tested, ready for Session 44 public launch
+
+---
+
+## NEXT: Session 43 - Expansion Validation 📈
+
+**After** Session 42 polish is complete.
+
+**Goal**: Validate GROWTH_STRATEGY.md by adding 20-30 new verified isomorphisms
+
+**Approach**:
+- Extract 30-40 mechanisms from Tier 1 domain pairs (cs↔physics, econ↔physics)
+- Generate 100-150 candidates using semantic embeddings
+- Manual curation → 20-30 new verified discoveries
+- Update frontend → 50-60 total discoveries
+- Prove expansion system works before Session 44 launch
+
+**Timeline**: 6-8 hours
+
+**Deliverable**: analog.quest with 50-60 discoveries (was 30)
+
+See **ROADMAP_42_44.md** for complete three-session plan!
 
 ---
 

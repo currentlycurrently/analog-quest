@@ -4,62 +4,133 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Sessions 40-41 - Frontend Build (analog.quest v1) 🚀
+## UPCOMING: Session 41 - Polish & Deploy 🚀
 
-**Status**: ✅ **READY TO BUILD** ✅
+**Status**: ✅ **READY TO POLISH & DEPLOY** ✅
 
-**Reference**: See FRONTEND_SPEC.md for complete specification
+**Context**: Session 40 built the core MVP - all 30 discoveries are browsable with a beautiful, responsive interface.
 
-**Timeline**: 2 sessions, 7-9 hours total
-
----
-
-### Session 40: Core Build (4-5 hours)
-
-**Goal**: Build functional MVP with all 30 discoveries browsable
-
-**Tasks**:
-
-**Hour 1: Setup & Data (1 hour)**
-- [ ] Create Next.js 14 app with TypeScript + Tailwind
-- [ ] Install dependencies (next, react, typescript, tailwindcss, headless-ui)
-- [ ] Create data transformation script
-- [ ] Transform SESSION38_VERIFIED_ISOMORPHISMS.json → app/data/discoveries.json
-- [ ] Create data loading utilities (lib/data.ts)
-
-**Hour 2: Core Components (1 hour)**
-- [ ] Build DiscoveryCard component (card with title, domains, similarity, truncated explanation)
-- [ ] Build DomainBadge component (colored pill badges for domains)
-- [ ] Build SimilarityScore component (score with color-coded bar)
-- [ ] Build Navigation and Footer components
-
-**Hour 3: Home + Discoveries Pages (1.5 hours)**
-- [ ] Build home page (/) with hero, stats, featured top-3, CTA
-- [ ] Build discoveries browse page (/discoveries) with grid layout
-- [ ] Implement basic grid (3 cols desktop, 2 tablet, 1 mobile)
-- [ ] Load all 30 discoveries and render cards
-
-**Hour 4: Individual Discovery Page (1.5 hours)**
-- [ ] Build discovery detail page (/discoveries/[id])
-- [ ] Build ComparisonView component (side-by-side paper comparison)
-- [ ] Add structural explanation display
-- [ ] Add previous/next navigation
-- [ ] Dynamic routing with all 30 IDs
-
-**Success Criteria**:
-- [ ] All 30 discoveries are viewable
-- [ ] Navigation works (home → discoveries → detail)
-- [ ] Responsive on mobile and desktop
-- [ ] No TypeScript errors
-- [ ] No console errors
-
-**Time Budget**: 4-5 hours
+**Timeline**: 3-4 hours
 
 ---
 
 ### Session 41: Polish & Deploy (3-4 hours)
 
+**Goal**: Add final features, polish the site, and deploy to analog.quest
+
+**Mission**: By end of this session, the site should be LIVE and shareable!
+
+**Tasks**:
+
+**Part 1: Add Filtering & Sorting (1 hour)**
+- [ ] Build FilterBar component for /discoveries page
+  - Domain pair dropdown (All, econ↔q-bio, physics↔q-bio, etc.)
+  - Quality dropdown (All, Excellent, Good)
+  - Sort by: Similarity (high/low), Alphabetical (A-Z/Z-A)
+- [ ] Implement client-side filtering/sorting with React state
+- [ ] Add result count display ("Showing X discoveries")
+- [ ] Test all filter/sort combinations
+
+**Part 2: Content Pages (1.5 hours)**
+
+**Methodology Page (`app/methodology/page.tsx`)**
+- [ ] What is Analog Quest section
+- [ ] The Process (4 steps with Session 38 data):
+  - Paper selection (2,021 papers)
+  - Mechanism extraction (54 mechanisms, 22.5% hit rate)
+  - Candidate generation (165 candidates, semantic embeddings)
+  - Manual curation (30 verified, 67% top-tier precision)
+- [ ] Quality Metrics section (show precision numbers from Session 38)
+- [ ] Limitations section (honest about what doesn't work)
+- [ ] Future Work section (reference GROWTH_STRATEGY.md)
+
+**About Page (`app/about/page.tsx`)**
+- [ ] Your story (artist, not researcher)
+- [ ] The journey (6 weeks, 40 sessions, failures → pivots → success)
+- [ ] Built with Claude Code
+- [ ] Open source (link to GitHub repo)
+- [ ] Contact/feedback info
+
+**Part 3: SEO & Polish (30 min)**
+- [ ] Add comprehensive meta tags to all pages
+  - Title: "Analog Quest - 30 Cross-Domain Structural Isomorphisms"
+  - Description: "AI-assisted discovery of structural patterns across 2,021 academic papers"
+- [ ] Add Open Graph tags for social sharing
+- [ ] Add Twitter card meta tags
+- [ ] Create or add favicon
+- [ ] Polish 404 page (if needed)
+- [ ] Consistent footer across all pages
+- [ ] Test all navigation flows
+
+**Part 4: Deploy to Vercel (30 min)**
+- [ ] Configure next.config.js for static export (if needed)
+- [ ] Build static export: `npm run build`
+- [ ] Test locally: `npx serve out` or `npm run start`
+- [ ] Deploy to Vercel:
+  - Connect GitHub repo
+  - Configure custom domain: analog.quest
+  - Deploy
+- [ ] Verify deployment and DNS propagation
+
+**Part 5: Final QA (30 min)**
+- [ ] Test all 30 discoveries display correctly
+- [ ] Test filters and sorting work
+- [ ] Test individual discovery pages load
+- [ ] Test all external links (arXiv IDs, GitHub)
+- [ ] Test mobile responsive design (real device if possible)
+- [ ] Check page load speed (<2s target)
+- [ ] Verify no console errors
+- [ ] Check Lighthouse score (target ≥90)
+- [ ] Fix any bugs found
+
+**Success Criteria**:
+- [ ] ✅ Filtering and sorting implemented and working
+- [ ] ✅ Methodology page complete with honest process
+- [ ] ✅ About page complete with your story
+- [ ] ✅ SEO fully optimized (meta tags, OG, Twitter cards)
+- [ ] ✅ Site deployed to https://analog.quest
+- [ ] ✅ All features working in production
+- [ ] ✅ Mobile-friendly (tested on real device)
+- [ ] ✅ Fast loading (<2s)
+- [ ] ✅ Lighthouse score ≥90
+- [ ] ✅ 0 critical bugs
+- [ ] ✅ Ready to share publicly
+
+**Time Budget**: 3-4 hours
+
+**Deliverable**: Live site at https://analog.quest ready to share!
+
+---
+
+## COMPLETED: Session 40 - Frontend Core Build ✅
+
+**Session #**: 40
+
+**STATUS**: ✅ **COMPLETE** ✅
+
+**What Was Built**:
+- Core MVP with all 30 discoveries browsable
+- 6 reusable components (DiscoveryCard, DomainBadge, SimilarityScore, Navigation, Footer, ComparisonView)
+- 3 main pages (Home, Discoveries, Discovery Detail)
+- 30 discovery detail pages via SSG
+- Responsive design (mobile/tablet/desktop)
+- TypeScript + Next.js 15 + Tailwind CSS
+
+**Build Status**: ✅ 0 TypeScript errors, 42 static pages generated
+
+**What's Left for Session 41**:
+- Filtering & sorting on discoveries page
+- Methodology and About pages
+- SEO optimization
+- Deploy to Vercel
+
+---
+
+## OLD: Session 41 Plan (Archive)
+
 **Goal**: Ship polished, production-ready site to analog.quest
+
+(This was the old plan - see updated Session 41 plan above)
 
 **Tasks**:
 

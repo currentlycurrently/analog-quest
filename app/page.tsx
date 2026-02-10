@@ -1,131 +1,187 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { Stats } from '@/lib/db';
+import Link from 'next/link';
+import { getAllDiscoveries, getFeaturedDiscoveries, getMetadata } from '@/lib/data';
+import DiscoveryCard from '@/components/DiscoveryCard';
 
 export default function Home() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch('/api/stats')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.error) {
-          setError(data.error);
-        } else {
-          setStats(data);
-        }
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-lg">Loading stats...</div>
-      </div>
-    );
-  }
-
-  if (error || !stats) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-lg text-red-600">Error: {error || 'Failed to load stats'}</div>
-      </div>
-    );
-  }
+  const metadata = getMetadata();
+  const allDiscoveries = getAllDiscoveries();
+  const featuredDiscoveries = getFeaturedDiscoveries();
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-4xl font-bold mb-2">Analog Quest</h1>
-        <p className="text-gray-600 dark:text-gray-400 text-lg">
-          Mapping structural similarities across academic domains
-        </p>
-      </div>
-
-      {/* Overview Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <div className="text-3xl font-bold text-blue-600">{stats.total_papers}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Papers Processed</div>
-        </div>
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <div className="text-3xl font-bold text-green-600">{stats.total_patterns}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Patterns Extracted</div>
-        </div>
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <div className="text-3xl font-bold text-purple-600">{stats.total_isomorphisms}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Isomorphisms Found</div>
-        </div>
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <div className="text-3xl font-bold text-orange-600">{stats.hit_rate}%</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-            Hit Rate ({stats.papers_with_patterns}/{stats.total_papers})
+    <div className="bg-gradient-to-b from-blue-50 to-white">
+      {/* Hero Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Discover Cross-Domain
+            <br />
+            <span className="text-blue-600">Structural Isomorphisms</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            The same fundamental ideas appear across different academic fields,
+            expressed in different languages. We map these structural similarities
+            to reveal hidden connections between disciplines.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/discoveries"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+            >
+              Explore {metadata.total_verified} Discoveries
+            </Link>
+            <Link
+              href="/methodology"
+              className="bg-white text-gray-700 border border-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
+              How It Works
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Domains */}
-      <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-        <h2 className="text-2xl font-bold mb-4">Papers by Domain</h2>
-        <div className="space-y-2">
-          {stats.domains.map((domain) => (
-            <div key={domain.domain} className="flex items-center justify-between">
-              <span className="text-sm font-medium">{domain.domain}</span>
-              <div className="flex items-center gap-2">
-                <div className="w-32 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-blue-600"
-                    style={{
-                      width: `${(domain.count / stats.total_papers) * 100}%`,
-                    }}
-                  />
-                </div>
-                <span className="text-sm text-gray-600 dark:text-gray-400 w-12 text-right">
-                  {domain.count}
-                </span>
-              </div>
+      {/* Stats Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6 text-center border border-gray-200">
+            <div className="text-4xl font-bold text-blue-600 mb-2">
+              {metadata.total_verified}
             </div>
+            <div className="text-gray-600 font-medium">
+              Verified Isomorphisms
+            </div>
+            <div className="text-sm text-gray-500 mt-2">
+              {metadata.excellent} excellent, {metadata.good} good
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 text-center border border-gray-200">
+            <div className="text-4xl font-bold text-purple-600 mb-2">
+              6
+            </div>
+            <div className="text-gray-600 font-medium">
+              Academic Domains
+            </div>
+            <div className="text-sm text-gray-500 mt-2">
+              Economics, Biology, Physics, CS, and more
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 text-center border border-gray-200">
+            <div className="text-4xl font-bold text-green-600 mb-2">
+              {(metadata.similarity_range.mean * 100).toFixed(0)}%
+            </div>
+            <div className="text-gray-600 font-medium">
+              Average Similarity
+            </div>
+            <div className="text-sm text-gray-500 mt-2">
+              Range: {(metadata.similarity_range.min * 100).toFixed(0)}%-
+              {(metadata.similarity_range.max * 100).toFixed(0)}%
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Discoveries */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Featured Discoveries
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Our highest-rated cross-domain isomorphisms, revealing deep
+            structural similarities between seemingly unrelated fields.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {featuredDiscoveries.map((discovery) => (
+            <DiscoveryCard
+              key={discovery.id}
+              id={discovery.id}
+              rating={discovery.rating}
+              similarity={discovery.similarity}
+              paper1Domain={discovery.paper_1.domain}
+              paper2Domain={discovery.paper_2.domain}
+              paper1Title={discovery.paper_1.title}
+              paper2Title={discovery.paper_2.title}
+              explanation={discovery.structural_explanation}
+            />
           ))}
         </div>
-      </div>
 
-      {/* Pattern Types */}
-      <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-        <h2 className="text-2xl font-bold mb-4">Top Pattern Types</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {stats.pattern_types.map((type) => (
-            <div
-              key={type.mechanism_type}
-              className="flex items-center justify-between border border-gray-200 dark:border-gray-700 rounded p-3"
-            >
-              <span className="text-sm font-medium">{type.mechanism_type}</span>
-              <span className="text-sm font-bold text-blue-600">{type.count}</span>
-            </div>
-          ))}
+        <div className="text-center mt-12">
+          <Link
+            href="/discoveries"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg group"
+          >
+            View All {allDiscoveries.length} Discoveries
+            <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
+              →
+            </span>
+          </Link>
         </div>
-      </div>
+      </section>
 
-      {/* About */}
-      <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-gray-50 dark:bg-gray-900">
-        <h2 className="text-xl font-bold mb-3">What is this?</h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-3">
-          Analog Quest is an autonomous research project that discovers <strong>cross-domain isomorphisms</strong> -
-          structurally identical ideas expressed in different academic languages.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300">
-          By analyzing papers across physics, computer science, biology, economics, mathematics, and more,
-          we find patterns that appear in multiple domains, revealing deep structural connections that
-          human researchers might miss.
-        </p>
-      </div>
+      {/* What Makes This Unique */}
+      <section className="bg-gray-50 py-16 mt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why This Matters
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Structural, Not Superficial
+              </h3>
+              <p className="text-gray-600">
+                We identify mechanisms and causal patterns, not just keyword
+                matches. Real isomorphisms across domains.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                LLM + Human Curation
+              </h3>
+              <p className="text-gray-600">
+                AI extracts mechanisms in domain-neutral language, then manual
+                curation ensures quality. Best of both worlds.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Cross-Pollination
+              </h3>
+              <p className="text-gray-600">
+                Discover how insights from economics can illuminate biology, or
+                how physics reveals patterns in social systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-blue-600 rounded-2xl shadow-xl p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">
+            Start Exploring
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Browse all {metadata.total_verified} verified isomorphisms and
+            discover connections you never knew existed.
+          </p>
+          <Link
+            href="/discoveries"
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md"
+          >
+            Explore Discoveries
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

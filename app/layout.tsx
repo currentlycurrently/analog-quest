@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Analog Quest - Cross-Domain Isomorphism Explorer",
-  description: "Discover structural similarities across academic domains",
+  title: 'analog.quest - Cross-Domain Isomorphisms',
+  description: 'Discovering structural isomorphisms across academic domains. Same ideas, different languages.',
 };
 
 export default function RootLayout({
@@ -14,52 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <div className="min-h-screen flex flex-col">
-          <header className="border-b border-gray-200 dark:border-gray-800">
-            <nav className="container mx-auto px-4 py-4">
-              <div className="flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold">
-                  Analog Quest
-                </Link>
-                <div className="flex gap-6">
-                  <Link
-                    href="/"
-                    className="hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    Dashboard
-                  </Link>
-                  <Link
-                    href="/papers"
-                    className="hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    Papers
-                  </Link>
-                  <Link
-                    href="/patterns"
-                    className="hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    Patterns
-                  </Link>
-                  <Link
-                    href="/isomorphisms"
-                    className="hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    Isomorphisms
-                  </Link>
-                </div>
-              </div>
-            </nav>
-          </header>
-          <main className="flex-1 container mx-auto px-4 py-8">
-            {children}
-          </main>
-          <footer className="border-t border-gray-200 dark:border-gray-800 py-6">
-            <div className="container mx-auto px-4 text-center text-sm text-gray-600 dark:text-gray-400">
-              Building a living map of cross-domain isomorphisms
-            </div>
-          </footer>
-        </div>
+      <body className={inter.className}>
+        <Navigation />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );

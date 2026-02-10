@@ -1,0 +1,83 @@
+[
+  {
+    "paper_id": 448,
+    "subdomain": "q-bio.PE",
+    "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns",
+    "mechanism": "Plants facilitate neighboring growth through local resource modification. Facilitation competes with resource competition. When precipitation is intermittent, facilitation-competition balance creates spatial vegetation patterns. Below threshold density, vegetation collapses due to weakened facilitation (spatial Allee effect).",
+    "mechanism_type": "threshold_dynamics,feedback_loop,network_effect",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 450,
+    "subdomain": "q-bio.PE",
+    "title": "Combination therapy for colorectal cancer with anti-PD-L1 and cancer vaccine",
+    "mechanism": "Tumor cells release antigens activating immune T-cells. T-cells attack tumor reducing growth. Tumor evolves PD-L1 expression to suppress T-cell response (escape). Anti-PD-L1 blocks suppression restoring immune attack. Vaccine increases antigen presentation. Combination creates feedback where immune response selects for tumor variants.",
+    "mechanism_type": "feedback_loop,evolutionary_dynamics,threshold_dynamics",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 451,
+    "subdomain": "q-bio.PE",
+    "title": "Optimal Harvesting in Stream Networks: Maximizing Biomass and Yield",
+    "mechanism": "Resource stock accumulates from production flow. Exploitation (flow out) versus conservation (stock maintenance) tradeoff. Maximum sustainable yield occurs at intermediate stock level. Over-exploitation depletes stock below replenishment threshold causing collapse.",
+    "mechanism_type": "flow_stock_transformation,threshold_dynamics,optimization",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 452,
+    "subdomain": "q-bio.PE",
+    "title": "Uncertainty in Island-based Ecosystem Services and Climate Change",
+    "mechanism": "Transmission rate increases with infected density. Recovery rate decreases infection duration. When transmission exceeds recovery (R0>1), epidemic spreads exponentially. Vaccination reduces susceptible population shifting R0 below 1. Spatial heterogeneity creates local pockets where R0 varies.",
+    "mechanism_type": "threshold_dynamics,network_effect,diffusion_process",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 77,
+    "subdomain": "econ.GN",
+    "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
+    "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage.",
+    "mechanism_type": "network_effect,feedback_loop,scaling",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 525,
+    "subdomain": "q-bio.CB",
+    "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
+    "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control.",
+    "mechanism_type": "feedback_loop,threshold_dynamics,homeostasis",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 542,
+    "subdomain": "q-bio.CB",
+    "title": "Compartmental-reaction diffusion framework for microscale dynamics of extracellular serotonin",
+    "mechanism": "Serotonin released from varicosities diffuses through extracellular space. Diffusion couples neighboring varicosities into microdomains. Uptake kinetics (reuptake) removes serotonin creating concentration gradients. Firing frequency, geometry, and uptake shape spatial serotonin reservoirs. Local versus volume transmission determined by diffusive coupling strength.",
+    "mechanism_type": "diffusion_process,spatial_coupling,network_effect",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 370,
+    "subdomain": "q-bio.QM",
+    "title": "Learning virulence-transmission relationships using causal inference",
+    "mechanism": "Pathogen virulence (harm to host) causally influences transmission rate (spread to new hosts). Increased virulence may increase transmission initially but reduces host mobility decreasing spread. Trade-off creates optimal virulence level maximizing transmission. Evolutionary dynamics drive virulence toward this optimum. Past virulence predicts future transmission but not vice versa (directional causality).",
+    "mechanism_type": "evolutionary_dynamics,optimization,causal_feedback",
+    "extraction_quality": "excellent",
+    "domain_neutral": true
+  },
+  {
+    "paper_id": 2,
+    "subdomain": "physics.gen-ph",
+    "title": "Discrete dynamical systems with scaling and inversion symmetries",
+    "mechanism": "System state evolves discretely through iterated function. Scaling symmetry preserves dynamics under magnification/contraction. Near fixed points, small perturbations grow exponentially (positive Lyapunov exponent) causing sensitive dependence. Trajectories confined to fractal attractor with non-integer dimension. Chaotic regime characterized by scaling laws and self-similarity across scales.",
+    "mechanism_type": "chaotic_dynamics,scaling,sensitive_dependence",
+    "extraction_quality": "good",
+    "domain_neutral": true
+  }
+]

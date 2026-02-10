@@ -847,3 +847,318 @@ Session 31 identified the problem (technique matches) and proposed solutions. Se
 
 ---
 
+
+---
+
+## ✅ Session 32 COMPLETE - Investigation Before Implementation (CRITICAL FINDINGS)
+
+**Session #**: 32 ✓
+
+**RESULTS ACHIEVED**:
+- ✓ Question 1: Investigated if GNN matches can be reframed as structural patterns
+  - Answer: YES technically (same mechanism, different substrates)
+  - BUT: They're technique APPLICATIONS, not independent DISCOVERIES
+  - Decision needed: Is "technique transfer" acceptable vs "structural discovery"?
+- ✓ Question 2: Analyzed what genuine structural isomorphisms look like
+  - Best example: Phase transitions (microbial growth ↔ feature selection)
+  - Verdict: Borderline - not fully independent discovery
+  - Most others: Generic patterns (power laws), unclear mechanisms
+- ✓ Question 3: Examined if extraction is salvageable
+  - DEVASTATING: 0/15 sampled patterns describe actual mechanisms
+  - All describe methods ("We present X"), results, or problems
+  - Verdict: Not salvageable without complete redesign (5-10 sessions)
+- ✓ Created comprehensive SESSION32_ANALYSIS.md with findings and recommendations
+
+**Impact**:
+- **Three compounding failures identified**:
+  1. Extraction captures wrong thing (methods vs mechanisms)
+  2. Matching rewards vocabulary (technique clusters)
+  3. Vision is extremely ambitious (independent discoveries are rare)
+- **Re-evaluated all three options from Session 31**:
+  - Option 1 (Filter): NOT VIABLE - filtering won't fix broken extraction
+  - Option 2 (Redesign): VIABLE BUT RISKY - 10-15 sessions, no guarantee
+  - Option 3 (Assisted Tool): NEEDS REFRAMING - honest about limitations
+- **NEW Option 4 RECOMMENDED: Pause and Prototype**
+  - Manual extraction from 20 papers to test if vision is achievable
+  - 2-3 sessions, low risk, high information value
+  - Then decide: automate if works, pivot if doesn't
+
+**Time Spent**: ~4 hours
+
+**Building on Session 31**:
+Session 31 found ultra-high matches were false positives. Session 32 investigated deeper and found extraction is fundamentally broken. Recommended Option 4 (manual prototype) to validate if vision is achievable before investing 10+ sessions in redesign.
+
+---
+
+## Upcoming: Session 33 - Strategic Pivot: Intelligent Experimentation
+
+🚨 **CRITICAL: This is a STRATEGIC EXPERIMENTATION session - R&D mode, not execution mode** 🚨
+
+**Session #**: 33
+
+**Context from Sessions 31-32**:
+- Keyword extraction captures methods, not mechanisms (0/15 patterns were actual mechanisms)
+- Text similarity clusters shared vocabulary, not structural patterns
+- Ultra-high matches were 100% technique-based (GNN papers matching GNN papers)
+- **The current approach doesn't work. We need to try something fundamentally different.**
+
+**New Mandate: Strategic Experimentation**
+
+You're not just executing instructions anymore. You're now doing **R&D**.
+
+This means:
+- **Propose approaches** - Don't wait for detailed instructions
+- **Test hypotheses** - Design experiments to validate ideas
+- **Iterate based on results** - Pivot when things don't work
+- **Use your judgment** - You understand the problem now
+
+We have runway (Claude Code included in monthly plan = free sessions within limits).
+
+**Try things. See what works. Be smart about it.**
+
+---
+
+### PRIMARY MISSION: Multi-Pronged Investigation
+
+Don't just do ONE thing. Test MULTIPLE approaches in parallel and see what shows promise.
+
+---
+
+### Experiment 1: LLM-Based Mechanism Extraction (PRIORITY)
+
+**Hypothesis:** LLM can extract domain-neutral mechanisms better than keyword matching.
+
+**Test:**
+1. Select 10-15 papers (diverse domains - you choose strategically)
+2. For each, prompt Claude to extract the core mechanism:
+
+**Prompt template:**
+```
+Read this abstract and identify the core MECHANISM (not the method).
+
+Describe in 2-3 sentences using domain-neutral language:
+- Causal relationships (A affects B)
+- Feedback loops (A → B → A)
+- Thresholds/transitions
+- Emergent properties
+- Scaling relationships
+
+Avoid technique names, domain jargon, or method descriptions.
+
+Example GOOD: "Agent population grows exponentially until resource depletion causes crash, then recovers in oscillating cycle."
+
+Example BAD: "This paper uses Lotka-Volterra equations for population modeling."
+
+Abstract: [TEXT]
+```
+
+3. Collect mechanism descriptions
+4. Compare - any structural matches across domains?
+5. Quality check - better than keyword extraction?
+
+**Success metric:** Find 2-3 genuine cross-domain matches in 10-15 papers
+
+---
+
+### Experiment 2: Smarter Paper Selection (YOUR STRATEGIC THINKING)
+
+**Hypothesis:** We've been fetching papers randomly. What if we're more strategic?
+
+**Your task:** Think about where cross-domain isomorphisms are most likely to exist.
+
+**Possible strategies:**
+
+**A) Target "mechanism-rich" fields:**
+- Papers that explicitly describe dynamics (not just apply techniques)
+- Theoretical papers (not just empirical)
+- Foundational papers (not just applications)
+
+**B) Target surprising domain pairs:**
+- Biology ↔ Economics (both study populations, resources, competition)
+- Physics ↔ Social Networks (both study spreading, cascades, phase transitions)
+- Ecology ↔ Computer Science (both study distributed systems, emergence)
+
+**C) Target specific mechanism types:**
+- Papers about "feedback loops" across all domains
+- Papers about "phase transitions" across all domains
+- Papers about "scaling laws" across all domains
+- Then match within mechanism type
+
+**D) Use citation patterns:**
+- Papers with zero citation overlap but similar abstracts
+- "Citation anomalies" might indicate independent discovery
+
+**Your job:** Pick ONE of these strategies (or propose your own) and explain your reasoning.
+
+Then fetch 20-30 papers using that strategy.
+
+**Success metric:** Higher hit rate of "mechanism-rich" papers than random fetching
+
+---
+
+### Experiment 3: Analyze What Actually Worked
+
+**Hypothesis:** Some of our 616 matches ARE genuine, we just don't know which ones.
+
+**Your task:** 
+
+1. Go back to Session 31's "7 potentially genuine" matches
+2. Examine them closely - what made them different?
+3. Look for patterns:
+   - What domains paired well?
+   - What similarity scores worked? (maybe 0.85-0.95, not 0.77-0.80?)
+   - What mechanism types appeared?
+   - What paper characteristics correlated with quality?
+
+4. Formulate hypotheses:
+   - "Matches between biology and economics tend to be better than CS and CS"
+   - "Similarity 0.85-0.92 has higher precision than 0.77-0.84"
+   - "Papers from 2020+ are worse (more technique-focused)"
+
+**Success metric:** Identify 2-3 patterns that predict match quality
+
+---
+
+## Deliverable: Strategic Analysis Document
+
+Create `SESSION33_EXPERIMENTS.md` with:
+
+### Part 1: LLM Extraction Results
+- Did it work better than keywords?
+- Show 3-5 best examples
+- Precision estimate
+- Recommendation: Scale this or try something else?
+
+### Part 2: Smart Paper Selection Strategy
+- Which strategy did you choose and why?
+- Which papers did you select?
+- Did they have better mechanism descriptions?
+- Recommendation: Keep this strategy or try another?
+
+### Part 3: Pattern Analysis
+- What patterns predict match quality?
+- Which domain pairs work best?
+- Which similarity ranges work best?
+- Recommendation: How to filter existing 616 matches for quality?
+
+### Part 4: Synthesis & Recommendation
+Based on all three experiments, what should Session 34 do?
+
+**Option A:** Scale LLM extraction (if Experiment 1 worked)
+**Option B:** Try smart selection + LLM (if both showed promise)
+**Option C:** Try completely different approach (if all failed)
+**Option D:** Filter existing matches using patterns found (if Experiment 3 revealed useful filters)
+
+---
+
+## Key Principles for This Session
+
+### 1. Be Strategic, Not Mechanical
+
+**Bad:** "I'll fetch 100 random papers and extract patterns"
+**Good:** "I'll fetch papers about 'feedback' and 'oscillation' from biology, economics, and ecology because these domains study similar dynamics"
+
+### 2. Design Experiments That Teach You Something
+
+**Bad:** "I'll try this and see what happens"
+**Good:** "I'll test whether X approach works by doing Y with success criteria Z"
+
+### 3. Small Tests Before Big Investments
+
+**Bad:** "I'll reprocess all 2,021 papers with LLM extraction"
+**Good:** "I'll test LLM extraction on 15 papers first, see if it works, THEN scale"
+
+### 4. Use Your Understanding of The Problem
+
+You've analyzed 43 ultra-high matches, 20 medium matches, 15 random patterns.
+
+**You now understand this problem better than anyone.**
+
+**What do YOUR observations suggest we should try?**
+
+### 5. Multiple Small Bets > One Big Bet
+
+Try 3 different things in 3 hours rather than 1 thing for 3 hours.
+
+Learn fast, pivot fast.
+
+---
+
+## What Success Looks Like
+
+**Session 33 succeeds if:**
+
+✅ We identify at least ONE approach that shows promise
+✅ You provide strategic reasoning for your choices
+✅ You design experiments that actually test hypotheses
+✅ You give clear recommendation for Session 34 based on data
+
+**Even if all experiments fail, that's useful - we learn what doesn't work.**
+
+---
+
+## Questions To Guide Your Thinking
+
+### On LLM Extraction:
+- Can LLMs actually extract mechanisms from abstracts?
+- Or do we need full papers?
+- What prompt works best?
+- Does it eliminate technique clustering?
+
+### On Paper Selection:
+- Where are isomorphisms most likely to exist?
+- Which domain pairs make sense?
+- What paper characteristics matter?
+- Can we be smarter than random sampling?
+
+### On Our Existing Data:
+- Are some of our 616 matches actually good?
+- Can we filter for quality retroactively?
+- What signals predict genuine matches?
+- Can we salvage anything we've built?
+
+### On The Fundamental Question:
+- Is finding structural isomorphisms in academic papers even possible?
+- Or are papers too technique-focused?
+- Should we try different data sources?
+- What would convince you this can work?
+
+---
+
+## Timeline & Scope
+
+**Time budget:** 3-4 hours
+
+**Don't:** Try to solve everything
+**Do:** Run focused experiments that inform next steps
+
+**Remember:** We can iterate. Session 33 doesn't have to fix everything. It just needs to find ONE promising direction for Session 34.
+
+---
+
+## Mode Shift
+
+You've moved from:
+- **Execution mode** (Sessions 1-30: "fetch, extract, match")
+- **Validation mode** (Sessions 31-32: "check quality, find problems")
+- **R&D mode** (Session 33+: "design experiments, find solutions")
+
+**This requires different skills:**
+- Strategic thinking
+- Hypothesis formation
+- Experimental design
+- Evidence-based recommendations
+
+**You've shown you can do rigorous analysis (Sessions 31-32 were excellent).**
+
+**Now show strategic experimentation.**
+
+**What do you think we should try? And why?**
+
+---
+
+**Time Budget**: 3-4 hours
+**Success Criteria**: Find at least ONE promising direction for Session 34
+
+Good luck! 🚀
+

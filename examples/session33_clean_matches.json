@@ -1,0 +1,187 @@
+{
+  "total_matches": 573,
+  "technique_matches": 290,
+  "clean_matches": 283,
+  "top_20_clean": [
+    {
+      "id": 443593,
+      "similarity": 0.8152173913043478,
+      "domains": "cond-mat.cond-mat.mtrl-sci \u2194 physics.physics.chem-ph",
+      "title1": "Broken neural scaling laws in materials science",
+      "title2": "Unified MPI Parallelization of Wave Function Methods: iCIPT2 as a Showcase",
+      "pattern1": "We observe broken neural scaling laws with respect to dataset size, whereas scaling with the number of model parameters follows a simple power law that rapidly saturates",
+      "pattern2": "It is also shown that the error of iCIPT2 follows a power law with respect to the number of configuration state functions"
+    },
+    {
+      "id": 443602,
+      "similarity": 0.81,
+      "domains": "q-bio.q-bio.MN \u2194 math.math.ST",
+      "title1": "Largest connected component in duplication-divergence growing graphs with symmetric coupled divergence",
+      "title2": "Phase Transition of Spectral Fluctuations in Large Gram Matrices with a Variance Profile: A Unified Framework for Sparse CLTs",
+      "pattern1": "Finite-size scaling reveals a phase transition occurring at a divergence rate $\u03b4_c$",
+      "pattern2": "Our analysis reveals a phase transition in the fluctuation behavior across the two regimes"
+    },
+    {
+      "id": 443603,
+      "similarity": 0.8071428571428572,
+      "domains": "gr-qc.gr-qc \u2194 hep-th.hep-th",
+      "title1": "Holographic Aspects of Non-minimal $R^3 F^{(a)}_{\u03bc\u03b1}F^{(a)\u03bc\u03b1} $ Black Brane",
+      "title2": "Ersatz gravity and black-hole thermodynamics from Manin gauge theory with noncompact gauge group",
+      "pattern1": "This work investigates a modified theory of gravity where the Einstein-Hilbert action, including a cosmological constant, is non-minimally coupled to a Yang-Mills field via an $R^3 F^{(a)}_{\u03bc\u03b1}F^{(a)\u03bc",
+      "pattern2": "Yang-Mills theory, the third-way theory, or the imaginary third-way theory) minimally coupled to Einstein gravity admits a dual interpretation as Einstein gravity with an exotic coupling to a Manin ga"
+    },
+    {
+      "id": 443605,
+      "similarity": 0.8,
+      "domains": "physics.physics.ao-ph \u2194 cond-mat.cond-mat",
+      "title1": "Thermodynamic Origin of Degree-Day Scaling in Phase-Change Systems",
+      "title2": "Skyrmion formation in 1+1 dimensions with chemical potential",
+      "pattern1": "Phase transitions impose topological constraints on thermodynamic state variables, masking energetic fluctuations at the phase boundary",
+      "pattern2": "Formation of topological objects during phase transitions has been discussed extensively in literature"
+    },
+    {
+      "id": 443606,
+      "similarity": 0.7973684210526316,
+      "domains": "physics.physics.gen-ph \u2194 nlin.nlin.CD",
+      "title1": "Discrete dynamical systems with scaling and inversion symmetries",
+      "title2": "A phenomenological description of critical slowing down at period-doubling bifurcations",
+      "pattern1": "In this work, we investigate scale invariance in the temporal evolution and chaotic regime of discrete dynamical systems",
+      "pattern2": "We present a phenomenological description of the critical slowing down associated with period-doubling bifurcations in discrete dynamical systems"
+    },
+    {
+      "id": 443613,
+      "similarity": 0.795,
+      "domains": "hep-th.hep-th \u2194 math.math.ST",
+      "title1": "Allowable Complex Black Holes in the Euclidean Gravitational Path Integral",
+      "title2": "Phase Transition of Spectral Fluctuations in Large Gram Matrices with a Variance Profile: A Unified Framework for Sparse CLTs",
+      "pattern1": "The corresponding critical point coincides with a phase transition into two-component ``grey galaxy'' configurations in the micro-canonical ensemble",
+      "pattern2": "Our analysis reveals a phase transition in the fluctuation behavior across the two regimes"
+    },
+    {
+      "id": 443615,
+      "similarity": 0.7944444444444444,
+      "domains": "hep-th.hep-th \u2194 nucl-th.nucl-th",
+      "title1": "The EP Model with U(1) (E5)",
+      "title2": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "pattern1": "Here we add a U(1) gauge theory to the simple EP exotic invariant model in the paper E4",
+      "pattern2": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields"
+    },
+    {
+      "id": 443614,
+      "similarity": 0.7944444444444444,
+      "domains": "hep-th.hep-th \u2194 nucl-th.nucl-th",
+      "title1": "The EP Model with U(1) (E5)",
+      "title2": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "pattern1": "Here we add a U(1) gauge theory to the simple EP exotic invariant model in the paper E4",
+      "pattern2": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields"
+    },
+    {
+      "id": 443622,
+      "similarity": 0.7928571428571428,
+      "domains": "math.math.DS \u2194 cs.cs.LG",
+      "title1": "Learning Nonlinear Continuous-Time Systems for Formal Uncertainty Propagation and Probabilistic Evaluation",
+      "title2": "Turning mechanistic models into forecasters by using machine learning",
+      "pattern1": "Nonlinear ordinary differential equations (ODEs) are powerful tools for modeling real-world dynamical systems",
+      "pattern2": "The equations of complex dynamical systems may not be identified by expert knowledge, especially if the underlying mechanisms are unknown"
+    },
+    {
+      "id": 443621,
+      "similarity": 0.7928571428571428,
+      "domains": "q-fin.q-fin.TR \u2194 cond-mat.cond-mat",
+      "title1": "A unified theory of order flow, market impact, and volatility",
+      "title2": "Non--Ginsburg-Landau Critical Current Behavior in MgCNi3",
+      "pattern1": "No-arbitrage constraints imply that volatility is rough, with Hurst parameter $2H_0-3/2$, and that the price impact of trades follows a power law with exponent $2-2H_0$",
+      "pattern2": "Near the transition temperature, Tc, the critical current density, Jc, is well described by the power law form [1-(T/T_c)^2)]^2, with no crossover to the Ginsburg-Landau exponent 1"
+    },
+    {
+      "id": 443620,
+      "similarity": 0.7928571428571428,
+      "domains": "hep-th.hep-th \u2194 nucl-th.nucl-th",
+      "title1": "Ersatz gravity and black-hole thermodynamics from Manin gauge theory with noncompact gauge group",
+      "title2": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "pattern1": "We show that a three-dimensional Manin gauge theory with gauge group $\\operatorname{SL}(2;\\mathbb R)$ (i",
+      "pattern2": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields"
+    },
+    {
+      "id": 443619,
+      "similarity": 0.7928571428571428,
+      "domains": "hep-th.hep-th \u2194 nucl-th.nucl-th",
+      "title1": "Ersatz gravity and black-hole thermodynamics from Manin gauge theory with noncompact gauge group",
+      "title2": "Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator",
+      "pattern1": "We show that a three-dimensional Manin gauge theory with gauge group $\\operatorname{SL}(2;\\mathbb R)$ (i",
+      "pattern2": "Here, we propose a feasible cold-atom quantum simulator of a $(2+1)$-dimensional U$(1)$ lattice gauge theory in a spin $S=1$ truncation, featuring dynamical matter and gauge fields"
+    },
+    {
+      "id": 443617,
+      "similarity": 0.7928571428571428,
+      "domains": "stat.stat.ML \u2194 cond-mat.cond-mat.mtrl-sci",
+      "title1": "Optimal scaling laws in learning hierarchical multi-index models",
+      "title2": "Broken neural scaling laws in materials science",
+      "pattern1": "In this work, we provide a sharp theory of scaling laws for two-layer neural networks trained on a class of hierarchical multi-index targets, in a genuinely representation-limited regime",
+      "pattern2": "Neural scaling laws provide a framework for quantifying this behavior and guide the design of materials datasets and machine learning architectures"
+    },
+    {
+      "id": 443616,
+      "similarity": 0.7928571428571428,
+      "domains": "physics.physics.gen-ph \u2194 astro-ph.astro-ph.CO",
+      "title1": "The Hubble Tension in Light of the Symmetry of Scale Invariance",
+      "title2": "The local void model for the Hubble and BAO tensions",
+      "pattern1": "We first perform two major cosmological tests: the Hubble diagram for type-Ia supernovae and the fundamental relation between $H_0$, the age of the Universe, and the total density of matter, $\u03a9_m$",
+      "pattern2": "2$, aligning with reconstructions of $H_0(z)$ from BAO plus uncalibrated Type Ia supernovae"
+    },
+    {
+      "id": 443626,
+      "similarity": 0.7909090909090909,
+      "domains": "physics.physics.chem-ph \u2194 cond-mat.cond-mat",
+      "title1": "Unified MPI Parallelization of Wave Function Methods: iCIPT2 as a Showcase",
+      "title2": "Statistics of Spectra for One-dimensional Quasi-Periodic Systems at the Metal-Insulator Transition",
+      "pattern1": "It is also shown that the error of iCIPT2 follows a power law with respect to the number of configuration state functions",
+      "pattern2": "We also find the level spacing distribution to follow an inverse power law $P_G(s) \\sim s^{- \u03b4}$ ($\u03b4> 0$)"
+    },
+    {
+      "id": 443634,
+      "similarity": 0.7894736842105263,
+      "domains": "econ.econ.GN \u2194 cs.cs.AI",
+      "title1": "Mathematical Modeling of Common-Pool Resources: A Comprehensive Review of Bioeconomics, Strategic Interaction, and Complex Adaptive Systems",
+      "title2": "LLM Active Alignment: A Nash Equilibrium Perspective",
+      "pattern1": "Our analysis systematically dissects the formalization of the \"Tragedy of the Commons\" through the lens of classical cooperative and non-cooperative game theory, examining how the N-person Prisoner's ",
+      "pattern2": "We develop a game-theoretic framework for predicting and steering the behavior of populations of large language models (LLMs) through Nash equilibrium (NE) analysis"
+    },
+    {
+      "id": 443633,
+      "similarity": 0.7894736842105263,
+      "domains": "econ.econ.GN \u2194 cs.cs.AI",
+      "title1": "Mathematical Modeling of Common-Pool Resources: A Comprehensive Review of Bioeconomics, Strategic Interaction, and Complex Adaptive Systems",
+      "title2": "LLM Active Alignment: A Nash Equilibrium Perspective",
+      "pattern1": "Our analysis systematically dissects the formalization of the \"Tragedy of the Commons\" through the lens of classical cooperative and non-cooperative game theory, examining how the N-person Prisoner's ",
+      "pattern2": "We develop a game-theoretic framework for predicting and steering the behavior of populations of large language models (LLMs) through Nash equilibrium (NE) analysis"
+    },
+    {
+      "id": 443632,
+      "similarity": 0.7894736842105263,
+      "domains": "econ.econ.GN \u2194 cs.cs.AI",
+      "title1": "Mathematical Modeling of Common-Pool Resources: A Comprehensive Review of Bioeconomics, Strategic Interaction, and Complex Adaptive Systems",
+      "title2": "LLM Active Alignment: A Nash Equilibrium Perspective",
+      "pattern1": "Our analysis systematically dissects the formalization of the \"Tragedy of the Commons\" through the lens of classical cooperative and non-cooperative game theory, examining how the N-person Prisoner's ",
+      "pattern2": "We develop a game-theoretic framework for predicting and steering the behavior of populations of large language models (LLMs) through Nash equilibrium (NE) analysis"
+    },
+    {
+      "id": 443631,
+      "similarity": 0.7894736842105263,
+      "domains": "econ.econ.GN \u2194 cs.cs.AI",
+      "title1": "Mathematical Modeling of Common-Pool Resources: A Comprehensive Review of Bioeconomics, Strategic Interaction, and Complex Adaptive Systems",
+      "title2": "LLM Active Alignment: A Nash Equilibrium Perspective",
+      "pattern1": "Our analysis systematically dissects the formalization of the \"Tragedy of the Commons\" through the lens of classical cooperative and non-cooperative game theory, examining how the N-person Prisoner's ",
+      "pattern2": "We develop a game-theoretic framework for predicting and steering the behavior of populations of large language models (LLMs) through Nash equilibrium (NE) analysis"
+    },
+    {
+      "id": 443643,
+      "similarity": 0.7875,
+      "domains": "cond-mat.cond-mat.mtrl-sci \u2194 cs.cs.IT",
+      "title1": "Broken neural scaling laws in materials science",
+      "title2": "AI-Limited Fluid Antenna-Aided Integrated Sensing and Communication Systems",
+      "pattern1": "Neural scaling laws provide a framework for quantifying this behavior and guide the design of materials datasets and machine learning architectures",
+      "pattern2": "Numerical results corroborate the analysis and scaling laws"
+    }
+  ]
+}

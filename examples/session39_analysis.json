@@ -1,0 +1,313 @@
+{
+  "domain_pair_precision": [
+    {
+      "domain_pair": "cs\u2194physics",
+      "total": 2,
+      "excellent": 1,
+      "good": 1,
+      "weak": 0,
+      "false": 0,
+      "precision": 1.0
+    },
+    {
+      "domain_pair": "econ\u2194nlin",
+      "total": 1,
+      "excellent": 0,
+      "good": 1,
+      "weak": 0,
+      "false": 0,
+      "precision": 1.0
+    },
+    {
+      "domain_pair": "econ\u2194physics",
+      "total": 12,
+      "excellent": 1,
+      "good": 6,
+      "weak": 5,
+      "false": 0,
+      "precision": 0.5833333333333334
+    },
+    {
+      "domain_pair": "nlin\u2194unknown",
+      "total": 4,
+      "excellent": 0,
+      "good": 2,
+      "weak": 2,
+      "false": 0,
+      "precision": 0.5
+    },
+    {
+      "domain_pair": "cs\u2194econ",
+      "total": 5,
+      "excellent": 1,
+      "good": 1,
+      "weak": 3,
+      "false": 0,
+      "precision": 0.4
+    },
+    {
+      "domain_pair": "econ\u2194unknown",
+      "total": 8,
+      "excellent": 1,
+      "good": 2,
+      "weak": 5,
+      "false": 0,
+      "precision": 0.375
+    },
+    {
+      "domain_pair": "cs\u2194unknown",
+      "total": 3,
+      "excellent": 1,
+      "good": 0,
+      "weak": 2,
+      "false": 0,
+      "precision": 0.3333333333333333
+    },
+    {
+      "domain_pair": "econ\u2194q-bio",
+      "total": 25,
+      "excellent": 1,
+      "good": 6,
+      "weak": 18,
+      "false": 0,
+      "precision": 0.28
+    },
+    {
+      "domain_pair": "physics\u2194q-bio",
+      "total": 40,
+      "excellent": 2,
+      "good": 7,
+      "weak": 28,
+      "false": 3,
+      "precision": 0.225
+    },
+    {
+      "domain_pair": "q-bio\u2194unknown",
+      "total": 36,
+      "excellent": 2,
+      "good": 3,
+      "weak": 31,
+      "false": 0,
+      "precision": 0.1388888888888889
+    },
+    {
+      "domain_pair": "physics\u2194unknown",
+      "total": 17,
+      "excellent": 0,
+      "good": 1,
+      "weak": 16,
+      "false": 0,
+      "precision": 0.058823529411764705
+    },
+    {
+      "domain_pair": "nlin\u2194q-bio",
+      "total": 7,
+      "excellent": 0,
+      "good": 0,
+      "weak": 7,
+      "false": 0,
+      "precision": 0.0
+    },
+    {
+      "domain_pair": "cs\u2194q-bio",
+      "total": 4,
+      "excellent": 0,
+      "good": 0,
+      "weak": 4,
+      "false": 0,
+      "precision": 0.0
+    },
+    {
+      "domain_pair": "cs\u2194nlin",
+      "total": 1,
+      "excellent": 0,
+      "good": 0,
+      "weak": 1,
+      "false": 0,
+      "precision": 0.0
+    }
+  ],
+  "similarity_range_precision": [
+    {
+      "range": "Ultra-high",
+      "min_similarity": 0.65,
+      "max_similarity": 1.0,
+      "total": 4,
+      "excellent": 3,
+      "good": 0,
+      "weak": 1,
+      "false": 0,
+      "precision": 0.75
+    },
+    {
+      "range": "Top-30",
+      "min_similarity": 0.57,
+      "max_similarity": 1.0,
+      "total": 8,
+      "excellent": 4,
+      "good": 3,
+      "weak": 1,
+      "false": 0,
+      "precision": 0.875
+    },
+    {
+      "range": "Top-60",
+      "min_similarity": 0.47,
+      "max_similarity": 1.0,
+      "total": 40,
+      "excellent": 8,
+      "good": 16,
+      "weak": 12,
+      "false": 1,
+      "precision": 0.6
+    },
+    {
+      "range": "Top-100",
+      "min_similarity": 0.4,
+      "max_similarity": 1.0,
+      "total": 92,
+      "excellent": 10,
+      "good": 29,
+      "weak": 47,
+      "false": 3,
+      "precision": 0.42391304347826086
+    },
+    {
+      "range": "All",
+      "min_similarity": 0.0,
+      "max_similarity": 1.0,
+      "total": 165,
+      "excellent": 10,
+      "good": 30,
+      "weak": 119,
+      "false": 3,
+      "precision": 0.24242424242424243
+    }
+  ],
+  "mechanism_type_precision": [
+    {
+      "mechanism_type": "network",
+      "total": 98,
+      "excellent": 7,
+      "good": 24,
+      "precision": 0.3163265306122449
+    },
+    {
+      "mechanism_type": "feedback",
+      "total": 73,
+      "excellent": 8,
+      "good": 17,
+      "precision": 0.3424657534246575
+    },
+    {
+      "mechanism_type": "heterogeneity",
+      "total": 49,
+      "excellent": 1,
+      "good": 14,
+      "precision": 0.30612244897959184
+    },
+    {
+      "mechanism_type": "phase_transition",
+      "total": 37,
+      "excellent": 0,
+      "good": 6,
+      "precision": 0.16216216216216217
+    },
+    {
+      "mechanism_type": "centrality",
+      "total": 35,
+      "excellent": 3,
+      "good": 10,
+      "precision": 0.37142857142857144
+    },
+    {
+      "mechanism_type": "epidemic",
+      "total": 32,
+      "excellent": 1,
+      "good": 9,
+      "precision": 0.3125
+    },
+    {
+      "mechanism_type": "threshold",
+      "total": 32,
+      "excellent": 0,
+      "good": 8,
+      "precision": 0.25
+    },
+    {
+      "mechanism_type": "cooperation",
+      "total": 30,
+      "excellent": 3,
+      "good": 12,
+      "precision": 0.5
+    },
+    {
+      "mechanism_type": "coevolution",
+      "total": 27,
+      "excellent": 4,
+      "good": 13,
+      "precision": 0.6296296296296297
+    },
+    {
+      "mechanism_type": "strategic",
+      "total": 25,
+      "excellent": 5,
+      "good": 9,
+      "precision": 0.56
+    },
+    {
+      "mechanism_type": "chaos",
+      "total": 25,
+      "excellent": 0,
+      "good": 3,
+      "precision": 0.12
+    },
+    {
+      "mechanism_type": "oscillation",
+      "total": 23,
+      "excellent": 1,
+      "good": 1,
+      "precision": 0.08695652173913043
+    },
+    {
+      "mechanism_type": "size_control",
+      "total": 17,
+      "excellent": 2,
+      "good": 2,
+      "precision": 0.23529411764705882
+    },
+    {
+      "mechanism_type": "scaling",
+      "total": 16,
+      "excellent": 0,
+      "good": 2,
+      "precision": 0.125
+    }
+  ],
+  "domain_mechanism_counts": [
+    {
+      "domain": "q-bio",
+      "mechanism_count": 112
+    },
+    {
+      "domain": "physics",
+      "mechanism_count": 71
+    },
+    {
+      "domain": "unknown",
+      "mechanism_count": 68
+    },
+    {
+      "domain": "econ",
+      "mechanism_count": 51
+    },
+    {
+      "domain": "cs",
+      "mechanism_count": 15
+    },
+    {
+      "domain": "nlin",
+      "mechanism_count": 13
+    }
+  ]
+}

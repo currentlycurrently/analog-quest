@@ -4,7 +4,130 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 39 - Growth Strategy + Frontend Planning 🚀
+## UPCOMING: Sessions 40-41 - Frontend Build (analog.quest v1) 🚀
+
+**Status**: ✅ **READY TO BUILD** ✅
+
+**Reference**: See FRONTEND_SPEC.md for complete specification
+
+**Timeline**: 2 sessions, 7-9 hours total
+
+---
+
+### Session 40: Core Build (4-5 hours)
+
+**Goal**: Build functional MVP with all 30 discoveries browsable
+
+**Tasks**:
+
+**Hour 1: Setup & Data (1 hour)**
+- [ ] Create Next.js 14 app with TypeScript + Tailwind
+- [ ] Install dependencies (next, react, typescript, tailwindcss, headless-ui)
+- [ ] Create data transformation script
+- [ ] Transform SESSION38_VERIFIED_ISOMORPHISMS.json → app/data/discoveries.json
+- [ ] Create data loading utilities (lib/data.ts)
+
+**Hour 2: Core Components (1 hour)**
+- [ ] Build DiscoveryCard component (card with title, domains, similarity, truncated explanation)
+- [ ] Build DomainBadge component (colored pill badges for domains)
+- [ ] Build SimilarityScore component (score with color-coded bar)
+- [ ] Build Navigation and Footer components
+
+**Hour 3: Home + Discoveries Pages (1.5 hours)**
+- [ ] Build home page (/) with hero, stats, featured top-3, CTA
+- [ ] Build discoveries browse page (/discoveries) with grid layout
+- [ ] Implement basic grid (3 cols desktop, 2 tablet, 1 mobile)
+- [ ] Load all 30 discoveries and render cards
+
+**Hour 4: Individual Discovery Page (1.5 hours)**
+- [ ] Build discovery detail page (/discoveries/[id])
+- [ ] Build ComparisonView component (side-by-side paper comparison)
+- [ ] Add structural explanation display
+- [ ] Add previous/next navigation
+- [ ] Dynamic routing with all 30 IDs
+
+**Success Criteria**:
+- [ ] All 30 discoveries are viewable
+- [ ] Navigation works (home → discoveries → detail)
+- [ ] Responsive on mobile and desktop
+- [ ] No TypeScript errors
+- [ ] No console errors
+
+**Time Budget**: 4-5 hours
+
+---
+
+### Session 41: Polish & Deploy (3-4 hours)
+
+**Goal**: Ship polished, production-ready site to analog.quest
+
+**Tasks**:
+
+**Hour 1: Advanced Features (1 hour)**
+- [ ] Build FilterBar component (filter by domain pair, rating, min similarity)
+- [ ] Add client-side filtering logic (lib/filters.ts)
+- [ ] Add sorting (by similarity, rating, domain)
+- [ ] Optional: Add fuzzy search with Fuse.js
+
+**Hour 2: Content Pages (1 hour)**
+- [ ] Build methodology page (/methodology)
+  - Explain: What is structural isomorphism?
+  - Process: Extract → Match → Curate
+  - Quality standards: Rating system
+  - Limitations and future work
+- [ ] Build about page (/about)
+  - Project story
+  - Built with Claude Code
+  - Contact/feedback
+  - Roadmap
+
+**Hour 3: Final Polish (1 hour)**
+- [ ] SEO: Add meta tags, Open Graph, Twitter cards
+- [ ] Create Open Graph image (og-image.png)
+- [ ] Generate sitemap.xml
+- [ ] Accessibility audit (ARIA labels, keyboard navigation)
+- [ ] Cross-browser testing (Chrome, Firefox, Safari)
+- [ ] Performance check (Lighthouse score ≥90)
+- [ ] Final design tweaks (spacing, colors, typography)
+
+**Hour 4: Deploy (30 min - 1 hour)**
+- [ ] Configure next.config.js for static export
+- [ ] Test local build (npm run build && npm run start)
+- [ ] Deploy to Vercel (connect GitHub repo)
+- [ ] Configure custom domain: analog.quest
+- [ ] Test production deployment
+- [ ] Verify all links work
+- [ ] Share publicly (Twitter, HN, Reddit)
+
+**Success Criteria**:
+- [ ] Site is live at https://analog.quest
+- [ ] All features work in production
+- [ ] Mobile-friendly (tested on real device)
+- [ ] Fast load time (<3s)
+- [ ] Lighthouse score ≥90
+- [ ] 0 critical bugs
+- [ ] Ready to share publicly
+
+**Time Budget**: 3-4 hours
+
+---
+
+### Post-Launch Tasks (Session 42+)
+
+**Immediate (Day 1-7)**:
+- Monitor analytics (Vercel Analytics)
+- Fix any critical bugs reported
+- Gather user feedback
+
+**Next Steps (Session 42)**:
+- First expansion cycle (follow GROWTH_STRATEGY.md)
+- Target: cs and nlin domains (Priority 1)
+- Goal: Add 20-30 new verified isomorphisms
+- Update frontend with new discoveries
+
+---
+
+## COMPLETED: Session 39 - Growth Strategy + Frontend Planning 🚀
 
 **Session #**: 39
 

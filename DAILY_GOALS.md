@@ -4,83 +4,79 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 37 - Manual Curation Path: Candidate Generation 🎯
+## UPCOMING: Session 37 - Generate All Candidates from 2,021 Papers 🎯
 
 **Session #**: 37
 
-**STATUS**: ⚠️ **READY TO BEGIN** ⚠️
+**STATUS**: ✅ **READY TO BEGIN - READ SESSION37_PLAN.md FIRST!** ✅
 
 **Primary Goal**:
-Generate embedding-based candidates for manual curation with relaxed threshold
+Process ALL 2,021 papers to generate candidate pool for manual curation in Session 38
 
-**Context from Sessions 33-36**:
-- Session 33: LLM extraction validated (12 papers, 100% success)
-- Session 34: TF-IDF failed (max similarity 0.139)
-- Session 35: Embeddings work 4.7x better (max 0.657) but sample too biology-heavy
-- **Session 36**: DECISIVE TEST - Found 4 good/excellent matches BUT max similarity only 0.544
-  - **Domain Diversity Paradox**: More diverse domains → better structural matches but LOWER scores
-  - **Best match**: Tragedy of commons (econ ↔ biology) at 0.453 similarity - EXCELLENT!
-  - **Decision**: Pivot to manual curation (Outcome B - Partial Success)
+**Context from Session 36** (DECISIVE TEST):
+- ✅ Found EXCELLENT match: Tragedy of commons (econ ↔ biology) at 0.453 similarity
+- ✅ Found 3 GOOD matches (network effects, cascades, parameter transitions)
+- ✅ LLM extraction: 100% hit rate (17/17 papers)
+- **Domain Diversity Paradox**: More diverse domains → better matches but LOWER scores
+- **Decision**: Pivot to manual curation (embeddings for discovery, humans for validation)
 
-**Specific Tasks**:
+**The Plan (see SESSION37_PLAN.md for full details)**:
 
-### Option A: COMPREHENSIVE APPROACH (Recommended)
-Generate large candidate pool for manual review in Session 38
+### Part 1: LLM Extraction (2-3 hours)
+- Extract mechanisms from ALL 2,021 papers using Session 33 prompt
+- Expected: ~450 mechanisms (22.5% hit rate, same as Session 34)
+- Save: `examples/session37_all_mechanisms.json`
 
-**PART 1**: Extend Session 36 sample (1 hour)
-- Select 30-50 MORE mechanism-rich papers (add to Session 36's 17)
-- Target: ~50-70 total papers across diverse domains
-- Extract mechanisms using LLM (expect ~30-50 mechanisms total)
+### Part 2: Generate Embeddings (30 min)
+- Generate 384-dim embeddings for all mechanisms
+- Model: sentence-transformers/all-MiniLM-L6-v2 (same as Sessions 35-36)
+- Save: `examples/session37_embeddings.npy`
 
-**PART 2**: Generate all candidate pairs (30 min)
-- Generate embeddings for all mechanisms
-- Calculate cross-domain similarities
-- Use **relaxed threshold (≥0.35-0.40)** to cast wide net
-- Save top 100-150 candidates for manual review
+### Part 3: Cross-Domain Matching (30 min)
+- Match with **RELAXED threshold: ≥0.35** (Session 36 best match was 0.453!)
+- Cross-domain only (different top-level domains)
+- Expected: 150-250 candidate pairs
+- Save: `examples/session37_candidates_for_review.json`
 
-**PART 3**: Initial filtering (30 min)
-- Quick triage of top 100 candidates
-- Remove obvious false positives
-- Identify promising clusters
-- Prepare for deep manual review in Session 38
-
-### Option B: FOCUSED APPROACH (Faster)
-Use Session 36's 17 papers + add 10-20 more
-
-**PART 1**: Add 10-20 targeted papers (30 min)
-- Focus on domains underrepresented in Session 36
-- Extract mechanisms (expect ~25-30 total)
-
-**PART 2**: Generate candidates at ≥0.35 threshold (15 min)
-- Embeddings for all mechanisms
-- Top 50 candidates for manual review
-
-**PART 3**: Full manual review (1.5 hours)
-- Review all 50 candidates
-- Rate and document each
-- Select 15-20 verified matches
+### Part 4: Export for Review (30 min)
+- Format candidates for manual review
+- Include rating/notes fields for Session 38
+- Statistics and metadata
 
 **Success Criteria**:
-- [ ] Candidate pool generated (50-150 pairs depending on option)
-- [ ] Relaxed threshold used (≥0.35-0.40)
-- [ ] Initial filtering complete
+- [ ] All 2,021 papers processed
+- [ ] ~400-500 mechanisms extracted
+- [ ] 150-250 candidate pairs generated (≥0.35 threshold)
+- [ ] Exported in reviewable format
 - [ ] Ready for Session 38 manual curation
 
-**Time Budget**: 2-2.5 hours
+**Time Budget**: 3.5-4.5 hours
 
-**Building on Session 36**:
-Session 36 proved embeddings find genuine matches (tragedy of commons!) but need relaxed thresholds (0.35-0.45 vs 0.65) and manual verification. Session 37 generates large candidate pool for curation.
-
-**KEY INSIGHT FROM SESSION 36**:
-- Domain diversity paradox: Better matches = lower scores
-- Best match was at 0.453 similarity (tragedy of commons)
-- Need threshold ≥0.35 to capture excellent matches
+**CRITICAL INSIGHT FROM SESSION 36**:
+- Best match (tragedy of commons) was at **0.453 similarity**
+- Standard threshold (0.65) would have MISSED this excellent match!
+- Use **threshold ≥0.35** to capture diverse-domain matches
+- Manual review will filter false positives (40% precision expected)
 
 **Files to Create**:
-1. `examples/session37_extended_papers.json` - Additional selected papers
-2. `examples/session37_all_mechanisms.json` - All mechanisms (Session 36 + new)
-3. `examples/session37_candidates.json` - Top 50-150 candidates for manual review
-4. `SESSION37_CANDIDATE_GENERATION.md` - Brief report
+1. `scripts/session37_extract_all_mechanisms.py` - LLM extraction script
+2. `scripts/session37_generate_embeddings.py` - Embedding generation
+3. `scripts/session37_match_candidates.py` - Matching script
+4. `examples/session37_all_mechanisms.json` - All extracted mechanisms (~450)
+5. `examples/session37_embeddings.npy` - Embeddings array
+6. `examples/session37_candidates_for_review.json` - Candidates for Session 38
+7. `SESSION37_RESULTS.md` - Brief summary
+
+**MUST READ BEFORE STARTING**:
+1. **SESSION37_PLAN.md** ⭐ **COMPLETE DETAILED PLAN WITH CODE TEMPLATES** ⭐
+2. SESSION36_DIVERSE_SAMPLE_TEST.md - Why manual curation
+3. SESSION34_RESULTS.md - LLM extraction approach & prompts
+
+**Session 38 will then**:
+- Manually review all 150-250 candidates
+- Rate each: excellent / good / weak / false
+- Select 20-30 verified isomorphisms for launch
+- Document with clear structural explanations
 
 ---
 

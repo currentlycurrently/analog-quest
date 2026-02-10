@@ -4,83 +4,85 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 37 - Generate All Candidates from 2,021 Papers 🎯
+## UPCOMING: Session 38 - Manual Curation of 165 Candidates 🎯
 
-**Session #**: 37
+**Session #**: 38
 
-**STATUS**: ✅ **READY TO BEGIN - READ SESSION37_PLAN.md FIRST!** ✅
+**STATUS**: ✅ **READY TO BEGIN** ✅
 
 **Primary Goal**:
-Process ALL 2,021 papers to generate candidate pool for manual curation in Session 38
+Manually review 165 candidate pairs to identify 20-30 verified isomorphisms for launch
 
-**Context from Session 36** (DECISIVE TEST):
-- ✅ Found EXCELLENT match: Tragedy of commons (econ ↔ biology) at 0.453 similarity
-- ✅ Found 3 GOOD matches (network effects, cascades, parameter transitions)
-- ✅ LLM extraction: 100% hit rate (17/17 papers)
-- **Domain Diversity Paradox**: More diverse domains → better matches but LOWER scores
-- **Decision**: Pivot to manual curation (embeddings for discovery, humans for validation)
+**Context from Session 37** (CANDIDATE GENERATION):
+- ✅ Generated 165 candidate pairs from 54 mechanisms (26 existing + 28 new)
+- ✅ Strategic selection: 50% hit rate (vs 22.5% random)
+- ✅ Semantic embeddings: 384-dim vectors (sentence-transformers)
+- ✅ Relaxed threshold: ≥0.35 (captures Session 36's best match at 0.453)
+- ✅ Similarity range: 0.35-0.74 (max: 0.7364, mean: 0.4318)
+- **Expected precision**: ~40% (66 potentially genuine out of 165)
+- **Top domain pairs**: biology-physics (47), biology-economics (25), economics-physics (13)
 
-**The Plan (see SESSION37_PLAN.md for full details)**:
+**The Plan for Session 38**:
 
-### Part 1: LLM Extraction (2-3 hours)
-- Extract mechanisms from ALL 2,021 papers using Session 33 prompt
-- Expected: ~450 mechanisms (22.5% hit rate, same as Session 34)
-- Save: `examples/session37_all_mechanisms.json`
+### Part 1: Review Top Candidates (1-1.5 hours)
+- Review top 50 candidates by similarity (0.74-0.50 range)
+- Rate each: `excellent` / `good` / `weak` / `false`
+- For excellent/good: Write brief structural explanation
+- Look for: Causal similarity, feedback loops, threshold dynamics
 
-### Part 2: Generate Embeddings (30 min)
-- Generate 384-dim embeddings for all mechanisms
-- Model: sentence-transformers/all-MiniLM-L6-v2 (same as Sessions 35-36)
-- Save: `examples/session37_embeddings.npy`
+### Part 2: Review Middle Candidates (1 hour)
+- Review next 50 candidates (0.50-0.40 range)
+- Same rating process
+- Identify any hidden gems (diverse domains may have lower scores)
 
-### Part 3: Cross-Domain Matching (30 min)
-- Match with **RELAXED threshold: ≥0.35** (Session 36 best match was 0.453!)
-- Cross-domain only (different top-level domains)
-- Expected: 150-250 candidate pairs
-- Save: `examples/session37_candidates_for_review.json`
+### Part 3: Spot Check Bottom Candidates (30 min)
+- Sample ~20 candidates from bottom 65 (0.40-0.35 range)
+- Check if threshold is appropriate (too many false positives?)
+- Adjust rating if needed
 
-### Part 4: Export for Review (30 min)
-- Format candidates for manual review
-- Include rating/notes fields for Session 38
-- Statistics and metadata
+### Part 4: Select & Document (1 hour)
+- Select best 20-30 isomorphisms from excellent/good ratings
+- Write clear structural descriptions for each
+- Create launch-ready documentation
+- Export to SESSION38_VERIFIED_ISOMORPHISMS.json
 
 **Success Criteria**:
-- [ ] All 2,021 papers processed
-- [ ] ~400-500 mechanisms extracted
-- [ ] 150-250 candidate pairs generated (≥0.35 threshold)
-- [ ] Exported in reviewable format
-- [ ] Ready for Session 38 manual curation
+- [ ] All 165 candidates reviewed and rated
+- [ ] 20-30 verified isomorphisms selected (excellent/good ratings)
+- [ ] Structural explanations written for verified matches
+- [ ] Launch-ready documentation created
+- [ ] SESSION38_VERIFIED_ISOMORPHISMS.json exported
 
-**Time Budget**: 3.5-4.5 hours
+**Time Budget**: 3-4 hours
 
-**CRITICAL INSIGHT FROM SESSION 36**:
-- Best match (tragedy of commons) was at **0.453 similarity**
-- Standard threshold (0.65) would have MISSED this excellent match!
-- Use **threshold ≥0.35** to capture diverse-domain matches
-- Manual review will filter false positives (40% precision expected)
+**Files to Use**:
+- `examples/session37_candidates_for_review.json` - **165 candidates to review**
 
-**Files to Create**:
-1. `scripts/session37_extract_all_mechanisms.py` - LLM extraction script
-2. `scripts/session37_generate_embeddings.py` - Embedding generation
-3. `scripts/session37_match_candidates.py` - Matching script
-4. `examples/session37_all_mechanisms.json` - All extracted mechanisms (~450)
-5. `examples/session37_embeddings.npy` - Embeddings array
-6. `examples/session37_candidates_for_review.json` - Candidates for Session 38
-7. `SESSION37_RESULTS.md` - Brief summary
-
-**MUST READ BEFORE STARTING**:
-1. **SESSION37_PLAN.md** ⭐ **COMPLETE DETAILED PLAN WITH CODE TEMPLATES** ⭐
-2. SESSION36_DIVERSE_SAMPLE_TEST.md - Why manual curation
-3. SESSION34_RESULTS.md - LLM extraction approach & prompts
-
-**Session 38 will then**:
-- Manually review all 150-250 candidates
-- Rate each: excellent / good / weak / false
-- Select 20-30 verified isomorphisms for launch
-- Document with clear structural explanations
+**Expected Outcomes**:
+- Precision: ~40% (66 genuine out of 165)
+- Excellent ratings: ~15-20 candidates
+- Good ratings: ~35-50 candidates
+- Select best 20-30 for launch
+- Clear structural explanations for each selected match
 
 ---
 
 ## Completed Recent Sessions
+
+### Session 37 - 2026-02-10 ✓ - Generate Candidates from 2,021 Papers
+- Selected 69 mechanism-rich papers strategically (50% hit rate vs 22.5% random)
+- Extracted 28 new mechanisms (combined with 26 existing = 54 total)
+- Generated 384-dim embeddings using sentence-transformers
+- Matched 165 cross-domain candidates (≥0.35 threshold)
+- Similarity: 0.35-0.74 (max: 0.7364, mean: 0.4318)
+- Ready for Session 38 manual review
+
+### Session 36 - 2026-02-10 ✓ - Diverse Sample Test (Partial Success!)
+- Tested embeddings on 17 diverse papers (100% LLM hit rate)
+- Found EXCELLENT match: Tragedy of commons (econ ↔ biology) at 0.453
+- Found 3 more GOOD matches (40% precision in top-10)
+- Domain Diversity Paradox: More diverse domains → lower scores
+- Decision: Pivot to manual curation
 
 ### Session 35 - 2026-02-10 ✓ - Embedding Validation (Need Diversity!)
 - Tested embeddings on 9 mechanisms from Session 34

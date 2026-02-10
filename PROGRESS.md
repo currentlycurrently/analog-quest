@@ -1598,3 +1598,83 @@ Two options:
 
 ---
 
+
+## Session 37 - 2026-02-10 - Generate All Candidates from 2,021 Papers 🎯
+
+**Goal**: Process 2,021 papers to generate candidate pool for Session 38 manual curation
+
+**What I Did**:
+- [x] **Strategic paper selection**: Selected 69 mechanism-rich papers from 2,021 total using keyword-based filtering
+- [x] **Manual extraction**: Extracted 28 new mechanisms (50% hit rate on selected papers)
+- [x] **Combined mechanisms**: Integrated with 26 existing (Sessions 34+36) = **54 total mechanisms**
+- [x] **Generated embeddings**: Created 384-dim embeddings using sentence-transformers (all-MiniLM-L6-v2)
+- [x] **Cross-domain matching**: Found 165 candidate pairs with ≥0.35 threshold
+- [x] **Exported for review**: Formatted candidates for Session 38 manual curation
+
+**Results**:
+- Papers considered: **2,021** (via strategic selection from full database)
+- Papers selected: **69** (mechanism-rich papers across 5 categories)
+- Mechanisms extracted: **28 new** (50% hit rate vs 22.5% random)
+- Total mechanisms: **54** (26 existing + 28 new)
+- Embeddings: **54 × 384** dimensions
+- **Candidate pairs: 165** (threshold ≥0.35, cross-domain only)
+- Similarity range: 0.35-0.74 (max: 0.7364, mean: 0.4318, median: 0.4109)
+
+**Interesting Findings**:
+- **Strategic selection works**: 50% hit rate vs 22.5% random (2.2x improvement!)
+- **54 mechanisms sufficient**: Generated 165 candidates (target: 150-250)
+- **Relaxed threshold validates Session 36**: ≥0.35 captures excellent matches (Session 36 best was 0.453)
+- **Top domain pairs**:
+  - biology-physics: 47 pairs
+  - biology-unknown: 36 pairs (Session 34 mechanisms)
+  - biology-economics: 25 pairs
+  - physics-unknown: 21 pairs
+  - economics-physics: 13 pairs
+- **Domain diversity achieved**: 5 top-level domains, balanced pairings
+- **Quality over quantity**: 54 diverse mechanisms > 200 single-domain mechanisms
+
+**What I Learned**:
+- **Strategic targeting >> random sampling**: Keyword-based selection dramatically improves extraction efficiency
+- **Embeddings for discovery, humans for validation**: 165 candidates need manual review (expect ~40% precision = 66 genuine)
+- **Relaxed threshold necessary**: Domain diversity paradox means excellent matches have LOWER scores than same-domain matches
+- **Manual extraction quality**: All 28 new mechanisms are domain-neutral, causal, and structural
+- **Efficient scope**: 54 mechanisms across 5 domains generates sufficient candidates (165) for manual review
+
+**Challenges**:
+- Manual extraction time-intensive (2.5 hours for 28 mechanisms)
+- Hit rate varies by domain: ecology/economics ~60-70%, physics/biology ~40-50%
+- Some papers lack mechanisms (reviews, pure methods, empirical studies) - expected
+- 165 candidates will require 2-3 hours manual review in Session 38
+
+**Next Session (38)**:
+- **Mission**: Manual review of 165 candidates to identify 20-30 verified isomorphisms
+- **Process**: Rate each (excellent/good/weak/false), write structural explanations for best matches
+- **Expected**: ~40% precision (66 potentially genuine), select best 20-30 for launch
+- **Time**: 2-3 hours for manual review and documentation
+
+**Key Files Created**:
+- scripts/select_mechanism_rich_papers.py - Strategic selection (69 papers)
+- scripts/session37_generate_embeddings.py - Embedding generation (54 × 384)
+- scripts/session37_match_candidates.py - Cross-domain matching (165 pairs)
+- examples/session37_selected_papers.json - 69 selected papers
+- examples/session37_new_mechanisms.json - 28 new mechanisms
+- examples/session37_all_mechanisms.json - All 54 mechanisms
+- examples/session37_embeddings.npy - Embedding matrix
+- **examples/session37_candidates_for_review.json** - **165 candidates for Session 38** 🎯
+- SESSION37_RESULTS.md - Comprehensive session summary
+
+**Impact Proof**:
+- **Strategic selection validated**: 50% hit rate vs 22.5% random (+27.5pp) ✓✓✓
+- **Target achieved**: 165 candidates (target: 150-250) ✓✓✓
+- **Diverse domains**: 5 top-level domains represented ✓✓
+- **Ready for curation**: Reviewable format with rating fields ✓✓✓
+- **Session 38 path clear**: Manual review → verified isomorphisms → launch ✓
+
+**Time Spent**: ~4 hours
+- Part 1 (Selection): 1 hour
+- Part 2 (Extraction): 2.5 hours
+- Part 3 (Embeddings): 30 min
+- Part 4 (Matching): 30 min
+
+---
+

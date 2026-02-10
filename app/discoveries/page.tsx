@@ -1,9 +1,48 @@
-import { getAllDiscoveries, getMetadata } from '@/lib/data';
+'use client';
+
+import { useState, useMemo } from 'react';
+import {
+  getAllDiscoveries,
+  getMetadata,
+  getUniqueDomainPairs,
+  filterDiscoveries,
+  sortDiscoveries,
+  type SortBy,
+  type Discovery,
+} from '@/lib/data';
 import DiscoveryCard from '@/components/DiscoveryCard';
+import FilterBar from '@/components/FilterBar';
 
 export default function DiscoveriesPage() {
-  const discoveries = getAllDiscoveries();
+  const allDiscoveries = getAllDiscoveries();
   const metadata = getMetadata();
+  const domainPairs = getUniqueDomainPairs();
+
+  // Filter/sort state
+  const [selectedDomainPair, setSelectedDomainPair] = useState('all');
+  const [selectedRating, setSelectedRating] = useState('all');
+  const [selectedSort, setSelectedSort] = useState<SortBy>('similarity');
+
+  // Apply filters and sort
+  const filteredAndSortedDiscoveries = useMemo(() => {
+    let filtered = allDiscoveries;
+
+    // Apply domain pair filter
+    if (selectedDomainPair !== 'all') {
+      filtered = filterDiscoveries({ domainPair: selectedDomainPair });
+    }
+
+    // Apply rating filter
+    if (selectedRating !== 'all') {
+      filtered = filterDiscoveries({
+        domainPair: selectedDomainPair !== 'all' ? selectedDomainPair : undefined,
+        rating: selectedRating as 'excellent' | 'good',
+      });
+    }
+
+    // Apply sort
+    return sortDiscoveries(filtered, selectedSort);
+  }, [allDiscoveries, selectedDomainPair, selectedRating, selectedSort]);
 
   return (
     <div className="bg-white min-h-screen">
@@ -50,31 +89,56 @@ export default function DiscoveriesPage() {
           </div>
         </div>
 
+        {/* Filter Bar */}
+        <FilterBar
+          domainPairs={domainPairs}
+          selectedDomainPair={selectedDomainPair}
+          selectedRating={selectedRating}
+          selectedSort={selectedSort}
+          onDomainPairChange={setSelectedDomainPair}
+          onRatingChange={setSelectedRating}
+          onSortChange={(value) => setSelectedSort(value as SortBy)}
+          resultCount={filteredAndSortedDiscoveries.length}
+          totalCount={allDiscoveries.length}
+        />
+
         {/* Discoveries Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {discoveries.map((discovery) => (
-            <DiscoveryCard
-              key={discovery.id}
-              id={discovery.id}
-              rating={discovery.rating}
-              similarity={discovery.similarity}
-              paper1Domain={discovery.paper_1.domain}
-              paper2Domain={discovery.paper_2.domain}
-              paper1Title={discovery.paper_1.title}
-              paper2Title={discovery.paper_2.title}
-              explanation={discovery.structural_explanation}
-            />
-          ))}
-        </div>
+        {filteredAndSortedDiscoveries.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredAndSortedDiscoveries.map((discovery) => (
+              <DiscoveryCard
+                key={discovery.id}
+                id={discovery.id}
+                rating={discovery.rating}
+                similarity={discovery.similarity}
+                paper1Domain={discovery.paper_1.domain}
+                paper2Domain={discovery.paper_2.domain}
+                paper1Title={discovery.paper_1.title}
+                paper2Title={discovery.paper_2.title}
+                explanation={discovery.structural_explanation}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-600 text-lg">
+              No discoveries match your current filters.
+            </p>
+            <button
+              onClick={() => {
+                setSelectedDomainPair('all');
+                setSelectedRating('all');
+              }}
+              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
 
         {/* Footer Note */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600">
-            Showing all {discoveries.length} verified isomorphisms
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Last updated: {metadata.date}
-          </p>
+          <p className="text-sm text-gray-500">Last updated: {metadata.date}</p>
         </div>
       </div>
     </div>

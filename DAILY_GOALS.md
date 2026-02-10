@@ -4,101 +4,103 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 41 - Polish & Deploy 🚀
+## UPCOMING: Session 42 - First Expansion Cycle 📈
 
-**Status**: ✅ **READY TO POLISH & DEPLOY** ✅
+**Status**: 🎯 **READY FOR GROWTH** 🎯
 
-**Context**: Session 40 built the core MVP - all 30 discoveries are browsable with a beautiful, responsive interface.
+**Context**: Session 41 completed v1 launch (45 pages, filtering, SEO, ready to deploy). Now it's time to expand the collection of verified isomorphisms.
 
-**Timeline**: 3-4 hours
+**Timeline**: 6-8 hours (expansion cycle)
 
 ---
 
-### Session 41: Polish & Deploy (3-4 hours)
+### Session 42: First Expansion Cycle (6-8 hours)
 
-**Goal**: Add final features, polish the site, and deploy to analog.quest
+**Goal**: Extract mechanisms from high-precision domain pairs and add 20-30 new verified isomorphisms
 
-**Mission**: By end of this session, the site should be LIVE and shareable!
+**Mission**: Follow GROWTH_STRATEGY.md to sustainably expand the collection
 
 **Tasks**:
 
-**Part 1: Add Filtering & Sorting (1 hour)**
-- [ ] Build FilterBar component for /discoveries page
-  - Domain pair dropdown (All, econ↔q-bio, physics↔q-bio, etc.)
-  - Quality dropdown (All, Excellent, Good)
-  - Sort by: Similarity (high/low), Alphabetical (A-Z/Z-A)
-- [ ] Implement client-side filtering/sorting with React state
-- [ ] Add result count display ("Showing X discoveries")
-- [ ] Test all filter/sort combinations
+**Part 1: Review GROWTH_STRATEGY.md (30 min)**
+- [ ] Review Session 39 analysis (domain pair precision, mechanism types)
+- [ ] Identify Tier 1 priorities:
+  - cs↔physics (100% precision, n=2 - need more!)
+  - econ↔physics (58% precision, n=12)
+  - cs↔econ (40% precision, n=5)
+- [ ] Target mechanism types:
+  - Coevolution (63% precision)
+  - Strategic interactions (56% precision)
+  - Cooperation (50% precision)
+- [ ] Set target: Extract 30-40 new mechanisms from cs/physics domains
 
-**Part 2: Content Pages (1.5 hours)**
+**Part 2: Strategic Paper Selection (1 hour)**
+- [ ] Select 50-100 cs papers (theory, algorithms, systems)
+- [ ] Select 30-50 physics papers (complex systems, statistical mechanics)
+- [ ] Filter for mechanism-rich papers (theory papers > empirical)
+- [ ] Export paper list for extraction
 
-**Methodology Page (`app/methodology/page.tsx`)**
-- [ ] What is Analog Quest section
-- [ ] The Process (4 steps with Session 38 data):
-  - Paper selection (2,021 papers)
-  - Mechanism extraction (54 mechanisms, 22.5% hit rate)
-  - Candidate generation (165 candidates, semantic embeddings)
-  - Manual curation (30 verified, 67% top-tier precision)
-- [ ] Quality Metrics section (show precision numbers from Session 38)
-- [ ] Limitations section (honest about what doesn't work)
-- [ ] Future Work section (reference GROWTH_STRATEGY.md)
+**Part 3: Manual Mechanism Extraction (3-4 hours)**
+- [ ] Extract 30-40 domain-neutral mechanisms from selected papers
+- [ ] Target: 50-60% hit rate (based on strategic selection)
+- [ ] Focus on causal, structural patterns (not techniques)
+- [ ] Document all extractions in JSON format
 
-**About Page (`app/about/page.tsx`)**
-- [ ] Your story (artist, not researcher)
-- [ ] The journey (6 weeks, 40 sessions, failures → pivots → success)
-- [ ] Built with Claude Code
-- [ ] Open source (link to GitHub repo)
-- [ ] Contact/feedback info
+**Part 4: Generate Candidates (30 min)**
+- [ ] Generate embeddings for new mechanisms
+- [ ] Match against existing 54 mechanisms
+- [ ] Use ≥0.47 threshold (60% precision target)
+- [ ] Export candidates for manual review
 
-**Part 3: SEO & Polish (30 min)**
-- [ ] Add comprehensive meta tags to all pages
-  - Title: "Analog Quest - 30 Cross-Domain Structural Isomorphisms"
-  - Description: "AI-assisted discovery of structural patterns across 2,021 academic papers"
-- [ ] Add Open Graph tags for social sharing
-- [ ] Add Twitter card meta tags
-- [ ] Create or add favicon
-- [ ] Polish 404 page (if needed)
-- [ ] Consistent footer across all pages
-- [ ] Test all navigation flows
+**Part 5: Manual Curation (1-2 hours)**
+- [ ] Review all candidates
+- [ ] Rate: excellent / good / weak / false
+- [ ] Write structural explanations for good+ matches
+- [ ] Target: 20-30 new verified isomorphisms
+- [ ] Export SESSION42_VERIFIED_ISOMORPHISMS.json
 
-**Part 4: Deploy to Vercel (30 min)**
-- [ ] Configure next.config.js for static export (if needed)
-- [ ] Build static export: `npm run build`
-- [ ] Test locally: `npx serve out` or `npm run start`
-- [ ] Deploy to Vercel:
-  - Connect GitHub repo
-  - Configure custom domain: analog.quest
-  - Deploy
-- [ ] Verify deployment and DNS propagation
-
-**Part 5: Final QA (30 min)**
-- [ ] Test all 30 discoveries display correctly
-- [ ] Test filters and sorting work
-- [ ] Test individual discovery pages load
-- [ ] Test all external links (arXiv IDs, GitHub)
-- [ ] Test mobile responsive design (real device if possible)
-- [ ] Check page load speed (<2s target)
-- [ ] Verify no console errors
-- [ ] Check Lighthouse score (target ≥90)
-- [ ] Fix any bugs found
+**Part 6: Update Frontend (30 min)**
+- [ ] Merge new discoveries into app/data/discoveries.json
+- [ ] Update metadata (total count, date)
+- [ ] Test filtering/sorting with new data
+- [ ] Rebuild and deploy
 
 **Success Criteria**:
-- [ ] ✅ Filtering and sorting implemented and working
-- [ ] ✅ Methodology page complete with honest process
-- [ ] ✅ About page complete with your story
-- [ ] ✅ SEO fully optimized (meta tags, OG, Twitter cards)
-- [ ] ✅ Site deployed to https://analog.quest
-- [ ] ✅ All features working in production
-- [ ] ✅ Mobile-friendly (tested on real device)
-- [ ] ✅ Fast loading (<2s)
-- [ ] ✅ Lighthouse score ≥90
-- [ ] ✅ 0 critical bugs
-- [ ] ✅ Ready to share publicly
+- [ ] ✅ 30-40 new mechanisms extracted from cs/physics
+- [ ] ✅ 50-60% hit rate maintained
+- [ ] ✅ 20-30 new verified isomorphisms added
+- [ ] ✅ Total discoveries: 50-60 (was 30)
+- [ ] ✅ Frontend updated with new discoveries
+- [ ] ✅ GROWTH_STRATEGY.md validated with real data
+- [ ] ✅ Expansion cycle documented
 
-**Time Budget**: 3-4 hours
+**Time Budget**: 6-8 hours
 
-**Deliverable**: Live site at https://analog.quest ready to share!
+**Deliverable**: 50-60 total verified isomorphisms on analog.quest!
+
+---
+
+## COMPLETED: Session 41 - Polish & Deploy ✅
+
+**Session #**: 41
+
+**STATUS**: ✅ **COMPLETE - V1 LAUNCH READY!** ✅
+
+**What Was Built**:
+- FilterBar component with domain/rating/sort controls
+- Methodology page (4-step process, quality metrics, limitations)
+- About page (6-week journey, tech stack, open source)
+- Comprehensive SEO (metadata, OpenGraph, Twitter cards, sitemap)
+- 45 total pages (home, discoveries, methodology, about, 30 details, sitemap.xml)
+- 0 TypeScript errors, all pages pre-rendered
+- Pushed to GitHub, ready for Vercel deployment
+
+**Build Status**: ✅ 45 pages, filtering working, SEO complete
+
+**What's Next**:
+- User handles Vercel deployment to analog.quest
+- Monitor analytics and gather feedback
+- Plan first expansion cycle (Session 42)
 
 ---
 
@@ -117,12 +119,6 @@ The agent sets concrete, achievable goals for each session.
 - TypeScript + Next.js 15 + Tailwind CSS
 
 **Build Status**: ✅ 0 TypeScript errors, 42 static pages generated
-
-**What's Left for Session 41**:
-- Filtering & sorting on discoveries page
-- Methodology and About pages
-- SEO optimization
-- Deploy to Vercel
 
 ---
 

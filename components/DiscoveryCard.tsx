@@ -21,15 +21,15 @@ function truncateText(text: string, maxLength: number): string {
 function getRatingBadge(rating: 'excellent' | 'good') {
   if (rating === 'excellent') {
     return (
-      <span className="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 border border-yellow-200 px-3 py-1 text-sm font-medium">
-        ⭐ Excellent
+      <span className="inline-flex items-center bg-cream-warm text-brown-dark border border-brown/20 px-3 py-1 text-xs font-mono uppercase tracking-wide">
+        excellent
       </span>
     );
   }
   return (
-    <span className="inline-flex items-center rounded-full bg-blue-100 text-blue-800 border border-blue-200 px-3 py-1 text-sm font-medium">
-      ✓ Good
-    </span>
+    <span className="inline-flex items-center bg-teal-light text-brown border border-teal/30 px-3 py-1 text-xs font-mono uppercase tracking-wide">
+      good
+      </span>
   );
 }
 
@@ -73,34 +73,34 @@ export default function DiscoveryCard({
 
   return (
     <Link href={`/discoveries/${id}`}>
-      <div className="border rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-white p-5 h-full flex flex-col cursor-pointer hover:border-gray-400">
+      <div className="border border-brown/10 hover:border-brown/30 transition-all duration-200 bg-cream p-6 h-full flex flex-col cursor-pointer">
         {/* Header: Rating and Similarity */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-4">
           {getRatingBadge(rating)}
           <SimilarityScore score={similarity} showLabel={true} />
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
+        <h3 className="text-xl font-serif font-normal text-brown mb-4 line-clamp-2">
           {cardTitle}
         </h3>
 
         {/* Domain Badges */}
-        <div className="flex items-center gap-2 mb-3 flex-wrap">
+        <div className="flex items-center gap-2 mb-4 flex-wrap">
           <DomainBadge domain={paper1Domain} size="sm" />
-          <span className="text-gray-400 font-bold">↔</span>
+          <span className="text-brown/40">↔</span>
           <DomainBadge domain={paper2Domain} size="sm" />
         </div>
 
         {/* Explanation (truncated) */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+        <p className="text-brown/70 text-sm leading-relaxed mb-4 flex-grow">
           {truncatedExplanation}
         </p>
 
         {/* Read More Link */}
-        <div className="text-blue-600 text-sm font-medium flex items-center group">
-          Read More
-          <span className="ml-1 transform group-hover:translate-x-1 transition-transform">
+        <div className="text-brown-dark text-xs font-mono uppercase tracking-wide flex items-center group">
+          read more
+          <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
             →
           </span>
         </div>

@@ -2,22 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Warm, accessible design system */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FEF9ED;
+  --foreground: #5D524B;
+  --accent-teal: #CAE1E1;
+  --accent-dark: #451B25;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'adriane', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography scale - spacious and readable */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'adriane', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75em;
+  color: var(--foreground);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25em;
+  line-height: 1.7;
+}
+
+/* Labels and interactive elements use monospace */
+label, button, .label {
+  font-family: 'degular-mono', 'Courier New', monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+/* Links - subtle underline */
+a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--accent-dark);
 }
 
 @layer utilities {

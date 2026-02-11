@@ -4,27 +4,27 @@ interface DomainBadgeProps {
 }
 
 const DOMAIN_COLORS: Record<string, string> = {
-  'econ': 'bg-blue-100 text-blue-800 border-blue-200',
-  'q-bio': 'bg-green-100 text-green-800 border-green-200',
-  'physics': 'bg-purple-100 text-purple-800 border-purple-200',
-  'cs': 'bg-orange-100 text-orange-800 border-orange-200',
-  'nlin': 'bg-red-100 text-red-800 border-red-200',
-  'unknown': 'bg-gray-100 text-gray-800 border-gray-200',
+  'econ': 'bg-cream-warm text-brown border-brown/20',
+  'q-bio': 'bg-teal-light text-brown border-teal/30',
+  'physics': 'bg-cream-mid text-brown border-brown/20',
+  'cs': 'bg-cream-light text-brown border-brown/20',
+  'nlin': 'bg-teal/10 text-brown border-teal/20',
+  'unknown': 'bg-brown/5 text-brown/70 border-brown/10',
 };
 
 const DOMAIN_NAMES: Record<string, string> = {
-  'econ': 'Economics',
-  'q-bio': 'Biology',
-  'physics': 'Physics',
-  'cs': 'Computer Science',
-  'nlin': 'Nonlinear Dynamics',
-  'unknown': 'Other',
+  'econ': 'economics',
+  'q-bio': 'biology',
+  'physics': 'physics',
+  'cs': 'computer science',
+  'nlin': 'nonlinear dynamics',
+  'unknown': 'other',
 };
 
 const SIZE_CLASSES = {
-  sm: 'text-xs px-2 py-0.5',
-  md: 'text-sm px-3 py-1',
-  lg: 'text-base px-4 py-1.5',
+  sm: 'text-xs px-2 py-0.5 font-mono uppercase tracking-wide',
+  md: 'text-sm px-3 py-1 font-mono uppercase tracking-wide',
+  lg: 'text-base px-4 py-1.5 font-mono uppercase tracking-wide',
 };
 
 export default function DomainBadge({ domain, size = 'md' }: DomainBadgeProps) {
@@ -34,7 +34,7 @@ export default function DomainBadge({ domain, size = 'md' }: DomainBadgeProps) {
 
   return (
     <span
-      className={`inline-flex items-center rounded-full font-medium border ${colorClasses} ${sizeClasses}`}
+      className={`inline-flex items-center border ${colorClasses} ${sizeClasses}`}
     >
       {displayName}
     </span>

@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://analog.quest'),
@@ -61,7 +58,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/zyv7mik.css" />
+      </head>
+      <body>
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />

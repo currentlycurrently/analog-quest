@@ -4,6 +4,25 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
+## COMPLETED: Session 45 - Critical Data Fix ✅
+
+**Status**: ✅ **FOUNDATION FIXED - 100% CITATION LINKS WORKING**
+
+**What Was Done**:
+- ✅ Database audit: identified 100% citation link failure
+- ✅ Root cause analysis: Session 37-38 bypassed database queries
+- ✅ Fixed all 60 paper references with correct arxiv_ids
+- ✅ Created validation script (validate_discoveries.py)
+- ✅ Documented data quality standards (DATA_QUALITY_STANDARDS.md)
+- ✅ Build: 0 errors, 38 pages generated
+- ✅ Citation links: 0% → 100% working ✓✓✓
+
+**Impact**: Foundation solid, ready for expansion to 500+ discoveries
+
+**Time**: ~3.5 hours (audit + fix + validation + docs)
+
+---
+
 ## COMPLETED: Session 44 - Visual Consistency + Editorial Layer ✅
 
 **Status**: ✅ **VISUAL CONSISTENCY + EDITORIAL INFRASTRUCTURE COMPLETE**
@@ -48,92 +67,104 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## 🎯 NEXT SESSION: 45 - Editorial Content Writing (or Expansion Planning)
+## 🎯 NEXT SESSION: 46 - Audit & Expansion Strategy
 
-**⚠️⚠️⚠️ IF YOU ARE SESSION 45 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
+**⚠️⚠️⚠️ IF YOU ARE SESSION 46 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
 
 **YOUR FIRST ACTION MUST BE:**
-1. Read **PROGRESS.md** (Session 44 summary - visual consistency complete)
-2. Read **EDITORIAL_STRUCTURE.md** (editorial spec and writing guidelines)
-3. Read **EDITORIAL_EXAMPLES.md** (2 example pieces: #9 and #13)
-4. Read **app/data/discoveries_editorial.json** (current template with 3 entries)
+1. Read **PROGRESS.md** (Session 45 summary - data fix complete)
+2. Read **SESSION45_DATA_AUDIT.md** (root cause analysis)
+3. Read **DATA_QUALITY_STANDARDS.md** (intake requirements and workflow)
 
-**Status**: Visual consistency complete, editorial infrastructure ready, body content needed
+**Status**: Foundation fixed (100% citation links working), ready for expansion
 
-**Timeline**: 3-5 hours (flexible based on priority)
+**Chuck's Priority**: Scale intelligently - we need MORE papers and BETTER selection
 
----
-
-### Session 45: Editorial Content Writing (or Expansion Planning) (3-5 hours)
-
-**Goal**: Write editorial body content for top discoveries OR plan next expansion cycle
-
-**Context**: Session 44 completed all visual consistency and editorial infrastructure. Site is fully consistent with warm design. Editorial data structure exists with template entries (IDs 1, 9, 13) but body content is null.
-
-**Two Paths Forward**:
-- **Path A**: Write editorial content (5-10 discoveries, 450-600 words each)
-- **Path B**: Plan expansion cycle (new papers, mechanisms, discoveries)
-
-**Recommendation**: Discuss with Chuck which path to take.
+**Timeline**: 3-5 hours (flexible based on approach)
 
 ---
 
-**Path A: Editorial Content Writing (3-5 hours)**
+### Session 46: Intelligent Expansion Strategy (3-5 hours)
 
-**Goal**: Write 450-600 word editorial pieces for top 5-10 discoveries
+**Goal**: Audit existing 2,021 papers and plan selective expansion to 5,000+ papers
+
+**Context**: Session 45 fixed foundation (100% citation links working). Data quality standards documented. Chuck's priority: scale intelligently with better paper selection.
+
+**Three Paths Forward**:
+- **Path A**: Audit 2,021 papers for mechanism richness (identify high-value papers)
+- **Path B**: Execute expansion cycle (fetch 100-200 new papers, extract mechanisms, find 20-30 new discoveries)
+- **Path C**: Hybrid (audit + small expansion to test workflow)
+
+**Recommendation**: Path C (audit sample + test expansion workflow with 50 papers)
+
+---
+
+**Path A: Audit Existing 2,021 Papers (2-3 hours)**
+
+**Goal**: Analyze existing corpus for mechanism richness and identify high-value papers
 
 **Tasks**:
-- [ ] Read existing discoveries.json to understand all 30 discoveries
-- [ ] Select 5-10 discoveries for editorial treatment (prioritize excellent rating + high similarity)
-- [ ] For each discovery, write:
-  - [ ] Background paragraph (what each paper studied, different contexts)
-  - [ ] Connection paragraph (the structural isomorphism, explained clearly)
-  - [ ] Implications paragraph (why this matters, potential applications)
-- [ ] Update discoveries_editorial.json with completed body content
-- [ ] Test build and verify editorial display
-- [ ] Commit changes
+- [ ] Sample 100 random papers from database
+- [ ] Check abstracts for mechanism indicators (feedback, network, threshold, etc.)
+- [ ] Calculate "mechanism richness score" per domain
+- [ ] Identify domains with <70% hit rate
+- [ ] Document findings: which domains worth re-extracting, which to deprioritize
+- [ ] Create paper selection criteria for future fetches
 
 **Success Criteria**:
-- [ ] 5-10 discoveries have complete editorial content
-- [ ] Body content is 450-600 words per discovery
-- [ ] Writing follows EDITORIAL_TEMPLATE_V2.md guidelines
+- [ ] Mechanism richness analysis for all 25+ domains
+- [ ] Prioritized list of high-value domains
+- [ ] Selection criteria documented
+- [ ] Recommendations for Session 47+ expansion
+
+---
+
+**Path B: Execute Expansion Cycle (4-5 hours)**
+
+**Goal**: Test full workflow with 50-100 new papers from high-value domains
+
+**Tasks**:
+- [ ] Review GROWTH_STRATEGY.md (Session 39 - Tier 1 domains)
+- [ ] Fetch 50-100 papers from cs.AI, physics.soc-ph, econ (Tier 1 domains)
+- [ ] Extract mechanisms using manual or LLM-guided process
+- [ ] Generate embeddings and match candidates (threshold ≥0.35)
+- [ ] Manual curation: rate candidates, select 10-20 new discoveries
+- [ ] Run validation: python scripts/validate_discoveries.py
+- [ ] Update discoveries.json and commit
+
+**Success Criteria**:
+- [ ] 50-100 new papers in database with valid arxiv_ids
+- [ ] 20-40 new mechanisms extracted (≥50% hit rate)
+- [ ] 10-20 new verified discoveries added
+- [ ] Validation passes (0 errors)
 - [ ] Build succeeds with 0 errors
 
 ---
 
-**Path B: Expansion Planning (2-3 hours)**
+**Path C: Hybrid Approach (3-4 hours) ← RECOMMENDED**
 
-**Goal**: Plan next expansion cycle (Sessions 46-50)
+**Goal**: Quick audit + small expansion to test workflow
 
 **Tasks**:
-- [ ] Review GROWTH_STRATEGY.md (Session 39 analysis)
-- [ ] Identify target domain pairs (from Tier 1: cs↔physics, econ↔physics)
-- [ ] Plan paper selection strategy (how many papers, which domains)
-- [ ] Estimate timeline and effort for expansion cycle
-- [ ] Document plan in EXPANSION_PLAN_SESSIONS_46_50.md
-- [ ] Update DAILY_GOALS.md with roadmap
+- [ ] Audit 50 random papers for mechanism richness (1 hour)
+- [ ] Identify 2-3 high-value domains from audit
+- [ ] Fetch 50 new papers from those domains (30 min)
+- [ ] Extract 10-20 mechanisms (1 hour)
+- [ ] Generate candidates and curate 5-10 new discoveries (1.5 hours)
+- [ ] Document lessons learned for Session 47+ full expansion
 
 **Success Criteria**:
-- [ ] Clear expansion plan documented
-- [ ] Target: 20-30 new verified discoveries
-- [ ] Domain balance maintained
-- [ ] Realistic timeline (6-10 hours per cycle)
-
----
-
-**Optional Cleanup (30 min)**
-
-**Tasks**:
-- [ ] Delete unused `components/FilterBar.tsx`
-- [ ] Refactor home/about pages to use Button component
-- [ ] Run color contrast validation on domain badges
+- [ ] Quick audit identifies promising domains
+- [ ] 50 new papers added
+- [ ] 5-10 new discoveries verified
+- [ ] Workflow tested and refined
+- [ ] Clear plan for Session 47 full expansion
 
 ---
 
 **⚠️ Decision Point**:
-Before starting, decide:
-1. **Editorial writing** (makes current 30 discoveries stronger)
-2. **Expansion planning** (prepares for scaling to 50-100 discoveries)
-3. **Both** (split session 50/50)
+- **Path A**: Research-focused (no new discoveries, but better strategy)
+- **Path B**: Execution-focused (20+ new discoveries, no audit)
+- **Path C**: Balanced (small expansion + lessons learned)
 
-Ask Chuck if unclear which path to prioritize.
+**Recommendation**: Path C - tests workflow, validates data quality standards, provides foundation for larger expansion in Session 47-50.

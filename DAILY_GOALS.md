@@ -4,19 +4,31 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 42 - User Interview & Polish 🎨
+## COMPLETED: Session 42 - Design Foundation ✅
 
-**Status**: 🎯 **READY FOR FEEDBACK** 🎯
+**Status**: ✅ **FOUNDATION STARTED** (Not Complete)
 
-**Context**: analog.quest v1 is LIVE! Session 41 deployed the site. Now gather Chuck's feedback and polish into the "real v1" ready for public launch.
+**What Was Done**:
+- Warm design system defined (colors, typography, spacing)
+- Navigation and Footer redesigned
+- Home page simplified and redesigned
+- Components updated (DiscoveryCard, DomainBadge, SimilarityScore)
+- Editorial structure documented (EDITORIAL_STRUCTURE.md, EDITORIAL_TEMPLATE_V2.md)
+- Roadmap created (ROADMAP_43_45.md)
 
-**Timeline**: 3-4 hours
+**What Was NOT Done**:
+- Design system not "locked in" - just started
+- Only home page redesigned (discoveries/methodology/about still use old design)
+- Editorial structure defined but not implemented in code
+- No data migration plan
+- No accessibility validation
+- No testing strategy
 
-**⚠️ IMPORTANT FOR SESSION 42 AGENT**: Read **SESSION42_PREP.md** before starting!
+**⚠️ SESSION 43 MUST FIX THIS**: See SESSION43_ONBOARDING.md
 
 ---
 
-### Session 42: User Interview & Polish (3-4 hours)
+## UPCOMING: Session 43 - Design System Lock-In & Page Redesigns 🎨
 
 **Goal**: Interview Chuck about the live site, gather feedback, implement polish improvements
 
@@ -73,24 +85,99 @@ Conduct structured interview with Chuck covering:
 
 ---
 
-## NEXT: Session 43 - Expansion Validation 📈
+**Status**: 🚨 **CRITICAL - READ SESSION43_ONBOARDING.MD FIRST** 🚨
 
-**After** Session 42 polish is complete.
-
-**Goal**: Validate GROWTH_STRATEGY.md by adding 20-30 new verified isomorphisms
-
-**Approach**:
-- Extract 30-40 mechanisms from Tier 1 domain pairs (cs↔physics, econ↔physics)
-- Generate 100-150 candidates using semantic embeddings
-- Manual curation → 20-30 new verified discoveries
-- Update frontend → 50-60 total discoveries
-- Prove expansion system works before Session 44 launch
+**Context**: Session 42 started design foundation but didn't finish. Your job is to LOCK IT IN before scaling resumes.
 
 **Timeline**: 6-8 hours
 
-**Deliverable**: analog.quest with 50-60 discoveries (was 30)
+**⚠️ CRITICAL**: Read **SESSION43_ONBOARDING.md** before doing ANYTHING. It contains:
+- Honest assessment of what Session 42 actually did
+- 10 critical issues you must address
+- Clear task breakdown
+- Red flags to watch for
 
-See **ROADMAP_42_44.md** for complete three-session plan!
+---
+
+### Session 43: Lock In Design & Redesign Pages (6-8 hours)
+
+**Goal**: Complete design foundation, redesign all pages, prepare infrastructure for scale
+
+**Mission**: Make design system sustainable and apply it consistently across ALL pages
+
+**⚠️ DO NOT SKIP TO EXPANSION**: Scaling on broken foundation will compound problems
+
+**Tasks**:
+
+**Part 1: Lock In Design System (2 hours)**
+- [ ] Read SESSION43_ONBOARDING.md completely
+- [ ] Create `lib/design-tokens.ts` with all colors, spacing, typography
+- [ ] Refactor components to use design tokens (not hardcoded Tailwind)
+- [ ] Standardize button styles (consider Button component)
+- [ ] Validate color contrast (WCAG AA minimum)
+- [ ] Document in `DESIGN_SYSTEM.md`
+- [ ] Test on real mobile device
+
+**Part 2: Redesign Remaining Pages (3 hours)**
+- [ ] Redesign `/discoveries` page:
+  - Remove/simplify complex filtering
+  - Apply warm palette
+  - Show 12-20 cards (not all 30)
+  - Clean grid layout
+- [ ] Redesign `/methodology` page:
+  - Remove emojis, blue theme
+  - Apply warm palette
+  - Simplify content
+- [ ] Redesign `/about` page:
+  - More serious tone
+  - Warm palette
+  - Honest story (6 weeks, 42 sessions)
+- [ ] Redesign `/discoveries/[id]` pages:
+  - Prepare for editorial layout
+  - Warm palette
+  - Better paper context display
+
+**Part 3: Implement Editorial Data Layer (1-2 hours)**
+- [ ] Create `app/data/discoveries_editorial.json` template
+- [ ] Update DiscoveryCard to show editorial title (with fallback)
+- [ ] Update discovery detail page for editorial body
+- [ ] Add tags display
+- [ ] Add evidence basis note section
+
+**Part 4: Infrastructure Audit (1 hour)**
+- [ ] Run Lighthouse audit on all pages
+- [ ] Check bundle size
+- [ ] Update `TECHNICAL_DEBT.md` with new findings
+- [ ] Create `TESTING_STRATEGY.md`
+- [ ] Update ROADMAP_43_45.md if needed
+
+**Part 5: Documentation & Handoff (30 min)**
+- [ ] Update PROGRESS.md with honest Session 43 summary
+- [ ] Update DAILY_GOALS.md with Session 44 plan
+- [ ] Create SESSION43_HANDOFF.md for Session 44
+- [ ] Commit all changes
+
+**Success Criteria**:
+- [ ] ✅ ALL pages use warm design consistently (no blue/old design anywhere)
+- [ ] ✅ Design system documented with design tokens
+- [ ] ✅ Color contrast validated (WCAG AA)
+- [ ] ✅ Editorial data structure implemented (even if content is placeholder)
+- [ ] ✅ Technical debt documented
+- [ ] ✅ Build succeeds with 0 errors
+- [ ] ✅ Session 44 agent has clear plan
+
+**Time Budget**: 6-8 hours
+
+**Deliverable**: Sustainable design foundation ready for Session 44 expansion
+
+---
+
+**⚠️ RED FLAGS - STOP AND ASK CHUCK IF**:
+- Design system changes break layouts
+- Color contrast fails WCAG AA
+- Redesigning reveals fundamental UX problems
+- Technical debt is worse than documented
+- Session will take >8 hours
 
 ---
 

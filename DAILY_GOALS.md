@@ -4,6 +4,28 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
+## COMPLETED: Session 44 - Visual Consistency + Editorial Layer ✅
+
+**Status**: ✅ **VISUAL CONSISTENCY + EDITORIAL INFRASTRUCTURE COMPLETE**
+
+**What Was Done**:
+- ✅ Discovery detail pages redesigned with warm palette (all 30 pages)
+- ✅ ComparisonView component updated with warm design
+- ✅ Editorial data structure created (discoveries_editorial.json)
+- ✅ Editorial display code implemented with fallbacks
+- ✅ Performance baselines documented in TECHNICAL_DEBT.md
+- ✅ All 38 pages now use consistent warm design
+- ✅ Build: 0 errors, 38 pages generated
+
+**What Was NOT Done**:
+- Editorial body content not written yet (infrastructure ready for Session 45)
+- FilterBar component not deleted (low priority)
+- Button component not fully adopted (low priority)
+
+**Time**: ~3 hours (ahead of 5-7 hour estimate!)
+
+---
+
 ## COMPLETED: Session 43 - Design Foundation Lock-In ✅
 
 **Status**: ✅ **FOUNDATION LOCKED IN**
@@ -26,140 +48,92 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## 🎯 NEXT SESSION: 44 - Complete Visual Consistency + Editorial Layer
+## 🎯 NEXT SESSION: 45 - Editorial Content Writing (or Expansion Planning)
 
-**⚠️⚠️⚠️ IF YOU ARE SESSION 44 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
+**⚠️⚠️⚠️ IF YOU ARE SESSION 45 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
 
 **YOUR FIRST ACTION MUST BE:**
-1. Read **SESSION43_HANDOFF.md** (comprehensive handoff from Session 43)
-2. Read **DESIGN_SYSTEM.md** (design reference)
-3. Read **EDITORIAL_STRUCTURE.md** (editorial spec)
+1. Read **PROGRESS.md** (Session 44 summary - visual consistency complete)
+2. Read **EDITORIAL_STRUCTURE.md** (editorial spec and writing guidelines)
+3. Read **EDITORIAL_EXAMPLES.md** (2 example pieces: #9 and #13)
+4. Read **app/data/discoveries_editorial.json** (current template with 3 entries)
 
-**Status**: Foundation is LOCKED IN - your job is to complete visual consistency and add editorial layer
+**Status**: Visual consistency complete, editorial infrastructure ready, body content needed
 
-**Timeline**: 5-7 hours
-
----
-
-### Session 44: Complete Design + Editorial Layer (5-7 hours)
-
-**Goal**: Complete visual consistency across ALL pages and implement editorial data structure
-
-**Context**: Session 43 locked in design foundation and redesigned 3/4 main pages. Discovery detail pages still need warm palette.
-
-**Priority Order**: Visual consistency FIRST (detail pages), editorial layer SECOND
+**Timeline**: 3-5 hours (flexible based on priority)
 
 ---
 
-**Part 1: Redesign Discovery Detail Pages (1-2 hours) - MUST DO**
+### Session 45: Editorial Content Writing (or Expansion Planning) (3-5 hours)
 
-**Why**: All main pages use warm design, but detail pages still use old blue/gray. Breaks trust.
+**Goal**: Write editorial body content for top discoveries OR plan next expansion cycle
+
+**Context**: Session 44 completed all visual consistency and editorial infrastructure. Site is fully consistent with warm design. Editorial data structure exists with template entries (IDs 1, 9, 13) but body content is null.
+
+**Two Paths Forward**:
+- **Path A**: Write editorial content (5-10 discoveries, 450-600 words each)
+- **Path B**: Plan expansion cycle (new papers, mechanisms, discoveries)
+
+**Recommendation**: Discuss with Chuck which path to take.
+
+---
+
+**Path A: Editorial Content Writing (3-5 hours)**
+
+**Goal**: Write 450-600 word editorial pieces for top 5-10 discoveries
 
 **Tasks**:
-- [ ] Read existing `/app/discoveries/[id]/page.tsx`
-- [ ] Read `components/ComparisonView.tsx`
-- [ ] Apply warm palette:
-  - [ ] Background: bg-cream (not bg-white)
-  - [ ] Text: text-brown (not text-gray)
-  - [ ] Accents: teal (not blue)
-  - [ ] Paper cards: bg-teal-light/50 with border-brown/10
-  - [ ] Headings: font-serif font-normal (not font-bold)
-  - [ ] Labels: font-mono (for metadata)
-- [ ] Test build after changes
-- [ ] Commit: "Session 44 Part 1: Redesign discovery detail pages"
+- [ ] Read existing discoveries.json to understand all 30 discoveries
+- [ ] Select 5-10 discoveries for editorial treatment (prioritize excellent rating + high similarity)
+- [ ] For each discovery, write:
+  - [ ] Background paragraph (what each paper studied, different contexts)
+  - [ ] Connection paragraph (the structural isomorphism, explained clearly)
+  - [ ] Implications paragraph (why this matters, potential applications)
+- [ ] Update discoveries_editorial.json with completed body content
+- [ ] Test build and verify editorial display
+- [ ] Commit changes
 
 **Success Criteria**:
-- [ ] All 30 detail pages use warm palette
-- [ ] Matches design of /discoveries, /methodology, /about
+- [ ] 5-10 discoveries have complete editorial content
+- [ ] Body content is 450-600 words per discovery
+- [ ] Writing follows EDITORIAL_TEMPLATE_V2.md guidelines
 - [ ] Build succeeds with 0 errors
 
 ---
 
-**Part 2: Implement Editorial Data Structure (2-3 hours) - MUST DO**
+**Path B: Expansion Planning (2-3 hours)**
 
-**Why**: Raw structural_explanation feels clinical. Need human-facing editorial layer.
+**Goal**: Plan next expansion cycle (Sessions 46-50)
 
 **Tasks**:
-- [ ] Read EDITORIAL_STRUCTURE.md (specification)
-- [ ] Read EDITORIAL_TEMPLATE_V2.md (writing guidelines)
-- [ ] Read EDITORIAL_EXAMPLES.md (2 example pieces)
-- [ ] Create `app/data/discoveries_editorial.json`:
-  ```json
-  {
-    "1": {
-      "editorial_title": "Free-Riders & Epidemics",
-      "public_title": "When self-interest creates collective harm",
-      "body": null,  // Placeholder - Session 45 will write
-      "tags": ["cooperation", "public goods"],
-      "evidence_basis": "Based on 2 papers (econ + q-bio)",
-      "mechanism_anchor": "Individual optimization → collective harm"
-    }
-  }
-  ```
-- [ ] Update discovery detail page to display editorial fields:
-  - [ ] Show editorial_title if available (fallback to auto-generated)
-  - [ ] Show tags as badges
-  - [ ] Show evidence_basis note
-  - [ ] Show editorial body if available (fallback to structural_explanation)
-- [ ] Test with 1-2 example entries
-- [ ] Commit: "Session 44 Part 2: Implement editorial data structure"
+- [ ] Review GROWTH_STRATEGY.md (Session 39 analysis)
+- [ ] Identify target domain pairs (from Tier 1: cs↔physics, econ↔physics)
+- [ ] Plan paper selection strategy (how many papers, which domains)
+- [ ] Estimate timeline and effort for expansion cycle
+- [ ] Document plan in EXPANSION_PLAN_SESSIONS_46_50.md
+- [ ] Update DAILY_GOALS.md with roadmap
 
 **Success Criteria**:
-- [ ] Editorial data file exists with correct schema
-- [ ] Detail pages display editorial content with fallbacks
-- [ ] Build succeeds with 0 errors
+- [ ] Clear expansion plan documented
+- [ ] Target: 20-30 new verified discoveries
+- [ ] Domain balance maintained
+- [ ] Realistic timeline (6-10 hours per cycle)
 
 ---
 
-**Part 3: Performance Audit (30 min) - SHOULD DO**
-
-**Why**: Establish performance baselines before scaling
-
-**Tasks**:
-- [ ] Run `npm run build` and document bundle sizes
-- [ ] Run Lighthouse audit on key pages:
-  - [ ] Home page (/)
-  - [ ] Discoveries page (/discoveries)
-  - [ ] One detail page (/discoveries/1)
-- [ ] Document results in TECHNICAL_DEBT.md
-- [ ] Note any issues for future optimization
-
-**Success Criteria**:
-- [ ] Lighthouse scores documented
-- [ ] Bundle sizes recorded
-- [ ] Baselines established for future comparison
-
----
-
-**Part 4: Cleanup (30 min) - NICE TO HAVE**
+**Optional Cleanup (30 min)**
 
 **Tasks**:
 - [ ] Delete unused `components/FilterBar.tsx`
 - [ ] Refactor home/about pages to use Button component
-- [ ] Update PROGRESS.md with Session 44 summary
-- [ ] Commit: "Session 44 Part 4: Cleanup and polish"
+- [ ] Run color contrast validation on domain badges
 
 ---
 
-**Time Budget**: 5-7 hours total
-- Part 1 (Detail pages): 1-2 hours
-- Part 2 (Editorial layer): 2-3 hours
-- Part 3 (Performance): 30 min
-- Part 4 (Cleanup): 30 min
-- Buffer: 30-60 min
+**⚠️ Decision Point**:
+Before starting, decide:
+1. **Editorial writing** (makes current 30 discoveries stronger)
+2. **Expansion planning** (prepares for scaling to 50-100 discoveries)
+3. **Both** (split session 50/50)
 
----
-
-**Success Criteria for Session 44**:
-- [ ] ✅ ALL pages use warm design consistently (no old blue/gray anywhere)
-- [ ] ✅ Editorial data structure implemented (even with placeholder content)
-- [ ] ✅ Performance baselines documented
-- [ ] ✅ Build succeeds with 0 errors
-- [ ] ✅ Session 45 has clear path to write editorial pieces
-
----
-
-**⚠️ Red Flags - Stop and Document if**:
-- Design changes break layouts (document in QUESTIONS.md)
-- Editorial structure doesn't match spec (read EDITORIAL_STRUCTURE.md again)
-- Session taking >7 hours (scope too large, document what's NOT done)
+Ask Chuck if unclear which path to prioritize.

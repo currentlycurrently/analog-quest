@@ -1,4 +1,5 @@
 import discoveriesData from '@/app/data/discoveries.json';
+import editorialData from '@/app/data/discoveries_editorial.json';
 
 export interface Discovery {
   id: number;
@@ -20,6 +21,19 @@ export interface Discovery {
     title: string;
     mechanism: string;
   };
+}
+
+export interface Editorial {
+  editorial_title: string;
+  public_title: string;
+  body: string | null;
+  tags: string[];
+  evidence_basis: string;
+  mechanism_anchor: string;
+}
+
+export interface DiscoveryWithEditorial extends Discovery {
+  editorial?: Editorial;
 }
 
 export interface DiscoveriesData {
@@ -60,6 +74,25 @@ export function getDomainPairs() {
 // Get a single discovery by ID
 export function getDiscoveryById(id: number): Discovery | undefined {
   return getAllDiscoveries().find((d) => d.id === id);
+}
+
+// Get editorial data for a discovery (if available)
+export function getEditorialById(id: number): Editorial | undefined {
+  const editorials = (editorialData as any).editorials;
+  const editorial = editorials[id.toString()];
+  return editorial || undefined;
+}
+
+// Get a discovery with editorial data merged in
+export function getDiscoveryWithEditorial(id: number): DiscoveryWithEditorial | undefined {
+  const discovery = getDiscoveryById(id);
+  if (!discovery) return undefined;
+
+  const editorial = getEditorialById(id);
+  return {
+    ...discovery,
+    editorial: editorial || undefined,
+  };
 }
 
 // Get featured discoveries (top 3 excellent by similarity)

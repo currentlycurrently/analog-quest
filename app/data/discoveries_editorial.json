@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "description": "Editorial layer for discovery pages - human-facing titles, tags, and narrative content",
+    "created": "Session 44 - 2026-02-11",
+    "status": "template created, body content to be written in Session 45+",
+    "schema_version": "1.0"
+  },
+  "editorials": {
+    "1": {
+      "editorial_title": "Cell Size Control",
+      "public_title": "How cells maintain the right size across different phases",
+      "body": null,
+      "tags": ["feedback", "control-systems", "multi-stability"],
+      "evidence_basis": "Based on 2 papers (q-bio + unknown domain)",
+      "mechanism_anchor": "Phase-specific feedback → size homeostasis"
+    },
+    "9": {
+      "editorial_title": "When Free Riders Meet Epidemics",
+      "public_title": "How heterogeneity creates both heroes and free-riders",
+      "body": null,
+      "tags": ["cooperation", "heterogeneity", "feedback", "multi-stability"],
+      "evidence_basis": "Based on 2 papers (q-bio + physics)",
+      "mechanism_anchor": "Heterogeneity creates leverage points AND weak links"
+    },
+    "13": {
+      "editorial_title": "The Advantage of Being Connected",
+      "public_title": "Network position determines productivity through complementarities",
+      "body": null,
+      "tags": ["networks", "centrality", "strategic-behavior", "feedback"],
+      "evidence_basis": "Based on 2 papers (economics + computer science)",
+      "mechanism_anchor": "Network position → diverse access → productivity gains"
+    }
+  },
+  "notes": {
+    "usage": "Discovery detail pages should check if editorial exists for a given ID and use those fields. If not, fall back to auto-generated content.",
+    "body_format": "450-600 words, 3-4 paragraphs: Background, Connection, Implications",
+    "title_style": "Descriptive and intriguing, not generic (e.g., 'When X Meets Y' not 'Discovery #N')",
+    "tags": "Mechanism types for filtering, lowercase with hyphens"
+  }
+}

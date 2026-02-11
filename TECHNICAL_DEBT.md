@@ -1,205 +1,123 @@
-# Technical Debt & Known Issues
+# Technical Debt - Analog Quest
 
-**Last Updated**: Session 42 (2026-02-11)
-**Status**: Foundation phase - expect debt, manage it proactively
-
----
-
-## 🔴 Critical (Fix in Session 43)
-
-### 1. Design System Incomplete
-- **Issue**: Colors/typography defined but not tokenized
-- **Location**: `tailwind.config.ts`, components with hardcoded colors
-- **Impact**: Inconsistent styling, hard to maintain
-- **Fix**: Create `lib/design-tokens.ts`, refactor components
-- **Estimate**: 2 hours
-
-### 2. Pages Use Mixed Design Systems
-- **Issue**: Home page uses warm design, other pages use old blue/gray
-- **Location**: `/discoveries`, `/methodology`, `/about`, `/discoveries/[id]`
-- **Impact**: Site looks half-finished
-- **Fix**: Redesign all pages with warm system
-- **Estimate**: 3 hours
-
-### 3. Editorial Structure Not Implemented
-- **Issue**: Structure documented but not in code/data
-- **Location**: No `discoveries_v2.json`, detail pages show raw data
-- **Impact**: Can't launch with current clinical display
-- **Fix**: Implement editorial data layer + update UI
-- **Estimate**: 2 hours
+**Last Updated**: Session 43 - 2026-02-11
+**Status**: Documented and tracked
 
 ---
 
-## 🟡 Important (Fix in Session 44-45)
+## Critical Issues (Must Fix Before Scale)
 
-### 4. Source Link Data Missing
-- **Issue**: 82% of papers have `arxiv_id: "N/A"`
-- **Location**: `app/data/discoveries.json` (49/60 paper entries)
-- **Root Cause**: Sessions 34-37 LLM extraction didn't capture metadata
-- **Impact**: Can't verify claims, trust issue
-- **Fix Options**:
-  - (a) Query database to backfill arXiv IDs
-  - (b) Add field context in editorial pieces
-  - (c) Accept limitation, document it
-- **Estimate**: 1-2 hours
+### 1. Source Links Missing (82% of discoveries)
+**Severity**: High  
+**Impact**: Trust, verifiability  
+**Status**: Documented limitation
 
-### 5. Data Migration Strategy Missing
-- **Issue**: Plan says "12 discoveries" but data has 30, no migration plan
-- **Location**: No migration script, no archiving strategy
-- **Impact**: Could lose work, confuse users
-- **Fix**: Create migration script + archiving plan
-- **Estimate**: 1 hour
+**Problem**:
+- 82% of papers have `arxiv_id: "N/A"`
+- Papers came from LLM extraction (Sessions 34-37) without full metadata
+- Users cannot verify claims
 
-### 6. No Testing Infrastructure
-- **Issue**: No unit tests, integration tests, or visual regression
-- **Location**: Entire codebase
-- **Impact**: Breaking changes won't be caught
-- **Fix**: Add smoke tests at minimum (Playwright? Vitest?)
-- **Estimate**: 2-3 hours
-
-### 7. Accessibility Not Validated
-- **Issue**: No WCAG compliance check
-- **Location**: Color contrast, font sizes, keyboard nav
-- **Impact**: May exclude users, legal risk
-- **Fix**: Run axe-core, fix issues
-- **Estimate**: 1-2 hours
+**Recommendation**: Document limitation clearly on discovery pages
 
 ---
 
-## 🟢 Minor (Fix When Convenient)
+### 2. Editorial Layer Not Implemented
+**Severity**: Medium  
+**Impact**: User experience  
+**Status**: Documented but not built
 
-### 8. Component Library Inconsistency
-- **Issue**: Some components use Tailwind directly, some don't
-- **Location**: DomainBadge (hardcoded colors), SimilarityScore (hardcoded thresholds)
-- **Impact**: Hard to maintain consistency
-- **Fix**: Extract to shared theme, create design primitives
-- **Estimate**: 2 hours
+**What's Done**:
+- EDITORIAL_STRUCTURE.md created
+- EDITORIAL_TEMPLATE_V2.md created
+- 2 example pieces written
 
-### 9. No Performance Baselines
-- **Issue**: No Lighthouse scores, bundle size tracking
-- **Location**: N/A - missing monitoring
-- **Impact**: Can't detect regressions
-- **Fix**: Document baselines, set up monitoring
-- **Estimate**: 30 min
+**What's NOT Done**:
+- No `discoveries_editorial.json`
+- No code to display editorial content
 
-### 10. No Feature Flags
-- **Issue**: Can't toggle features (e.g., new design vs old)
-- **Location**: No flag system
-- **Impact**: Can't A/B test, hard to rollback
-- **Fix**: Add simple flag system (env vars at minimum)
-- **Estimate**: 1 hour
-
-### 11. Hardcoded Copy
-- **Issue**: All UI text hardcoded in components
-- **Location**: All pages/components
-- **Impact**: Can't easily update copy, no i18n support
-- **Fix**: Extract to content files (optional)
-- **Estimate**: 3-4 hours (low priority)
-
-### 12. No Error Boundaries
-- **Issue**: React errors crash entire app
-- **Location**: No error boundaries in layout/pages
-- **Impact**: Poor UX on errors
-- **Fix**: Add error boundaries
-- **Estimate**: 30 min
+**Recommendation**: Session 44 priority
 
 ---
 
-## 📊 Scalability Concerns (Long-term)
+### 3. Discovery Detail Pages Use Old Design
+**Severity**: Medium  
+**Impact**: Visual consistency  
+**Status**: Not fixed in Session 43
 
-### 13. Static Generation Limits
-- **Current**: 38 static pages (fine)
-- **At 100 discoveries**: 103 pages (fine)
-- **At 1000 discoveries**: 1003 pages (build time issues?)
-- **Fix**: Consider ISR (Incremental Static Regeneration) or pagination
-- **When**: Session 100+
-
-### 14. Discovery Card Grid
-- **Current**: 3 featured on home, 30 on discoveries page
-- **At 100 discoveries**: Need pagination, filtering, search
-- **Fix**: Rethink browse UX for scale
-- **When**: Session 50+
-
-### 15. Data File Size
-- **Current**: discoveries.json is 150KB (fine)
-- **At 1000 discoveries**: ~5MB JSON (too large for client-side)
-- **Fix**: Split into chunks, lazy load, or move to database
-- **When**: Session 100+
+**Recommendation**: Session 44 should redesign detail pages
 
 ---
 
-## 🔧 Technical Improvements (Nice-to-Have)
+## Component Debt
 
-### 16. TypeScript Strictness
-- **Current**: `strict: true` but some `any` types
-- **Location**: Component props, data interfaces
-- **Fix**: Add stricter types
-- **Estimate**: 2 hours
+### 4. FilterBar Component Unused
+- Component exists but not used (discoveries page simplified)
+- Should be deleted
 
-### 17. Code Splitting
-- **Current**: Single bundle (102KB shared JS)
-- **Fix**: Split routes, lazy load components
-- **Estimate**: 1 hour
-
-### 18. Image Optimization
-- **Current**: No images yet
-- **Future**: When adding Open Graph images, use next/image
-- **Estimate**: N/A
-
-### 19. Analytics
-- **Current**: No analytics (Vercel Analytics available)
-- **Fix**: Add minimal tracking (page views, discovery views)
-- **Estimate**: 30 min
-
-### 20. SEO Enhancements
-- **Current**: Basic meta tags
-- **Missing**: Structured data (Schema.org), rich snippets
-- **Fix**: Add JSON-LD for each discovery
-- **Estimate**: 1-2 hours
+### 5. Button Component Not Adopted
+- Created in Session 43 but not used in all pages
+- Should refactor pages to use Button component
 
 ---
 
-## 🎯 Debt Reduction Plan
+## Infrastructure Debt
 
-### Session 43 Focus (Must Fix)
-- [ ] Design system tokenization
-- [ ] Redesign all pages
-- [ ] Editorial data structure implementation
-- [ ] Accessibility validation (color contrast minimum)
+### 6. No Performance Baselines
+- No Lighthouse scores documented
+- No bundle size tracking
+- Current: ~102KB shared JS, 38 pages
 
-### Session 44 Focus
-- [ ] Data migration strategy
-- [ ] Source link backfill or workaround
-- [ ] Performance baselines
+### 7. No Testing Strategy
+- No unit/integration/visual tests
+- Manual QA only
+- See TESTING_STRATEGY.md for plan
 
-### Session 45 Focus
-- [ ] Testing infrastructure
-- [ ] Error boundaries
-- [ ] Final polish
-
-### Long-term (Session 50+)
-- [ ] Component library refactor
-- [ ] Feature flag system
-- [ ] Scalability improvements
+### 8. No Analytics
+- Don't know user behavior
+- Can't measure engagement
+- Recommendation: Add post-launch
 
 ---
 
-## 📝 How to Use This Document
+## Scalability Unknowns
 
-**For each session**:
-1. Review this file at start
-2. Fix 1-3 items from "Critical" or "Important"
-3. Add any new debt you create
-4. Update estimates based on learnings
-5. Commit changes to this file
+### 9. Design Scales to 100+ Discoveries?
+- Works well with 30 discoveries
+- Unknown at 100, 500, 1000
+- May need pagination later
 
-**Don't**:
-- Ignore this file (debt compounds)
-- Fix everything at once (unsustainable)
-- Create new debt without documenting it
-
-**Goal**: Keep debt manageable, prevent bankruptcy
+### 10. Domain Badge Colors Not Validated
+- Assumed WCAG AA compliant
+- Not tested with contrast validator
 
 ---
 
-**Debt is inevitable. Managing it proactively is what matters.**
+## Low Priority
+
+- No dark mode (v2 feature)
+- No feature flags (v2 feature)
+- No error boundaries (v2 feature)
+- No data validation layer (v2 feature)
+
+---
+
+## Mitigation Plan
+
+**Session 43** (current):
+- [x] Document technical debt
+- [x] Create TESTING_STRATEGY.md
+
+**Session 44**:
+- [ ] Implement editorial data structure
+- [ ] Redesign discovery detail pages
+- [ ] Run Lighthouse audit
+- [ ] Delete FilterBar component
+
+**Sessions 45-50**:
+- [ ] Add Button component everywhere
+- [ ] Performance monitoring setup
+- [ ] Basic smoke tests
+
+---
+
+**Risk Level**: MEDIUM - No blockers for v1 launch, but editorial layer needed for quality

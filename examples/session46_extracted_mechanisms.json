@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "session": 46,
+    "date": "2026-02-11",
+    "extraction_method": "Manual (domain-neutral)",
+    "total_mechanisms": 5,
+    "papers_processed": 5,
+    "avg_paper_score": 8.2
+  },
+  "mechanisms": [
+    {
+      "paper_id": 2068,
+      "arxiv_id": "2602.07231v1",
+      "domain": "q-bio",
+      "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+      "mechanism": "Periodic impulsive interventions introduce new agents into a two-population system where incompatibility mechanism prevents successful pairing between populations. Environmental stress (temperature) induces temporary loss of distinguishing trait in introduced population. System exhibits threshold conditions for long-term persistence of intervention effects versus reversion to pre-intervention equilibrium. Trade-off between intervention frequency, agent fitness costs, and environmental tolerance determines persistence threshold."
+    },
+    {
+      "paper_id": 2064,
+      "arxiv_id": "2602.08188v1",
+      "domain": "q-bio",
+      "title": "The Great Filter hypothesis -- a new Great Filter?",
+      "mechanism": "Species reaching ecological dominance experiences reduced selective pressure for high reproduction rates. As intelligence and technology advance, mortality reduction (medicine) decouples from reproduction rate (contraception), enabling conscious reproduction control. Economic, social, and educational factors amplify reproduction decline. Population dynamics are exponential in both growth and decline phases, creating extinction threshold when decline rate exceeds replacement. Intelligence + technology + reduced predation → demographic collapse feedback loop."
+    },
+    {
+      "paper_id": 2063,
+      "arxiv_id": "2602.08641v1",
+      "domain": "q-bio",
+      "title": "Modeling Protein Evolution via Generative Inference From Monte Carlo Chains to Population Genetics",
+      "mechanism": "Evolutionary trajectories on fitness landscapes shaped by two competing effects: fitness-driven selection and phylogenetic correlations from finite population size. Independent sampling generates unrealistic gradual sweeps and ignores historical constraints. Finite-population dynamics generate phylogenetic structure, selective sweeps, and mutational abundances as emergent properties without external specification. Trade-off: finite-population models capture realistic dynamics but deviate from equilibrium distribution at long times. Proper evolutionary modeling requires accounting for both selective pressure and population structure effects."
+    },
+    {
+      "paper_id": 2061,
+      "arxiv_id": "2602.08840v1",
+      "domain": "q-bio",
+      "title": "Division of labor enables efficient collective decision-making under uncertainty",
+      "mechanism": "Decentralized collective decision-making through heterogeneous threshold-based strategies. Small subset of agents explores continuously (low threshold for action) while majority remains idle until expected reward exceeds threshold (high threshold). Information sharing across group enables synchronized action by majority when conditions improve. Optimal explorer fraction scales sublinearly with group size due to information redundancy. Ecological pressure (cost/reward ratio) modulates heterogeneity: intermediate pressure maximizes diversity, extreme conditions favor homogeneity. No central coordination required - group-level policy emerges from individual threshold rules."
+    },
+    {
+      "paper_id": 2044,
+      "arxiv_id": "2602.09503v1",
+      "domain": "physics",
+      "title": "Structure-aware imitation dynamics on higher-order networks",
+      "mechanism": "Agent strategy updating through structure-aware sampling: number of groups sampled and number of peers consulted within each group jointly determine information diversity. Higher information diversity across groups promotes cooperation in multiplayer dilemmas. Update rules interact with group structure (hypergraph topology): sampling more groups increases cross-group information flow, sampling more peers within groups increases within-group consensus. Weak selection regime reveals analytical threshold for cooperation success as function of information diversity metric. Design principle: diversify information sources across groups to enhance cooperation."
+    }
+  ]
+}

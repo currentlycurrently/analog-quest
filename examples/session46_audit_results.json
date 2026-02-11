@@ -1,0 +1,1017 @@
+{
+  "metadata": {
+    "total_papers_in_db": 2021,
+    "papers_audited": 50,
+    "avg_score": 3.3,
+    "high_value_count": 16,
+    "high_value_pct": 32.0
+  },
+  "domain_stats": [
+    {
+      "domain": "astro-ph",
+      "paper_count": 2,
+      "avg_score": 1.5,
+      "high_value_count": 0,
+      "high_value_pct": 0.0,
+      "assessment": "POOR"
+    },
+    {
+      "domain": "cond-mat",
+      "paper_count": 3,
+      "avg_score": 2.0,
+      "high_value_count": 0,
+      "high_value_pct": 0.0,
+      "assessment": "FAIR"
+    },
+    {
+      "domain": "cs",
+      "paper_count": 26,
+      "avg_score": 3.6538461538461537,
+      "high_value_count": 10,
+      "high_value_pct": 38.46153846153847,
+      "assessment": "GOOD"
+    },
+    {
+      "domain": "econ",
+      "paper_count": 1,
+      "avg_score": 1.0,
+      "high_value_count": 0,
+      "high_value_pct": 0.0,
+      "assessment": "POOR"
+    },
+    {
+      "domain": "math",
+      "paper_count": 2,
+      "avg_score": 0.5,
+      "high_value_count": 0,
+      "high_value_pct": 0.0,
+      "assessment": "POOR"
+    },
+    {
+      "domain": "nlin",
+      "paper_count": 1,
+      "avg_score": 1.0,
+      "high_value_count": 0,
+      "high_value_pct": 0.0,
+      "assessment": "POOR"
+    },
+    {
+      "domain": "physics",
+      "paper_count": 9,
+      "avg_score": 4.222222222222222,
+      "high_value_count": 4,
+      "high_value_pct": 44.44444444444444,
+      "assessment": "GOOD"
+    },
+    {
+      "domain": "q-bio",
+      "paper_count": 4,
+      "avg_score": 4.5,
+      "high_value_count": 2,
+      "high_value_pct": 50.0,
+      "assessment": "GOOD"
+    },
+    {
+      "domain": "q-fin",
+      "paper_count": 2,
+      "avg_score": 1.0,
+      "high_value_count": 0,
+      "high_value_pct": 0.0,
+      "assessment": "POOR"
+    }
+  ],
+  "high_value_papers": [
+    {
+      "paper_id": 571,
+      "arxiv_id": "2602.04710v1",
+      "domain": "physics",
+      "title": "Nonlinear Saturation of the Acoustic Resonant Drag Instability",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1845,
+      "arxiv_id": "2601.17796v1",
+      "domain": "q-bio",
+      "title": "AI and World Models",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 1042,
+      "arxiv_id": "2601.07819v1",
+      "domain": "q-bio",
+      "title": "Using Non-Linear Programming Solvers to Generate Hypothalamus-Pituitary Curves for Patients With Hypothyroidism",
+      "score": 5,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1840,
+      "arxiv_id": "2602.00982v1",
+      "domain": "cs",
+      "title": "Navigating Simply, Aligning Deeply: Winning Solutions for Mouse vs. AI 2025",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 999,
+      "arxiv_id": "2602.04258v1",
+      "domain": "cs",
+      "title": "Multi-Tier UAV Edge Computing Towards Long-Term Energy Stability for Low Altitude Networks",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 716,
+      "arxiv_id": "2601.22316v1",
+      "domain": "physics",
+      "title": "A Generalized Analytical Heat Transfer Model for Enhanced Geothermal Systems: Capturing Fracture Interactions and Correcting Classical Optimistic Predictions",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1182,
+      "arxiv_id": "2602.02033v1",
+      "domain": "cs",
+      "title": "One Size, Many Fits: Aligning Diverse Group-Wise Click Preferences in Large-Scale Advertising Image Generation",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1782,
+      "arxiv_id": "2602.06733v1",
+      "domain": "cs",
+      "title": "Pairwise is Not Enough: Hypergraph Neural Networks for Multi-Agent Pathfinding",
+      "score": 8,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1830,
+      "arxiv_id": "2602.06610v1",
+      "domain": "cs",
+      "title": "Green Optimization: Energy-aware Design of Metaheuristics by Using Machine Learning Surrogates to Cope with Real Problems",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 775,
+      "arxiv_id": "2602.05248v1",
+      "domain": "physics",
+      "title": "Thermodynamic Origin of Degree-Day Scaling in Phase-Change Systems",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 644,
+      "arxiv_id": "2602.03068v1",
+      "domain": "cs",
+      "title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 1439,
+      "arxiv_id": "2602.00780v1",
+      "domain": "cs",
+      "title": "Environment-Aware Adaptive Pruning with Interleaved Inference Orchestration for Vision-Language-Action Models",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1407,
+      "arxiv_id": "2602.03890v1",
+      "domain": "cs",
+      "title": "4DPC$^2$hat: Towards Dynamic Point Cloud Understanding with Failure-Aware Bootstrapping",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 313,
+      "arxiv_id": "2602.05905v1",
+      "domain": "cs",
+      "title": "Codified Finite-state Machines for Role-playing",
+      "score": 5,
+      "categories": [
+        "model",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 1263,
+      "arxiv_id": "2602.00343v1",
+      "domain": "cs",
+      "title": "Standardized Methods and Recommendations for Green Federated Learning",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 570,
+      "arxiv_id": "2602.04730v1",
+      "domain": "physics",
+      "title": "Semiclassical Structure of the Advection--Diffusion Spectrum in Mixed Phase Spaces",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ]
+    }
+  ],
+  "top_10_papers": [
+    {
+      "paper_id": 1782,
+      "arxiv_id": "2602.06733v1",
+      "domain": "cs",
+      "title": "Pairwise is Not Enough: Hypergraph Neural Networks for Multi-Agent Pathfinding",
+      "score": 8,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1182,
+      "arxiv_id": "2602.02033v1",
+      "domain": "cs",
+      "title": "One Size, Many Fits: Aligning Diverse Group-Wise Click Preferences in Large-Scale Advertising Image Generation",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 775,
+      "arxiv_id": "2602.05248v1",
+      "domain": "physics",
+      "title": "Thermodynamic Origin of Degree-Day Scaling in Phase-Change Systems",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 570,
+      "arxiv_id": "2602.04730v1",
+      "domain": "physics",
+      "title": "Semiclassical Structure of the Advection--Diffusion Spectrum in Mixed Phase Spaces",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 571,
+      "arxiv_id": "2602.04710v1",
+      "domain": "physics",
+      "title": "Nonlinear Saturation of the Acoustic Resonant Drag Instability",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1845,
+      "arxiv_id": "2601.17796v1",
+      "domain": "q-bio",
+      "title": "AI and World Models",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 1042,
+      "arxiv_id": "2601.07819v1",
+      "domain": "q-bio",
+      "title": "Using Non-Linear Programming Solvers to Generate Hypothalamus-Pituitary Curves for Patients With Hypothyroidism",
+      "score": 5,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1840,
+      "arxiv_id": "2602.00982v1",
+      "domain": "cs",
+      "title": "Navigating Simply, Aligning Deeply: Winning Solutions for Mouse vs. AI 2025",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 999,
+      "arxiv_id": "2602.04258v1",
+      "domain": "cs",
+      "title": "Multi-Tier UAV Edge Computing Towards Long-Term Energy Stability for Low Altitude Networks",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 716,
+      "arxiv_id": "2601.22316v1",
+      "domain": "physics",
+      "title": "A Generalized Analytical Heat Transfer Model for Enhanced Geothermal Systems: Capturing Fracture Interactions and Correcting Classical Optimistic Predictions",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    }
+  ],
+  "all_results": [
+    {
+      "paper_id": 571,
+      "arxiv_id": "2602.04710v1",
+      "domain": "physics",
+      "title": "Nonlinear Saturation of the Acoustic Resonant Drag Instability",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1088,
+      "arxiv_id": "2601.07827v1",
+      "domain": "cs",
+      "title": "Tensor Algebra Processing Primitives (TAPP): Towards a Standard for Tensor Operations",
+      "score": 2,
+      "categories": [
+        "causal",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 1845,
+      "arxiv_id": "2601.17796v1",
+      "domain": "q-bio",
+      "title": "AI and World Models",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 733,
+      "arxiv_id": "2602.05968v1",
+      "domain": "math",
+      "title": "Stability of the $L^{p}$-Poincar\u00e9 inequality for the Lebesgue and Gaussian probability measures with explicit geometric dependency",
+      "score": 0,
+      "categories": []
+    },
+    {
+      "paper_id": 678,
+      "arxiv_id": "2602.05837v1",
+      "domain": "cs",
+      "title": "Large Data Acquisition and Analytics at Synchrotron Radiation Facilities",
+      "score": 2,
+      "categories": [
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 554,
+      "arxiv_id": "2602.05427v1",
+      "domain": "physics",
+      "title": "A novel geometric phase for optical beams",
+      "score": 1,
+      "categories": [
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 1796,
+      "arxiv_id": "2601.01089v2",
+      "domain": "q-bio",
+      "title": "Central Dogma Transformer: Towards Mechanism-Oriented AI for Cellular Understanding",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 1042,
+      "arxiv_id": "2601.07819v1",
+      "domain": "q-bio",
+      "title": "Using Non-Linear Programming Solvers to Generate Hypothalamus-Pituitary Curves for Patients With Hypothyroidism",
+      "score": 5,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1128,
+      "arxiv_id": "2601.17944v1",
+      "domain": "cs",
+      "title": "Credit Fairness: Online Fairness In Shared Resource Pools",
+      "score": 4,
+      "categories": [
+        "causal",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1498,
+      "arxiv_id": "2602.06964v1",
+      "domain": "cs",
+      "title": "Learning a Generative Meta-Model of LLM Activations",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 863,
+      "arxiv_id": "2601.19369v1",
+      "domain": "q-fin",
+      "title": "Directional Liquidity and Geometric Shear in Pregeometric Order Books",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 1840,
+      "arxiv_id": "2602.00982v1",
+      "domain": "cs",
+      "title": "Navigating Simply, Aligning Deeply: Winning Solutions for Mouse vs. AI 2025",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1914,
+      "arxiv_id": "2602.06238v1",
+      "domain": "cs",
+      "title": "Private Sum Computation: Trade-Offs between Communication, Randomness, and Privacy",
+      "score": 1,
+      "categories": [
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 1961,
+      "arxiv_id": "2602.00644v2",
+      "domain": "cs",
+      "title": "Hardness and Tractability of T_{h+1}-Free Edge Deletion",
+      "score": 2,
+      "categories": [
+        "feedback",
+        "network"
+      ]
+    },
+    {
+      "paper_id": 999,
+      "arxiv_id": "2602.04258v1",
+      "domain": "cs",
+      "title": "Multi-Tier UAV Edge Computing Towards Long-Term Energy Stability for Low Altitude Networks",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 993,
+      "arxiv_id": "2602.05792v1",
+      "domain": "cs",
+      "title": "Data analysis of cloud virtualization experiments",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 404,
+      "arxiv_id": "2602.05737v1",
+      "domain": "cs",
+      "title": "Neuro-Inspired Visual Pattern Recognition via Biological Reservoir Computing",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 11,
+      "arxiv_id": "2601.12668v1",
+      "domain": "physics",
+      "title": "General Relativistic Quantum Mechanics deriving Electroweak and Gravitational Interactions",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 1877,
+      "arxiv_id": "2602.06616v1",
+      "domain": "cs",
+      "title": "Confundo: Learning to Generate Robust Poison for Practical RAG Systems",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 716,
+      "arxiv_id": "2601.22316v1",
+      "domain": "physics",
+      "title": "A Generalized Analytical Heat Transfer Model for Enhanced Geothermal Systems: Capturing Fracture Interactions and Correcting Classical Optimistic Predictions",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 920,
+      "arxiv_id": "2602.01575v1",
+      "domain": "nlin",
+      "title": "Templex-based dynamical units for a taxonomy of chaos",
+      "score": 1,
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "paper_id": 1182,
+      "arxiv_id": "2602.02033v1",
+      "domain": "cs",
+      "title": "One Size, Many Fits: Aligning Diverse Group-Wise Click Preferences in Large-Scale Advertising Image Generation",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1487,
+      "arxiv_id": "2601.21627v1",
+      "domain": "astro-ph",
+      "title": "Galaxy-Galaxy Blending in SPHEREx Survey Data",
+      "score": 2,
+      "categories": [
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1126,
+      "arxiv_id": "2601.20435v1",
+      "domain": "cs",
+      "title": "Rethinking Thread Scheduling under Oversubscription: A User-Space Framework for Coordinating Multi-runtime and Multi-process Workloads",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 1968,
+      "arxiv_id": "2601.22393v1",
+      "domain": "cs",
+      "title": "Proof Complexity of Linear Logics",
+      "score": 0,
+      "categories": []
+    },
+    {
+      "paper_id": 766,
+      "arxiv_id": "2602.05474v1",
+      "domain": "cs",
+      "title": "LMMRec: LLM-driven Motivation-aware Multimodal Recommendation",
+      "score": 4,
+      "categories": [
+        "model",
+        "strategic",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 347,
+      "arxiv_id": "2602.05519v1",
+      "domain": "physics",
+      "title": "Wikipedia and Grokipedia: A Comparison of Human and Generative Encyclopedias",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1466,
+      "arxiv_id": "2601.22807v1",
+      "domain": "astro-ph",
+      "title": "Ground Level Enhancement (GLE#77) in the gamma-ray component: First observation from Arctic and Antarctic stations",
+      "score": 1,
+      "categories": [
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 84,
+      "arxiv_id": "2602.03884v1",
+      "domain": "econ",
+      "title": "Nota de Pol\u00edtica P\u00fablica: Quanto de produtividade precisamos para reduzir a jornada de trabalho?",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 1782,
+      "arxiv_id": "2602.06733v1",
+      "domain": "cs",
+      "title": "Pairwise is Not Enough: Hypergraph Neural Networks for Multi-Agent Pathfinding",
+      "score": 8,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1830,
+      "arxiv_id": "2602.06610v1",
+      "domain": "cs",
+      "title": "Green Optimization: Energy-aware Design of Metaheuristics by Using Machine Learning Surrogates to Cope with Real Problems",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1740,
+      "arxiv_id": "2602.06533v1",
+      "domain": "cs",
+      "title": "LogicSkills: A Structured Benchmark for Formal Reasoning in Large Language Models",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 1476,
+      "arxiv_id": "2601.22353v1",
+      "domain": "cond-mat",
+      "title": "Hydrogen in Brownmillerite Perovskites: First-Principles Insights into Energetics and Induced Electronic-Magnetic Changes",
+      "score": 4,
+      "categories": [
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 889,
+      "arxiv_id": "2602.05225v1",
+      "domain": "math",
+      "title": "Metric space valued Fr\u00e9chet regression",
+      "score": 1,
+      "categories": [
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 775,
+      "arxiv_id": "2602.05248v1",
+      "domain": "physics",
+      "title": "Thermodynamic Origin of Degree-Day Scaling in Phase-Change Systems",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1690,
+      "arxiv_id": "0312679v1",
+      "domain": "cond-mat",
+      "title": "Influence of Co$^{3+}$ spin-state on optical properties of LaCoO$_3$ and HoCoO$_3$",
+      "score": 0,
+      "categories": []
+    },
+    {
+      "paper_id": 644,
+      "arxiv_id": "2602.03068v1",
+      "domain": "cs",
+      "title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 1439,
+      "arxiv_id": "2602.00780v1",
+      "domain": "cs",
+      "title": "Environment-Aware Adaptive Pruning with Interleaved Inference Orchestration for Vision-Language-Action Models",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1061,
+      "arxiv_id": "2602.01406v1",
+      "domain": "physics",
+      "title": "Phase Dynamics of Self-Accelerating Bose-Einstein Condensates",
+      "score": 4,
+      "categories": [
+        "causal",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 1080,
+      "arxiv_id": "2601.17708v1",
+      "domain": "cs",
+      "title": "High-Order Mesh r-Adaptivity with Tangential Relaxation and Guaranteed Mesh Validity",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1538,
+      "arxiv_id": "2602.06842v1",
+      "domain": "cs",
+      "title": "Are Deep Learning Based Hybrid PDE Solvers Reliable? Why Training Paradigms and Update Strategies Matter",
+      "score": 2,
+      "categories": [
+        "causal",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 187,
+      "arxiv_id": "2601.07664v1",
+      "domain": "q-fin",
+      "title": "Crypto Pricing with Hidden Factors",
+      "score": 1,
+      "categories": [
+        "feedback"
+      ]
+    },
+    {
+      "paper_id": 1407,
+      "arxiv_id": "2602.03890v1",
+      "domain": "cs",
+      "title": "4DPC$^2$hat: Towards Dynamic Point Cloud Understanding with Failure-Aware Bootstrapping",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 313,
+      "arxiv_id": "2602.05905v1",
+      "domain": "cs",
+      "title": "Codified Finite-state Machines for Role-playing",
+      "score": 5,
+      "categories": [
+        "model",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 1263,
+      "arxiv_id": "2602.00343v1",
+      "domain": "cs",
+      "title": "Standardized Methods and Recommendations for Green Federated Learning",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 784,
+      "arxiv_id": "2602.01436v1",
+      "domain": "physics",
+      "title": "MSWEP V3: Machine Learning-Powered Global Precipitation Estimates at 0.1$^\\circ$ Hourly Resolution (1979-Present)",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 570,
+      "arxiv_id": "2602.04730v1",
+      "domain": "physics",
+      "title": "Semiclassical Structure of the Advection--Diffusion Spectrum in Mixed Phase Spaces",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 767,
+      "arxiv_id": "2602.05445v1",
+      "domain": "cs",
+      "title": "Forward Index Compression for Learned Sparse Retrieval",
+      "score": 2,
+      "categories": [
+        "network",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 1606,
+      "arxiv_id": "0401076v1",
+      "domain": "cond-mat",
+      "title": "Lattice dynamical study of optical modes in Tl2Mn2O7 and In2Mn2O7 pyrochlores",
+      "score": 2,
+      "categories": [
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 803,
+      "arxiv_id": "2511.19444v2",
+      "domain": "q-bio",
+      "title": "Comment on \"Direct Targeting and Regulation of RNA Polymerase II by Cell Signaling Kinases\"",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "causal",
+        "model"
+      ]
+    }
+  ]
+}

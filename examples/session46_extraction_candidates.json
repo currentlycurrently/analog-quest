@@ -1,0 +1,210 @@
+[
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2064,
+    "arxiv_id": "2602.08188v1",
+    "domain": "q-bio",
+    "title": "The Great Filter hypothesis -- a new Great Filter?",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2061,
+    "arxiv_id": "2602.08840v1",
+    "domain": "q-bio",
+    "title": "Division of labor enables efficient collective decision-making under uncertainty",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "scaling",
+      "optimization"
+    ]
+  },
+  {
+    "paper_id": 2044,
+    "arxiv_id": "2602.09503v1",
+    "domain": "physics",
+    "title": "Structure-aware imitation dynamics on higher-order networks",
+    "score": 8,
+    "categories": [
+      "network",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2063,
+    "arxiv_id": "2602.08641v1",
+    "domain": "q-bio",
+    "title": "Modeling Protein Evolution via Generative Inference From Monte Carlo Chains to Population Genetics",
+    "score": 7,
+    "categories": [
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2056,
+    "arxiv_id": "2602.06437v1",
+    "domain": "physics",
+    "title": "An attention economy model of co-evolution between content quality and audience selectivity",
+    "score": 7,
+    "categories": [
+      "feedback",
+      "causal",
+      "model",
+      "strategic",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2052,
+    "arxiv_id": "2602.08085v1",
+    "domain": "physics",
+    "title": "Large language models for spreading dynamics in complex systems",
+    "score": 7,
+    "categories": [
+      "feedback",
+      "network",
+      "causal",
+      "model",
+      "coevolution"
+    ]
+  },
+  {
+    "paper_id": 2025,
+    "arxiv_id": "2602.10104v1",
+    "domain": "cs",
+    "title": "Olaf-World: Orienting Latent Actions for Video World Modeling",
+    "score": 7,
+    "categories": [
+      "feedback",
+      "causal",
+      "model",
+      "scaling",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2066,
+    "arxiv_id": "2602.07553v1",
+    "domain": "q-bio",
+    "title": "Punishment in bipartite societies",
+    "score": 5,
+    "categories": [
+      "causal",
+      "strategic",
+      "coevolution",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2055,
+    "arxiv_id": "2602.06497v1",
+    "domain": "physics",
+    "title": "Tensor network dynamical message passing for epidemic models",
+    "score": 5,
+    "categories": [
+      "network",
+      "threshold",
+      "model",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2053,
+    "arxiv_id": "2602.07877v1",
+    "domain": "physics",
+    "title": "Effects of Stochastic Games on Evolutionary Dynamics in Structured Populations",
+    "score": 5,
+    "categories": [
+      "feedback",
+      "model",
+      "strategic",
+      "adaptation"
+    ]
+  },
+  {
+    "paper_id": 2050,
+    "arxiv_id": "2602.08853v1",
+    "domain": "physics",
+    "title": "Cooperative Sovereignty on Mars: Lessons from the International Telecommunication Union and Universal Postal Union",
+    "score": 5,
+    "categories": [
+      "causal",
+      "model",
+      "coevolution",
+      "scaling"
+    ]
+  },
+  {
+    "paper_id": 2041,
+    "arxiv_id": "2602.09795v1",
+    "domain": "physics",
+    "title": "Symmetric preferences, asymmetric outcomes: Tipping dynamics in an open-city segregation model",
+    "score": 5,
+    "categories": [
+      "network",
+      "threshold",
+      "model",
+      "scaling"
+    ]
+  },
+  {
+    "paper_id": 2040,
+    "arxiv_id": "2602.10007v1",
+    "domain": "cs",
+    "title": "A Collaborative Safety Shield for Safe and Efficient CAV Lane Changes in Congested On-Ramp Merging",
+    "score": 5,
+    "categories": [
+      "feedback",
+      "network",
+      "model",
+      "coevolution"
+    ]
+  },
+  {
+    "paper_id": 2037,
+    "arxiv_id": "2602.10016v1",
+    "domain": "cs",
+    "title": "Kunlun: Establishing Scaling Laws for Massive-Scale Recommendation Systems through Unified Architecture Design",
+    "score": 5,
+    "categories": [
+      "causal",
+      "model",
+      "scaling",
+      "optimization"
+    ]
+  }
+]

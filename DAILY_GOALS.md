@@ -28,64 +28,24 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## UPCOMING: Session 43 - Design System Lock-In & Page Redesigns 🎨
+## 🚨 NEXT SESSION: 43 - Design System Lock-In & Page Redesigns 🚨
 
-**Goal**: Interview Chuck about the live site, gather feedback, implement polish improvements
+**⚠️⚠️⚠️ IF YOU ARE SESSION 43 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
 
-**Mission**: Transform analog.quest from "works" to "ready to share publicly"
+**YOUR FIRST ACTION MUST BE:**
+1. Open and read: **SESSION43_ONBOARDING.md** (7,500 words - comprehensive guide)
+2. DO NOT start coding until you've read it
+3. DO NOT skip to expansion
 
-**Tasks**:
+**WHY THIS IS CRITICAL:**
+Session 42 left design system INCOMPLETE (started, not finished). SESSION43_ONBOARDING.md contains:
+- Honest assessment: what's done vs what's NOT done
+- 10 critical issues flagged upfront
+- Clear 6-8 hour task breakdown
+- Success criteria
+- Red flags to watch for
 
-**Part 1: Context & Preparation (15-20 min)**
-- [ ] Read SESSION42_PREP.md (your complete playbook)
-- [ ] Read PROGRESS.md Sessions 37-41 (understand the v1 build)
-- [ ] Visit analog.quest and browse the live site
-- [ ] Review GROWTH_STRATEGY.md (context for Session 43)
-
-**Part 2: User Interview (60-75 min)**
-Conduct structured interview with Chuck covering:
-- [ ] First impressions and UX (navigation, layout, clarity)
-- [ ] Content quality (which discoveries work? which don't?)
-- [ ] Missing features (search? visualizations? examples?)
-- [ ] Launch readiness (what's blocking public share?)
-- [ ] Technical issues (bugs, performance, SEO)
-- [ ] Future vision (expansion priorities, community features)
-
-**Part 3: Synthesize & Prioritize (15 min)**
-- [ ] Categorize feedback:
-  - Critical (blocks launch)
-  - Important (improves quality significantly)
-  - Nice-to-have (future iterations)
-- [ ] Create improvement plan
-- [ ] Get Chuck's approval on priorities
-
-**Part 4: Implement Polish (90-120 min)**
-- [ ] Fix all critical issues
-- [ ] Implement 2-4 most important improvements
-- [ ] Test changes thoroughly (build, mobile, filtering)
-- [ ] Verify no regressions
-
-**Part 5: Documentation & Handoff (15 min)**
-- [ ] Update PROGRESS.md with Session 42 summary
-- [ ] Update DAILY_GOALS.md with Session 43 expansion plan
-- [ ] Commit all changes
-- [ ] Brief Chuck on what's ready
-
-**Success Criteria**:
-- [ ] ✅ Comprehensive feedback gathered from Chuck
-- [ ] ✅ All critical issues fixed (nothing blocks launch)
-- [ ] ✅ 2-4 important improvements implemented
-- [ ] ✅ Site tested and verified working
-- [ ] ✅ Chuck feels confident site is ready for Session 44 launch
-- [ ] ✅ Session 43 plan ready
-
-**Time Budget**: 3-4 hours
-
-**Deliverable**: analog.quest "real v1" - polished, tested, ready for Session 44 public launch
-
----
-
-**Status**: 🚨 **CRITICAL - READ SESSION43_ONBOARDING.MD FIRST** 🚨
+**Status**: 🚨 **FOUNDATION INCOMPLETE - MUST FIX BEFORE SCALING** 🚨
 
 **Context**: Session 42 started design foundation but didn't finish. Your job is to LOCK IT IN before scaling resumes.
 

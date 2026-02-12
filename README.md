@@ -27,12 +27,12 @@ This project maps all such connections.
 
 ### What the Agent Does Each Session
 
-- Fetches 10-20 academic papers from arXiv, PubMed
-- Extracts structural patterns (feedback loops, cascades, etc.)
-- Stores patterns in SQLite database
-- Looks for cross-domain matches
+- Scores papers for mechanism richness (0-10 scale)
+- Extracts structural mechanisms (domain-neutral descriptions)
+- Generates semantic embeddings for cross-domain matching
+- Manually curates candidate matches → verified discoveries
 - Documents progress and findings
-- Improves its code based on what works
+- Improves methodology based on what works
 
 ### Your Role
 
@@ -62,17 +62,21 @@ analog.quest/
 │   └── backup/         ← Daily backups
 │
 ├── scripts/
-│   ├── fetch_papers.py     ← Get papers from APIs
-│   ├── extract_patterns.py ← Find structural patterns
-│   ├── find_matches.py     ← Match patterns across domains
-│   └── utils.py            ← Helper functions
+│   ├── fetch_papers.py              ← Get papers from arXiv
+│   ├── score_all_papers.py          ← Score papers for mechanism richness
+│   ├── session48_embed_and_match.py ← Generate embeddings and find matches
+│   └── utils.py                     ← Helper functions
 │
-├── web/
-│   ├── app.py          ← Simple Flask app
-│   └── templates/      ← HTML for viewing data
+├── app/                   ← Next.js 15 frontend (analog.quest)
+│   ├── data/              ← Static data (discoveries, mechanisms)
+│   ├── discoveries/       ← Discovery detail pages
+│   └── components/        ← React components
 │
 └── examples/
-    └── good_patterns.json ← Examples of well-extracted patterns
+    ├── session48_all_mechanisms.json      ← 104 extracted mechanisms
+    ├── session48_all_papers_scored.json   ← 2,194 scored papers
+    ├── session48_candidates.json          ← 491 cross-domain candidates
+    └── session49_curated_discoveries.json ← 12 latest discoveries
 ```
 
 ## Getting Started
@@ -131,31 +135,24 @@ cat QUESTIONS.md
 ```
 See if agent needs your input.
 
-## What to Expect
+## Current Status (Session 49)
 
-### Week 1
-- Agent sets up infrastructure
-- Processes first 100 papers
-- Extracts basic patterns
-- Database working
+**✅ ACCOMPLISHED**:
+- **53 verified discoveries** (exceeded 50+ milestone!)
+- **2,194 papers** scored for mechanism richness
+- **104 mechanisms** extracted with semantic embeddings
+- **100% hit rate** on pre-scored papers ≥7/10
+- **0% fetch waste** (eliminated duplicates)
+- **Web interface built** (analog.quest - needs updating with latest discoveries)
 
-### Month 1
-- 500 papers processed
-- 200 patterns extracted
-- First isomorphisms found
-- Agent improving its code
+**🚧 IN PROGRESS**:
+- Scaling to 500+ mechanisms (21% complete)
+- Testing keyword-targeted search (10x efficiency potential)
+- Frontend has 30 discoveries (need to add 23 new)
 
-### Month 3
-- 1500 papers across multiple domains
-- Pattern extraction getting better
-- Finding interesting connections
-- Web interface to explore data
-
-### Month 6 (Target)
-- 2000+ papers
-- 500+ patterns
-- 100+ verified isomorphisms
-- Mission complete
+**🎯 NEXT (Session 50)**:
+- Analyze mechanism vocabulary for keyword-targeted arXiv search
+- If successful: 10x efficiency improvement (30-40 mechanisms/session vs 3-5)
 
 ## Key Principles
 
@@ -206,19 +203,19 @@ Expected cost: **Well within Max plan limits** (designed to be sustainable)
 ## Success Criteria
 
 **Minimum (6 months):**
-- ✓ 2000 papers processed
-- ✓ 100 cross-domain isomorphisms found
-- ✓ Database queryable and useful
-- ✓ At least one surprising discovery
+- ✅ 2000 papers processed (2,194 scored)
+- 🚧 100 verified discoveries (53/100 = 53%)
+- ✅ Database queryable and useful
+- ✅ Multiple surprising discoveries
 
 **Ideal:**
-- Used by actual researchers
-- Cited in a paper
-- Sparks new research direction
+- ⏳ Used by actual researchers
+- ⏳ Cited in a paper
+- ⏳ Sparks new research direction
 
 **Dream:**
-- Becomes infrastructure for cross-domain research
-- "Analog quest found this connection" becomes a thing
+- ⏳ Becomes infrastructure for cross-domain research
+- ⏳ "Analog quest found this connection" becomes a thing
 
 ## Philosophy
 
@@ -236,15 +233,21 @@ Otherwise, just let it run.
 
 ---
 
-**Project Start**: [DATE]
+**Project Start**: 2026-02-07
+**Current Session**: 49 (as of 2026-02-12)
 **Target**: 6 months
 **Repository**: analog.quest
-**Domain**: analog.quest (or propinquity.world)
+**Domain**: analog.quest
 **Budget**: Claude Max plan
 **Agent**: Claude Sonnet 4.5 via Claude Code
+
+**Progress**: 53 verified discoveries, 104 mechanisms, 2,194 papers scored
+**Status**: On track, 50+ milestone exceeded ✓
 
 **Your role**: Start sessions, check progress occasionally, provide feedback when needed.
 
 **Agent's role**: Everything else.
+
+**Next Agent's Task**: Read SESSION50_BRIEFING.md for keyword vocabulary analysis
 
 Good luck! 🚀

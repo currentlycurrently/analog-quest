@@ -1,0 +1,680 @@
+[
+  {
+    "paper_id": 638,
+    "arxiv_id": "2602.04116v1",
+    "domain": "cs",
+    "title": "Toward Effective Multimodal Graph Foundation Model: A Divide-and-Conquer Based Approach",
+    "score": 9,
+    "categories": [
+      "network",
+      "threshold",
+      "model",
+      "strategic",
+      "coevolution",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-04"
+  },
+  {
+    "paper_id": 872,
+    "arxiv_id": "2601.10143v1",
+    "domain": "q-fin",
+    "title": "History Is Not Enough: An Adaptive Dataflow System for Financial Time-Series Synthesis",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "scaling",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-01-15"
+  },
+  {
+    "paper_id": 941,
+    "arxiv_id": "2601.07415v1",
+    "domain": "q-bio",
+    "title": "PLANET v2.0: A comprehensive Protein-Ligand Affinity Prediction Model Based on Mixture Density Network",
+    "score": 9,
+    "categories": [
+      "network",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-01-12"
+  },
+  {
+    "paper_id": 997,
+    "arxiv_id": "2602.04825v1",
+    "domain": "cs",
+    "title": "On Dual Connectivity in 6G Leo Constellations",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-04"
+  },
+  {
+    "paper_id": 1353,
+    "arxiv_id": "2602.04200v1",
+    "domain": "cs",
+    "title": "Restoring Sparsity in Potts Machines via Mean-Field Constraints",
+    "score": 9,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-02-04"
+  },
+  {
+    "paper_id": 1540,
+    "arxiv_id": "2602.06797v1",
+    "domain": "stat",
+    "title": "Optimal Learning-Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 1565,
+    "arxiv_id": "2602.06825v1",
+    "domain": "cs",
+    "title": "AEGPO: Adaptive Entropy-Guided Policy Optimization for Diffusion Models",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 1629,
+    "arxiv_id": "2602.06178v1",
+    "domain": "math",
+    "title": "Optimal Control Strategies for Epidemic Dynamics: Integrating SIR-SI and Lotka--Volterra Models",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "optimization"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 1744,
+    "arxiv_id": "2602.06470v1",
+    "domain": "cs",
+    "title": "Improve Large Language Model Systems with User Logs",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "network",
+      "model",
+      "coevolution",
+      "scaling",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 1985,
+    "arxiv_id": "2601.19647v2",
+    "domain": "cs",
+    "title": "Convex Hull 3D Filtering with GPU Ray Tracing and Tensor Cores",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-01-27"
+  },
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "adaptation"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 32,
+    "arxiv_id": "2602.05965v1",
+    "domain": "cs",
+    "title": "Learning to Share: Selective Memory for Efficient Parallel Agentic Systems",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "network",
+      "causal",
+      "model",
+      "strategic",
+      "optimization"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 125,
+    "arxiv_id": "2601.10995v1",
+    "domain": "q-bio",
+    "title": "GP-DHT: A Dual-Head Transformer with Contras-tive Learning for Predicting Gene Regulatory Rela-tionships across Species from Single-Cell Data",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "network",
+      "causal",
+      "model",
+      "coevolution",
+      "scaling"
+    ],
+    "published_date": "2026-01-16"
+  },
+  {
+    "paper_id": 175,
+    "arxiv_id": "2601.21180v1",
+    "domain": "physics",
+    "title": "Imperfect Turing Patterns: Diffusiophoretic Assembly of Hard Spheres via Reaction-Diffusion Instabilities",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "scaling"
+    ],
+    "published_date": "2026-01-29"
+  },
+  {
+    "paper_id": 321,
+    "arxiv_id": "2602.05853v1",
+    "domain": "cs",
+    "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
+    "score": 8,
+    "categories": [
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 323,
+    "arxiv_id": "2602.05843v1",
+    "domain": "cs",
+    "title": "OdysseyArena: Benchmarking Large Language Models For Long-Horizon, Active and Inductive Interactions",
+    "score": 8,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "optimization"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 376,
+    "arxiv_id": "2602.03902v1",
+    "domain": "q-bio",
+    "title": "All-Atom GPCR-Ligand Simulation via Residual Isometric Latent Flow",
+    "score": 8,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "adaptation"
+    ],
+    "published_date": "2026-02-03"
+  },
+  {
+    "paper_id": 422,
+    "arxiv_id": "2602.02439v1",
+    "domain": "cs",
+    "title": "Energy-Efficient Neuromorphic Computing for Edge AI: A Framework with Adaptive Spiking Neural Networks and Hardware-Aware Optimization",
+    "score": 8,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-02"
+  },
+  {
+    "paper_id": 469,
+    "arxiv_id": "2602.05775v1",
+    "domain": "physics",
+    "title": "The near-continuum mechanism for extended Boltzmann theory: the non-equilibrium relaxation",
+    "score": 8,
+    "categories": [
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "scaling",
+      "adaptation"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 638,
+    "arxiv_id": "2602.04116v1",
+    "domain": "cs",
+    "title": "Toward Effective Multimodal Graph Foundation Model: A Divide-and-Conquer Based Approach",
+    "score": 9,
+    "categories": [
+      "network",
+      "threshold",
+      "model",
+      "strategic",
+      "coevolution",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-04"
+  },
+  {
+    "paper_id": 674,
+    "arxiv_id": "2602.05877v1",
+    "domain": "cs",
+    "title": "Agent2Agent Threats in Safety-Critical LLM Assistants: A Human-Centric Taxonomy",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "network",
+      "threshold",
+      "model",
+      "strategic",
+      "scaling"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 872,
+    "arxiv_id": "2601.10143v1",
+    "domain": "q-fin",
+    "title": "History Is Not Enough: An Adaptive Dataflow System for Financial Time-Series Synthesis",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "scaling",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-01-15"
+  },
+  {
+    "paper_id": 941,
+    "arxiv_id": "2601.07415v1",
+    "domain": "q-bio",
+    "title": "PLANET v2.0: A comprehensive Protein-Ligand Affinity Prediction Model Based on Mixture Density Network",
+    "score": 9,
+    "categories": [
+      "network",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-01-12"
+  },
+  {
+    "paper_id": 997,
+    "arxiv_id": "2602.04825v1",
+    "domain": "cs",
+    "title": "On Dual Connectivity in 6G Leo Constellations",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-04"
+  },
+  {
+    "paper_id": 1008,
+    "arxiv_id": "2602.05818v1",
+    "domain": "cs",
+    "title": "TKG-Thinker: Towards Dynamic Reasoning over Temporal Knowledge Graphs via Agentic Reinforcement Learning",
+    "score": 8,
+    "categories": [
+      "network",
+      "model",
+      "strategic",
+      "coevolution",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 1098,
+    "arxiv_id": "2602.05405v1",
+    "domain": "cs",
+    "title": "Enabling Large-Scale Channel Sounding for 6G: A Framework for Sparse Sampling and Multipath Component Extraction",
+    "score": 8,
+    "categories": [
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 1138,
+    "arxiv_id": "2601.10582v2",
+    "domain": "cs",
+    "title": "Mitigating GIL Bottlenecks in Edge AI Systems",
+    "score": 8,
+    "categories": [
+      "threshold",
+      "causal",
+      "strategic",
+      "scaling",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-01-15"
+  },
+  {
+    "paper_id": 1353,
+    "arxiv_id": "2602.04200v1",
+    "domain": "cs",
+    "title": "Restoring Sparsity in Potts Machines via Mean-Field Constraints",
+    "score": 9,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-02-04"
+  },
+  {
+    "paper_id": 1375,
+    "arxiv_id": "2602.05629v1",
+    "domain": "cs",
+    "title": "ROMAN: Reward-Orchestrated Multi-Head Attention Network for Autonomous Driving System Testing",
+    "score": 8,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "optimization"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 1401,
+    "arxiv_id": "2602.03538v1",
+    "domain": "cs",
+    "title": "Constrained Dynamic Gaussian Splatting",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "causal",
+      "model",
+      "strategic",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-03"
+  },
+  {
+    "paper_id": 1417,
+    "arxiv_id": "2602.02615v1",
+    "domain": "cs",
+    "title": "TinyGuard:A lightweight Byzantine Defense for Resource-Constrained Federated Learning via Statistical Update Fingerprints",
+    "score": 8,
+    "categories": [
+      "threshold",
+      "causal",
+      "model",
+      "scaling",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-02"
+  },
+  {
+    "paper_id": 1540,
+    "arxiv_id": "2602.06797v1",
+    "domain": "stat",
+    "title": "Optimal Learning-Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 1565,
+    "arxiv_id": "2602.06825v1",
+    "domain": "cs",
+    "title": "AEGPO: Adaptive Entropy-Guided Policy Optimization for Diffusion Models",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 1629,
+    "arxiv_id": "2602.06178v1",
+    "domain": "math",
+    "title": "Optimal Control Strategies for Epidemic Dynamics: Integrating SIR-SI and Lotka--Volterra Models",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "optimization"
+    ],
+    "published_date": "2026-02-05"
+  },
+  {
+    "paper_id": 1744,
+    "arxiv_id": "2602.06470v1",
+    "domain": "cs",
+    "title": "Improve Large Language Model Systems with User Logs",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "network",
+      "model",
+      "coevolution",
+      "scaling",
+      "optimization",
+      "adaptation"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 1985,
+    "arxiv_id": "2601.19647v2",
+    "domain": "cs",
+    "title": "Convex Hull 3D Filtering with GPU Ray Tracing and Tensor Cores",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-01-27"
+  },
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+    "score": 9,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "strategic",
+      "coevolution",
+      "adaptation"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 2105,
+    "arxiv_id": "2602.09841v1",
+    "domain": "cs",
+    "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance in Multivendor 6G Networks",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "network",
+      "causal",
+      "model",
+      "strategic",
+      "optimization"
+    ],
+    "published_date": "2026-02-10"
+  },
+  {
+    "paper_id": 2139,
+    "arxiv_id": "2602.07084v1",
+    "domain": "q-bio",
+    "title": "AbFlow : End-to-end Paratope-Centric Antibody Design by Interaction Enhanced Flow Matching",
+    "score": 8,
+    "categories": [
+      "network",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "optimization"
+    ],
+    "published_date": "2026-02-06"
+  },
+  {
+    "paper_id": 2170,
+    "arxiv_id": "2602.10053v1",
+    "domain": "cs",
+    "title": "The Architecture of Illusion: Network Opacity and Strategic Escalation",
+    "score": 8,
+    "categories": [
+      "network",
+      "causal",
+      "model",
+      "strategic",
+      "scaling",
+      "optimization"
+    ],
+    "published_date": "2026-02-10"
+  },
+  {
+    "paper_id": 2194,
+    "arxiv_id": "2602.08483v1",
+    "domain": "physics",
+    "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
+    "score": 8,
+    "categories": [
+      "feedback",
+      "threshold",
+      "causal",
+      "model",
+      "coevolution",
+      "scaling"
+    ],
+    "published_date": "2026-02-09"
+  }
+]

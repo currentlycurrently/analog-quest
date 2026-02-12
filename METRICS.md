@@ -8,12 +8,12 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 50 - 2026-02-12
+**Last Updated**: Session 51 - 2026-02-12
 
 **Methodology Version**: LLM Extraction + Semantic Embeddings + Manual Curation + Strategic Targeting (Validated!)
 
-**🔍 SESSION 50 - KEYWORD VOCABULARY ANALYSIS: 20-25% EFFICIENCY GAIN ✓**
-**Tested keyword-targeted search hypothesis. Results: 46 keywords extracted, 21% discrimination power, 4.1/10 avg score (vs 3.3 random). Modest improvement validated. Primary strategy: continue mining 526 high-value papers.**
+**⛏️ SESSION 51 - CORPUS MINING: 104 → 134 MECHANISMS (+30%) ✓**
+**Extracted 30 new mechanisms from 41 high-value papers (8-10/10 scores). Generated 556 cross-domain candidates (up from 491). Top similarity: 0.6549. Hit rate: 73% (duplicates in batch). Advancing toward 150+ mechanism milestone.**
 
 ### Papers
 - **Total Papers Processed**: **2,194** (Session 47 added 129 from strategic targeting)
@@ -65,18 +65,20 @@ Agent updates these numbers after each session.
   - Agent: 75 (new in top-20!)
   - (+ 30+ more types)
 
-### LLM-Extracted Mechanisms (Session 37-48)
-- **Total Mechanisms**: **104** (Session 48 added 50 new)
+### LLM-Extracted Mechanisms (Session 37-51)
+- **Total Mechanisms**: **134** (Session 51 added 30 new)
 - **Session 37**: 28 mechanisms (50% hit rate on strategic selection)
 - **Session 46**: 5 mechanisms (100% hit rate on pre-scored papers)
 - **Session 47**: 31 mechanisms (100% hit rate on pre-scored papers, 2h extraction time)
 - **Session 48**: 50 mechanisms (~100% hit rate on papers ≥7/10)
+- **Session 51**: 30 mechanisms (73% hit rate - duplicates in batch, papers scored 8-10/10)
 - **Extraction Method**: Manual (domain-neutral, structural descriptions)
 - **Quality**: All mechanisms domain-neutral, causal, structural
-- **Session 48 Match Results**:
-  - Combined 104 mechanisms → **491 cross-domain candidates** (threshold ≥0.35)
-  - Top similarity: **0.7364** (unknown ↔ q-bio match!)
-  - Similarity range: 0.350 - 0.7364
+- **Session 51 Match Results**:
+  - Combined 134 mechanisms → **556 cross-domain candidates** (threshold ≥0.35)
+  - Top similarity: **0.6549** (q-bio ↔ cs: actin networks ↔ physical intelligence)
+  - Similarity range: 0.350 - 0.6549
+  - Top domain pairs: physics-q-bio (28%), econ-q-bio (12%), cs-q-bio (12%)
 
 ### Verified Discoveries (Manual Curation)
 - **Total Verified**: **53** (Session 49 added 12)
@@ -417,6 +419,7 @@ After Session 31-36 testing, pivoted to manual curation approach:
 | **48** | **2026-02-12** | **+0** | **+50** | **+491** | **MINING EXISTING CORPUS: ~100% HIT RATE!** ⛏️ Fetched 0 papers (mined existing 2,194), scored ALL papers (avg 3.31/10, 631 high-value ≥5/10), extracted 50 mechanisms (~100% hit rate on papers ≥7/10!), 104 total mechanisms → 491 cross-domain candidates (top: 0.7364). **0% fetch waste!** Strategic pivot validated! ✓✓✓ |
 | **49** | **2026-02-12** | **+0** | **+0** | **+12** | **CURATION COMPLETE: 41 → 53 DISCOVERIES!** 🎯 Reviewed 491 candidates from Session 48, rated top 30 systematically, found 12 new discoveries (5 excellent + 7 good). Top-30 precision: 40%. **50+ milestone EXCEEDED (106%)!** ✓✓✓ |
 | **50** | **2026-02-12** | **+0** | **+46 keywords** | **+8 queries** | **KEYWORD VOCABULARY ANALYSIS: MODEST EFFICIENCY GAIN** 🔍 Extracted 46 structural keywords from 104 mechanisms, validated against 2,194 papers (21% discrimination power, 99.2% high-value vs 78.2% low-value contain keywords). Built 8 targeted arXiv queries. Tested network_dynamics query: 4.1/10 avg (vs 3.3 random, 3.9 strategic) - **20-25% efficiency gain validated**. **10x hypothesis refuted**: keywords necessary but not sufficient. Recommendation: use as supplement to corpus mining. ✓ |
+| **51** | **2026-02-12** | **+41 papers** | **+30** | **+556** | **CORPUS MINING: 104 → 134 MECHANISMS (+30%)** ⛏️ Selected 90 high-value papers (8-10/10), filtered to 41 not yet extracted. Extracted 30 mechanisms (73% hit rate - duplicates in batch). Combined 134 mechanisms → 556 cross-domain candidates (threshold ≥0.35, top: 0.6549). Top domain pairs: physics-q-bio (28%), econ-q-bio (12%), cs-q-bio (12%). **Advancing toward 150+ milestone!** ✓✓ |
 
 ---
 

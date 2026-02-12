@@ -1,0 +1,219 @@
+[
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes",
+    "mechanism": "Impulsive intervention with environmental stressor: Periodic discrete interventions (releases) combined with continuous environmental stress (temperature) that induces state loss. System exhibits threshold-dependent bistability\u2014successful establishment requires intervention frequency and magnitude above critical values to overcome stress-induced state decay. Analytical threshold conditions characterize existence and stability of periodic solutions."
+  },
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes",
+    "mechanism": "Cytoplasmic incompatibility as reproductive asymmetry: Infected males mating with uninfected females produce inviable offspring, while infected females produce viable offspring regardless of male type. This creates frequency-dependent reproductive advantage that amplifies when infected fraction exceeds threshold, driving potential fixation despite fitness costs."
+  },
+  {
+    "paper_id": 2105,
+    "arxiv_id": "2602.09841v1",
+    "domain": "cs",
+    "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance",
+    "mechanism": "Adversarial reweighting with dual optimization objectives: System balances fairness (minimize worst-group error) against average performance through stochastic adversarial reweighting. Adversary identifies underperforming groups, primary optimizer adapts to worst-case scenarios. Creates dynamic fairness-robustness tradeoff where group-level performance variance is minimized at cost of average performance."
+  },
+  {
+    "paper_id": 2105,
+    "arxiv_id": "2602.09841v1",
+    "domain": "cs",
+    "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance",
+    "mechanism": "Hierarchical accountability tracing: Multi-level responsibility attribution where violations are traced through decision trajectory to specific agents and vendors. Produces dual accountability reports\u2014user-level SLA summaries (outcome-focused) and operator-level responsibility analytics (causal attribution). Enables principled blame assignment in distributed autonomous systems."
+  },
+  {
+    "paper_id": 2139,
+    "arxiv_id": "2602.07084v1",
+    "domain": "q-bio",
+    "title": "AbFlow: Paratope-Centric Antibody Design",
+    "mechanism": "Surface-guided local optimization within global generation: Flow-matching framework uses antigen surface interaction data to refine local binding interface (CDR-H3) while maintaining global structural coherence. Surface Multi-channel Encoder extracts interface geometry, steering velocity field to optimize contact regions preferentially. Demonstrates hierarchical generation\u2014global structure constraints guide local interface refinement."
+  },
+  {
+    "paper_id": 2170,
+    "arxiv_id": "2602.10053v1",
+    "domain": "cs",
+    "title": "The Architecture of Illusion: Network Opacity",
+    "mechanism": "Information locality bias induces sophisticated bias: Agents observe network-biased sample (controlled by locality parameter p) rather than global population. Network opacity (low p) causes systematic overestimation of opponent cognitive depth\u2014agents infer high sophistication from locally-sampled high-sophistication neighbors, creating belief distortion. Parameter p acts as continuous control lever between myopic (p\u21920) and fully informed (p=1) reasoning."
+  },
+  {
+    "paper_id": 2170,
+    "arxiv_id": "2602.10053v1",
+    "domain": "cs",
+    "title": "The Architecture of Illusion: Network Opacity",
+    "mechanism": "Escalation principle in strategic complements: Restricting information (reducing network transparency p) traps agents in echo chambers where they compete against hallucinated high-sophistication peers. In games of strategic complements, opacity maximizes aggregate effort by preventing agents from coordinating on low-effort equilibrium. Conversely, transparency required in coordination games to minimize variance. Network topology functions as cognitive zoom lens."
+  },
+  {
+    "paper_id": 2194,
+    "arxiv_id": "2602.08483v1",
+    "domain": "physics",
+    "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics",
+    "mechanism": "Reentrant coupling drives spectral condensation: Progressive collective coupling (reentrant mixing) pushes system toward infrared critical regime where extensive band of slow collective modes emerges. Spectral density exhibits power-law scaling of relaxation rates with critical exponents, indicating self-organized critical dynamics. System reorganizes from localized relaxation to coherent motion along low-dimensional manifolds\u2014qualitative phase transition not quantitative scaling."
+  },
+  {
+    "paper_id": 2194,
+    "arxiv_id": "2602.08483v1",
+    "domain": "physics",
+    "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics",
+    "mechanism": "Protected sector-critical regime via homeostatic regulation: Critical dynamics alone lead to instability. Homeostatic regulation introduces gapped stabilizing direction orthogonal to critical sector, yielding metastable infrared phase. Long-lived trajectories persist without collapse\u2014coexistence of scale-free collective dynamics and global stabilization. Defines distinct stability class, not continuation of existing regime."
+  },
+  {
+    "paper_id": 2071,
+    "arxiv_id": "2601.21079v2",
+    "domain": "q-bio",
+    "title": "Quenched Coalescent for Structured Diploid Populations",
+    "mechanism": "Quenched vs annealed scaling limits: Gene genealogies conditioned on pedigree (quenched) converge to different coalescent process than unconditional genealogies (annealed). Limits coincide only when large migrations and uneven offspring distributions are absent. Quenched limit driven by Poisson point process recording timing and scale of large events\u2014demonstrates history-dependence where specific realized pedigree trajectory matters, not just population-average dynamics."
+  },
+  {
+    "paper_id": 2074,
+    "arxiv_id": "2601.20416v1",
+    "domain": "q-bio",
+    "title": "Promotion of Cooperation in Deme-Structured Populations",
+    "mechanism": "Growth-merging-dilution cycles promote cooperation: Populations undergo cycles of within-deme growth, inter-deme merging, and dilution. Cooperation favored during deterministic logistic growth phase and under stochastic growth. Hard selection (competition between demes) essential\u2014soft selection (within-deme competition with fixed deme sizes) eliminates cooperation advantage. Spatial structure matters only under demographic fluctuations and group-level competition."
+  },
+  {
+    "paper_id": 2079,
+    "arxiv_id": "2602.06342v1",
+    "domain": "physics",
+    "title": "Mean-Field Theory for Heider Balance under Heterogeneous Social Temperatures",
+    "mechanism": "Distribution-dependent phase transitions: Each link assigned its own social temperature (volatility/susceptibility to change). Collective opinion state determined by distribution-dependent self-consistency condition. Functional form of temperature distribution\u2014light-tailed vs heavy-tailed\u2014leads to qualitatively distinct phase diagrams for polarization transitions. Entire distribution shape, not just mean/variance, governs macroscopic behavior. Homogeneous limit provides universal lower bound for critical transition."
+  },
+  {
+    "paper_id": 2102,
+    "arxiv_id": "2602.09902v1",
+    "domain": "cs",
+    "title": "Routing, Cascades, and User Choice for LLMs",
+    "mechanism": "Provider-user misalignment gap: Stackelberg game where provider routes tasks to models, user responds by re-prompting or abandoning. Misalignment emerges when user's and provider's rankings of models (utility vs cost) differ. Provider-optimal routing differs from user-preferred routing, creating incentive for provider to throttle latency to minimize costs, depressing user utility. Optimal routing typically static (no cascading) depending on expected utility, contrary to intuition favoring cascades."
+  },
+  {
+    "paper_id": 2106,
+    "arxiv_id": "2602.09821v1",
+    "domain": "cs",
+    "title": "Text Summarization via Global Structure Awareness",
+    "mechanism": "Persistent homology for semantic core identification: Construct semantic-weighted graph from sentence embeddings. Persistent homology (topological data analysis) identifies core semantics and logical structures forming backbone. Protection pool preserves topology while iterative pruning removes redundancy. Lightweight proxy metrics approximate importance without repeated computation. Demonstrates topology-guided optimization where global structure constrains local edits."
+  },
+  {
+    "paper_id": 2120,
+    "arxiv_id": "2602.08640v1",
+    "domain": "q-bio",
+    "title": "Universal Approximation Theorems for Dynamical Systems",
+    "mechanism": "\u03b5-\u03b4 closeness for infinite-horizon approximation: Neural ODEs achieve trajectories within error \u03b5 except on measure-\u03b4 initial conditions over infinite time horizon [0,\u221e). Addresses multistability (multiple attractors) and limit cycles beyond finite-time or globally-stable cases. Temporal generalization bound: \u03b5-\u03b4 closeness implies L\u1d56 error \u2264 \u03b5\u1d56 + \u03b4\u00b7D\u1d56 for all t\u22650, bridging topological guarantees to training metrics. Handles structural stability (Morse-Smale systems) with hyperbolic fixed points and limit cycles."
+  },
+  {
+    "paper_id": 2123,
+    "arxiv_id": "2602.07816v2",
+    "domain": "q-bio",
+    "title": "Beyond Expertise: Predictive Eye-Hand Coordination",
+    "mechanism": "Individual-specific predictive protocols: Temporal coupling between saccade distance and pen speed reveals stable, participant-specific predictive windows (-50 to 400ms) uncorrelated with expertise. Predictive windows match individual pen catch-up time, indicating oculomotor system stabilizes fixation in anticipation of hand's future velocity (not reactive pursuit). Demonstrates minimum intervention principle\u2014diverse predictive strategies achieve equivalent performance, suggesting idiosyncratic neuromotor constraints shape coordination, not training."
+  },
+  {
+    "paper_id": 2138,
+    "arxiv_id": "2602.07103v1",
+    "domain": "q-bio",
+    "title": "scDFM: Distributional Flow Matching for Perturbation Prediction",
+    "mechanism": "Population-level distributional alignment: Conditional flow matching models full distribution of perturbed cells (not individual cell correspondences). Maximum mean discrepancy (MMD) objective aligns perturbed and control populations beyond cell-level pairing. Captures global population shifts rather than one-to-one mappings. Perturbation-Aware Differential Transformer leverages gene interaction graphs to model context-specific expression changes at population scale."
+  },
+  {
+    "paper_id": 2150,
+    "arxiv_id": "2602.10006v1",
+    "domain": "cs",
+    "title": "Answer First, Reason Later: Mode-Balanced RL",
+    "mechanism": "Mode-seeking vs mode-covering divergence tradeoff: Reinforcement learning minimizes Reverse KL (mode-seeking, finds probability peaks, prone to reward hacking and mode collapse). Supervised fine-tuning minimizes Forward KL (mode-covering, forces model to cover data distribution). Mode-balanced optimization incorporates SFT auxiliary loss into RL to balance both properties\u2014prevents forgetting complex long-tail rules while maximizing rewards."
+  },
+  {
+    "paper_id": 2157,
+    "arxiv_id": "2602.09864v1",
+    "domain": "cs",
+    "title": "Differentiable Tripartite Modularity for Clustering",
+    "mechanism": "Tripartite modularity via weighted co-paths: Community structure defined by weighted co-paths across three node types connected through mediated interactions. Factorized computation avoids explicit third-order tensors (computational efficiency). Structural normalization at pivot nodes controls extreme degree heterogeneity. Linear complexity in edges, enabling end-to-end optimization with graph neural networks. Extends bipartite modularity to higher-order relational structures."
+  },
+  {
+    "paper_id": 2073,
+    "arxiv_id": "2601.20670v1",
+    "domain": "q-bio",
+    "title": "Noise-induced excitability: boom, bust and extirpation",
+    "mechanism": "Noise-driven threshold behavior with boom-bust-extirpation: Environmental feedback operates slower than population growth, causing overshoot and collapse. Stochastic framework reveals threshold where population either booms or is extirpated before expansion. Transition between excitable regime (most trajectories absorbed after first bust) and persistent regime (metastable state reached) governed by diffusion strength and timescale ratio. Demonstrates finite-time extinction through noise amplification, not captured by deterministic models."
+  },
+  {
+    "paper_id": 2076,
+    "arxiv_id": "2601.19681v1",
+    "domain": "q-bio",
+    "title": "Long-term evolution of regulatory DNA sequences",
+    "mechanism": "Global genotype-phenotype map for cis-regulatory evolution: Biophysically-realistic GP map synthesizes TF-DNA interaction models with binding event combinations. Enables simulation of de novo CRE evolution, quantifying: (1) time to evolve CREs from scratch, (2) number of non-trivial regulatory functions in sequence space, (3) connectedness of regulatory architectures. GP map topology determines evolvability\u2014some architectures enable rapid evolution through high connectivity, others exhibit rugged landscapes with sparse functional paths."
+  },
+  {
+    "paper_id": 2077,
+    "arxiv_id": "2601.22177v1",
+    "domain": "q-bio",
+    "title": "Emergent spatial organization of competing species",
+    "mechanism": "Dynamic carrying capacity with endogenous cooperation field: Growth governed by carrying capacity integrating abiotic stress (temperature, pollution, resources) with pollution-sensitive cooperation field. Cooperation enhances resilience but collapses in polluted zones, creating heterogeneous social buffering. Spontaneous emergence of persistent spatial organization\u2014dominance segregation, stable competitive boundaries. Coexistence through distinct strategies: one species occupies more area, other maintains higher local densities."
+  },
+  {
+    "paper_id": 2080,
+    "arxiv_id": "2602.05142v2",
+    "domain": "physics",
+    "title": "Modelling Pedestrian Behaviour in Autonomous Vehicle Encounters",
+    "mechanism": "Directional asymmetry in risk perception: Frontal and rear collision risk proximity (CRP) show opposite influences on movement adjustments. Possible mid-crossing threshold in remaining distance. Results suggest multiple behavioral tendencies driven by both risk perception and movement efficiency, not single optimization. Residual Logit model captures hybrid of discrete choice (temporal/spatial adjustments) and machine learning (perceptual indicators like visual looming)."
+  },
+  {
+    "paper_id": 2083,
+    "arxiv_id": "2602.00234v2",
+    "domain": "physics",
+    "title": "Fragmentation of longitudinal social network",
+    "mechanism": "Local cohesion-seeking yields global fragmentation: Social cohesion (average closure) declines >15% over 12 years despite no demographic compositional change. Decline due to rewiring in individual ego networks\u2014decreasing overlap of social contexts, greater geographical mobility. Residential relocation temporarily increases local closure, but causes global network fragmentation. Demonstrates unintended collective consequence: individual-level cohesion-seeking behavior fragments population-scale structure."
+  },
+  {
+    "paper_id": 2091,
+    "arxiv_id": "2602.09980v1",
+    "domain": "cs",
+    "title": "Supervised Metric Regularization for Multi-Regime PINNs",
+    "mechanism": "Topology-aware latent conditioning: Standard parametric PINNs map physical parameters directly to solutions, causing spectral bias/mode collapse at regime transitions. TAPINN conditions solver on latent state optimized for metric-based regime separation. Phase-based Alternating Optimization manages gradient conflicts between metric and physics objectives. Latent metric structure prevents averaging of distinct physical behaviors, achieving 2.18x lower gradient variance than baselines."
+  },
+  {
+    "paper_id": 2092,
+    "arxiv_id": "2602.09963v1",
+    "domain": "cs",
+    "title": "Drug Release Modeling using Physics-Informed Neural Networks",
+    "mechanism": "Physics-informed long-term prediction from short-term data: Embedding Fick's diffusion law into neural network loss enables accurate long-term release predictions from limited early-time measurements. PINN achieved RMSE <0.05 using only first 6% of release time for planar films (94% data reduction). Combines physical laws with sparse experimental data, yielding predictions classical models cannot achieve without full temporal data. Bayesian PINNs provide uncertainty quantification under noise."
+  },
+  {
+    "paper_id": 2094,
+    "arxiv_id": "2602.09945v1",
+    "domain": "cs",
+    "title": "Closing Reasoning Gaps in Clinical Agents with Differential Reasoning Learning",
+    "mechanism": "Graph edit distance for reasoning alignment: Extract reasoning graphs (DAGs) from reference reasoning and agent's chain-of-thought. Clinically weighted graph edit distance identifies structural discrepancies. LLM-as-a-judge aligns semantically equivalent nodes, diagnoses logic gaps. Graph-level discrepancies converted to natural-language instructions stored in Differential Reasoning Knowledge Base. Retrieval-augmented generation patches likely reasoning gaps at inference. Improves both final-answer accuracy and reasoning fidelity."
+  },
+  {
+    "paper_id": 2096,
+    "arxiv_id": "2602.09937v1",
+    "domain": "cs",
+    "title": "Why Do AI Agents Systematically Fail at Cloud Root Cause Analysis?",
+    "mechanism": "Architecture-level pitfalls persist across model capabilities: Process-level failure analysis of 1,675 agent runs across 5 LLM models reveals 12 pitfall types. Most prevalent pitfalls (hallucinated data interpretation, incomplete exploration) persist across all models regardless of capability tier. Indicates failures originate from shared agent architecture, not individual model limitations. Prompt engineering cannot resolve dominant pitfalls; enriching inter-agent communication protocol reduces communication failures by 15 percentage points. Demonstrates structural constraints dominate over scaling."
+  },
+  {
+    "paper_id": 2158,
+    "arxiv_id": "2602.09851v1",
+    "domain": "cs",
+    "title": "CoFEH: LLM-driven Feature Engineering with Collaborative BO",
+    "mechanism": "Interleaved FE-HPO co-optimization: Traditional AutoML uses greedy FE-then-HPO workflow, failing to capture strong FE-HPO interactions. CoFEH interleaves LLM-based feature engineering with Bayesian hyperparameter optimization via dynamic optimizer selector. Mutual conditioning mechanism shares context between LLM and BO, enabling mutually informed decisions. Tree-of-Thought explores flexible FE pipelines while BO solves HPO concurrently. Joint optimization outperforms sequential approaches by exploiting interaction structure."
+  },
+  {
+    "paper_id": 2171,
+    "arxiv_id": "2602.09455v1",
+    "domain": "cs",
+    "title": "Enhancing Affine Maximizer Auctions with Correlation-Aware Payment",
+    "mechanism": "Correlation-aware payment augments fixed mechanisms: Standard Affine Maximizer Auctions have fixed payment form, restricting expressiveness under correlated valuations. CA-AMA augments AMA with correlation-aware payment while preserving dominant-strategy incentive compatibility. Characterized scenarios where classic AMAs perform arbitrarily poorly (revenue \u2192 0) while CA-AMA reaches optimal revenue. Continuity of target function and generalization bound on IR violation enable practical optimization. Payment structure adapted to correlation structure improves mechanism performance."
+  },
+  {
+    "paper_id": 2180,
+    "arxiv_id": "2602.08549v1",
+    "domain": "cs",
+    "title": "Automata-Based Approach to Games with \u03c9-Automatic Preferences",
+    "mechanism": "Value as set of improvable plays: In games with \u03c9-automatic preferences (DFA/parity automata), value defined as set of plays player can guarantee to improve upon relative to preference relation. Set recognized by alternating parity automaton APW of polynomial size. Contrasts with classical games using specific reward functions. \u03c9-automatic characterization enables complexity analysis: Nash equilibrium threshold problem, cooperative rational synthesis (PSPACE-complete), non-cooperative case (undecidable). Demonstrates how automata-theoretic representation affects strategic solvability."
+  }
+]

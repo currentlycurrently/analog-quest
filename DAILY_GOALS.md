@@ -89,50 +89,72 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## 🎯 NEXT SESSION: 47 - Full Expansion Cycle
+## COMPLETED: Session 47 - Full Expansion Cycle ✅
 
-**⚠️⚠️⚠️ IF YOU ARE SESSION 47 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
+**Status**: ✅ **EXPANSION SUCCESSFUL - 30 → 41 DISCOVERIES**
 
-**YOUR FIRST ACTION MUST BE:**
-1. Read **PROGRESS.md** (Session 46 summary - workflow validated)
-2. Read **SESSION46_LESSONS_LEARNED.md** (30+ insights, strategic recommendations)
-3. Read **DATA_QUALITY_STANDARDS.md** (ensure all new papers meet standards)
+**What Was Done**:
+- ✅ Fetched 129 new papers from GOOD domains (q-bio, physics, cs)
+- ✅ Scored all 129 papers (avg 3.9/10, 40% high-value)
+- ✅ Extracted 31 mechanisms from top 26 papers (100% hit rate)
+- ✅ Generated embeddings: 90 mechanisms → 246 cross-domain matches
+- ✅ Manual curation: reviewed top 20, selected 11 (3 excellent + 8 good)
+- ✅ Top match: 0.6194 (q-bio ↔ physics)
+- ✅ Updated documentation (PROGRESS.md, METRICS.md)
 
-**Status**: Workflow validated, strategic targeting proven (+18% better results)
+**Impact**:
+- Total discoveries: 30 → 41 (+11)
+- Total papers: 2,067 → 2,194 (+127)
+- Total mechanisms: 59 → 90 (+31)
+- Strategic targeting validated again (+18% better)
+- Top-20 precision: 55%
 
-**Chuck's Priority**: Scale intelligently using GOOD domains (q-bio, physics, cs)
-
-**Target**: **50+ total verified discoveries** (currently 30)
-
-**Timeline**: 6-8 hours (full expansion cycle)
+**Time**: ~5-6 hours (fetch + score + extract + embed + match + curate + docs)
 
 ---
 
-### Session 47: Full Expansion Cycle (6-8 hours)
+## 🎯 NEXT SESSION: 48 - Continue Expansion
 
-**Goal**: Scale from 30 → 50+ verified discoveries using validated workflow
+**⚠️⚠️⚠️ IF YOU ARE SESSION 48 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
 
-**Context**: Session 46 validated workflow end-to-end. Strategic targeting works (+18% better). Only 3 domains are high-value: q-bio, physics, cs. Data quality standards prevent regression.
+**YOUR FIRST ACTION MUST BE:**
+1. Read **PROGRESS.md** (Session 47 summary)
+2. Read **SESSION47_SUMMARY.md** (detailed results and recommendations)
+3. Check **examples/session47_candidates.json** (226 remaining candidates)
+
+**Status**: 41/50+ discoveries (82% complete), 226 unreviewed candidates available
+
+**Chuck's Priority**: Finish curation to reach 50+ milestone
+
+**Target**: **50+ total verified discoveries** (currently 41)
+
+**Timeline**: 3-4 hours (focused curation)
+
+---
+
+### Session 48: Complete Curation (3-4 hours)
+
+**Goal**: Review remaining candidates to reach 50+ verified discoveries
+
+**Context**: Session 47 generated 246 candidates, reviewed top 20 (55% precision). 226 candidates remain unreviewed. Need 9-15 more discoveries to reach 50+ milestone.
 
 **Recommended Approach**:
-1. **Fetch 100-150 papers** from GOOD domains only (q-bio, physics, cs)
-2. **Score all papers** using audit_mechanism_richness.py
-3. **Extract 30-40 mechanisms** from top scorers (≥5/10 only)
-4. **Generate embeddings** for all mechanisms (59 existing + 30-40 new)
-5. **Match candidates** (cross-domain, threshold ≥0.35)
-6. **Manual curation**: Review top 50 candidates, select 20-25 best
-7. **Validate**: Run validate_discoveries.py (ensure 0 errors)
-8. **Update discoveries.json** with new verified isomorphisms
+1. **Load candidates**: examples/session47_candidates.json (candidates #21-70)
+2. **Manual curation**: Review next 30-50 candidates
+3. **Select 10-15 best**: Target excellent/good ratings
+4. **Add to discoveries**: Update verified_discoveries.json
+5. **Validate**: Ensure data quality maintained
+6. **Update docs**: PROGRESS.md, METRICS.md
 
 **Success Criteria**:
-- [ ] 100-150 new papers fetched (all from q-bio, physics, cs)
-- [ ] 30-40 mechanisms extracted (≥70% hit rate)
-- [ ] 20-25 new discoveries verified (excellent/good ratings)
-- [ ] Data quality: 100% maintained (validation passes)
-- [ ] Total discoveries: 50+ (currently 30)
+- [ ] Review 30-50 candidates (from remaining 226)
+- [ ] Select 10-15 new discoveries (excellent/good)
+- [ ] Total discoveries: 50+ (currently 41)
+- [ ] Data quality: 100% maintained
+- [ ] Precision: ≥40% (in candidates reviewed)
 
-**Efficiency Targets** (from Session 46):
-- Hit rate: ≥70% (papers yielding mechanisms)
-- Extraction speed: ≥5 mechanisms/hour
-- Match precision: ≥30% (excellent/good in top-50)
+**Alternative Options** (if preferred):
+- **Option B**: Write editorial content for top 10-15 discoveries
+- **Option C**: Quality audit of all 41 discoveries
+- **Recommended**: Continue curation (Option A) to reach milestone
 

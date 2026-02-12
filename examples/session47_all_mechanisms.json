@@ -1,0 +1,759 @@
+[
+  {
+    "paper_id": 448,
+    "subdomain": "q-bio.PE",
+    "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns",
+    "mechanism": "Plants facilitate neighboring growth through local resource modification. Facilitation competes with resource competition. When precipitation is intermittent, facilitation-competition balance creates spatial vegetation patterns. Below threshold density, vegetation collapses due to weakened facilitation (spatial Allee effect).",
+    "mechanism_type": "threshold_dynamics,feedback_loop,network_effect",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 450,
+    "subdomain": "q-bio.PE",
+    "title": "Combination therapy for colorectal cancer with anti-PD-L1 and cancer vaccine",
+    "mechanism": "Tumor cells release antigens activating immune T-cells. T-cells attack tumor reducing growth. Tumor evolves PD-L1 expression to suppress T-cell response (escape). Anti-PD-L1 blocks suppression restoring immune attack. Vaccine increases antigen presentation. Combination creates feedback where immune response selects for tumor variants.",
+    "mechanism_type": "feedback_loop,evolutionary_dynamics,threshold_dynamics",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 451,
+    "subdomain": "q-bio.PE",
+    "title": "Optimal Harvesting in Stream Networks: Maximizing Biomass and Yield",
+    "mechanism": "Resource stock accumulates from production flow. Exploitation (flow out) versus conservation (stock maintenance) tradeoff. Maximum sustainable yield occurs at intermediate stock level. Over-exploitation depletes stock below replenishment threshold causing collapse.",
+    "mechanism_type": "flow_stock_transformation,threshold_dynamics,optimization",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 452,
+    "subdomain": "q-bio.PE",
+    "title": "Uncertainty in Island-based Ecosystem Services and Climate Change",
+    "mechanism": "Transmission rate increases with infected density. Recovery rate decreases infection duration. When transmission exceeds recovery (R0>1), epidemic spreads exponentially. Vaccination reduces susceptible population shifting R0 below 1. Spatial heterogeneity creates local pockets where R0 varies.",
+    "mechanism_type": "threshold_dynamics,network_effect,diffusion_process",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 77,
+    "subdomain": "econ.GN",
+    "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
+    "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage.",
+    "mechanism_type": "network_effect,feedback_loop,scaling",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "econ"
+  },
+  {
+    "paper_id": 525,
+    "subdomain": "q-bio.CB",
+    "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
+    "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control.",
+    "mechanism_type": "feedback_loop,threshold_dynamics,homeostasis",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 542,
+    "subdomain": "q-bio.CB",
+    "title": "Compartmental-reaction diffusion framework for microscale dynamics of extracellular serotonin",
+    "mechanism": "Serotonin released from varicosities diffuses through extracellular space. Diffusion couples neighboring varicosities into microdomains. Uptake kinetics (reuptake) removes serotonin creating concentration gradients. Firing frequency, geometry, and uptake shape spatial serotonin reservoirs. Local versus volume transmission determined by diffusive coupling strength.",
+    "mechanism_type": "diffusion_process,spatial_coupling,network_effect",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 370,
+    "subdomain": "q-bio.QM",
+    "title": "Learning virulence-transmission relationships using causal inference",
+    "mechanism": "Pathogen virulence (harm to host) causally influences transmission rate (spread to new hosts). Increased virulence may increase transmission initially but reduces host mobility decreasing spread. Trade-off creates optimal virulence level maximizing transmission. Evolutionary dynamics drive virulence toward this optimum. Past virulence predicts future transmission but not vice versa (directional causality).",
+    "mechanism_type": "evolutionary_dynamics,optimization,causal_feedback",
+    "extraction_quality": "excellent",
+    "domain_neutral": true,
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 2,
+    "subdomain": "physics.gen-ph",
+    "title": "Discrete dynamical systems with scaling and inversion symmetries",
+    "mechanism": "System state evolves discretely through iterated function. Scaling symmetry preserves dynamics under magnification/contraction. Near fixed points, small perturbations grow exponentially (positive Lyapunov exponent) causing sensitive dependence. Trajectories confined to fractal attractor with non-integer dimension. Chaotic regime characterized by scaling laws and self-similarity across scales.",
+    "mechanism_type": "chaotic_dynamics,scaling,sensitive_dependence",
+    "extraction_quality": "good",
+    "domain_neutral": true,
+    "domain": "physics"
+  },
+  {
+    "paper_id": 87,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "title": "Strategic Interactions in Science and Technology Networks",
+    "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence.",
+    "mechanism_type": "network_effect,asymmetric_feedback",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 100,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "title": "Human-AI Cooperation in Public Goods Game",
+    "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback.",
+    "mechanism_type": "reciprocal_dynamics,behavioral_feedback",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 644,
+    "domain": "cs",
+    "subdomain": "cs.SI",
+    "title": "Semantic Memory to Collective Creativity",
+    "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+    "mechanism_type": "network_topology,feedback_loop,diversity_effect",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 814,
+    "domain": "econ",
+    "subdomain": "econ.EM",
+    "title": "DeFi Credit Exposures and Contagion",
+    "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+    "mechanism_type": "contagion,cascade,network_propagation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 916,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Chaotic Dynamics in Black Holes",
+    "mechanism": "Particle motion in extremal configurations exhibits positive Lyapunov exponents indicating sensitivity to initial conditions. Chaos persists even at zero temperature. System parameters (spin, charge) modulate chaos strength - increasing one parameter strengthens chaotic behavior while the other weakens it.",
+    "mechanism_type": "chaos,sensitive_dependence,parameter_modulation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 917,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Critical Slowing Down at Bifurcations",
+    "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes.",
+    "mechanism_type": "critical_slowing,bifurcation,universality",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 918,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Thermalization in Discrete Systems",
+    "mechanism": "Local ergodicity in subsystems, rather than global ergodicity, enables thermalization. Subsystem dynamics appear pseudorandom due to local interactions. Statistical properties of observables emerge from this effective local randomization without requiring the entire system to be ergodic.",
+    "mechanism_type": "local_ergodicity,emergence,statistical_mechanics",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 921,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Parametrically Excited Oscillator",
+    "mechanism": "Time-periodic stiffness variation induces parametric excitation in coupled components. Nonlinear restoring forces and friction interact to produce a spectrum of dynamic responses including periodic, quasi-periodic, and chaotic behaviors. System parameters (stiffness degree, mass symmetry, friction) determine stability boundaries and response amplitude.",
+    "mechanism_type": "parametric_excitation,nonlinear_response,bifurcation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 922,
+    "domain": "nlin",
+    "subdomain": "nlin.CD",
+    "title": "Controlling Extreme Events in Networks",
+    "mechanism": "A single driving signal applied to one network component suppresses extreme events throughout the system. In coupled components, drive breaks phase-locking between elements. In networked systems, drive disrupts protoevent frequency dynamics causing frequency decoupling that prevents extreme event cascades.",
+    "mechanism_type": "drive_suppression,frequency_decoupling,control",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 950,
+    "domain": "econ",
+    "subdomain": "econ.TH",
+    "title": "Group Selection and AI Substitution",
+    "mechanism": "AI use reduces cultural variance in populations. Under individual selection, agents relying heavily on AI (substitutes) outcompete those using AI as complement, despite reducing variance more. Group selection can favor agents that maintain variance through complementary AI use when group boundaries are strong, creating selection-level competition.",
+    "mechanism_type": "selection_dynamics,variance_reduction,multi_level_selection",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 953,
+    "domain": "econ",
+    "subdomain": "econ.TH",
+    "title": "R&D Spillovers and Regional Innovation",
+    "mechanism": "R&D spillovers from one entity enhance innovation in neighboring entities. Strategic interactions follow Stackelberg dynamics where leaders and followers reach Nash equilibrium. Highly-qualified employment amplifies spillover effects, creating synergies between different types of R&D investment and regional innovation output.",
+    "mechanism_type": "spillover,strategic_equilibrium,amplification",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1943,
+    "domain": "cs",
+    "subdomain": "cs.SI",
+    "title": "Seed Node Position and Network Damage",
+    "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+    "mechanism_type": "cascade,topological_amplification,localized_propagation",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1969,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Growth Models Under Catastrophes",
+    "mechanism": "Catastrophic events trigger population dispersal strategies. Dispersion affects survival probability and extinction time. Spatial constraints modulate the effectiveness of dispersal - unconstrained dispersion improves survival while spatial limits reduce the benefit, creating a trade-off between mobility and stability.",
+    "mechanism_type": "catastrophe_response,dispersal,survival_tradeoff",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1970,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Habitat Heterogeneity and Metacommunity Dynamics",
+    "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel.",
+    "mechanism_type": "spatial_heterogeneity,threshold_dynamics,coexistence",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1971,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Fish Migration and Feller Condition",
+    "mechanism": "The ratio between diffusion and drift (Feller condition) determines qualitative migration properties. High diffusion relative to drift creates randomized, intermittent movement patterns. Low ratio produces more deterministic, continuous movement. This ratio acts as a control parameter governing timescale-dependent behavioral transitions.",
+    "mechanism_type": "diffusion_drift_balance,timescale_transition,control_parameter",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1972,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Threshold Resource Redistribution in Kinship Networks",
+    "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization.",
+    "mechanism_type": "threshold_dynamics,network_feedback,reciprocal_altruism",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 1973,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "title": "Free-Rider Problem in Shared Resources",
+    "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria.",
+    "mechanism_type": "cooperation_dilemma,multi_stability,hysteresis",
+    "extraction_quality": "excellent"
+  },
+  {
+    "paper_id": 457,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "arxiv_id": "2602.01492v1",
+    "title": "From Discrete to Continuous Mixed Populations of Conformists, Nonconformists, and Imitators",
+    "mechanism": "Three behavioral types interact: conformists benefit from choosing common strategies, nonconformists profit from rare strategies, and imitators copy highest earners. Population proportions fluctuate in finite populations but equilibrate as population size increases. Strategy proportions undergo perpetual oscillations in small populations, but fluctuation amplitudes approach zero in large populations through stochastic averaging.",
+    "mechanism_type": "frequency_dependence,stochastic_convergence,behavioral_dynamics",
+    "category": "ecology"
+  },
+  {
+    "paper_id": 461,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "arxiv_id": "2602.03835v1",
+    "title": "Indirect Reciprocity with Environmental Feedback",
+    "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation.",
+    "mechanism_type": "reciprocal_feedback,environment_behavior_coupling,dynamic_incentives",
+    "category": "ecology"
+  },
+  {
+    "paper_id": 462,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "arxiv_id": "2602.06036v1",
+    "title": "Multi-strain SIS dynamics with coinfection under host population structure",
+    "mechanism": "Multiple pathogen strains circulate and co-infect hosts with different susceptibilities and clearance rates. Host population structure creates differential transmission pathways across classes. Strain interactions through coinfection alter individual transmission dynamics. Class-specific epidemiological traits modulate strain competition and coexistence patterns.",
+    "mechanism_type": "multi_strain_competition,structured_transmission,coinfection_dynamics",
+    "category": "ecology"
+  },
+  {
+    "paper_id": 463,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "arxiv_id": "2602.00606v1",
+    "title": "Epigenetic state inheritance drivers drug-tolerant persister-induced resistance",
+    "mechanism": "Drug-tolerant persister cells inherit epigenetic states non-genetically. Under treatment pressure, persisters survive while sensitive cells die. Persisters can revert to sensitive states or acquire genetic resistance. Epigenetic state switching rates and treatment intensity determine population evolution between sensitivity, tolerance, and resistance.",
+    "mechanism_type": "non_genetic_inheritance,state_switching,selection_under_stress",
+    "category": "ecology"
+  },
+  {
+    "paper_id": 530,
+    "domain": "q-bio",
+    "subdomain": "q-bio.PE",
+    "arxiv_id": "2602.00044v1",
+    "title": "Cell size control in bacteria",
+    "mechanism": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions.",
+    "mechanism_type": "homeostasis,noise_compensation,population_structure_effects",
+    "category": "ecology"
+  },
+  {
+    "paper_id": 191,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "arxiv_id": "2506.07896v1",
+    "title": "Technology Adoption and Network Externalities in Financial Systems",
+    "mechanism": "Technology adoption spreads through spatial and network channels. Spatial spillovers and network externalities interact multiplicatively - nearby adoption and connected peer adoption amplify each other. Cumulative adoption pressure accumulates along stochastic paths through spatial-network space. Network position amplifies or dampens spatial effects, creating non-linear adoption dynamics.",
+    "mechanism_type": "spatial_network_coupling,adoption_amplification,multiplicative_spillovers",
+    "category": "economics"
+  },
+  {
+    "paper_id": 199,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "arxiv_id": "2506.03914v1",
+    "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
+    "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments.",
+    "mechanism_type": "relative_performance,network_strategic_interaction,price_formation",
+    "category": "economics"
+  },
+  {
+    "paper_id": 194,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "arxiv_id": "2506.06165v1",
+    "title": "Who sets the range? Funding mechanics and context in crypto markets",
+    "mechanism": "Funding rates in perpetual futures impose economic costs on leveraged positions. High funding creates pressure to reduce directional exposure. Capital rebalancing occurs when funding costs exceed expected returns. Funding mechanisms act as negative feedback regulating trader behavior - extreme positions become economically unsustainable, creating mean-reverting pressure that defines trading ranges.",
+    "mechanism_type": "funding_discipline,negative_feedback,economic_constraints",
+    "category": "economics"
+  },
+  {
+    "paper_id": 862,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "arxiv_id": "2503.06041v1",
+    "title": "Manipulation in Prediction Markets",
+    "mechanism": "Manipulators with high budgets attempt to distort prediction market prices. Informed traders with correct beliefs observe price distortions and increase their opposing bets. Market depth and information heterogeneity determine manipulation effectiveness. When information is dispersed, manipulation can temporarily move prices, but informed arbitrage eventually corrects mispricing. Manipulator budget and trader information quality create a competitive dynamic.",
+    "mechanism_type": "manipulation_arbitrage,information_aggregation,price_correction",
+    "category": "economics"
+  },
+  {
+    "paper_id": 864,
+    "domain": "econ",
+    "subdomain": "econ.GN",
+    "arxiv_id": "2503.05613v1",
+    "title": "Who Restores the Peg? Stablecoin Market Dynamics",
+    "mechanism": "Stablecoin prices de-peg during stress events. Arbitrageurs restore the peg by trading against deviations. Arbitrage profitability depends on deviation magnitude and transaction costs. Insufficient arbitrage activity allows persistent de-pegging. Mean-field dynamics aggregate individual arbitrage decisions into collective peg restoration. Market participant heterogeneity and risk aversion determine collective restoration speed.",
+    "mechanism_type": "arbitrage_restoration,mean_field_aggregation,peg_dynamics",
+    "category": "economics"
+  },
+  {
+    "paper_id": 152,
+    "domain": "physics",
+    "subdomain": "cond-mat",
+    "title": "Metastability and ripening of multi-component liquid mixtures",
+    "mechanism": "Multi-component mixtures undergo phase separation through unstable coexistence. Droplets grow via Ostwald ripening with characteristic scaling (radius ~ t^1/3, number ~ n^-2/3). Glass-like relaxation emerges from disordered interactions among components, creating long-lived metastable states. Different wetting angles characterize metastable configurations. Relaxation delay arises from kinetic barriers between metastable states.",
+    "mechanism_type": "phase_separation,metastability,ostwald_ripening,glass_dynamics",
+    "category": "physics"
+  },
+  {
+    "paper_id": 165,
+    "domain": "physics",
+    "subdomain": "physics",
+    "title": "How adaptation to food resources and death rates shape oscillatory dynamics",
+    "mechanism": "Microbes adapt to food supply while experiencing death. Oscillations emerge when adaptation timescale exceeds death timescale. Consumer-resource dynamics couple population growth to substrate replenishment. Multiple timescale interactions determine stability - slow adaptation relative to death enables oscillatory behavior. Necromass recycling and complementary food sources dampen oscillations by facilitating growth.",
+    "mechanism_type": "consumer_resource,oscillation,timescale_separation,adaptation",
+    "category": "physics"
+  },
+  {
+    "paper_id": 168,
+    "domain": "physics",
+    "subdomain": "physics",
+    "title": "Cross-feeding yields high-dimensional chaos and coexistence of species",
+    "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently.",
+    "mechanism_type": "cross_feeding,high_dimensional_chaos,coexistence,intermittent_switching",
+    "category": "physics"
+  },
+  {
+    "paper_id": 169,
+    "domain": "physics",
+    "subdomain": "physics",
+    "title": "Distinguishable spreading dynamics in microbial communities",
+    "mechanism": "Proliferation limitations determine spreading dynamics. Growth arrest causes superlinear spreading at reduced rate. Pressure-limited growth produces linear constant-speed spreading. Nutrient-limited growth exhibits phase transition: superlinear when nutrient supply is high, sublinear when depleted. Nutrient supply and conversion efficiency determine phase boundary. Spreading rate distinguishes dominant limitation type.",
+    "mechanism_type": "growth_limitation,spreading_dynamics,phase_transition,nutrient_depletion",
+    "category": "physics"
+  },
+  {
+    "paper_id": 352,
+    "domain": "physics",
+    "subdomain": "physics",
+    "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
+    "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it.",
+    "mechanism_type": "coevolution,network_heterogeneity,leverage_weakest_link,public_goods",
+    "category": "physics"
+  },
+  {
+    "paper_id": 166,
+    "domain": "physics",
+    "subdomain": "physics.bio-ph",
+    "title": "Intelligent Control of Transportation Flow in Physarum Networks",
+    "mechanism": "Physarum network morphology responds to environmental stimuli by expanding or retracting tubes. Cytoplasmic flow bidirectionally transports nutrients through the network. Flow patterns optimize based on nutrient source locations. Network adapts topology through tube reinforcement when flow is high and tube degradation when flow is low. This creates an intelligent search for optimal transport paths through flow-structure feedback.",
+    "mechanism_type": "adaptive_network,flow_structure_feedback,optimization",
+    "category": "physics"
+  },
+  {
+    "paper_id": 354,
+    "domain": "physics",
+    "subdomain": "physics.soc-ph",
+    "title": "Emergent structures in coupled opinion and network dynamics",
+    "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability.",
+    "mechanism_type": "coevolution,opinion_network_coupling,adaptive_structure",
+    "category": "physics"
+  },
+  {
+    "paper_id": 528,
+    "domain": "q-bio",
+    "subdomain": "q-bio.CB",
+    "title": "Cell proliferation maintains cell area polydispersity in the growing fruit fly wing epithelium",
+    "mechanism": "Cell proliferation generates area variability while mechanical forces regulate packing. Cell division creates size asymmetry between daughter cells. Mechanical constraints from neighbors limit expansion. Area polydispersity emerges from balance between proliferation-driven variability and mechanical relaxation. Cell-cell adhesion and cortical tension determine equilibrium distributions.",
+    "mechanism_type": "proliferation_mechanics_balance,area_polydispersity,mechanical_constraint",
+    "category": "biology"
+  },
+  {
+    "paper_id": 529,
+    "domain": "q-bio",
+    "subdomain": "q-bio.CB",
+    "title": "Stability and robustness of a generalized pump-leak model for epithelial cell and lumen volume regulation",
+    "mechanism": "Epithelial cells regulate volume through coordinated ion pumps, channels, and paracellular pathways. Pumps actively transport ions creating concentration gradients. Osmotic pressure drives water flow following ion movement. Cell-lumen interaction creates coupled volume dynamics. Pump rates, leak permeabilities, and osmotic coupling determine stability. Feedback between cell volume and pump activity maintains homeostasis.",
+    "mechanism_type": "pump_leak_dynamics,volume_regulation,osmotic_coupling,homeostasis",
+    "category": "biology"
+  },
+  {
+    "paper_id": 992,
+    "domain": "q-bio",
+    "subdomain": "q-bio.MN",
+    "title": "Allostery Beyond Amplification: Temporal Regulation of Signaling Information",
+    "mechanism": "Allosteric regulation modulates enzyme activity temporally rather than just amplifying output. Regulatory state switches affect timing of downstream signaling. Information content in signaling depends on temporal patterns not just abundance. Regulatory switching creates temporal encoding of information. Fast switching increases information transmission while slow switching filters noise.",
+    "mechanism_type": "allostery,temporal_encoding,information_transmission,regulatory_switching",
+    "category": "biology"
+  },
+  {
+    "paper_id": 1295,
+    "domain": "physics",
+    "subdomain": "cond-mat.str-el",
+    "title": "Taming multiparty entanglement at measurement-induced phase transitions",
+    "mechanism": "Quantum systems undergo measurement-induced phase transitions when unitary evolution competes with measurements. Below critical measurement rate, volume-law entanglement dominates. Above critical rate, area-law entanglement emerges. Measurement rate acts as control parameter for phase transition. Competing dynamics create distinct entanglement phases. Multiparty entanglement structure differs across phases.",
+    "mechanism_type": "measurement_induced_transition,entanglement_phases,competing_dynamics",
+    "category": "physics"
+  },
+  {
+    "paper_id": 544,
+    "domain": "physics",
+    "subdomain": "physics.optics",
+    "title": "Photonic neuromorphic processing with coupled spiking silicon microrings",
+    "mechanism": "Coupled microring resonators exhibit nonlinear optical dynamics with internal feedback. Injection power and wavelength control dynamical regimes: analogue, spiking, or bistable responses. Nonlinearities create sharp transitions in dynamical complexity at regime boundaries. Spiking dynamics generate sparse activity patterns. Thermal bistabilities emerge at low power enhancing computational capacity. Power-wavelength phase space determines accessible dynamical states.",
+    "mechanism_type": "nonlinear_optics,spiking_dynamics,bistability,regime_transitions",
+    "category": "physics"
+  },
+  {
+    "paper_id": 153,
+    "domain": "physics",
+    "subdomain": "physics",
+    "title": "Heterogeneity dominates irreversibility in random Markov models",
+    "mechanism": "Markov dynamics combine heterogeneity and asymmetry (broken detailed balance). Heterogeneity parameter controls transition rate variability. Asymmetry parameter controls forward-backward correlation. Critical locus emerges where relaxation times diverge. Entropy production and predictive information depend strongly on heterogeneity but weakly on asymmetry. Near criticality, small heterogeneity changes cause large dynamical shifts.",
+    "mechanism_type": "markov_dynamics,critical_slowing,heterogeneity_dominance,entropy_production",
+    "category": "physics"
+  },
+  {
+    "paper_id": 532,
+    "domain": "q-bio",
+    "subdomain": "q-bio",
+    "title": "Thermodynamic Constraints Drive Hierarchical Preemption in Cellular Decision-Making",
+    "mechanism": "Under stress, cells face rapid pathway selection with ATP scarcity. Continuous ATP regeneration rescues sporulation despite 99.7% ATP depletion. GTP accumulates as energy buffer while ATP regenerates preventing complete depletion. Stochastic regulatory transitions couple to continuous metabolic flux. Energy efficiency emerges from interplay between discrete regulatory logic and continuous thermodynamic constraints. System robustness through dynamic energy management enables 16-fold efficiency gain under stress.",
+    "mechanism_type": "thermodynamic_constraint,energy_management,regulatory_metabolic_coupling",
+    "category": "biology"
+  },
+  {
+    "paper_id": 540,
+    "domain": "q-bio",
+    "subdomain": "q-bio",
+    "title": "Coarse-graining and stochastic oscillations in cell-size homeostasis",
+    "mechanism": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration.",
+    "mechanism_type": "size_homeostasis,feedback_control,stochastic_oscillation,coarse_graining",
+    "category": "biology"
+  },
+  {
+    "paper_id": 791,
+    "domain": "q-bio",
+    "subdomain": "q-bio",
+    "title": "Distributed delay stabilizes bistable genetic networks",
+    "mechanism": "Protein production involves delayed multi-step process (transcription, translation, folding, oligomerization). Delay is distributed (noisy) due to stochastic process durations. Increasing delay noise dramatically stabilizes metastable states in bistable circuits. Mean residence times in metastable states increase with delay distribution width. Distributed delay prevents unwanted switching caused by small fluctuations while allowing controlled transitions.",
+    "mechanism_type": "distributed_delay,bistability_stabilization,metastable_states,noise_induced_stability",
+    "category": "biology"
+  },
+  {
+    "paper_id": 797,
+    "domain": "q-bio",
+    "subdomain": "q-bio",
+    "title": "Imperfect molecular detection renormalizes apparent kinetic rates",
+    "mechanism": "Imperfect molecular detection in single-cell measurements introduces technical noise obscuring true dynamics. Binomial capture models describe detection inefficiency. Under high transcription factor abundance or timescale separation, capture effects renormalize kinetic rates. Apparent mean burst size appears reduced while binding reactions appear faster. Technical noise reshapes observed statistics without changing underlying mechanism - creates measurement-induced effective parameters.",
+    "mechanism_type": "measurement_induced_renormalization,technical_noise,effective_rates,observation_distortion",
+    "category": "biology"
+  },
+  {
+    "paper_id": 799,
+    "domain": "q-bio",
+    "subdomain": "q-bio.SC",
+    "title": "A theory for coexistence and selection of branched actin networks",
+    "mechanism": "Multiple branched actin networks compete for shared monomer pool. Network growth locally depletes monomers creating negative feedback between network density and growth rate. Local depletion couples network growth rates through shared resource. Under weak competition, networks coexist at steady state. Under strong competition, selection replaces coexistence - fastest-growing network excludes others. Competition strength determined by monomer availability and consumption rates.",
+    "mechanism_type": "resource_competition,negative_feedback,coexistence_selection_transition,shared_pool",
+    "category": "biology"
+  },
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+    "mechanism": "Periodic impulsive interventions introduce new agents into a two-population system where incompatibility mechanism prevents successful pairing between populations. Environmental stress (temperature) induces temporary loss of distinguishing trait in introduced population. System exhibits threshold conditions for long-term persistence of intervention effects versus reversion to pre-intervention equilibrium. Trade-off between intervention frequency, agent fitness costs, and environmental tolerance determines persistence threshold."
+  },
+  {
+    "paper_id": 2064,
+    "arxiv_id": "2602.08188v1",
+    "domain": "q-bio",
+    "title": "The Great Filter hypothesis -- a new Great Filter?",
+    "mechanism": "Species reaching ecological dominance experiences reduced selective pressure for high reproduction rates. As intelligence and technology advance, mortality reduction (medicine) decouples from reproduction rate (contraception), enabling conscious reproduction control. Economic, social, and educational factors amplify reproduction decline. Population dynamics are exponential in both growth and decline phases, creating extinction threshold when decline rate exceeds replacement. Intelligence + technology + reduced predation \u2192 demographic collapse feedback loop."
+  },
+  {
+    "paper_id": 2063,
+    "arxiv_id": "2602.08641v1",
+    "domain": "q-bio",
+    "title": "Modeling Protein Evolution via Generative Inference From Monte Carlo Chains to Population Genetics",
+    "mechanism": "Evolutionary trajectories on fitness landscapes shaped by two competing effects: fitness-driven selection and phylogenetic correlations from finite population size. Independent sampling generates unrealistic gradual sweeps and ignores historical constraints. Finite-population dynamics generate phylogenetic structure, selective sweeps, and mutational abundances as emergent properties without external specification. Trade-off: finite-population models capture realistic dynamics but deviate from equilibrium distribution at long times. Proper evolutionary modeling requires accounting for both selective pressure and population structure effects."
+  },
+  {
+    "paper_id": 2061,
+    "arxiv_id": "2602.08840v1",
+    "domain": "q-bio",
+    "title": "Division of labor enables efficient collective decision-making under uncertainty",
+    "mechanism": "Decentralized collective decision-making through heterogeneous threshold-based strategies. Small subset of agents explores continuously (low threshold for action) while majority remains idle until expected reward exceeds threshold (high threshold). Information sharing across group enables synchronized action by majority when conditions improve. Optimal explorer fraction scales sublinearly with group size due to information redundancy. Ecological pressure (cost/reward ratio) modulates heterogeneity: intermediate pressure maximizes diversity, extreme conditions favor homogeneity. No central coordination required - group-level policy emerges from individual threshold rules."
+  },
+  {
+    "paper_id": 2044,
+    "arxiv_id": "2602.09503v1",
+    "domain": "physics",
+    "title": "Structure-aware imitation dynamics on higher-order networks",
+    "mechanism": "Agent strategy updating through structure-aware sampling: number of groups sampled and number of peers consulted within each group jointly determine information diversity. Higher information diversity across groups promotes cooperation in multiplayer dilemmas. Update rules interact with group structure (hypergraph topology): sampling more groups increases cross-group information flow, sampling more peers within groups increases within-group consensus. Weak selection regime reveals analytical threshold for cooperation success as function of information diversity metric. Design principle: diversify information sources across groups to enhance cooperation."
+  },
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes",
+    "mechanism": "Impulsive intervention with environmental stressor: Periodic discrete interventions (releases) combined with continuous environmental stress (temperature) that induces state loss. System exhibits threshold-dependent bistability\u2014successful establishment requires intervention frequency and magnitude above critical values to overcome stress-induced state decay. Analytical threshold conditions characterize existence and stability of periodic solutions."
+  },
+  {
+    "paper_id": 2068,
+    "arxiv_id": "2602.07231v1",
+    "domain": "q-bio",
+    "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes",
+    "mechanism": "Cytoplasmic incompatibility as reproductive asymmetry: Infected males mating with uninfected females produce inviable offspring, while infected females produce viable offspring regardless of male type. This creates frequency-dependent reproductive advantage that amplifies when infected fraction exceeds threshold, driving potential fixation despite fitness costs."
+  },
+  {
+    "paper_id": 2105,
+    "arxiv_id": "2602.09841v1",
+    "domain": "cs",
+    "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance",
+    "mechanism": "Adversarial reweighting with dual optimization objectives: System balances fairness (minimize worst-group error) against average performance through stochastic adversarial reweighting. Adversary identifies underperforming groups, primary optimizer adapts to worst-case scenarios. Creates dynamic fairness-robustness tradeoff where group-level performance variance is minimized at cost of average performance."
+  },
+  {
+    "paper_id": 2105,
+    "arxiv_id": "2602.09841v1",
+    "domain": "cs",
+    "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance",
+    "mechanism": "Hierarchical accountability tracing: Multi-level responsibility attribution where violations are traced through decision trajectory to specific agents and vendors. Produces dual accountability reports\u2014user-level SLA summaries (outcome-focused) and operator-level responsibility analytics (causal attribution). Enables principled blame assignment in distributed autonomous systems."
+  },
+  {
+    "paper_id": 2139,
+    "arxiv_id": "2602.07084v1",
+    "domain": "q-bio",
+    "title": "AbFlow: Paratope-Centric Antibody Design",
+    "mechanism": "Surface-guided local optimization within global generation: Flow-matching framework uses antigen surface interaction data to refine local binding interface (CDR-H3) while maintaining global structural coherence. Surface Multi-channel Encoder extracts interface geometry, steering velocity field to optimize contact regions preferentially. Demonstrates hierarchical generation\u2014global structure constraints guide local interface refinement."
+  },
+  {
+    "paper_id": 2170,
+    "arxiv_id": "2602.10053v1",
+    "domain": "cs",
+    "title": "The Architecture of Illusion: Network Opacity",
+    "mechanism": "Information locality bias induces sophisticated bias: Agents observe network-biased sample (controlled by locality parameter p) rather than global population. Network opacity (low p) causes systematic overestimation of opponent cognitive depth\u2014agents infer high sophistication from locally-sampled high-sophistication neighbors, creating belief distortion. Parameter p acts as continuous control lever between myopic (p\u21920) and fully informed (p=1) reasoning."
+  },
+  {
+    "paper_id": 2170,
+    "arxiv_id": "2602.10053v1",
+    "domain": "cs",
+    "title": "The Architecture of Illusion: Network Opacity",
+    "mechanism": "Escalation principle in strategic complements: Restricting information (reducing network transparency p) traps agents in echo chambers where they compete against hallucinated high-sophistication peers. In games of strategic complements, opacity maximizes aggregate effort by preventing agents from coordinating on low-effort equilibrium. Conversely, transparency required in coordination games to minimize variance. Network topology functions as cognitive zoom lens."
+  },
+  {
+    "paper_id": 2194,
+    "arxiv_id": "2602.08483v1",
+    "domain": "physics",
+    "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics",
+    "mechanism": "Reentrant coupling drives spectral condensation: Progressive collective coupling (reentrant mixing) pushes system toward infrared critical regime where extensive band of slow collective modes emerges. Spectral density exhibits power-law scaling of relaxation rates with critical exponents, indicating self-organized critical dynamics. System reorganizes from localized relaxation to coherent motion along low-dimensional manifolds\u2014qualitative phase transition not quantitative scaling."
+  },
+  {
+    "paper_id": 2194,
+    "arxiv_id": "2602.08483v1",
+    "domain": "physics",
+    "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics",
+    "mechanism": "Protected sector-critical regime via homeostatic regulation: Critical dynamics alone lead to instability. Homeostatic regulation introduces gapped stabilizing direction orthogonal to critical sector, yielding metastable infrared phase. Long-lived trajectories persist without collapse\u2014coexistence of scale-free collective dynamics and global stabilization. Defines distinct stability class, not continuation of existing regime."
+  },
+  {
+    "paper_id": 2071,
+    "arxiv_id": "2601.21079v2",
+    "domain": "q-bio",
+    "title": "Quenched Coalescent for Structured Diploid Populations",
+    "mechanism": "Quenched vs annealed scaling limits: Gene genealogies conditioned on pedigree (quenched) converge to different coalescent process than unconditional genealogies (annealed). Limits coincide only when large migrations and uneven offspring distributions are absent. Quenched limit driven by Poisson point process recording timing and scale of large events\u2014demonstrates history-dependence where specific realized pedigree trajectory matters, not just population-average dynamics."
+  },
+  {
+    "paper_id": 2074,
+    "arxiv_id": "2601.20416v1",
+    "domain": "q-bio",
+    "title": "Promotion of Cooperation in Deme-Structured Populations",
+    "mechanism": "Growth-merging-dilution cycles promote cooperation: Populations undergo cycles of within-deme growth, inter-deme merging, and dilution. Cooperation favored during deterministic logistic growth phase and under stochastic growth. Hard selection (competition between demes) essential\u2014soft selection (within-deme competition with fixed deme sizes) eliminates cooperation advantage. Spatial structure matters only under demographic fluctuations and group-level competition."
+  },
+  {
+    "paper_id": 2079,
+    "arxiv_id": "2602.06342v1",
+    "domain": "physics",
+    "title": "Mean-Field Theory for Heider Balance under Heterogeneous Social Temperatures",
+    "mechanism": "Distribution-dependent phase transitions: Each link assigned its own social temperature (volatility/susceptibility to change). Collective opinion state determined by distribution-dependent self-consistency condition. Functional form of temperature distribution\u2014light-tailed vs heavy-tailed\u2014leads to qualitatively distinct phase diagrams for polarization transitions. Entire distribution shape, not just mean/variance, governs macroscopic behavior. Homogeneous limit provides universal lower bound for critical transition."
+  },
+  {
+    "paper_id": 2102,
+    "arxiv_id": "2602.09902v1",
+    "domain": "cs",
+    "title": "Routing, Cascades, and User Choice for LLMs",
+    "mechanism": "Provider-user misalignment gap: Stackelberg game where provider routes tasks to models, user responds by re-prompting or abandoning. Misalignment emerges when user's and provider's rankings of models (utility vs cost) differ. Provider-optimal routing differs from user-preferred routing, creating incentive for provider to throttle latency to minimize costs, depressing user utility. Optimal routing typically static (no cascading) depending on expected utility, contrary to intuition favoring cascades."
+  },
+  {
+    "paper_id": 2106,
+    "arxiv_id": "2602.09821v1",
+    "domain": "cs",
+    "title": "Text Summarization via Global Structure Awareness",
+    "mechanism": "Persistent homology for semantic core identification: Construct semantic-weighted graph from sentence embeddings. Persistent homology (topological data analysis) identifies core semantics and logical structures forming backbone. Protection pool preserves topology while iterative pruning removes redundancy. Lightweight proxy metrics approximate importance without repeated computation. Demonstrates topology-guided optimization where global structure constrains local edits."
+  },
+  {
+    "paper_id": 2120,
+    "arxiv_id": "2602.08640v1",
+    "domain": "q-bio",
+    "title": "Universal Approximation Theorems for Dynamical Systems",
+    "mechanism": "\u03b5-\u03b4 closeness for infinite-horizon approximation: Neural ODEs achieve trajectories within error \u03b5 except on measure-\u03b4 initial conditions over infinite time horizon [0,\u221e). Addresses multistability (multiple attractors) and limit cycles beyond finite-time or globally-stable cases. Temporal generalization bound: \u03b5-\u03b4 closeness implies L\u1d56 error \u2264 \u03b5\u1d56 + \u03b4\u00b7D\u1d56 for all t\u22650, bridging topological guarantees to training metrics. Handles structural stability (Morse-Smale systems) with hyperbolic fixed points and limit cycles."
+  },
+  {
+    "paper_id": 2123,
+    "arxiv_id": "2602.07816v2",
+    "domain": "q-bio",
+    "title": "Beyond Expertise: Predictive Eye-Hand Coordination",
+    "mechanism": "Individual-specific predictive protocols: Temporal coupling between saccade distance and pen speed reveals stable, participant-specific predictive windows (-50 to 400ms) uncorrelated with expertise. Predictive windows match individual pen catch-up time, indicating oculomotor system stabilizes fixation in anticipation of hand's future velocity (not reactive pursuit). Demonstrates minimum intervention principle\u2014diverse predictive strategies achieve equivalent performance, suggesting idiosyncratic neuromotor constraints shape coordination, not training."
+  },
+  {
+    "paper_id": 2138,
+    "arxiv_id": "2602.07103v1",
+    "domain": "q-bio",
+    "title": "scDFM: Distributional Flow Matching for Perturbation Prediction",
+    "mechanism": "Population-level distributional alignment: Conditional flow matching models full distribution of perturbed cells (not individual cell correspondences). Maximum mean discrepancy (MMD) objective aligns perturbed and control populations beyond cell-level pairing. Captures global population shifts rather than one-to-one mappings. Perturbation-Aware Differential Transformer leverages gene interaction graphs to model context-specific expression changes at population scale."
+  },
+  {
+    "paper_id": 2150,
+    "arxiv_id": "2602.10006v1",
+    "domain": "cs",
+    "title": "Answer First, Reason Later: Mode-Balanced RL",
+    "mechanism": "Mode-seeking vs mode-covering divergence tradeoff: Reinforcement learning minimizes Reverse KL (mode-seeking, finds probability peaks, prone to reward hacking and mode collapse). Supervised fine-tuning minimizes Forward KL (mode-covering, forces model to cover data distribution). Mode-balanced optimization incorporates SFT auxiliary loss into RL to balance both properties\u2014prevents forgetting complex long-tail rules while maximizing rewards."
+  },
+  {
+    "paper_id": 2157,
+    "arxiv_id": "2602.09864v1",
+    "domain": "cs",
+    "title": "Differentiable Tripartite Modularity for Clustering",
+    "mechanism": "Tripartite modularity via weighted co-paths: Community structure defined by weighted co-paths across three node types connected through mediated interactions. Factorized computation avoids explicit third-order tensors (computational efficiency). Structural normalization at pivot nodes controls extreme degree heterogeneity. Linear complexity in edges, enabling end-to-end optimization with graph neural networks. Extends bipartite modularity to higher-order relational structures."
+  },
+  {
+    "paper_id": 2073,
+    "arxiv_id": "2601.20670v1",
+    "domain": "q-bio",
+    "title": "Noise-induced excitability: boom, bust and extirpation",
+    "mechanism": "Noise-driven threshold behavior with boom-bust-extirpation: Environmental feedback operates slower than population growth, causing overshoot and collapse. Stochastic framework reveals threshold where population either booms or is extirpated before expansion. Transition between excitable regime (most trajectories absorbed after first bust) and persistent regime (metastable state reached) governed by diffusion strength and timescale ratio. Demonstrates finite-time extinction through noise amplification, not captured by deterministic models."
+  },
+  {
+    "paper_id": 2076,
+    "arxiv_id": "2601.19681v1",
+    "domain": "q-bio",
+    "title": "Long-term evolution of regulatory DNA sequences",
+    "mechanism": "Global genotype-phenotype map for cis-regulatory evolution: Biophysically-realistic GP map synthesizes TF-DNA interaction models with binding event combinations. Enables simulation of de novo CRE evolution, quantifying: (1) time to evolve CREs from scratch, (2) number of non-trivial regulatory functions in sequence space, (3) connectedness of regulatory architectures. GP map topology determines evolvability\u2014some architectures enable rapid evolution through high connectivity, others exhibit rugged landscapes with sparse functional paths."
+  },
+  {
+    "paper_id": 2077,
+    "arxiv_id": "2601.22177v1",
+    "domain": "q-bio",
+    "title": "Emergent spatial organization of competing species",
+    "mechanism": "Dynamic carrying capacity with endogenous cooperation field: Growth governed by carrying capacity integrating abiotic stress (temperature, pollution, resources) with pollution-sensitive cooperation field. Cooperation enhances resilience but collapses in polluted zones, creating heterogeneous social buffering. Spontaneous emergence of persistent spatial organization\u2014dominance segregation, stable competitive boundaries. Coexistence through distinct strategies: one species occupies more area, other maintains higher local densities."
+  },
+  {
+    "paper_id": 2080,
+    "arxiv_id": "2602.05142v2",
+    "domain": "physics",
+    "title": "Modelling Pedestrian Behaviour in Autonomous Vehicle Encounters",
+    "mechanism": "Directional asymmetry in risk perception: Frontal and rear collision risk proximity (CRP) show opposite influences on movement adjustments. Possible mid-crossing threshold in remaining distance. Results suggest multiple behavioral tendencies driven by both risk perception and movement efficiency, not single optimization. Residual Logit model captures hybrid of discrete choice (temporal/spatial adjustments) and machine learning (perceptual indicators like visual looming)."
+  },
+  {
+    "paper_id": 2083,
+    "arxiv_id": "2602.00234v2",
+    "domain": "physics",
+    "title": "Fragmentation of longitudinal social network",
+    "mechanism": "Local cohesion-seeking yields global fragmentation: Social cohesion (average closure) declines >15% over 12 years despite no demographic compositional change. Decline due to rewiring in individual ego networks\u2014decreasing overlap of social contexts, greater geographical mobility. Residential relocation temporarily increases local closure, but causes global network fragmentation. Demonstrates unintended collective consequence: individual-level cohesion-seeking behavior fragments population-scale structure."
+  },
+  {
+    "paper_id": 2091,
+    "arxiv_id": "2602.09980v1",
+    "domain": "cs",
+    "title": "Supervised Metric Regularization for Multi-Regime PINNs",
+    "mechanism": "Topology-aware latent conditioning: Standard parametric PINNs map physical parameters directly to solutions, causing spectral bias/mode collapse at regime transitions. TAPINN conditions solver on latent state optimized for metric-based regime separation. Phase-based Alternating Optimization manages gradient conflicts between metric and physics objectives. Latent metric structure prevents averaging of distinct physical behaviors, achieving 2.18x lower gradient variance than baselines."
+  },
+  {
+    "paper_id": 2092,
+    "arxiv_id": "2602.09963v1",
+    "domain": "cs",
+    "title": "Drug Release Modeling using Physics-Informed Neural Networks",
+    "mechanism": "Physics-informed long-term prediction from short-term data: Embedding Fick's diffusion law into neural network loss enables accurate long-term release predictions from limited early-time measurements. PINN achieved RMSE <0.05 using only first 6% of release time for planar films (94% data reduction). Combines physical laws with sparse experimental data, yielding predictions classical models cannot achieve without full temporal data. Bayesian PINNs provide uncertainty quantification under noise."
+  },
+  {
+    "paper_id": 2094,
+    "arxiv_id": "2602.09945v1",
+    "domain": "cs",
+    "title": "Closing Reasoning Gaps in Clinical Agents with Differential Reasoning Learning",
+    "mechanism": "Graph edit distance for reasoning alignment: Extract reasoning graphs (DAGs) from reference reasoning and agent's chain-of-thought. Clinically weighted graph edit distance identifies structural discrepancies. LLM-as-a-judge aligns semantically equivalent nodes, diagnoses logic gaps. Graph-level discrepancies converted to natural-language instructions stored in Differential Reasoning Knowledge Base. Retrieval-augmented generation patches likely reasoning gaps at inference. Improves both final-answer accuracy and reasoning fidelity."
+  },
+  {
+    "paper_id": 2096,
+    "arxiv_id": "2602.09937v1",
+    "domain": "cs",
+    "title": "Why Do AI Agents Systematically Fail at Cloud Root Cause Analysis?",
+    "mechanism": "Architecture-level pitfalls persist across model capabilities: Process-level failure analysis of 1,675 agent runs across 5 LLM models reveals 12 pitfall types. Most prevalent pitfalls (hallucinated data interpretation, incomplete exploration) persist across all models regardless of capability tier. Indicates failures originate from shared agent architecture, not individual model limitations. Prompt engineering cannot resolve dominant pitfalls; enriching inter-agent communication protocol reduces communication failures by 15 percentage points. Demonstrates structural constraints dominate over scaling."
+  },
+  {
+    "paper_id": 2158,
+    "arxiv_id": "2602.09851v1",
+    "domain": "cs",
+    "title": "CoFEH: LLM-driven Feature Engineering with Collaborative BO",
+    "mechanism": "Interleaved FE-HPO co-optimization: Traditional AutoML uses greedy FE-then-HPO workflow, failing to capture strong FE-HPO interactions. CoFEH interleaves LLM-based feature engineering with Bayesian hyperparameter optimization via dynamic optimizer selector. Mutual conditioning mechanism shares context between LLM and BO, enabling mutually informed decisions. Tree-of-Thought explores flexible FE pipelines while BO solves HPO concurrently. Joint optimization outperforms sequential approaches by exploiting interaction structure."
+  },
+  {
+    "paper_id": 2171,
+    "arxiv_id": "2602.09455v1",
+    "domain": "cs",
+    "title": "Enhancing Affine Maximizer Auctions with Correlation-Aware Payment",
+    "mechanism": "Correlation-aware payment augments fixed mechanisms: Standard Affine Maximizer Auctions have fixed payment form, restricting expressiveness under correlated valuations. CA-AMA augments AMA with correlation-aware payment while preserving dominant-strategy incentive compatibility. Characterized scenarios where classic AMAs perform arbitrarily poorly (revenue \u2192 0) while CA-AMA reaches optimal revenue. Continuity of target function and generalization bound on IR violation enable practical optimization. Payment structure adapted to correlation structure improves mechanism performance."
+  },
+  {
+    "paper_id": 2180,
+    "arxiv_id": "2602.08549v1",
+    "domain": "cs",
+    "title": "Automata-Based Approach to Games with \u03c9-Automatic Preferences",
+    "mechanism": "Value as set of improvable plays: In games with \u03c9-automatic preferences (DFA/parity automata), value defined as set of plays player can guarantee to improve upon relative to preference relation. Set recognized by alternating parity automaton APW of polynomial size. Contrasts with classical games using specific reward functions. \u03c9-automatic characterization enables complexity analysis: Nash equilibrium threshold problem, cooperative rational synthesis (PSPACE-complete), non-cooperative case (undecidable). Demonstrates how automata-theoretic representation affects strategic solvability."
+  }
+]

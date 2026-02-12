@@ -1,0 +1,2010 @@
+{
+  "metadata": {
+    "papers_scored": 129,
+    "avg_score": 3.937984496124031,
+    "high_value_count": 52,
+    "high_value_pct": 40.310077519379846
+  },
+  "domain_stats": [
+    {
+      "domain": "cs",
+      "paper_count": 83,
+      "avg_score": 3.710843373493976,
+      "high_value_count": 30,
+      "high_value_pct": 36.144578313253014
+    },
+    {
+      "domain": "physics",
+      "paper_count": 13,
+      "avg_score": 4.0,
+      "high_value_count": 5,
+      "high_value_pct": 38.46153846153847
+    },
+    {
+      "domain": "q-bio",
+      "paper_count": 33,
+      "avg_score": 4.484848484848484,
+      "high_value_count": 17,
+      "high_value_pct": 51.515151515151516
+    }
+  ],
+  "extraction_candidates": [
+    {
+      "paper_id": 2068,
+      "arxiv_id": "2602.07231v1",
+      "domain": "q-bio",
+      "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+      "score": 9,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "strategic",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2105,
+      "arxiv_id": "2602.09841v1",
+      "domain": "cs",
+      "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance in Multivendor 6G Networks",
+      "score": 8,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2139,
+      "arxiv_id": "2602.07084v1",
+      "domain": "q-bio",
+      "title": "AbFlow : End-to-end Paratope-Centric Antibody Design by Interaction Enhanced Flow Matching",
+      "score": 8,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2170,
+      "arxiv_id": "2602.10053v1",
+      "domain": "cs",
+      "title": "The Architecture of Illusion: Network Opacity and Strategic Escalation",
+      "score": 8,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "scaling",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2194,
+      "arxiv_id": "2602.08483v1",
+      "domain": "physics",
+      "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
+      "score": 8,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2071,
+      "arxiv_id": "2601.21079v2",
+      "domain": "q-bio",
+      "title": "The quenched coalescent for structured diploid populations with large migrations and uneven offspring distributions",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "scaling",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2074,
+      "arxiv_id": "2601.20416v1",
+      "domain": "q-bio",
+      "title": "Promotion of cooperation in deme-structured populations with growth-merging dynamics",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2079,
+      "arxiv_id": "2602.06342v1",
+      "domain": "physics",
+      "title": "Mean-Field Theory for Heider Balance under Heterogeneous Social Temperatures",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2102,
+      "arxiv_id": "2602.09902v1",
+      "domain": "cs",
+      "title": "Routing, Cascades, and User Choice for LLMs",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "model",
+        "strategic",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2106,
+      "arxiv_id": "2602.09821v1",
+      "domain": "cs",
+      "title": "Text summarization via global structure awareness",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2120,
+      "arxiv_id": "2602.08640v1",
+      "domain": "q-bio",
+      "title": "Universal Approximation Theorems for Dynamical Systems with Infinite-Time Horizon Guarantees",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2123,
+      "arxiv_id": "2602.07816v2",
+      "domain": "q-bio",
+      "title": "Beyond Expertise: Stable Individual Differences in Predictive Eye-Hand Coordination",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2138,
+      "arxiv_id": "2602.07103v1",
+      "domain": "q-bio",
+      "title": "scDFM: Distributional Flow Matching Model for Robust Single-Cell Perturbation Prediction",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2150,
+      "arxiv_id": "2602.10006v1",
+      "domain": "cs",
+      "title": "Answer First, Reason Later: Aligning Search Relevance via Mode-Balanced Reinforcement Learning",
+      "score": 7,
+      "categories": [
+        "model",
+        "strategic",
+        "scaling",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2157,
+      "arxiv_id": "2602.09864v1",
+      "domain": "cs",
+      "title": "Differentiable Tripartite Modularity for Clustering Heterogeneous Graphs",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2158,
+      "arxiv_id": "2602.09851v1",
+      "domain": "cs",
+      "title": "CoFEH: LLM-driven Feature Engineering Empowered by Collaborative Bayesian Hyperparameter Optimization",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2171,
+      "arxiv_id": "2602.09455v1",
+      "domain": "cs",
+      "title": "Enhancing Affine Maximizer Auctions with Correlation-Aware Payment",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "strategic",
+        "scaling",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2180,
+      "arxiv_id": "2602.08549v1",
+      "domain": "cs",
+      "title": "An Automata-Based Approach to Games with $\u03c9$-Automatic Preferences",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2073,
+      "arxiv_id": "2601.20670v1",
+      "domain": "q-bio",
+      "title": "Noise-induced excitability: bloom, bust and extirpation in autotoxic population dynamics",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2076,
+      "arxiv_id": "2601.19681v1",
+      "domain": "q-bio",
+      "title": "Long-term evolution of regulatory DNA sequences. Part 1: Simulations on global, biophysically-realistic genotype-phenotype maps",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2077,
+      "arxiv_id": "2601.22177v1",
+      "domain": "q-bio",
+      "title": "Emergent spatial organization of competing species under environmental stress and cooperation",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2080,
+      "arxiv_id": "2602.05142v2",
+      "domain": "physics",
+      "title": "Modelling Pedestrian Behaviour in Autonomous Vehicle Encounters Using Naturalistic Dataset",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2083,
+      "arxiv_id": "2602.00234v2",
+      "domain": "physics",
+      "title": "Fragmentation of a longitudinal population-scale social network: Decreasing structural social cohesion in the Netherlands",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2091,
+      "arxiv_id": "2602.09980v1",
+      "domain": "cs",
+      "title": "Supervised Metric Regularization Through Alternating Optimization for Multi-Regime Physics-Informed Neural Networks",
+      "score": 5,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2092,
+      "arxiv_id": "2602.09963v1",
+      "domain": "cs",
+      "title": "Drug Release Modeling using Physics-Informed Neural Networks",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2094,
+      "arxiv_id": "2602.09945v1",
+      "domain": "cs",
+      "title": "Closing Reasoning Gaps in Clinical Agents with Differential Reasoning Learning",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2096,
+      "arxiv_id": "2602.09937v1",
+      "domain": "cs",
+      "title": "Why Do AI Agents Systematically Fail at Cloud Root Cause Analysis?",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 2103,
+      "arxiv_id": "2602.09893v1",
+      "domain": "cs",
+      "title": "TaCo: A Benchmark for Lossless and Lossy Codecs of Heterogeneous Tactile Data",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "threshold",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2104,
+      "arxiv_id": "2602.09856v1",
+      "domain": "cs",
+      "title": "Code2World: A GUI World Model via Renderable Code Generation",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2107,
+      "arxiv_id": "2602.09813v1",
+      "domain": "cs",
+      "title": "Efficient Unsupervised Environment Design through Hierarchical Policy Representation Learning",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    }
+  ],
+  "all_results": [
+    {
+      "paper_id": 2068,
+      "arxiv_id": "2602.07231v1",
+      "domain": "q-bio",
+      "title": "Impulsive Release Strategies for Wolbachia-Infected Mosquitoes under Temperature-Induced Infection Loss",
+      "score": 9,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "strategic",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2105,
+      "arxiv_id": "2602.09841v1",
+      "domain": "cs",
+      "title": "Hybrid Responsible AI-Stochastic Approach for SLA Compliance in Multivendor 6G Networks",
+      "score": 8,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2139,
+      "arxiv_id": "2602.07084v1",
+      "domain": "q-bio",
+      "title": "AbFlow : End-to-end Paratope-Centric Antibody Design by Interaction Enhanced Flow Matching",
+      "score": 8,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2170,
+      "arxiv_id": "2602.10053v1",
+      "domain": "cs",
+      "title": "The Architecture of Illusion: Network Opacity and Strategic Escalation",
+      "score": 8,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "scaling",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2194,
+      "arxiv_id": "2602.08483v1",
+      "domain": "physics",
+      "title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
+      "score": 8,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2071,
+      "arxiv_id": "2601.21079v2",
+      "domain": "q-bio",
+      "title": "The quenched coalescent for structured diploid populations with large migrations and uneven offspring distributions",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "scaling",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2074,
+      "arxiv_id": "2601.20416v1",
+      "domain": "q-bio",
+      "title": "Promotion of cooperation in deme-structured populations with growth-merging dynamics",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2079,
+      "arxiv_id": "2602.06342v1",
+      "domain": "physics",
+      "title": "Mean-Field Theory for Heider Balance under Heterogeneous Social Temperatures",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2102,
+      "arxiv_id": "2602.09902v1",
+      "domain": "cs",
+      "title": "Routing, Cascades, and User Choice for LLMs",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "model",
+        "strategic",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2106,
+      "arxiv_id": "2602.09821v1",
+      "domain": "cs",
+      "title": "Text summarization via global structure awareness",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2120,
+      "arxiv_id": "2602.08640v1",
+      "domain": "q-bio",
+      "title": "Universal Approximation Theorems for Dynamical Systems with Infinite-Time Horizon Guarantees",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2123,
+      "arxiv_id": "2602.07816v2",
+      "domain": "q-bio",
+      "title": "Beyond Expertise: Stable Individual Differences in Predictive Eye-Hand Coordination",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2138,
+      "arxiv_id": "2602.07103v1",
+      "domain": "q-bio",
+      "title": "scDFM: Distributional Flow Matching Model for Robust Single-Cell Perturbation Prediction",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2150,
+      "arxiv_id": "2602.10006v1",
+      "domain": "cs",
+      "title": "Answer First, Reason Later: Aligning Search Relevance via Mode-Balanced Reinforcement Learning",
+      "score": 7,
+      "categories": [
+        "model",
+        "strategic",
+        "scaling",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2157,
+      "arxiv_id": "2602.09864v1",
+      "domain": "cs",
+      "title": "Differentiable Tripartite Modularity for Clustering Heterogeneous Graphs",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2158,
+      "arxiv_id": "2602.09851v1",
+      "domain": "cs",
+      "title": "CoFEH: LLM-driven Feature Engineering Empowered by Collaborative Bayesian Hyperparameter Optimization",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2171,
+      "arxiv_id": "2602.09455v1",
+      "domain": "cs",
+      "title": "Enhancing Affine Maximizer Auctions with Correlation-Aware Payment",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "strategic",
+        "scaling",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2180,
+      "arxiv_id": "2602.08549v1",
+      "domain": "cs",
+      "title": "An Automata-Based Approach to Games with $\u03c9$-Automatic Preferences",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2073,
+      "arxiv_id": "2601.20670v1",
+      "domain": "q-bio",
+      "title": "Noise-induced excitability: bloom, bust and extirpation in autotoxic population dynamics",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2076,
+      "arxiv_id": "2601.19681v1",
+      "domain": "q-bio",
+      "title": "Long-term evolution of regulatory DNA sequences. Part 1: Simulations on global, biophysically-realistic genotype-phenotype maps",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "model",
+        "coevolution",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2077,
+      "arxiv_id": "2601.22177v1",
+      "domain": "q-bio",
+      "title": "Emergent spatial organization of competing species under environmental stress and cooperation",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2080,
+      "arxiv_id": "2602.05142v2",
+      "domain": "physics",
+      "title": "Modelling Pedestrian Behaviour in Autonomous Vehicle Encounters Using Naturalistic Dataset",
+      "score": 5,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2083,
+      "arxiv_id": "2602.00234v2",
+      "domain": "physics",
+      "title": "Fragmentation of a longitudinal population-scale social network: Decreasing structural social cohesion in the Netherlands",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2091,
+      "arxiv_id": "2602.09980v1",
+      "domain": "cs",
+      "title": "Supervised Metric Regularization Through Alternating Optimization for Multi-Regime Physics-Informed Neural Networks",
+      "score": 5,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2092,
+      "arxiv_id": "2602.09963v1",
+      "domain": "cs",
+      "title": "Drug Release Modeling using Physics-Informed Neural Networks",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2094,
+      "arxiv_id": "2602.09945v1",
+      "domain": "cs",
+      "title": "Closing Reasoning Gaps in Clinical Agents with Differential Reasoning Learning",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2096,
+      "arxiv_id": "2602.09937v1",
+      "domain": "cs",
+      "title": "Why Do AI Agents Systematically Fail at Cloud Root Cause Analysis?",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 2103,
+      "arxiv_id": "2602.09893v1",
+      "domain": "cs",
+      "title": "TaCo: A Benchmark for Lossless and Lossy Codecs of Heterogeneous Tactile Data",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "threshold",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2104,
+      "arxiv_id": "2602.09856v1",
+      "domain": "cs",
+      "title": "Code2World: A GUI World Model via Renderable Code Generation",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2107,
+      "arxiv_id": "2602.09813v1",
+      "domain": "cs",
+      "title": "Efficient Unsupervised Environment Design through Hierarchical Policy Representation Learning",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2108,
+      "arxiv_id": "2602.09810v1",
+      "domain": "cs",
+      "title": "A Controlled Study of Double DQN and Dueling DQN Under Cross-Environment Transfer",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2109,
+      "arxiv_id": "2602.09805v1",
+      "domain": "cs",
+      "title": "Decomposing Reasoning Efficiency in Large Language Models",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2112,
+      "arxiv_id": "2602.09794v1",
+      "domain": "cs",
+      "title": "GHS-TDA: A Synergistic Reasoning Framework Integrating Global Hypothesis Space with Topological Data Analysis",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2113,
+      "arxiv_id": "2602.09782v1",
+      "domain": "cs",
+      "title": "Flexible Entropy Control in RLVR with Gradient-Preserving Perspective",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2117,
+      "arxiv_id": "2602.09717v1",
+      "domain": "cs",
+      "title": "From Lightweight CNNs to SpikeNets: Benchmarking Accuracy-Energy Tradeoffs with Pruned Spiking SqueezeNet",
+      "score": 5,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2119,
+      "arxiv_id": "2602.09491v1",
+      "domain": "q-bio",
+      "title": "Finite integration time can shift optimal sensitivity away from criticality",
+      "score": 5,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2122,
+      "arxiv_id": "2602.08079v1",
+      "domain": "q-bio",
+      "title": "Bootstrapping Life-Inspired Machine Intelligence: The Biological Route from Chemistry to Cognition and Creativity",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "model",
+        "scaling",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2126,
+      "arxiv_id": "2602.07539v1",
+      "domain": "q-bio",
+      "title": "Training-Driven Representational Geometry Modularization Predicts Brain Alignment in Language Models",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2130,
+      "arxiv_id": "2602.09034v1",
+      "domain": "q-bio",
+      "title": "Recovering Whole-Brain Causal Connectivity under Indirect Observation with Applications to Human EEG and fMRI",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 2132,
+      "arxiv_id": "2602.09793v1",
+      "domain": "q-bio",
+      "title": "Fully-automated sleep staging: multicenter validation of a generalizable deep neural network for Parkinson's disease and isolated REM sleep behavior disorder",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "threshold",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2135,
+      "arxiv_id": "2602.08751v1",
+      "domain": "q-bio",
+      "title": "Central Dogma Transformer II: An AI Microscope for Understanding Cellular Regulatory Mechanisms",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2137,
+      "arxiv_id": "2602.07709v1",
+      "domain": "q-bio",
+      "title": "Generative structural elucidation from mass spectra as an iterative optimization problem",
+      "score": 5,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2141,
+      "arxiv_id": "2602.10099v1",
+      "domain": "cs",
+      "title": "Learning on the Manifold: Unlocking Standard Diffusion Transformers with Representation Encoders",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2143,
+      "arxiv_id": "2602.10062v1",
+      "domain": "cs",
+      "title": "Vendi Novelty Scores for Out-of-Distribution Detection",
+      "score": 5,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2145,
+      "arxiv_id": "2602.10056v1",
+      "domain": "cs",
+      "title": "WildCat: Near-Linear Attention in Theory and Practice",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2149,
+      "arxiv_id": "2602.10014v1",
+      "domain": "cs",
+      "title": "A Task-Centric Theory for Iterative Self-Improvement with Easy-to-Hard Curricula",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2159,
+      "arxiv_id": "2602.09848v1",
+      "domain": "cs",
+      "title": "Robust Processing and Learning: Principles, Methods, and Wireless Applications",
+      "score": 5,
+      "categories": [
+        "causal",
+        "model",
+        "scaling",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2162,
+      "arxiv_id": "2602.09824v1",
+      "domain": "cs",
+      "title": "PlugSI: Plug-and-Play Test-Time Graph Adaptation for Spatial Interpolation",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2167,
+      "arxiv_id": "2602.09764v1",
+      "domain": "cs",
+      "title": "Self-Supervised Learning as Discrete Communication",
+      "score": 5,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2179,
+      "arxiv_id": "2602.08558v1",
+      "domain": "cs",
+      "title": "FLAG-4D: Flow-Guided Local-Global Dual-Deformation Model for 4D Reconstruction",
+      "score": 5,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 2185,
+      "arxiv_id": "2602.07777v1",
+      "domain": "cs",
+      "title": "Talk, Judge, Cooperate: Gossip-Driven Indirect Reciprocity in Self-Interested LLM Agents",
+      "score": 5,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2193,
+      "arxiv_id": "2602.08737v1",
+      "domain": "physics",
+      "title": "Cell strain-stiffening drives cell breakout from embedded spheroids",
+      "score": 5,
+      "categories": [
+        "network",
+        "model",
+        "coevolution",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2069,
+      "arxiv_id": "2602.07134v1",
+      "domain": "q-bio",
+      "title": "Deterministic and stochastic infection dynamics in a population subject to stress",
+      "score": 4,
+      "categories": [
+        "threshold",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2070,
+      "arxiv_id": "2602.03228v2",
+      "domain": "q-bio",
+      "title": "Asymptotic Behavior of Integral Projection Models via Genealogical Quantities",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2072,
+      "arxiv_id": "2601.20771v1",
+      "domain": "q-bio",
+      "title": "Cross-Country Learning for National Infectious Disease Forecasting Using European Data",
+      "score": 4,
+      "categories": [
+        "threshold",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2081,
+      "arxiv_id": "2602.00934v1",
+      "domain": "physics",
+      "title": "Social Learning with Endogenous Information and the Countervailing Effects of Homophily",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2085,
+      "arxiv_id": "2602.10004v1",
+      "domain": "cs",
+      "title": "ESTAR: Early-Stopping Token-Aware Reasoning For Efficient Inference",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2087,
+      "arxiv_id": "2602.09988v1",
+      "domain": "cs",
+      "title": "Empirical Stability Analysis of Kolmogorov-Arnold Networks in Hard-Constrained Recurrent Physics-Informed Discovery",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 2090,
+      "arxiv_id": "2602.09983v1",
+      "domain": "cs",
+      "title": "Coupled Inference in Diffusion Models for Semantic Decomposition",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2093,
+      "arxiv_id": "2602.09949v1",
+      "domain": "cs",
+      "title": "Bladder Vessel Segmentation using a Hybrid Attention-Convolution Framework",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2095,
+      "arxiv_id": "2602.09940v1",
+      "domain": "cs",
+      "title": "Instruct2Act: From Human Instruction to Actions Sequencing and Execution via Robot Action Network for Robotic Manipulation",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "network",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2097,
+      "arxiv_id": "2602.09933v1",
+      "domain": "cs",
+      "title": "Unbalanced optimal transport for robust longitudinal lesion evolution with registration-aware and appearance-guided priors",
+      "score": 4,
+      "categories": [
+        "network",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2099,
+      "arxiv_id": "2602.09924v1",
+      "domain": "cs",
+      "title": "LLMs Encode Their Failures: Predicting Success from Pre-Generation Activations",
+      "score": 4,
+      "categories": [
+        "network",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2116,
+      "arxiv_id": "2602.09726v1",
+      "domain": "cs",
+      "title": "ExO-PPO: an Extended Off-policy Proximal Policy Optimization Algorithm",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2118,
+      "arxiv_id": "2602.09852v1",
+      "domain": "q-bio",
+      "title": "Open diffusion MRI and connectivity data for epilepsy and surgery: The IDEAS II release",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "network",
+        "causal"
+      ]
+    },
+    {
+      "paper_id": 2129,
+      "arxiv_id": "2602.07131v1",
+      "domain": "q-bio",
+      "title": "Behavior Score Prediction in Resting-State Functional MRI by Deep State Space Modeling",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2131,
+      "arxiv_id": "2602.06994v1",
+      "domain": "q-bio",
+      "title": "SurfAge-Net: A Hierarchical Surface-Based Network for Interpretable Fine-Grained Brain Age Prediction",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2133,
+      "arxiv_id": "2602.09424v1",
+      "domain": "q-bio",
+      "title": "Reward-Guided Discrete Diffusion via Clean-Sample Markov Chain for Molecule and Biological Sequence Design",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2136,
+      "arxiv_id": "2602.08213v1",
+      "domain": "q-bio",
+      "title": "DrugR: Optimizing Molecular Drugs through LLM-based Explicit Reasoning",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2146,
+      "arxiv_id": "2602.10045v1",
+      "domain": "cs",
+      "title": "Conformal Prediction Sets for Instance Segmentation",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2147,
+      "arxiv_id": "2602.10037v1",
+      "domain": "cs",
+      "title": "Effectiveness of Binary Autoencoders for QUBO-Based Optimization Problems",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2148,
+      "arxiv_id": "2602.10031v1",
+      "domain": "cs",
+      "title": "Position: Message-passing and spectral GNNs are two sides of the same coin",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2155,
+      "arxiv_id": "2602.09891v1",
+      "domain": "cs",
+      "title": "Stemphonic: All-at-once Flexible Multi-stem Music Generation",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2156,
+      "arxiv_id": "2602.09869v1",
+      "domain": "cs",
+      "title": "Statistical benchmarking of transformer models in low signal-to-noise time-series forecasting",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2160,
+      "arxiv_id": "2602.09847v1",
+      "domain": "cs",
+      "title": "Stabilized Maximum-Likelihood Iterative Quantum Amplitude Estimation for Structural CVaR under Correlated Random Fields",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2163,
+      "arxiv_id": "2602.09791v1",
+      "domain": "cs",
+      "title": "Toeplitz Based Spectral Methods for Data-driven Dynamical Systems",
+      "score": 4,
+      "categories": [
+        "model",
+        "strategic",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2164,
+      "arxiv_id": "2602.09789v1",
+      "domain": "cs",
+      "title": "When Less is More: The LLM Scaling Paradox in Context Compression",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2165,
+      "arxiv_id": "2602.09784v1",
+      "domain": "cs",
+      "title": "Circuit Fingerprints: How Answer Tokens Encode Their Geometrical Path",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2173,
+      "arxiv_id": "2602.09118v1",
+      "domain": "cs",
+      "title": "Chaos in Autobidding Auctions",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2174,
+      "arxiv_id": "2602.09110v1",
+      "domain": "cs",
+      "title": "Tight Inapproximability for Welfare-Maximizing Autobidding Equilibria",
+      "score": 4,
+      "categories": [
+        "threshold",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2177,
+      "arxiv_id": "2602.08742v1",
+      "domain": "cs",
+      "title": "Welfarist Formulations for Diverse Similarity Search",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2182,
+      "arxiv_id": "2602.08452v1",
+      "domain": "cs",
+      "title": "Modeling Concurrent Multi-Agent Systems",
+      "score": 4,
+      "categories": [
+        "threshold",
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2184,
+      "arxiv_id": "2602.08261v1",
+      "domain": "cs",
+      "title": "Constraint-Aware Generative Auto-bidding via Pareto-Prioritized Regret Optimization",
+      "score": 4,
+      "categories": [
+        "causal",
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2187,
+      "arxiv_id": "2602.07385v1",
+      "domain": "cs",
+      "title": "Online Contract Design",
+      "score": 4,
+      "categories": [
+        "model",
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2188,
+      "arxiv_id": "2602.07355v1",
+      "domain": "cs",
+      "title": "Online Algorithm for Fractional Matchings with Edge Arrivals in Graphs of Maximum Degree Three",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2190,
+      "arxiv_id": "2602.09787v1",
+      "domain": "physics",
+      "title": "Intensity-based Segmentation of Tissue Images Using a U-Net with a Pretrained ResNet-34 Encoder: Application to Mueller Microscopy",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2192,
+      "arxiv_id": "2602.08904v1",
+      "domain": "physics",
+      "title": "Denoise Stepwise Signals by Diffusion Model Based Approach",
+      "score": 4,
+      "categories": [
+        "network",
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2196,
+      "arxiv_id": "2601.22192v2",
+      "domain": "physics",
+      "title": "Chitosan/alginate bionanocomposites adorned with mesoporous silica nanoparticles for bone tissue engineering",
+      "score": 4,
+      "categories": [
+        "feedback",
+        "threshold",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2075,
+      "arxiv_id": "2601.20123v1",
+      "domain": "q-bio",
+      "title": "Optimal illness policy for an unethical daycare center",
+      "score": 2,
+      "categories": [
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2082,
+      "arxiv_id": "2602.00876v1",
+      "domain": "physics",
+      "title": "Testing the validity of multiple opinion dynamics models",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2086,
+      "arxiv_id": "2602.09992v1",
+      "domain": "cs",
+      "title": "A Unified Assessment of the Poverty of the Stimulus Argument for Neural Language Models",
+      "score": 2,
+      "categories": [
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2088,
+      "arxiv_id": "2602.09987v1",
+      "domain": "cs",
+      "title": "Infusion: Shaping Model Behavior by Editing Training Data via Influence Functions",
+      "score": 2,
+      "categories": [
+        "network",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2100,
+      "arxiv_id": "2602.09918v1",
+      "domain": "cs",
+      "title": "SARS: A Novel Face and Body Shape and Appearance Aware 3D Reconstruction System extends Morphable Models",
+      "score": 2,
+      "categories": [
+        "feedback",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2101,
+      "arxiv_id": "2602.09907v1",
+      "domain": "cs",
+      "title": "Self-Regulated Reading with AI Support: An Eight-Week Study with Students",
+      "score": 2,
+      "categories": [
+        "coevolution",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2110,
+      "arxiv_id": "2602.09802v1",
+      "domain": "cs",
+      "title": "Would a Large Language Model Pay Extra for a View? Inferring Willingness to Pay from Subjective Choices",
+      "score": 2,
+      "categories": [
+        "model",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2114,
+      "arxiv_id": "2602.09781v1",
+      "domain": "cs",
+      "title": "Explainability in Generative Medical Diffusion Models: A Faithfulness-Based Analysis on MRI Synthesis",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2121,
+      "arxiv_id": "2602.08275v1",
+      "domain": "q-bio",
+      "title": "Linguistics and Human Brain: A Perspective of Computational Neuroscience",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2124,
+      "arxiv_id": "2602.07570v1",
+      "domain": "q-bio",
+      "title": "How does longer temporal context enhance multimodal narrative video processing in the brain?",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2125,
+      "arxiv_id": "2602.07547v1",
+      "domain": "q-bio",
+      "title": "Linguistic properties and model scale in brain encoding: from small to compressed language models",
+      "score": 2,
+      "categories": [
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2128,
+      "arxiv_id": "2602.07233v1",
+      "domain": "q-bio",
+      "title": "Extracting Root-Causal Brain Activity Driving Psychopathology from Resting State fMRI",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2134,
+      "arxiv_id": "2602.08832v1",
+      "domain": "q-bio",
+      "title": "Oxi-Shapes: Tropical geometric analysis of bounded redox proteomic state spaces",
+      "score": 2,
+      "categories": [
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2140,
+      "arxiv_id": "2602.10100v1",
+      "domain": "cs",
+      "title": "Towards Explainable Federated Learning: Understanding the Impact of Differential Privacy",
+      "score": 2,
+      "categories": [
+        "network",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2142,
+      "arxiv_id": "2602.10067v1",
+      "domain": "cs",
+      "title": "Features as Rewards: Scalable Supervision for Open-Ended Tasks via Interpretability",
+      "score": 2,
+      "categories": [
+        "causal",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2144,
+      "arxiv_id": "2602.10058v1",
+      "domain": "cs",
+      "title": "Evaluating Disentangled Representations for Controllable Music Generation",
+      "score": 2,
+      "categories": [
+        "feedback",
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2161,
+      "arxiv_id": "2602.09842v1",
+      "domain": "cs",
+      "title": "Step-Size Stability in Stochastic Optimization: A Theoretical Perspective",
+      "score": 2,
+      "categories": [
+        "optimization",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2169,
+      "arxiv_id": "2602.10083v1",
+      "domain": "cs",
+      "title": "Allocation Proportionality of OWA--Based Committee Scoring Rules",
+      "score": 2,
+      "categories": [
+        "model",
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2172,
+      "arxiv_id": "2602.09357v1",
+      "domain": "cs",
+      "title": "Data Sharing with Endogenous Choices over Differential Privacy Levels",
+      "score": 2,
+      "categories": [
+        "strategic",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2183,
+      "arxiv_id": "2602.08389v1",
+      "domain": "cs",
+      "title": "Altruism and Fair Objective in Mixed-Motive Markov games",
+      "score": 2,
+      "categories": [
+        "model",
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2186,
+      "arxiv_id": "2602.07593v1",
+      "domain": "cs",
+      "title": "Beyond Arrow: From Impossibility to Possibilities in Multi-Criteria Benchmarking",
+      "score": 2,
+      "categories": [
+        "model",
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2189,
+      "arxiv_id": "2602.07205v1",
+      "domain": "cs",
+      "title": "Online Learning for Uninformed Markov Games: Empirical Nash-Value Regret and Non-Stationarity Adaptation",
+      "score": 2,
+      "categories": [
+        "strategic",
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2191,
+      "arxiv_id": "2602.09564v1",
+      "domain": "physics",
+      "title": "Modeling bacterial flow field with regularized singularities",
+      "score": 2,
+      "categories": [
+        "model",
+        "coevolution"
+      ]
+    },
+    {
+      "paper_id": 2078,
+      "arxiv_id": "2601.19064v1",
+      "domain": "q-bio",
+      "title": "LvD: A New Algorithm for Computing the Likelihood of a Phylogeny",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2084,
+      "arxiv_id": "2601.23205v1",
+      "domain": "physics",
+      "title": "Human versus Artificial Inteligence; a significant example in astrophysics, alas",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2089,
+      "arxiv_id": "2602.09985v1",
+      "domain": "cs",
+      "title": "Online Monitoring Framework for Automotive Time Series Data using JEPA Embeddings",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2098,
+      "arxiv_id": "2602.09929v1",
+      "domain": "cs",
+      "title": "Monocular Normal Estimation via Shading Sequence Estimation",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2111,
+      "arxiv_id": "2602.09798v1",
+      "domain": "cs",
+      "title": "Symbolic Pattern Temporal Numeric Planning with Intermediate Conditions and Effects",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2127,
+      "arxiv_id": "2602.07261v1",
+      "domain": "q-bio",
+      "title": "Cognitive algorithms and systems of episodic memory, semantic memory and their learnings",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2151,
+      "arxiv_id": "2602.09969v1",
+      "domain": "cs",
+      "title": "Causal Identification in Multi-Task Demand Learning with Confounding",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2152,
+      "arxiv_id": "2602.09959v1",
+      "domain": "cs",
+      "title": "Statistical-Computational Trade-offs in Learning Multi-Index Models via Harmonic Analysis",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2154,
+      "arxiv_id": "2602.09904v1",
+      "domain": "cs",
+      "title": "Safeguarding Privacy: Privacy-Preserving Detection of Mind Wandering and Disengagement Using Federated Learning in Online Education",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2166,
+      "arxiv_id": "2602.09783v1",
+      "domain": "cs",
+      "title": "Why Linear Interpretability Works: Invariant Subspaces as a Result of Architectural Constraints",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2168,
+      "arxiv_id": "2602.10096v1",
+      "domain": "cs",
+      "title": "The Complexity of Proper Equilibrium in Extensive-Form and Polytope Games",
+      "score": 1,
+      "categories": [
+        "strategic"
+      ]
+    },
+    {
+      "paper_id": 2175,
+      "arxiv_id": "2602.08966v1",
+      "domain": "cs",
+      "title": "Maximin Shares with Lower Quotas",
+      "score": 1,
+      "categories": [
+        "scaling"
+      ]
+    },
+    {
+      "paper_id": 2176,
+      "arxiv_id": "2602.08871v1",
+      "domain": "cs",
+      "title": "Distortion of Metric Voting with Bounded Randomness",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2178,
+      "arxiv_id": "2602.08714v1",
+      "domain": "cs",
+      "title": "Approximate-EFX Allocations with Ordinal and Limited Cardinal Information",
+      "score": 1,
+      "categories": [
+        "optimization"
+      ]
+    },
+    {
+      "paper_id": 2181,
+      "arxiv_id": "2602.08504v1",
+      "domain": "cs",
+      "title": "A General Theory of Proportionality with Additive Utilities",
+      "score": 1,
+      "categories": [
+        "model"
+      ]
+    },
+    {
+      "paper_id": 2195,
+      "arxiv_id": "2602.08256v1",
+      "domain": "physics",
+      "title": "Quo vadis biophotonics? Wearing serendipity and slow science as a badge of pride, and embracing biology",
+      "score": 1,
+      "categories": [
+        "adaptation"
+      ]
+    },
+    {
+      "paper_id": 2115,
+      "arxiv_id": "2602.09761v1",
+      "domain": "cs",
+      "title": "Grounding LTL Tasks in Sub-Symbolic RL Environments for Zero-Shot Generalization",
+      "score": 0,
+      "categories": []
+    },
+    {
+      "paper_id": 2153,
+      "arxiv_id": "2602.09936v1",
+      "domain": "cs",
+      "title": "The Catastrophic Failure of The k-Means Algorithm in High Dimensions, and How Hartigan's Algorithm Avoids It",
+      "score": 0,
+      "categories": []
+    }
+  ]
+}

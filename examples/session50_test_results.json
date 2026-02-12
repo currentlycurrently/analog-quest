@@ -1,0 +1,407 @@
+{
+  "query_name": "network_dynamics",
+  "query": "(abs:network OR abs:\"network structure\" OR abs:\"network topology\" OR abs:centrality) AND (cat:q-bio.* OR cat:physics.soc-ph OR cat:physics.bio-ph)",
+  "test_date": "2026-02-12",
+  "papers_fetched": 30,
+  "papers_scored": [
+    {
+      "arxiv_id": "2602.11054v1",
+      "title": "A Dynamical Microscope for Multivariate Oscillatory Signals: Validating Regime Recovery on Shared Manifolds",
+      "category": "unknown",
+      "published_date": "2026-02-11",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.11037v1",
+      "title": "Generalized Langevin Models of Linear Agent-Based Systems: Strategic Influence Through Environmental Coupling",
+      "category": "unknown",
+      "published_date": "2026-02-11",
+      "score": 6,
+      "categories": [
+        "structural_dynamics",
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "structural dynamics, network structure, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.10957v1",
+      "title": "Fluctuation-Response Design Rules for Nonequilibrium Flows",
+      "category": "unknown",
+      "published_date": "2026-02-11",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "temporal"
+      ],
+      "reasoning": "network structure, temporal dynamics"
+    },
+    {
+      "arxiv_id": "2602.10427v1",
+      "title": "The selective use of physics knowledge in policy: how interdisciplinary physics bridges subfields and shapes policy influence",
+      "category": "unknown",
+      "published_date": "2026-02-11",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.10303v1",
+      "title": "ICODEN: Ordinary Differential Equation Neural Networks for Interval-Censored Data",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.10255v1",
+      "title": "Two phase transitions in modular multiplex networks",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 5,
+      "categories": [
+        "network_structure",
+        "phase_transition",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, phase transitions, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09963v1",
+      "title": "Drug Release Modeling using Physics-Informed Neural Networks",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.10174v1",
+      "title": "Detecting Network Instability via Multiscale Detrended Cross-Correlations and MST Topology",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09852v1",
+      "title": "Open diffusion MRI and connectivity data for epilepsy and surgery: The IDEAS II release",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09795v1",
+      "title": "Symmetric preferences, asymmetric outcomes: Tipping dynamics in an open-city segregation model",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "phase_transition"
+      ],
+      "reasoning": "network structure, phase transitions"
+    },
+    {
+      "arxiv_id": "2602.09793v2",
+      "title": "Fully-automated sleep staging: multicenter validation of a generalizable deep neural network for Parkinson's disease and isolated REM sleep behavior disorder",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "phase_transition"
+      ],
+      "reasoning": "network structure, phase transitions"
+    },
+    {
+      "arxiv_id": "2602.09787v1",
+      "title": "Intensity-based Segmentation of Tissue Images Using a U-Net with a Pretrained ResNet-34 Encoder: Application to Mueller Microscopy",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09715v1",
+      "title": "Topology and higher-order global synchronization on directed and hollow simplicial and cell complexes",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09645v1",
+      "title": "Impact of Market Reforms on Deterministic Frequency Deviations in the European Power Grid",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 0,
+      "categories": [],
+      "reasoning": "no clear mechanisms"
+    },
+    {
+      "arxiv_id": "2602.09503v1",
+      "title": "Structure-aware imitation dynamics on higher-order networks",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 5,
+      "categories": [
+        "network_structure",
+        "evolutionary",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, evolutionary dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09491v1",
+      "title": "Finite integration time can shift optimal sensitivity away from criticality",
+      "category": "unknown",
+      "published_date": "2026-02-10",
+      "score": 6,
+      "categories": [
+        "network_structure",
+        "phase_transition",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, phase transitions, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.09116v2",
+      "title": "Importance inversion transfer identifies shared principles for cross-domain learning",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08910v1",
+      "title": "Structural coarse-graining enables noise-robust functional connectivity and reveals hidden inter-subject variability",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08904v1",
+      "title": "Denoise Stepwise Signals by Diffusion Model Based Approach",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08897v1",
+      "title": "A Mathematical Theory of Redox Biology",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 6,
+      "categories": [
+        "network_structure",
+        "evolutionary",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, evolutionary dynamics, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08840v1",
+      "title": "Division of labor enables efficient collective decision-making under uncertainty",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 5,
+      "categories": [
+        "network_structure",
+        "phase_transition",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, phase transitions, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08779v1",
+      "title": "How negative feedback from filamentous actin affects cell shapes and motility",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 7,
+      "categories": [
+        "structural_dynamics",
+        "network_structure",
+        "phase_transition",
+        "mechanistic"
+      ],
+      "reasoning": "structural dynamics, network structure, phase transitions, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08751v1",
+      "title": "Central Dogma Transformer II: An AI Microscope for Understanding Cellular Regulatory Mechanisms",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08737v1",
+      "title": "Cell strain-stiffening drives cell breakout from embedded spheroids",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 5,
+      "categories": [
+        "structural_dynamics",
+        "network_structure",
+        "temporal"
+      ],
+      "reasoning": "structural dynamics, network structure, temporal dynamics"
+    },
+    {
+      "arxiv_id": "2602.08640v2",
+      "title": "Universal Approximation Theorems for Dynamical Systems with Infinite-Time Horizon Guarantees",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 3,
+      "categories": [
+        "network_structure",
+        "temporal"
+      ],
+      "reasoning": "network structure, temporal dynamics"
+    },
+    {
+      "arxiv_id": "2602.08580v1",
+      "title": "retinalysis-vascx: An explainable software toolbox for the extraction of retinal vascular biomarkers",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 6,
+      "categories": [
+        "network_structure",
+        "phase_transition",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, phase transitions, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08280v1",
+      "title": "ClusterChirp: A GPU-accelerated Web Server for Natural Language-Guided Interactive Visualization and Analysis of Large Omics Data",
+      "category": "unknown",
+      "published_date": "2026-02-09",
+      "score": 4,
+      "categories": [
+        "structural_dynamics",
+        "network_structure"
+      ],
+      "reasoning": "structural dynamics, network structure"
+    },
+    {
+      "arxiv_id": "2602.08085v1",
+      "title": "Large language models for spreading dynamics in complex systems",
+      "category": "unknown",
+      "published_date": "2026-02-08",
+      "score": 6,
+      "categories": [
+        "structural_dynamics",
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "structural dynamics, network structure, temporal dynamics, mechanistic language"
+    },
+    {
+      "arxiv_id": "2602.08079v1",
+      "title": "Bootstrapping Life-Inspired Machine Intelligence: The Biological Route from Chemistry to Cognition and Creativity",
+      "category": "unknown",
+      "published_date": "2026-02-08",
+      "score": 4,
+      "categories": [
+        "structural_dynamics",
+        "evolutionary"
+      ],
+      "reasoning": "structural dynamics, evolutionary dynamics"
+    },
+    {
+      "arxiv_id": "2602.07539v1",
+      "title": "Training-Driven Representational Geometry Modularization Predicts Brain Alignment in Language Models",
+      "category": "unknown",
+      "published_date": "2026-02-07",
+      "score": 4,
+      "categories": [
+        "network_structure",
+        "temporal",
+        "mechanistic"
+      ],
+      "reasoning": "network structure, temporal dynamics, mechanistic language"
+    }
+  ],
+  "statistics": {
+    "avg_score": 4.1,
+    "high_value_count": 1,
+    "medium_value_count": 9,
+    "low_value_count": 20,
+    "hit_rate_7": 0.033,
+    "hit_rate_5": 0.333,
+    "score_distribution": {
+      "0": 1,
+      "1": 0,
+      "2": 0,
+      "3": 10,
+      "4": 9,
+      "5": 4,
+      "6": 5,
+      "7": 1,
+      "8": 0,
+      "9": 0,
+      "10": 0
+    }
+  }
+}

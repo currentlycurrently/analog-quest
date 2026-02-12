@@ -4,85 +4,91 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 50 Goals (2026-02-12)
+## Session 51 Goals (2026-02-12)
 
-**Mission**: Analyze mechanism vocabulary to prototype keyword-targeted arXiv search (10x efficiency boost)
+**Mission**: Extract 30-40 mechanisms from existing high-value corpus (proven 100% hit rate)
 
 ### Primary Goal
-Build a keyword-targeted search system to replace random/strategic fetching:
-- Extract 20-30 structural keywords from 104 mechanisms
-- Validate keywords predict mechanism richness (>60% discrimination)
-- Design 3-5 targeted arXiv search queries
-- Test queries and measure hit rate (target: >50% vs 33% baseline)
+Continue mining existing high-value corpus - the proven 100% hit rate strategy:
+- Select 40-50 papers from remaining 526 high-value papers (score ≥5/10)
+- Extract 30-40 mechanisms using manual LLM-guided extraction
+- Focus on papers with scores 7-10 first (highest mechanism density)
+- Build toward 150+ total mechanisms (104 → 150+)
 
 ### Why This Matters
-**Current bottleneck**: Manual extraction slow (~12-15 mechanisms/hour), random fetching wasteful (63% duplicates in Session 47)
+**Session 50 validated**: Keyword-targeted search provides only 20-25% efficiency gain (not 10x)
+- Keyword queries achieved 4.1/10 avg (vs 3.3 random, 3.9 strategic)
+- 33% hit rate for papers ≥5/10 (below 50% target)
+- **Conclusion**: Keywords are supplement, not replacement
 
-**If keyword search achieves >50% hit rate**: 10x efficiency improvement, can reach 500+ mechanisms in 10-15 sessions vs 100+
+**Existing corpus is gold mine**: 526 papers scored ≥5/10, proven 100% hit rate when extracted
 
 ### Deliverables
-1. `examples/session50_structural_keywords.json` - Extracted keywords with frequencies
-2. `examples/session50_keyword_validation.json` - Validation against 2,194 papers
-3. `examples/session50_search_queries.json` - Designed arXiv queries
-4. SESSION50_SUMMARY.md - Findings and recommendations
-5. Updated PROGRESS.md and DAILY_GOALS.md
+1. Select 40-50 high-value papers (≥7/10 preferred)
+2. Extract 30-40 mechanisms (manual, domain-neutral)
+3. Update mechanisms JSON file (104 → 150+)
+4. Generate embeddings for new mechanisms
+5. Match new mechanisms → new cross-domain candidates
+6. Update PROGRESS.md and METRICS.md
 
 ### Time Estimate
-- Part 1 (Extract keywords): 1-2 hours
-- Part 2 (Validate keywords): 30-60 min
-- Part 3 (Build queries): 30-60 min
-- Part 4 (Test queries - optional): 30 min
+- Paper selection: 15 min
+- Mechanism extraction: 3-4 hours (~12-15 mechanisms/hour)
+- Embeddings + matching: 15 min
 - Documentation: 30 min
-- **Total**: 3-4 hours
+- **Total**: 4-5 hours
 
 ### Success Criteria
 **Minimum**:
-- 20+ structural keywords extracted
-- Validation shows >60% discrimination power
-- 3-5 arXiv search queries designed
+- 25+ mechanisms extracted
+- All mechanisms domain-neutral and structural
+- 104 → 130+ total mechanisms
 
 **Target**:
-- 30+ keywords with categories
-- >70% discrimination validated
-- 5-8 targeted queries
-- Test queries achieve >50% hit rate ✓
+- 30-35 mechanisms extracted
+- 104 → 140+ total mechanisms
+- Hit rate >90% (expected ~100%)
+- Generate 100+ new cross-domain candidates
 
 **Stretch**:
-- 50+ keywords with full taxonomy
-- Test queries achieve >60% hit rate
-- 10x efficiency improvement validated
-- Ready to deploy as standard workflow
+- 40+ mechanisms extracted
+- 104 → 150+ total mechanisms
+- Reach 150 mechanism milestone in one session ✓
+- 200+ new cross-domain candidates
 
 ---
 
-## Context from Session 49
+## Context from Session 50
 
-Session 49 curated 491 candidates from Session 48:
-- Reviewed top 30 systematically
-- Found 12 new discoveries (5 excellent + 7 good)
-- Total discoveries: 41 → **53** ✓✓✓
-- **50+ milestone EXCEEDED (106%)**
-- Top-30 precision: 40%
+Session 50 tested keyword-targeted arXiv search hypothesis:
+- Extracted 46 structural keywords from 104 mechanisms
+- Validated against 2,194 scored papers
+- Built 8 targeted arXiv queries
+- Tested network_dynamics query on 30 papers
+- **Result**: 4.1/10 avg (vs 3.3 random) - modest 20-25% gain
+- **10x hypothesis refuted**: Keywords necessary but not sufficient
 
 **Current state**:
 - 104 mechanisms extracted
 - 53 verified discoveries
 - 461 Session 48 candidates awaiting review
 - 526 high-value papers (≥5/10) remaining
+- 8 keyword queries ready for selective use
 
 ---
 
 ## Workflow After Session 50
 
-**If keyword search validates** (>50% hit rate):
-- **Session 51**: Extract 30-40 mechanisms using keyword-targeted fetching
-- **Session 52**: Continue curation (review next 30-50 Session 48 candidates)
-- **Session 53**: Update frontend with 60+ discoveries
+**Keyword search validated at 33% hit rate** (below 50% target, modest 20-25% gain):
+- **Session 51**: Mine existing corpus (extract 30-40 mechanisms, 104 → 150+) **[RECOMMENDED]**
+- **Session 52**: Continue extraction OR test additional keyword queries
+- **Session 53**: Continue curation (review Session 48 candidates ranks 31-80)
+- **Session 54**: Update frontend with 60-70+ discoveries
+- **Sessions 55-56**: Reach 200 mechanism milestone
 
-**If keyword search fails** (<50% hit rate):
-- **Session 51**: Continue mining existing 526 high-value papers (extract 30-40 mechanisms)
-- **Session 52**: Continue curation (Session 48 candidates)
-- **Session 53**: Update frontend OR refine scoring/extraction methods
+**Selective keyword use**:
+- Use 1-2 queries per session as supplement (fetch 10-20 papers)
+- Primary strategy: mine 526 high-value papers (proven 100% hit rate)
 
 ---
 

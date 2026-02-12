@@ -46,7 +46,7 @@ Below is the most recent session history (Session 49+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **49** (Session 49 = **CURATION COMPLETE: 41 → 53 DISCOVERIES!** ✓✓✓)
+- **Total Sessions**: **50** (Session 50 = **KEYWORD ANALYSIS: Modest 20-25% efficiency gain validated** ✓)
 - **Total Papers**: **2,194** (Session 48 fetched 0 - mined existing corpus, 0% fetch waste!)
 - **Total Papers Scored**: **2,194** (100% coverage, avg 3.31/10, 631 high-value papers ≥5/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
@@ -188,7 +188,104 @@ Below is the most recent session history (Session 49+).
 
 ---
 
-## For Earlier Sessions (37-48)
+## Session 50 - 2026-02-12 - Keyword Vocabulary Analysis: Modest Efficiency Gain ✓
+
+**Goal**: Analyze mechanism vocabulary to prototype keyword-targeted arXiv search (10x efficiency hypothesis test)
+
+**What I Did**:
+- [x] **Part 1: Extracted 46 structural keywords** from 104 mechanisms
+  - Top 10: network (25%), feedback (17.3%), emergence (17.3%), control (16.3%), coupling (13.5%)
+  - Grouped into 10 categories: feedback systems, network effects, evolutionary dynamics, etc.
+
+- [x] **Part 2: Validated keywords** against 2,194 scored papers
+  - High-value papers (≥7/10): 99.2% contain keywords (249/251)
+  - Low-value papers (<5/10): 78.2% contain keywords (1,223/1,563)
+  - **Discrimination power: 21.0%** (99.2% - 78.2%)
+  - Top discriminators: network (24.8%), optimization (24.6%), adaptation (23.7%)
+
+- [x] **Part 3: Built 8 targeted arXiv queries**
+  - Combined top keywords with good domains (q-bio, physics.soc-ph, cs.AI, etc.)
+  - Expected hit rates: 14.7% - 38.6% based on validation
+  - Query examples: network_dynamics, optimization_control, adaptive_evolutionary
+
+- [x] **Part 4: Tested network_dynamics query** on 30 papers
+  - Fetched 30 recent papers from arXiv
+  - Scored for mechanism richness
+  - Average score: 4.1/10 (vs 3.3 random, 3.9 strategic domains)
+
+**Results**:
+- Papers fetched: 30 (test)
+- Structural keywords extracted: 46
+- Validated against: 2,194 papers
+- Targeted queries designed: 8
+- **Test results**: 4.1/10 avg score, 33.3% hit rate (papers ≥5/10)
+
+**Interesting Findings**:
+- **"Necessary but not sufficient" paradox**: 99% of mechanism-rich papers contain keywords, but only 33% of keyword-containing papers are mechanism-rich
+- **Top 5 keywords** show >19% discrimination (strong signal for targeting)
+- **Modest improvement validated**: 24% better than random (4.1 vs 3.3), 5% better than strategic domains (4.1 vs 3.9)
+- **Keywords are ubiquitous**: Even "network" appears in 78% of low-value papers (modern science terminology)
+- **Context matters**: Keyword presence ≠ mechanistic depth (saying "network affects dynamics" ≠ describing the mechanism)
+
+**What I Learned**:
+- **10x hypothesis refuted**: Expected >60% discrimination and >50% hit rate, achieved 21% discrimination and 33% hit rate
+- **Keywords work as filter, not primary strategy**: Can supplement existing workflow with 20-25% efficiency gain
+- **Structural vocabulary is real**: Mechanism-rich papers DO use distinct terminology, but it's not exclusive
+- **Domain targeting crucial**: Combining keywords + good domains (q-bio, physics.soc-ph) essential
+- **False positives common**: Many papers use structural keywords without rich mechanisms (methodological vs substantive)
+
+**Challenges**:
+- **Gap between validation and fetching**: High keyword presence (99%) doesn't translate to high hit rates (33%)
+- **Keyword ubiquity**: Structural terms are common in modern scientific abstracts
+- **Scoring challenges**: Our algorithm may be conservative, relies on patterns not semantics
+- **No silver bullet**: Manual curation still needed - no shortcut to reading papers
+
+**Status**: ✅ **RESEARCH COMPLETE** - Approach validated, realistic expectations set
+
+**Recommendation**:
+- **Use keyword search as supplement** to existing corpus mining (not replacement)
+- **Expected benefit**: 20-25% efficiency gain (not 10x)
+- **Deploy selectively**: 2-3 queries per session alongside mining 526 high-value papers
+- **Primary strategy**: Continue mining existing corpus (100% hit rate when pre-scored)
+
+**Next Session Options**:
+
+**Option A: Continue corpus mining** (104 → 150+ mechanisms) **[RECOMMENDED]**
+- Extract 30-40 mechanisms from remaining 526 high-value papers (≥5/10)
+- Proven 100% hit rate on pre-scored papers
+- Time: 4-5 hours
+- Advances toward 200 mechanism milestone
+
+**Option B: Test additional keyword queries**
+- Try optimization_control and critical_phenomena queries
+- Fetch 20-30 papers each, validate hit rates
+- Assess if other queries outperform network_dynamics (4.1/10)
+- Time: 2-3 hours
+
+**Option C: Continue curation** (53 → 65+ discoveries)
+- Review next 30-50 candidates from Session 48 (ranks 31-80)
+- Expected precision: 30-35% (declining from top-30)
+- Find 8-12 more discoveries
+- Time: 2-3 hours
+
+**Immediate Recommendation**: Option A (corpus mining) - proven high efficiency, advances mechanism count
+
+**Key Files Created**:
+- scripts/extract_keywords.py - Extract structural keywords from mechanisms
+- scripts/validate_keywords.py - Validate keywords against scored papers
+- scripts/build_queries.py - Build targeted arXiv search queries
+- scripts/test_query.py - Test queries by fetching and scoring papers
+- examples/session50_structural_keywords.json - 46 keywords with frequencies
+- examples/session50_keyword_validation.json - Validation results
+- examples/session50_search_queries.json - 8 targeted queries
+- examples/session50_test_results.json - Test of network_dynamics query
+- SESSION50_SUMMARY.md - Complete analysis and findings
+
+**Time Spent**: ~3.5 hours (keyword extraction: 45min, validation: 45min, query building: 30min, testing: 45min, documentation: 45min)
+
+---
+
+## For Earlier Sessions (37-49)
 
 See **PROGRESS_37_49.md** for complete session history from Sessions 37-49, including:
 - Session 37: LLM extraction pipeline established

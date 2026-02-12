@@ -1,0 +1,1010 @@
+{
+  "validation_date": "2026-02-12",
+  "total_papers": 2194,
+  "total_keywords": 46,
+  "overall_validation": {
+    "high_value": {
+      "total": 251,
+      "with_keywords": 249,
+      "hit_rate": 0.992
+    },
+    "medium_value": {
+      "total": 380,
+      "with_keywords": 374,
+      "hit_rate": 0.984
+    },
+    "low_value": {
+      "total": 1563,
+      "with_keywords": 1223,
+      "hit_rate": 0.782
+    },
+    "discrimination_power": 0.21
+  },
+  "keyword_performance": [
+    {
+      "term": "network",
+      "high_value_matches": 89,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.355,
+      "medium_value_matches": 84,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.221,
+      "low_value_matches": 166,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.106,
+      "discrimination_power": 0.248,
+      "patterns": [
+        "network",
+        "network structure",
+        "network topology"
+      ]
+    },
+    {
+      "term": "optimization",
+      "high_value_matches": 97,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.386,
+      "medium_value_matches": 128,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.337,
+      "low_value_matches": 219,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.14,
+      "discrimination_power": 0.246,
+      "patterns": [
+        "optimization",
+        "optimize",
+        "optimal"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "high_value_matches": 78,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.311,
+      "medium_value_matches": 78,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.205,
+      "low_value_matches": 116,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.074,
+      "discrimination_power": 0.237,
+      "patterns": [
+        "adaptation",
+        "adaptive",
+        "adapting",
+        "adapt"
+      ]
+    },
+    {
+      "term": "control",
+      "high_value_matches": 77,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.307,
+      "medium_value_matches": 94,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.247,
+      "low_value_matches": 140,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.09,
+      "discrimination_power": 0.217,
+      "patterns": [
+        "control",
+        "controlled"
+      ]
+    },
+    {
+      "term": "criticality",
+      "high_value_matches": 66,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.263,
+      "medium_value_matches": 69,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.182,
+      "low_value_matches": 108,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.069,
+      "discrimination_power": 0.194,
+      "patterns": [
+        "critical",
+        "criticality",
+        "critical slowing"
+      ]
+    },
+    {
+      "term": "coupling",
+      "high_value_matches": 50,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.199,
+      "medium_value_matches": 41,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.108,
+      "low_value_matches": 92,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.059,
+      "discrimination_power": 0.14,
+      "patterns": [
+        "coupling",
+        "coupled",
+        "decoupling"
+      ]
+    },
+    {
+      "term": "scaling",
+      "high_value_matches": 80,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.319,
+      "medium_value_matches": 121,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.318,
+      "low_value_matches": 291,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.186,
+      "discrimination_power": 0.133,
+      "patterns": [
+        "scaling",
+        "scale"
+      ]
+    },
+    {
+      "term": "heterogeneity",
+      "high_value_matches": 37,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.147,
+      "medium_value_matches": 18,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.047,
+      "low_value_matches": 70,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.045,
+      "discrimination_power": 0.103,
+      "patterns": [
+        "heterogeneity",
+        "heterogeneous"
+      ]
+    },
+    {
+      "term": "robustness",
+      "high_value_matches": 56,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.223,
+      "medium_value_matches": 74,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.195,
+      "low_value_matches": 201,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.129,
+      "discrimination_power": 0.095,
+      "patterns": [
+        "robustness",
+        "robust"
+      ]
+    },
+    {
+      "term": "threshold",
+      "high_value_matches": 26,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.104,
+      "medium_value_matches": 16,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.042,
+      "low_value_matches": 34,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.022,
+      "discrimination_power": 0.082,
+      "patterns": [
+        "threshold",
+        "critical threshold"
+      ]
+    },
+    {
+      "term": "emergence",
+      "high_value_matches": 34,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.135,
+      "medium_value_matches": 47,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.124,
+      "low_value_matches": 88,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.056,
+      "discrimination_power": 0.079,
+      "patterns": [
+        "emerge",
+        "emergence",
+        "emergent"
+      ]
+    },
+    {
+      "term": "feedback",
+      "high_value_matches": 23,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.092,
+      "medium_value_matches": 22,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.058,
+      "low_value_matches": 35,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.022,
+      "discrimination_power": 0.069,
+      "patterns": [
+        "feedback",
+        "feedback loop",
+        "positive feedback",
+        "negative feedback"
+      ]
+    },
+    {
+      "term": "selection",
+      "high_value_matches": 26,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.104,
+      "medium_value_matches": 41,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.108,
+      "low_value_matches": 60,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.038,
+      "discrimination_power": 0.065,
+      "patterns": [
+        "selection",
+        "selected",
+        "selecting"
+      ]
+    },
+    {
+      "term": "equilibrium",
+      "high_value_matches": 20,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.08,
+      "medium_value_matches": 23,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.061,
+      "low_value_matches": 23,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.015,
+      "discrimination_power": 0.065,
+      "patterns": [
+        "equilibrium",
+        "nash equilibrium"
+      ]
+    },
+    {
+      "term": "stochastic",
+      "high_value_matches": 27,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.108,
+      "medium_value_matches": 31,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.082,
+      "low_value_matches": 70,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.045,
+      "discrimination_power": 0.063,
+      "patterns": [
+        "stochastic",
+        "stochasticity"
+      ]
+    },
+    {
+      "term": "spatial",
+      "high_value_matches": 30,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.12,
+      "medium_value_matches": 34,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.089,
+      "low_value_matches": 97,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.062,
+      "discrimination_power": 0.057,
+      "patterns": [
+        "spatial",
+        "spatial structure"
+      ]
+    },
+    {
+      "term": "competition",
+      "high_value_matches": 22,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.088,
+      "medium_value_matches": 20,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.053,
+      "low_value_matches": 61,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.039,
+      "discrimination_power": 0.049,
+      "patterns": [
+        "competition",
+        "competitive",
+        "compete",
+        "competing"
+      ]
+    },
+    {
+      "term": "regulation",
+      "high_value_matches": 17,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.068,
+      "medium_value_matches": 19,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.05,
+      "low_value_matches": 35,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.022,
+      "discrimination_power": 0.045,
+      "patterns": [
+        "regulation",
+        "regulate",
+        "regulatory"
+      ]
+    },
+    {
+      "term": "cooperation",
+      "high_value_matches": 11,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.044,
+      "medium_value_matches": 8,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.021,
+      "low_value_matches": 9,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.006,
+      "discrimination_power": 0.038,
+      "patterns": [
+        "cooperation",
+        "cooperative",
+        "cooperate"
+      ]
+    },
+    {
+      "term": "noise",
+      "high_value_matches": 25,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.1,
+      "medium_value_matches": 38,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.1,
+      "low_value_matches": 106,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.068,
+      "discrimination_power": 0.032,
+      "patterns": [
+        "noise",
+        "noisy"
+      ]
+    },
+    {
+      "term": "universality",
+      "high_value_matches": 13,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.052,
+      "medium_value_matches": 12,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.032,
+      "low_value_matches": 33,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.021,
+      "discrimination_power": 0.031,
+      "patterns": [
+        "universality",
+        "universal"
+      ]
+    },
+    {
+      "term": "variability",
+      "high_value_matches": 34,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.135,
+      "medium_value_matches": 42,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.111,
+      "low_value_matches": 165,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.106,
+      "discrimination_power": 0.03,
+      "patterns": [
+        "variability",
+        "variable",
+        "variance"
+      ]
+    },
+    {
+      "term": "coexistence",
+      "high_value_matches": 8,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.032,
+      "medium_value_matches": 6,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.016,
+      "low_value_matches": 11,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.007,
+      "discrimination_power": 0.025,
+      "patterns": [
+        "coexistence",
+        "coexist"
+      ]
+    },
+    {
+      "term": "propagation",
+      "high_value_matches": 12,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.048,
+      "medium_value_matches": 17,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.045,
+      "low_value_matches": 39,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.025,
+      "discrimination_power": 0.023,
+      "patterns": [
+        "propagate",
+        "propagation"
+      ]
+    },
+    {
+      "term": "centrality",
+      "high_value_matches": 22,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.088,
+      "medium_value_matches": 25,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.066,
+      "low_value_matches": 102,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.065,
+      "discrimination_power": 0.022,
+      "patterns": [
+        "centrality",
+        "central"
+      ]
+    },
+    {
+      "term": "phase transition",
+      "high_value_matches": 7,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.028,
+      "medium_value_matches": 10,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.026,
+      "low_value_matches": 9,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.006,
+      "discrimination_power": 0.022,
+      "patterns": [
+        "phase transition",
+        "phase transitions"
+      ]
+    },
+    {
+      "term": "diffusion",
+      "high_value_matches": 16,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.064,
+      "medium_value_matches": 23,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.061,
+      "low_value_matches": 68,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.044,
+      "discrimination_power": 0.02,
+      "patterns": [
+        "diffusion",
+        "diffuse",
+        "diffusing"
+      ]
+    },
+    {
+      "term": "fluctuation",
+      "high_value_matches": 10,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.04,
+      "medium_value_matches": 13,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.034,
+      "low_value_matches": 32,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.02,
+      "discrimination_power": 0.019,
+      "patterns": [
+        "fluctuation",
+        "fluctuating",
+        "fluctuate"
+      ]
+    },
+    {
+      "term": "coevolution",
+      "high_value_matches": 4,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.016,
+      "medium_value_matches": 0,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.0,
+      "low_value_matches": 1,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.001,
+      "discrimination_power": 0.015,
+      "patterns": [
+        "coevolve",
+        "coevolution",
+        "co-evolution",
+        "coevolving"
+      ]
+    },
+    {
+      "term": "complementarity",
+      "high_value_matches": 9,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.036,
+      "medium_value_matches": 11,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.029,
+      "low_value_matches": 37,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.024,
+      "discrimination_power": 0.012,
+      "patterns": [
+        "complementarity",
+        "complementarities",
+        "complementary"
+      ]
+    },
+    {
+      "term": "cascade",
+      "high_value_matches": 3,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.012,
+      "medium_value_matches": 5,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.013,
+      "low_value_matches": 6,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.004,
+      "discrimination_power": 0.008,
+      "patterns": [
+        "cascade",
+        "cascading"
+      ]
+    },
+    {
+      "term": "bistability",
+      "high_value_matches": 2,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.008,
+      "medium_value_matches": 1,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.003,
+      "low_value_matches": 0,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.0,
+      "discrimination_power": 0.008,
+      "patterns": [
+        "bistability",
+        "bistable"
+      ]
+    },
+    {
+      "term": "prisoner dilemma",
+      "high_value_matches": 2,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.008,
+      "medium_value_matches": 1,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.003,
+      "low_value_matches": 3,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.002,
+      "discrimination_power": 0.006,
+      "patterns": [
+        "prisoner's dilemma",
+        "prisoner dilemma",
+        "cooperation dilemma"
+      ]
+    },
+    {
+      "term": "oscillation",
+      "high_value_matches": 7,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.028,
+      "medium_value_matches": 11,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.029,
+      "low_value_matches": 35,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.022,
+      "discrimination_power": 0.005,
+      "patterns": [
+        "oscillate",
+        "oscillation",
+        "oscillating",
+        "oscillatory"
+      ]
+    },
+    {
+      "term": "allee effect",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 0,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.0,
+      "low_value_matches": 0,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.0,
+      "discrimination_power": 0.004,
+      "patterns": [
+        "allee effect",
+        "allee effects"
+      ]
+    },
+    {
+      "term": "bifurcation",
+      "high_value_matches": 2,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.008,
+      "medium_value_matches": 6,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.016,
+      "low_value_matches": 6,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.004,
+      "discrimination_power": 0.004,
+      "patterns": [
+        "bifurcation"
+      ]
+    },
+    {
+      "term": "homeostasis",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 6,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.016,
+      "low_value_matches": 1,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.001,
+      "discrimination_power": 0.003,
+      "patterns": [
+        "homeostasis",
+        "homeostatic"
+      ]
+    },
+    {
+      "term": "synchronization",
+      "high_value_matches": 3,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.012,
+      "medium_value_matches": 5,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.013,
+      "low_value_matches": 14,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.009,
+      "discrimination_power": 0.003,
+      "patterns": [
+        "synchronization",
+        "synchronize",
+        "synchronized"
+      ]
+    },
+    {
+      "term": "contagion",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 1,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.003,
+      "low_value_matches": 2,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.001,
+      "discrimination_power": 0.003,
+      "patterns": [
+        "contagion",
+        "contagious"
+      ]
+    },
+    {
+      "term": "hysteresis",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 1,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.003,
+      "low_value_matches": 1,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.001,
+      "discrimination_power": 0.003,
+      "patterns": [
+        "hysteresis"
+      ]
+    },
+    {
+      "term": "free rider",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 0,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.0,
+      "low_value_matches": 1,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.001,
+      "discrimination_power": 0.003,
+      "patterns": [
+        "free-rider",
+        "free rider",
+        "free riding"
+      ]
+    },
+    {
+      "term": "spillover",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 1,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.003,
+      "low_value_matches": 4,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.003,
+      "discrimination_power": 0.001,
+      "patterns": [
+        "spillover",
+        "spillovers"
+      ]
+    },
+    {
+      "term": "metastability",
+      "high_value_matches": 1,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.004,
+      "medium_value_matches": 2,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.005,
+      "low_value_matches": 5,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.003,
+      "discrimination_power": 0.001,
+      "patterns": [
+        "metastability",
+        "metastable"
+      ]
+    },
+    {
+      "term": "self-organization",
+      "high_value_matches": 0,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.0,
+      "medium_value_matches": 2,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.005,
+      "low_value_matches": 1,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.001,
+      "discrimination_power": -0.001,
+      "patterns": [
+        "self-organization",
+        "self-organizing"
+      ]
+    },
+    {
+      "term": "trade-off",
+      "high_value_matches": 9,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.036,
+      "medium_value_matches": 23,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.061,
+      "low_value_matches": 68,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.044,
+      "discrimination_power": -0.008,
+      "patterns": [
+        "trade-off",
+        "tradeoff",
+        "trade off"
+      ]
+    },
+    {
+      "term": "nonlinearity",
+      "high_value_matches": 8,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.032,
+      "medium_value_matches": 25,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.066,
+      "low_value_matches": 62,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.04,
+      "discrimination_power": -0.008,
+      "patterns": [
+        "nonlinear",
+        "nonlinearity",
+        "non-linear"
+      ]
+    }
+  ],
+  "top_10_discriminators": [
+    {
+      "term": "network",
+      "high_value_matches": 89,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.355,
+      "medium_value_matches": 84,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.221,
+      "low_value_matches": 166,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.106,
+      "discrimination_power": 0.248,
+      "patterns": [
+        "network",
+        "network structure",
+        "network topology"
+      ]
+    },
+    {
+      "term": "optimization",
+      "high_value_matches": 97,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.386,
+      "medium_value_matches": 128,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.337,
+      "low_value_matches": 219,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.14,
+      "discrimination_power": 0.246,
+      "patterns": [
+        "optimization",
+        "optimize",
+        "optimal"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "high_value_matches": 78,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.311,
+      "medium_value_matches": 78,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.205,
+      "low_value_matches": 116,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.074,
+      "discrimination_power": 0.237,
+      "patterns": [
+        "adaptation",
+        "adaptive",
+        "adapting",
+        "adapt"
+      ]
+    },
+    {
+      "term": "control",
+      "high_value_matches": 77,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.307,
+      "medium_value_matches": 94,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.247,
+      "low_value_matches": 140,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.09,
+      "discrimination_power": 0.217,
+      "patterns": [
+        "control",
+        "controlled"
+      ]
+    },
+    {
+      "term": "criticality",
+      "high_value_matches": 66,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.263,
+      "medium_value_matches": 69,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.182,
+      "low_value_matches": 108,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.069,
+      "discrimination_power": 0.194,
+      "patterns": [
+        "critical",
+        "criticality",
+        "critical slowing"
+      ]
+    },
+    {
+      "term": "coupling",
+      "high_value_matches": 50,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.199,
+      "medium_value_matches": 41,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.108,
+      "low_value_matches": 92,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.059,
+      "discrimination_power": 0.14,
+      "patterns": [
+        "coupling",
+        "coupled",
+        "decoupling"
+      ]
+    },
+    {
+      "term": "scaling",
+      "high_value_matches": 80,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.319,
+      "medium_value_matches": 121,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.318,
+      "low_value_matches": 291,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.186,
+      "discrimination_power": 0.133,
+      "patterns": [
+        "scaling",
+        "scale"
+      ]
+    },
+    {
+      "term": "heterogeneity",
+      "high_value_matches": 37,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.147,
+      "medium_value_matches": 18,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.047,
+      "low_value_matches": 70,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.045,
+      "discrimination_power": 0.103,
+      "patterns": [
+        "heterogeneity",
+        "heterogeneous"
+      ]
+    },
+    {
+      "term": "robustness",
+      "high_value_matches": 56,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.223,
+      "medium_value_matches": 74,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.195,
+      "low_value_matches": 201,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.129,
+      "discrimination_power": 0.095,
+      "patterns": [
+        "robustness",
+        "robust"
+      ]
+    },
+    {
+      "term": "threshold",
+      "high_value_matches": 26,
+      "high_value_total": 251,
+      "high_value_hit_rate": 0.104,
+      "medium_value_matches": 16,
+      "medium_value_total": 380,
+      "medium_value_hit_rate": 0.042,
+      "low_value_matches": 34,
+      "low_value_total": 1563,
+      "low_value_hit_rate": 0.022,
+      "discrimination_power": 0.082,
+      "patterns": [
+        "threshold",
+        "critical threshold"
+      ]
+    }
+  ]
+}

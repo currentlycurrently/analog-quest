@@ -8,12 +8,12 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 49 - 2026-02-12
+**Last Updated**: Session 50 - 2026-02-12
 
 **Methodology Version**: LLM Extraction + Semantic Embeddings + Manual Curation + Strategic Targeting (Validated!)
 
-**🚀✓ SESSION 49 - CURATED 491 CANDIDATES: 41 → 53 DISCOVERIES! ✓🚀**
-**Reviewed top 30 candidates from Session 48, found 12 new discoveries (5 excellent + 7 good). Target exceeded!**
+**🔍 SESSION 50 - KEYWORD VOCABULARY ANALYSIS: 20-25% EFFICIENCY GAIN ✓**
+**Tested keyword-targeted search hypothesis. Results: 46 keywords extracted, 21% discrimination power, 4.1/10 avg score (vs 3.3 random). Modest improvement validated. Primary strategy: continue mining 526 high-value papers.**
 
 ### Papers
 - **Total Papers Processed**: **2,194** (Session 47 added 129 from strategic targeting)
@@ -416,6 +416,7 @@ After Session 31-36 testing, pivoted to manual curation approach:
 | **47** | **2026-02-12** | **+129** | **+31** | **+246** | **FULL EXPANSION CYCLE: 30 → 41 DISCOVERIES!** 🎯 Fetched 129 papers (strategic targeting), extracted 31 mechanisms (100% hit rate on pre-scored papers ≥5/10!), 246 cross-domain candidates (top: 0.6194), curated 11 new discoveries (3 excellent + 8 good). Top-20 precision: 55%. **Workflow validated!** ✓✓✓ But 63% fetch waste (220/350 duplicates) - pivot needed! |
 | **48** | **2026-02-12** | **+0** | **+50** | **+491** | **MINING EXISTING CORPUS: ~100% HIT RATE!** ⛏️ Fetched 0 papers (mined existing 2,194), scored ALL papers (avg 3.31/10, 631 high-value ≥5/10), extracted 50 mechanisms (~100% hit rate on papers ≥7/10!), 104 total mechanisms → 491 cross-domain candidates (top: 0.7364). **0% fetch waste!** Strategic pivot validated! ✓✓✓ |
 | **49** | **2026-02-12** | **+0** | **+0** | **+12** | **CURATION COMPLETE: 41 → 53 DISCOVERIES!** 🎯 Reviewed 491 candidates from Session 48, rated top 30 systematically, found 12 new discoveries (5 excellent + 7 good). Top-30 precision: 40%. **50+ milestone EXCEEDED (106%)!** ✓✓✓ |
+| **50** | **2026-02-12** | **+0** | **+46 keywords** | **+8 queries** | **KEYWORD VOCABULARY ANALYSIS: MODEST EFFICIENCY GAIN** 🔍 Extracted 46 structural keywords from 104 mechanisms, validated against 2,194 papers (21% discrimination power, 99.2% high-value vs 78.2% low-value contain keywords). Built 8 targeted arXiv queries. Tested network_dynamics query: 4.1/10 avg (vs 3.3 random, 3.9 strategic) - **20-25% efficiency gain validated**. **10x hypothesis refuted**: keywords necessary but not sufficient. Recommendation: use as supplement to corpus mining. ✓ |
 
 ---
 

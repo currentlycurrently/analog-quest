@@ -113,48 +113,130 @@ The agent sets concrete, achievable goals for each session.
 
 ---
 
-## 🎯 NEXT SESSION: 48 - Continue Expansion
+## 🎯 NEXT SESSION: 48 - STRATEGIC PIVOT: Mine Existing Corpus
 
 **⚠️⚠️⚠️ IF YOU ARE SESSION 48 AGENT - READ THIS FIRST ⚠️⚠️⚠️**
 
-**YOUR FIRST ACTION MUST BE:**
-1. Read **PROGRESS.md** (Session 47 summary)
-2. Read **SESSION47_SUMMARY.md** (detailed results and recommendations)
-3. Check **examples/session47_candidates.json** (226 remaining candidates)
+**🚨 CRITICAL CHANGE: We're pivoting strategy. Session 48 is NOT curation. 🚨**
 
-**Status**: 41/50+ discoveries (82% complete), 226 unreviewed candidates available
+**YOUR FIRST ACTIONS (in order):**
+1. Read **SESSION48_BRIEFING.md** ← **YOUR MAIN INSTRUCTIONS**
+2. Read **PROGRESS.md** (Session 47 summary)
+3. Read **SESSION47_SUMMARY.md** (why we're pivoting)
+4. Read **DATA_QUALITY_STANDARDS.md** (extraction quality requirements)
 
-**Chuck's Priority**: Finish curation to reach 50+ milestone
+**Status**: We have a scaling crisis - 63% fetch waste, 2,000+ unfetched papers in database
 
-**Target**: **50+ total verified discoveries** (currently 41)
+**Chuck's Priority**: Prove we can scale by mining existing corpus (no new fetching)
 
-**Timeline**: 3-4 hours (focused curation)
+**Target**: Extract 40-60 mechanisms from existing papers, reach 50+ discoveries
+
+**Timeline**: 6-8 hours (score all papers + extract + match + curate)
 
 ---
 
-### Session 48: Complete Curation (3-4 hours)
+### Session 48: Mine Existing Corpus (Option C - Part 1)
 
-**Goal**: Review remaining candidates to reach 50+ verified discoveries
+**⚠️ READ SESSION48_BRIEFING.md FOR FULL DETAILS ⚠️**
 
-**Context**: Session 47 generated 246 candidates, reviewed top 20 (55% precision). 226 candidates remain unreviewed. Need 9-15 more discoveries to reach 50+ milestone.
+**Goal**: Extract mechanisms from our 2,194 existing papers WITHOUT fetching new ones
 
-**Recommended Approach**:
-1. **Load candidates**: examples/session47_candidates.json (candidates #21-70)
-2. **Manual curation**: Review next 30-50 candidates
-3. **Select 10-15 best**: Target excellent/good ratings
-4. **Add to discoveries**: Update verified_discoveries.json
-5. **Validate**: Ensure data quality maintained
-6. **Update docs**: PROGRESS.md, METRICS.md
+**Why the Pivot**:
+- Session 47 wasted 63% of fetches on duplicates (220/350)
+- We have 2,000+ papers never extracted from
+- Current approach doesn't scale to 500+ discoveries
+- Need to prove we can scale with existing data before changing intake strategy
 
-**Success Criteria**:
-- [ ] Review 30-50 candidates (from remaining 226)
-- [ ] Select 10-15 new discoveries (excellent/good)
-- [ ] Total discoveries: 50+ (currently 41)
-- [ ] Data quality: 100% maintained
-- [ ] Precision: ≥40% (in candidates reviewed)
+**The 3-Session Plan (Option C)**:
+- **Session 48 (YOU)**: Mine existing corpus (40-60 mechanisms, no fetching)
+- **Session 49**: Analyze mechanisms → extract keyword vocabulary
+- **Session 50**: Prototype keyword-targeted arXiv search
+- **Sessions 51+**: If keyword search works (>50% hit rate), it becomes standard
 
-**Alternative Options** (if preferred):
-- **Option B**: Write editorial content for top 10-15 discoveries
-- **Option C**: Quality audit of all 41 discoveries
-- **Recommended**: Continue curation (Option A) to reach milestone
+---
+
+### Your Task Breakdown (6-8 hours)
+
+**Part 1: Score All Papers** (1-2 hours)
+- Score all 2,194 papers for mechanism richness
+- Identify top 200-300 high-value papers (≥5/10)
+- Output: `examples/session48_all_papers_scored.json`
+
+**Part 2: Select Candidates** (30 min)
+- Filter to papers NOT already extracted (check Session 37/46/47)
+- Select top 100 papers (≥6/10 scores)
+- Output: `examples/session48_extraction_candidates.json`
+
+**Part 3: Extract Mechanisms** (3-4 hours)
+- Extract 40-60 mechanisms from top candidates
+- Target hit rate: 40-60% (40-60 mechanisms from 100 papers)
+- Output: `examples/session48_extracted_mechanisms.json`
+
+**Part 4: Embeddings + Match** (30 min)
+- Combine 90 existing + 40-60 new = 130-150 mechanisms
+- Generate embeddings, match candidates
+- Output: `examples/session48_candidates.json`
+
+**Part 5: Quick Curation** (30 min)
+- Review top 10-15 candidates
+- Select 5-10 discoveries
+- **Reach 50+ discoveries milestone!**
+
+**Part 6: Documentation** (30 min)
+- Update PROGRESS.md, METRICS.md
+- Create SESSION48_SUMMARY.md
+- Document hit rate (KEY METRIC)
+
+---
+
+### Success Criteria
+
+**Must achieve**:
+- [ ] All 2,194 papers scored
+- [ ] 40-60 new mechanisms extracted
+- [ ] 130-150 total mechanisms
+- [ ] 400+ match candidates generated
+- [ ] 5-10 new discoveries verified
+- [ ] **Total discoveries: ≥50** (MILESTONE!)
+- [ ] **Hit rate documented** (mechanisms/papers attempted)
+
+**Key Metric**: Hit rate ≥40% proves existing corpus is valuable
+
+**If hit rate <30%**: Existing corpus is low quality, must pivot to keyword search immediately
+
+---
+
+### Critical Constraints
+
+**DO NOT**:
+- ❌ Fetch new papers from arXiv (use existing 2,194 ONLY)
+- ❌ Re-extract from papers already done (Sessions 37/46/47)
+- ❌ Skip the scoring step (defeats the purpose)
+- ❌ Extract from low-scoring papers (<5/10)
+
+**DO**:
+- ✅ Score ALL papers first
+- ✅ Focus on highest scorers (≥6/10)
+- ✅ Track hit rate precisely
+- ✅ Use TodoWrite to track progress
+
+---
+
+### Why This Matters
+
+**If you succeed** (hit rate ≥40%):
+- Proves we can scale by mining existing data
+- Foundation set for keyword search (Sessions 49-50)
+- Path to 500+ discoveries without fetch waste
+
+**If you fail** (hit rate <30%):
+- Existing corpus too low quality
+- Must pivot to keyword search immediately
+- Sessions 49-50 happen sooner
+
+**Your hit rate determines our next 6 months of strategy.**
+
+---
+
+**READ SESSION48_BRIEFING.md NOW** ← Full instructions, timeline, pitfalls, everything you need
 

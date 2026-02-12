@@ -132,11 +132,20 @@ Below are Sessions 21-38 (most recent).
 
 **Status**: ✅ **EXPANSION SUCCESSFUL** - Validated workflow, meaningful progress, quality maintained
 
-**Next Session (48)**:
-- **Option A**: Continue curation - Review remaining 226 candidates to reach 50+ discoveries
-- **Option B**: Editorial content - Write body content for top 10-15 discoveries
-- **Option C**: Quality audit - Deep review of all 41 discoveries
-- **Recommended**: Option A (finish curation to reach 50+ milestone)
+**🚨 STRATEGIC PIVOT AFTER SESSION 47 🚨**
+
+**Problem Identified**: 63% fetch waste (220/350 duplicates), ignoring 2,000+ existing papers
+
+**Next Session (48) - CHANGED PLAN**:
+- **NEW PLAN (Option C)**: Mine existing corpus - NO NEW FETCHING
+  - Score all 2,194 existing papers
+  - Extract 40-60 mechanisms from best unfetched papers
+  - Prove we can scale by using what we have
+  - Key metric: Hit rate ≥40% validates approach
+- **Sessions 49-50**: Analyze mechanisms → prototype keyword-targeted arXiv search
+- **Goal**: If keyword search >50% hit rate, it becomes new standard (10x efficiency)
+
+**Read**: SESSION48_BRIEFING.md for full strategic context
 
 **Key Files Created**:
 - scripts/score_session47_papers.py

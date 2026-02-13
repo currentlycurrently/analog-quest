@@ -4,31 +4,32 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 55 Goals (2026-02-13)
+## Session 56 Goals (2026-02-13)
 
-**Mission**: Continue extraction to reach 200 mechanism milestone (170 → 200+)
+**Mission**: Curate Session 55 candidates to approach 100 discovery milestone (80 → 92-95)
 
 ### Primary Goal
-Extract 30-40 mechanisms from remaining high-value corpus:
-- Select 40-50 high-value papers (score ≥7/10, not yet extracted)
-- Extract domain-neutral mechanisms using LLM-guided process
-- Target: 30-40 new mechanisms (expected 70-90% hit rate based on Sessions 53, 51, 48)
-- Goal: 170 → 200+ mechanisms (reach 200 mechanism milestone!)
-- Generate embeddings and match candidates for future curation
+Curate Session 55 candidates (1,158 cross-domain pairs):
+- Review top 40-50 candidates from Session 55's 1,158 pairs
+- Rate candidates: excellent / good / weak / false
+- Target: 12-15 new discoveries (expected 30-35% precision based on Sessions 52, 54)
+- Goal: 80 → 92-95 discoveries (approaching 100 discovery milestone!)
+- Document structural patterns and cross-domain connections
 
 ### Why This Matters
-**Build mechanism base for sustained discovery**:
-- Session 53: 170 mechanisms → 867 candidates (5.1x leverage)
-- Session 54: 867 candidates → 15 discoveries (37.5% precision in top-40)
-- More mechanisms → more candidate pairs → more discoveries
-- 200 mechanisms → ~1,000-1,200 candidates → 30-40 new discoveries (at 30% precision)
+**Fresh candidate pool from expanded mechanism base**:
+- Session 55: 200 mechanisms → 1,158 candidates (+33% from 867)
+- Expected precision: 30-35% in top-40 (based on Sessions 52, 54)
+- Fresh candidates from newly extracted mechanisms (30 new in Session 55)
+- Approaching 100 discovery milestone (80 → 92-95 = 92-95% progress)
 
 **Current state**:
-- Total mechanisms: 170 (85% toward 200 milestone)
+- Total mechanisms: **200** (100% of 200 milestone - ACHIEVED!) ✓✓✓
 - Total discoveries: 80 (107% of 75+ milestone, 80% toward 100+)
-- Session 53 candidates: 867 pairs (827 uncurated after Session 54)
-- ~445 high-value papers (≥5/10) still available for extraction
-- **Need 30+ more mechanisms to reach 200 milestone**
+- Session 55 candidates: **1,158 pairs** (all uncurated, fresh pool)
+- Session 53 candidates: 827 pairs remaining (uncurated after Session 54)
+- ~395 high-value papers (≥5/10) still available for future extraction
+- **Need 20+ discoveries to reach 100 milestone**
 
 ### Strategy
 **Proven workflow from Sessions 48, 51, 53**:

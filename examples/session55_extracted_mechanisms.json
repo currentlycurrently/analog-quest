@@ -1,0 +1,189 @@
+{
+  "session": 55,
+  "papers_reviewed": 50,
+  "mechanisms_extracted": 30,
+  "hit_rate": 0.6,
+  "extraction_method": "Manual LLM-guided (domain-neutral, structural)",
+  "mechanisms": [
+    {
+      "paper_id": 632,
+      "domain": "cs",
+      "title": "Opinion Dynamics with Neural DCR",
+      "mechanism": "Opinion evolution emerges from three coupled processes: diffusion (local influence spreading), convection (directional opinion flow driven by global trends), and reaction (endogenous opinion change). Each level operates at distinct scales\u2014local peer-to-peer, global population-wide, and individual internal\u2014that interact through multi-scale coupling. The system exhibits dynamics from interacting particle theory projected onto opinion space."
+    },
+    {
+      "paper_id": 628,
+      "domain": "math",
+      "title": "Heterogeneous Traffic Flow",
+      "mechanism": "Path marginal cost in heterogeneous traffic decomposes into intra-class effects (within vehicle type) and inter-class effects (cross-type interactions). Conversion factors derived from heterogeneous link dynamics explicitly model competitive relationships between vehicle classes. Non-differentiability emerges when mixed flow approaches system optimum, as flow competition shifts from continuous to threshold-based at equilibrium."
+    },
+    {
+      "paper_id": 661,
+      "domain": "cs",
+      "title": "Cognitive Biases and LLM Interaction",
+      "mechanism": "Cognitive biases shape decision-making through interaction with contextual factors. When cognitive load increases (complex dialogue), pre-existing biases amplify through reduced deliberative capacity. The bias magnitude is context-dependent: simple interactions suppress bias expression, while complex interactions magnify it by consuming cognitive resources that would otherwise moderate biased responses."
+    },
+    {
+      "paper_id": 666,
+      "domain": "cs",
+      "title": "Network Scheduling with World Model",
+      "mechanism": "Adaptive control emerges from combining two anticipatory modes: short-horizon predictive planning (data-driven future state estimation) and symbolic model-based rollout (interpretable scenario simulation). The scheduler adjusts decisions by integrating near-future probabilistic forecasts with longer-horizon symbolic what-if analysis, enabling both reactive adaptation and strategic foresight without requiring perfect predictions."
+    },
+    {
+      "paper_id": 667,
+      "domain": "cs",
+      "title": "Uncertainty-Aware Planning",
+      "mechanism": "Latent assumptions in reasoning traces are converted into structured action space through decision tree mapping. Each tree path encodes environment assumptions (internal nodes) linked to action sequences (leaves), scored by scenario likelihood, goal utility, and execution cost. Uncertainty is handled by exploring assumption-action mappings rather than eliminating uncertainty through communication, transforming fragmented beliefs into rational action selection."
+    },
+    {
+      "paper_id": 668,
+      "domain": "cs",
+      "title": "Multi-Expert Orchestration Dynamics",
+      "mechanism": "Expert importance exhibits dual structure: relational importance (routing frequency, interaction centrality) diverges from intrinsic importance (causal influence via gradient attribution). Frequently-routed experts may act as structural hubs with limited functional impact, while sparsely-routed experts can be causally critical. Masking intrinsically-important experts causes disproportionate collapse in interaction topology compared to masking frequent peers, revealing hidden causal dependencies."
+    },
+    {
+      "paper_id": 669,
+      "domain": "cs",
+      "title": "Multi-Agent Uncertainty Dynamics",
+      "mechanism": "Multi-agent performance is governed by certainty preference: reducing entropy at any stage for any agent is critical for correct solutions. Uncertainty dynamics are largely determined in the first interaction round, establishing baseline entropy that constrains subsequent evolution. Lower base model entropy during initial problem-solving directly benefits multi-agent outcomes, suggesting initial uncertainty sets persistent constraints on collaborative effectiveness."
+    },
+    {
+      "paper_id": 681,
+      "domain": "cs",
+      "title": "Authorship Drift in LLM Collaboration",
+      "mechanism": "Self-efficacy and trust evolve through bidirectional dynamics during collaboration. Collaboration generally decreases self-efficacy while increasing trust. Users losing self-efficacy shift toward direct editing requests (ceding control), while those recovering self-efficacy request review/feedback (retaining authority). Stable self-efficacy correlates with higher actual and perceived authorship, suggesting self-efficacy acts as a mediating variable between interaction strategy and authorship outcomes."
+    },
+    {
+      "paper_id": 724,
+      "domain": "q-bio",
+      "title": "Tumor Existential Crisis-Driven Survival",
+      "mechanism": "Tumor evolution is driven by compensatory hyperactivation: impairment of existential stability (nutrient deprivation, immune attack, structural damage) elicits augmented survival capacity (pathway redundancy, metabolic plasticity, immune evasion). Dynamic coupling occurs where declining stability triggers escalating survival responses. This frames tumors as intrinsically vulnerable systems in adaptive survival mode, not intrinsically aggressive entities, with therapeutic resistance emerging from threshold-regulated adaptive responses."
+    },
+    {
+      "paper_id": 726,
+      "domain": "q-bio",
+      "title": "Hydra Axis Formation Mechanics",
+      "mechanism": "Body axis emerges from coupling between active stresses (generated by cellular activity) and tissue elasticity. Spherical topology constrains force condensation: elastic strain and nematic defects localize at opposite poles through global mechanical redistribution. Activity-generated stresses induce deformation that, owing to geometric constraints of closed surfaces, spontaneously breaks symmetry at the organismal scale, defining polar or apolar head-foot axes without requiring pre-patterned molecular cues."
+    },
+    {
+      "paper_id": 740,
+      "domain": "math",
+      "title": "Predator-Prey Chemical Langevin",
+      "mechanism": "Predation creates event-level coupling through biomass conversion: predation-conversion increment (-1,+1) induces strictly negative cross-covariance between prey and predator populations. This mechanistic coupling cannot be captured by diagonal (independent) noise. The coupled dynamics arise from the irreducible stochastic structure of predation events, where prey loss simultaneously causes predator gain, creating intrinsic negative correlation in population fluctuations."
+    },
+    {
+      "paper_id": 753,
+      "domain": "math",
+      "title": "Fokker-Planck Stationary States",
+      "mechanism": "Stationary states (both stable and unstable) are computed via fixed-point iteration of a consistency map derived from the PDE and nonlocal interactions. The method is agnostic to dynamical stability\u2014detecting equilibria regardless of whether they attract or repel trajectories. This separates statics (equilibrium existence) from dynamics (stability), enabling discovery of unstable stationary configurations invisible to time-evolution methods."
+    },
+    {
+      "paper_id": 773,
+      "domain": "cs",
+      "title": "Evolving Retrieval Memory",
+      "mechanism": "Transient query-time adaptations are converted into persistent retrieval improvements through correctness-gated feedback. Expansion signals are selectively attributed to document keys that benefit from them, progressively evolving the index via norm-bounded updates. Query-time gains (stateless, recomputed per query) are amortized into stable index improvements (persistent, zero inference-time overhead), transforming temporary adaptations into cumulative learning."
+    },
+    {
+      "paper_id": 775,
+      "domain": "physics",
+      "title": "Degree-Day Scaling in Phase Change",
+      "mechanism": "Phase transitions impose topological constraints that mask energetic fluctuations. Introducing a latent temperature (counterfactual unconstrained trajectory) resolves information loss. Energy conservation enforces duality: total latent heat dissipated equals accumulated exceedance of latent temperature above melting point. This duality is mathematically equivalent to Wasserstein-1 distance (optimal transport) between latent and observed trajectories, with phase change emerging as transport that projects continuous energy variability onto constrained thermodynamic boundaries."
+    },
+    {
+      "paper_id": 782,
+      "domain": "physics",
+      "title": "Wavelet-Based Precipitation Nowcasting",
+      "mechanism": "Extreme precipitation exhibits multi-scale structure requiring decoupled modeling. Wavelet decomposition separates low-frequency advection (stable, deterministic drift) from high-frequency convection (stochastic, transient singularities). An approximation network models deterministic trends, isolating them from regression-to-mean bias. A detail network captures spatially-localized stochastic fluctuations. Refiner module dynamically reconstructs these decoupled components, preserving extreme values and sharp boundaries lost in standard pixel-wise regression."
+    },
+    {
+      "paper_id": 783,
+      "domain": "physics",
+      "title": "Ocean's Role in Atmospheric Evolution",
+      "mechanism": "Atmospheric emulators without ocean inputs implicitly infer ocean conditions from atmospheric states alone. Forecast errors over oceans reveal which air-sea information is derivable from atmosphere (captured implicitly) versus which requires explicit ocean data (cannot be inferred). Error-property relationships identify regions where ocean independently influences atmosphere on fast timescales, exposing limits of atmosphere-only inference and highlighting irreducible ocean-atmosphere coupling."
+    },
+    {
+      "paper_id": 794,
+      "domain": "q-bio",
+      "title": "Metabolic NODEs",
+      "mechanism": "Proteome-metabolome dynamics are modeled as continuous interplay via Neural ODEs. Rather than requiring pre-specified mechanistic knowledge, NODEs infer latent interaction structure directly from time-series multiomics data. Learned continuous dynamics enable simulation of temporal trajectories and anticipation of intervention effects, capturing complex feedback between protein expression and metabolite concentrations without manually encoding pathway topology."
+    },
+    {
+      "paper_id": 843,
+      "domain": "cs",
+      "title": "Codeforces Elo Rating Biases",
+      "mechanism": "Elo ratings exhibit sensitivity to three hidden factors: temporal submission ordering (394-point range), contest difficulty selection (1,122-point range for same model), and run-to-run stochasticity (349-point maximum difference in means). These sources of variability are multiplicative, not additive: varying all three simultaneously can produce drastically different ratings for identical model capabilities. Rating becomes a function of experimental protocol as much as model ability."
+    },
+    {
+      "paper_id": 847,
+      "domain": "cs",
+      "title": "Dual-Loop Vulnerability Reproduction",
+      "mechanism": "Vulnerability reproduction employs failure-type-specific routing: tactical failures (code-level bugs) route to tactical loop for implementation refinement, while strategic failures (incorrect attack direction) route to strategic loop for approach replanning. This dual-loop architecture separates exploration of attack space from execution details, preventing unproductive debugging when the fundamental approach is wrong. Adaptive routing matches remediation depth to failure cause."
+    },
+    {
+      "paper_id": 855,
+      "domain": "cs",
+      "title": "Entropy-Guided Stepwise Scaling",
+      "mechanism": "Test-time scaling balances efficiency and effectiveness through entropy-guided adaptive search: high-entropy (uncertain) states trigger expanded search, while low-entropy states terminate early. Test-suite augmentation provides robust candidate selection. The framework dynamically adjusts ensemble size based on current uncertainty, avoiding excessive computation in confident regions while allocating resources to ambiguous cases."
+    },
+    {
+      "paper_id": 871,
+      "domain": "q-fin",
+      "title": "Evidential Uncertainty Decomposition",
+      "mechanism": "Deep Evidential Regression decomposes uncertainty into epistemic (model uncertainty) and aleatoric (data noise) components through higher-order evidence learning. Rather than pre-specifying distributions or requiring sampling, the model learns optimal uncertainty representations by treating prediction as distribution over distributions. Single-pass inference yields explicit epistemic-aleatoric separation, enabling principled uncertainty quantification without additional computational cost."
+    },
+    {
+      "paper_id": 907,
+      "domain": "math",
+      "title": "Spatial Decay in Control Problems",
+      "mechanism": "Localized perturbations in graph-structured systems induce optimal trajectories that decay exponentially with graph distance from perturbation source. Spatial decay arises from interaction topology: influences propagate through network edges but attenuate geometrically with path length. Graph distance acts as effective spatial dimension governing perturbation propagation, with topology imposing decay rate independently of detailed dynamics."
+    },
+    {
+      "paper_id": 925,
+      "domain": "nlin",
+      "title": "Prior-Informed Equation Discovery",
+      "mechanism": "Equation discovery's ill-posed inverse problem (multiple models yield similar errors) is constrained by incorporating inductive biases. Symmetry constraints and symbolic regression narrow the search space by encoding domain knowledge. The characteristic curves framework enables modular integration of structural priors, with identifiability emerging from imposed constraints. Prior knowledge acts as regularization, discarding undesirable models and selecting among observationally-equivalent alternatives."
+    },
+    {
+      "paper_id": 937,
+      "domain": "q-bio",
+      "title": "Generative Biomolecular Network Design",
+      "mechanism": "Biomolecular network design reverses the typical simulation workflow: instead of checking proposed networks, an agent proposes reactions guided by behavioral specification. Coupling generative proposal with simulation-based evaluation (user-specified objective) produces topologically diverse solutions. The generative component explores reaction space, while simulation evaluates functional fit, enabling automated discovery of networks implementing desired dynamics from specifications."
+    },
+    {
+      "paper_id": 939,
+      "domain": "q-bio",
+      "title": "Stochastic Chemical Reaction Work Theorem",
+      "mechanism": "Chemical reaction networks exhibit martingale structure in generalized entropy without requiring detailed balance. Martingale properties emerge directly from reaction propensity structure: the jump process compensated with appropriate drift becomes a zero-mean stochastic process. This enables work theorems for arbitrary stopping times and singular initial conditions, generalizing thermodynamic relations beyond equilibrium systems."
+    },
+    {
+      "paper_id": 944,
+      "domain": "q-bio",
+      "title": "Functional Percolation in Early Life",
+      "mechanism": "Functional organization transitions at critical connectivity: below threshold, cascades die locally creating a functional desert (sparse, transient responses); near percolation threshold, system-spanning cascades emerge enabling discriminative responses. Connectivity-driven transition introduces coherence timescales and weak path-dependence into otherwise memoryless exploration. Network dynamics alone soften combinatorial feasibility barriers without requiring specific biochemistry."
+    },
+    {
+      "paper_id": 970,
+      "domain": "cs",
+      "title": "Orthogonal Model Merging",
+      "mechanism": "Model merging on Riemannian manifolds (orthogonal group) preserves geometric structure of pretrained weights, avoiding destruction of hyperspherical energy. Linear merging in Euclidean space disrupts intrinsic geometry; manifold-based merging via Lie algebra mapping maintains structural properties. Orthogonal components are merged on the manifold, while residuals undergo standard additive merging, separating geometric preservation from linear adjustments."
+    },
+    {
+      "paper_id": 990,
+      "domain": "q-bio",
+      "title": "Network Temperature Response",
+      "mechanism": "Individual Arrhenius-like temperature dependence at reaction level transforms into non-Arrhenius scaling, thermal limits, and temperature compensation at network level. Coupled biochemical reactions with temperature-modulated kinetics exhibit emergent system-level temperature response curves that differ from component behaviors. Network coupling creates effective nonlinearities and collective constraints, transforming simple exponential dependencies into complex organism-level thermal responses."
+    },
+    {
+      "paper_id": 996,
+      "domain": "cs",
+      "title": "Safe Region Learning",
+      "mechanism": "Safe operating regions are learned through two-phase online process: passive inference phase (causal inference + Gaussian process regression constructs initial safe region from observations) followed by intervention phase (active Bayesian learning gradually expands region). Convergence to full safe region is proven, with specified probability that learned region remains safe. Passive-to-active transition balances safety (conservative initial estimates) with exploration (gradual expansion)."
+    },
+    {
+      "paper_id": 1046,
+      "domain": "q-bio",
+      "title": "Low-Dimensional Interaction Constraints",
+      "mechanism": "When effective interactions among system components compress into low-dimensional interaction space, global organization is governed by geometric constraints rather than detailed dynamics. Low interaction dimensionality imposes upper bounds on number, separability, and robustness of collective organizations. Many macroscopic organizations are excluded a priori even when locally-compatible interactions exist, shifting explanation from generative mechanisms to structural impossibility."
+    }
+  ]
+}

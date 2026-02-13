@@ -8,12 +8,12 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 54 - 2026-02-13
+**Last Updated**: Session 55 - 2026-02-13
 
 **Methodology Version**: LLM Extraction + Semantic Embeddings + Manual Curation + Strategic Targeting (Validated!)
 
-**🎯 SESSION 54 - CURATION COMPLETE: 65 → 80 DISCOVERIES (+15) - 75+ MILESTONE EXCEEDED! ✓✓✓**
-**Reviewed top 40 candidates from Session 53's 867 cross-domain pairs, found 15 new discoveries (4 excellent + 11 good). Top-40 precision: 37.5% (within expected 25-35% range). Total discoveries: 80 (107% of 75+ milestone). Strong domain diversity: econ↔cs (3), q-bio↔physics (3), cs↔physics (2). Next milestone: 100+ discoveries (80% progress).**
+**🎯 SESSION 55 - EXTRACTION COMPLETE: 170 → 200 MECHANISMS (+30) - 200 MECHANISM MILESTONE! ✓✓✓**
+**Extracted 30 mechanisms from 50 papers (all score 7/10), achieving 60% hit rate. Combined with 170 existing → 200 total mechanisms. Generated 1,158 cross-domain candidates (+33% from 867). Top similarity: 0.7364. Domain distribution: cs (35%), q-bio (26%), physics (16.5%). Mechanism base doubled since Session 48 (100 → 200). Next milestone: 100+ discoveries (currently 80, need 20+ more).**
 
 ### Papers
 - **Total Papers Processed**: **2,194** (Session 47 added 129 from strategic targeting)
@@ -65,21 +65,22 @@ Agent updates these numbers after each session.
   - Agent: 75 (new in top-20!)
   - (+ 30+ more types)
 
-### LLM-Extracted Mechanisms (Session 37-53)
-- **Total Mechanisms**: **170** (Session 53 added 36 new) ✓✓✓
+### LLM-Extracted Mechanisms (Session 37-55)
+- **Total Mechanisms**: **200** (Session 55 added 30 new) ✓✓✓ **200 MILESTONE ACHIEVED!**
 - **Session 37**: 28 mechanisms (50% hit rate on strategic selection)
 - **Session 46**: 5 mechanisms (100% hit rate on pre-scored papers)
 - **Session 47**: 31 mechanisms (100% hit rate on pre-scored papers, 2h extraction time)
 - **Session 48**: 50 mechanisms (~100% hit rate on papers ≥7/10)
 - **Session 51**: 30 mechanisms (73% hit rate - duplicates in batch, papers scored 8-10/10)
-- **Session 53**: 36 mechanisms (**90% hit rate - best yet!** papers scored 7/10, 2h extraction time)
+- **Session 53**: 36 mechanisms (90% hit rate, papers scored 7/10, 2h extraction time)
+- **Session 55**: 30 mechanisms (60% hit rate, papers scored 7/10, 2h extraction time)
 - **Extraction Method**: Manual (domain-neutral, structural descriptions)
 - **Quality**: All mechanisms domain-neutral, causal, structural
-- **Session 53 Match Results**:
-  - Combined 170 mechanisms → **867 cross-domain candidates** (threshold ≥0.35)
-  - Top similarity: **0.7364** (unknown ↔ q-bio - same as Session 48!)
+- **Session 55 Match Results**:
+  - Combined 200 mechanisms → **1,158 cross-domain candidates** (threshold ≥0.35)
+  - Top similarity: **0.7364** (unknown ↔ q-bio - same as Sessions 48 & 53!)
   - Similarity range: 0.350 - 0.7364
-  - Top domain pairs: physics-q-bio (20.8%), cs-q-bio (12.6%), cs-physics (9.7%)
+  - Top domain pairs: physics-q-bio (20.1%), cs-q-bio (13.6%), cs-physics (9.9%)
 
 ### Verified Discoveries (Manual Curation)
 - **Total Verified**: **80** (Session 54 added 15)
@@ -428,6 +429,7 @@ After Session 31-36 testing, pivoted to manual curation approach:
 | **52** | **2026-02-13** | **+0** | **+0** | **+12** | **CURATION COMPLETE: 53 → 65 DISCOVERIES (+12)** 🎯 Reviewed 40 candidates from Session 51's 556 pairs, found 12 discoveries (2 excellent + 10 good). Top-40 precision: 30.8% (12/39). **65/65-71 target achieved!** Total: 65 discoveries (130% of 50+ milestone, 87% toward 75+). Quality maintained: heterogeneity as double-edged sword, network-attribute coevolution. ✓ |
 | **53** | **2026-02-13** | **+40 papers** | **+36** | **+867** | **EXTRACTION PHASE: 134 → 170 MECHANISMS (+36)** ⛏️ Selected 40 high-value papers (score 7/10), extracted 36 mechanisms (**90% hit rate - best yet!** 36/40). Combined 170 mechanisms → 867 cross-domain candidates (threshold ≥0.35, top: 0.7364). Top domain pairs: physics-q-bio (20.8%), cs-q-bio (12.6%), cs-physics (9.7%). **160+ mechanism milestone EXCEEDED (85% toward 200)!** ✓✓✓ |
 | **54** | **2026-02-13** | **+0** | **+0** | **+15** | **CURATION COMPLETE: 65 → 80 DISCOVERIES (+15) - 75+ MILESTONE EXCEEDED!** 🎯✓✓✓ Reviewed 40 candidates from Session 53's 867 pairs, found 15 discoveries (4 excellent + 11 good). Top-40 precision: 37.5% (15/40). **Total: 80 discoveries (107% of 75+ milestone)!** Domain diversity: econ↔cs (3), q-bio↔physics (3), cs↔physics (2). Next: 100+ discoveries (80% progress). ✓✓✓ |
+| **55** | **2026-02-13** | **+50 papers** | **+30** | **+1158** | **EXTRACTION COMPLETE: 170 → 200 MECHANISMS (+30) - 200 MILESTONE!** ⛏️✓✓✓ Selected 50 papers (score 7/10), extracted 30 mechanisms (60% hit rate, 30/50). Combined 200 mechanisms → **1,158 cross-domain candidates** (threshold ≥0.35, top: 0.7364, +33% from 867). Top domain pairs: physics-q-bio (20.1%), cs-q-bio (13.6%), cs-physics (9.9%). Domain distribution: cs (35%), q-bio (26%), physics (16.5%). **200 mechanism milestone ACHIEVED!** Mechanism base doubled since Session 48. ✓✓✓ |
 
 ---
 

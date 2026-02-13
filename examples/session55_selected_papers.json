@@ -1,0 +1,758 @@
+{
+  "session": 55,
+  "selection_criteria": "score \u22657/10, not yet extracted, top 50 by score then paper_id",
+  "total_available": 129,
+  "selected_count": 50,
+  "papers": [
+    {
+      "paper_id": 489,
+      "arxiv_id": "2602.02234v1",
+      "domain": "physics",
+      "title": "Enabling AI Deep Potentials for Ab Initio-quality Molecular Dynamics Simulations in GROMACS",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution",
+        "optimization"
+      ],
+      "published_date": "2026-02-02"
+    },
+    {
+      "paper_id": 524,
+      "arxiv_id": "2602.05017v1",
+      "domain": "q-bio",
+      "title": "A novel scalable high performance diffusion solver for multiscale cell simulations",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "model",
+        "coevolution",
+        "scaling",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 603,
+      "arxiv_id": "2602.05641v1",
+      "domain": "cs",
+      "title": "Time-Complexity Characterization of NIST Lightweight Cryptography Finalists",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "scaling",
+        "optimization"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 628,
+      "arxiv_id": "2602.05565v1",
+      "domain": "math",
+      "title": "On Path-based Marginal Cost of Heterogeneous Traffic Flow for General Networks",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "strategic",
+        "optimization"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 632,
+      "arxiv_id": "2602.05403v1",
+      "domain": "cs",
+      "title": "Advancing Opinion Dynamics Modeling with Neural Diffusion-Convection-Reaction Equation",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 650,
+      "arxiv_id": "2602.04975v1",
+      "domain": "physics",
+      "title": "Stochastic hierarchical data-driven optimization: application to plasma-surface kinetics",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "coevolution",
+        "optimization"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 661,
+      "arxiv_id": "2602.05597v1",
+      "domain": "cs",
+      "title": "Emulating Aggregate Human Choice Behavior and Biases with GPT Conversational Agents",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 666,
+      "arxiv_id": "2602.04566v1",
+      "domain": "cs",
+      "title": "Dual Mind World Model Inspired Network Digital Twin for Access Scheduling",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 667,
+      "arxiv_id": "2602.04326v1",
+      "domain": "cs",
+      "title": "From Assumptions to Actions: Turning LLM Reasoning into Uncertainty-Aware Planning for Embodied Agents",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "scaling",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 668,
+      "arxiv_id": "2602.04291v1",
+      "domain": "cs",
+      "title": "Disentangling Causal Importance from Emergent Structure in Multi-Expert Orchestration",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "threshold",
+        "model",
+        "coevolution"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 669,
+      "arxiv_id": "2602.04234v1",
+      "domain": "cs",
+      "title": "On the Uncertainty of Large Language Model-Based Multi-Agent Systems",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 681,
+      "arxiv_id": "2602.05819v1",
+      "domain": "cs",
+      "title": "Authorship Drift: How Self-Efficacy and Trust Evolve During LLM-Assisted Writing",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 696,
+      "arxiv_id": "2602.04338v1",
+      "domain": "physics",
+      "title": "Improved Fluid Modeling of Space Debris Generated Ion-Acoustic Precursor Solitons",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 701,
+      "arxiv_id": "2602.03494v1",
+      "domain": "physics",
+      "title": "Collisionless Larmor Coupling and Blob Formation in a Laser-Plasma Expanding into a Magnetized Ambient Plasma",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "coevolution",
+        "scaling",
+        "adaptation"
+      ],
+      "published_date": "2026-02-03"
+    },
+    {
+      "paper_id": 724,
+      "arxiv_id": "2601.09767v1",
+      "domain": "q-bio",
+      "title": "From the Hallmarks of Cancer to the Survival System: Integration and Paradigmatic Reconstruction of Classical Oncology Theories by the Tumor Existential Crisis-Driven Survival (ECDS) Theory",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2026-01-14"
+    },
+    {
+      "paper_id": 726,
+      "arxiv_id": "2601.05220v1",
+      "domain": "q-bio",
+      "title": "Mechanics of axis formation in $\\textit{Hydra}$",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution",
+        "scaling"
+      ],
+      "published_date": "2026-01-08"
+    },
+    {
+      "paper_id": 740,
+      "arxiv_id": "2602.05336v1",
+      "domain": "math",
+      "title": "Full-Covariance Chemical Langevin Predator--Prey Diffusion with Absorbing Boundaries",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 747,
+      "arxiv_id": "2602.06018v1",
+      "domain": "math",
+      "title": "Towards uncertainty quantification of a model for cancer-on-chip experiments",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "coevolution",
+        "scaling"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 753,
+      "arxiv_id": "2602.05632v1",
+      "domain": "math",
+      "title": "Numerical stationary states for nonlocal Fokker-Planck equations via fixed points of consistency maps",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 773,
+      "arxiv_id": "2602.05152v1",
+      "domain": "cs",
+      "title": "RAG without Forgetting: Continual Query-Infused Key Memory",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 775,
+      "arxiv_id": "2602.05248v1",
+      "domain": "physics",
+      "title": "Thermodynamic Origin of Degree-Day Scaling in Phase-Change Systems",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 782,
+      "arxiv_id": "2602.02096v1",
+      "domain": "physics",
+      "title": "WADEPre: A Wavelet-based Decomposition Model for Extreme Precipitation Nowcasting with Multi-Scale Learning",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "model",
+        "strategic",
+        "optimization"
+      ],
+      "published_date": "2026-02-02"
+    },
+    {
+      "paper_id": 783,
+      "arxiv_id": "2602.01904v1",
+      "domain": "physics",
+      "title": "Role of the ocean for fast atmospheric evolution revealed by machine learning",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2026-02-02"
+    },
+    {
+      "paper_id": 785,
+      "arxiv_id": "2602.01236v1",
+      "domain": "physics",
+      "title": "Radar-Based Raindrop Size Distribution Prediction: Comparing Analytical, Neural Network, and Decision Tree Approaches",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "scaling",
+        "optimization"
+      ],
+      "published_date": "2026-02-01"
+    },
+    {
+      "paper_id": 787,
+      "arxiv_id": "2602.00598v1",
+      "domain": "physics",
+      "title": "HybridOM: Hybrid Physics-Based and Data-Driven Global Ocean Modeling with Efficient Spatial Downscaling",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "scaling",
+        "optimization"
+      ],
+      "published_date": "2026-01-31"
+    },
+    {
+      "paper_id": 794,
+      "arxiv_id": "2512.08732v1",
+      "domain": "q-bio",
+      "title": "Neural Ordinary Differential Equations for Simulating Metabolic Pathway Dynamics from Time-Series Multiomics Data",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution"
+      ],
+      "published_date": "2025-12-09"
+    },
+    {
+      "paper_id": 802,
+      "arxiv_id": "2511.11986v2",
+      "domain": "q-bio",
+      "title": "Comment on \"Repair of DNA Double-Strand Breaks Leaves Heritable Impairment to Genome Function\"",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2025-11-15"
+    },
+    {
+      "paper_id": 843,
+      "arxiv_id": "2602.05891v1",
+      "domain": "cs",
+      "title": "When Elo Lies: Hidden Biases in Codeforces-Based Evaluation of Large Language Models",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 847,
+      "arxiv_id": "2602.05721v1",
+      "domain": "cs",
+      "title": "A Dual-Loop Agent Framework for Automated Vulnerability Reproduction",
+      "score": 7,
+      "categories": [
+        "threshold",
+        "causal",
+        "model",
+        "strategic",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 855,
+      "arxiv_id": "2602.05242v1",
+      "domain": "cs",
+      "title": "EGSS: Entropy-guided Stepwise Scaling for Reliable Software Engineering",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "scaling",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 871,
+      "arxiv_id": "2601.10591v1",
+      "domain": "q-fin",
+      "title": "ProbFM: Probabilistic Time Series Foundation Model with Uncertainty Decomposition",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "scaling",
+        "optimization"
+      ],
+      "published_date": "2026-01-15"
+    },
+    {
+      "paper_id": 907,
+      "arxiv_id": "2602.05020v1",
+      "domain": "math",
+      "title": "Decaying Sensitivity of the Zero Solution for a Class of Nonlinear Optimal Control Problems",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "coevolution",
+        "optimization"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 925,
+      "arxiv_id": "2601.21720v1",
+      "domain": "nlin",
+      "title": "Integrating prior knowledge in equation discovery: Interpretable symmetry-informed neural networks and symbolic regression via characteristic curves",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "scaling",
+        "adaptation"
+      ],
+      "published_date": "2026-01-29"
+    },
+    {
+      "paper_id": 937,
+      "arxiv_id": "2601.17582v1",
+      "domain": "q-bio",
+      "title": "GenAI-Net: A Generative AI Framework for Automated Biomolecular Network Design",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2026-01-24"
+    },
+    {
+      "paper_id": 939,
+      "arxiv_id": "2601.12854v1",
+      "domain": "q-bio",
+      "title": "A generalized work theorem for stopped stochastic chemical reaction networks",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "model",
+        "strategic"
+      ],
+      "published_date": "2026-01-19"
+    },
+    {
+      "paper_id": 944,
+      "arxiv_id": "2601.06272v3",
+      "domain": "q-bio",
+      "title": "Crossing the Functional Desert: Cascade-Driven Assembly and Feasibility Transitions in Early Life",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "model",
+        "coevolution"
+      ],
+      "published_date": "2026-01-09"
+    },
+    {
+      "paper_id": 970,
+      "arxiv_id": "2602.05943v1",
+      "domain": "cs",
+      "title": "Orthogonal Model Merging",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "strategic",
+        "coevolution",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 990,
+      "arxiv_id": "2601.03307v1",
+      "domain": "q-bio",
+      "title": "Understanding the temperature response of biological systems: Part II -- Network-level mechanisms and emergent dynamics",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "scaling",
+        "adaptation"
+      ],
+      "published_date": "2026-01-06"
+    },
+    {
+      "paper_id": 996,
+      "arxiv_id": "2602.05280v1",
+      "domain": "cs",
+      "title": "Causal Online Learning of Safe Regions in Cloud Radio Access Networks",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "causal",
+        "scaling",
+        "adaptation"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 998,
+      "arxiv_id": "2602.04471v1",
+      "domain": "cs",
+      "title": "LLM-Empowered Cooperative Content Caching in Vehicular Fog Caching-Assisted Platoon Networks",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "strategic",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 1003,
+      "arxiv_id": "2602.03821v1",
+      "domain": "cs",
+      "title": "xDevSM: An Open-Source Framework for Portable, AI-Ready xApps Across Heterogeneous O-RAN Deployments",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "scaling",
+        "optimization"
+      ],
+      "published_date": "2026-02-03"
+    },
+    {
+      "paper_id": 1005,
+      "arxiv_id": "2602.03529v1",
+      "domain": "cs",
+      "title": "Morphe: High-Fidelity Generative Video Streaming with Vision Foundation Model",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-03"
+    },
+    {
+      "paper_id": 1023,
+      "arxiv_id": "2602.03588v1",
+      "domain": "cs",
+      "title": "Efficient Algorithms for Partial Constraint Satisfaction Problems over Control-flow Graphs",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "network",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-03"
+    },
+    {
+      "paper_id": 1025,
+      "arxiv_id": "2602.01935v1",
+      "domain": "cs",
+      "title": "COLT: Lightweight Multi-LLM Collaboration through Shared MCTS Reasoning for Model Compilation",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "causal",
+        "model",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-02"
+    },
+    {
+      "paper_id": 1046,
+      "arxiv_id": "2601.11592v1",
+      "domain": "q-bio",
+      "title": "Low-Dimensional Interaction Spaces Impose Geometric Constraints On Collective Organization",
+      "score": 7,
+      "categories": [
+        "causal",
+        "model",
+        "strategic",
+        "coevolution",
+        "optimization"
+      ],
+      "published_date": "2026-01-05"
+    },
+    {
+      "paper_id": 1068,
+      "arxiv_id": "2602.03437v1",
+      "domain": "physics",
+      "title": "Accelerated Electromagnetic Simulation of MRI RF Interactions with Graphene Microtransistor-Based Neural Probes for Electrophysiology-fMRI Integration",
+      "score": 7,
+      "categories": [
+        "network",
+        "model",
+        "strategic",
+        "coevolution",
+        "scaling"
+      ],
+      "published_date": "2026-02-03"
+    },
+    {
+      "paper_id": 1069,
+      "arxiv_id": "2602.03317v1",
+      "domain": "physics",
+      "title": "Multiparameter Uncertainty Mapping in Quantitative Molecular MRI using a Physics-Structured Variational Autoencoder (PS-VAE)",
+      "score": 7,
+      "categories": [
+        "network",
+        "causal",
+        "scaling",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-03"
+    },
+    {
+      "paper_id": 1100,
+      "arxiv_id": "2602.05209v1",
+      "domain": "cs",
+      "title": "Integrated Sensing, Communication, and Control for UAV-Assisted Mobile Target Tracking",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "threshold",
+        "causal",
+        "model",
+        "optimization"
+      ],
+      "published_date": "2026-02-05"
+    },
+    {
+      "paper_id": 1147,
+      "arxiv_id": "2602.05002v1",
+      "domain": "cs",
+      "title": "System-Level Isolation for Mixed-Criticality RISC-V SoCs: A \"World\" Reality Check",
+      "score": 7,
+      "categories": [
+        "feedback",
+        "threshold",
+        "scaling",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    },
+    {
+      "paper_id": 1150,
+      "arxiv_id": "2602.04415v1",
+      "domain": "cs",
+      "title": "Crypto-RV: High-Efficiency FPGA-Based RISC-V Cryptographic Co-Processor for IoT Security",
+      "score": 7,
+      "categories": [
+        "network",
+        "threshold",
+        "causal",
+        "optimization",
+        "adaptation"
+      ],
+      "published_date": "2026-02-04"
+    }
+  ]
+}

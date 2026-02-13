@@ -4,151 +4,152 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 53 Goals (2026-02-13)
+## Session 54 Goals (2026-02-13)
 
-**Mission**: Extract 25-30 mechanisms from high-value corpus (134 → 160+ total)
+**Mission**: Curate Session 53 candidates to reach 75+ discovery milestone (65 → 75+)
 
 ### Primary Goal
-Extract domain-neutral mechanisms from remaining high-value papers:
-- Select 30-40 papers from 485 remaining high-value papers (score ≥5/10)
-- Prioritize papers scored 7-10/10 for highest hit rate
-- Manual LLM-guided extraction (domain-neutral structural descriptions)
-- Goal: Extract 25-30 new mechanisms → 160+ total
-- Generate embeddings and match → 700-900 cross-domain candidates
+Review top candidates from Session 53's 867 cross-domain pairs:
+- Review top 40-50 candidates from 867 pairs (sorted by similarity)
+- Rate each: Excellent / Good / Weak / False
+- Document structural patterns for excellent/good matches
+- Apply quality standards from DATA_QUALITY_STANDARDS.md
+- Goal: Find 10-15 new discoveries → 75-80 total
+- **Reach 75+ discovery milestone** (150% of 50+ target)
 
 ### Why This Matters
-**Building toward 200 mechanism milestone**:
-- Current: 134 mechanisms extracted
-- Target: 160+ mechanisms (80% toward 200)
-- Remaining corpus: 485 high-value papers (≥5/10) still untapped
-- Proven strategy: Session 51 extracted 30 mechanisms from 41 papers (73% hit rate)
+**Fresh candidate pool with strong potential**:
+- Session 53 generated 867 candidates (up from 556, +56% increase)
+- Top similarity: 0.7364 (same as Session 48's best!)
+- Top domain pairs: physics-q-bio (20.8%), cs-q-bio (12.6%), cs-physics (9.7%)
+- More mechanisms (170 vs 134) → more diverse cross-domain matches
 
 **Current discoveries**: 65 (130% of 50+ milestone, 87% toward 75+)
 - Session 38: 30 discoveries (10 excellent + 20 good)
 - Session 47: 11 discoveries (3 excellent + 8 good)
 - Session 49: 12 discoveries (5 excellent + 7 good)
 - Session 52: 12 discoveries (2 excellent + 10 good)
-- **Next milestone**: 75+ discoveries (need 10 more)
+- **Target**: 75+ discoveries (need 10+ more) → **150% of original 50+ goal**
 
 ### Strategy
-**Proven workflow from Session 51**:
-1. Query database for high-value papers (score ≥7/10) not yet extracted
-2. Fetch abstracts for selected papers
-3. Manual LLM-guided extraction (domain-neutral mechanisms)
-4. Combine with existing 134 mechanisms
-5. Generate embeddings (384-dim sentence-transformers)
-6. Match cross-domain pairs (threshold ≥0.35)
-7. Save candidates for future curation
+**Proven workflow from Sessions 49, 52**:
+1. Load Session 53 candidates (867 cross-domain pairs)
+2. Review top 40-50 candidates (sorted by similarity)
+3. For each candidate:
+   - Read both mechanisms carefully
+   - Rate: Excellent / Good / Weak / False
+   - Document structural pattern if excellent/good
+   - Apply quality standards (causal, generalizable, cross-domain)
+4. Create discoveries JSON with ratings and explanations
+5. Update PROGRESS.md and METRICS.md
+6. Commit changes
 
-**Expected hit rate**: 70-80% based on pre-scored papers
-- Session 46: 100% (5/5 on papers ≥5/10)
-- Session 47: 100% (31/31 on papers ≥5/10)
-- Session 48: ~100% (50/50 on papers ≥7/10)
-- Session 51: 73% (30/41, lower due to duplicates in batch)
+**Expected precision**: 25-35% based on previous sessions
+- Session 38: 67% precision in top-30 (24% overall)
+- Session 47: 55% precision in top-20
+- Session 49: 40% precision in top-30 (from Session 48 candidates)
+- Session 52: 31% precision in top-40 (from Session 51 candidates)
+- **Expected for Session 54**: 25-35% in top-40 (fresh pool, larger mechanism base)
 
 ### Deliverables
-1. Select 30-40 high-value papers (≥7/10, not yet extracted)
-2. Extract 25-30 domain-neutral mechanisms
-3. Generate embeddings for all 160+ mechanisms
-4. Match cross-domain candidates (threshold ≥0.35)
-5. Create session53_extracted_mechanisms.json
-6. Create session53_candidates.json
-7. Update PROGRESS.md and METRICS.md
+1. Review top 40-50 candidates from Session 53 (867 total)
+2. Rate each candidate: Excellent / Good / Weak / False
+3. Document structural patterns for excellent/good matches
+4. Create session54_curated_discoveries.json
+5. Update PROGRESS.md and METRICS.md
+6. Commit all changes
 
 ### Time Estimate
-- Paper selection: 15-20 min (query database, filter duplicates)
-- Mechanism extraction: 2-2.5 hours (~15 mechanisms/hour)
-- Embedding generation: 15-20 min
-- Candidate matching: 10-15 min
-- Documentation: 15-20 min
-- **Total**: 3-4 hours
+- Load and review top 40 candidates: 1.5-2 hours (~3 min per candidate)
+- Document discoveries: 30-45 min
+- Update documentation: 15-20 min
+- Commit changes: 5 min
+- **Total**: 2-3 hours
 
 ### Success Criteria
 **Minimum**:
-- Select 30 papers (≥7/10, not extracted)
-- Extract 20+ mechanisms
-- Total: 134 → 154+ mechanisms
-- Generate 600+ cross-domain candidates
+- Review 30 candidates from Session 53
+- Find 8+ discoveries (any quality)
+- Total: 65 → 73+ discoveries
+- **Approaching 75+ milestone** (97% progress)
 
 **Target**:
-- Select 35-40 papers (≥7/10)
-- Extract 25-30 mechanisms (70-80% hit rate)
-- Total: 134 → 159-164 mechanisms
-- Generate 700-900 cross-domain candidates
-- **Reach 160+ mechanism milestone** ✓
+- Review 40 candidates from Session 53
+- Find 10-12 discoveries (mix of excellent + good)
+- Total: 65 → 75-77 discoveries
+- **Reach 75+ milestone** ✓ (150% of 50+ goal)
 
 **Stretch**:
-- Extract 35+ mechanisms
-- Total: 134 → 169+ mechanisms
-- Generate 900-1100 candidates
-- Document extraction patterns/themes
+- Review 50 candidates
+- Find 15+ discoveries
+- Total: 65 → 80+ discoveries
+- **Exceed 75+ milestone** (160% of 50+ goal)
 
 ---
 
-## Context from Session 52
+## Context from Session 53
 
-Session 52 curated Session 51 candidates:
-- Reviewed 40 candidates from 556 pairs
-- Found 12 discoveries (2 excellent + 10 good)
-- Precision: 30.8% (12/39 valid)
-- Total discoveries: 53 → 65 ✓
+Session 53 completed extraction phase:
+- Selected 40 high-value papers (all scored 7/10)
+- Extracted 36 mechanisms (90% hit rate - best yet!)
+- Combined 134 + 36 = 170 total mechanisms
+- Generated 867 cross-domain candidates (threshold ≥0.35)
 
 **Current state**:
-- 134 mechanisms extracted
+- **170 mechanisms extracted** (134 → 170, +27% increase)
 - 65 verified discoveries (130% of 50+, 87% toward 75+)
+- **867 Session 53 candidates ready for curation** ← Focus here!
 - 544 Session 51 candidates remaining (ranks 41-556, uncurated)
 - 461 Session 48 candidates remaining (ranks 31-491, uncurated)
-- **485 high-value papers (≥5/10) still available for extraction** ← Focus here!
+- ~445 high-value papers (≥5/10) still available for future extraction
 
-**Session 52 recommendation**: Continue extraction (Option A) to build mechanism base before more curation
+**Session 53 recommendation**: Curate Session 53 candidates (Option A) to reach 75+ discovery milestone
 
 ---
 
-## Workflow for Session 53
+## Workflow for Session 54
 
-### Step 1: Select High-Value Papers
+### Step 1: Load Session 53 Candidates
 ```bash
-python scripts/select_papers_for_extraction.py --min-score 7 --max-papers 40 --exclude-extracted
+# Candidates already generated in Session 53
+# File: examples/session53_candidates.json (867 cross-domain pairs)
 ```
-- Query database/papers.db for papers scored ≥7/10
-- Filter out papers already extracted
-- Prioritize highest scores (10 → 9 → 8 → 7)
-- Output: session53_selected_papers.json
+- 867 candidates ready for review
+- Pre-sorted by similarity (highest first)
+- Top similarity: 0.7364
 
-### Step 2: Fetch Paper Abstracts
+### Step 2: Review Top Candidates (Manual)
+- Read candidates 1-40 (or 1-50 if time allows)
+- For each candidate:
+  - Read mechanism_1 and mechanism_2 carefully
+  - Assess structural similarity (not keyword overlap)
+  - Rate: Excellent / Good / Weak / False
+  - If excellent/good: document structural pattern
+- Apply DATA_QUALITY_STANDARDS.md criteria
+- Save discoveries to: session54_curated_discoveries.json
+
+### Step 3: Document Discoveries
+- Create JSON file with discoveries:
+  - Candidate info (similarity, domains, paper IDs)
+  - Rating (excellent / good)
+  - Structural explanation (why it's a match)
+  - Cross-domain connection description
+- Expected: 10-15 discoveries from 40-50 reviewed
+
+### Step 4: Update Documentation
+- Update PROGRESS.md:
+  - Add Session 54 entry
+  - Update Quick Stats (65 → 75+ discoveries)
+- Update METRICS.md:
+  - Update Verified Discoveries section
+  - Update milestone progress
+- Update DAILY_GOALS.md for Session 55
+
+### Step 5: Commit Changes
 ```bash
-python scripts/fetch_abstracts_for_extraction.py --input session53_selected_papers.json
+git add .
+git commit -m "Session 54: Curation complete - 65 → 75+ discoveries"
 ```
-- Retrieve full abstracts from database
-- Output: session53_extraction_batch.json
-
-### Step 3: Extract Mechanisms (Manual)
-- Review each abstract
-- Extract domain-neutral structural mechanisms
-- Write in causal, generalizable language
-- Save to: session53_extracted_mechanisms.json
-
-### Step 4: Generate Embeddings
-```bash
-python scripts/generate_embeddings.py --mechanisms session53_extracted_mechanisms.json
-```
-- Combine with existing 134 mechanisms
-- Generate 384-dim embeddings for all
-- Output: session53_all_mechanisms.json, session53_embeddings.npy
-
-### Step 5: Match Candidates
-```bash
-python scripts/match_candidates.py --threshold 0.35 --cross-domain
-```
-- Match all 160+ mechanisms
-- Filter to cross-domain only
-- Sort by similarity
-- Output: session53_candidates.json
-
-### Step 6: Document Results
-- Update PROGRESS.md with Session 53 entry
-- Update METRICS.md with new counts
-- Commit all files
 
 ---
 

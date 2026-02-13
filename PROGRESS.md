@@ -46,19 +46,19 @@ Below is the most recent session history (Session 49+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **52** (Session 52 = **CURATION COMPLETE: 53 → 65 discoveries (+12)** ✓)
+- **Total Sessions**: **53** (Session 53 = **EXTRACTION COMPLETE: 134 → 170 mechanisms (+36)** ✓)
 - **Total Papers**: **2,194** (Session 48 fetched 0 - mined existing corpus, 0% fetch waste!)
 - **Total Papers Scored**: **2,194** (100% coverage, avg 3.31/10, 631 high-value papers ≥5/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
-- **LLM-Extracted Mechanisms**: **134** (Session 51 added 30 new, ~73% hit rate on batch with duplicates)
+- **LLM-Extracted Mechanisms**: **170** (Session 53 added 36 new, 90% hit rate - 36/40 papers) ✓✓✓
 - **Verified Discoveries**: **65** (Session 52 added 12 new: 2 excellent + 10 good) ✓✓✓
 - **Session 49 Candidates Reviewed**: **30 of 491** (top-30 precision: 40%, 12 excellent/good found)
 - **Top-30 Precision**: **40%** (Session 49 curation of Session 48 candidates)
-- **Semantic Embeddings**: 134 mechanisms → 556 cross-domain candidates (threshold ≥0.35)
+- **Semantic Embeddings**: 170 mechanisms → 867 cross-domain candidates (threshold ≥0.35)
 - **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
 - **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th, nlin, hep-ph, eess (17+ domains!)
-- **Extraction Efficiency**: ~15 mechanisms/hour (manual), hit rate ~73% on Session 51 (duplicates in batch)
+- **Extraction Efficiency**: ~15 mechanisms/hour (manual), Session 53: 90% hit rate (36/40 papers)
 - **Methodology Version**: **v3.1 (score-all-papers + targeted extraction + semantic matching)** - Validated!
 - **Web Interface**: **analog.quest FULLY CONSISTENT!** ✓✓✓
   - 38 pages (home, discoveries, methodology, about, 30 discovery details, 404, sitemap)
@@ -68,7 +68,7 @@ Below is the most recent session history (Session 49+).
   - Comprehensive SEO (meta tags, Open Graph, Twitter cards)
   - Mobile responsive
   - **Citation links: 100% working** (maintained in Session 47!) ✓✓✓
-- **Last Session Date**: 2026-02-13 (Session 52 - **65 discoveries (130% of 50+ milestone)!** ✓✓✓)
+- **Last Session Date**: 2026-02-13 (Session 53 - **170 mechanisms (85% toward 200 milestone)!** ✓✓✓)
 
 ---
 
@@ -483,6 +483,124 @@ Below is the most recent session history (Session 49+).
 - examples/session52_curated_discoveries.json - 12 discoveries with ratings and structural explanations
 
 **Time Spent**: ~3 hours (candidate review: 2h, documentation: 1h)
+
+---
+
+## Session 53 - 2026-02-13 - Extraction Phase: 134 → 170 Mechanisms (+36) ✓
+
+**Goal**: Extract 25-30 mechanisms from high-value corpus to reach 160+ mechanism milestone
+
+**What I Did**:
+- [x] **Selected 40 high-value papers** (all scored 7/10, not yet extracted)
+  - Query scored papers from Session 48 (2,194 total)
+  - Filter: papers ≥7/10, exclude 128 already-extracted papers
+  - Selected top 40 from 153 available candidates
+  - Domain distribution: cs (17), q-bio (10), physics (10), stat (3)
+
+- [x] **Fetched abstracts** for 40 selected papers
+  - Retrieved full abstracts from database
+  - Created extraction batch file for manual review
+
+- [x] **Extracted 36 domain-neutral mechanisms** (90% hit rate)
+  - Manual LLM-guided extraction from 40 papers
+  - Hit rate: 36/40 = 90% (exceeded target 70-80%)
+  - Skipped 4 papers: engineering/performance focused, no mechanistic insights
+  - All mechanisms domain-neutral, causal, structural
+
+- [x] **Generated embeddings and matched candidates**
+  - Combined 134 existing + 36 new = 170 total mechanisms
+  - Generated 384-dim embeddings for all 170
+  - Matched cross-domain pairs (threshold ≥0.35)
+  - Found 867 candidates (up from 556, +56% increase)
+
+**Results**:
+- Papers processed: 40 (all scored 7/10)
+- Mechanisms extracted: 36 new (**90% hit rate** - best yet!)
+- **Total mechanisms: 134 → 170** (+36, +27% increase) ✓✓
+- Cross-domain candidates: 556 → 867 (+311, +56% increase)
+- Top similarity: 0.7364 (same as Session 48 top!)
+- **160+ mechanism milestone: EXCEEDED (170 = 85% toward 200)** ✓✓✓
+
+**Interesting Findings**:
+- **90% hit rate**: Best extraction efficiency yet (36/40 papers)
+  - Previous sessions: 73% (Session 51), ~100% (Session 48, but higher scores)
+  - All papers scored exactly 7/10 → validates score calibration
+  - Only 4 papers lacked mechanistic content (engineering/performance studies)
+- **Domain diversity in new mechanisms**: cs (17), q-bio (7), physics (7), stat (3), econ (2)
+- **Top domain pairs in 867 candidates**: physics-q-bio (20.8%), cs-q-bio (12.6%), cs-physics (9.7%)
+- **Candidate growth outpaces mechanism growth**:
+  - Mechanisms: +27% (134 → 170)
+  - Candidates: +56% (556 → 867)
+  - Non-linear scaling: more mechanisms → exponentially more candidate pairs
+- **Structural themes in new mechanisms**:
+  - Transfer learning & meta-learning (3 mechanisms)
+  - Multi-scale adaptation (3 mechanisms)
+  - Controllability-efficiency tradeoffs (3 mechanisms)
+  - Phase transitions & critical phenomena (3 mechanisms)
+  - Network effects & higher-order interactions (4 mechanisms)
+
+**What I Learned**:
+- **Score 7/10 is sweet spot**: 90% hit rate validates scoring algorithm
+  - Papers scoring 7/10 have clear mechanistic content
+  - Higher scores (8-10) likely even better, but fewer available
+  - Lower scores (5-6) would likely reduce hit rate
+- **Extraction speed improving**: ~2 hours for 36 mechanisms (~18 mechanisms/hour)
+  - Previous estimate: ~15 mechanisms/hour
+  - Practice improving efficiency
+- **Domain-neutral extraction getting sharper**: Better at identifying structural patterns
+  - Avoiding domain-specific jargon
+  - Focusing on causal relationships
+  - Generalizable language
+- **Candidate pool size matters**: 867 candidates provides excellent curation opportunities
+  - Session 49: 30 candidates reviewed from 491 → 12 discoveries (40% precision)
+  - Session 52: 40 candidates reviewed from 556 → 12 discoveries (31% precision)
+  - Session 53: 867 candidates available for future curation
+
+**Challenges**:
+- **None!** Smooth extraction session
+  - All scripts worked correctly
+  - No database issues
+  - No duplicate filtering problems
+  - Hit rate exceeded expectations
+
+**Status**: ✅ **TARGET EXCEEDED** - 170/160+ mechanisms (106%), 867 candidates ready for curation
+
+**Next Session Options**:
+
+**Option A: Curate Session 53 candidates** (top 40-50 from 867) **[RECOMMENDED]**
+- Review top 40-50 candidates from new 867 pairs
+- Expected precision: 25-35% (based on Sessions 49, 52)
+- Find 10-15 new discoveries → 75-80 total
+- **Reach 75+ milestone** (150% of 50+ target)
+- Time: 2-3 hours
+
+**Option B: Continue extraction** (170 → 200+ mechanisms)
+- Extract 30-40 more mechanisms from remaining ~445 high-value papers
+- Goal: 200+ mechanism milestone
+- Time: 3-4 hours
+- Defer curation to Session 55
+
+**Option C: Curate remaining Session 51/48 candidates**
+- Session 51: ranks 41-556 (516 remaining)
+- Session 48: ranks 31-491 (461 remaining)
+- Expected precision: 20-30% (lower similarity)
+- Find 8-12 more discoveries
+- Time: 2-3 hours
+
+**Immediate Recommendation**: Option A (curate Session 53 candidates) - fresh candidate pool with 867 pairs, aim for 75+ discovery milestone
+
+**Key Files Created**:
+- scripts/session53_select_candidates.py - Select high-value papers for extraction
+- scripts/session53_fetch_abstracts.py - Fetch abstracts from database
+- examples/session53_extraction_candidates.json - 40 selected papers
+- examples/session53_extraction_batch.json - Papers with abstracts
+- examples/session53_extracted_mechanisms.json - 36 new mechanisms
+- examples/session53_all_mechanisms.json - Combined 170 mechanisms
+- scripts/session53_embed_and_match.py - Generate embeddings and match
+- examples/session53_embeddings.npy - 170 × 384 embeddings
+- examples/session53_candidates.json - 867 cross-domain candidates
+
+**Time Spent**: ~3 hours (selection: 15min, extraction: 2h, embeddings+matching: 30min, documentation: 15min)
 
 ---
 

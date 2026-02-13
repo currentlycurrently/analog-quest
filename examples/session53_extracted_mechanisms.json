@@ -1,0 +1,182 @@
+[
+  {
+    "paper_id": 117,
+    "mechanism": "Transfer learning with structured graph representations enables few-shot adaptation across related domains by identifying shared interaction principles from well-studied systems and rapidly adapting to new contexts with minimal training data.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 140,
+    "mechanism": "Systems with delayed feedback combined with censored observations face fundamental learning limitations compared to systems with immediate uncensored feedback, creating a sharp performance separation even with identical optimization algorithms.",
+    "domain": "stat"
+  },
+  {
+    "paper_id": 145,
+    "mechanism": "Sign-based gradient transformation equalizes learning rates across hierarchical frequency components by removing magnitude dependence, eliminating bottlenecks from low-frequency modes and enabling exponentially faster convergence.",
+    "domain": "stat"
+  },
+  {
+    "paper_id": 148,
+    "mechanism": "Surrogate-assisted proposal generation with dynamic correction bounds enables efficient exploration when exact evaluations are expensive: surrogate provides cheap proposals, dynamic offset enforcement maintains correctness.",
+    "domain": "stat"
+  },
+  {
+    "paper_id": 151,
+    "mechanism": "Competing processes of local energy injection and spatial energy redistribution create sharp selectivity and high amplification when balanced: injection provides gain, redistribution creates filtering through dissipative wave propagation.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 159,
+    "mechanism": "Controllability-efficiency tradeoff in coupled resource management: independent regulation of multiple coupled resources requires balanced abundances to prevent cross-interference, but balanced states incur higher thermodynamic costs through increased entropy production.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 171,
+    "mechanism": "Parallel networks with distinct failure modes enable large reversible deformations: brittle bond network governs initial stiffness and yield point, entropic elastic network enables large deformations post-yield; reorganization and rebonding during recovery locks new equilibrium with increased stiffness.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 232,
+    "mechanism": "Population-level inference with uncertainty-aware fusion decouples global dynamics from individual variability: clustering behaviorally similar entities, encoding mechanistic priors, and fusing uncertain predictions at cluster level enables scalable simulation.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 239,
+    "mechanism": "Hybrid models combining feature detection and nonlinear estimation adapt to complex dynamics across varying operating conditions by decomposing the task: one component identifies salient patterns, another estimates outputs using detected features.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 308,
+    "mechanism": "Dynamic resource allocation adapts commitment timing to local uncertainty: allocating more processing to uncertain regions while quickly committing to certain regions avoids premature decisions and improves both quality and efficiency.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 332,
+    "mechanism": "Feed-forward geometric transformation with multi-view projection creates bidirectional improvement between teacher and student: transforming teacher outputs to alternative viewpoints provides richer supervision, enabling student to improve teacher's consistency.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 336,
+    "mechanism": "Multi-scale adaptation combining global domain knowledge and instance-specific adjustments prevents error accumulation in continual learning: global prompts capture broad patterns for anti-forgetting, instance prompts adapt dynamically to local variations.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 340,
+    "mechanism": "Iterative denoising of sparse representations conditioned on coarse predictions refines boundaries in low-data regimes: sparse encoding reduces sample complexity, conditioning provides structural constraints, iteration improves precision.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 345,
+    "mechanism": "Higher-order information creates heterogeneous risk perception targeting structural hubs and high-participation nodes, preventing contagion exploitation of these critical paths at lower social cost than uniform interventions.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 358,
+    "mechanism": "Self-amplifying coupling to periodic components of stochastic forcing drives phase transition from unstructured to structured behavior: weak periodic signals in noise become amplified through positive feedback, spontaneously synchronizing system components.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 365,
+    "mechanism": "External behavioral anchors induce strategic compliance and cognitive offloading without genuine norm internalization: agents mimic anchor behavior locally to reduce cognitive load, but revert to self-interested behavior when anchors absent or unobservable.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 394,
+    "mechanism": "Constraining process trajectories to fixed subgraph of possibility space enables efficient verification without full enumeration: defining acceptable path subgraph and verifying containment cheaper than exploring all possibilities.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 406,
+    "mechanism": "Sequential optimization respecting variable structure outperforms concurrent optimization ignoring structure: grouping structurally similar variables and optimizing in stages leverages domain knowledge to guide search more effectively.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 409,
+    "mechanism": "Evolutionary optimization with hardware-in-the-loop feedback automates expert-driven resource mapping by directly evaluating candidate mappings on target hardware, learning effective heuristics without manual tuning.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 411,
+    "mechanism": "Landscape-similarity proxies decouple algorithm discovery from expensive target evaluation: generating cheap proxy problems matching target's landscape characteristics enables extensive algorithm search before costly validation.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 416,
+    "mechanism": "Augmented state space with corrective dynamics extends equilibrium-based learning to non-conservative systems: adding auxiliary variables and non-reciprocal correction terms to learning dynamics recovers exact gradients despite broken energy conservation.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 418,
+    "mechanism": "Contrastive concept learning guides search by amplifying useful combinations and suppressing misleading ones: building hierarchical concept representation, learning which concepts correlate with success vs failure, and biasing exploration accordingly.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 426,
+    "mechanism": "Online recurrent learning continuously adapts pretrained policies to environmental drift and task changes: biologically-plausible real-time weight updates enable deployed systems to maintain performance under non-stationary conditions.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 451,
+    "mechanism": "Optimal resource extraction from networked populations balances local growth rates and network-mediated redistribution: harvest intensity should scale with intrinsic productivity and effective incoming flow from connected patches.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 464,
+    "mechanism": "Behavioral heterogeneity with homophily creates resurgence dynamics near critical thresholds: diverse risk responses combined with preferential interaction among similar types produces initial decline followed by secondary surge as low-risk subpopulation becomes infected.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 467,
+    "mechanism": "Conditioning on rare large events (quenched dynamics) versus averaging over event realizations (annealed dynamics) yields qualitatively different limiting processes: quenched limits preserve event-specific structure, annealed limits smooth over variability.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 485,
+    "mechanism": "Unified adaptive schemes eliminate manual parameter tuning while maintaining accuracy across diverse problem instances: automatic error-driven refinement of resolution and interaction distances adapts to local geometric complexity.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 514,
+    "mechanism": "Phase transition between constrained (glass-like) and unconstrained (liquid-like) regimes identifies minimal informative feature sets: critical feature count where order-parameter distributions shift from bimodal to unimodal marks saturation of downstream task performance.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 516,
+    "mechanism": "Scaling behavior depends jointly on model capacity, training data volume, and input representation structure: different representations yield different scaling exponents, making representation choice as critical as model size for performance.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 517,
+    "mechanism": "Controlled transport relative to informed reference process yields low-action paths through high-likelihood regions: defining generation as deviation from biologically-informed baseline keeps intermediate states plausible throughout trajectory.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 526,
+    "mechanism": "Environmental state dominates progression dynamics over intrinsic mutation rates in spatially structured systems: supportive environments amplify weak growth signals into invasive spread, while inhibitory environments suppress even high-mutation populations.",
+    "domain": "q-bio"
+  },
+  {
+    "paper_id": 552,
+    "mechanism": "Non-Hermitian parameter tuning drives continuous transition between energy-localized and momentum-localized topological phases: varying loss and coupling enables PT-symmetry breaking that smoothly transforms gap structure from spatial to temporal character.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 570,
+    "mechanism": "Coexisting dynamical regimes generate competing mode families with non-uniform spectral gaps and persistent modal competition: regular regions support long-lived coherent modes, chaotic regions produce rapid mixing, and coupling between regions creates intermediate tunneling modes.",
+    "domain": "physics"
+  },
+  {
+    "paper_id": 591,
+    "mechanism": "Inverting traditional compute-storage roles decouples system scale from accelerator capacity constraints: treating high-capacity persistent storage as authoritative state and fast accelerators as transient compute engines enables larger models than accelerator memory allows.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 594,
+    "mechanism": "Non-local quantum correlations enable superior coordination in distributed systems with convex reward functions: instantaneous shared randomness from entanglement avoids communication latency costs when longer uninterrupted processing yields superlinear rewards.",
+    "domain": "cs"
+  },
+  {
+    "paper_id": 602,
+    "mechanism": "Incremental residual representations with lazy evaluation and adaptive resource allocation improve efficiency-accuracy tradeoffs: computing only changed components, deferring updates until needed, and dynamically allocating budget reduce redundant computation.",
+    "domain": "cs"
+  }
+]

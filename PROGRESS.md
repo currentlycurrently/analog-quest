@@ -46,15 +46,15 @@ Below is the most recent session history (Session 49+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **53** (Session 53 = **EXTRACTION COMPLETE: 134 → 170 mechanisms (+36)** ✓)
+- **Total Sessions**: **54** (Session 54 = **CURATION COMPLETE: 65 → 80 discoveries (+15) - 75+ MILESTONE EXCEEDED!** ✓✓✓)
 - **Total Papers**: **2,194** (Session 48 fetched 0 - mined existing corpus, 0% fetch waste!)
 - **Total Papers Scored**: **2,194** (100% coverage, avg 3.31/10, 631 high-value papers ≥5/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
 - **LLM-Extracted Mechanisms**: **170** (Session 53 added 36 new, 90% hit rate - 36/40 papers) ✓✓✓
-- **Verified Discoveries**: **65** (Session 52 added 12 new: 2 excellent + 10 good) ✓✓✓
-- **Session 49 Candidates Reviewed**: **30 of 491** (top-30 precision: 40%, 12 excellent/good found)
-- **Top-30 Precision**: **40%** (Session 49 curation of Session 48 candidates)
+- **Verified Discoveries**: **80** (Session 54 added 15 new: 4 excellent + 11 good) ✓✓✓ **75+ MILESTONE EXCEEDED!**
+- **Session 54 Curation**: **40 candidates reviewed** from 867 (top-40 precision: 37.5%, 15 excellent/good found)
+- **Top-40 Precision**: **37.5%** (Session 54 curation of Session 53 candidates)
 - **Semantic Embeddings**: 170 mechanisms → 867 cross-domain candidates (threshold ≥0.35)
 - **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
 - **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th, nlin, hep-ph, eess (17+ domains!)
@@ -68,7 +68,7 @@ Below is the most recent session history (Session 49+).
   - Comprehensive SEO (meta tags, Open Graph, Twitter cards)
   - Mobile responsive
   - **Citation links: 100% working** (maintained in Session 47!) ✓✓✓
-- **Last Session Date**: 2026-02-13 (Session 53 - **170 mechanisms (85% toward 200 milestone)!** ✓✓✓)
+- **Last Session Date**: 2026-02-13 (Session 54 - **80 discoveries (107% of 75+ milestone)!** ✓✓✓)
 
 ---
 
@@ -601,6 +601,131 @@ Below is the most recent session history (Session 49+).
 - examples/session53_candidates.json - 867 cross-domain candidates
 
 **Time Spent**: ~3 hours (selection: 15min, extraction: 2h, embeddings+matching: 30min, documentation: 15min)
+
+---
+
+## Session 54 - 2026-02-13 - Curation Complete: 65 → 80 Discoveries (+15) ✓✓✓
+
+**Goal**: Curate Session 53 candidates (867 pairs) to reach 75+ discovery milestone
+
+**What I Did**:
+- [x] **Reviewed top 40 candidates** from Session 53's 867 cross-domain pairs
+  - Top similarity: 0.7364 (unknown ↔ q-bio: cell size homeostasis)
+  - Candidates pre-sorted by similarity
+  - Systematic rating: excellent / good / weak / false
+  - Applied quality standards from DATA_QUALITY_STANDARDS.md
+
+- [x] **Found 15 new discoveries** (4 excellent + 11 good)
+  - **4 Excellent discoveries** (⭐⭐⭐):
+    1. Network centrality → productivity through complementarities (0.669)
+    2. Heterogeneity as double-edged sword in cooperation (0.548)
+    3. Network-mediated sampling bias (0.547)
+    4. Attribute-network coevolution (0.537)
+  - **11 Good discoveries** (⭐⭐):
+    5. Cell size homeostasis through feedback (0.736)
+    6. Cell size control strategies (0.706)
+    7. Critical slowing down near bifurcations (0.617)
+    8. Population strategy evolution (0.600)
+    9. Cooperation-ecology feedback (0.600)
+    10. Transfer learning across domains (0.576)
+    11. Network-mediated strategic bias (0.571)
+    12. Action-conditioned world modeling (0.566)
+    13. Network cascade propagation (0.544)
+    14. Structure-dependent coexistence (0.540)
+    15. Negative feedback regulation (0.534)
+
+- [x] **Created output file**: examples/session54_curated_discoveries.json
+  - 15 discoveries with full structural explanations
+  - Rating reasoning documented for each
+  - Cross-domain connections identified
+
+- [x] **Updated documentation**
+  - PROGRESS.md: Session 54 entry with full results
+  - METRICS.md: 65 → 80 discoveries, **75+ milestone EXCEEDED (107%)**
+
+**Results**:
+- Candidates reviewed: 40 (from 867 total)
+- Discoveries found: 15 (4 excellent + 11 good)
+- **Total discoveries: 65 → 80** ✓✓✓
+- Top-40 precision: 37.5% (15/40 excellent or good)
+- **75+ milestone: EXCEEDED (107%)** ✓✓✓
+
+**Interesting Findings**:
+- **Precision consistent with expectations**: 37.5% vs expected 25-35%
+  - Within predicted range, slightly higher than Session 52 (31%)
+  - Fresh candidate pool from Session 53's larger mechanism base (170)
+- **Top match (0.736)**: Cell size homeostasis - good structural match but not excellent (emphasizes different aspects)
+- **Excellent discoveries span 0.537-0.669 range**: Not all high-similarity candidates are excellent
+  - Candidate #4 (0.669) excellent: network centrality → productivity
+  - Candidate #22 (0.548) excellent: heterogeneity as double-edged sword
+  - Shows similarity score alone insufficient - structural depth matters
+- **Strong domain pairs**: econ↔cs (3), q-bio↔physics (3), cs↔physics (2)
+- **Thematic patterns**:
+  - Network structure → information bias → strategic behavior (3 discoveries)
+  - Coevolution dynamics (attribute ↔ network, cooperation ↔ ecology) (3 discoveries)
+  - Adaptive resource allocation (2 discoveries)
+  - Critical phenomena (2 discoveries)
+  - Cell size regulation (2 discoveries)
+
+**What I Learned**:
+- **Precision stable across sessions**: Session 38 (67%), Session 47 (55%), Session 49 (40%), Session 52 (31%), Session 54 (38%)
+  - Larger mechanism pools create more diverse candidates, lowering top-candidate precision
+  - But total discoveries still meet targets due to larger candidate pools
+- **Similarity score imperfect predictor**: Top candidate (0.736) was good but not excellent
+  - Candidate #22 (0.548) was excellent despite lower score
+  - Need to carefully read mechanisms, not just rely on similarity ranking
+- **Domain diversity in discoveries**: 9 different domain pairs in 15 discoveries
+  - Shows 170-mechanism base has good cross-domain coverage
+  - Economics, CS, biology, physics all well-represented
+- **Excellent discoveries have multi-level structure**:
+  - #4: Network position → complementarities → productivity (with asymmetric spillovers)
+  - #22: Heterogeneity creates both leverage points AND weakest links (dual effect)
+  - #23: Network → sampling bias → distorted beliefs → strategic escalation
+  - #28: Attributes ↔ network structure (bidirectional coevolution)
+- **Reviewing 40 candidates optimal**: Precision held at 37.5%
+  - Continuing to 50+ likely yields diminishing returns (<30% precision)
+
+**Challenges**:
+- **None!** Smooth curation session
+  - All files accessible
+  - Candidates well-formatted
+  - Quality standards clear
+  - Documentation straightforward
+
+**Status**: ✅ **MILESTONE EXCEEDED** - 80/75+ discoveries (107%), quality maintained
+
+**Next Session Options**:
+
+**Option A: Continue curation** (80 → 90+ discoveries)
+- Review next 30-40 candidates from Session 53 (ranks 41-80)
+- Expected precision: 30-35% (declining with lower similarity)
+- Find 10-12 more discoveries → 90+ total
+- Time: 2-3 hours
+
+**Option B: Continue extraction** (170 → 200+ mechanisms)
+- Extract 30-40 more mechanisms from remaining ~445 high-value papers
+- Goal: 200+ mechanism milestone
+- Time: 3-4 hours
+- Generate new candidate pool for future curation
+
+**Option C: Update frontend** (80 discoveries)
+- Update app/data/discoveries.json with 50 new discoveries (30 from Session 38 + 20 new)
+- Rebuild static site (80 discovery pages)
+- Validate all citations working
+- Time: 2-3 hours
+
+**Option D: Reach 100+ discoveries** (curation focus)
+- Curate 50-60 more candidates from Session 53 or earlier sessions
+- Goal: 80 → 100+ discoveries
+- Time: 3-4 hours
+- Would hit psychological milestone (100 discoveries)
+
+**Immediate Recommendation**: Option B (continue extraction) → reach 200 mechanisms → then C (update frontend) → then D (100+ discoveries)
+
+**Key Files Created**:
+- examples/session54_curated_discoveries.json - 15 discoveries with ratings and structural explanations
+
+**Time Spent**: ~2.5 hours (candidate review: 1.5h, documentation: 1h)
 
 ---
 

@@ -1,0 +1,189 @@
+{
+  "session": 54,
+  "date": "2026-02-13",
+  "candidates_reviewed": 40,
+  "discoveries_found": 15,
+  "precision": 0.375,
+  "total_discoveries": 80,
+  "excellent_count": 4,
+  "good_count": 11,
+  "milestone_achieved": "75+ discoveries (106.7%)",
+  "discoveries": [
+    {
+      "rank": 1,
+      "rating": "good",
+      "similarity": 0.7364,
+      "domains": ["unknown", "q-bio"],
+      "paper_ids": [525, 540],
+      "mechanism_1": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control.",
+      "mechanism_2": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration.",
+      "structural_explanation": "Both mechanisms describe cell size homeostasis through multi-phase feedback control. Mechanism 1 focuses on control strategy types (sizer/timer/adder) and extrinsic vs intrinsic feedback tradeoffs. Mechanism 2 focuses on the mathematical formulation (stochastically forced harmonic oscillator) and how noise integration shapes observed correlations. Clear structural similarity around feedback-based size regulation with dual control levels.",
+      "cross_domain_connection": "Cell biology (q-bio) ↔ Systems biology: Multi-level feedback control (population vs cell-level) mirrors control theory's hierarchical regulation, showing how biological systems implement coupled control loops at different organizational scales."
+    },
+    {
+      "rank": 3,
+      "rating": "good",
+      "similarity": 0.7064,
+      "domains": ["unknown", "q-bio"],
+      "paper_ids": [525, 530],
+      "mechanism_1": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control.",
+      "mechanism_2": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions.",
+      "structural_explanation": "Both describe cell size control, but from complementary angles. Mechanism 1 emphasizes control strategies (sizer/timer/adder) and extrinsic-intrinsic feedback. Mechanism 2 emphasizes noise sources (growth, division) and how population-level dynamics differ from single-lineage observations. Structural match around multi-source regulation with population effects modulating individual-level control.",
+      "cross_domain_connection": "Cellular homeostasis ↔ Stochastic control theory: Noise compensation through multiple feedback loops, showing how biological systems achieve robustness despite intrinsic stochasticity through hierarchical control architecture."
+    },
+    {
+      "rank": 4,
+      "rating": "excellent",
+      "similarity": 0.6692,
+      "domains": ["unknown", "econ"],
+      "paper_ids": [77, 87],
+      "mechanism_1": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage.",
+      "mechanism_2": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence.",
+      "structural_explanation": "Both mechanisms describe how network centrality determines productivity/innovation through strategic complementarities. Mechanism 1 emphasizes preferential attachment creating feedback (successful innovators → more partners → more innovation). Mechanism 2 adds asymmetric cross-domain spillovers (science → technology but not reverse). Excellent structural isomorphism: network position as productivity determinant through complementarities with connected agents.",
+      "cross_domain_connection": "Innovation networks (firms) ↔ Scientific collaboration (researchers): Network centrality as universal productivity amplifier through complementarities, revealing how position in knowledge networks determines output regardless of domain. The asymmetric cross-domain effect (science → technology) suggests fundamental directionality in knowledge flows."
+    },
+    {
+      "rank": 8,
+      "rating": "good",
+      "similarity": 0.6166,
+      "domains": ["nlin", "physics"],
+      "paper_ids": [917, 153],
+      "mechanism_1": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes.",
+      "mechanism_2": "Markov dynamics combine heterogeneity and asymmetry (broken detailed balance). Heterogeneity parameter controls transition rate variability. Asymmetry parameter controls forward-backward correlation. Critical locus emerges where relaxation times diverge. Entropy production and predictive information depend strongly on heterogeneity but weakly on asymmetry. Near criticality, small heterogeneity changes cause large dynamical shifts.",
+      "structural_explanation": "Both describe critical slowing down: diverging relaxation times near bifurcation/criticality with universal scaling behavior. Mechanism 1 focuses on general bifurcation theory and critical exponents. Mechanism 2 focuses on how heterogeneity and asymmetry parameters create critical loci. Clear structural match around the universal phenomenon of slowing dynamics near phase transitions.",
+      "cross_domain_connection": "Nonlinear dynamics (nlin) ↔ Statistical physics: Critical slowing down as universal warning signal for phase transitions, showing how relaxation time divergence indicates proximity to qualitative regime shifts regardless of system details."
+    },
+    {
+      "rank": 10,
+      "rating": "good",
+      "similarity": 0.6001,
+      "domains": ["q-bio", "physics"],
+      "paper_ids": [457, 369],
+      "mechanism_1": "Three behavioral types interact: conformists benefit from choosing common strategies, nonconformists profit from rare strategies, and imitators copy highest earners. Population proportions fluctuate in finite populations but equilibrate as population size increases. Strategy proportions undergo perpetual oscillations in small populations, but fluctuation amplitudes approach zero in large populations through stochastic averaging.",
+      "mechanism_2": "Strategy distributions evolve through selection (performance-based survival), innovation (mutation), and environmental perturbation (external shocks). Individual agents adapt using local signals while population composition shifts based on relative fitness. Two-layer adaptation - individual learning plus population-level evolution - determines whether strategies persist, collapse, or form coalitions.",
+      "structural_explanation": "Both describe population-level strategy evolution through multi-agent interactions. Mechanism 1 focuses on type-specific payoffs (conformist/nonconformist/imitator) and finite-size oscillations. Mechanism 2 focuses on dual-layer adaptation (individual learning + population evolution) under selection and perturbation. Structural match around evolutionary dynamics where individual behaviors and population composition coevolve.",
+      "cross_domain_connection": "Behavioral ecology (q-bio) ↔ Evolutionary game theory (physics): Population strategy dynamics through type interactions and selection, showing how finite populations exhibit oscillations that vanish in the thermodynamic limit through stochastic averaging."
+    },
+    {
+      "rank": 12,
+      "rating": "good",
+      "similarity": 0.5997,
+      "domains": ["econ", "q-bio"],
+      "paper_ids": [100, 461],
+      "mechanism_1": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback.",
+      "mechanism_2": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation.",
+      "structural_explanation": "Both describe cooperation sustained through behavioral feedback loops. Mechanism 1 focuses on normative group dynamics and behavioral inertia. Mechanism 2 adds environmental/ecological layer: behavior → reputation + resources → payoffs → future behavior. Structural match around multi-level feedback (social + ecological) sustaining cooperation despite changing conditions.",
+      "cross_domain_connection": "Behavioral economics (econ) ↔ Social-ecological systems (q-bio): Cooperation through coupled social-resource dynamics, showing how behavioral feedback loops must integrate both normative (reputation) and material (resource) constraints for sustainability."
+    },
+    {
+      "rank": 13,
+      "rating": "good",
+      "similarity": 0.5757,
+      "domains": ["cs", "q-bio"],
+      "paper_ids": [1425, 117],
+      "mechanism_1": "Feature disentanglement into domain-invariant and domain-specific components mitigates negative transfer in multi-dataset training. Cross-attention fusion adaptively models component interactions. Mutual information optimization maximizes domain-invariant consistency while minimizing domain-specific redundancy. Complementary shared-private representations enable knowledge transfer while preserving dataset-specific discriminability.",
+      "mechanism_2": "Transfer learning with structured graph representations enables few-shot adaptation across related domains by identifying shared interaction principles from well-studied systems and rapidly adapting to new contexts with minimal training data.",
+      "structural_explanation": "Both describe transfer learning across related but distinct domains by separating shared vs domain-specific components. Mechanism 1 uses explicit disentanglement (domain-invariant + domain-specific features) with mutual information optimization. Mechanism 2 uses structured graph representations to identify shared principles. Structural match around the problem: leverage commonalities for transfer while preserving domain-specific distinctiveness.",
+      "cross_domain_connection": "Machine learning (cs) ↔ Biological systems modeling (q-bio): Transfer learning as extraction of domain-invariant principles, showing how knowledge transfer requires explicit separation of shared structure from domain-specific details - a pattern appearing in both artificial and biological learning systems."
+    },
+    {
+      "rank": 14,
+      "rating": "good",
+      "similarity": 0.5714,
+      "domains": ["econ", "cs"],
+      "paper_ids": [199, 2170],
+      "mechanism_1": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments.",
+      "mechanism_2": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce.",
+      "structural_explanation": "Both describe how network structure creates information/perception bias affecting strategic behavior. Mechanism 1: network determines comparison set (which peers you benchmark against). Mechanism 2: network determines observation set (which population sample you see). Structural isomorphism: network topology biases information, creating local perceptions that diverge from global reality, driving strategic behavior based on distorted beliefs.",
+      "cross_domain_connection": "Financial markets (econ) ↔ Strategic reasoning (cs): Network-mediated bias in strategic decisions, showing how local network position systematically distorts perception of the broader system, leading to behavior (risk-taking, strategic escalation) that wouldn't occur with accurate global information."
+    },
+    {
+      "rank": 18,
+      "rating": "good",
+      "similarity": 0.5663,
+      "domains": ["biology", "cs"],
+      "paper_ids": [42, 1500],
+      "mechanism_1": "Action-conditioned sequential prediction enables path integration and dynamic object-location binding for world modeling. Prediction accuracy improves across sequence through in-context learning. Structured representations with flexible binding emerge to support prediction - new bindings learnable late in sequence, out-of-distribution bindings acquirable through sequential exposure.",
+      "mechanism_2": "Continuous latent actions serve as unified proxy actions, enabling interaction knowledge transfer from unlabeled human videos to robot control. World model learns diverse interactions from 44k hours of egocentric video. Post-training on small-scale robot data yields physics understanding and precise action controllability. Generative modeling enables teleoperation, policy evaluation, and planning.",
+      "structural_explanation": "Both describe world models that learn action-conditioned prediction for control. Mechanism 1 focuses on in-context learning of flexible bindings (objects ↔ locations) through sequential prediction. Mechanism 2 focuses on transfer from human video to robot control via latent action representations. Structural match: action-conditioned prediction as substrate for world modeling that enables planning and control through learned dynamics.",
+      "cross_domain_connection": "Neuroscience (biology) ↔ Robotics (cs): Action-conditioned world modeling as universal substrate for intelligent control, showing how prediction of action consequences enables both biological path integration and artificial robot control through learned internal models of environmental dynamics."
+    },
+    {
+      "rank": 22,
+      "rating": "excellent",
+      "similarity": 0.5484,
+      "domains": ["q-bio", "physics"],
+      "paper_ids": [1973, 352],
+      "mechanism_1": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria.",
+      "mechanism_2": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it.",
+      "structural_explanation": "Both describe cooperation dynamics where heterogeneity has dual effects. Mechanism 1: shared resource dilemma with multi-stability and hysteresis between cooperation and free-riding. Mechanism 2: heterogeneity as double-edged sword - structural heterogeneity (hubs with amplified risk) facilitates cooperation, cost heterogeneity (low-risk free-riders) undermines it. Excellent structural isomorphism: heterogeneity creates both leverage points (facilitating cooperation) and weakest links (undermining it), determining system-level outcomes.",
+      "cross_domain_connection": "Social ecology (q-bio) ↔ Network epidemiology (physics): Heterogeneity as double-edged sword in cooperation, revealing how the same structural property (variation in connectivity, costs, risk) can both facilitate and undermine collective action depending on which dimension varies. Hub nodes as leverage points vs low-cost free-riders as weakest links."
+    },
+    {
+      "rank": 23,
+      "rating": "excellent",
+      "similarity": 0.5468,
+      "domains": ["physics", "cs"],
+      "paper_ids": [2044, 2170],
+      "mechanism_1": "Higher-order network structure (beyond pairwise) shapes imitation dynamics through group-dependent adoption rates. Information diversity achieved through structured sampling from local neighborhoods. Adoption probability depends on group composition and size, not just neighbor count. Network hypergraph structure determines equilibrium strategy distributions through sampling bias.",
+      "mechanism_2": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce.",
+      "structural_explanation": "Both describe how network structure creates sampling bias affecting behavior/strategy. Mechanism 1: higher-order structure (hypergraphs) creates group-dependent adoption through biased sampling of local neighborhoods. Mechanism 2: local network position creates biased observation of global population. Excellent structural isomorphism: network-mediated sampling bias → distorted information → strategic behavior diverging from what unbiased global information would produce.",
+      "cross_domain_connection": "Network science (physics) ↔ Game theory (cs): Network-mediated sampling bias as systematic distortion mechanism, showing how local position determines what information agents access, creating population-level dynamics (adoption cascades, strategic escalation) driven by structurally biased beliefs rather than accurate global state."
+    },
+    {
+      "rank": 24,
+      "rating": "good",
+      "similarity": 0.5443,
+      "domains": ["econ", "cs"],
+      "paper_ids": [814, 1943],
+      "mechanism_1": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system.",
+      "mechanism_2": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties.",
+      "structural_explanation": "Both describe cascade propagation through networks where topology determines spread dynamics. Mechanism 1: token dependencies carry shocks causing contagion, network structure determines cascade extent and path. Mechanism 2: seed node position determines damage progression, local topology amplifies or dampens spread. Structural match: network topology as critical determinant of cascade dynamics, with local structure (seed position, connectivity) controlling propagation rather than global averages.",
+      "cross_domain_connection": "Economic networks (econ) ↔ Infrastructure networks (cs): Cascade propagation where local topology trumps global statistics, showing how seed node position and local connectivity determine whether localized shocks cascade system-wide or remain contained."
+    },
+    {
+      "rank": 26,
+      "rating": "good",
+      "similarity": 0.5401,
+      "domains": ["q-bio", "physics"],
+      "paper_ids": [1970, 168],
+      "mechanism_1": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel.",
+      "mechanism_2": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently.",
+      "structural_explanation": "Both describe coexistence mechanisms where network/spatial structure is critical. Mechanism 1: dispersal network + heterogeneity threshold enable stable coexistence; homogeneity requires fine-tuning. Mechanism 2: chemical network + high-dimensional chaos enable coexistence through intermittent switching. Structural match: network topology determines whether multiple species can coexist, with heterogeneity/complexity creating attractors that support persistence beyond what simple competitive exclusion would allow.",
+      "cross_domain_connection": "Spatial ecology (q-bio) ↔ Network dynamics (physics): Structure-dependent coexistence, showing how network topology (dispersal, metabolic) determines whether competitive exclusion occurs or multiple species persist, with heterogeneity/chaos creating complex attractors supporting diversity."
+    },
+    {
+      "rank": 28,
+      "rating": "excellent",
+      "similarity": 0.5369,
+      "domains": ["cs", "physics"],
+      "paper_ids": [644, 354],
+      "mechanism_1": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes.",
+      "mechanism_2": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability.",
+      "structural_explanation": "Both describe bidirectional feedback between network structure and node attributes. Mechanism 1: semantic network topology ↔ ideation (lower overlap → larger gains, creating feedback between individual structure and collective outcomes). Mechanism 2: opinions ↔ network edges (opinion similarity → stronger connections → amplified influence → opinion convergence). Excellent structural isomorphism: attribute-network coevolution where node properties shape connections and connection patterns shape node properties through coupled dynamics.",
+      "cross_domain_connection": "Cognitive networks (cs) ↔ Social opinion dynamics (physics): Attribute-network coevolution as universal pattern, showing how node properties (ideas, opinions) and network structure mutually reinforce through bidirectional feedback, creating emergent stability or instability depending on interaction function form."
+    },
+    {
+      "rank": 30,
+      "rating": "good",
+      "similarity": 0.5344,
+      "domains": ["unknown", "econ"],
+      "paper_ids": [451, 194],
+      "mechanism_1": "Resource stock accumulates from production flow. Exploitation (flow out) versus conservation (stock maintenance) tradeoff. Maximum sustainable yield occurs at intermediate stock level. Over-exploitation depletes stock below replenishment threshold causing collapse.",
+      "mechanism_2": "Funding rates in perpetual futures impose economic costs on leveraged positions. High funding creates pressure to reduce directional exposure. Capital rebalancing occurs when funding costs exceed expected returns. Funding mechanisms act as negative feedback regulating trader behavior - extreme positions become economically unsustainable, creating mean-reverting pressure that defines trading ranges.",
+      "structural_explanation": "Both describe negative feedback mechanisms preventing unsustainable extremes. Mechanism 1: resource exploitation creates depletion feedback (over-exploitation → stock collapse → forced reduction). Mechanism 2: leverage creates cost feedback (extreme positions → high funding costs → rebalancing → mean reversion). Structural match: economic feedback loops that regulate behavior by making extreme states economically unsustainable, preventing runaway dynamics through automatic stabilization.",
+      "cross_domain_connection": "Resource economics (unknown) ↔ Financial markets (econ): Negative feedback as stabilization mechanism, showing how systems self-regulate through automatic cost increases at extremes (resource depletion, funding costs) that force behavioral adjustment before collapse."
+    },
+    {
+      "rank": 35,
+      "rating": "good",
+      "similarity": 0.5275,
+      "domains": ["stat", "cs"],
+      "paper_ids": [1540, 1565],
+      "mechanism_1": "Phase transition in optimal strategy based on task difficulty regime. System exhibits qualitatively different behaviors (power decay vs warmup-stable-decay) separated by sharp threshold determined by ratio of signal learning rate to noise forgetting capacity. Easy-task regime benefits from gradual decay, hard-task regime requires maintaining peak resources until near completion.",
+      "mechanism_2": "Dual-signal adaptive resource allocation using entropy as proxy for learning value. Global level: relative entropy change identifies high-value samples for prioritized exploration. Local level: absolute entropy peaks identify critical moments within each trajectory. Concentrates computation where information gain is highest rather than uniform distribution.",
+      "structural_explanation": "Both describe learned adaptive resource allocation strategies. Mechanism 1: task difficulty creates phase transition in optimal strategy (gradual decay vs maintain-then-drop), threshold based on signal-to-noise ratio. Mechanism 2: entropy-based dual-signal allocation concentrates resources where information gain is highest (global: high-value samples, local: critical moments). Structural match: adaptive allocation based on informativeness/difficulty, with system learning to concentrate resources where they provide maximum learning value rather than distributing uniformly.",
+      "cross_domain_connection": "Statistical learning (stat) ↔ Reinforcement learning (cs): Learned resource allocation based on informativeness, showing how systems optimize computation by concentrating effort where information gain is highest, with phase transitions in optimal strategy based on task difficulty regime."
+    }
+  ]
+}

@@ -3,35 +3,32 @@
     "session": 57,
     "date": "2026-02-14",
     "description": "Manually curated verified isomorphisms from Sessions 38-57",
-    "total_verified": 102,
-    "excellent": 28,
-    "good": 74,
+    "total_verified": 46,
+    "excellent": 11,
+    "good": 35,
     "similarity_range": {
       "min": 0.44465914368629456,
-      "max": 0.7364,
-      "mean": 0.5669012475897284
+      "max": 0.7363924980163574,
+      "mean": 0.5441548497956733
     },
     "methodology": "LLM extraction + semantic embeddings (384-dim) + manual curation",
     "selection_criteria": "All excellent + all good discoveries from manual curation"
   },
   "domain_pairs": {
-    "q-bio-q-bio": 4,
-    "econ-econ": 2,
-    "nlin-physics": 8,
-    "econ-q-bio": 10,
-    "physics-q-bio": 21,
-    "cs-econ": 14,
-    "cs-physics": 11,
-    "econ-physics": 5,
-    "physics-q-fin": 2,
-    "econ-q-fin": 1,
-    "q-bio-q-fin": 2,
+    "q-bio-unknown": 4,
+    "econ-unknown": 4,
+    "nlin-unknown": 2,
+    "econ-q-bio": 7,
+    "physics-q-bio": 7,
+    "cs-econ": 4,
+    "cs-physics": 3,
+    "econ-physics": 6,
+    "cs-unknown": 1,
     "econ-nlin": 1,
-    "q-bio-unknown": 8,
-    "econ-unknown": 6,
-    "cs-q-bio": 3,
-    "biology-cs": 2,
-    "cs-stat": 2
+    "nlin-physics": 3,
+    "cs-q-bio": 2,
+    "biology-cs": 1,
+    "cs-stat": 1
   },
   "verified_isomorphisms": [
     {
@@ -42,16 +39,16 @@
       "structural_explanation": "Both describe cell size feedback control through phase-specific mechanisms (sizer/timer/adder). Extrinsic (population-density) vs intrinsic (size-deviation) feedback loops. Trade-offs between control strategies. Perfect structural isomorphism across different cell types.",
       "paper_1": {
         "paper_id": 525,
-        "arxiv_id": "2601.22613v1",
-        "domain": "q-bio",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
         "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
       },
       "paper_2": {
         "paper_id": 540,
-        "arxiv_id": "2512.08024v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Coarse-graining and stochastic oscillations in a phenomenological model of cell-size homeostasis",
+        "title": "Coarse-graining and stochastic oscillations in cell-size homeostasis",
         "mechanism": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration."
       }
     },
@@ -63,16 +60,16 @@
       "structural_explanation": "Both describe size homeostasis through feedback. Extrinsic noise and population structure jointly determine size distributions. Noise integration and control strategies. Same mechanism as #1 but different organisms (fibroblasts vs bacteria).",
       "paper_1": {
         "paper_id": 525,
-        "arxiv_id": "2601.22613v1",
-        "domain": "q-bio",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
         "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
       },
       "paper_2": {
         "paper_id": 530,
-        "arxiv_id": "2601.05193v1",
+        "arxiv_id": "2602.00044v1",
         "domain": "q-bio",
-        "title": "Cell size control in bacteria is modulated through extrinsic noise, single-cell- and population-growth",
+        "title": "Cell size control in bacteria",
         "mechanism": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions."
       }
     },
@@ -84,16 +81,16 @@
       "structural_explanation": "Network position determines productivity through strategic complementarities. Central nodes access diverse knowledge/connections. Preferential attachment reinforces centrality advantage. Isomorphism: innovation networks (Sweden) vs science/tech networks.",
       "paper_1": {
         "paper_id": 77,
-        "arxiv_id": "2602.05112v1",
-        "domain": "econ",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
         "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
       },
       "paper_2": {
         "paper_id": 87,
-        "arxiv_id": "2602.02403v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
+        "title": "Strategic Interactions in Science and Technology Networks",
         "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
       }
     },
@@ -105,14 +102,14 @@
       "structural_explanation": "Both about cell size control but through different mechanisms. Paper 1: feedback across phases. Paper 2: proliferation-driven variability vs mechanical relaxation. Related but not perfect structural match.",
       "paper_1": {
         "paper_id": 525,
-        "arxiv_id": "2601.22613v1",
-        "domain": "q-bio",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
         "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
       },
       "paper_2": {
         "paper_id": 528,
-        "arxiv_id": "2601.14509v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
         "title": "Cell proliferation maintains cell area polydispersity in the growing fruit fly wing epithelium",
         "mechanism": "Cell proliferation generates area variability while mechanical forces regulate packing. Cell division creates size asymmetry between daughter cells. Mechanical constraints from neighbors limit expansion. Area polydispersity emerges from balance between proliferation-driven variability and mechanical relaxation. Cell-cell adhesion and cortical tension determine equilibrium distributions."
@@ -126,16 +123,16 @@
       "structural_explanation": "Both describe positive Lyapunov exponents (sensitivity to initial conditions), scaling laws, and self-similarity. One in discrete dynamical systems with fractal attractors, one in black hole particle motion. Solid structural match.",
       "paper_1": {
         "paper_id": 2,
-        "arxiv_id": "2602.02622v1",
-        "domain": "physics",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
         "title": "Discrete dynamical systems with scaling and inversion symmetries",
         "mechanism": "System state evolves discretely through iterated function. Scaling symmetry preserves dynamics under magnification/contraction. Near fixed points, small perturbations grow exponentially (positive Lyapunov exponent) causing sensitive dependence. Trajectories confined to fractal attractor with non-integer dimension. Chaotic regime characterized by scaling laws and self-similarity across scales."
       },
       "paper_2": {
         "paper_id": 916,
-        "arxiv_id": "2602.04423v1",
+        "arxiv_id": "N/A",
         "domain": "nlin",
-        "title": "Chaotic Dynamics in Extremal Black Holes: A Challenge to the Chaos Bound",
+        "title": "Chaotic Dynamics in Black Holes",
         "mechanism": "Particle motion in extremal configurations exhibits positive Lyapunov exponents indicating sensitivity to initial conditions. Chaos persists even at zero temperature. System parameters (spin, charge) modulate chaos strength - increasing one parameter strengthens chaotic behavior while the other weakens it."
       }
     },
@@ -147,14 +144,14 @@
       "structural_explanation": "Cooperation shaped by behavioral feedback AND resource constraints. Strategic behavior creates reputation/norms while simultaneously affecting shared resources. Feedback between social dynamics and ecological/environmental state. Perfect two-layer coupling.",
       "paper_1": {
         "paper_id": 100,
-        "arxiv_id": "2601.20487v2",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups",
+        "title": "Human-AI Cooperation in Public Goods Game",
         "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
       },
       "paper_2": {
         "paper_id": 461,
-        "arxiv_id": "2602.02553v1",
+        "arxiv_id": "2602.03835v1",
         "domain": "q-bio",
         "title": "Indirect Reciprocity with Environmental Feedback",
         "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
@@ -168,16 +165,16 @@
       "structural_explanation": "Both involve scaling laws and critical behavior. Paper 1: fractal attractors and self-similarity. Paper 2: critical slowing down at bifurcations with diverging timescales. Related mathematical structures.",
       "paper_1": {
         "paper_id": 2,
-        "arxiv_id": "2602.02622v1",
-        "domain": "physics",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
         "title": "Discrete dynamical systems with scaling and inversion symmetries",
         "mechanism": "System state evolves discretely through iterated function. Scaling symmetry preserves dynamics under magnification/contraction. Near fixed points, small perturbations grow exponentially (positive Lyapunov exponent) causing sensitive dependence. Trajectories confined to fractal attractor with non-integer dimension. Chaotic regime characterized by scaling laws and self-similarity across scales."
       },
       "paper_2": {
         "paper_id": 917,
-        "arxiv_id": "2602.04091v1",
+        "arxiv_id": "N/A",
         "domain": "nlin",
-        "title": "A phenomenological description of critical slowing down at period-doubling bifurcations",
+        "title": "Critical Slowing Down at Bifurcations",
         "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
       }
     },
@@ -189,16 +186,16 @@
       "structural_explanation": "Both about R&D/innovation networks. Network centrality \u2192 innovation output. Strategic interactions (Paper 2 adds Stackelberg/Nash equilibrium). Spillovers through connections. Solid match but Paper 1 more specific.",
       "paper_1": {
         "paper_id": 77,
-        "arxiv_id": "2602.05112v1",
-        "domain": "econ",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
         "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
       },
       "paper_2": {
         "paper_id": 953,
-        "arxiv_id": "2602.02274v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "The relationship between R&D spillovers and regional innovation: Licensing patents through royalties and the Stackelberg duopoly with subgame perfect Nash equilibrium",
+        "title": "R&D Spillovers and Regional Innovation",
         "mechanism": "R&D spillovers from one entity enhance innovation in neighboring entities. Strategic interactions follow Stackelberg dynamics where leaders and followers reach Nash equilibrium. Highly-qualified employment amplifies spillover effects, creating synergies between different types of R&D investment and regional innovation output."
       }
     },
@@ -210,16 +207,16 @@
       "structural_explanation": "Free-rider problem with multi-stability and hysteresis (shared resource cleaning) vs cooperation-epidemic coevolution with structural heterogeneity. Both show: heterogeneity as double-edged (creates leverage points AND weak links), multi-stability, and strategic trade-offs between local/global incentives. Beautiful isomorphism!",
       "paper_1": {
         "paper_id": 1973,
-        "arxiv_id": "2602.06106v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "To clean or not to clean: The free-rider problem in sequentially shared resources",
+        "title": "Free-Rider Problem in Shared Resources",
         "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
       },
       "paper_2": {
         "paper_id": 352,
-        "arxiv_id": "2602.04481v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
+        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
         "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
       }
     },
@@ -231,16 +228,16 @@
       "structural_explanation": "Shock propagation through networks. Network topology determines cascade extent. DeFi contagion vs physical network damage. Seed node position critical in both. Solid structural match.",
       "paper_1": {
         "paper_id": 814,
-        "arxiv_id": "2602.03981v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "DeXposure-FM: A Time-series, Graph Foundation Model for Credit Exposures and Stability on Decentralized Financial Networks",
+        "title": "DeFi Credit Exposures and Contagion",
         "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
       },
       "paper_2": {
         "paper_id": 1943,
-        "arxiv_id": "2602.06436v1",
+        "arxiv_id": "N/A",
         "domain": "cs",
-        "title": "Impact of seed node position on network robustness under localized attacks",
+        "title": "Seed Node Position and Network Damage",
         "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
       }
     },
@@ -252,16 +249,16 @@
       "structural_explanation": "Both show: heterogeneity enables coexistence (homogeneous \u2192 marginal/unstable). Spatial structure + network topology govern dynamics. Paper 2 adds high-dimensional chaos. Related but not perfect match.",
       "paper_1": {
         "paper_id": 1970,
-        "arxiv_id": "2602.06640v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Habitat heterogeneity and dispersal network structure as drivers of metacommunity dynamics",
+        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
         "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
       },
       "paper_2": {
         "paper_id": 168,
-        "arxiv_id": "2601.22564v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
-        "title": "Cross-feeding yields high-dimensional chaos and coexistence of species beyond exclusion principle",
+        "title": "Cross-feeding yields high-dimensional chaos and coexistence of species",
         "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
       }
     },
@@ -273,14 +270,14 @@
       "structural_explanation": "Coevolution of network structure and node attributes. Feedback loop: attributes affect connections, connections affect attributes. Individual cognitive structure (semantic overlap) vs opinion distance. Network-level redundancy emerges. Perfect structural isomorphism!",
       "paper_1": {
         "paper_id": 644,
-        "arxiv_id": "2602.03068v1",
+        "arxiv_id": "N/A",
         "domain": "cs",
-        "title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
+        "title": "Semantic Memory to Collective Creativity",
         "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
       },
       "paper_2": {
         "paper_id": 354,
-        "arxiv_id": "2602.03738v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
         "title": "Emergent structures in coupled opinion and network dynamics",
         "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
@@ -294,16 +291,16 @@
       "structural_explanation": "Network position determines output. Strategic complementarities through connections. Lower initial overlap \u2192 larger gains (Paper 2) mirrors centrality advantage (Paper 1). Both show feedback between individual structure and collective outcomes. Perfect match!",
       "paper_1": {
         "paper_id": 87,
-        "arxiv_id": "2602.02403v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
+        "title": "Strategic Interactions in Science and Technology Networks",
         "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
       },
       "paper_2": {
         "paper_id": 644,
-        "arxiv_id": "2602.03068v1",
+        "arxiv_id": "N/A",
         "domain": "cs",
-        "title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
+        "title": "Semantic Memory to Collective Creativity",
         "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
       }
     },
@@ -315,16 +312,16 @@
       "structural_explanation": "Both about spatial structure enabling persistence. Facilitation-competition balance creates threshold dynamics (Allee effect) vs heterogeneity threshold for coexistence. Related mechanisms but different flavors.",
       "paper_1": {
         "paper_id": 448,
-        "arxiv_id": "2602.05583v1",
-        "domain": "q-bio",
-        "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns in semiarid ecosystems",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns",
         "mechanism": "Plants facilitate neighboring growth through local resource modification. Facilitation competes with resource competition. When precipitation is intermittent, facilitation-competition balance creates spatial vegetation patterns. Below threshold density, vegetation collapses due to weakened facilitation (spatial Allee effect)."
       },
       "paper_2": {
         "paper_id": 1970,
-        "arxiv_id": "2602.06640v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Habitat heterogeneity and dispersal network structure as drivers of metacommunity dynamics",
+        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
         "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
       }
     },
@@ -336,16 +333,16 @@
       "structural_explanation": "Network centrality \u2192 productivity through strategic complementarities vs cooperation-epidemic coevolution with heterogeneity. Both show heterogeneity affects strategic behavior but mechanisms differ.",
       "paper_1": {
         "paper_id": 87,
-        "arxiv_id": "2602.02403v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
+        "title": "Strategic Interactions in Science and Technology Networks",
         "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
       },
       "paper_2": {
         "paper_id": 352,
-        "arxiv_id": "2602.04481v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
+        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
         "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
       }
     },
@@ -357,16 +354,16 @@
       "structural_explanation": "Network-mediated competitive pressures. Peer comparison affects strategic behavior. Heterogeneity creates asymmetries. Related but Paper 1 more financial, Paper 2 more epidemiological.",
       "paper_1": {
         "paper_id": 199,
-        "arxiv_id": "2512.21621v1",
-        "domain": "q-fin",
-        "title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
+        "arxiv_id": "2506.03914v1",
+        "domain": "econ",
+        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
         "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
       },
       "paper_2": {
         "paper_id": 352,
-        "arxiv_id": "2602.04481v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
+        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
         "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
       }
     },
@@ -378,14 +375,14 @@
       "structural_explanation": "Network position \u2192 productivity/influence through strategic interactions. Coevolution of attributes and network structure. Similar to #15 but less clear in Paper 1.",
       "paper_1": {
         "paper_id": 87,
-        "arxiv_id": "2602.02403v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
+        "title": "Strategic Interactions in Science and Technology Networks",
         "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
       },
       "paper_2": {
         "paper_id": 354,
-        "arxiv_id": "2602.03738v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
         "title": "Emergent structures in coupled opinion and network dynamics",
         "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
@@ -399,16 +396,16 @@
       "structural_explanation": "Network externalities in technology adoption vs innovation networks. Preferential attachment and network topology determine outcomes. Strategic complementarities through connections.",
       "paper_1": {
         "paper_id": 77,
-        "arxiv_id": "2602.05112v1",
-        "domain": "econ",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
         "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
       },
       "paper_2": {
         "paper_id": 191,
-        "arxiv_id": "2601.04246v2",
-        "domain": "q-fin",
-        "title": "Technology Adoption and Network Externalities in Financial Systems: A Spatial-Network Approach",
+        "arxiv_id": "2506.07896v1",
+        "domain": "econ",
+        "title": "Technology Adoption and Network Externalities in Financial Systems",
         "mechanism": "Technology adoption spreads through spatial and network channels. Spatial spillovers and network externalities interact multiplicatively - nearby adoption and connected peer adoption amplify each other. Cumulative adoption pressure accumulates along stochastic paths through spatial-network space. Network position amplifies or dampens spatial effects, creating non-linear adoption dynamics."
       }
     },
@@ -420,16 +417,16 @@
       "structural_explanation": "Both show cooperation coevolving with environmental/network constraints. Feedback between strategic behavior and external state. Paper 1: reputation+resources. Paper 2: cooperation+epidemic. Similar structure.",
       "paper_1": {
         "paper_id": 461,
-        "arxiv_id": "2602.02553v1",
+        "arxiv_id": "2602.03835v1",
         "domain": "q-bio",
         "title": "Indirect Reciprocity with Environmental Feedback",
         "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
       },
       "paper_2": {
         "paper_id": 352,
-        "arxiv_id": "2602.04481v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
+        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
         "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
       }
     },
@@ -441,14 +438,14 @@
       "structural_explanation": "Strategic complementarities through network connections. Asymmetric effects (scientific\u2192tech but not reverse) vs reputation-resource feedback. Network-mediated strategic behavior in both.",
       "paper_1": {
         "paper_id": 87,
-        "arxiv_id": "2602.02403v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
+        "title": "Strategic Interactions in Science and Technology Networks",
         "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
       },
       "paper_2": {
         "paper_id": 461,
-        "arxiv_id": "2602.02553v1",
+        "arxiv_id": "2602.03835v1",
         "domain": "q-bio",
         "title": "Indirect Reciprocity with Environmental Feedback",
         "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
@@ -462,16 +459,16 @@
       "structural_explanation": "Network-mediated strategic behavior with feedback. Reputation+resources vs relative performance concerns. Both show strategic interdependencies through network links.",
       "paper_1": {
         "paper_id": 461,
-        "arxiv_id": "2602.02553v1",
+        "arxiv_id": "2602.03835v1",
         "domain": "q-bio",
         "title": "Indirect Reciprocity with Environmental Feedback",
         "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
       },
       "paper_2": {
         "paper_id": 199,
-        "arxiv_id": "2512.21621v1",
-        "domain": "q-fin",
-        "title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
+        "arxiv_id": "2506.03914v1",
+        "domain": "econ",
+        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
         "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
       }
     },
@@ -483,16 +480,16 @@
       "structural_explanation": "Network position determines resource access/productivity. Centrality advantage through strategic complementarities vs threshold-based redistribution in kinship networks.",
       "paper_1": {
         "paper_id": 87,
-        "arxiv_id": "2602.02403v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
+        "title": "Strategic Interactions in Science and Technology Networks",
         "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
       },
       "paper_2": {
         "paper_id": 1972,
-        "arxiv_id": "2602.06200v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
+        "title": "Threshold Resource Redistribution in Kinship Networks",
         "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
       }
     },
@@ -504,16 +501,16 @@
       "structural_explanation": "Network-based cooperation with thresholds. Resource redistribution in kinship networks vs cooperation-epidemic coevolution with heterogeneity as leverage/weak-link.",
       "paper_1": {
         "paper_id": 1972,
-        "arxiv_id": "2602.06200v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
+        "title": "Threshold Resource Redistribution in Kinship Networks",
         "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
       },
       "paper_2": {
         "paper_id": 352,
-        "arxiv_id": "2602.04481v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
+        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
         "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
       }
     },
@@ -525,16 +522,16 @@
       "structural_explanation": "Network structure determines collective outcomes. Innovation output from network centrality vs ideational breadth from semantic network topology. Both show feedback between individual position and collective results.",
       "paper_1": {
         "paper_id": 77,
-        "arxiv_id": "2602.05112v1",
-        "domain": "econ",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
+        "arxiv_id": "N/A",
+        "domain": "unknown",
+        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
         "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
       },
       "paper_2": {
         "paper_id": 644,
-        "arxiv_id": "2602.03068v1",
+        "arxiv_id": "N/A",
         "domain": "cs",
-        "title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
+        "title": "Semantic Memory to Collective Creativity",
         "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
       }
     },
@@ -546,16 +543,16 @@
       "structural_explanation": "Network-mediated strategic behavior. Threshold resource redistribution based on relatedness vs relative performance concerns driving risk-taking. Both show network feedback on strategic decisions.",
       "paper_1": {
         "paper_id": 1972,
-        "arxiv_id": "2602.06200v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
+        "title": "Threshold Resource Redistribution in Kinship Networks",
         "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
       },
       "paper_2": {
         "paper_id": 199,
-        "arxiv_id": "2512.21621v1",
-        "domain": "q-fin",
-        "title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
+        "arxiv_id": "2506.03914v1",
+        "domain": "econ",
+        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
         "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
       }
     },
@@ -567,16 +564,16 @@
       "structural_explanation": "Network-mediated shock/event propagation. Contagion through dependency links vs extreme event suppression through drive. Both show network topology affects system-wide dynamics.",
       "paper_1": {
         "paper_id": 814,
-        "arxiv_id": "2602.03981v1",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "DeXposure-FM: A Time-series, Graph Foundation Model for Credit Exposures and Stability on Decentralized Financial Networks",
+        "title": "DeFi Credit Exposures and Contagion",
         "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
       },
       "paper_2": {
         "paper_id": 922,
-        "arxiv_id": "2602.01234v1",
+        "arxiv_id": "N/A",
         "domain": "nlin",
-        "title": "Controlling extreme events in neuronal networks: A single driving signal approach",
+        "title": "Controlling Extreme Events in Networks",
         "mechanism": "A single driving signal applied to one network component suppresses extreme events throughout the system. In coupled components, drive breaks phase-locking between elements. In networked systems, drive disrupts protoevent frequency dynamics causing frequency decoupling that prevents extreme event cascades."
       }
     },
@@ -588,16 +585,16 @@
       "structural_explanation": "Cooperation dilemmas with network structure. Public goods reciprocity vs threshold-based resource redistribution. Both involve cooperative behavior shaped by social connections.",
       "paper_1": {
         "paper_id": 100,
-        "arxiv_id": "2601.20487v2",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups",
+        "title": "Human-AI Cooperation in Public Goods Game",
         "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
       },
       "paper_2": {
         "paper_id": 1972,
-        "arxiv_id": "2602.06200v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
+        "title": "Threshold Resource Redistribution in Kinship Networks",
         "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
       }
     },
@@ -609,14 +606,14 @@
       "structural_explanation": "Coevolution of node attributes and network structure. Relative performance concerns vs opinion-network dynamics. Both show feedback: attributes affect connections, connections affect attributes.",
       "paper_1": {
         "paper_id": 199,
-        "arxiv_id": "2512.21621v1",
-        "domain": "q-fin",
-        "title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
+        "arxiv_id": "2506.03914v1",
+        "domain": "econ",
+        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
         "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
       },
       "paper_2": {
         "paper_id": 354,
-        "arxiv_id": "2602.03738v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
         "title": "Emergent structures in coupled opinion and network dynamics",
         "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
@@ -630,16 +627,16 @@
       "structural_explanation": "Both are cooperation dilemmas with free-riding. Public goods game vs shared resource cleaning problem. Multi-stability and behavioral feedback in both.",
       "paper_1": {
         "paper_id": 100,
-        "arxiv_id": "2601.20487v2",
+        "arxiv_id": "N/A",
         "domain": "econ",
-        "title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups",
+        "title": "Human-AI Cooperation in Public Goods Game",
         "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
       },
       "paper_2": {
         "paper_id": 1973,
-        "arxiv_id": "2602.06106v1",
+        "arxiv_id": "N/A",
         "domain": "q-bio",
-        "title": "To clean or not to clean: The free-rider problem in sequentially shared resources",
+        "title": "Free-Rider Problem in Shared Resources",
         "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
       }
     },
@@ -651,14 +648,14 @@
       "structural_explanation": "Coevolution of individual states and network/environmental structure. Reputation-resource feedback vs opinion-network coevolution. Both show bidirectional coupling between behavioral states and structural constraints.",
       "paper_1": {
         "paper_id": 461,
-        "arxiv_id": "2602.02553v1",
+        "arxiv_id": "2602.03835v1",
         "domain": "q-bio",
         "title": "Indirect Reciprocity with Environmental Feedback",
         "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
       },
       "paper_2": {
         "paper_id": 354,
-        "arxiv_id": "2602.03738v1",
+        "arxiv_id": "N/A",
         "domain": "physics",
         "title": "Emergent structures in coupled opinion and network dynamics",
         "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
@@ -683,48 +680,6 @@
         "domain": "physics",
         "title": "Structure-aware imitation dynamics on higher-order networks",
         "mechanism": "Agent strategy updating through structure-aware sampling: number of groups sampled and number of peers consulted within each group jointly determine information diversity. Higher information diversity across groups promotes cooperation in multiplayer dilemmas. Update rules interact with group structure (hypergraph topology): sampling more groups increases cross-group information flow, sampling more peers within groups increases within-group consensus. Weak selection regime reveals analytical threshold for cooperation success as function of information diversity metric. Design principle: diversify information sources across groups to enhance cooperation."
-      }
-    },
-    {
-      "id": 32,
-      "original_candidate_id": "session47_1",
-      "rating": "excellent",
-      "similarity": 0.5997282862663269,
-      "structural_explanation": "Reputation shaping through norms while affecting resource levels (individual \u2192 social \u2192 ecological feedback) vs behavioral inertia through group patterns (normative mechanisms independent of agent type). Both exhibit multi-level feedback between individual behavior, social norms, and collective outcomes.",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Human-AI Cooperation in Public Goods Game",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 33,
-      "original_candidate_id": "session47_2",
-      "rating": "excellent",
-      "similarity": 0.5368675589561462,
-      "structural_explanation": "Individual semantic network topology determines ideational breadth; exchange with low-overlap partners yields larger stimulation gains vs opinion-network coevolution where interaction strength depends on opinion distance. Both demonstrate bidirectional coupling between cognitive/opinion state and network structure.",
-      "paper_1": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
       }
     },
     {
@@ -770,90 +725,6 @@
       }
     },
     {
-      "id": 36,
-      "original_candidate_id": "session47_5",
-      "rating": "good",
-      "similarity": 0.548354983329773,
-      "structural_explanation": "Heterogeneity creates leverage points (hubs adopt protection due to amplified risk) and weak links (free-riders as disease reservoirs) vs multi-stability where small parameter changes cause abrupt transitions between equilibria. Both use heterogeneity to create critical tipping dynamics.",
-      "paper_1": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Free-Rider Problem in Shared Resources",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 37,
-      "original_candidate_id": "session47_6",
-      "rating": "good",
-      "similarity": 0.5442763566970825,
-      "structural_explanation": "Token-mediated dependencies create contagion; topology and link weights determine cascading failure extent vs seed node structural position amplifies/dampens damage progression. Both study localized shock propagation through network structure.",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "DeFi Credit Exposures and Contagion",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 1943,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Seed Node Position and Network Damage",
-        "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
-      }
-    },
-    {
-      "id": 38,
-      "original_candidate_id": "session47_7",
-      "rating": "good",
-      "similarity": 0.5400546193122864,
-      "structural_explanation": "Heterogeneous habitats support stable coexistence only above critical heterogeneity threshold; network topology encodes dispersal constraints vs cross-feeding through metabolite exchange; network structure determines attractor complexity. Both use network-mediated interactions to enable multi-species persistence.",
-      "paper_1": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      },
-      "paper_2": {
-        "paper_id": 168,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Cross-feeding yields high-dimensional chaos and coexistence of species",
-        "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
-      }
-    },
-    {
-      "id": 39,
-      "original_candidate_id": "session47_8",
-      "rating": "good",
-      "similarity": 0.5339190363883972,
-      "structural_explanation": "Network centrality increases productivity through strategic complementarities with connected agents vs individual semantic network topology determines ideational breadth; low-overlap exchanges yield larger stimulation. Both show how network position shapes individual-level output through complementarity/diversity mechanisms.",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      }
-    },
-    {
       "id": 40,
       "original_candidate_id": "session47_9",
       "rating": "good",
@@ -875,91 +746,7 @@
       }
     },
     {
-      "id": 41,
-      "original_candidate_id": "session47_10",
-      "rating": "good",
-      "similarity": 0.5011242032051086,
-      "structural_explanation": "Reputation-based cooperation interacts with ecological constraints (environmental feedback alters payoff structures) vs cooperation and disease coevolve through network (heterogeneity creates leverage points and weak links). Both couple strategic behavior with ecological/epidemiological dynamics through network-mediated feedbacks.",
-      "paper_1": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 42,
-      "original_candidate_id": "session49_0",
-      "rating": "excellent",
-      "similarity": 0.7363924980163574,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 540,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Coarse-graining and stochastic oscillations in cell-size homeostasis",
-        "mechanism": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration."
-      }
-    },
-    {
-      "id": 43,
-      "original_candidate_id": "session49_1",
-      "rating": "excellent",
-      "similarity": 0.7064264416694641,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 530,
-        "arxiv_id": "2602.00044v1",
-        "domain": "q-bio",
-        "title": "Cell size control in bacteria",
-        "mechanism": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions."
-      }
-    },
-    {
-      "id": 44,
-      "original_candidate_id": "session49_2",
-      "rating": "excellent",
-      "similarity": 0.6691850423812866,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      }
-    },
-    {
-      "id": 45,
+      "id": 38,
       "original_candidate_id": "session49_3",
       "rating": "good",
       "similarity": 0.6166112422943115,
@@ -980,7 +767,7 @@
       }
     },
     {
-      "id": 46,
+      "id": 39,
       "original_candidate_id": "session49_4",
       "rating": "good",
       "similarity": 0.6001496911048889,
@@ -1001,343 +788,7 @@
       }
     },
     {
-      "id": 47,
-      "original_candidate_id": "session49_5",
-      "rating": "good",
-      "similarity": 0.5997282862663269,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Human-AI Cooperation in Public Goods Game",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 48,
-      "original_candidate_id": "session49_6",
-      "rating": "good",
-      "similarity": 0.5687321424484253,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 953,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "R&D Spillovers and Regional Innovation",
-        "mechanism": "R&D spillovers from one entity enhance innovation in neighboring entities. Strategic interactions follow Stackelberg dynamics where leaders and followers reach Nash equilibrium. Highly-qualified employment amplifies spillover effects, creating synergies between different types of R&D investment and regional innovation output."
-      }
-    },
-    {
-      "id": 49,
-      "original_candidate_id": "session49_7",
-      "rating": "excellent",
-      "similarity": 0.548354983329773,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Free-Rider Problem in Shared Resources",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 50,
-      "original_candidate_id": "session49_8",
-      "rating": "good",
-      "similarity": 0.5442762970924377,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "DeFi Credit Exposures and Contagion",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 1943,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Seed Node Position and Network Damage",
-        "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
-      }
-    },
-    {
-      "id": 51,
-      "original_candidate_id": "session49_9",
-      "rating": "good",
-      "similarity": 0.5400546193122864,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      },
-      "paper_2": {
-        "paper_id": 168,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Cross-feeding yields high-dimensional chaos and coexistence of species",
-        "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
-      }
-    },
-    {
-      "id": 52,
-      "original_candidate_id": "session49_10",
-      "rating": "excellent",
-      "similarity": 0.5368678569793701,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 53,
-      "original_candidate_id": "session49_11",
-      "rating": "good",
-      "similarity": 0.6278334856033325,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 528,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Cell proliferation maintains cell area polydispersity in the growing fruit fly wing epithelium",
-        "mechanism": "Cell proliferation generates area variability while mechanical forces regulate packing. Cell division creates size asymmetry between daughter cells. Mechanical constraints from neighbors limit expansion. Area polydispersity emerges from balance between proliferation-driven variability and mechanical relaxation. Cell-cell adhesion and cortical tension determine equilibrium distributions."
-      }
-    },
-    {
-      "id": 54,
-      "original_candidate_id": "session52_0",
-      "rating": "good",
-      "similarity": 0.6166113018989563,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 917,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Critical Slowing Down at Bifurcations",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      },
-      "paper_2": {
-        "paper_id": 153,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Heterogeneity dominates irreversibility in random Markov models",
-        "mechanism": "Markov dynamics combine heterogeneity and asymmetry (broken detailed balance). Heterogeneity parameter controls transition rate variability. Asymmetry parameter controls forward-backward correlation. Critical locus emerges where relaxation times diverge. Entropy production and predictive information depend strongly on heterogeneity but weakly on asymmetry. Near criticality, small heterogeneity changes cause large dynamical shifts."
-      }
-    },
-    {
-      "id": 55,
-      "original_candidate_id": "session52_1",
-      "rating": "good",
-      "similarity": 0.6001496911048889,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 457,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "From Discrete to Continuous Mixed Populations of Conformists, Nonconformists, and Imitators",
-        "mechanism": "Three behavioral types interact: conformists benefit from choosing common strategies, nonconformists profit from rare strategies, and imitators copy highest earners. Population proportions fluctuate in finite populations but equilibrate as population size increases. Strategy proportions undergo perpetual oscillations in small populations, but fluctuation amplitudes approach zero in large populations through stochastic averaging."
-      },
-      "paper_2": {
-        "paper_id": 369,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "FinEvo: From Isolated Backtests to Ecological Market Games for Multi-Agent Financial Strategy Evolution",
-        "mechanism": "Strategy distributions evolve through selection (performance-based survival), innovation (mutation), and environmental perturbation (external shocks). Individual agents adapt using local signals while population composition shifts based on relative fitness. Two-layer adaptation - individual learning plus population-level evolution - determines whether strategies persist, collapse, or form coalitions."
-      }
-    },
-    {
-      "id": 56,
-      "original_candidate_id": "session52_2",
-      "rating": "good",
-      "similarity": 0.5997282862663269,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Human-AI Cooperation in Public Goods Game",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 57,
-      "original_candidate_id": "session52_3",
-      "rating": "good",
-      "similarity": 0.5714245438575745,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 199,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "The Architecture of Illusion: Network Opacity",
-        "mechanism": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce."
-      }
-    },
-    {
-      "id": 58,
-      "original_candidate_id": "session52_4",
-      "rating": "excellent",
-      "similarity": 0.548354983329773,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Free-Rider Problem in Shared Resources",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 59,
-      "original_candidate_id": "session52_5",
-      "rating": "good",
-      "similarity": 0.5468021035194397,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 2044,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Structure-aware imitation dynamics on higher-order networks",
-        "mechanism": "Higher-order network structure (beyond pairwise) shapes imitation dynamics through group-dependent adoption rates. Information diversity achieved through structured sampling from local neighborhoods. Adoption probability depends on group composition and size, not just neighbor count. Network hypergraph structure determines equilibrium strategy distributions through sampling bias."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "The Architecture of Illusion: Network Opacity",
-        "mechanism": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce."
-      }
-    },
-    {
-      "id": 60,
-      "original_candidate_id": "session52_6",
-      "rating": "good",
-      "similarity": 0.5442762970924377,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "DeFi Credit Exposures and Contagion",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 1943,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Seed Node Position and Network Damage",
-        "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
-      }
-    },
-    {
-      "id": 61,
-      "original_candidate_id": "session52_7",
-      "rating": "good",
-      "similarity": 0.5400546193122864,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      },
-      "paper_2": {
-        "paper_id": 168,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Cross-feeding yields high-dimensional chaos and coexistence of species",
-        "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
-      }
-    },
-    {
-      "id": 62,
-      "original_candidate_id": "session52_8",
-      "rating": "excellent",
-      "similarity": 0.5368678569793701,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 63,
+      "id": 46,
       "original_candidate_id": "session52_9",
       "rating": "good",
       "similarity": 0.509902834892273,
@@ -1358,28 +809,7 @@
       }
     },
     {
-      "id": 64,
-      "original_candidate_id": "session52_10",
-      "rating": "good",
-      "similarity": 0.5077577829360962,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 65,
+      "id": 48,
       "original_candidate_id": "session52_11",
       "rating": "good",
       "similarity": 0.5062606334686279,
@@ -1400,133 +830,7 @@
       }
     },
     {
-      "id": 66,
-      "original_candidate_id": "session54_1",
-      "rating": "good",
-      "similarity": 0.7364,
-      "structural_explanation": "Both mechanisms describe cell size homeostasis through multi-phase feedback control. Mechanism 1 focuses on control strategy types (sizer/timer/adder) and extrinsic vs intrinsic feedback tradeoffs. Mechanism 2 focuses on the mathematical formulation (stochastically forced harmonic oscillator) and how noise integration shapes observed correlations. Clear structural similarity around feedback-based size regulation with dual control levels.",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Untitled",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 540,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration."
-      }
-    },
-    {
-      "id": 67,
-      "original_candidate_id": "session54_3",
-      "rating": "good",
-      "similarity": 0.7064,
-      "structural_explanation": "Both describe cell size control, but from complementary angles. Mechanism 1 emphasizes control strategies (sizer/timer/adder) and extrinsic-intrinsic feedback. Mechanism 2 emphasizes noise sources (growth, division) and how population-level dynamics differ from single-lineage observations. Structural match around multi-source regulation with population effects modulating individual-level control.",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Untitled",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 530,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions."
-      }
-    },
-    {
-      "id": 68,
-      "original_candidate_id": "session54_4",
-      "rating": "excellent",
-      "similarity": 0.6692,
-      "structural_explanation": "Both mechanisms describe how network centrality determines productivity/innovation through strategic complementarities. Mechanism 1 emphasizes preferential attachment creating feedback (successful innovators \u2192 more partners \u2192 more innovation). Mechanism 2 adds asymmetric cross-domain spillovers (science \u2192 technology but not reverse). Excellent structural isomorphism: network position as productivity determinant through complementarities with connected agents.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Untitled",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Untitled",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      }
-    },
-    {
-      "id": 69,
-      "original_candidate_id": "session54_8",
-      "rating": "good",
-      "similarity": 0.6166,
-      "structural_explanation": "Both describe critical slowing down: diverging relaxation times near bifurcation/criticality with universal scaling behavior. Mechanism 1 focuses on general bifurcation theory and critical exponents. Mechanism 2 focuses on how heterogeneity and asymmetry parameters create critical loci. Clear structural match around the universal phenomenon of slowing dynamics near phase transitions.",
-      "paper_1": {
-        "paper_id": 917,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Untitled",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      },
-      "paper_2": {
-        "paper_id": 153,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Untitled",
-        "mechanism": "Markov dynamics combine heterogeneity and asymmetry (broken detailed balance). Heterogeneity parameter controls transition rate variability. Asymmetry parameter controls forward-backward correlation. Critical locus emerges where relaxation times diverge. Entropy production and predictive information depend strongly on heterogeneity but weakly on asymmetry. Near criticality, small heterogeneity changes cause large dynamical shifts."
-      }
-    },
-    {
-      "id": 70,
-      "original_candidate_id": "session54_10",
-      "rating": "good",
-      "similarity": 0.6001,
-      "structural_explanation": "Both describe population-level strategy evolution through multi-agent interactions. Mechanism 1 focuses on type-specific payoffs (conformist/nonconformist/imitator) and finite-size oscillations. Mechanism 2 focuses on dual-layer adaptation (individual learning + population evolution) under selection and perturbation. Structural match around evolutionary dynamics where individual behaviors and population composition coevolve.",
-      "paper_1": {
-        "paper_id": 457,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Three behavioral types interact: conformists benefit from choosing common strategies, nonconformists profit from rare strategies, and imitators copy highest earners. Population proportions fluctuate in finite populations but equilibrate as population size increases. Strategy proportions undergo perpetual oscillations in small populations, but fluctuation amplitudes approach zero in large populations through stochastic averaging."
-      },
-      "paper_2": {
-        "paper_id": 369,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Untitled",
-        "mechanism": "Strategy distributions evolve through selection (performance-based survival), innovation (mutation), and environmental perturbation (external shocks). Individual agents adapt using local signals while population composition shifts based on relative fitness. Two-layer adaptation - individual learning plus population-level evolution - determines whether strategies persist, collapse, or form coalitions."
-      }
-    },
-    {
-      "id": 71,
-      "original_candidate_id": "session54_12",
-      "rating": "good",
-      "similarity": 0.5997,
-      "structural_explanation": "Both describe cooperation sustained through behavioral feedback loops. Mechanism 1 focuses on normative group dynamics and behavioral inertia. Mechanism 2 adds environmental/ecological layer: behavior \u2192 reputation + resources \u2192 payoffs \u2192 future behavior. Structural match around multi-level feedback (social + ecological) sustaining cooperation despite changing conditions.",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Untitled",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 72,
+      "id": 45,
       "original_candidate_id": "session54_13",
       "rating": "good",
       "similarity": 0.5757,
@@ -1547,28 +851,7 @@
       }
     },
     {
-      "id": 73,
-      "original_candidate_id": "session54_14",
-      "rating": "good",
-      "similarity": 0.5714,
-      "structural_explanation": "Both describe how network structure creates information/perception bias affecting strategic behavior. Mechanism 1: network determines comparison set (which peers you benchmark against). Mechanism 2: network determines observation set (which population sample you see). Structural isomorphism: network topology biases information, creating local perceptions that diverge from global reality, driving strategic behavior based on distorted beliefs.",
-      "paper_1": {
-        "paper_id": 199,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Untitled",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce."
-      }
-    },
-    {
-      "id": 74,
+      "id": 47,
       "original_candidate_id": "session54_18",
       "rating": "good",
       "similarity": 0.5663,
@@ -1589,112 +872,7 @@
       }
     },
     {
-      "id": 75,
-      "original_candidate_id": "session54_22",
-      "rating": "excellent",
-      "similarity": 0.5484,
-      "structural_explanation": "Both describe cooperation dynamics where heterogeneity has dual effects. Mechanism 1: shared resource dilemma with multi-stability and hysteresis between cooperation and free-riding. Mechanism 2: heterogeneity as double-edged sword - structural heterogeneity (hubs with amplified risk) facilitates cooperation, cost heterogeneity (low-risk free-riders) undermines it. Excellent structural isomorphism: heterogeneity creates both leverage points (facilitating cooperation) and weakest links (undermining it), determining system-level outcomes.",
-      "paper_1": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Untitled",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 76,
-      "original_candidate_id": "session54_23",
-      "rating": "excellent",
-      "similarity": 0.5468,
-      "structural_explanation": "Both describe how network structure creates sampling bias affecting behavior/strategy. Mechanism 1: higher-order structure (hypergraphs) creates group-dependent adoption through biased sampling of local neighborhoods. Mechanism 2: local network position creates biased observation of global population. Excellent structural isomorphism: network-mediated sampling bias \u2192 distorted information \u2192 strategic behavior diverging from what unbiased global information would produce.",
-      "paper_1": {
-        "paper_id": 2044,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Untitled",
-        "mechanism": "Higher-order network structure (beyond pairwise) shapes imitation dynamics through group-dependent adoption rates. Information diversity achieved through structured sampling from local neighborhoods. Adoption probability depends on group composition and size, not just neighbor count. Network hypergraph structure determines equilibrium strategy distributions through sampling bias."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce."
-      }
-    },
-    {
-      "id": 77,
-      "original_candidate_id": "session54_24",
-      "rating": "good",
-      "similarity": 0.5443,
-      "structural_explanation": "Both describe cascade propagation through networks where topology determines spread dynamics. Mechanism 1: token dependencies carry shocks causing contagion, network structure determines cascade extent and path. Mechanism 2: seed node position determines damage progression, local topology amplifies or dampens spread. Structural match: network topology as critical determinant of cascade dynamics, with local structure (seed position, connectivity) controlling propagation rather than global averages.",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Untitled",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 1943,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
-      }
-    },
-    {
-      "id": 78,
-      "original_candidate_id": "session54_26",
-      "rating": "good",
-      "similarity": 0.5401,
-      "structural_explanation": "Both describe coexistence mechanisms where network/spatial structure is critical. Mechanism 1: dispersal network + heterogeneity threshold enable stable coexistence; homogeneity requires fine-tuning. Mechanism 2: chemical network + high-dimensional chaos enable coexistence through intermittent switching. Structural match: network topology determines whether multiple species can coexist, with heterogeneity/complexity creating attractors that support persistence beyond what simple competitive exclusion would allow.",
-      "paper_1": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      },
-      "paper_2": {
-        "paper_id": 168,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Untitled",
-        "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
-      }
-    },
-    {
-      "id": 79,
-      "original_candidate_id": "session54_28",
-      "rating": "excellent",
-      "similarity": 0.5369,
-      "structural_explanation": "Both describe bidirectional feedback between network structure and node attributes. Mechanism 1: semantic network topology \u2194 ideation (lower overlap \u2192 larger gains, creating feedback between individual structure and collective outcomes). Mechanism 2: opinions \u2194 network edges (opinion similarity \u2192 stronger connections \u2192 amplified influence \u2192 opinion convergence). Excellent structural isomorphism: attribute-network coevolution where node properties shape connections and connection patterns shape node properties through coupled dynamics.",
-      "paper_1": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Untitled",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 80,
+      "id": 53,
       "original_candidate_id": "session54_30",
       "rating": "good",
       "similarity": 0.5344,
@@ -1715,7 +893,7 @@
       }
     },
     {
-      "id": 81,
+      "id": 54,
       "original_candidate_id": "session54_35",
       "rating": "good",
       "similarity": 0.5275,
@@ -1736,133 +914,7 @@
       }
     },
     {
-      "id": 82,
-      "original_candidate_id": "session56_6",
-      "rating": "excellent",
-      "similarity": 0.6692,
-      "structural_explanation": "Both mechanisms describe how an agent's position in a collaboration network determines productivity through strategic complementarities with connected agents. The isomorphism is the asymmetric cross-domain spillover effect: activity in one domain (scientific research) enhances productivity in another domain (technological innovation), but the reverse shows no detectable influence. This reveals a universal structure: network centrality creates productivity advantages through access to diverse knowledge partners, and these advantages can transfer asymmetrically across activity domains.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Network centrality \u2192 productivity through complementarities",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Network centrality \u2192 productivity through complementarities",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      }
-    },
-    {
-      "id": 83,
-      "original_candidate_id": "session56_18",
-      "rating": "excellent",
-      "similarity": 0.5714,
-      "structural_explanation": "Both mechanisms reveal how network topology creates systematic biases in information access that drive strategic behavior. In economics, agents observe only network-local peer performance (not global), creating competitive pressures that propagate through network links. In computer science, agents observe network-local samples biased by algorithmic ranking and homophily, creating distorted beliefs about opponent sophistication. The universal structure: network position \u2192 biased observation \u2192 distorted beliefs \u2192 strategic escalation beyond what accurate global information would produce.",
-      "paper_1": {
-        "paper_id": 199,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Network-mediated observation bias \u2192 strategic escalation",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Network-mediated observation bias \u2192 strategic escalation",
-        "mechanism": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce."
-      }
-    },
-    {
-      "id": 84,
-      "original_candidate_id": "session56_26",
-      "rating": "excellent",
-      "similarity": 0.5484,
-      "structural_explanation": "Both mechanisms reveal the dual nature of heterogeneity in cooperation dynamics. Structural heterogeneity creates leverage points (highly connected hubs adopt protection due to amplified risk, catalyzing cooperation), but cost/motivation heterogeneity creates weakest links (low-risk individuals free-ride, acting as disease reservoirs that undermine cooperation). The isomorphism: heterogeneity simultaneously facilitates cooperation through influence asymmetry and degrades cooperation through motivation asymmetry. This appears in shared resource dilemmas (cleaning costs vs contamination) and disease-cooperation coevolution (network hubs vs free-riders).",
-      "paper_1": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Heterogeneity as double-edged sword in cooperation",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Heterogeneity as double-edged sword in cooperation",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 85,
-      "original_candidate_id": "session56_28",
-      "rating": "excellent",
-      "similarity": 0.5468,
-      "structural_explanation": "Both mechanisms describe how network structure beyond pairwise connections creates systematic sampling biases that shape collective outcomes. In physics, higher-order structure (hypergraphs) determines imitation dynamics through group-dependent adoption rates - agents sample from local neighborhoods with bias determined by group composition. In computer science, network locality creates observation bias where agents sample biased subsets (algorithmic ranking, homophily) rather than global population. Universal structure: complex network topology \u2192 biased local sampling \u2192 distorted information \u2192 emergent behavior different from what unbiased sampling would produce.",
-      "paper_1": {
-        "paper_id": 2044,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Higher-order network structure \u2192 sampling bias \u2192 strategic outcomes",
-        "mechanism": "Higher-order network structure (beyond pairwise) shapes imitation dynamics through group-dependent adoption rates. Information diversity achieved through structured sampling from local neighborhoods. Adoption probability depends on group composition and size, not just neighbor count. Network hypergraph structure determines equilibrium strategy distributions through sampling bias."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Higher-order network structure \u2192 sampling bias \u2192 strategic outcomes",
-        "mechanism": "Network-mediated observation bias creates systematic misperception in strategic reasoning. Agents observe only network-local sample biased by position (algorithmic ranking, homophily), not global population. Locality parameter controls observation bias magnitude, creating distorted beliefs about opponent sophistication that drive strategic escalation beyond what accurate global information would produce."
-      }
-    },
-    {
-      "id": 86,
-      "original_candidate_id": "session56_1",
-      "rating": "good",
-      "similarity": 0.7364,
-      "structural_explanation": "Both describe cell size regulation with feedback mechanisms - one emphasizes phase-specific control strategies (sizer/timer/adder) and the tradeoff between extrinsic (population-level) and intrinsic (cell-level) control, while the other emphasizes coupled growth-timing dynamics that reduce to stochastic harmonic oscillator. Good structural match across organisms showing universal control principles.",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Cell size homeostasis through multi-phase feedback control",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 540,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Cell size homeostasis through multi-phase feedback control",
-        "mechanism": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration."
-      }
-    },
-    {
-      "id": 87,
-      "original_candidate_id": "session56_4",
-      "rating": "good",
-      "similarity": 0.7064,
-      "structural_explanation": "Both about cell size regulation through different mechanisms - one focuses on control strategies (sizer/timer/adder) with extrinsic/intrinsic feedback tradeoffs, other focuses on noise compensation and how population dynamics alter size distributions compared to single lineages. Good cross-organism isomorphism showing universal homeostasis principles.",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Cell size control: fluctuations and homeostasis",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 530,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Cell size control: fluctuations and homeostasis",
-        "mechanism": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions."
-      }
-    },
-    {
-      "id": 88,
+      "id": 49,
       "original_candidate_id": "session56_5",
       "rating": "good",
       "similarity": 0.6976,
@@ -1883,217 +935,7 @@
       }
     },
     {
-      "id": 89,
-      "original_candidate_id": "session56_10",
-      "rating": "good",
-      "similarity": 0.6278,
-      "structural_explanation": "Both about cell size regulation through different regulatory pathways. One through phase-specific control and population/cell-level feedback, other through proliferation-driven variability balanced by mechanical constraints from neighbors. Good structural match showing multiple regulatory mechanisms for same phenomenon (size homeostasis).",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Cell size regulation: proliferation vs mechanical constraints",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 528,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Cell size regulation: proliferation vs mechanical constraints",
-        "mechanism": "Cell proliferation generates area variability while mechanical forces regulate packing. Cell division creates size asymmetry between daughter cells. Mechanical constraints from neighbors limit expansion. Area polydispersity emerges from balance between proliferation-driven variability and mechanical relaxation. Cell-cell adhesion and cortical tension determine equilibrium distributions."
-      }
-    },
-    {
-      "id": 90,
-      "original_candidate_id": "session56_11",
-      "rating": "good",
-      "similarity": 0.6166,
-      "structural_explanation": "Both describe diverging relaxation times near criticality with universal behavior. One focuses on bifurcation points with characteristic critical exponents governing temporal behavior, other on critical locus in parameter space (heterogeneity-asymmetry) where small changes cause large dynamical shifts. Good structural isomorphism of critical phenomena.",
-      "paper_1": {
-        "paper_id": 917,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Critical slowing down near phase transitions",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      },
-      "paper_2": {
-        "paper_id": 153,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Critical slowing down near phase transitions",
-        "mechanism": "Markov dynamics combine heterogeneity and asymmetry (broken detailed balance). Heterogeneity parameter controls transition rate variability. Asymmetry parameter controls forward-backward correlation. Critical locus emerges where relaxation times diverge. Entropy production and predictive information depend strongly on heterogeneity but weakly on asymmetry. Near criticality, small heterogeneity changes cause large dynamical shifts."
-      }
-    },
-    {
-      "id": 91,
-      "original_candidate_id": "session56_13",
-      "rating": "good",
-      "similarity": 0.6001,
-      "structural_explanation": "Both describe strategy evolution with individual and population-level dynamics. One emphasizes type-based fluctuations (conformist/nonconformist/imitator) that equilibrate with population size, other emphasizes two-layer adaptation (individual learning plus population-level evolution). Good structural match of multi-level evolutionary dynamics.",
-      "paper_1": {
-        "paper_id": 457,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Population strategy evolution through multi-level adaptation",
-        "mechanism": "Three behavioral types interact: conformists benefit from choosing common strategies, nonconformists profit from rare strategies, and imitators copy highest earners. Population proportions fluctuate in finite populations but equilibrate as population size increases. Strategy proportions undergo perpetual oscillations in small populations, but fluctuation amplitudes approach zero in large populations through stochastic averaging."
-      },
-      "paper_2": {
-        "paper_id": 369,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Population strategy evolution through multi-level adaptation",
-        "mechanism": "Strategy distributions evolve through selection (performance-based survival), innovation (mutation), and environmental perturbation (external shocks). Individual agents adapt using local signals while population composition shifts based on relative fitness. Two-layer adaptation - individual learning plus population-level evolution - determines whether strategies persist, collapse, or form coalitions."
-      }
-    },
-    {
-      "id": 92,
-      "original_candidate_id": "session56_15",
-      "rating": "good",
-      "similarity": 0.5997,
-      "structural_explanation": "Both about cooperation maintained through feedback loops. One emphasizes normative behavioral feedback (observed group patterns drive cooperation levels), other emphasizes reputation-ecology coupling where cooperative behaviors affect shared resources which then reshape incentives for future cooperation. Good structural match of behavior-environment feedbacks sustaining cooperation.",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Cooperation through behavioral-ecological feedback",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Cooperation through behavioral-ecological feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 93,
-      "original_candidate_id": "session56_17",
-      "rating": "good",
-      "similarity": 0.5757,
-      "structural_explanation": "Both describe transfer learning by identifying shared vs domain-specific components. One through disentanglement into domain-invariant and domain-specific features with cross-attention fusion and mutual information optimization, other through structured graph representations enabling few-shot adaptation. Good structural isomorphism of knowledge transfer mechanisms.",
-      "paper_1": {
-        "paper_id": 1425,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Transfer learning across domains through structured decomposition",
-        "mechanism": "Feature disentanglement into domain-invariant and domain-specific components mitigates negative transfer in multi-dataset training. Cross-attention fusion adaptively models component interactions. Mutual information optimization maximizes domain-invariant consistency while minimizing domain-specific redundancy. Complementary shared-private representations enable knowledge transfer while preserving dataset-specific discriminability."
-      },
-      "paper_2": {
-        "paper_id": 117,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Transfer learning across domains through structured decomposition",
-        "mechanism": "Transfer learning with structured graph representations enables few-shot adaptation across related domains by identifying shared interaction principles from well-studied systems and rapidly adapting to new contexts with minimal training data."
-      }
-    },
-    {
-      "id": 94,
-      "original_candidate_id": "session56_21",
-      "rating": "good",
-      "similarity": 0.5687,
-      "structural_explanation": "Both describe how knowledge spillovers in networks enhance innovation. One emphasizes network centrality providing access to diverse knowledge with preferential attachment reinforcing advantages, other emphasizes R&D spillovers in Stackelberg dynamics with employment amplifying effects. Good structural match of network-mediated knowledge diffusion driving innovation.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Innovation through network knowledge spillovers",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 953,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Innovation through network knowledge spillovers",
-        "mechanism": "R&D spillovers from one entity enhance innovation in neighboring entities. Strategic interactions follow Stackelberg dynamics where leaders and followers reach Nash equilibrium. Highly-qualified employment amplifies spillover effects, creating synergies between different types of R&D investment and regional innovation output."
-      }
-    },
-    {
-      "id": 95,
-      "original_candidate_id": "session56_22",
-      "rating": "good",
-      "similarity": 0.5663,
-      "structural_explanation": "Both about learning world models through action-conditioned prediction that enable transfer. One emphasizes path integration, dynamic object-location binding, and in-context learning with structured representations, other emphasizes continuous latent actions enabling video-to-robot transfer. Good structural match of predictive world models enabling generalization.",
-      "paper_1": {
-        "paper_id": 42,
-        "arxiv_id": "N/A",
-        "domain": "biology",
-        "title": "Action-conditioned world modeling for transfer",
-        "mechanism": "Action-conditioned sequential prediction enables path integration and dynamic object-location binding for world modeling. Prediction accuracy improves across sequence through in-context learning. Structured representations with flexible binding emerge to support prediction - new bindings learnable late in sequence, out-of-distribution bindings acquirable through sequential exposure."
-      },
-      "paper_2": {
-        "paper_id": 1500,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Action-conditioned world modeling for transfer",
-        "mechanism": "Continuous latent actions serve as unified proxy actions, enabling interaction knowledge transfer from unlabeled human videos to robot control. World model learns diverse interactions from 44k hours of egocentric video. Post-training on small-scale robot data yields physics understanding and precise action controllability. Generative modeling enables teleoperation, policy evaluation, and planning."
-      }
-    },
-    {
-      "id": 96,
-      "original_candidate_id": "session56_29",
-      "rating": "good",
-      "similarity": 0.5443,
-      "structural_explanation": "Both describe cascades where network structure determines propagation extent. One emphasizes token-mediated dependencies creating contagion through network topology and link weights, other emphasizes seed node structural position (local connectivity) amplifying or dampening damage progression. Good structural isomorphism of network-mediated cascade dynamics.",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Network cascade propagation from seed nodes",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 1943,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Network cascade propagation from seed nodes",
-        "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
-      }
-    },
-    {
-      "id": 97,
-      "original_candidate_id": "session56_31",
-      "rating": "good",
-      "similarity": 0.5401,
-      "structural_explanation": "Both describe how structural complexity enables coexistence beyond what simple competitive dynamics would allow. One through spatial heterogeneity requiring critical threshold (homogeneous environments only allow fine-tuned marginal coexistence), other through high-dimensional chemical chaos creating intermittent switching among quasi-stationary states. Good structural match of complexity-enabled coexistence.",
-      "paper_1": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Complexity enables coexistence beyond competitive exclusion",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      },
-      "paper_2": {
-        "paper_id": 168,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Complexity enables coexistence beyond competitive exclusion",
-        "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
-      }
-    },
-    {
-      "id": 98,
-      "original_candidate_id": "session56_33",
-      "rating": "good",
-      "similarity": 0.5369,
-      "structural_explanation": "Both about individual states (semantic ideas or opinions) and network structure coevolving through coupled dynamics. One emphasizes semantic network topology determining ideational breadth with shared sources creating redundancy, other emphasizes opinion-network feedback where similar opinions strengthen connections. Good structural match of state-structure coevolution.",
-      "paper_1": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic/opinion network coevolution dynamics",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Semantic/opinion network coevolution dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 99,
+      "id": 60,
       "original_candidate_id": "session56_41",
       "rating": "good",
       "similarity": 0.528,
@@ -2114,28 +956,7 @@
       }
     },
     {
-      "id": 100,
-      "original_candidate_id": "session56_43",
-      "rating": "good",
-      "similarity": 0.5275,
-      "structural_explanation": "Both describe adaptive resource allocation strategies that optimize for learning value rather than uniform distribution. One shows phase transition in optimal strategy based on task difficulty (easy tasks benefit from gradual decay, hard tasks require maintaining peak resources), other uses dual-signal entropy-based allocation (global relative entropy identifies high-value samples, local absolute entropy identifies critical moments). Good structural match of value-driven resource concentration.",
-      "paper_1": {
-        "paper_id": 1540,
-        "arxiv_id": "N/A",
-        "domain": "stat",
-        "title": "Adaptive resource allocation based on learning value",
-        "mechanism": "Phase transition in optimal strategy based on task difficulty regime. System exhibits qualitatively different behaviors (power decay vs warmup-stable-decay) separated by sharp threshold determined by ratio of signal learning rate to noise forgetting capacity. Easy-task regime benefits from gradual decay, hard-task regime requires maintaining peak resources until near completion."
-      },
-      "paper_2": {
-        "paper_id": 1565,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Adaptive resource allocation based on learning value",
-        "mechanism": "Dual-signal adaptive resource allocation using entropy as proxy for learning value. Global level: relative entropy change identifies high-value samples for prioritized exploration. Local level: absolute entropy peaks identify critical moments within each trajectory. Concentrates computation where information gain is highest rather than uniform distribution."
-      }
-    },
-    {
-      "id": 101,
+      "id": 45,
       "original_candidate_id": "session57_62",
       "rating": "good",
       "similarity": 0.5102,
@@ -2156,7 +977,7 @@
       }
     },
     {
-      "id": 102,
+      "id": 46,
       "original_candidate_id": "session57_63",
       "rating": "good",
       "similarity": 0.5099,

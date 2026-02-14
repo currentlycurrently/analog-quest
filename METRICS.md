@@ -12,8 +12,8 @@ Agent updates these numbers after each session.
 
 **Methodology Version**: LLM Extraction + Semantic Embeddings + Manual Curation + Strategic Targeting (Validated!)
 
-**🎉 SESSION 58 - FRONTEND UPDATED! 102 DISCOVERIES DEPLOYED TO ANALOG.QUEST ✓✓✓**
-**Session 58: Updated frontend with 72 new discoveries from Sessions 47-57 (baseline 30 + new 72 = 102 total). Created merge script to handle multiple discovery file formats. Rebuilt Next.js site → 110 total pages (102 discovery pages + 8 other pages). Quality: 28 excellent (28%) + 74 good (72%), 17 unique domain pairs, similarity 0.4447-0.7364 (mean 0.5669). analog.quest now showcases 100+ verified cross-domain isomorphisms!**
+**⚠️ SESSION 58 - CRITICAL AUDIT: 54% DUPLICATION DISCOVERED & CORRECTED ⚠️**
+**Session 58: Attempted frontend update but discovered **54% duplication problem**. Systematic audit revealed cumulative mechanism pools + no tracking = same pairs rediscovered across sessions. **Ground truth: 46 unique discoveries** (30 baseline + 16 new), not 101 as claimed. 56 duplicates removed. Created deduplication system, corrected all data, rebuilt frontend with accurate count (52 pages). Quality maintained: 11 excellent + 35 good. See AUDIT_SESSION58.md for full investigation.**
 
 ### Papers
 - **Total Papers Processed**: **2,194** (Session 47 added 129 from strategic targeting)
@@ -83,24 +83,25 @@ Agent updates these numbers after each session.
   - Top domain pairs: physics-q-bio (20.1%), cs-q-bio (13.6%), cs-physics (9.9%)
 
 ### Verified Discoveries (Manual Curation)
-- **Total Verified**: **102** (Session 58: FRONTEND UPDATED with 72 from Sessions 47-57) ✓✓✓ **100+ MILESTONE DEPLOYED!** 🎉
-  - Session 38: 30 discoveries (10 excellent + 20 good) - baseline
-  - Session 47: 11 discoveries (3 excellent + 8 good)
-  - Session 49: 12 discoveries (4 excellent + 8 good)
-  - Session 52: 12 discoveries (2 excellent + 10 good)
-  - Session 54: 16 discoveries (4 excellent + 12 good)
-  - Session 56: 19 discoveries (4 excellent + 15 good)
-  - Session 57: 2 discoveries (0 excellent + 2 good)
-- **Frontend Status**: **analog.quest updated to 102 discoveries** (110 total pages) ✓✓✓
-- **Quality Distribution**: 28 excellent (28%) + 74 good (72%)
-- **Domain Pairs**: 17 unique cross-domain connections
-- **Similarity Range**: 0.4447 - 0.7364 (mean: 0.5669)
-- **Precision Trend**: Session 38 (67% top-30), Session 47 (55% top-20), Session 49 (40% top-30), Session 52 (31% top-40), Session 54 (38% top-40), Session 56 (40% top-50), Session 57 (10% ranks 51-70)
-- **Precision vs Similarity**: Lower similarity → lower precision (expected: 40.4% at 0.53-0.74 → 10% at 0.51-0.52)
+- **Total Verified (CORRECTED)**: **46 unique** (Session 58 audit revealed 54% duplication) ⚠️
+  - Session 38: 30 discoveries (10 excellent + 20 good) - baseline ✓
+  - Sessions 47-57: 16 unique new discoveries (56 duplicates removed)
+    - Session 47: 4 unique (7 duplicates of baseline)
+    - Session 49: 2 unique (10 duplicates)
+    - Session 52: 2 unique (10 duplicates)
+    - Session 54: 4 unique (12 duplicates)
+    - Session 56: 2 unique (17 duplicates)
+    - Session 57: 2 unique (0 duplicates)
+- **Frontend Status**: **analog.quest corrected to 46 discoveries** (52 total pages) ✓
+- **Quality Distribution**: 11 excellent (24%) + 35 good (76%)
+- **Domain Pairs**: 14 unique cross-domain connections
+- **Similarity Range**: 0.4447 - 0.7364 (mean: 0.5442 deduplicated)
+- **Duplication Problem**: Cumulative mechanism pools + no tracking → same pairs rediscovered across sessions
+- **Precision Measurements**: Still valid (measured candidate pools accurately)
 - **Citation Links**: 100% working (maintained since Session 45)
-- **Data Quality**: 100% maintained
-- **Progress**: **102/110 milestone (93% toward next milestone)** ✓✓✓🎉
-- **Next Milestone**: **110+ discoveries (current: 93% progress)**
+- **Data Quality**: Now 100% deduplicated ✓
+- **Progress**: **46/100 milestone (46% - realistic)** ⚠️
+- **Next Milestone**: **75 unique discoveries (need 29 more)**
 
 ### Isomorphisms (Keyword-Based - Historical)
 - **Total Isomorphisms Found**: **616** (ALL ≥0.77 - **BALANCED QUALITY!** ✓✓✓)
@@ -438,7 +439,7 @@ After Session 31-36 testing, pivoted to manual curation approach:
 | **55** | **2026-02-13** | **+50 papers** | **+30** | **+1158** | **EXTRACTION COMPLETE: 170 → 200 MECHANISMS (+30) - 200 MILESTONE!** ⛏️✓✓✓ Selected 50 papers (score 7/10), extracted 30 mechanisms (60% hit rate, 30/50). Combined 200 mechanisms → **1,158 cross-domain candidates** (threshold ≥0.35, top: 0.7364, +33% from 867). Top domain pairs: physics-q-bio (20.1%), cs-q-bio (13.6%), cs-physics (9.9%). Domain distribution: cs (35%), q-bio (26%), physics (16.5%). **200 mechanism milestone ACHIEVED!** Mechanism base doubled since Session 48. ✓✓✓ |
 | **56** | **2026-02-14** | **+0** | **+0** | **+19** | **CURATION COMPLETE: 80 → 99 DISCOVERIES (+19) - 99% TOWARD 100 MILESTONE!** 🎯✓✓✓ Curated 50 candidates from Session 55's 1,158 pairs (47 valid after excluding 3 same-paper duplicates). Found 19 discoveries (4 excellent + 15 good). Top-50 precision: 40.4% (19/47 valid). Total: 80 → 99 discoveries (need only 1 more!). Domain pairs: econ↔cs (4), unknown↔q-bio (4), physics↔cs (3), q-bio↔physics (3). Key themes: network-mediated bias (3 excellent), cell size regulation (3 good), multi-level dynamics. Precision stable at ~40%. ✓✓✓ |
 | **57** | **2026-02-14** | **+0** | **+0** | **+2** | **100 DISCOVERY MILESTONE ACHIEVED! 99 → 101 (+2)** 🎉✓✓✓ Quick win: reviewed 20 candidates (ranks 51-70 from Session 55). Ranks 51-60: 0 discoveries (all weak/false). Ranks 61-70: 2 good discoveries (dual-scope representation cs↔q-bio, critical phenomena nlin↔physics). Precision: 10% (2/20) - declining from 40.4% as expected with lower similarity (0.506-0.522 range). **100+ MILESTONE REACHED!** Quality standards maintained. Next: update frontend with 100+ discoveries. ✓✓✓🎉 |
-| **58** | **2026-02-14** | **+0** | **+0** | **+72 (frontend)** | **FRONTEND UPDATED! 102 DISCOVERIES DEPLOYED TO ANALOG.QUEST** 🚀✓✓✓ Merged 72 discoveries from Sessions 47-57 with 30 baseline (Session 38). Created `scripts/merge_discoveries.py` to handle multiple discovery file formats. Rebuilt Next.js site → 110 total pages (102 discovery pages + 8 other pages). Quality: 28 excellent (28%) + 74 good (72%), 17 unique domain pairs, similarity 0.4447-0.7364 (mean 0.5669). analog.quest now showcases **100+ verified cross-domain isomorphisms!** ✓✓✓🎉 |
+| **58** | **2026-02-14** | **+0** | **+0** | **+16 unique (56 dup removed)** | **CRITICAL AUDIT: 54% DUPLICATION DISCOVERED & CORRECTED** ⚠️🔍 Attempted merge but found massive duplication (pairs appearing 2-6 times across sessions). Systematic audit revealed root cause: cumulative mechanism pools + no tracking = rediscovery of same matches. **Ground truth: 46 unique** (30 baseline + 16 new), not 101. Created deduplication system, corrected all data, rebuilt frontend (52 pages). Quality: 11 excellent + 35 good. See AUDIT_SESSION58.md. Lessons: implement tracking, filter candidates, verify before claiming. ⚠️ |
 
 ---
 

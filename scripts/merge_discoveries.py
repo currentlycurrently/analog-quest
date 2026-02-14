@@ -159,12 +159,21 @@ def main():
     all_discoveries = baseline["verified_isomorphisms"].copy()
     next_id = baseline_count + 1
 
+    # Track seen paper pairs to avoid duplicates
+    seen_pairs = set()
+    for disc in baseline["verified_isomorphisms"]:
+        pair_key = tuple(sorted([disc["paper_1"]["paper_id"], disc["paper_2"]["paper_id"]]))
+        seen_pairs.add(pair_key)
+
     domain_pairs = Counter()
 
     # Count baseline domain pairs
     for disc in baseline["verified_isomorphisms"]:
         pair = normalize_domain_pair(disc["paper_1"]["domain"], disc["paper_2"]["domain"])
         domain_pairs[pair] += 1
+
+    # Track duplicates
+    duplicates_skipped = 0
 
     # Load and merge each session
     print("\n2. Loading new discovery sessions...")
@@ -197,16 +206,25 @@ def main():
                 for i, disc in enumerate(session_discoveries)
             ]
 
-        # Add to collection
-        all_discoveries.extend(converted)
-        next_id += len(converted)
-
-        # Count domain pairs
+        # Filter out duplicates and add to collection
+        new_discoveries = []
         for disc in converted:
+            pair_key = tuple(sorted([disc["paper_1"]["paper_id"], disc["paper_2"]["paper_id"]]))
+            if pair_key in seen_pairs:
+                duplicates_skipped += 1
+                continue
+
+            seen_pairs.add(pair_key)
+            new_discoveries.append(disc)
+
+            # Count domain pairs
             pair = normalize_domain_pair(disc["paper_1"]["domain"], disc["paper_2"]["domain"])
             domain_pairs[pair] += 1
 
-        print(f"      ✓ Added {len(converted)} discoveries (IDs {next_id - len(converted)}-{next_id - 1})")
+        all_discoveries.extend(new_discoveries)
+        next_id += len(new_discoveries)
+
+        print(f"      ✓ Added {len(new_discoveries)} discoveries (IDs {next_id - len(new_discoveries)}-{next_id - 1}), skipped {len(converted) - len(new_discoveries)} duplicates")
 
     # Calculate statistics
     total_discoveries = len(all_discoveries)
@@ -222,6 +240,8 @@ def main():
     print(f"   Total discoveries: {total_discoveries}")
     print(f"   Excellent: {excellent_count}")
     print(f"   Good: {good_count}")
+    print(f"   Duplicates skipped: {duplicates_skipped}")
+    print(f"   Unique discoveries added: {total_discoveries - baseline_count}")
     print(f"   Similarity range: {sim_min:.4f} - {sim_max:.4f} (mean: {sim_mean:.4f})")
     print(f"   Domain pairs: {len(domain_pairs)} unique pairs")
 
@@ -257,7 +277,8 @@ def main():
     print("MERGE COMPLETE!")
     print("=" * 80)
     print(f"Output: {OUTPUT_FILE}")
-    print(f"Total: {total_discoveries} discoveries (30 baseline + 71 new)")
+    print(f"Total: {total_discoveries} discoveries ({baseline_count} baseline + {total_discoveries - baseline_count} new)")
+    print(f"Duplicates skipped: {duplicates_skipped}")
     print(f"Next: Run 'npm run build' to rebuild the site with {total_discoveries} discovery pages")
     print("=" * 80)
 

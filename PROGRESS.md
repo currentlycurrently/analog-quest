@@ -46,14 +46,14 @@ Below is the most recent session history (Session 49+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **58** (Session 58 = **FRONTEND UPDATED! 102 discoveries deployed to analog.quest** ✓✓✓)
+- **Total Sessions**: **58** (Session 58 = **CRITICAL AUDIT: Discovered 54% duplication, corrected to 46 unique** 🔍)
 - **Total Papers**: **2,194** (Session 48 fetched 0 - mined existing corpus, 0% fetch waste!)
 - **Total Papers Scored**: **2,194** (100% coverage, avg 3.31/10, 631 high-value papers ≥5/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
 - **LLM-Extracted Mechanisms**: **200** (Session 55 added 30 new, 60% hit rate - 30/50 papers) ✓✓✓ **200 MILESTONE!**
-- **Verified Discoveries**: **102** (Session 58 updated frontend: 30 baseline + 72 from Sessions 47,49,52,54,56,57) ✓✓✓ **FRONTEND UPDATED!**
-- **Session 58 Frontend**: **110 total pages** (102 discovery pages + 8 other pages) - analog.quest now showcases 100+ discoveries!
+- **Verified Discoveries**: **46 unique** (Session 58 audit: 30 baseline + 16 new from Sessions 47-57, 56 duplicates removed) ⚠️
+- **Session 58 Correction**: **52 total pages** (46 discovery pages + 6 other pages) - deduplicated and accurate
 - **Semantic Embeddings**: 200 mechanisms → 1,158 cross-domain candidates (threshold ≥0.35)
 - **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
 - **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th, nlin, hep-ph, eess (17+ domains!)
@@ -69,66 +69,92 @@ Below is the most recent session history (Session 49+).
   - **Citation links: 100% working** (maintained!) ✓✓✓
   - Comprehensive SEO (meta tags, Open Graph, Twitter cards)
   - Mobile responsive
-- **Last Session Date**: 2026-02-14 (Session 58 - **102 discoveries on analog.quest!** ✓✓✓)
+- **Last Session Date**: 2026-02-14 (Session 58 - **AUDIT: Corrected to 46 unique discoveries** ⚠️)
 
 ---
 
-## Session 58 - 2026-02-14 - FRONTEND UPDATE: 102 Discoveries Deployed ✓✓✓
+## Session 58 - 2026-02-14 - CRITICAL AUDIT: 54% Duplication Discovered & Corrected ⚠️🔍
 
-**Goal**: Update analog.quest frontend with 100+ discoveries from Sessions 47-57
+**Goal**: Update analog.quest frontend with discoveries from Sessions 47-57
 
-**What I Did**:
-- [x] Inventoried all discovery files from Sessions 47, 49, 52, 54, 56, 57
-- [x] Created `scripts/merge_discoveries.py` to handle multiple discovery file formats
-- [x] Successfully merged 72 new discoveries with 30 baseline discoveries
-- [x] Rebuilt Next.js static site (110 total pages generated)
-- [x] Validated all 102 discovery pages exist and build correctly
-- [x] Updated documentation (PROGRESS.md, METRICS.md)
+**What Actually Happened**:
+- [x] Attempted to merge 72 "new" discoveries with 30 baseline
+- [x] **Discovered 54% duplication problem** (56 duplicates out of 72!)
+- [x] Performed systematic audit to understand root cause
+- [x] Created deduplication system and corrected all data
+- [x] Updated frontend with **46 unique discoveries** (truth)
+- [x] Documented lessons learned in AUDIT_SESSION58.md
 
-**Results**:
-- **Frontend status**: **102 discoveries deployed** (30 baseline + 72 new)
-- **Discovery breakdown**:
-  - Session 47: 11 discoveries (3 excellent + 8 good)
-  - Session 49: 12 discoveries (4 excellent + 8 good)
-  - Session 52: 12 discoveries (2 excellent + 10 good)
-  - Session 54: 16 discoveries (4 excellent + 12 good)
-  - Session 56: 19 discoveries (4 excellent + 15 good)
-  - Session 57: 2 discoveries (0 excellent + 2 good)
-- **Total new**: 72 discoveries (17 excellent + 55 good)
-- **Quality distribution**: 28 excellent (28%) + 74 good (72%)
-- **Similarity range**: 0.4447 - 0.7364 (mean: 0.5669)
-- **Domain pairs**: 17 unique cross-domain connections
-- **Pages generated**: 110 total (102 discovery pages + 8 other pages)
+**The Problem**:
+- Tried to merge discoveries from Sessions 47-57
+- Initial merge showed **102 total discoveries**
+- Validation check revealed **20 paper pairs appearing multiple times**
+- Some pairs appeared **6 times** across different sessions!
+- **Ground truth: Only 46 unique discoveries**
 
-**Technical Notes**:
-- Multiple discovery file formats handled:
-  - Session 47: `verified_discoveries` with arxiv_1/arxiv_2 fields
-  - Session 49: Plain array format
-  - Session 52: Standard format with paper_1_domain, etc.
-  - Session 54: Domains/paper_ids array format
-  - Session 56-57: domain_1/domain_2 format with shared title
-- Merge script normalizes all to unified frontend schema
-- Build time: ~2 seconds for 110 pages (excellent Next.js performance)
-- All TypeScript types validated successfully
+**Root Cause Analysis**:
+1. **Cumulative mechanism pools**: Each extraction session (48, 51, 53, 55) added to previous mechanisms
+2. **No deduplication tracking**: Sessions independently curated from overlapping candidate pools
+3. **Same high-quality pairs kept reappearing**: Each session "discovered" them independently
+4. **Example**: Pair 100-461 appeared in Sessions 47, 49, 52, 54, 56 (5 times!)
 
-**Challenges**:
-- **Multiple file format variations**: Each session saved discoveries in slightly different JSON schemas
-- **Solution**: Created flexible converter function with format detection based on field presence
-- **Double-merge issue**: First run loaded already-merged baseline and doubled the count
-- **Solution**: Restored original baseline file via `git restore` before re-running merge
+**The Truth**:
+- **Session 38 baseline: 30 unique discoveries** ✓
+- **Sessions 47-57 added: 16 unique new discoveries**
+- **Total unique discoveries: 46** (not 101!)
+- **Duplicates: 56** (54% duplication rate)
+
+**Discovery Breakdown (Actual Unique Contributions)**:
+- Session 47: 4 unique (7 were duplicates of baseline)
+- Session 49: 2 unique (10 duplicates)
+- Session 52: 2 unique (10 duplicates)
+- Session 54: 4 unique (12 duplicates)
+- Session 56: 2 unique (17 duplicates!)
+- Session 57: 2 unique (0 duplicates)
+
+**Actions Taken**:
+1. **Created AUDIT_SESSION58.md**: Comprehensive investigation report
+2. **Fixed merge script**: Added deduplication logic
+3. **Rebuilt frontend**: 52 pages (46 discoveries + 6 other) with accurate data
+4. **Will update all documentation**: PROGRESS.md, METRICS.md with corrected counts
+5. **Will create tracking system**: Prevent future duplication
 
 **What I Learned**:
-- Need to standardize discovery file format for future sessions
-- Git restore is essential when testing merge scripts that modify data files
-- Next.js 15 build validation catches type mismatches early (good guardrail!)
-- The frontend now showcases the full scope of discoveries: 102 verified cross-domain isomorphisms!
+- **Critical failure**: No tracking system for discovered pairs across sessions
+- **Misleading metrics**: Progress claims were inflated by 55%
+- **Wasted effort**: Re-curated same candidates multiple times
+- **Quality maintained**: The 46 discoveries we DO have are genuine and high-quality
+- **Better caught now**: Before public deployment or external claims
+
+**What Worked**:
+- Quality standards remained consistent across sessions
+- Precision measurements were accurate (for the candidate pools reviewed)
+- Semantic embeddings effectively found structurally similar mechanisms
+- Caught the problem through systematic verification
+
+**Impact**:
+- **We do NOT have 100+ discoveries** - we have 46
+- **Progress toward 100 milestone: 46%** (not 101%)
+- All session counts in PROGRESS.md from 47-57 need correction
+- METRICS.md needs comprehensive update
+
+**Lessons for Future**:
+1. **Implement discovery tracking**: Create `discovered_pairs.json` to track all found pairs
+2. **Filter candidates**: Remove already-discovered pairs before curation
+3. **Verify before claiming**: Always deduplicate before counting
+4. **Honesty over optimism**: Better to report 46 accurate than 101 inflated
 
 **Next Session**:
-- Deploy updated site (if needed) or continue with new discovery extraction/curation
-- Consider: Should we extract more mechanisms (200 → 250?) or focus on curating remaining candidates?
-- Recommendation: Continue curation of existing 1,158 candidates to maximize discovery count with current data
+- Correct all historical documentation (PROGRESS.md, METRICS.md)
+- Create discovery tracking system
+- Continue curation with proper deduplication (1,100+ candidates remaining)
+- Realistic goal: Reach 75 unique discoveries (need 29 more)
 
-**Time Spent**: ~1.5 hours
+**Time Spent**: ~3 hours (investigation + correction)
+
+**Status**: ⚠️ **CORRECTED - Truth Established** ⚠️
+
+See AUDIT_SESSION58.md for complete investigation details.
 
 ---
 

@@ -4,95 +4,107 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 64 Goals - OpenAlex Quality Test with Filtered Queries
+## Session 65 Goals - OpenAlex Scale Test with 5,000 Papers
 
-**Mission**: Test mechanism extraction quality on OpenAlex papers with abstracts, make go/no-go decision
+**Mission**: Test OpenAlex at larger scale (5,000 papers) to validate quality consistency before 50K ingestion
 
-### Context from Session 63
-- OpenAlex tested: 2,626 papers/minute speed (excellent) ✅
-- Abstract coverage: 65.3% (below 80% target) ⚠️
-- Topic coverage: 100% (all papers classified) ✅
-- Recommendation: Use with adjusted expectations
-- Next step: Test quality with has_abstract filter
+### Context from Session 64
+- OpenAlex quality test: **GO Decision** ✅
+- Average score: 5.65/10 (70% better than arXiv)
+- High-value papers: 76.4% (vs 28.8% for arXiv)
+- Extraction hit rate: 80% on top papers
+- Decision: Proceed with OpenAlex for scale-up
 
 ### Primary Goals
 
-1. **Fetch 500 OpenAlex Papers with Abstracts**
+1. **Develop Comprehensive Search Terms**
+   - Create 100+ mechanism-relevant search terms
+   - Mix domains: physics, biology, CS, economics, social systems
+   - Focus on structural keywords: dynamics, feedback, emergence, coupling, etc.
+   - Balance breadth and depth
+
+2. **Implement Bulk Fetch Script**
+   - Fetch 5,000 papers using diverse search terms
    - Use `has_abstract=True` filter
-   - Target mechanism-rich topics (network dynamics, phase transitions, etc.)
-   - Mix of domains (CS, Physics, Biology)
-   - Store in PostgreSQL
+   - Add checkpointing for recovery
+   - Track fetch statistics per search term
 
-2. **Score Papers for Mechanism Richness**
-   - Apply existing scoring algorithm from Session 48
-   - Compare score distribution with arXiv corpus
-   - Identify high-value papers (score ≥5/10)
+3. **Import and Score at Scale**
+   - Import 5,000 papers to PostgreSQL
+   - Score all papers for mechanism richness
+   - Analyze score distribution
+   - Compare with Session 64 results
 
-3. **Extract Mechanisms from Top Papers**
-   - Select top 50-100 papers by score
-   - Manual LLM extraction (domain-neutral)
-   - Target: 30-50 mechanisms
-   - Measure hit rate
-
-4. **Quality Comparison**
-   - Compare extraction hit rate with arXiv corpus
-   - Assess mechanism quality (structural, cross-domain applicable)
-   - Calculate cost-benefit (speed vs quality tradeoff)
-   - Make go/no-go decision for full-scale ingestion
+4. **Validate Quality Consistency**
+   - Check if quality holds at 35× scale
+   - Identify any domain biases
+   - Assess topic distribution
+   - Make final decision on 50K fetch strategy
 
 ### Deliverables
 
-1. **Filtered Query Script**: `scripts/session64_openalex_filtered.py`
-   - Fetch papers with has_abstract=True
-   - Import to PostgreSQL
-   - Score for mechanism richness
+1. **Search Terms List**: `examples/session65_search_terms.json`
+   - 100+ mechanism-relevant terms
+   - Categorized by mechanism type
+   - Balanced across domains
 
-2. **Quality Assessment**: `examples/session64_quality_assessment.json`
-   - Score distribution comparison
-   - Extraction hit rate
-   - Mechanism quality samples
-   - Go/no-go recommendation
+2. **Bulk Fetch Script**: `scripts/session65_openalex_bulk_fetch.py`
+   - Checkpoint support
+   - Progress tracking
+   - Error handling
+   - Statistics collection
 
-3. **Documentation Update**
-   - Update PROGRESS.md with Session 64 results
-   - Document decision on OpenAlex usage
-   - Plan next steps based on outcome
+3. **Scale Test Report**: `SESSION65_SCALE_TEST_REPORT.md`
+   - Score distribution analysis
+   - Quality consistency assessment
+   - Domain coverage statistics
+   - Recommendations for 50K fetch
 
 ### Success Criteria
 
 **Minimum**:
-- Fetch 500 papers with abstracts
-- Score all papers for mechanism richness
-- Extract 20+ mechanisms
+- Fetch 3,000+ papers successfully
+- Import to PostgreSQL
+- Score all papers
+- Basic quality assessment
 
 **Target**:
-- 60%+ extraction hit rate on high-value papers
-- 30-50 mechanisms extracted
-- Quality comparable to arXiv corpus
-- Clear go/no-go decision
+- 5,000 papers fetched
+- Average score ≥5.0/10
+- High-value papers ≥70%
+- Quality consistent with Session 64
 
 **Stretch**:
-- Test bulk ingestion of 5,000 papers
-- Automate scoring pipeline
-- Project full-scale metrics
+- 7,500 papers fetched
+- Extract mechanisms from top 100
+- Generate embeddings
+- Project 50K metrics
 
 ### Time Estimate
-- Fetch and import: 30 min
-- Scoring: 30 min
-- Mechanism extraction: 1.5 hours
-- Quality assessment: 30 min
-- Documentation: 30 min
+- Search terms development: 30 min
+- Bulk fetch implementation: 45 min
+- Fetching 5,000 papers: 30 min
+- Import and scoring: 30 min
+- Analysis and reporting: 45 min
 - **Total**: 3 hours
 
-### Next Steps After Session 64
+### Next Steps After Session 65
 
-Based on quality test results:
-- **If quality good**: Session 65 - Implement bulk ingestion (50K papers)
-- **If quality poor**: Session 65 - Test Semantic Scholar or arXiv bulk S3
+Based on scale test results:
+- **If quality consistent**: Session 66 - Begin 50K paper fetch
+- **If quality drops**: Session 66 - Refine search strategy
+- **If technical issues**: Session 66 - Optimize infrastructure
 
 ---
 
 ## Previous Sessions Reference
+
+### Session 64 (2026-02-14) - **COMPLETED** ✅
+- Tested OpenAlex quality with has_abstract filter
+- Average score: 5.65/10 (70% better than arXiv)
+- High-value papers: 76.4%
+- Extracted 20 mechanisms (80% hit rate)
+- **GO Decision**: Proceed with OpenAlex
 
 ### Session 63 (2026-02-14) - **COMPLETED** ⚠️
 - Tested OpenAlex: 2,626 papers/minute (excellent speed)
@@ -119,59 +131,65 @@ Based on quality test results:
 
 ---
 
-## Key Context for Session 64
+## Key Context for Session 65
 
-**OpenAlex Test Results** (Session 63):
+**OpenAlex Proven Quality** (Session 64):
 - Speed: 2,626 papers/minute ✅
-- Abstract coverage: 65.3% ⚠️
-- Topic coverage: 100% ✅
-- Database integration: Working ✅
-- Recommendation: Use with adjusted expectations
+- Quality: 5.65/10 average (70% better than arXiv) ✅
+- High-value density: 76.4% ✅
+- Abstract coverage: 100% with filter ✅
+- Free tier: 100K credits/day ✅
 
 **Current Infrastructure**:
 - PostgreSQL 17.8 + pgvector 0.8.1 operational
-- 2,194 papers + 200 mechanisms already loaded
-- pyalex installed and tested
-- Scoring algorithm from Session 48 available
+- 2,332 papers (2,194 arXiv + 138 OpenAlex)
+- 200 mechanisms with embeddings
+- pyalex installed and working
+- Scoring algorithm validated
 
-**Adjusted Scale-Up Plan**:
-- Target: 30K papers with abstracts (from 50K total)
-- Extract 3K-5K mechanisms (adjusted from 5K-8K)
-- Use topic classification for filtering
-- Supplement with arXiv for high-value gaps
+**Scale-Up Plan**:
+- Target: 50K papers total
+- Expected: 38K high-value papers (≥5/10)
+- Extract from top 10K → 5K-8K mechanisms
+- Generate 1-2M candidate pairs
+- Curate top 1,000 → 200+ discoveries
 
-**Decision Point**:
-- If OpenAlex quality good → proceed with bulk ingestion
-- If quality poor → test alternative sources (Semantic Scholar, arXiv S3)
+**Key Learning from Session 64**:
+- Targeted search with mechanism keywords works
+- `has_abstract=True` filter essential
+- Topic metadata valuable for filtering
+- Quality exceeds random arXiv fetching
 
 ---
 
-## Important Files for Session 64
+## Important Files for Session 65
 
 **Read First**:
 1. **CLAUDE.md** - Core mission and workflow
-2. **SESSION63_OPENALEX_TEST_REPORT.md** - OpenAlex test results and recommendations
-3. **PROGRESS.md** - Session 63 summary
+2. **SESSION64_OPENALEX_QUALITY_REPORT.md** - Quality test results and GO decision
+3. **PROGRESS.md** - Session 64 summary
+4. **SCALE_UP_PLAN.md** - Overall scale-up strategy
 
 **Reference**:
-- `scripts/session63_openalex_test.py` - OpenAlex connection code
-- `scripts/session48_score_papers.py` - Scoring algorithm (if exists)
+- `scripts/session64_openalex_filtered.py` - Working OpenAlex fetch code
+- `examples/session64_quality_assessment.json` - Quality benchmarks
 - `database/schema.sql` - PostgreSQL schema
-- `examples/session63_openalex_results.json` - Test results from Session 63
 
 **Create**:
-- `scripts/session64_openalex_filtered.py` - Filtered query script
-- `examples/session64_quality_assessment.json` - Quality test results
+- `examples/session65_search_terms.json` - 100+ search terms
+- `scripts/session65_openalex_bulk_fetch.py` - Bulk fetch with checkpointing
+- `SESSION65_SCALE_TEST_REPORT.md` - Scale test results
 
 ---
 
 ## Notes for Agent
 
 - PostgreSQL must be running: `brew services start postgresql@17`
-- pyalex already installed: `import pyalex; from pyalex import Works`
-- Use `has_abstract=True` filter to ensure abstracts are available
+- pyalex already installed and configured
+- Use `has_abstract=True` filter for all queries
 - OpenAlex abstract is in `abstract_inverted_index` field (needs reconstruction)
-- Scoring algorithm: Count structural keywords, penalize review/survey papers
-- Focus on extraction quality, not just speed
+- Aim for 50-100 papers per search term
+- Track statistics per search term for optimization
+- Database column is `mechanism_score` not `score`
 
-This session determines if OpenAlex paper quality justifies the speed advantage. The goal is a clear go/no-go decision for bulk ingestion.
+This session validates that OpenAlex quality remains consistent at scale. If successful, we proceed to 50K paper fetch in Session 66.

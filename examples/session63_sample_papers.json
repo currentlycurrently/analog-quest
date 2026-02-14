@@ -1,0 +1,1222 @@
+[
+  {
+    "id": "https://openalex.org/W4321486725",
+    "title": "Information Fusion over Network Dynamics with Unknown Correlations: An Overview",
+    "abstract": "Survey/review study Information Fusion over Network Dynamics with Unknown Correlations: An Overview Wangyan Li 1, and Fuwen Yang 2,* 1 College of Science, University of Shanghai for Science and Technology, Shanghai 200093, China 2 Griffth School of Engineering, Griffth University, Gold Coast Campus, QLD 4222, Australia * Correspondence: fuwen.yang@griffth.edu.au Received: 24 October 2022 Accepted: 22 November 2022 Published: 23 June 2023 Abstract: Unknown correlations (UCs) generally exist in a wide spectrum of practical multi-source information fusion problems, and thereby, their corresponding fusion problems have become one of the most important topics in information fusion domain. During the past three decades, the research on this topic has been growing rapidly and extensively, and, as a result, various important advances have been reported. In this overview, we intend to summarize the culmination of years of development in the field of information fusion under UCs as a roadmap. First, the potential reasons leading to UCs are investigated. According to the unknown nature of correlations, we further divide UCs into two categories, i.e., fully UCs, and partially UCs. For each category, the corresponding fusion methods are reviewed. Next, this roadmap witnesses the recent development of information fusion under UCs in a distributed way thanks to the popularity of distributed sensing technology. In particular, the distributed fusion techniques based on consensus, diffusion, and multi-object tracking strategies for UCs are examined. Finally, some future perspectives on information fusion under UCs are pointed out.",
+    "abstract_available": true,
+    "publication_date": "2023-02-23",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10711",
+        "display_name": "Target Tracking and Data Fusion in Sensor Networks",
+        "score": 0.9958999752998352,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1702",
+          "display_name": "Artificial Intelligence"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12879",
+        "display_name": "Distributed Sensor Networks and Detection Algorithms",
+        "score": 0.9811999797821045,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1705",
+          "display_name": "Computer Networks and Communications"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10320",
+        "display_name": "Neural Networks and Applications",
+        "score": 0.9627000093460083,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1702",
+          "display_name": "Artificial Intelligence"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4389753485",
+    "title": "Memristive Hopfield neural network dynamics with heterogeneous activation functions and its application",
+    "abstract": "",
+    "abstract_available": false,
+    "publication_date": "2023-12-15",
+    "topics": [
+      {
+        "id": "https://openalex.org/T11513",
+        "display_name": "stochastic dynamics and bifurcation",
+        "score": 0.9991000294685364,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3109",
+          "display_name": "Statistical and Nonlinear Physics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11347",
+        "display_name": "Neural Networks Stability and Synchronization",
+        "score": 0.9988999962806702,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1705",
+          "display_name": "Computer Networks and Communications"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10502",
+        "display_name": "Advanced Memory and Neural Computing",
+        "score": 0.9987000226974487,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2208",
+          "display_name": "Electrical and Electronic Engineering"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/22",
+          "display_name": "Engineering"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W3162681761",
+    "title": "Emergent stability in complex network dynamics",
+    "abstract": "",
+    "abstract_available": false,
+    "publication_date": "2023-04-20",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10064",
+        "display_name": "Complex Network Analysis Techniques",
+        "score": 0.9984999895095825,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3109",
+          "display_name": "Statistical and Nonlinear Physics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12592",
+        "display_name": "Opinion Dynamics and Social Influence",
+        "score": 0.9984999895095825,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3109",
+          "display_name": "Statistical and Nonlinear Physics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11270",
+        "display_name": "Complex Systems and Time Series Analysis",
+        "score": 0.9758999943733215,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2002",
+          "display_name": "Economics and Econometrics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/20",
+          "display_name": "Economics, Econometrics and Finance"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4391046241",
+    "title": "Mitochondrial network dynamics in pulmonary disease: Bridging the gap between inflammation, oxidative stress, and bioenergetics",
+    "abstract": "",
+    "abstract_available": false,
+    "publication_date": "2024-01-20",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10301",
+        "display_name": "Mitochondrial Function and Pathology",
+        "score": 0.9987999796867371,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10870",
+        "display_name": "Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis",
+        "score": 0.9954000115394592,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2740",
+          "display_name": "Pulmonary and Respiratory Medicine"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10728",
+        "display_name": "Pulmonary Hypertension Research and Treatments",
+        "score": 0.9941999912261963,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2740",
+          "display_name": "Pulmonary and Respiratory Medicine"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4366601881",
+    "title": "TMS-evoked responses are driven by recurrent large-scale network dynamics",
+    "abstract": "A compelling way to disentangle the complexity of the brain is to measure the effects of spatially and temporally synchronized systematic perturbations. In humans, this can be non-invasively achieved by combining transcranial magnetic stimulation (TMS) and electroencephalography (EEG). Spatiotemporally complex and long-lasting TMS-EEG evoked potential (TEP) waveforms are believed to result from recurrent, re-entrant activity that propagates broadly across multiple cortical and subcortical regions, dispersing from and later re-converging on, the primary stimulation site. However, if we loosely understand the TEP of a TMS-stimulated region as the impulse response function of a noisy underdamped harmonic oscillator, then multiple later activity components (waveform peaks) should be expected even for an isolated network node in the complete absence of recurrent inputs. Thus emerges a critically important question for basic and clinical research on human brain dynamics: what parts of the TEP are due to purely local dynamics, what parts are due to reverberant, re-entrant network activity, and how can we distinguish between the two? To disentangle this, we used source-localized TMS-EEG analyses and whole-brain connectome-based computational modelling. Results indicated that recurrent network feedback begins to drive TEP responses from 100 ms post-stimulation, with earlier TEP components being attributable to local reverberatory activity within the stimulated region. Subject-specific estimation of neurophysiological parameters additionally indicated an important role for inhibitory GABAergic neural populations in scaling cortical excitability levels, as reflected in TEP waveform characteristics. The novel discoveries and new software technologies introduced here should be of broad utility in basic and clinical neuroscience research.",
+    "abstract_available": true,
+    "publication_date": "2023-04-04",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10241",
+        "display_name": "Functional Brain Connectivity Studies",
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10581",
+        "display_name": "Neural dynamics and brain function",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10429",
+        "display_name": "EEG and Brain-Computer Interfaces",
+        "score": 0.9994000196456909,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4384938961",
+    "title": "Orphan quality control shapes network dynamics and gene expression",
+    "abstract": "All eukaryotes require intricate protein networks to translate developmental signals into accurate cell fate decisions. Mutations that disturb interactions between network components often result in disease, but how the composition and dynamics of complex networks are established remains poorly understood. Here, we identify the E3 ligase UBR5 as a signaling hub that helps degrade unpaired subunits of multiple transcriptional regulators that act within a network centered on the c-Myc oncoprotein. Biochemical and structural analyses show that UBR5 binds motifs that only become available upon complex dissociation. By rapidly turning over unpaired transcription factor subunits, UBR5 establishes dynamic interactions between transcriptional regulators that allow cells to effectively execute gene expression while remaining receptive to environmental signals. We conclude that orphan quality control plays an essential role in establishing dynamic protein networks, which may explain the conserved need for protein degradation during transcription and offers opportunities to modulate gene expression in disease.",
+    "abstract_available": true,
+    "publication_date": "2023-07-20",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10222",
+        "display_name": "Genomics and Chromatin Dynamics",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11041",
+        "display_name": "Ubiquitin and proteasome pathways",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12534",
+        "display_name": "Protein Degradation and Inhibitors",
+        "score": 0.9991999864578247,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4390571425",
+    "title": "Aberrant resting-state co-activation network dynamics in major depressive disorder",
+    "abstract": "Abstract Major depressive disorder (MDD) is a globally prevalent and highly disabling disease characterized by dysfunction of large-scale brain networks. Previous studies have found that static functional connectivity is not sufficient to reflect the complicated and time-varying properties of the brain. The underlying dynamic interactions between brain functional networks of MDD remain largely unknown, and it is also unclear whether neuroimaging-based dynamic properties are sufficiently robust to discriminate individuals with MDD from healthy controls since the diagnosis of MDD mainly depends on symptom-based criteria evaluated by clinical observation. Resting-state functional magnetic resonance imaging (fMRI) data of 221 MDD patients and 215 healthy controls were shared by REST-meta-MDD consortium. We investigated the spatial-temporal dynamics of MDD using co-activation pattern analysis and made individual diagnoses using support vector machine (SVM). We found that MDD patients exhibited aberrant dynamic properties (such as dwell time, occurrence rate, transition probability, and entropy of Markov trajectories) in some transient networks including subcortical network (SCN), activated default mode network (DMN), de-activated SCN-cerebellum network, a joint network, activated attention network (ATN), and de-activated DMN-ATN, where some dynamic properties were indicative of depressive symptoms. The trajectories of other networks to deactivated DMN-ATN were more accessible in MDD patients. Subgroup analyses also showed subtle dynamic changes in first-episode drug-na\u00efve (FEDN) MDD patients. Finally, SVM achieved preferable accuracies of 84.69%, 76.77%, and 88.10% in discriminating patients with MDD, FEDN MDD, and recurrent MDD from healthy controls with their dynamic metrics. Our findings reveal that MDD is characterized by aberrant dynamic fluctuations of brain network and the feasibility of discriminating MDD patients using dynamic properties, which provide novel insights into the neural mechanism of MDD.",
+    "abstract_available": true,
+    "publication_date": "2024-01-03",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10241",
+        "display_name": "Functional Brain Connectivity Studies",
+        "score": 0.9994999766349792,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10581",
+        "display_name": "Neural dynamics and brain function",
+        "score": 0.9944000244140625,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T13283",
+        "display_name": "Mental Health Research Topics",
+        "score": 0.9896000027656555,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3205",
+          "display_name": "Experimental and Cognitive Psychology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/32",
+          "display_name": "Psychology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4406100277",
+    "title": "From Homeostasis to Neuroinflammation: Insights into Cellular and Molecular Interactions and Network Dynamics",
+    "abstract": "Neuroinflammation is a complex and multifaceted process that involves dynamic interactions among various cellular and molecular components. This sophisticated interplay supports both environmental adaptability and system resilience in the central nervous system (CNS) but may be disrupted during neuroinflammation. In this article, we first characterize the key players in neuroimmune interactions, including microglia, astrocytes, neurons, immune cells, and essential signaling molecules such as cytokines, neurotransmitters, extracellular matrix (ECM) components, and neurotrophic factors. Under homeostatic conditions, these elements promote cellular cooperation and stability, whereas in neuroinflammatory states, they drive adaptive responses that may become pathological if dysregulated. We examine how neuroimmune interactions, mediated through these cellular actors and signaling pathways, create complex networks that regulate CNS functionality and respond to injury or inflammation. To further elucidate these dynamics, we provide insights using a multilayer network (MLN) approach, highlighting the interconnected nature of neuroimmune interactions under both inflammatory and homeostatic conditions. This perspective aims to enhance our understanding of neuroimmune communication and the mechanisms underlying shifts from homeostasis to neuroinflammation. Applying an MLN approach offers a more integrative view of CNS resilience and adaptability, helping to clarify inflammatory processes and identify novel intervention points within the layered landscape of neuroinflammatory responses.",
+    "abstract_available": true,
+    "publication_date": "2025-01-05",
+    "topics": [
+      {
+        "id": "https://openalex.org/T11266",
+        "display_name": "Neuroinflammation and Neurodegeneration Mechanisms",
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2808",
+          "display_name": "Neurology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11337",
+        "display_name": "Tryptophan and brain disorders",
+        "score": 0.9952999949455261,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2803",
+          "display_name": "Biological Psychiatry"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10529",
+        "display_name": "Stress Responses and Cortisol",
+        "score": 0.993399977684021,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2802",
+          "display_name": "Behavioral Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4368339297",
+    "title": "The structure and dynamics of networks with higher order interactions",
+    "abstract": "",
+    "abstract_available": false,
+    "publication_date": "2023-05-01",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10064",
+        "display_name": "Complex Network Analysis Techniques",
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3109",
+          "display_name": "Statistical and Nonlinear Physics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12592",
+        "display_name": "Opinion Dynamics and Social Influence",
+        "score": 0.9944999814033508,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3109",
+          "display_name": "Statistical and Nonlinear Physics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10887",
+        "display_name": "Bioinformatics and Genomic Networks",
+        "score": 0.9932000041007996,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4321602013",
+    "title": "Intra\u2013 and inter\u2013hemispheric network dynamics supporting object recognition and speech production",
+    "abstract": "We built normative brain atlases that animate millisecond-scale intra- and inter-hemispheric white matter-level connectivity dynamics supporting object recognition and speech production. We quantified electrocorticographic modulations during three naming tasks using event-related high-gamma activity from 1,114 nonepileptogenic intracranial electrodes (i.e., non-lesional areas unaffected by epileptiform discharges). Using this electrocorticography data, we visualized functional connectivity modulations defined as significant naming-related high-gamma modulations occurring simultaneously at two sites connected by direct white matter streamlines on diffusion-weighted imaging tractography. Immediately after stimulus onset, intra- and inter-hemispheric functional connectivity enhancements were confined mainly across modality-specific perceptual regions. During response preparation, left intra-hemispheric connectivity enhancements propagated in a posterior-to-anterior direction, involving the left precentral and prefrontal areas. After overt response onset, inter- and intra-hemispheric connectivity enhancements mainly encompassed precentral, postcentral, and superior-temporal (STG) gyri. We found task-specific connectivity enhancements during response preparation as follows. Picture naming enhanced activity along the left arcuate fasciculus between the inferior-temporal and precentral/posterior inferior-frontal (pIFG) gyri. Nonspeech environmental sound naming augmented functional connectivity via the left inferior longitudinal and fronto-occipital fasciculi between the medial-occipital and STG/pIFG. Auditory descriptive naming task enhanced usage of the left frontal U-fibers, involving the middle-frontal gyrus. Taken together, the commonly observed network enhancements include inter-hemispheric connectivity optimizing perceptual processing exerted in each hemisphere, left intra-hemispheric connectivity supporting semantic and lexical processing, and inter-hemispheric connectivity for symmetric oral movements during overt speech. Our atlases improve the currently available models of object recognition and speech production by adding neural dynamics via direct intra- and inter-hemispheric white matter tracts.",
+    "abstract_available": true,
+    "publication_date": "2023-02-22",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10241",
+        "display_name": "Functional Brain Connectivity Studies",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10788",
+        "display_name": "Neuroscience and Music Perception",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11304",
+        "display_name": "Advanced Neuroimaging Techniques and Applications",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2741",
+          "display_name": "Radiology, Nuclear Medicine and Imaging"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4393190279",
+    "title": "Intensity- and frequency-specific effects of transcranial alternating current stimulation are explained by network dynamics",
+    "abstract": "Abstract Objective . Transcranial alternating current stimulation (tACS) can be used to non-invasively entrain neural activity and thereby cause changes in local neural oscillatory power. Despite its increased use in cognitive and clinical neuroscience, the fundamental mechanisms of tACS are still not fully understood. Approach . We developed a computational neuronal network model of two-compartment pyramidal neurons (PY) and inhibitory interneurons, which mimic the local cortical circuits. We modeled tACS with electric field strengths that are achievable in human applications. We then simulated intrinsic network activity and measured neural entrainment to investigate how tACS modulates ongoing endogenous oscillations. Main results . The intensity-specific effects of tACS are non-linear. At low intensities (&lt;0.3 mV mm \u22121 ), tACS desynchronizes neural firing relative to the endogenous oscillations. At higher intensities (&gt;0.3 mV mm \u22121 ), neurons are entrained to the exogenous electric field. We then further explore the stimulation parameter space and find that the entrainment of ongoing cortical oscillations also depends on stimulation frequency by following an Arnold tongue. Moreover, neuronal networks can amplify the tACS-induced entrainment via synaptic coupling and network effects. Our model shows that PY are directly entrained by the exogenous electric field and drive the inhibitory neurons. Significance . The results presented in this study provide a mechanistic framework for understanding the intensity- and frequency-specific effects of oscillating electric fields on neuronal networks. This is crucial for rational parameter selection for tACS in cognitive studies and clinical applications.",
+    "abstract_available": true,
+    "publication_date": "2024-03-26",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10581",
+        "display_name": "Neural dynamics and brain function",
+        "score": 0.9994000196456909,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10429",
+        "display_name": "EEG and Brain-Computer Interfaces",
+        "score": 0.9988999962806702,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10614",
+        "display_name": "Transcranial Magnetic Stimulation Studies",
+        "score": 0.9986000061035156,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2808",
+          "display_name": "Neurology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4377019896",
+    "title": "Cytokines, synaptic plasticity and network dynamics: a matter of balance",
+    "abstract": "The modern view of the immune system as a sensitizing and modulating machinery of the central nervous system is now well recognized. However, the specific mechanisms underlying this fine crosstalk have yet to be fully disentangled. To control cognitive function and behavior, the two systems are engaged in a subtle interacting act. In this scenario, a dual action of pro-inflammatory cytokines in the modulation of brain network connections is emerging. Pro-inflammatory cytokines are indeed required to express physiological plasticity in the hippocampal network while being detrimental when over-expressed during uncontrolled inflammatory processes. In this dynamic equilibrium, synaptic functioning and the performance of neural networks are ensured by maintaining an appropriate balance between pro- and anti-inflammatory molecules in the central nervous system microenvironment.",
+    "abstract_available": true,
+    "publication_date": "2023-04-10",
+    "topics": [
+      {
+        "id": "https://openalex.org/T11266",
+        "display_name": "Neuroinflammation and Neurodegeneration Mechanisms",
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2808",
+          "display_name": "Neurology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10077",
+        "display_name": "Neuroscience and Neuropharmacology Research",
+        "score": 0.9976000189781189,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2804",
+          "display_name": "Cellular and Molecular Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11337",
+        "display_name": "Tryptophan and brain disorders",
+        "score": 0.9847999811172485,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2803",
+          "display_name": "Biological Psychiatry"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4377099408",
+    "title": "Network dynamics and action space",
+    "abstract": "Purpose In today\u2019s business settings, most firms strive to closely integrate their resources and activities with those of their business partners. However, these linkages tend to create lock-in effects when changes are needed. In such situations, firms need to generate new space for action. The purpose of this paper is twofold: analysis of potential action spaces for restructuring; and examination of how action spaces can be exploited and the consequences accompanying this implementation. Design/methodology/approach Network dynamics originate from changes in the network interdependencies. This paper is focused on the role of the three dual connections \u2013 actors\u2013activities, actors\u2013resources and activities\u2013resources, identified as network vectors. In the framing of the study, these network vectors are combined with managerial action expressed in terms of networking and network outcome. This framework is then used for the analysis of major restructuring of the car industries in the USA and Europe at the end of the 1900s. Findings This study shows that the restructuring of the car industry can be explained by modifications in the three network vectors. Managerial action through changes of the vector features generated new action space contributing to the transition of the automotive network. The key to successful exploitation of action space was interaction \u2013 with individual business partners, in triadic constellations, as well as on the network level. Originality/value This paper presents a new view of network dynamics by relying on the three network vectors. These concepts were developed in the early 1990s. This far, however, they have been used only to a limited extent.",
+    "abstract_available": true,
+    "publication_date": "2023-05-19",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10003",
+        "display_name": "Innovation and Knowledge Management",
+        "score": 0.9987000226974487,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1408",
+          "display_name": "Strategy and Management"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/14",
+          "display_name": "Business, Management and Accounting"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T13402",
+        "display_name": "Business Strategy and Innovation",
+        "score": 0.9983000159263611,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1408",
+          "display_name": "Strategy and Management"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/14",
+          "display_name": "Business, Management and Accounting"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12659",
+        "display_name": "Innovation Diffusion and Forecasting",
+        "score": 0.9801999926567078,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1803",
+          "display_name": "Management Science and Operations Research"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/18",
+          "display_name": "Decision Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4390706317",
+    "title": "Huntington\u2019s disease affects mitochondrial network dynamics predisposing to pathogenic mitochondrial DNA mutations",
+    "abstract": "Abstract Huntington\u2019s disease (HD) predominantly affects the brain, causing a mixed movement disorder, cognitive decline and behavioural abnormalities. It also causes a peripheral phenotype involving skeletal muscle. Mitochondrial dysfunction has been reported in tissues of HD models, including skeletal muscle, and lymphoblast and fibroblast cultures from patients with HD. Mutant huntingtin protein (mutHTT) expression can impair mitochondrial quality control and accelerate mitochondrial ageing. Here, we obtained fresh human skeletal muscle, a post-mitotic tissue expressing the mutated HTT allele at physiological levels since birth, and primary cell lines from HTT CAG repeat expansion mutation carriers and matched healthy volunteers to examine whether such a mitochondrial phenotype exists in human HD. Using ultra-deep mitochondrial DNA (mtDNA) sequencing, we showed an accumulation of mtDNA mutations affecting oxidative phosphorylation. Tissue proteomics indicated impairments in mtDNA maintenance with increased mitochondrial biogenesis of less efficient oxidative phosphorylation (lower complex I and IV activity). In full-length mutHTT expressing primary human cell lines, fission-inducing mitochondrial stress resulted in normal mitophagy. In contrast, expression of high levels of N-terminal mutHTT fragments promoted mitochondrial fission and resulted in slower, less dynamic mitophagy. Expression of high levels of mutHTT fragments due to somatic nuclear HTT CAG instability can thus affect mitochondrial network dynamics and mitophagy, leading to pathogenic mtDNA mutations. We show that life-long expression of mutant HTT causes a mitochondrial phenotype indicative of mtDNA instability in fresh post-mitotic human skeletal muscle. Thus, genomic instability may not be limited to nuclear DNA, where it results in somatic expansion of the HTT CAG repeat length in particularly vulnerable cells such as striatal neurons. In addition to efforts targeting the causative mutation, promoting mitochondrial health may be a complementary strategy in treating diseases with DNA instability such as HD.",
+    "abstract_available": true,
+    "publication_date": "2024-01-09",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10949",
+        "display_name": "Genetic Neurodegenerative Diseases",
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2804",
+          "display_name": "Cellular and Molecular Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10301",
+        "display_name": "Mitochondrial Function and Pathology",
+        "score": 0.9988999962806702,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10441",
+        "display_name": "Muscle Physiology and Disorders",
+        "score": 0.944599986076355,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4403013503",
+    "title": "Evolutionarily conserved fMRI network dynamics in the mouse, macaque, and human brain",
+    "abstract": "Evolutionarily relevant networks have been previously described in several mammalian species using time-averaged analyses of fMRI time-series. However, fMRI network activity is highly dynamic and continually evolves over timescales of seconds. Whether the dynamic organization of resting-state fMRI network activity is conserved across mammalian species remains unclear. Using frame-wise clustering of fMRI time-series, we find that intrinsic fMRI network dynamics in awake male macaques and humans is characterized by recurrent transitions between a set of 4 dominant, neuroanatomically homologous fMRI coactivation modes (C-modes), three of which are also plausibly represented in the male rodent brain. Importantly, in all species C-modes exhibit species-invariant dynamic features, including preferred occurrence at specific phases of fMRI global signal fluctuations, and a state transition structure compatible with infraslow coupled oscillator dynamics. Moreover, dominant C-mode occurrence reconstitutes the static organization of the fMRI connectome in all species, and is predictive of ranking of corresponding fMRI connectivity gradients. These results reveal a set of species-invariant principles underlying the dynamic organization of fMRI networks in mammalian species, and offer novel opportunities to relate fMRI network findings across the phylogenetic tree.",
+    "abstract_available": true,
+    "publication_date": "2024-10-01",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10241",
+        "display_name": "Functional Brain Connectivity Studies",
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10581",
+        "display_name": "Neural dynamics and brain function",
+        "score": 0.9984999895095825,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10378",
+        "display_name": "Advanced MRI Techniques and Applications",
+        "score": 0.9945999979972839,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2741",
+          "display_name": "Radiology, Nuclear Medicine and Imaging"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4324352288",
+    "title": "Reconstructing Network Dynamics of Coupled Discrete Chaotic Units from Data",
+    "abstract": "Reconstructing network dynamics from data is crucial for predicting the changes in the dynamics of complex systems such as neuron networks; however, previous research has shown that the reconstruction is possible under strong constraints such as the need for lengthy data or small system size. Here, we present a recovery scheme blending theoretical model reduction and sparse recovery to identify the governing equations and the interactions of weakly coupled chaotic maps on complex networks, easing unrealistic constraints for real-world applications. Learning dynamics and connectivity lead to detecting critical transitions for parameter changes. We apply our technique to realistic neuronal systems with and without noise on a real mouse neocortex and artificial networks.",
+    "abstract_available": true,
+    "publication_date": "2023-03-15",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10581",
+        "display_name": "Neural dynamics and brain function",
+        "score": 0.9959999918937683,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10320",
+        "display_name": "Neural Networks and Applications",
+        "score": 0.9860000014305115,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1702",
+          "display_name": "Artificial Intelligence"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11206",
+        "display_name": "Model Reduction and Neural Networks",
+        "score": 0.9843999743461609,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3109",
+          "display_name": "Statistical and Nonlinear Physics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4390691844",
+    "title": "Vinylogous Urea\u2014Urethane Vitrimers: Accelerating and Inhibiting Network Dynamics through Hydrogen Bonding",
+    "abstract": "Abstract Vinylogous urethane (VU O ) based polymer networks are widely used as catalyst\u2010free vitrimers that show rapid covalent bond exchange at elevated temperatures. In solution, vinylogous ureas (VU N ) undergo much faster bond exchange than VU O and are highly dynamic at room temperature. However, this difference in reactivity is not observed in their respective dynamic polymer networks, as VU O and VU N vitrimers prepared herein with very similar macromolecular architectures show comparable stress relaxation and creep behavior. However, by using mixtures of VU O and VU N linkages within the same network, the dynamic reactions can be accelerated by an order of magnitude. The results can be rationalized by the effect of intermolecular hydrogen bonding, which is absent in VU O vitrimers, but is very pronounced for vinylogous urea moieties. At low concentrations of VU N , these hydrogen bonds act as catalysts for covalent bond exchange, while at high concentration, they provide a pervasive vinylogous urea \u2010 urethane (VU) network of strong non\u2010covalent interactions, giving rise to phase separation and inhibiting polymer chain dynamics. This offers a straightforward design principle for dynamic polymer materials, showing at the same time the possible additive and synergistic effects of supramolecular and dynamic covalent polymer networks.",
+    "abstract_available": true,
+    "publication_date": "2024-01-10",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10810",
+        "display_name": "Polymer composites and self-healing",
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2507",
+          "display_name": "Polymers and Plastics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/25",
+          "display_name": "Materials Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11708",
+        "display_name": "Photochromic and Fluorescence Chemistry",
+        "score": 0.9986000061035156,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2505",
+          "display_name": "Materials Chemistry"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/25",
+          "display_name": "Materials Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11593",
+        "display_name": "Carbon dioxide utilization in catalysis",
+        "score": 0.9975000023841858,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1508",
+          "display_name": "Process Chemistry and Technology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/15",
+          "display_name": "Chemical Engineering"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4383198678",
+    "title": "M-current modulation of cortical slow oscillations: Network dynamics and computational modeling",
+    "abstract": "The slow oscillation is a synchronized network activity expressed by the cortical network in slow wave sleep and under anesthesia. Waking up requires a transition from this synchronized brain state to a desynchronized one. Cholinergic innervation is critical for the transition from slow-wave-sleep to wakefulness, and muscarinic action is largely exerted through the muscarinic-sensitive potassium current (M-current) block. We investigated the dynamical impact of blocking the M-current on slow oscillations, both in cortical slices and in a cortical network computational model. Blocking M-current resulted in an elongation of Up states (by four times) and in a significant firing rate increase, reflecting an increased network excitability, albeit no epileptiform discharges occurred. These effects were replicated in a biophysical cortical model, where a parametric reduction of the M-current resulted in a progressive elongation of Up states and firing rate. All neurons, and not only those modeled with M-current, increased their firing rates due to network recurrency. Further increases in excitability induced even longer Up states, approaching the microarousals described in the transition towards wakefulness. Our results bridge an ionic current with network modulation, providing a mechanistic insight into network dynamics of awakening.",
+    "abstract_available": true,
+    "publication_date": "2023-07-05",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10581",
+        "display_name": "Neural dynamics and brain function",
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10077",
+        "display_name": "Neuroscience and Neuropharmacology Research",
+        "score": 0.9994000196456909,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2804",
+          "display_name": "Cellular and Molecular Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12236",
+        "display_name": "Photoreceptor and optogenetics research",
+        "score": 0.9993000030517578,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2804",
+          "display_name": "Cellular and Molecular Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4313527902",
+    "title": "Mindful attention promotes control of brain network dynamics for self-regulation and discontinues the past from the present",
+    "abstract": "Mindful attention is characterized by acknowledging the present experience as a transient mental event. Early stages of mindfulness practice may require greater neural effort for later efficiency. Early effort may self-regulate behavior and focalize the present, but this understanding lacks a computational explanation. Here we used network control theory as a model of how external control inputs\u2014operationalizing effort\u2014distribute changes in neural activity evoked during mindful attention across the white matter network. We hypothesized that individuals with greater network controllability, thereby efficiently distributing control inputs, effectively self-regulate behavior. We further hypothesized that brain regions that utilize greater control input exhibit shorter intrinsic timescales of neural activity. Shorter timescales characterize quickly discontinuing past processing to focalize the present. We tested these hypotheses in a randomized controlled study that primed participants to either mindfully respond or naturally react to alcohol cues during fMRI and administered text reminders and measurements of alcohol consumption during 4 wk postscan. We found that participants with greater network controllability moderated alcohol consumption. Mindful regulation of alcohol cues, compared to one\u2019s own natural reactions, reduced craving, but craving did not differ from the baseline group. Mindful regulation of alcohol cues, compared to the natural reactions of the baseline group, involved more-effortful control of neural dynamics across cognitive control and attention subnetworks. This effort persisted in the natural reactions of the mindful group compared to the baseline group. More-effortful neural states had shorter timescales than less effortful states, offering an explanation for how mindful attention promotes being present.",
+    "abstract_available": true,
+    "publication_date": "2023-01-03",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10708",
+        "display_name": "Mindfulness and Compassion Interventions",
+        "score": 0.9988999962806702,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3203",
+          "display_name": "Clinical Psychology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/32",
+          "display_name": "Psychology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10853",
+        "display_name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
+        "score": 0.9968000054359436,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3205",
+          "display_name": "Experimental and Cognitive Psychology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/32",
+          "display_name": "Psychology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T13219",
+        "display_name": "Mind wandering and attention",
+        "score": 0.9930999875068665,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2805",
+          "display_name": "Cognitive Neuroscience"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/28",
+          "display_name": "Neuroscience"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  },
+  {
+    "id": "https://openalex.org/W4401778528",
+    "title": "Transcriptional network dynamics in early T cell development",
+    "abstract": "The rate at which cells enter the T cell pathway depends not only on the immigration of hematopoietic precursors into the strong Notch signaling environment of the thymus but also on the kinetics with which each individual precursor cell reaches T-lineage commitment once it arrives. Notch triggers a complex, multistep gene regulatory network in the cells in which the steps are stereotyped but the transition speeds between steps are variable. Progenitor-associated transcription factors delay T-lineage differentiation even while Notch-induced transcription factors within the same cells push differentiation forward. Progress depends on regulator cross-repression, on breaching chromatin barriers, and on shifting, competitive collaborations between stage-specific and stably expressed transcription factors, as reviewed here.",
+    "abstract_available": true,
+    "publication_date": "2024-08-21",
+    "topics": [
+      {
+        "id": "https://openalex.org/T10031",
+        "display_name": "T-cell and B-cell Immunology",
+        "score": 0.9994999766349792,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2403",
+          "display_name": "Immunology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/24",
+          "display_name": "Immunology and Microbiology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11020",
+        "display_name": "Immune Cell Function and Interaction",
+        "score": 0.9979000091552734,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2403",
+          "display_name": "Immunology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/24",
+          "display_name": "Immunology and Microbiology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11491",
+        "display_name": "CAR-T cell therapy research",
+        "score": 0.9952999949455261,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2730",
+          "display_name": "Oncology"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      }
+    ],
+    "keyword": "network dynamics"
+  }
+]

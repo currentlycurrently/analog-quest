@@ -1,0 +1,412 @@
+{
+  "timestamp": "2026-02-14T22:24:46.255714",
+  "basic_test": {
+    "status": "success",
+    "query_time": 2.2535560131073,
+    "works_found": 5,
+    "fields": [
+      "id",
+      "doi",
+      "title",
+      "display_name",
+      "relevance_score",
+      "publication_year",
+      "publication_date",
+      "ids",
+      "language",
+      "primary_location",
+      "type",
+      "indexed_in",
+      "open_access",
+      "authorships",
+      "institutions",
+      "countries_distinct_count",
+      "institutions_distinct_count",
+      "corresponding_author_ids",
+      "corresponding_institution_ids",
+      "apc_list",
+      "apc_paid",
+      "fwci",
+      "has_fulltext",
+      "cited_by_count",
+      "citation_normalized_percentile",
+      "cited_by_percentile_year",
+      "biblio",
+      "is_retracted",
+      "is_paratext",
+      "is_xpac",
+      "primary_topic",
+      "topics",
+      "keywords",
+      "concepts",
+      "mesh",
+      "locations_count",
+      "locations",
+      "best_oa_location",
+      "sustainable_development_goals",
+      "awards",
+      "funders",
+      "has_content",
+      "content_urls",
+      "referenced_works_count",
+      "referenced_works",
+      "related_works",
+      "abstract_inverted_index",
+      "counts_by_year",
+      "updated_date",
+      "created_date"
+    ],
+    "missing_critical": []
+  },
+  "data_quality": {
+    "total_papers": 150,
+    "with_abstracts": 98,
+    "abstract_rate": 65.33333333333333,
+    "with_topics": 150,
+    "topic_rate": 100.0,
+    "fetch_time": 9.08635687828064,
+    "sample_papers": [
+      {
+        "id": "https://openalex.org/W4321486725",
+        "title": "Information Fusion over Network Dynamics with Unknown Correlations: An Overview",
+        "abstract": "Survey/review study Information Fusion over Network Dynamics with Unknown Correlations: An Overview Wangyan Li 1, and Fuwen Yang 2,* 1 College of Science, University of Shanghai for Science and Technology, Shanghai 200093, China 2 Griffth School of Engineering, Griffth University, Gold Coast Campus, QLD 4222, Australia * Correspondence: fuwen.yang@griffth.edu.au Received: 24 October 2022 Accepted: 22 November 2022 Published: 23 June 2023 Abstract: Unknown correlations (UCs) generally exist in a wide spectrum of practical multi-source information fusion problems, and thereby, their corresponding fusion problems have become one of the most important topics in information fusion domain. During the past three decades, the research on this topic has been growing rapidly and extensively, and, as a result, various important advances have been reported. In this overview, we intend to summarize the culmination of years of development in the field of information fusion under UCs as a roadmap. First, the potential reasons leading to UCs are investigated. According to the unknown nature of correlations, we further divide UCs into two categories, i.e., fully UCs, and partially UCs. For each category, the corresponding fusion methods are reviewed. Next, this roadmap witnesses the recent development of information fusion under UCs in a distributed way thanks to the popularity of distributed sensing technology. In particular, the distributed fusion techniques based on consensus, diffusion, and multi-object tracking strategies for UCs are examined. Finally, some future perspectives on information fusion under UCs are pointed out.",
+        "abstract_available": true,
+        "publication_date": "2023-02-23",
+        "topics": [
+          {
+            "id": "https://openalex.org/T10711",
+            "display_name": "Target Tracking and Data Fusion in Sensor Networks",
+            "score": 0.9958999752998352,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T12879",
+            "display_name": "Distributed Sensor Networks and Detection Algorithms",
+            "score": 0.9811999797821045,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1705",
+              "display_name": "Computer Networks and Communications"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10320",
+            "display_name": "Neural Networks and Applications",
+            "score": 0.9627000093460083,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keyword": "network dynamics"
+      },
+      {
+        "id": "https://openalex.org/W4389753485",
+        "title": "Memristive Hopfield neural network dynamics with heterogeneous activation functions and its application",
+        "abstract": "",
+        "abstract_available": false,
+        "publication_date": "2023-12-15",
+        "topics": [
+          {
+            "id": "https://openalex.org/T11513",
+            "display_name": "stochastic dynamics and bifurcation",
+            "score": 0.9991000294685364,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3109",
+              "display_name": "Statistical and Nonlinear Physics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/31",
+              "display_name": "Physics and Astronomy"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11347",
+            "display_name": "Neural Networks Stability and Synchronization",
+            "score": 0.9988999962806702,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1705",
+              "display_name": "Computer Networks and Communications"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10502",
+            "display_name": "Advanced Memory and Neural Computing",
+            "score": 0.9987000226974487,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2208",
+              "display_name": "Electrical and Electronic Engineering"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/22",
+              "display_name": "Engineering"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keyword": "network dynamics"
+      },
+      {
+        "id": "https://openalex.org/W3162681761",
+        "title": "Emergent stability in complex network dynamics",
+        "abstract": "",
+        "abstract_available": false,
+        "publication_date": "2023-04-20",
+        "topics": [
+          {
+            "id": "https://openalex.org/T10064",
+            "display_name": "Complex Network Analysis Techniques",
+            "score": 0.9984999895095825,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3109",
+              "display_name": "Statistical and Nonlinear Physics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/31",
+              "display_name": "Physics and Astronomy"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T12592",
+            "display_name": "Opinion Dynamics and Social Influence",
+            "score": 0.9984999895095825,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3109",
+              "display_name": "Statistical and Nonlinear Physics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/31",
+              "display_name": "Physics and Astronomy"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11270",
+            "display_name": "Complex Systems and Time Series Analysis",
+            "score": 0.9758999943733215,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2002",
+              "display_name": "Economics and Econometrics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keyword": "network dynamics"
+      },
+      {
+        "id": "https://openalex.org/W4391046241",
+        "title": "Mitochondrial network dynamics in pulmonary disease: Bridging the gap between inflammation, oxidative stress, and bioenergetics",
+        "abstract": "",
+        "abstract_available": false,
+        "publication_date": "2024-01-20",
+        "topics": [
+          {
+            "id": "https://openalex.org/T10301",
+            "display_name": "Mitochondrial Function and Pathology",
+            "score": 0.9987999796867371,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1312",
+              "display_name": "Molecular Biology"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/13",
+              "display_name": "Biochemistry, Genetics and Molecular Biology"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/1",
+              "display_name": "Life Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10870",
+            "display_name": "Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis",
+            "score": 0.9954000115394592,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2740",
+              "display_name": "Pulmonary and Respiratory Medicine"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10728",
+            "display_name": "Pulmonary Hypertension Research and Treatments",
+            "score": 0.9941999912261963,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2740",
+              "display_name": "Pulmonary and Respiratory Medicine"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          }
+        ],
+        "keyword": "network dynamics"
+      },
+      {
+        "id": "https://openalex.org/W4366601881",
+        "title": "TMS-evoked responses are driven by recurrent large-scale network dynamics",
+        "abstract": "A compelling way to disentangle the complexity of the brain is to measure the effects of spatially and temporally synchronized systematic perturbations. In humans, this can be non-invasively achieved by combining transcranial magnetic stimulation (TMS) and electroencephalography (EEG). Spatiotemporally complex and long-lasting TMS-EEG evoked potential (TEP) waveforms are believed to result from recurrent, re-entrant activity that propagates broadly across multiple cortical and subcortical regions, dispersing from and later re-converging on, the primary stimulation site. However, if we loosely understand the TEP of a TMS-stimulated region as the impulse response function of a noisy underdamped harmonic oscillator, then multiple later activity components (waveform peaks) should be expected even for an isolated network node in the complete absence of recurrent inputs. Thus emerges a critically important question for basic and clinical research on human brain dynamics: what parts of the TEP are due to purely local dynamics, what parts are due to reverberant, re-entrant network activity, and how can we distinguish between the two? To disentangle this, we used source-localized TMS-EEG analyses and whole-brain connectome-based computational modelling. Results indicated that recurrent network feedback begins to drive TEP responses from 100 ms post-stimulation, with earlier TEP components being attributable to local reverberatory activity within the stimulated region. Subject-specific estimation of neurophysiological parameters additionally indicated an important role for inhibitory GABAergic neural populations in scaling cortical excitability levels, as reflected in TEP waveform characteristics. The novel discoveries and new software technologies introduced here should be of broad utility in basic and clinical neuroscience research.",
+        "abstract_available": true,
+        "publication_date": "2023-04-04",
+        "topics": [
+          {
+            "id": "https://openalex.org/T10241",
+            "display_name": "Functional Brain Connectivity Studies",
+            "score": 0.9998999834060669,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2805",
+              "display_name": "Cognitive Neuroscience"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/28",
+              "display_name": "Neuroscience"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/1",
+              "display_name": "Life Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10581",
+            "display_name": "Neural dynamics and brain function",
+            "score": 0.9998000264167786,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2805",
+              "display_name": "Cognitive Neuroscience"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/28",
+              "display_name": "Neuroscience"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/1",
+              "display_name": "Life Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10429",
+            "display_name": "EEG and Brain-Computer Interfaces",
+            "score": 0.9994000196456909,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2805",
+              "display_name": "Cognitive Neuroscience"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/28",
+              "display_name": "Neuroscience"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/1",
+              "display_name": "Life Sciences"
+            }
+          }
+        ],
+        "keyword": "network dynamics"
+      }
+    ]
+  },
+  "speed_test": {
+    "papers_fetched": 1000,
+    "total_time": 22.850422143936157,
+    "papers_per_second": 43.7628676486124,
+    "papers_per_minute": 2625.772058916744,
+    "est_time_50k_minutes": 19.042018453280132,
+    "batch_times": [
+      4.0531158447265625e-06,
+      7.152557373046875e-06,
+      3.814697265625e-06,
+      1.6689300537109375e-06,
+      2.86102294921875e-06,
+      5.0067901611328125e-06,
+      3.0994415283203125e-06,
+      3.0994415283203125e-06,
+      1.9073486328125e-06,
+      4.0531158447265625e-06
+    ]
+  },
+  "database_test": {
+    "inserted": 7,
+    "duplicates": 0,
+    "errors": 3,
+    "import_time": 0.020172834396362305,
+    "avg_time_per_paper": 0.0020172834396362306
+  },
+  "feasibility": {
+    "all_tests_pass": false,
+    "time_50k_hours": 0.31736697422133553,
+    "recommendation": "NOT FEASIBLE - Consider alternative sources",
+    "status": "not_feasible",
+    "basic_ok": true,
+    "quality_ok": false,
+    "speed_ok": true,
+    "db_ok": true
+  }
+}

@@ -68,6 +68,48 @@ Over 6 months, build analog.quest:
   5. Commit the archiving changes
 - **Maintain rolling window**: Keep most recent ~10-15 sessions in main PROGRESS.md for easy reading
 
+### Discovery Tracking Protocol (NEW - Session 59)
+
+**Critical lesson from Session 58**: We discovered 54% duplication because we had no tracking system for discovered pairs across sessions.
+
+**Before EVERY curation session:**
+1. Run `python scripts/check_duplicates.py <candidates_file.json>` to filter already-discovered pairs
+2. Only curate the filtered (NEW) candidates
+3. This prevents wasting time re-curating the same high-quality pairs
+
+**After EVERY curation session:**
+1. Add newly discovered pairs to `app/data/discovered_pairs.json`
+2. Record: paper_1_id, paper_2_id, session number, rating, similarity
+3. Commit the tracking file along with discovery files
+4. Update the metadata.total_pairs count
+
+**Why this matters:**
+- Session 58 audit revealed that the same paper pairs were being "discovered" 2-6 times across different sessions
+- Root cause: Cumulative mechanism pools + no deduplication tracking = rediscovery
+- 56 out of 72 "new" discoveries (Sessions 47-57) were duplicates of the 30 baseline discoveries
+- Ground truth: 46 unique discoveries (not 101!)
+- This protocol prevents future duplication and wasted curation effort
+
+**Tracking file format** (`app/data/discovered_pairs.json`):
+```json
+{
+  "metadata": {
+    "last_updated": "2026-02-14",
+    "total_pairs": 46,
+    "description": "Tracks all discovered paper pairs"
+  },
+  "discovered_pairs": [
+    {
+      "paper_1_id": 525,
+      "paper_2_id": 540,
+      "similarity": 0.7364,
+      "rating": "excellent",
+      "discovered_in_session": 38
+    }
+  ]
+}
+```
+
 ## YOUR CONSTRAINTS
 
 ### Technical:

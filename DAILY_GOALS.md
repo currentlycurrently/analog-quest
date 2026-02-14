@@ -4,93 +4,101 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 63 Goals - OpenAlex CLI Testing
+## Session 64 Goals - OpenAlex Quality Test with Filtered Queries
 
-**Mission**: Test OpenAlex for bulk data ingestion to validate feasibility for 50K paper fetch
+**Mission**: Test mechanism extraction quality on OpenAlex papers with abstracts, make go/no-go decision
 
-### Context from Session 62
-- PostgreSQL + pgvector infrastructure complete ✓
-- Database ready for scale (50K papers, 5K-8K mechanisms)
-- Migration from SQLite successful (2,194 papers, 200 mechanisms)
-- Next step: Test bulk data source for scale-up
+### Context from Session 63
+- OpenAlex tested: 2,626 papers/minute speed (excellent) ✅
+- Abstract coverage: 65.3% (below 80% target) ⚠️
+- Topic coverage: 100% (all papers classified) ✅
+- Recommendation: Use with adjusted expectations
+- Next step: Test quality with has_abstract filter
 
 ### Primary Goals
 
-1. **Install and Configure OpenAlex**
-   - Install OpenAlex Python client: `pip install pyalex`
-   - Configure API access (no key needed for basic use)
-   - Test basic connection and queries
+1. **Fetch 500 OpenAlex Papers with Abstracts**
+   - Use `has_abstract=True` filter
+   - Target mechanism-rich topics (network dynamics, phase transitions, etc.)
+   - Mix of domains (CS, Physics, Biology)
+   - Store in PostgreSQL
 
-2. **Test Data Quality**
-   - Fetch 100 papers with mechanism-relevant keywords
-   - Check data completeness (title, abstract, metadata)
-   - Verify domain classification accuracy
-   - Assess abstract quality for mechanism extraction
+2. **Score Papers for Mechanism Richness**
+   - Apply existing scoring algorithm from Session 48
+   - Compare score distribution with arXiv corpus
+   - Identify high-value papers (score ≥5/10)
 
-3. **Test Ingestion Speed**
-   - Measure fetch rate for 100 papers
-   - Test with 1,000 papers if initial test successful
-   - Calculate time estimate for 50K papers
-   - Check for rate limiting or throttling
+3. **Extract Mechanisms from Top Papers**
+   - Select top 50-100 papers by score
+   - Manual LLM extraction (domain-neutral)
+   - Target: 30-50 mechanisms
+   - Measure hit rate
 
-4. **Database Integration Test**
-   - Import test batch into PostgreSQL
-   - Verify schema compatibility
-   - Test deduplication (check for existing papers)
-   - Measure import performance
+4. **Quality Comparison**
+   - Compare extraction hit rate with arXiv corpus
+   - Assess mechanism quality (structural, cross-domain applicable)
+   - Calculate cost-benefit (speed vs quality tradeoff)
+   - Make go/no-go decision for full-scale ingestion
 
 ### Deliverables
 
-1. **Test Script**: `scripts/session63_openalex_test.py`
-   - Fetch papers by keyword/domain
+1. **Filtered Query Script**: `scripts/session64_openalex_filtered.py`
+   - Fetch papers with has_abstract=True
    - Import to PostgreSQL
-   - Track performance metrics
+   - Score for mechanism richness
 
-2. **Test Results**: `examples/session63_openalex_results.json`
-   - Sample papers fetched
-   - Quality assessment
-   - Performance metrics
-   - Feasibility report
+2. **Quality Assessment**: `examples/session64_quality_assessment.json`
+   - Score distribution comparison
+   - Extraction hit rate
+   - Mechanism quality samples
+   - Go/no-go recommendation
 
 3. **Documentation Update**
-   - Update PROGRESS.md with Session 63 results
-   - Document any issues or limitations
-   - Provide recommendation for full-scale ingestion
+   - Update PROGRESS.md with Session 64 results
+   - Document decision on OpenAlex usage
+   - Plan next steps based on outcome
 
 ### Success Criteria
 
 **Minimum**:
-- Successfully fetch 100 papers from OpenAlex
-- Import to PostgreSQL without errors
-- Estimate time for 50K paper fetch
+- Fetch 500 papers with abstracts
+- Score all papers for mechanism richness
+- Extract 20+ mechanisms
 
 **Target**:
-- Fetch 1,000 papers successfully
-- Achieve >80% data quality (complete abstracts)
-- Fetch rate >100 papers/minute
-- Time estimate for 50K papers: <1 hour
+- 60%+ extraction hit rate on high-value papers
+- 30-50 mechanisms extracted
+- Quality comparable to arXiv corpus
+- Clear go/no-go decision
 
 **Stretch**:
-- Test advanced filtering (by domain, date, citations)
-- Implement incremental update strategy
-- Test parallel fetching for speed optimization
+- Test bulk ingestion of 5,000 papers
+- Automate scoring pipeline
+- Project full-scale metrics
 
 ### Time Estimate
-- OpenAlex setup: 30 min
-- Test script development: 1 hour
-- Testing and validation: 1 hour
+- Fetch and import: 30 min
+- Scoring: 30 min
+- Mechanism extraction: 1.5 hours
+- Quality assessment: 30 min
 - Documentation: 30 min
-- **Total**: 2-3 hours
+- **Total**: 3 hours
 
-### Next Steps After Session 63
+### Next Steps After Session 64
 
-Based on OpenAlex test results:
-- **If successful**: Session 64 - Implement full bulk ingestion pipeline
-- **If issues**: Session 64 - Test alternative source (Semantic Scholar or arXiv bulk)
+Based on quality test results:
+- **If quality good**: Session 65 - Implement bulk ingestion (50K papers)
+- **If quality poor**: Session 65 - Test Semantic Scholar or arXiv bulk S3
 
 ---
 
 ## Previous Sessions Reference
+
+### Session 63 (2026-02-14) - **COMPLETED** ⚠️
+- Tested OpenAlex: 2,626 papers/minute (excellent speed)
+- Abstract coverage: 65.3% (below 80% target)
+- Topic coverage: 100% (all papers classified)
+- Verdict: Partially feasible with adjustments
 
 ### Session 62 (2026-02-14) - **COMPLETED** ✓
 - Migrated data from SQLite to PostgreSQL
@@ -111,52 +119,59 @@ Based on OpenAlex test results:
 
 ---
 
-## Key Context for Session 63
+## Key Context for Session 64
+
+**OpenAlex Test Results** (Session 63):
+- Speed: 2,626 papers/minute ✅
+- Abstract coverage: 65.3% ⚠️
+- Topic coverage: 100% ✅
+- Database integration: Working ✅
+- Recommendation: Use with adjusted expectations
 
 **Current Infrastructure**:
 - PostgreSQL 17.8 + pgvector 0.8.1 operational
-- Schema supports 50K papers, 5K-8K mechanisms
-- HNSW index for <50ms similarity search
-- 2,194 papers already in database
+- 2,194 papers + 200 mechanisms already loaded
+- pyalex installed and tested
+- Scoring algorithm from Session 48 available
 
-**Scale-Up Plan** (from SCALE_UP_PLAN.md):
-- Target: 50K papers → 5K-8K mechanisms → 200+ discoveries
-- OpenAlex chosen as primary data source (100K credits/day FREE)
-- Expected ingestion time: <1 hour for 50K papers
-- LLM extraction via Claude Batch API ($5.50-$16.50 for 8K papers)
+**Adjusted Scale-Up Plan**:
+- Target: 30K papers with abstracts (from 50K total)
+- Extract 3K-5K mechanisms (adjusted from 5K-8K)
+- Use topic classification for filtering
+- Supplement with arXiv for high-value gaps
 
-**Why OpenAlex**:
-- 240M works available
-- 100K credits/day FREE
-- 200 parallel connections supported
-- Comprehensive metadata
-- No authentication required for basic use
+**Decision Point**:
+- If OpenAlex quality good → proceed with bulk ingestion
+- If quality poor → test alternative sources (Semantic Scholar, arXiv S3)
 
 ---
 
-## Important Files for Session 63
+## Important Files for Session 64
 
 **Read First**:
 1. **CLAUDE.md** - Core mission and workflow
-2. **SCALE_UP_PLAN.md** - Detailed plan for OpenAlex integration
-3. **POSTGRESQL_SETUP.md** - Database connection details
+2. **SESSION63_OPENALEX_TEST_REPORT.md** - OpenAlex test results and recommendations
+3. **PROGRESS.md** - Session 63 summary
 
 **Reference**:
+- `scripts/session63_openalex_test.py` - OpenAlex connection code
+- `scripts/session48_score_papers.py` - Scoring algorithm (if exists)
 - `database/schema.sql` - PostgreSQL schema
-- `scripts/session62_migrate_to_postgresql.py` - Example of PostgreSQL integration
+- `examples/session63_openalex_results.json` - Test results from Session 63
 
 **Create**:
-- `scripts/session63_openalex_test.py` - Test script
-- `examples/session63_openalex_results.json` - Test results
+- `scripts/session64_openalex_filtered.py` - Filtered query script
+- `examples/session64_quality_assessment.json` - Quality test results
 
 ---
 
 ## Notes for Agent
 
 - PostgreSQL must be running: `brew services start postgresql@17`
-- Add to PATH if needed: `export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"`
-- Use pgvector's cosine similarity operator `<=>` for embeddings
-- Check for duplicates before importing (use arxiv_id or doi)
-- OpenAlex docs: https://docs.openalex.org/
+- pyalex already installed: `import pyalex; from pyalex import Works`
+- Use `has_abstract=True` filter to ensure abstracts are available
+- OpenAlex abstract is in `abstract_inverted_index` field (needs reconstruction)
+- Scoring algorithm: Count structural keywords, penalize review/survey papers
+- Focus on extraction quality, not just speed
 
-You're testing the feasibility of OpenAlex for the scale-up phase. Focus on speed, data quality, and PostgreSQL integration. This session determines if we can efficiently fetch 50K papers as planned.
+This session determines if OpenAlex paper quality justifies the speed advantage. The goal is a clear go/no-go decision for bulk ingestion.

@@ -10,6 +10,8 @@ Current session goals and immediate priorities.
 
 **Time**: ~1 hour
 
+**⚠️ IMPORTANT: Read SESSION59_PLAN.md for detailed instructions**
+
 ### Tasks
 1. Create `app/data/discovered_pairs.json` with all 46 unique pairs
 2. Create `scripts/check_duplicates.py` to filter already-discovered candidates

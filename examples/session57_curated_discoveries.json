@@ -1,0 +1,42 @@
+{
+  "session": 57,
+  "date": "2026-02-14",
+  "candidates_reviewed": 20,
+  "candidate_range": "ranks 51-70 from Session 55",
+  "same_paper_duplicates_excluded": 0,
+  "discoveries_found": 2,
+  "excellent_count": 0,
+  "good_count": 2,
+  "precision_ranks_51_70": 0.10,
+  "note": "Lower precision than Session 56 (40.4%) as expected with declining similarity in ranks 51-70 (0.506-0.522 range vs 0.528-0.736 in top-50)",
+  "discoveries": [
+    {
+      "id": 1,
+      "rank": 62,
+      "similarity": 0.5102,
+      "rating": "good",
+      "paper_1_id": 1425,
+      "paper_2_id": 125,
+      "domain_1": "cs",
+      "domain_2": "q-bio",
+      "title": "Dual-scope representation: invariant vs specific",
+      "structural_explanation": "Both mechanisms describe dual-scope representation learning where systems must capture both context-invariant structure AND context-specific details simultaneously. M1 decomposes features into domain-invariant (shared across datasets) and domain-specific (private) components using mutual information optimization. M2 uses dual-head architecture to capture local pairwise regulatory logic and global cross-context expression patterns. Universal structure: complementary representations (shared-private or local-global) enable robust performance under distributional shift. Both use contrastive/mutual-information regularization to maintain separation between scopes while enabling knowledge transfer.",
+      "mechanism_1": "Feature disentanglement into domain-invariant and domain-specific components mitigates negative transfer in multi-dataset training. Cross-attention fusion adaptively models component interactions. Mutual information optimization maximizes domain-invariant consistency while minimizing domain-specific redundancy. Complementary shared-private representations enable knowledge transfer while preserving dataset-specific discriminability.",
+      "mechanism_2": "Dual-scope representation learning with contrastive regularization under distribution shift. System captures both local pairwise regulatory logic and global cross-context expression patterns via dual-head architecture. Contrastive learning enforces structural constraints in representation space, providing robustness against noise, sparsity, and cross-domain distributional shifts beyond what supervised signal alone provides."
+    },
+    {
+      "id": 2,
+      "rank": 63,
+      "similarity": 0.5099,
+      "rating": "good",
+      "paper_1_id": 921,
+      "paper_2_id": 2194,
+      "domain_1": "nlin",
+      "domain_2": "physics",
+      "title": "Critical phenomena → slow dynamics",
+      "structural_explanation": "Both mechanisms describe how approaching criticality creates slow dynamics that qualitatively reorganize system behavior. M1: near bifurcation, convergence to steady state slows dramatically with relaxation time diverging according to universal scaling laws. M2: progressive coupling drives system toward infrared critical regime where spectral condensation creates extensive band of slow collective modes. Universal structure: criticality → emergence of slow timescales → qualitative transition in dynamics (not just degree). Both show transition from fast convergence (subcritical) to slow dynamics (critical) that reorganizes the entire system.",
+      "mechanism_1": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes.",
+      "mechanism_2": "Qualitative phase transition via spectral condensation at criticality. Progressive reentrant coupling drives system toward infrared critical regime where extensive band of slow collective modes emerges (spectral condensation), reorganizing dynamics qualitatively. Creates emergent capabilities absent at subcritical regime - transition in kind not degree, regardless of system scale."
+    }
+  ]
+}

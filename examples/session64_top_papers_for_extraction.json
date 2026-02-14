@@ -1,0 +1,3127 @@
+{
+  "metadata": {
+    "total": 50,
+    "avg_score": 7.44,
+    "score_distribution": {
+      "10": 2,
+      "9": 5,
+      "8": 14,
+      "7": 21,
+      "6": 8
+    }
+  },
+  "papers": [
+    {
+      "openalex_id": "W4404113625",
+      "title": "Dynamical theory for adaptive systems",
+      "abstract": "Abstract The study of adaptive dynamics, involving many degrees of freedom on two separated timescales, one for fast changes of state variables and another for the slow adaptation of parameters controlling the former\u2019s dynamics is crucial for understanding feedback mechanisms underlying evolution and learning. We present a path-integral approach \u00e0 la Martin\u2013Siggia\u2013Rose-De Dominicis\u2013Janssen to analyse non-equilibrium phase transitions in such dynamical systems. As an illustration, we apply our framework to the adaptation of gene-regulatory networks under a dynamic genotype-phenotype map: phenotypic variations are shaped by the fast stochastic gene-expression dynamics and are coupled to the slowly evolving distribution of genotypes, each encoded by a network structure. We establish that under this map, genotypes corresponding to reciprocal networks of coherent feedback loops are selected within an intermediate range of environmental noise, leading to phenotypic robustness.",
+      "publication_date": "2024-11-06",
+      "cited_by_count": 6,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10621",
+          "display_name": "Gene Regulatory Network Analysis",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11764",
+          "display_name": "Evolution and Genetic Dynamics",
+          "score": 0.995199978351593,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11513",
+          "display_name": "stochastic dynamics and bifurcation",
+          "score": 0.9911999702453613,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Gene Regulatory Network Analysis",
+      "topic_score": 0.9998000264167786,
+      "db_id": 2235,
+      "score": 10
+    },
+    {
+      "openalex_id": "W4394947393",
+      "title": "When time delays and phase lags are not the same: higher-order phase reduction unravels delay-induced synchronization in oscillator networks",
+      "abstract": "Coupled oscillators with time-delayed network interactions are critical to understand synchronization phenomena in many physical systems. Phase reductions to finite-dimensional phase oscillator networks allow for their explicit analysis. However, first-order phase reductions - where delays correspond to phase lags - fail to capture the delay-dependence of synchronization. We develop a systematic approach to derive phase reductions for delay-coupled oscillators to arbitrary order. Already the second-order reduction can predict delay-dependent (bi-)stability of synchronized states as demonstrated for Stuart-Landau oscillators.",
+      "publication_date": "2024-04-17",
+      "cited_by_count": 1,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 0.9991000294685364,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11347",
+          "display_name": "Neural Networks Stability and Synchronization",
+          "score": 0.9821000099182129,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12236",
+          "display_name": "Photoreceptor and optogenetics research",
+          "score": 0.9581000208854675,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2804",
+            "display_name": "Cellular and Molecular Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ],
+      "search_term": "critical phenomena synchronization",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 0.9991000294685364,
+      "db_id": 2277,
+      "score": 10
+    },
+    {
+      "openalex_id": "W4399303156",
+      "title": "Synchronization transitions in phase oscillator populations with partial adaptive coupling",
+      "abstract": "The adaptation underlying many realistic processes plays a pivotal role in shaping the collective dynamics of diverse systems. Here, we untangle the generic conditions for synchronization transitions in a system of coupled phase oscillators incorporating the adaptive scheme encoded by the feedback between the coupling and the order parameter via a power-law function with different weights. We mathematically argue that, in the subcritical and supercritical correlation scenarios, there exists no critical adaptive fraction for synchronization transitions converting from the first (second)-order to the second (first)-order. In contrast to the synchronization transitions previously deemed, the explosive and continuous phase transitions take place in the corresponding regions as long as the adaptive fraction is nonzero, respectively. Nevertheless, we uncover that, at the critical correlation, the routes toward synchronization depend crucially on the relative adaptive weights. In particular, we unveil that the emergence of a range of interrelated scaling behaviors of the order parameter near criticality, manifesting the subcritical and supercritical bifurcations, are responsible for various observed phase transitions. Our work, thus, provides profound insights for understanding the dynamical nature of phase transitions, and for better controlling and manipulating synchronization transitions in networked systems with adaptation.",
+      "publication_date": "2024-06-01",
+      "cited_by_count": 10,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10581",
+          "display_name": "Neural dynamics and brain function",
+          "score": 0.9909999966621399,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11513",
+          "display_name": "stochastic dynamics and bifurcation",
+          "score": 0.989799976348877,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 1.0,
+      "db_id": 2218,
+      "score": 9
+    },
+    {
+      "openalex_id": "W4402047173",
+      "title": "Focus on the disruption of networks and system dynamics",
+      "abstract": "Networks are designed to ensure proper functioning and sustained operability of the underlying systems. However, disruptions are generally unavoidable. Internal interactions and external environmental effects can lead to the removal of nodes or edges, resulting in unexpected collective behavior. For instance, a single failing node or removed edge may trigger a cascading failure in an electric power grid. This Focus Issue delves into recent advances in understanding the impacts of disruptions on networks and their system dynamics. The central theme is the disruption of networks and their dynamics from the perspectives of both data-driven analysis as well as modeling. Topics covered include disruptions in the dynamics of empirical systems such as nuclear reaction networks, infrastructure networks, social networks, epidemics, brain dynamics, and physiology. Emphasis is placed on various phenomena in collective behavior, including critical phase transitions, irregular collective dynamics, complex patterns of synchrony and asynchrony, chimera states, and anomalous oscillations. The tools used for these studies include control theory, diffusion processes, stochastic processes, and network theory. This collection offers an exciting addition to the evolving landscape of network disruption research.",
+      "publication_date": "2024-08-01",
+      "cited_by_count": 9,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10064",
+          "display_name": "Complex Network Analysis Techniques",
+          "score": 0.9997000098228455,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12592",
+          "display_name": "Opinion Dynamics and Social Influence",
+          "score": 0.9972000122070312,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13283",
+          "display_name": "Mental Health Research Topics",
+          "score": 0.9642999768257141,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3205",
+            "display_name": "Experimental and Cognitive Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Complex Network Analysis Techniques",
+      "topic_score": 0.9997000098228455,
+      "db_id": 2219,
+      "score": 9
+    },
+    {
+      "openalex_id": "W4399303156",
+      "title": "Synchronization transitions in phase oscillator populations with partial adaptive coupling",
+      "abstract": "The adaptation underlying many realistic processes plays a pivotal role in shaping the collective dynamics of diverse systems. Here, we untangle the generic conditions for synchronization transitions in a system of coupled phase oscillators incorporating the adaptive scheme encoded by the feedback between the coupling and the order parameter via a power-law function with different weights. We mathematically argue that, in the subcritical and supercritical correlation scenarios, there exists no critical adaptive fraction for synchronization transitions converting from the first (second)-order to the second (first)-order. In contrast to the synchronization transitions previously deemed, the explosive and continuous phase transitions take place in the corresponding regions as long as the adaptive fraction is nonzero, respectively. Nevertheless, we uncover that, at the critical correlation, the routes toward synchronization depend crucially on the relative adaptive weights. In particular, we unveil that the emergence of a range of interrelated scaling behaviors of the order parameter near criticality, manifesting the subcritical and supercritical bifurcations, are responsible for various observed phase transitions. Our work, thus, provides profound insights for understanding the dynamical nature of phase transitions, and for better controlling and manipulating synchronization transitions in networked systems with adaptation.",
+      "publication_date": "2024-06-01",
+      "cited_by_count": 10,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10581",
+          "display_name": "Neural dynamics and brain function",
+          "score": 0.9909999966621399,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11513",
+          "display_name": "stochastic dynamics and bifurcation",
+          "score": 0.989799976348877,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 1.0,
+      "score": 9
+    },
+    {
+      "openalex_id": "W4402731783",
+      "title": "Kardar-Parisi-Zhang fluctuations in the synchronization dynamics of limit-cycle oscillators",
+      "abstract": "The time-dependent process whereby one-dimensional systems of self-sustained oscillators synchronize is shown to display scale invariance in space and time, akin to that found in the dynamics of equilibrium critical phenomena. Remarkably, the process is largely independent of system details, sharing with a class of nonequilibrium surface kinetic roughening the universal scaling behavior of the Kardar-Parisi-Zhang equation with columnar noise, and featuring phase fluctuations that follow a Tracy-Widom probability distribution. This is revealed by a numerical exploration of rings of Stuart-Landau oscillators (the universal representation of an oscillating system close to a Hopf bifurcation) and rings of van der Pol oscillators, both paradigmatically supporting self-sustained oscillations. The critical behavior is very well-defined for limit-cycle oscillations near bifurcation, and still dominates comparatively far from it. In particular, the Tracy-Widom fluctuation distribution seems to be an extremely robust feature of the synchronization process. The nonequilibrium criticality here described appears to transcend the details of the coupled dynamical systems that synchronize, making plausible its experimental observation. Published by the American Physical Society 2024",
+      "publication_date": "2024-09-23",
+      "cited_by_count": 6,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11261",
+          "display_name": "Quantum chaos and dynamical systems",
+          "score": 0.9972000122070312,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11513",
+          "display_name": "stochastic dynamics and bifurcation",
+          "score": 0.9941999912261963,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "critical phenomena synchronization",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2272,
+      "score": 9
+    },
+    {
+      "openalex_id": "W4401076696",
+      "title": "Evolutionary game selection creates cooperative environments",
+      "abstract": "The emergence of collective cooperation in competitive environments is a well-known phenomenon in biology, economics, and social systems. While most evolutionary game models focus on the evolution of strategies for a fixed game, how strategic decisions coevolve with the environment has so far mostly been overlooked. Here, we consider a game selection model where not only the strategies but also the game can change over time following evolutionary principles. Our results show that coevolutionary dynamics of games and strategies can induce novel collective phenomena, fostering the emergence of cooperative environments. When the model is taken on structured populations the architecture of the interaction network can significantly amplify pro-social behavior, with a critical role played by network heterogeneity and the presence of clustered groups of similar players, distinctive features observed in real-world populations. By unveiling the link between the evolution of strategies and games for different structured populations, our model sheds new light on the origin of social dilemmas ubiquitously observed in real-world social systems.",
+      "publication_date": "2024-07-29",
+      "cited_by_count": 7,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11252",
+          "display_name": "Evolutionary Game Theory and Cooperation",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11764",
+          "display_name": "Evolution and Genetic Dynamics",
+          "score": 0.9966999888420105,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11118",
+          "display_name": "Evolutionary Psychology and Human Behavior",
+          "score": 0.9909999966621399,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3205",
+            "display_name": "Experimental and Cognitive Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "collective behavior cooperation",
+      "primary_topic": "Evolutionary Game Theory and Cooperation",
+      "topic_score": 1.0,
+      "db_id": 2315,
+      "score": 9
+    },
+    {
+      "openalex_id": "W4391735125",
+      "title": "Order parameter dynamics in complex systems: From models to data",
+      "abstract": "Collective ordering behaviors are typical macroscopic manifestations embedded in complex systems and can be ubiquitously observed across various physical backgrounds. Elements in complex systems may self-organize via mutual or external couplings to achieve diverse spatiotemporal coordinations. The order parameter, as a powerful quantity in describing the transition to collective states, may emerge spontaneously from large numbers of degrees of freedom through competitions. In this minireview, we extensively discussed the collective dynamics of complex systems from the viewpoint of order-parameter dynamics. A synergetic theory is adopted as the foundation of order-parameter dynamics, and it focuses on the self-organization and collective behaviors of complex systems. At the onset of macroscopic transitions, slow modes are distinguished from fast modes and act as order parameters, whose evolution can be established in terms of the slaving principle. We explore order-parameter dynamics in both model-based and data-based scenarios. For situations where microscopic dynamics modeling is available, as prototype examples, synchronization of coupled phase oscillators, chimera states, and neuron network dynamics are analytically studied, and the order-parameter dynamics is constructed in terms of reduction procedures such as the Ott\u2013Antonsen ansatz, the Lorentz ansatz, and so on. For complicated systems highly challenging to be well modeled, we proposed the eigen-microstate approach (EMP) to reconstruct the macroscopic order-parameter dynamics, where the spatiotemporal evolution brought by big data can be well decomposed into eigenmodes, and the macroscopic collective behavior can be traced by Bose\u2013Einstein condensation-like transitions and the emergence of dominant eigenmodes. The EMP is successfully applied to some typical examples, such as phase transitions in the Ising model, climate dynamics in earth systems, fluctuation patterns in stock markets, and collective motion in living systems.",
+      "publication_date": "2024-02-01",
+      "cited_by_count": 20,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 0.9995999932289124,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10581",
+          "display_name": "Neural dynamics and brain function",
+          "score": 0.9991000294685364,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11520",
+          "display_name": "Advanced Thermodynamics and Statistical Mechanics",
+          "score": 0.9947999715805054,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 0.9995999932289124,
+      "db_id": 2205,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4403021788",
+      "title": "Signatures of criticality in efficient coding networks",
+      "abstract": "The critical brain hypothesis states that the brain can benefit from operating close to a second-order phase transition. While it has been shown that several computational aspects of sensory processing (e.g., sensitivity to input) can be optimal in this regime, it is still unclear whether these computational benefits of criticality can be leveraged by neural systems performing behaviorally relevant computations. To address this question, we investigate signatures of criticality in networks optimized to perform efficient coding. We consider a spike-coding network of leaky integrate-and-fire neurons with synaptic transmission delays. Previously, it was shown that the performance of such networks varies nonmonotonically with the noise amplitude. Interestingly, we find that in the vicinity of the optimal noise level for efficient coding, the network dynamics exhibit some signatures of criticality, namely, scale-free dynamics of the spiking and the presence of crackling noise relation. Our work suggests that two influential, and previously disparate theories of neural processing optimization (efficient coding and criticality) may be intimately related.",
+      "publication_date": "2024-10-01",
+      "cited_by_count": 25,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10581",
+          "display_name": "Neural dynamics and brain function",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10502",
+          "display_name": "Advanced Memory and Neural Computing",
+          "score": 0.9993000030517578,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11513",
+          "display_name": "stochastic dynamics and bifurcation",
+          "score": 0.9987000226974487,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Neural dynamics and brain function",
+      "topic_score": 1.0,
+      "db_id": 2208,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4391786941",
+      "title": "Numerical simulation of long-range open quantum many-body dynamics with tree tensor networks",
+      "abstract": "Open quantum systems provide a conceptually simple setting for the exploration of collective behavior stemming from the competition between quantum effects, many-body interactions, and dissipative processes. They may display dynamics distinct from that of closed quantum systems or undergo nonequilibrium phase transitions which are not possible in classical settings. However, studying open quantum many-body dynamics is challenging, in particular, in the presence of critical long-range correlations or long-range interactions. Here, we make progress in this direction and introduce a numerical method for open quantum systems, based on tree tensor networks. Such a structure is expected to improve the encoding of many-body correlations and we adopt an integration scheme suited for long-range interactions and applications to dissipative dynamics. We test the method using a dissipative Ising model with power-law decaying interactions and observe signatures of a first-order phase transition for power-law exponents smaller than 1.",
+      "publication_date": "2024-02-13",
+      "cited_by_count": 18,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11804",
+          "display_name": "Quantum many-body systems",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11965",
+          "display_name": "Quantum, superfluid, helium dynamics",
+          "score": 0.9968000054359436,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10382",
+          "display_name": "Quantum and electron transport phenomena",
+          "score": 0.9925000071525574,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Quantum many-body systems",
+      "topic_score": 0.9998000264167786,
+      "db_id": 2210,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4396904869",
+      "title": "Disparity-driven heterogeneous nucleation in finite-size adaptive networks",
+      "abstract": "Phase transitions are crucial in shaping the collective dynamics of a broad spectrum of natural systems across disciplines. Here, we report two distinct heterogeneous nucleation facilitating single step and multistep phase transitions to global synchronization in a finite-size adaptive network due to the trade off between time scale adaptation and coupling strength disparities. Specifically, small intracluster nucleations coalesce either at the population interface or within the populations resulting in the two distinct phase transitions depending on the degree of the disparities. We find that the coupling strength disparity largely controls the nature of phase transition in the phase diagram irrespective of the adaptation disparity. We provide a mesoscopic description for the cluster dynamics using the collective coordinates approach that brilliantly captures the multicluster dynamics among the populations leading to distinct phase transitions. Further, we also deduce the upper bound for the coupling strength for the existence of two intraclusters explicitly in terms of adaptation and coupling strength disparities. These insights may have implications across domains ranging from neurological disorders to segregation dynamics in social networks.",
+      "publication_date": "2024-05-14",
+      "cited_by_count": 8,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 0.9994000196456909,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10064",
+          "display_name": "Complex Network Analysis Techniques",
+          "score": 0.9980000257492065,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12592",
+          "display_name": "Opinion Dynamics and Social Influence",
+          "score": 0.9968000054359436,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 0.9994000196456909,
+      "db_id": 2213,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4392915888",
+      "title": "Interactions and Migration Rescuing Ecological Diversity",
+      "abstract": "How diversity is maintained in natural ecosystems is a long-standing question in Theoretical Ecology. By studying a system that combines ecological dynamics, heterogeneous interactions, and spatial structure, we uncover a new mechanism for the survival of diversity-rich ecosystems in the presence of demographic fluctuations. For a single species, one finds a continuous phase transition between an extinction and a survival state, that falls into the universality class of Directed Percolation. Here we show that the case of many species with heterogeneous interactions is different and richer. By merging theory and simulations, we demonstrate that with sufficiently strong demographic noise, the system exhibits behavior akin to the single-species case, undergoing a continuous transition. Conversely, at low demographic noise, we observe unique features indicative of the ecosystem's complexity. The combined effects of the heterogeneity in the interaction network and migration enable the community to thrive, even in situations where demographic noise would lead to the extinction of isolated species. The emergence of mutualism induces the development of global bistability, accompanied by sudden tipping points. We present a way to predict the catastrophic shift from high diversity to extinction by probing responses to perturbations as an early warning signal. Published by the American Physical Society 2024",
+      "publication_date": "2024-03-18",
+      "cited_by_count": 17,
+      "topics": [
+        {
+          "id": "https://openalex.org/T13377",
+          "display_name": "Ecosystem dynamics and resilience",
+          "score": 0.9951000213623047,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11913",
+          "display_name": "Animal Ecology and Behavior Studies",
+          "score": 0.9700999855995178,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2303",
+            "display_name": "Ecology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12643",
+          "display_name": "Sustainability and Ecological Systems Analysis",
+          "score": 0.9502999782562256,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2305",
+            "display_name": "Environmental Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Ecosystem dynamics and resilience",
+      "topic_score": 0.9951000213623047,
+      "db_id": 2217,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4400366573",
+      "title": "Grid-Connected Inverter Grid Voltage Feedforward Control Strategy Based on Multi-Objective Constraint in Weak Grid",
+      "abstract": "In weak grid, feedforward of grid voltage control is widely used to effectively suppress grid-side current distortion of inverters caused by harmonics in point of common coupling (PCC) voltage. However, due to its introduction of a positive feedback loop related to the grid impedance, it results in a significant reduction in the system phase margin. In view of this, in this paper, the output impedance of a three-phase LCL grid-connected inverter under a quasi-proportional resonant (QPR) controller is first modeled. Instead of the traditional grid voltage feedforward control strategy, a band-pass filter is added to the grid voltage feedforward channel. Secondly, a multi-objective constraint method is proposed to make improvements to the feedforward function. Then, a multi-objective constraint function is established with the constraints of base-wave current tracking performance, system stability margin, and low-frequency amplitude, and the feasibility of its function optimization design method is verified. Theoretical analysis shows that the optimized grid voltage feedforward control strategy can effectively reshape the phase characteristics of the system output impedance, which greatly broadens the adaptation range of the system to the grid impedance. Finally, the effectiveness of the proposed control strategy is verified by building a semi-physical simulation experimental platform based on RT-LAB OP4510.",
+      "publication_date": "2024-07-04",
+      "cited_by_count": 11,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10223",
+          "display_name": "Microgrid Control and Optimization",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2207",
+            "display_name": "Control and Systems Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13183",
+          "display_name": "Islanding Detection in Power Systems",
+          "score": 0.9944000244140625,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10228",
+          "display_name": "Multilevel Inverters and Converters",
+          "score": 0.9829000234603882,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Microgrid Control and Optimization",
+      "topic_score": 1.0,
+      "db_id": 2236,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4392798934",
+      "title": "Emergent Chirality and Hyperuniformity in an Active Mixture with Nonreciprocal Interactions",
+      "abstract": "We investigate collective dynamics in a binary mixture of programmable robots in experiments and simulations. While robots of the same species align their motion direction, interaction between species is distinctly nonreciprocal: species A aligns with B and species B antialigns with A. This nonreciprocal interaction gives rise to the emergence of collective chiral motion that can be stabilized by limiting the robot angular speed to be below a threshold. Within the chiral phase, increasing the robot density or extending the range of local repulsive interactions can drive the system through an absorbing-active transition. At the transition point, the robots exhibit a remarkable capacity for self-organization, forming disordered hyperuniform states.",
+      "publication_date": "2024-03-14",
+      "cited_by_count": 31,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11486",
+          "display_name": "Micro and Nano Robotics",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3104",
+            "display_name": "Condensed Matter Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12784",
+          "display_name": "Modular Robots and Swarm Intelligence",
+          "score": 0.9980999827384949,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2210",
+            "display_name": "Mechanical Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10249",
+          "display_name": "Distributed Control Multi-Agent Systems",
+          "score": 0.988099992275238,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Micro and Nano Robotics",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2240,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4391735125",
+      "title": "Order parameter dynamics in complex systems: From models to data",
+      "abstract": "Collective ordering behaviors are typical macroscopic manifestations embedded in complex systems and can be ubiquitously observed across various physical backgrounds. Elements in complex systems may self-organize via mutual or external couplings to achieve diverse spatiotemporal coordinations. The order parameter, as a powerful quantity in describing the transition to collective states, may emerge spontaneously from large numbers of degrees of freedom through competitions. In this minireview, we extensively discussed the collective dynamics of complex systems from the viewpoint of order-parameter dynamics. A synergetic theory is adopted as the foundation of order-parameter dynamics, and it focuses on the self-organization and collective behaviors of complex systems. At the onset of macroscopic transitions, slow modes are distinguished from fast modes and act as order parameters, whose evolution can be established in terms of the slaving principle. We explore order-parameter dynamics in both model-based and data-based scenarios. For situations where microscopic dynamics modeling is available, as prototype examples, synchronization of coupled phase oscillators, chimera states, and neuron network dynamics are analytically studied, and the order-parameter dynamics is constructed in terms of reduction procedures such as the Ott\u2013Antonsen ansatz, the Lorentz ansatz, and so on. For complicated systems highly challenging to be well modeled, we proposed the eigen-microstate approach (EMP) to reconstruct the macroscopic order-parameter dynamics, where the spatiotemporal evolution brought by big data can be well decomposed into eigenmodes, and the macroscopic collective behavior can be traced by Bose\u2013Einstein condensation-like transitions and the emergence of dominant eigenmodes. The EMP is successfully applied to some typical examples, such as phase transitions in the Ising model, climate dynamics in earth systems, fluctuation patterns in stock markets, and collective motion in living systems.",
+      "publication_date": "2024-02-01",
+      "cited_by_count": 20,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 0.9995999932289124,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10581",
+          "display_name": "Neural dynamics and brain function",
+          "score": 0.9991000294685364,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11520",
+          "display_name": "Advanced Thermodynamics and Statistical Mechanics",
+          "score": 0.9947999715805054,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Nonlinear Dynamics and Pattern Formation",
+      "topic_score": 0.9995999932289124,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4392745599",
+      "title": "Competitive Multitasking for Computational Resource Allocation in Evolutionary-Constrained Multiobjective Optimization",
+      "abstract": "Constrained multi-objective optimization problems (CMOPs) have multiple objective functions that need to be optimized and constraints need to be satisfied, making them difficult to solve. Based on the multitasking optimization, the optimization of the original CMOP can be transformed into multiple related sub-tasks. Existing multitasking-based constrained multi-objective optimization evolutionary algorithms assist the evolution of the original problem by adopting auxiliary tasks. However, this approach may waste computational resources on tasks that are unsuitable for evolutionary states and dynamics. In this paper, a new competitive multitasking-based framework is proposed for CMOPs. We maintain an archive for the constrained Pareto front and multiple sub-tasks as auxiliaries. In each iteration, one of the sub-tasks is selected as the main task, and offspring are generated from its evolution. The offspring are viewed as knowledge and fed back to auxiliary tasks. The reward is mapped to a selection probability to control the main task selection in each iteration. Computational resources are saved by allocating only to the main task that is better suited for different evolutionary stages of different problems. The effectiveness of our approach is validated through experiments on four CMOP benchmark suites compared to eleven state-of-the-art methods.",
+      "publication_date": "2024-03-13",
+      "cited_by_count": 42,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10551",
+          "display_name": "Scheduling and Optimization Algorithms",
+          "score": 0.9593999981880188,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2209",
+            "display_name": "Industrial and Manufacturing Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10848",
+          "display_name": "Advanced Multi-Objective Optimization Algorithms",
+          "score": 0.9578999876976013,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1703",
+            "display_name": "Computational Theory and Mathematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10100",
+          "display_name": "Metaheuristic Optimization Algorithms Research",
+          "score": 0.9107000231742859,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Scheduling and Optimization Algorithms",
+      "topic_score": 0.9593999981880188,
+      "db_id": 2253,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4394939041",
+      "title": "Energy Efficient Hybrid Evolutionary Algorithm for Internet of Everything (IoE)-Enabled 6G",
+      "abstract": "The advancement of Internet of Everything (IoE) propels the fast growth of next-generation, such as 6G networks, leading to a new era of coverage, connectivity, and technological innovation, which calls for novel approaches to address rising energy consumption and maximize resource use. The proposed article presents a robust hybrid algorithm that combines leader-based optimization and Adaptive Differential Evolution (DE) in the framework of the Energy Efficient Hybrid Evolutionary Algorithm (EEHEA), which is specifically designed for the complex environment of IoE-enabled 6G networks. The scheme EEHEA combines the efficacy of leader-based optimization (LBO) for an effective decision-making process and adaptive differential evolutionary optimization (ADE)&#x2019;s dynamic network-parameters adaptation, enhanced convergence, and global searching ability, persistently fine-tuning optimization strategies based on the dynamics of the network. Combining these components into the scheme EEHEA allows it to balance local exploitation and global exploration effectively. This implies better resource allocation and improved energy efficiency in ecosystems with IoE-driven 6G (IoE-6G). The outcomes report that the scheme EEHEA can address the rising energy consumption issues and enhance the efficiency of IoE-6G. Based on simulation experiments, the proposed scheme EEHEA can demonstrate faster convergence times, higher accuracy, and superior flexibility concerning changing network conditions. Its capability to handle energy-related challenges and navigate complex network environments with resilience shows the ability to enhance the performance of IoE-6G. The EEHEA scheme reports its efficacy over state-of-the-art schemes regarding localization, latency, coverage, and energy expenditure performance metrics.",
+      "publication_date": "2024-01-01",
+      "cited_by_count": 21,
+      "topics": [
+        {
+          "id": "https://openalex.org/T13535",
+          "display_name": "Wireless Sensor Networks and IoT",
+          "score": 0.7486000061035156,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2207",
+            "display_name": "Control and Systems Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Wireless Sensor Networks and IoT",
+      "topic_score": 0.7486000061035156,
+      "db_id": 2257,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4390692589",
+      "title": "Adaptive Constraint Penalty-Based Multiobjective Operation Optimization of an Industrial Dynamic System With Complex Multiconstraint",
+      "abstract": "Aiming at the operation optimization of the wastewater treatment process (WWTP) with nonstationary time-varying dynamics and complex multiconstraint, this article proposes a novel adaptive constraint penalty decomposed multiobjective evolutionary algorithm with synthetical distance (SD)-based cross-generation crossover. First, the concept of spatial SD is presented to comprehensively evaluate the similarity of individual solutions from two aspects of distance and angle, and the individual information between two adjacent generations is used to enhance the diversity of individuals and accelerate the convergence of the algorithm. Second, aiming at the complex multiconstraint during the operation optimization of WWTP, an adaptive penalty algorithm is further adopted to punish the individual solutions that violate the constraints, so as to improve the handling efficiency and success rate of constraints. Furthermore, in view of the time-varying dynamics of actual WWTP, a recursive bilinear subspace identification method based on sliding window is adopted to establish the optimization models as well as the constraint models with self-learning parameter, which provides accurate model guarantee for high-performance multiobjective operation optimization. Finally, the effectiveness, superiority, and practicability of the proposed method are verified through test function experiments as well as operation optimization control experiments of WWTP.",
+      "publication_date": "2024-01-10",
+      "cited_by_count": 12,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10791",
+          "display_name": "Advanced Control Systems Optimization",
+          "score": 0.9937000274658203,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2207",
+            "display_name": "Control and Systems Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10100",
+          "display_name": "Metaheuristic Optimization Algorithms Research",
+          "score": 0.9832000136375427,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10848",
+          "display_name": "Advanced Multi-Objective Optimization Algorithms",
+          "score": 0.9825000166893005,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1703",
+            "display_name": "Computational Theory and Mathematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Advanced Control Systems Optimization",
+      "topic_score": 0.9937000274658203,
+      "db_id": 2261,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4402267266",
+      "title": "STP-based control of networked evolutionary games with multi-channel structure",
+      "abstract": "The channel delay in the game process has an important influence on its evolutionary dynamics. This paper aims to optimize the strategy game with general information delays, including the state delay in the previous work, and the control delay that is introduced for the first time to depict the time consumed by strategy propagation in reality. Specifically, the dynamics of networked evolutionary games is transformed into an algebraic form by use of the newly proposed semi-tensor product of matrices, which extends the ordinary matrix multiplication. Subsequently, according to the values of control and state delays, the strategy optimization problem can be divided into six different cases, and then via the constructed algebraic equation, we can obtain the sufficient and necessary conditions for the existence of the strategy optimization. Meanwhile, based on a reachable set method, the corresponding feedback controllers are further designed. Last, one illustrative example is taken to demonstrate the feasibility of our model. The results of this paper will be helpful to investigate the game-based control issues in the complex networked environment.",
+      "publication_date": "2024-09-01",
+      "cited_by_count": 6,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11764",
+          "display_name": "Evolution and Genetic Dynamics",
+          "score": 0.9939000010490417,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11252",
+          "display_name": "Evolutionary Game Theory and Cooperation",
+          "score": 0.9901000261306763,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11031",
+          "display_name": "Game Theory and Applications",
+          "score": 0.9833999872207642,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Evolution and Genetic Dynamics",
+      "topic_score": 0.9939000010490417,
+      "db_id": 2266,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4391755058",
+      "title": "Simultaneous control of quantum phase synchronization and entanglement dynamics in a gain-loss optomechanical cavity system",
+      "abstract": "The optomechanical cavity system has been a paradigm in the manifestation of continuous variable quantum information over the past decade. This paper investigates how quantum phase synchronization is associated with bipartite Gaussian entanglement in coupled gain-loss mechanical oscillators, where the gain and loss rates can be controlled by driving the cavities with blue and red detuned lasers, respectively. We examine the role of the exceptional point (EP) in a deterministic way of producing self-sustained oscillations that generate robust quantum correlations among quadrature fluctuations of the mechanical oscillators. Particularly, steady phase synchronization dynamics along with the entanglement phenomena are observed in the effective weak-coupling regime above a critical driving power. These phenomena are further verified by observing the mechanical squeezing and phase-space rotations of the Wigner distributions. Moreover, the fidelity fluctuation shows how the quantum correlation dynamics are related to the EP of the system. We also discuss the impact of the mechanical oscillator's frequency mismatch and decoherence due to thermal phonons on system dynamics. These findings hold promise for applications in phonon-based quantum communication and information processing on the macroscopic scale.",
+      "publication_date": "2024-02-12",
+      "cited_by_count": 8,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11449",
+          "display_name": "Mechanical and Optical Resonators",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10020",
+          "display_name": "Quantum Information and Cryptography",
+          "score": 0.9980999827384949,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12236",
+          "display_name": "Photoreceptor and optogenetics research",
+          "score": 0.9958000183105469,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2804",
+            "display_name": "Cellular and Molecular Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ],
+      "search_term": "critical phenomena synchronization",
+      "primary_topic": "Mechanical and Optical Resonators",
+      "topic_score": 1.0,
+      "db_id": 2271,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4403826595",
+      "title": "DNN Partitioning, Task Offloading, and Resource Allocation in Dynamic Vehicular Networks: A Lyapunov-Guided Diffusion-Based Reinforcement Learning Approach",
+      "abstract": "The rapid advancement of Artificial Intelligence (AI) has introduced Deep Neural Network (DNN)-based tasks to the ecosystem of vehicular networks. These tasks are often computation-intensive, requiring substantial computation resources, which are beyond the capability of a single vehicle. To address this challenge, Vehicular Edge Computing (VEC) has emerged as a solution, offering computing services for DNN-based tasks through resource pooling via Vehicle-to-Vehicle/Infrastructure (V2V/V2I) communications. In this paper, we formulate the problem of joint DNN partitioning, task offloading, and resource allocation in VEC as a dynamic long-term optimization. Our objective is to minimize the DNN-based task completion time while guaranteeing the system stability over time. To this end, we first leverage a Lyapunov optimization technique to decouple the original long-term optimization with stability constraints into a per-slot deterministic problem. Afterwards, we propose a Multi-Agent Diffusion-based Deep Reinforcement Learning (MAD2RL) algorithm, incorporating the innovative use of diffusion models to determine the optimal DNN partitioning and task offloading decisions. Furthermore, we integrate convex optimization techniques into MAD2RL as a subroutine to allocate computation resources, enhancing the learning efficiency. Through simulations under real-world movement traces of vehicles, we demonstrate the superior performance of our proposed algorithm compared to existing benchmark solutions.",
+      "publication_date": "2024-10-28",
+      "cited_by_count": 36,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10761",
+          "display_name": "Vehicular Ad Hoc Networks (VANETs)",
+          "score": 0.9629999995231628,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "resource allocation learning",
+      "primary_topic": "Vehicular Ad Hoc Networks (VANETs)",
+      "topic_score": 0.9629999995231628,
+      "db_id": 2330,
+      "score": 8
+    },
+    {
+      "openalex_id": "W4392023773",
+      "title": "Time-Salt Type Superposition and Salt Processing of Poly(methacrylamide) Hydrogel based on Hofmeister Series",
+      "abstract": "Breakthrough to the extreme properties of polymer networks relies on new insights into their molecular dynamics. Time-salt concentration superposition has been discovered in polyelectrolyte coacervate systems, proving instrumental in tuning the mechanical performance of polyelectrolyte hydrogels. However, time-salt type superposition has never been mentioned in the existing literature. Herein, we reported that the mechanical properties of poly(methacrylamide) (PMAm) hydrogel can be systematically regulated in a vast range by treating with different salts, for example, Young's modulus can be tuned from 10\u20132 to 103 MPa. The unusual behavior of salt-stiffening arises from the salt-enhanced phase separation of the polymer network and a subsequent glassy transition of the polymer-rich phase. Rheological results demonstrate that the dynamic behavior of the hydrogels can be superposed onto \"time-salt type\" master curves with the salt types aligning along the Hofmeister series. The time-salt type shift factor exhibits correlation with the mobility of water molecules as revealed by low-field nuclear magnetic resonance spectroscopy. A polymer\u2013water\u2013salt ternary interaction mechanism was proposed to elucidate the time-salt type equivalent behavior. Guided by the \"time-salt type\" superposition principle, a salt processing strategy was brought up to expand the property limits of the PMAm hydrogel. With simply switching the type of salt employed, the hydrogel could either be a stiff and wear-resistant material akin to glassy plastics or a soft and flowable gel utilizable for recycling.",
+      "publication_date": "2024-02-22",
+      "cited_by_count": 50,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10343",
+          "display_name": "Hydrogels: synthesis, properties, applications",
+          "score": 0.9922000169754028,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1313",
+            "display_name": "Molecular Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10306",
+          "display_name": "Liquid Crystal Research Advancements",
+          "score": 0.9660999774932861,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2504",
+            "display_name": "Electronic, Optical and Magnetic Materials"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10660",
+          "display_name": "Conducting polymers and applications",
+          "score": 0.9327999949455261,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2507",
+            "display_name": "Polymers and Plastics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Hydrogels: synthesis, properties, applications",
+      "topic_score": 0.9922000169754028,
+      "db_id": 2206,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4396978057",
+      "title": "Open Quantum System Dynamics from Infinite Tensor Network Contraction",
+      "abstract": "Approaching the long-time dynamics of non-Markovian open quantum systems presents a challenging task if the bath is strongly coupled. Recent proposals address this problem through a representation of the so-called process tensor in terms of a tensor network. We show that for Gaussian environments highly efficient contraction to a matrix product operator (MPO) form can be achieved with infinite MPO evolution methods, leading to significant computational speed-up over existing proposals. The result structurally resembles open system evolution with carefully designed auxiliary degrees of freedom, as in hierarchical or pseudomode methods. Here, however, these degrees of freedom are generated automatically by the MPO evolution algorithm. Moreover, the semigroup form of the resulting propagator enables us to explore steady-state physics, such as phase transitions.",
+      "publication_date": "2024-05-16",
+      "cited_by_count": 35,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11804",
+          "display_name": "Quantum many-body systems",
+          "score": 0.9997000098228455,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11520",
+          "display_name": "Advanced Thermodynamics and Statistical Mechanics",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11177",
+          "display_name": "Spectroscopy and Quantum Chemical Studies",
+          "score": 0.9986000061035156,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Quantum many-body systems",
+      "topic_score": 0.9997000098228455,
+      "db_id": 2207,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4395676247",
+      "title": "Spin-dependent graph neural network potential for magnetic materials",
+      "abstract": "The development of machine-learning interatomic potentials has immensely contributed to the accuracy of simulations of molecules and crystals. However, creating interatomic potentials for magnetic systems that account for both magnetic moments and structural degrees of freedom remains a challenge. This work introduces SpinGNN, a spin-dependent interatomic potential approach that employs the graph neural network (GNN) to describe magnetic systems. SpinGNN consists of two types of edge GNNs: Heisenberg edge GNN (HEGNN) and spin-distance edge GNN (SEGNN). HEGNN is tailored to capture Heisenberg-type spin-lattice interactions, while SEGNN accurately models multibody and high-order spin-lattice coupling. The effectiveness of SpinGNN is demonstrated by its exceptional precision in fitting a high-order spin Hamiltonian and two complex spin-lattice Hamiltonians with great precision. Furthermore, it successfully models the subtle spin-lattice coupling in $\\mathrm{BiFe}{\\mathrm{O}}_{3}$ and performs large-scale spin-lattice dynamics simulations, predicting its antiferromagnetic ground state, magnetic phase transition, and domain-wall energy landscape with high accuracy. Finally, we perform spin-lattice simulations over one million atoms across GPUs in parallel. Our study broadens the scope of graph neural network potentials to magnetic systems, serving as a foundation for carrying out large-scale spin-lattice dynamic simulations in first-principle accuracy on such systems.",
+      "publication_date": "2024-04-26",
+      "cited_by_count": 37,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11948",
+          "display_name": "Machine Learning in Materials Science",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2505",
+            "display_name": "Materials Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12808",
+          "display_name": "Ferroelectric and Negative Capacitance Devices",
+          "score": 0.9915000200271606,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10028",
+          "display_name": "Topic Modeling",
+          "score": 0.9889000058174133,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Machine Learning in Materials Science",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2212,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4392864879",
+      "title": "Adaptive Feedback Control of Nonminimum Phase Boost Converter with Constant Power Load",
+      "abstract": "The inherent negative impedance characteristics of a Constant Power Load (CPL) pose a potential threat to the stability of the bus voltage in a DC microgrid consisting of a symmetrical parallel boost converter. We suggest an adaptive feedback control technique using the input\u2013output exact feedback linearization theory for a boost converter integrated into a DC microgrid to improve the stability of the DC bus voltage. This approach involves a transformation of the model into a Brunovsky canonical form, effectively addressing the nonlinear challenges arising from the CPL and the nonminimum phase characteristics of the boost converter. Subsequently, guided by the Lyapunov approach, an adaptation law is established to fine-tune the controller\u2019s gain vector, facilitating the tracking of a predefined linearizing feedback control. We methodically create a method to choose the gains of the adaptive controller in order to guarantee an adequate output response. We validate our suggested controller\u2019s performance using simulation.",
+      "publication_date": "2024-03-14",
+      "cited_by_count": 5,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10223",
+          "display_name": "Microgrid Control and Optimization",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2207",
+            "display_name": "Control and Systems Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10175",
+          "display_name": "Advanced DC-DC Converters",
+          "score": 0.9933000206947327,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10228",
+          "display_name": "Multilevel Inverters and Converters",
+          "score": 0.9753999710083008,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Microgrid Control and Optimization",
+      "topic_score": 1.0,
+      "db_id": 2233,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4402199157",
+      "title": "Polarization\u2010Induced Buildup and Switching Mechanisms for Soliton Molecules Composed of Noise\u2010Like\u2010Pulse Transition States",
+      "abstract": "Abstract Buildup and switching mechanisms of solitons in complex nonlinear systems are fundamentally important dynamical regimes. Using a novel strongly nonlinear optical system, including saturable absorber metal\u2010organic framework (MOF)\u2010253@Au and a polarization controller (PC), the work reveals a new buildup scenario for \u201csoliton molecules (SMs)\u201d, which includes a long\u2010duration stage dominated by the emergence of transient noise\u2010like pulses (NLPs) modes to withstand strong disturbances arising from \u201cturbulence\u201d and extreme nonlinearity in the optical cavity. The switching between SMs and NLPs is controlled by the cavity polarization state. The switching involves the spectral collapse, following spectral oscillations with a variable period, and self\u2010organization of NLPs, following energy overshoot. This switching mechanism applies to various patterns with single, paired, and clustered pulses. In the multi\u2010pulses stage, XPM (cross\u2010phase\u2010modulation)\u2010induced interactions between solitons facilitate a specific mode of energy exchange between them, proportional to interaction duration, ensuring pulse stability during and after state transitions. Systematic simulations reveal the effects of the PC's rotation angle and intra\u2010cavity nonlinearity on the periodic phase transitions between the different soliton states and accurately reproduce the experimentally observed buildup and switching mechanisms. These findings can enhance the fundamental study and points to potential uses in designing information encoding systems.",
+      "publication_date": "2024-09-03",
+      "cited_by_count": 66,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10988",
+          "display_name": "Advanced Fiber Laser Technologies",
+          "score": 0.9990000128746033,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11187",
+          "display_name": "Nonlinear Dynamics and Pattern Formation",
+          "score": 0.9973000288009644,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11575",
+          "display_name": "Nonlinear Photonic Systems",
+          "score": 0.9957000017166138,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Advanced Fiber Laser Technologies",
+      "topic_score": 0.9990000128746033,
+      "db_id": 2239,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4395480446",
+      "title": "On principles of emergent organization",
+      "abstract": "After more than a century of concerted effort, physics still lacks basic principles of spontaneous organization. To appreciate why, we first state the problem, outline historical approaches, and survey the present state of the physics of self-organization. This frames the particular challenges arising from mathematical intractability and the resulting need for computational approaches, as well as those arising from a chronic failure to define structure. Then an overview of two modern mathematical formulations of organization\u2014intrinsic computation and evolution operators\u2014lays out a way to overcome these challenges. Together, the vantage point they afford shows how to account for the emergence of structured states via a statistical mechanics of systems arbitrarily far from equilibrium. The result is a constructive path forward to principles of organization that builds on mathematical identification of structure.",
+      "publication_date": "2024-04-25",
+      "cited_by_count": 18,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11520",
+          "display_name": "Advanced Thermodynamics and Statistical Mechanics",
+          "score": 0.9473000168800354,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14299",
+          "display_name": "Complex Systems and Dynamics",
+          "score": 0.9329000115394592,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12469",
+          "display_name": "Chaos, Complexity, and Education",
+          "score": 0.932699978351593,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1703",
+            "display_name": "Computational Theory and Mathematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Advanced Thermodynamics and Statistical Mechanics",
+      "topic_score": 0.9473000168800354,
+      "db_id": 2242,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4405724797",
+      "title": "Modeling and Predicting Self-Organization in Dynamic Systems out of Thermodynamic Equilibrium: Part 1: Attractor, Mechanism and Power Law Scaling",
+      "abstract": "Self-organization in complex systems is a process associated with reduced internal entropy and the emergence of structures that may enable the system to function more effectively and robustly in its environment and in a more competitive way with other states of the system or with other systems. This phenomenon typically occurs in the presence of energy gradients, facilitating energy transfer and entropy production. As a dynamic process, self-organization is best studied using dynamic measures and principles. The principles of minimizing unit action, entropy, and information while maximizing their total values are proposed as some of the dynamic variational principles guiding self-organization. The least action principle (LAP) is the proposed driver for self-organization; however, it cannot operate in isolation; it requires the mechanism of feedback loops with the rest of the system\u2019s characteristics to drive the process. Average action efficiency (AAE) is introduced as a potential quantitative measure of self-organization, reflecting the system\u2019s efficiency as the ratio of events to total action per unit of time. Positive feedback loops link AAE to other system characteristics, potentially explaining power\u2013law relationships, quantity\u2013AAE transitions, and exponential growth patterns observed in complex systems. To explore this framework, we apply it to agent-based simulations of ants navigating between two locations on a 2D grid. The principles align with observed self-organization dynamics, and the results and comparisons with real-world data appear to support the model. By analyzing AAE, this study seeks to address fundamental questions about the nature of self-organization and system organization, such as \u201cWhy and how do complex systems self-organize? What is organization and how organized is a system?\u201d. We present AAE for the discussed simulation and whenever no external forces act on the system. Given so many specific cases in nature, the method will need to be adapted to reflect their specific interactions. These findings suggest that the proposed models offer a useful perspective for understanding and potentially improving the design of complex systems.",
+      "publication_date": "2024-12-23",
+      "cited_by_count": 8,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11520",
+          "display_name": "Advanced Thermodynamics and Statistical Mechanics",
+          "score": 0.993399977684021,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3109",
+            "display_name": "Statistical and Nonlinear Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11270",
+          "display_name": "Complex Systems and Time Series Analysis",
+          "score": 0.9872000217437744,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2002",
+            "display_name": "Economics and Econometrics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/20",
+            "display_name": "Economics, Econometrics and Finance"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13377",
+          "display_name": "Ecosystem dynamics and resilience",
+          "score": 0.9861000180244446,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Advanced Thermodynamics and Statistical Mechanics",
+      "topic_score": 0.993399977684021,
+      "db_id": 2246,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4403915590",
+      "title": "Mechanochemical Patterning Localizes the Organizer of a Luminal Epithelium",
+      "abstract": "ABSTRACT The spontaneous emergence of tissue patterns is often attributed to biochemical reaction-diffusion systems. In Hydra tissue regeneration, the formation of a Wnt signaling center serves as a well-known example of such a process. However, despite extensive research, a strictly biochemical mechanism for self-organization in Hydra remains elusive. In this study, we investigated mechanical stimuli and identified a positive feedback loop between Wnt signaling and tissue stretching. We developed a mathematical model of mechanochemical pattern formation in a closed elastic shell, representing regenerating Hydra epithelial spheroids. Our model explains how mechanical forces drive axis formation and predicts the organizer\u2019s location under various perturbations, providing a more comprehensive understanding of the spatial dynamics involved. Validation by partially confining regenerating tissues showed that the organizer indeed forms in regions with the greatest stretching potential. This work highlights a novel mechanochemical mechanism for luminal epithelium patterning, suggesting that mechanical forces, in addition to biochemical signals, play a crucial role in tissue regeneration and axis specification. Our findings offer broader implications for the role of mechanical forces in tissue organization in various biological systems, opening new avenues for investigating mechanochemical feedback in development and regeneration.",
+      "publication_date": "2024-10-29",
+      "cited_by_count": 8,
+      "topics": [
+        {
+          "id": "https://openalex.org/T12142",
+          "display_name": "Marine Invertebrate Physiology and Ecology",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1911",
+            "display_name": "Paleontology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/19",
+            "display_name": "Earth and Planetary Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10379",
+          "display_name": "Cellular Mechanics and Interactions",
+          "score": 0.996399998664856,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1307",
+            "display_name": "Cell Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12789",
+          "display_name": "Planarian Biology and Electrostimulation",
+          "score": 0.9801999926567078,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Marine Invertebrate Physiology and Ecology",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2251,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4405809664",
+      "title": "Game-Theoretic Approaches for Power-Generation Companies\u2019 Decision-Making in the Emerging Green Certificate Market",
+      "abstract": "This study examines the decision-making optimization of Power-Generation Enterprises (PGEs) in the green certificate market, with a focus on balancing bidding strategies and carbon-reduction targets. Given the increasing complexity of the green certificate market, the research employs Bayesian games, evolutionary games, and Stackelberg games to systematically analyze the strategic behavior of PGEs and their interactions within the market framework. The findings demonstrate that game theory facilitates cost structure optimization and enhances adaptability to market dynamics under policy-driven incentives and penalties. Additionally, the study explores the integration of stochastic modeling and machine learning techniques to address market uncertainties. These results provide theoretical support for policymakers in designing efficient green electricity market regulations and offer strategic insights for PGEs aligning with carbon neutrality objectives. This work bridges theoretical modeling and practical application, contributing to the advancement of sustainable energy policies and the development of green electricity markets.",
+      "publication_date": "2024-12-26",
+      "cited_by_count": 18,
+      "topics": [
+        {
+          "id": "https://openalex.org/T12659",
+          "display_name": "Innovation Diffusion and Forecasting",
+          "score": 0.8748999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10471",
+          "display_name": "Climate Change Policy and Economics",
+          "score": 0.8661999702453613,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2002",
+            "display_name": "Economics and Econometrics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/20",
+            "display_name": "Economics, Econometrics and Finance"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10424",
+          "display_name": "Electric Power System Optimization",
+          "score": 0.8568999767303467,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Innovation Diffusion and Forecasting",
+      "topic_score": 0.8748999834060669,
+      "db_id": 2258,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4400899294",
+      "title": "Unbending strategies shepherd cooperation and suppress extortion in spatial populations",
+      "abstract": "Abstract Evolutionary game dynamics on networks typically consider the competition among simple strategies such as cooperation and defection in the Prisoner\u2019s Dilemma and summarize the effect of population structure as network reciprocity. However, it remains largely unknown regarding the evolutionary dynamics involving multiple powerful strategies typically considered in repeated games, such as the zero-determinant (ZD) strategies that are able to enforce a linear payoff relationship between them and their co-players. Here, we consider the evolutionary dynamics of always cooperate (AllC), extortionate ZD (extortioners), and unbending players in lattice populations based on the commonly used death-birth updating. Out of the class of unbending strategies that can foster reciprocal cooperation and fairness among extortionate players, we consider a particular candidate, pre-optimized through the machine-learning method of particle swarm optimization (PSO), called PSO Gambler. We derive analytical results under weak selection and rare mutations, including pairwise fixation probabilities and long-term frequencies of strategies. In the absence of the third unbending type, extortioners can achieve a half-half split in equilibrium with unconditional cooperators for sufficiently large extortion factors. However, the presence of unbending players fundamentally changes the dynamics and tilts the system to favor unbending cooperation. Most surprisingly, extortioners cannot dominate at all regardless of how large their extortion factor is, and the long-term frequency of unbending players is maintained almost as a constant. Our analytical method is applicable to studying the evolutionary dynamics of multiple strategies in structured populations. Our work provides insights into the interplay between network reciprocity and direct reciprocity, revealing the role of unbending strategies in enforcing fairness and suppressing extortion.",
+      "publication_date": "2024-07-01",
+      "cited_by_count": 9,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11252",
+          "display_name": "Evolutionary Game Theory and Cooperation",
+          "score": 0.998199999332428,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10646",
+          "display_name": "Experimental Behavioral Economics Studies",
+          "score": 0.9596999883651733,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3311",
+            "display_name": "Safety Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11118",
+          "display_name": "Evolutionary Psychology and Human Behavior",
+          "score": 0.9584000110626221,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3205",
+            "display_name": "Experimental and Cognitive Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Evolutionary Game Theory and Cooperation",
+      "topic_score": 0.998199999332428,
+      "db_id": 2260,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4399286913",
+      "title": "From Bulk to Single Molecules: Surface-Enhanced Raman Scattering of Cytochrome C Using Plasmonic DNA Origami Nanoantennas",
+      "abstract": "Cytochrome C, an evolutionarily conserved protein, plays pivotal roles in cellular respiration and apoptosis. Understanding its molecular intricacies is essential for both academic inquiry and potential biomedical applications. This study introduces an advanced single-molecule surface-enhanced Raman scattering (SM-SERS) system based on DNA origami nanoantennas (DONAs), optimized to provide unparalleled insights into protein structure and interactions. Our system effectively detects shifts in the Amide III band, thereby elucidating protein dynamics and conformational changes. Additionally, the system permits concurrent observations of oxidation processes and Amide bands, offering an integrated view of protein structural and chemical modifications. Notably, our approach diverges from traditional SM-SERS techniques by de-emphasizing resonance conditions for SERS excitation, aiming to mitigate challenges like peak oversaturation. Our findings underscore the capability of our DONAs to illuminate single-molecule behaviors, even within aggregate systems, providing clarity on molecular interactions and behaviors.",
+      "publication_date": "2024-06-03",
+      "cited_by_count": 21,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10131",
+          "display_name": "Gold and Silver Nanoparticles Synthesis and Applications",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2504",
+            "display_name": "Electronic, Optical and Magnetic Materials"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10207",
+          "display_name": "Advanced biosensing and bioanalysis techniques",
+          "score": 0.9995999932289124,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10295",
+          "display_name": "Plasmonic and Surface Plasmon Research",
+          "score": 0.9961000084877014,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2204",
+            "display_name": "Biomedical Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "evolutionary dynamics optimization",
+      "primary_topic": "Gold and Silver Nanoparticles Synthesis and Applications",
+      "topic_score": 0.9998000264167786,
+      "db_id": 2263,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4393138784",
+      "title": "Dynamic Analysis of a Simple Cournot Duopoly Model Based on a Computed Cost",
+      "abstract": "The paper is organized to study some mathematical properties and dynamics of a simple Cournot duopoly game based on a computed quadratic cost. The time evolution of this game is described by a two\u2010dimensional noninvertible discrete time map using the bounded rationality mechanism. For this map, some dynamic characteristics such as multistability and synchronization are investigated. Its equilibrium points are obtained for the asymmetric case, and their conditions of stability are obtained. Our results investigate that the Nash equilibrium point may be unstable due to flip bifurcation and under certain parameter values, and Neimark\u2013Sacker bifurcation is born after the period\u20104 cycle. Through some restrictions, the coordinate axes of the map construct an invariant manifold, and therefore, their dynamics can be analyzed by using a one\u2010dimensional map. In the symmetric case, both firms behave identically, and this implies that the diagonal set forms an invariant manifold, and hence the synchronization phenomena take place. Furthermore, the global bifurcation of the map is confirmed through contact between critical curves and the boundaries of infeasible domains.",
+      "publication_date": "2024-01-01",
+      "cited_by_count": 5,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11043",
+          "display_name": "Merger and Competition Analysis",
+          "score": 0.9991999864578247,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2002",
+            "display_name": "Economics and Econometrics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/20",
+            "display_name": "Economics, Econometrics and Finance"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11161",
+          "display_name": "Consumer Market Behavior and Pricing",
+          "score": 0.9936000108718872,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1406",
+            "display_name": "Marketing"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/14",
+            "display_name": "Business, Management and Accounting"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11437",
+          "display_name": "Digital Platforms and Economics",
+          "score": 0.9884999990463257,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1408",
+            "display_name": "Strategy and Management"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/14",
+            "display_name": "Business, Management and Accounting"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "critical phenomena synchronization",
+      "primary_topic": "Merger and Competition Analysis",
+      "topic_score": 0.9991999864578247,
+      "db_id": 2273,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4394971397",
+      "title": "Quantum synchronization at the critical point of Floquet driven Rydberg atoms",
+      "abstract": "The criticality enhanced correlations and susceptibility allow weak periodic driving to induce collective synchronization due to critical slowing down, providing a unique platform to study non-equilibrium order emergence. This establishes a powerful paradigm for investigating non-equilibrium order formation, yet the fundamental mechanisms of critical-point synchronization remain poorly understood. Here, we utilize a microwave pulse as a seed to induce quantum synchronization at the critical point of Floquet driven Rydberg atoms. In the experiment, the microwave periodic driving on Rydberg states acts as a seeded temporal order in subspace, which triggers synchronization across the entire ensemble. The behavior of the emergent synchronized oscillation is elaborately linked to alterations in the seed, such as the relative phase shift and the frequency difference, which result in phase-dependent seeding and embryonic synchronization. This result opens up new possibilities for studying and harnessing time-dependent quantum many-body phenomena, offering insight into the behavior of complex many-body systems under seeding.",
+      "publication_date": "2024-04-18",
+      "cited_by_count": 2,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10425",
+          "display_name": "Cold Atom Physics and Bose-Einstein Condensates",
+          "score": 0.9908999800682068,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "critical phenomena synchronization",
+      "primary_topic": "Cold Atom Physics and Bose-Einstein Condensates",
+      "topic_score": 0.9908999800682068,
+      "db_id": 2274,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4407362285",
+      "title": "Quantification of the Flexibility Enhancement with Micro-Scale Multi-Energy Coupling",
+      "abstract": "The rise of distributed and non-dispatchable generation in the distribution network presents challenges in maintaining voltage and power limits. Demand response has great potential to tackle those issues, particularly with thermal loads due to the thermal inertia of buildings and heat storage systems. Residential buildings are currently heated through different energy carriers, such as gas, electricity, and district heating, with each building usually having its own heating system. However, there is the possibility to connect neighboring buildings through hot water connections. The improvement of the system's flexibility by such micro-scale multi-energy coupling is analyzed using a model predictive control approach for the operation of the buildings and the concept of flexibility envelopes.",
+      "publication_date": "2024-10-14",
+      "cited_by_count": 1,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11799",
+          "display_name": "Adhesion, Friction, and Surface Interactions",
+          "score": 0.9986000061035156,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2211",
+            "display_name": "Mechanics of Materials"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12252",
+          "display_name": "Mechanical stress and fatigue analysis",
+          "score": 0.9915000200271606,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2211",
+            "display_name": "Mechanics of Materials"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12371",
+          "display_name": "Electrical Contact Performance and Analysis",
+          "score": 0.9776999950408936,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2210",
+            "display_name": "Mechanical Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "coupling multi-scale",
+      "primary_topic": "Adhesion, Friction, and Surface Interactions",
+      "topic_score": 0.9986000061035156,
+      "db_id": 2290,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4394691710",
+      "title": "Observational Tests of Active Galactic Nuclei Feedback: An Overview of Approaches and Interpretation",
+      "abstract": "Growing supermassive black holes (Active Galactic Nuclei; AGN) release energy with the potential to alter their host galaxies and larger-scale environment; a process named \u201cAGN feedback\u201d. Feedback is a required component of galaxy formation models and simulations to explain the observed properties of galaxy populations. We provide a broad overview of observational approaches that are designed to establish the physical processes that couple AGN energy to the multi-phase gas, or to find evidence that AGN impact upon galaxy evolution. The orders-of-magnitude range in spatial, temporal, and temperature scales, requires a diverse set of observational studies. For example, studying individual targets in detail sheds light on coupling mechanisms; however, evidence for the long-term impact of AGN is better established within galaxy populations that are not necessarily currently active. We emphasise how modern surveys have revealed the importance of radio emission for identifying and characterising feedback mechanisms. At the achieved sensitivities, the detected radio emission can trace a range of processes, including a shocked interstellar medium caused by AGN outflows (driven by various mechanisms including radiation pressure, accretion disc winds, and jets). We also describe how interpreting observations in the context of theoretical work can be challenging, in part, due to some of the adopted terminology.",
+      "publication_date": "2024-04-10",
+      "cited_by_count": 98,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10026",
+          "display_name": "Galaxies: Formation, Evolution, Phenomena",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3103",
+            "display_name": "Astronomy and Astrophysics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10744",
+          "display_name": "Astrophysical Phenomena and Observations",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3103",
+            "display_name": "Astronomy and Astrophysics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10818",
+          "display_name": "Astrophysics and Cosmic Phenomena",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3106",
+            "display_name": "Nuclear and High Energy Physics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "coupling multi-scale",
+      "primary_topic": "Galaxies: Formation, Evolution, Phenomena",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2299,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4399152042",
+      "title": "A fully-implicit solving approach to an adaptive multi-scale model -- coupling a vertical-equilibrium and full-dimensional model for compressible, multi-phase flow in porous media",
+      "abstract": "Vertical equilibrium models have proven to be well suited for simulating fluid flow in subsurface porous media such as saline aquifers with caprocks. However, in most cases the dimensionally reduced model lacks the accuracy to capture the dynamics of a system. While conventional full-dimensional models have the ability to represent dynamics, they come at the cost of high computational effort. We aim to combine the efficiency of the vertical equilibrium model and the accuracy of the full-dimensional model by coupling the two models adaptively in a unified framework and solving the emerging system of equations in a monolithic, fully-implicit approach. The model domains are coupled via mass-conserving fluxes while the model adaptivity is ruled by adaption criteria. Overall, the adaptive model shows an excellent behaviour both in terms of accuracy as well as efficiency, especially for elongated geometries of storage systems with large aspect ratios.",
+      "publication_date": "2024-05-17",
+      "cited_by_count": 1,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10491",
+          "display_name": "Enhanced Oil Recovery Techniques",
+          "score": 0.9925000071525574,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2212",
+            "display_name": "Ocean Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11751",
+          "display_name": "Lattice Boltzmann Simulation Studies",
+          "score": 0.988099992275238,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2206",
+            "display_name": "Computational Mechanics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12100",
+          "display_name": "Advanced Mathematical Modeling in Engineering",
+          "score": 0.9864000082015991,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1703",
+            "display_name": "Computational Theory and Mathematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "coupling multi-scale",
+      "primary_topic": "Enhanced Oil Recovery Techniques",
+      "topic_score": 0.9925000071525574,
+      "db_id": 2301,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4399970567",
+      "title": "Coevolutionary dynamics of collective cooperation and dilemma strength in a collective-risk game",
+      "abstract": "Human behavioral decision-making influences the gaming environment. In turn, changes in the gaming environmental impact individual strategic choices. However, there is scant exploration into how human behavioral decision-making coevolves with dilemma strength. Here, we propose a coevolutionary game model based on collective-risk social dilemma, where an increase in cooperators within the game group reduces the dilemma strength, and vice versa. Upon examining this coupled system, we find that the system is capable of achieving a relatively optimal state, wherein the population sustains a high level of cooperation and the dilemma strength remains at the lowest level. In addition, we have identified the conditions for the emergence of tristability and bistability in the coupled system and numerically validated our theoretical results. Furthermore, we find that the incorporation of institutional rewards not only promotes the appearance of the system's optimal state, where all individuals choose to cooperate and the dilemma strength is at its lowest level, but it also effectively averts the manifestation of the system's worst state, where all individuals resort to defection and the dilemma strength reaches its highest level. These findings illuminate how cooperation can be sustained when a dynamical coupling exists between individual decision-making and dilemma strength. Published by the American Physical Society 2024",
+      "publication_date": "2024-06-24",
+      "cited_by_count": 23,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11252",
+          "display_name": "Evolutionary Game Theory and Cooperation",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10482",
+          "display_name": "Mathematical and Theoretical Epidemiology and Ecology Models",
+          "score": 0.9907000064849854,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2739",
+            "display_name": "Public Health, Environmental and Occupational Health"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10646",
+          "display_name": "Experimental Behavioral Economics Studies",
+          "score": 0.9876000285148621,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3311",
+            "display_name": "Safety Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "collective behavior cooperation",
+      "primary_topic": "Evolutionary Game Theory and Cooperation",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2304,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4401815521",
+      "title": "Cooperation dynamics of prisoner's dilemma games on an evolutionary weighted network with heterogeneous preferences",
+      "abstract": "Relationships between people in real life are dynamically changed with the interaction process, and due to the heterogeneous preferences, this change is different from person to person. Based on this observation, we propose a new spatial and weighted prisoner's dilemma game model with heterogeneous individuals. Two types of tags, namely, tag-F (concerned about social fairness) and tag-W (concerned about personal well-being), are introduced to describe individuals\u2019 different preferences. The link weights indicating the interaction strength between individuals are updated based on different rules that depend on their tags. Through simulations, we verify that a large link weight control factor and a high proportion of tag-F individuals favor the emergence and persistence of cooperation. In addition, an increase in the link weight sensitivity factor favors the evolution of cooperation when the link weight control factor is small. Moreover, while the level of cooperation increases with the proportion of tag-F type in the population, contrary to our intuition, when the population consists entirely of tag-F individuals, in some cases, cooperation cannot reach a higher level compared with the situation when they are mixed with tag-W type. However, at high dilemma intensities, cooperators emerge only when the entire population consists of tag-F type. These results may provide some new insights into the impact of the evolutionary weighted network with heterogeneous preferences on collective cooperative behavior.",
+      "publication_date": "2024-08-01",
+      "cited_by_count": 10,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11252",
+          "display_name": "Evolutionary Game Theory and Cooperation",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11118",
+          "display_name": "Evolutionary Psychology and Human Behavior",
+          "score": 0.9966999888420105,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3205",
+            "display_name": "Experimental and Cognitive Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10487",
+          "display_name": "Plant and animal studies",
+          "score": 0.9897000193595886,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1105",
+            "display_name": "Ecology, Evolution, Behavior and Systematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/11",
+            "display_name": "Agricultural and Biological Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ],
+      "search_term": "collective behavior cooperation",
+      "primary_topic": "Evolutionary Game Theory and Cooperation",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2313,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4396680618",
+      "title": "Joint Partial Offloading and Resource Allocation for Vehicular Federated Learning Tasks",
+      "abstract": "In the foreseeable Intelligent Transportation System, Intelligent Connected Vehicles (ICVs) will play an important role in improving travel efficiency and safety. However, it is challenging for ICVs to support the resource-hungry autonomous driving applications due to the limitation of hardware computing power. Fortunately, the emergence of Multi-access Edge Computing helps overcome this limitation effectively. This paper addresses the vehicle-to-edge server computation offloading conundrum by optimizing the trade-offs in partial offloading and resource allocation. Proposing a distributed approach, this study confronts the multi-variable non-convex challenge directly by decoupling variables and deriving constraint-based bounds that guide the decisions for offloading and allocation. A novel low-complexity distributed algorithm is introduced that not only tends toward optimal but also demonstrates superior real-time applicability and efficiency, illustrated through enhanced performances both in simulated trials and genuine vehicular edge computing settings. The algorithm's practical effectiveness addresses a notable gap between the theoretical models for computation offloading and actual real-life execution, reinforcing the soundness and relevance of the proposed method. Furthermore, its advanced integration with federated learning frameworks marks a leading-edge application, substantiating significant enhancements in computational efficiency and robustness.",
+      "publication_date": "2024-05-06",
+      "cited_by_count": 25,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10764",
+          "display_name": "Privacy-Preserving Technologies in Data",
+          "score": 0.9991999864578247,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10270",
+          "display_name": "Blockchain Technology Applications and Security",
+          "score": 0.9878000020980835,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10273",
+          "display_name": "IoT and Edge/Fog Computing",
+          "score": 0.9873999953269958,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "resource allocation learning",
+      "primary_topic": "Privacy-Preserving Technologies in Data",
+      "topic_score": 0.9991999864578247,
+      "db_id": 2326,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4391326609",
+      "title": "FedAEB: Deep Reinforcement Learning Based Joint Client Selection and Resource Allocation Strategy for Heterogeneous Federated Learning",
+      "abstract": "Recently, federated learning (FL) has become a promising distributed learning technology by collaboratively training shared learning models on clients. However, due to the statistical heterogeneity of clients and differences in computing and communication resources, the convergence speed and accuracy of FL may decrease. The energy consumption and latency performance of clients may also be affected. To achieve a flexible balance between FL's model performance, overall energy consumption, and latency, thereby meeting customized requirements, we propose a deep reinforcement learning based FL framework called FedAEB. It adopts a dynamic optimization method based on the Soft Actor-Critic network for client selection and resource allocation, which can effectively adapt to complex and time-varying systems. The weight factors that balance optimization variables can be flexibly adjusted according to different application needs. Many experiments have been conducted on well-known and state-of-the-art datasets, demonstrating that our FedAEB outperforms the benchmark method in reward values, learning accuracy, energy consumption, and latency performance.",
+      "publication_date": "2024-01-29",
+      "cited_by_count": 26,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10764",
+          "display_name": "Privacy-Preserving Technologies in Data",
+          "score": 0.9947999715805054,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "resource allocation learning",
+      "primary_topic": "Privacy-Preserving Technologies in Data",
+      "topic_score": 0.9947999715805054,
+      "db_id": 2327,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4393352750",
+      "title": "Scheduling with Group Technology, Resource Allocation, and Learning Effect Simultaneously",
+      "abstract": "This paper studies the single-machine group scheduling problem with convex resource allocation and learning effect. The number of jobs in each group is different, and the corresponding common due dates are also different, where the processing time of jobs follows a convex function of resource allocation. Under common due date assignment, the objective is to minimize the weighted sum of earliness, tardiness, common due date, resource consumption, and makespan. To solve the problem, we present the heuristic, simulated annealing, and branch-and-bound algorithms. Computational experiments indicate that the proposed algorithms are effective.",
+      "publication_date": "2024-03-29",
+      "cited_by_count": 12,
+      "topics": [
+        {
+          "id": "https://openalex.org/T12288",
+          "display_name": "Optimization and Search Problems",
+          "score": 0.4465000033378601,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1705",
+            "display_name": "Computer Networks and Communications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10603",
+          "display_name": "Smart Grid Energy Management",
+          "score": 0.40709999203681946,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10551",
+          "display_name": "Scheduling and Optimization Algorithms",
+          "score": 0.38019999861717224,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2209",
+            "display_name": "Industrial and Manufacturing Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "resource allocation learning",
+      "primary_topic": "Optimization and Search Problems",
+      "topic_score": 0.4465000033378601,
+      "db_id": 2334,
+      "score": 7
+    },
+    {
+      "openalex_id": "W4404138357",
+      "title": "Neural network enabled molecular dynamics study of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:msub><mml:mi>HfO</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math> phase transitions",
+      "abstract": "The advances of machine-learned force fields have opened up molecular dynamics (MD) simulations for compounds for which ab initio MD is too resource intensive and phenomena for which classical force fields are insufficient. Here we describe a neural-network force field parametrized to reproduce the r2\u2062SCAN potential energy landscape of HfO2. Based on an automatic differentiable implementation of the isothermal-isobaric (\ud835\udc41\u2062\ud835\udc43\u2062\ud835\udc47) ensemble with flexible cell fluctuations, we study the phase space of HfO2. We find excellent predictive capabilities regarding the lattice constants and experimental x-ray diffraction data. The phase transition away from monoclinic is clearly visible at a temperature around 2000 K, in agreement with available experimental data and previous calculations. Another abrupt change in lattice constants occurs around 3000 K. While the resulting lattice constants are closer to cubic, they exhibit a small tetragonal distortion, and there is no associated change in volume. We show that this high-temperature structure is in agreement with the available high-temperature diffraction data.",
+      "publication_date": "2024-11-07",
+      "cited_by_count": 1,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10472",
+          "display_name": "Semiconductor materials and devices",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11948",
+          "display_name": "Machine Learning in Materials Science",
+          "score": 0.9997000098228455,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2505",
+            "display_name": "Materials Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12808",
+          "display_name": "Ferroelectric and Negative Capacitance Devices",
+          "score": 0.9991999864578247,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Semiconductor materials and devices",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2204,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4403013503",
+      "title": "Evolutionarily conserved fMRI network dynamics in the mouse, macaque, and human brain",
+      "abstract": "Evolutionarily relevant networks have been previously described in several mammalian species using time-averaged analyses of fMRI time-series. However, fMRI network activity is highly dynamic and continually evolves over timescales of seconds. Whether the dynamic organization of resting-state fMRI network activity is conserved across mammalian species remains unclear. Using frame-wise clustering of fMRI time-series, we find that intrinsic fMRI network dynamics in awake male macaques and humans is characterized by recurrent transitions between a set of 4 dominant, neuroanatomically homologous fMRI coactivation modes (C-modes), three of which are also plausibly represented in the male rodent brain. Importantly, in all species C-modes exhibit species-invariant dynamic features, including preferred occurrence at specific phases of fMRI global signal fluctuations, and a state transition structure compatible with infraslow coupled oscillator dynamics. Moreover, dominant C-mode occurrence reconstitutes the static organization of the fMRI connectome in all species, and is predictive of ranking of corresponding fMRI connectivity gradients. These results reveal a set of species-invariant principles underlying the dynamic organization of fMRI networks in mammalian species, and offer novel opportunities to relate fMRI network findings across the phylogenetic tree.",
+      "publication_date": "2024-10-01",
+      "cited_by_count": 22,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10241",
+          "display_name": "Functional Brain Connectivity Studies",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10581",
+          "display_name": "Neural dynamics and brain function",
+          "score": 0.9984999895095825,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10378",
+          "display_name": "Advanced MRI Techniques and Applications",
+          "score": 0.9945999979972839,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2741",
+            "display_name": "Radiology, Nuclear Medicine and Imaging"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Functional Brain Connectivity Studies",
+      "topic_score": 1.0,
+      "db_id": 2209,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4401714926",
+      "title": "Proton\u2010Driven Dynamic Behavior of Nanoconfined Water in Hydrophilic MXene Sheets",
+      "abstract": "Abstract Liquid water under nanoscale confinement has attracted intensive attention due to its pivotal role in understanding various phenomena across many scientific fields. MXenes serve an ideal paradigm for investigating the dynamic behaviors of nanoconfined water in a hydrophilic environment. Combining deep neural networks and an active learning scheme, here we elucidate the proton\u2010driven dynamics of water molecules confined between V 2 CT x sheets using molecular dynamics simulation. Firstly, we have found that the Eigen and Zundel cations can inhibit water\u2010induced oxidation by adjusting the orientation of water molecules, thus proposing a general antioxidant strategy. Besides, we also identified a hexagonal ice phase with abnormal bonding rules at room temperature, rather than only at ultralow temperatures as other studies reported, and further captured the proton\u2010induced water phase transition. This highlighted the importance of protons in the maintaining stable crystal phase and phase transition of water. Furthermore, we discussed the conversions of different water structures and water diffusivity with changing proton concentrations in detail. The results provide useful guidance in practical applications of MXenes including developing antioxidant strategies, identifying novel 2D water phases and optimizing energy storage and conversion.",
+      "publication_date": "2024-08-20",
+      "cited_by_count": 21,
+      "topics": [
+        {
+          "id": "https://openalex.org/T12046",
+          "display_name": "MXene and MAX Phase Materials",
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2505",
+            "display_name": "Materials Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10083",
+          "display_name": "Graphene research and applications",
+          "score": 0.9984999895095825,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2505",
+            "display_name": "Materials Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10502",
+          "display_name": "Advanced Memory and Neural Computing",
+          "score": 0.9957000017166138,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "MXene and MAX Phase Materials",
+      "topic_score": 0.9998999834060669,
+      "db_id": 2211,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4392041485",
+      "title": "Effects of four-phonon interaction and vacancy defects on the thermal conductivity of the low-temperature phase of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\" overflow=\"scroll\"><mml:mi>Sn</mml:mi><mml:mi>Se</mml:mi></mml:math>",
+      "abstract": "Tin selenide ($\\mathrm{Sn}\\mathrm{Se}$) has recently been widely studied due to its ultralow lattice thermal conductivity and excellent thermoelectric properties. However, the thermal conductivity of the low-temperature phase of $\\mathrm{Sn}\\mathrm{Se}$ is usually overestimated with consideration of only three-phonon scattering processes and the effect of the four-phonon interaction has not been investigated. Meanwhile, it is still unclear how the widely distributed intrinsic vacancy defects, ${V}_{\\mathrm{Sn}}$ and ${V}_{\\mathrm{Se}}$, affect the lattice thermal conductivity. In this work, using the accurate first-principles-based deep-neural-network potential combined with the phonon Boltzmann transport equation and molecular-dynamics simulations, the lattice thermal conductivity of the low-temperature phase of $\\mathrm{Sn}\\mathrm{Se}$ is calculated with high-order phonon-scattering processes being considered, and the results match well with the experimental values. In addition, the effect of intrinsic vacancy defects on the thermal conductivity is also investigated using nonequilibrium molecular-dynamics simulations. The results show that the $\\mathrm{Se}$ vacancy has a more significant effect on the reduction of the thermal conductivity than the $\\mathrm{Sn}$ vacancy, due to the enhanced phonon anharmonicity attributed to the more significant vibration of the weakly bonded $\\mathrm{Sn}$ atom, as well as the appreciable inhibition of the low-frequency-phonon propagation speed. The weakening of interactions for the transition of $\\mathrm{Sn}$ atoms around vacancies from bonding with $\\mathrm{Se}$ atoms to bonding with $\\mathrm{Sn}$ atoms is the reason for the decline of the phonon group velocity. This study deepens our understanding of phonon thermal transport in the low-temperature phase of $\\mathrm{Sn}\\mathrm{Se}$ and provides a good example of using the deep-neural-network potential to explore the effects of the four-phonon interaction and intrinsic point defects on the thermal conductivity of solids.",
+      "publication_date": "2024-02-22",
+      "cited_by_count": 16,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10590",
+          "display_name": "Chalcogenide Semiconductor Thin Films",
+          "score": 0.9997000098228455,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10440",
+          "display_name": "Advanced Thermoelectric Materials and Devices",
+          "score": 0.9995999932289124,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2505",
+            "display_name": "Materials Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11948",
+          "display_name": "Machine Learning in Materials Science",
+          "score": 0.9952999949455261,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2505",
+            "display_name": "Materials Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "network dynamics phase transition",
+      "primary_topic": "Chalcogenide Semiconductor Thin Films",
+      "topic_score": 0.9997000098228455,
+      "db_id": 2220,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4390578037",
+      "title": "Adaptive Sliding Mode Control of an Electro-Hydraulic Actuator With a Kalman Extended State Observer",
+      "abstract": "Electro-hydraulic actuators (EHAs) are key linear drive components in various industrial applications. This paper addresses the challenge of achieving precise displacement tracking control for EHAs with only noisy displacement measurements. We propose a novel control approach, which consists of a Kalman extended state observer (KESO) with an adaptive sliding mode controller (ASMC). First, compared to the conventional high-gain design for the extended state observer (ESO), the Kalman filtering technique is utilized to tune the ESO feedback gain, effectively mitigating observation failures caused by measurement noise. Second, to ensure stability and minimize tracking errors in sliding mode control, a switching-gain adaptation is designed based on the desired switching gain via the derivative of the sliding variable. To validate the effectiveness of the proposed approach, simulation experiments are conducted in the Amesim simulation software. The results conclusively demonstrate that the proposed KESO-ASMC achieves significantly improved trajectory tracking performance, even in the presence of measurement noise and unknown disturbances.",
+      "publication_date": "2024-01-01",
+      "cited_by_count": 16,
+      "topics": [
+        {
+          "id": "https://openalex.org/T11372",
+          "display_name": "Hydraulic and Pneumatic Systems",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2210",
+            "display_name": "Mechanical Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14225",
+          "display_name": "Advanced Sensor and Control Systems",
+          "score": 0.9952999949455261,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2207",
+            "display_name": "Control and Systems Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10040",
+          "display_name": "Adaptive Control of Nonlinear Systems",
+          "score": 0.9937000274658203,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2207",
+            "display_name": "Control and Systems Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Hydraulic and Pneumatic Systems",
+      "topic_score": 1.0,
+      "db_id": 2226,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4392239328",
+      "title": "Beyond peaks and troughs: Multiplexed performance monitoring signals in the <scp>EEG</scp>",
+      "abstract": "Abstract With the discovery of event\u2010related potentials elicited by errors more than 30 years ago, a new avenue of research on performance monitoring, cognitive control, and decision making emerged. Since then, the field has developed and expanded fulminantly. After a brief overview on the EEG correlates of performance monitoring, this article reviews recent advancements based on single\u2010trial analyses using independent component analysis, multiple regression, and multivariate pattern classification. Given the close interconnection between performance monitoring and reinforcement learning, computational modeling and model\u2010based EEG analyses have made a particularly strong impact. The reviewed findings demonstrate that error\u2010 and feedback\u2010related EEG dynamics represent variables reflecting how performance\u2010monitoring signals are weighted and transformed into an adaptation signal that guides future decisions and actions. The model\u2010based single\u2010trial analysis approach goes far beyond conventional peak\u2010and\u2010trough analyses of event\u2010related potentials and enables testing mechanistic theories of performance monitoring, cognitive control, and decision making.",
+      "publication_date": "2024-02-28",
+      "cited_by_count": 11,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10042",
+          "display_name": "Neural and Behavioral Psychology Studies",
+          "score": 0.9970999956130981,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10429",
+          "display_name": "EEG and Brain-Computer Interfaces",
+          "score": 0.9952999949455261,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10525",
+          "display_name": "Human-Automation Interaction and Safety",
+          "score": 0.909600019454956,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3207",
+            "display_name": "Social Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Neural and Behavioral Psychology Studies",
+      "topic_score": 0.9970999956130981,
+      "db_id": 2229,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4401653104",
+      "title": "Self\u2010Adhesive and Self\u2010Sustainable Bioelectronic Patch for Physiological Feedback Electronic Modulation of Soft Organs",
+      "abstract": "Abstract Bionic electrical stimulation (Bio\u2010ES) aims to achieve personalized therapy and proprioceptive adaptation by mimicking natural neural signatures of the body, while current Bio\u2010ES devices are reliant on complex sensing and computational simulation systems, thus often limited by the low\u2010fidelity of simulated electrical signals, and failure of interface information interaction due to the mechanical mismatch between soft tissues and rigid electrodes. Here, the study presents a flexible and ultrathin self\u2010sustainable bioelectronic patch (Bio\u2010patch), which can self\u2010adhere to the lesion area of organs and generate bionic electrical signals synchronized vagal nerve envelope in situ to implement Bio\u2010ES. It allows adaptive adjustment of intensity, frequency, and waveform of the Bio\u2010ES to fully meet personalized needs of tissue regeneration based on real\u2010time feedback from the vagal neural controlled organs. With this foundation, the Bio\u2010patch can effectively intervene with excessive fibrosis and microvascular stasis during the natural healing process by regulating the polarization time of macrophages, promoting the reconstruction of the tissue\u2010engineered structure, and accelerating the repair of damaged liver and kidney. This work develops a practical approach to realize biomimetic electronic modulation of the growth and development of soft organs only using a multifunctional Bio\u2010patch, which establishes a new paradigm for precise bioelectronic medicine.",
+      "publication_date": "2024-08-15",
+      "cited_by_count": 19,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10338",
+          "display_name": "Advanced Sensor and Energy Harvesting Materials",
+          "score": 0.9991000294685364,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2204",
+            "display_name": "Biomedical Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11601",
+          "display_name": "Neuroscience and Neural Engineering",
+          "score": 0.9940000176429749,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2804",
+            "display_name": "Cellular and Molecular Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10660",
+          "display_name": "Conducting polymers and applications",
+          "score": 0.973800003528595,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2507",
+            "display_name": "Polymers and Plastics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/25",
+            "display_name": "Materials Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "feedback control adaptation",
+      "primary_topic": "Advanced Sensor and Energy Harvesting Materials",
+      "topic_score": 0.9991000294685364,
+      "db_id": 2234,
+      "score": 6
+    },
+    {
+      "openalex_id": "W4393161824",
+      "title": "Triple Adaptation of Constitutional Dynamic Networks of Imines in Response to Micellar Agents: Internal Uptake\u2013Interfacial Localization\u2013Shape Transition",
+      "abstract": "Understanding the behavior of complex chemical reaction networks and how environmental conditions can modulate their organization as well as the associated outcomes may take advantage of the design of related artificial systems. Microenvironments with defined boundaries are of particular interest for their unique properties and prebiotic significance. Dynamic covalent libraries (DCvLs) and their underlying constitutional dynamic networks (CDNs) have been shown to be appropriate for studying adaptation to several processes, including compartmentalization. However, microcompartments (e.g., micelles) provide specific environments for the selective protection from interfering reactions such as hydrolysis and an enhanced chemical promiscuity due to the interface, governing different processes of network modulation. Different interactions between the micelles and the library constituents lead to dynamic sensing, resulting in different expressions of the network through pattern generation. The constituents integrated into the micelles are protected from hydrolysis and hence preferentially expressed in the network composition at the cost of constitutionally linked members. In the present work, micellar integration was observed for two processes: internal uptake based on hydrophobic forces and interfacial localization relying on attractive electrostatic interactions. The latter drives a complex triple adaptation of the network with feedback on the shape of the self-assembled entity. Our results demonstrate how microcompartments can enforce the expression of constituents of CDNs by reducing the hydrolysis of uptaken members, unravelling processes that govern the response of reactions networks. Such studies open the way toward using DCvLs and CDNs to understand the emergence of complexity within reaction networks by their interactions with microenvironments.",
+      "publication_date": "2024-03-25",
+      "cited_by_count": 15,
+      "topics": [
+        {
+          "id": "https://openalex.org/T12236",
+          "display_name": "Photoreceptor and optogenetics research",
+          "score": 0.9994000196456909,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2804",
+            "display_name": "Cellular and Molecular Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10578",
+          "display_name": "Supramolecular Chemistry and Complexes",
+          "score": 0.9977999925613403,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1605",
+            "display_name": "Organic Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/16",
+            "display_name": "Chemistry"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10532",
+          "display_name": "Molecular Sensors and Ion Detection",
+          "score": 0.9961000084877014,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1607",
+            "display_name": "Spectroscopy"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/16",
+            "display_name": "Chemistry"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "search_term": "emergence self-organization",
+      "primary_topic": "Photoreceptor and optogenetics research",
+      "topic_score": 0.9994000196456909,
+      "db_id": 2250,
+      "score": 6
+    }
+  ]
+}

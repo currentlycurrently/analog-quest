@@ -4,167 +4,152 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 66 Goals - Refined OpenAlex Fetch for 50K Papers
+## Session 67 Goals - Alternative Strategy After Refinement Failure
 
-**Mission**: Execute refined 50K paper fetch from OpenAlex with improved search strategy
+**Mission**: Implement alternative approach after Session 66's refined search terms failed
 
-### Context from Session 65
-- Scale test: 2,358 papers fetched successfully
-- Average score: 4.98/10 (acceptable)
-- High-value papers: 51.5% (needs improvement)
-- Very high-value: 28.0% (good density)
-- **Decision**: Proceed with refinements for better quality
+### Context from Session 66
+- Refined compound search terms FAILED
+- Quality dropped to 33.8% high-value (from 51.5%)
+- Complex terms performed worse than simple ones
+- **Key Learning**: Keep search terms simple for OpenAlex
 
 ### Primary Goals
 
-1. **Refine Search Terms**
-   - Focus on top-performing terms from Session 65
-   - Add mathematical/theoretical modifiers
-   - Target 60%+ high-value rate
-   - Create 200+ refined search terms
+1. **Implement Simple Terms with Quality Filtering**
+   - Use Session 65's top-performing simple terms
+   - Fetch larger dataset (accept 50% quality)
+   - Implement post-fetch quality filtering
+   - Target: Extract high-quality subset
 
-2. **Implement Production Fetch**
-   - Target: 50,000 papers
-   - Use checkpoint system for recovery
-   - Batch processing (5K papers at a time)
-   - Monitor quality per batch
+2. **Test Hybrid Data Source Approach**
+   - Fetch high-quality papers from arXiv (physics/math)
+   - Combine with OpenAlex for breadth
+   - Balance quality vs diversity
+   - Compare extraction potential
 
-3. **Score and Import All Papers**
-   - Import to PostgreSQL (fix schema if needed)
-   - Score all 50K papers
-   - Analyze score distribution
-   - Identify top 15K for mechanism extraction
-
-4. **Quality Validation**
-   - Verify 55%+ high-value rate achieved
-   - Check domain diversity
-   - Assess mechanism extraction potential
-   - Make GO/NO-GO decision for extraction
+3. **Develop Smart Filtering Pipeline**
+   - Score papers immediately after fetch
+   - Filter to top 30% by score
+   - Only store high-value papers
+   - Reduce storage/processing overhead
 
 ### Deliverables
 
-1. **Refined Search Terms**: `examples/session66_refined_terms.json`
-   - 200+ high-quality search terms
-   - Based on Session 65 performance data
+1. **Simple Terms Strategy**: `scripts/session67_simple_fetch.py`
+   - Use proven high-performers from Session 65
+   - Larger volume to compensate for quality
+   - Built-in quality filtering
 
-2. **50K Paper Dataset**: `examples/session66_papers_batch_*.json`
-   - 10 batches of 5K papers each
-   - With checkpointing for recovery
+2. **Quality Filter**: `scripts/session67_quality_filter.py`
+   - Fast scoring algorithm
+   - Filter papers before storage
+   - Keep only score ≥6 papers
 
-3. **Quality Report**: `SESSION66_50K_QUALITY_REPORT.md`
-   - Final score distribution
-   - High-value paper analysis
-   - Extraction recommendations
+3. **Hybrid Source Test**: `scripts/session67_hybrid_test.py`
+   - Fetch from both arXiv and OpenAlex
+   - Compare quality metrics
+   - Optimal source mix recommendation
 
 ### Success Criteria
 
 **Minimum**:
-- 30,000+ papers fetched
-- 50%+ high-value rate
-- Successfully imported to PostgreSQL
+- Identify viable path to 50K papers
+- Achieve 45%+ high-value rate after filtering
+- Clear GO/NO-GO decision
 
 **Target**:
-- 50,000 papers fetched
-- 55%+ high-value rate (27,500+ papers ≥5/10)
-- 30%+ very high-value rate (15,000+ papers ≥7/10)
-- Top 15K papers identified for extraction
+- Working pipeline for filtered fetch
+- 15,000+ high-value papers identified
+- Ready for mechanism extraction
 
 **Stretch**:
-- 60%+ high-value rate achieved
-- Extract mechanisms from top 1,000 papers
-- Generate initial embeddings
+- Begin actual 50K filtered fetch
+- Extract mechanisms from top 1,000
+- Generate initial discoveries
 
 ### Time Estimate
-- Search term refinement: 30 min
-- 50K paper fetch: 2-3 hours
-- Import and scoring: 45 min
-- Analysis and reporting: 30 min
-- **Total**: 4-5 hours
+- Strategy selection: 30 min
+- Implementation: 1.5 hours
+- Testing: 1 hour
+- Analysis: 30 min
+- **Total**: 3 hours
 
-### Next Steps After Session 66
+### Next Steps After Session 67
 
 Based on results:
-- **If quality ≥55%**: Session 67 - Extract 5K+ mechanisms
-- **If quality <55%**: Session 67 - Hybrid approach with arXiv
-- **If technical issues**: Session 67 - Infrastructure optimization
+- **If filtering works**: Session 68 - Full 50K filtered fetch
+- **If hybrid better**: Session 68 - Implement dual-source pipeline
+- **If still struggling**: Session 68 - Focus on existing 2K papers
 
 ---
 
 ## Previous Sessions Reference
 
+### Session 66 (2026-02-15) - **COMPLETED** ❌
+- Tested refined compound search terms
+- Quality DROPPED to 33.8% (from 51.5%)
+- Complex terms performed worse
+- Lesson: Keep search simple
+
 ### Session 65 (2026-02-15) - **COMPLETED** ⚠️
 - Fetched 2,358 papers from OpenAlex
-- Average score: 4.98/10
-- High-value: 51.5% (below target)
-- Verdict: Proceed with refinements
+- 51.5% high-value rate with simple terms
+- Identified top performers
 
 ### Session 64 (2026-02-14) - **COMPLETED** ✅
-- Quality test with 138 targeted papers
-- High-value: 76.4% (excellent with good search terms)
-- GO decision made
-
-### Session 63 (2026-02-14) - **COMPLETED** ⚠️
-- Speed test: 2,626 papers/minute
-- Technical feasibility confirmed
+- Small sample: 76.4% high-value
+- Proved OpenAlex potential with right terms
 
 ---
 
-## Key Learnings from Session 65
+## Key Learnings for Session 67
 
-**Search Term Performance**:
-- Best: "learning feedback" (25 papers), "synchronization stability" (23)
-- Worst: "bifurcation analysis" (8), "propagation dynamics" (8)
-- Pattern: Compound terms with "feedback", "synchronization", "network" perform well
+**From Session 66 Failure**:
+1. Complex compound terms reduce quality
+2. OpenAlex search works better with simple terms
+3. High variability in term performance
+4. Need different approach for quality
 
-**Quality Insights**:
-- 217 papers scored 10/10 (9.2%) - target these patterns
-- Bimodal distribution suggests two paper populations
-- Need to filter out low-mechanism papers better
+**Best Performing Simple Terms** (Session 65):
+- "learning feedback" - 25 papers
+- "synchronization stability" - 23 papers
+- "feedback control systems" - 22 papers
+- "homeostatic feedback" - 22 papers
+- "cross-scale coupling" - 22 papers
 
-**Refinement Strategy**:
-1. Use top 50 performing terms from Session 65
-2. Add modifiers: "mathematical model", "theoretical", "mechanism"
-3. Combine successful root words
-4. Focus on feedback, synchronization, network, coupling themes
+**Alternative Strategies**:
+1. Volume + Filtering: Accept lower quality, filter aggressively
+2. Source Mixing: Combine OpenAlex breadth with arXiv quality
+3. Focused Fetch: Only use proven high-quality terms
+4. Existing Corpus: Focus on extracting from current 4,690 papers
 
 ---
 
-## Important Files for Session 66
+## Important Files for Session 67
 
 **Read First**:
-1. **SESSION65_SCALE_TEST_REPORT.md** - Detailed analysis and recommendations
-2. **examples/session65_fetch_stats.json** - Search term performance data
-3. **examples/session65_scoring_stats.json** - Score distribution
+1. **SESSION66_QUALITY_TEST_REPORT.md** - Why refinement failed
+2. **examples/session65_fetch_stats.json** - Simple term performance
+3. **examples/session66_quality_test.json** - What went wrong
 
 **Reference**:
-- `scripts/session65_openalex_fetch_simple.py` - Working fetch code
+- `scripts/session65_openalex_fetch_simple.py` - Working simple fetch
 - `scripts/session65_score_papers.py` - Scoring algorithm
 
 **Create**:
-- `examples/session66_refined_terms.json` - Improved search terms
-- `scripts/session66_batch_fetch.py` - Production fetch with batching
-- `SESSION66_50K_QUALITY_REPORT.md` - Final quality assessment
+- Alternative strategy implementation
+- Quality filtering pipeline
+- Decision report for next steps
 
 ---
 
 ## Notes for Agent
 
-- PostgreSQL must be running
-- Fix schema issue with "authors" column if needed
-- Use checkpoint files for recovery from interruptions
-- Monitor first batch quality before continuing
-- Consider stopping early if quality is consistently low
-- Track fetch statistics per search term for future optimization
+- Don't over-engineer - Session 66 showed complex isn't better
+- Consider stopping 50K fetch if quality can't be improved
+- Existing 4,690 papers might be enough for prototype
+- Focus on achievable goals given quality constraints
+- Document decision rationale clearly
 
-This session is critical - if successful, we move to extraction phase. If not, we pivot to hybrid approach.
-
----
-
-## Session 64 Reference (COMPLETED)
-
-### Session 64 (2026-02-14) - **COMPLETED** ✅
-- Tested OpenAlex quality with has_abstract filter
-- Average score: 5.65/10 (70% better than arXiv)
-- High-value papers: 76.4%
-- Extracted 20 mechanisms (80% hit rate)
-- **GO Decision**: Proceed with OpenAlex
+This session determines whether to continue with large-scale fetch or pivot to working with existing data.

@@ -14,6 +14,61 @@ Below is the most recent session history (Session 56+).
 
 ---
 
+## Session 66 - 2026-02-15 - Refined Search Terms Test: FAILED ❌
+
+**Goal**: Test refined compound search terms to improve OpenAlex paper quality
+
+**What I Did**:
+- [x] **Analyzed Session 65 search term performance**
+  - Identified top performers: feedback, learning, synchronization
+  - Found patterns in successful terms
+  - Average 16 papers per term, high variability
+
+- [x] **Created 210 refined compound search terms**
+  - Combined high-value keywords
+  - Added theoretical/mathematical modifiers
+  - Created complex multi-concept terms
+
+- [x] **Tested 30 sample terms with 491 papers**
+  - Fetched ~16 papers per term
+  - Quick quality scoring
+  - Compared with Session 65 baseline
+
+- [x] **Results: FAILED quality target** ❌
+  - High-value rate: 33.8% (vs 51.5% Session 65)
+  - Average score: 4.15/10 (vs 4.98 Session 65)
+  - Very high-value: 10.6% (vs 28% Session 65)
+
+**Key Finding**: **Simpler search terms perform better than complex ones**
+- Compound terms too specific for OpenAlex
+- High variability (0-88% high-value rate)
+- Academic papers don't match our idealized terms
+
+**What I Learned**:
+- **OpenAlex search prefers simple terms**: Complex phrases reduce match quality
+- **Over-specificity hurts**: Narrow terms miss broader mechanism papers
+- **Variability increases with complexity**: Unpredictable quality
+- **Keep it simple**: Best results from single-concept + modifier
+
+**Decision**: **DO NOT PROCEED with refined terms** ❌
+- Revert to Session 65's simpler approach
+- Consider post-fetch quality filtering instead
+- Need different strategy for quality improvement
+
+**Next Session** (67):
+- Use simple high-performing terms from Session 65
+- Implement quality filtering post-fetch
+- Or try hybrid approach with multiple sources
+
+**Key Files Created**:
+- examples/session66_refined_terms.json - 210 refined terms (failed approach)
+- examples/session66_quality_test.json - Test results showing failure
+- SESSION66_QUALITY_TEST_REPORT.md - Detailed failure analysis
+
+**Time Spent**: ~1.5 hours
+
+---
+
 ## Session 65 - 2026-02-15 - OpenAlex Scale Test: 2,358 Papers ⚠️
 
 **Goal**: Test OpenAlex at larger scale (target 5,000 papers) to validate quality before 50K ingestion
@@ -113,7 +168,7 @@ Below is the most recent session history (Session 56+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **65** (Session 65 = **OpenAlex Scale Test - 2,358 Papers** ⚠️)
+- **Total Sessions**: **66** (Session 66 = **Refined Terms Test - FAILED** ❌)
 - **Total Papers**: **4,690** (Session 65 added 2,358 OpenAlex papers)
 - **Total Papers Scored**: **4,690** (100% coverage, Session 65 avg 4.98/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)

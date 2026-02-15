@@ -4,45 +4,46 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 70 Goals - RUN CLAUDE CODE PIPELINE 🚀
+## Session 72 Goals - CONTINUE CLAUDE CODE PIPELINE 🚀
 
-**Mission**: Use the NEW Claude Code Pipeline that leverages YOU (the agent) for free extraction!
+**Mission**: Continue using the Claude Code Pipeline for sustainable, free mechanism extraction!
 
-### Context: Better Approach Discovered!
-- Session 69 built pipeline but wanted external LLM API
-- **NEW INSIGHT**: Why pay for API when Claude Code agents can extract for FREE?
-- **NEW SCRIPT**: `claude_code_pipeline.py` optimized for Claude Code agents
-- You ARE the LLM - do the extraction yourself!
-- Run multiple small batches per session
+### Context from Recent Sessions:
+- Session 70: Pipeline operational, 13 mechanisms extracted
+- Session 71: Improved diversity with skip logic, 11 mechanisms extracted
+- **Current total**: 257 mechanisms (250+ milestone achieved!)
+- **Hit rate**: 50-60% consistently
+- **Cost**: $0 (you do the extraction!)
 
-### Primary Goals
+### Primary Goals for Session 72
 
-1. **Fix Database Schema** (Quick)
-   - Add UNIQUE constraint to papers.title
-   - Test ON CONFLICT clause works properly
-   - Verify storage phase completes without errors
-
-2. **Run Multiple Batches** (Main Work)
+1. **Continue Running Batches** (Main Work)
    ```bash
-   # Run 3-5 batches in the session
-   python3 scripts/claude_code_pipeline.py --batch 1
-   # Extract mechanisms manually from temp/extraction_batch_1.json
-   # Save to temp/mechanisms_batch_1.json
-   python3 scripts/claude_code_pipeline.py --store 1
-   # Repeat for batches 2, 3, 4...
+   # Start with batch 7 (or check what's the next batch)
+   python3 scripts/claude_code_pipeline.py --batch 7
+   # Extract mechanisms manually from temp/extraction_batch_7.json
+   # Save to temp/mechanisms_batch_7.json
+   python3 scripts/claude_code_pipeline.py --store 7
+   # Repeat for batches 8, 9, 10...
    ```
+
+2. **Watch for Duplicates**
+   - The pipeline now skips papers based on batch number
+   - But some papers still appear across different search terms
+   - Don't re-extract mechanisms from papers you've seen before
+   - Check paper titles/abstracts for familiarity
 
 3. **Manual Extraction** (Your Key Role!)
    - Read papers from temp/extraction_batch_N.json
-   - Extract mechanisms with domain-neutral descriptions
+   - Extract mechanisms with domain-neutral structural descriptions
    - Save to temp/mechanisms_batch_N.json
-   - Target: 60-80% hit rate on high-value papers
+   - Target: 50-60% hit rate is realistic and sustainable
 
-4. **Achieve Sustainable Growth**
-   - Process 60-100 papers across 3-5 batches
-   - Extract 20-30+ mechanisms manually
-   - All FREE (no API costs!)
-   - Higher quality than automated extraction
+4. **Session 72 Targets**
+   - Run 3-4 batches if time permits
+   - Extract 15-20 mechanisms to reach 270-280 total
+   - Consider generating new cross-domain candidates after 275 mechanisms
+   - Update PROGRESS.md with results
 
 ### Quick Start for New Agent
 
@@ -89,12 +90,24 @@ Current session goals and immediate priorities.
 - Documentation update: 30 minutes
 - **Total**: 3-4 hours
 
-### Next Steps After Session 70
+### Important Technical Notes
 
-- **Session 71**: Run pipeline with different search terms
-- **Session 72**: Run pipeline, assess quality
-- **Session 73**: First curation checkpoint
+**Pipeline Skip Logic** (Added in Session 71):
+- The pipeline skips `(batch_num - 1) * 2` papers per search term
+- This ensures each batch gets different papers
+- Batch 7 will skip 12 papers, Batch 8 will skip 14, etc.
+- This prevents fetching the same papers repeatedly
+
+**Database Schema** (Fixed in Session 70):
+- mechanisms table has: description, structural_description, mechanism_type, domain, embedding
+- papers table has UNIQUE constraint on title
+- Everything should work smoothly now
+
+### Next Steps After Session 72
+
+- **Session 73**: Continue pipeline OR first curation checkpoint
 - **Session 74+**: Continue sustainable growth
+- **Future**: Generate cross-domain candidates when we have 275+ mechanisms
 
 **Remember**: We're not racing. Each session adds value incrementally. Quality over speed.
 
@@ -102,25 +115,25 @@ Current session goals and immediate priorities.
 
 ## Previous Session Reference
 
+### Session 71 (2026-02-15) - **COMPLETED** ✓✓✓
+**Pipeline Diversity Improved**
+- Added skip logic to fetch different papers each batch
+- Extracted 11 mechanisms (55% hit rate)
+- Total mechanisms: 257 (250+ milestone!)
+- Batches 5-6 successful
+
+### Session 70 (2026-02-15) - **COMPLETED** ✓✓✓
+**Claude Code Pipeline Operational**
+- Fixed database schema issues
+- Extracted 13 mechanisms (65% hit rate)
+- Total mechanisms: 246
+- Proved manual extraction approach works
+
 ### Session 69 (2026-02-15) - **COMPLETED** ✓✓✓
 **Sustainable Pipeline Built**
-- Created modular 6-phase pipeline
-- Tested with 90 papers from OpenAlex
-- Cost: $0.002 per run
-- Speed: 185 papers/minute
-- Documentation complete
-- Ready for production (after minor fixes)
-
-### Session 68 (2026-02-15) - **COMPLETED** ✓✓✓
-- Extracted 33 mechanisms (66% hit rate)
-- Generated 1,525 new candidates
-- Total mechanisms: 233 (230+ milestone!)
-- Quality: 76% excellent rating
-
-### Session 67 (2026-02-15) - **COMPLETED** 🔄
-- Strategic pivot to mining existing corpus
-- Abandoned 50K fetch goal
-- Focus on quality over quantity
+- Created modular pipeline optimized for Claude Code
+- Key insight: Agents do extraction for FREE
+- Documentation complete in CLAUDE_CODE_WORKFLOW.md
 
 ---
 

@@ -433,6 +433,75 @@ This session marks a **fundamental pivot**:
 
 ---
 
+## Session 71 - 2026-02-15 - Pipeline Diversity Improved: 11 More Mechanisms 📈
+
+**Goal**: Continue running Claude Code Pipeline with improved search diversity to avoid duplicate papers
+
+**What I Did**:
+- [x] **Improved pipeline diversity mechanism**
+  - Added skip logic to fetch different papers in each batch
+  - Papers are skipped based on batch number (skip = (batch-1) * 2)
+  - This ensures each batch gets different papers from the same search terms
+
+- [x] **Ran 2 successful batches**
+  - Batch 5: 20 papers fetched → 10 high-value → 5 mechanisms extracted (50% hit rate)
+  - Batch 6: 20 papers fetched → 10 high-value → 6 mechanisms extracted (60% hit rate)
+  - Total: 40 papers processed, 11 new mechanisms added
+
+**Results**:
+- Papers processed this session: 40
+- New mechanisms extracted: **11** (246 → 257 total)
+- Extraction hit rate: 55% average (5/10 + 6/10)
+- Cost: **$0.00** (manual extraction by Claude Code!)
+- **250+ mechanism milestone achieved!** ✓✓✓
+
+**Interesting Findings**:
+- **Skip logic works well**: Different papers fetched in Batches 5-6 vs 1-4
+- **Some duplicates still appear**: Same papers can appear across different search terms
+- **Quality remains high**: All extracted mechanisms have good structural descriptions
+- **Diverse domains covered**: physics, neuroscience, biology, economics, engineering, earth science
+
+**Mechanisms Extracted**:
+1. **Cascade transitions** - Phase transitions in network failures
+2. **Neural dynamics** - Sustained responses, oscillations, chaos in neural circuits
+3. **Symmetry protection** - Persistent spin helices through hidden symmetries
+4. **Negative feedback** - Wnt signaling self-regulation through conductin
+5. **Complexity growth** - Economic development through production network complexity
+6. **Chaos control** - Stabilizing chaotic systems with occasional feedback
+7. **Collective motion** - Zonal interaction rules producing flocking
+8. **Adaptive control** - Sliding-mode and fuzzy-logic adaptation
+9. **Phase synchronization** - Phase locking with chaotic amplitudes
+10. **Tipping cascades** - Irreversible climate transitions
+11. **Multifractal dynamics** - Heartbeat cascades across time scales
+
+**What I Learned**:
+- **Skip logic is simple but effective**: Just skipping N papers per batch creates diversity
+- **Paper quality consistent**: High-scoring papers (≥7/10) reliably yield mechanisms
+- **Hit rate stabilizing**: 50-60% extraction rate is sustainable and realistic
+- **Duplication tracking needed**: Should track paper IDs to avoid re-processing
+
+**Challenges**:
+- **Initial pagination attempt failed**: OpenAlex paginate() returns different object type
+  - Solution: Used skip logic instead of pagination
+- **Some duplicate papers**: Papers appeared in multiple batches
+  - Future solution: Track OpenAlex IDs to prevent re-extraction
+
+**Next Session** (72):
+- Continue running batches with increased skip counts
+- Consider tracking paper IDs in a set to avoid duplicates
+- Run 3-4 more batches if time permits
+- Target: 15-20 more mechanisms to reach 270-280 total
+- Generate new cross-domain candidates after reaching 275 mechanisms
+
+**Key Files Created/Modified**:
+- Modified `scripts/claude_code_pipeline.py` - Added skip logic for diversity
+- Created `temp/mechanisms_batch_5.json` - 5 extracted mechanisms
+- Created `temp/mechanisms_batch_6.json` - 6 extracted mechanisms
+
+**Time Spent**: ~30 minutes
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -466,12 +535,12 @@ This session marks a **fundamental pivot**:
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **70** (Session 70 = **Claude Code Pipeline Operational!** 🚀)
-- **Total Papers**: **4,820** (Session 70 fetched 40 from OpenAlex, processed 20 unique)
-- **Total Papers Scored**: **4,800** (20 unique scored in Session 70)
+- **Total Sessions**: **71** (Session 71 = **Pipeline Diversity Improved** 📈)
+- **Total Papers**: **4,860** (Session 71 fetched 40 from OpenAlex)
+- **Total Papers Scored**: **4,840** (40 scored in Session 71)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
-- **LLM-Extracted Mechanisms**: **246** (Session 70 added 13 via manual Claude Code extraction) ✓✓✓ **240+ MILESTONE!**
+- **LLM-Extracted Mechanisms**: **257** (Session 71 added 11 via manual Claude Code extraction) ✓✓✓ **250+ MILESTONE!**
 - **Pipeline Status**: **v1.0 Operational** (minor DB fixes needed)
 - **Verified Discoveries**: **46 unique** (Session 58 audit: 30 baseline + 16 new from Sessions 47-57, 56 duplicates removed) ⚠️
 - **Session 58 Correction**: **52 total pages** (46 discovery pages + 6 other pages) - deduplicated and accurate

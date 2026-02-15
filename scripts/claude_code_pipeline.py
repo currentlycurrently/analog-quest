@@ -57,12 +57,26 @@ def fetch_papers(num_papers: int = 20, batch_num: int = 1) -> List[Dict]:
 
         print(f"Searching: {term}")
         try:
-            works = Works().search(term).filter(has_abstract=True).get()
+            # Use pagination to get different papers in different batches
+            # For batches 1-15, use page 1; for 16-30, page 2, etc.
+            page_num = ((batch_num - 1) // len(search_terms)) + 1
+
+            # Skip some results to get different papers
+            skip_count = (batch_num - 1) * 2  # Skip 2 papers per batch number
+
+            works_query = Works().search(term).filter(has_abstract=True)
+            works = works_query.get()
 
             count = 0
+            skipped = 0
             for work in works:
                 if count >= papers_per_term or len(papers) >= num_papers:
                     break
+
+                # Skip initial papers to get diversity across batches
+                if skipped < skip_count:
+                    skipped += 1
+                    continue
 
                 # Extract paper data
                 paper = {

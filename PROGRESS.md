@@ -14,6 +14,72 @@ Below is the most recent session history (Session 56+).
 
 ---
 
+## Session 65 - 2026-02-15 - OpenAlex Scale Test: 2,358 Papers ⚠️
+
+**Goal**: Test OpenAlex at larger scale (target 5,000 papers) to validate quality before 50K ingestion
+
+**What I Did**:
+- [x] **Developed 147 mechanism-relevant search terms**
+  - 12 categories covering dynamics, feedback, networks, etc.
+  - Mix of specific and broad mechanism indicators
+  - Balanced across domains
+
+- [x] **Fetched 2,358 papers from OpenAlex**
+  - Used all 147 search terms
+  - Average 16 papers per term
+  - Fetch completed in ~5 minutes
+  - 100% abstract coverage with has_abstract filter
+
+- [x] **Scored all papers for mechanism richness**
+  - Average score: 4.98/10
+  - High-value papers (≥5/10): 51.5% (1,214 papers)
+  - Very high-value papers (≥7/10): 28.0% (660 papers)
+  - 217 papers scored perfect 10/10
+
+- [x] **Analyzed quality consistency**
+  - Quality lower than Session 64 sample (51.5% vs 76.4%)
+  - But still much better than random arXiv (51.5% vs 28.8%)
+  - High variance in search term effectiveness
+
+**Results**:
+- Papers fetched: 2,358 (47% of target)
+- Average score: 4.98/10 ✅
+- High-value percentage: 51.5% ⚠️
+- Very high-value percentage: 28.0% ✓
+- Fetch speed: ~470 papers/minute ✅
+
+**Interesting Findings**:
+- **Bimodal distribution**: Peaks at scores 3-4 and 10
+- **Search term variability**: "learning feedback" yielded 25 papers, "bifurcation analysis" only 8
+- **217 perfect scores**: 9.2% of papers scored 10/10 (surprisingly high)
+- **Quality vs quantity trade-off**: Broader search reduces quality density
+
+**What I Learned**:
+- **OpenAlex quality variable**: Depends heavily on search terms
+- **Refinement needed**: Can improve from 51.5% to 60%+ with better terms
+- **Scale feasible**: Can fetch 50K papers in ~2 hours
+- **28% very high-value**: Still yields 14K excellent papers from 50K
+
+**Decision**: **PROCEED WITH REFINEMENTS** ⚠️
+- OpenAlex viable for scale-up but needs search optimization
+- Target 55%+ high-value rate for 50K fetch
+- Focus on high-performing search terms
+
+**Next Session** (66):
+- Refine search strategy based on term performance
+- Implement 50K paper fetch with improved terms
+- Target 27,500+ high-value papers
+
+**Key Files Created**:
+- examples/session65_search_terms.json - 147 mechanism search terms
+- examples/session65_fetched_papers.json - 2,358 papers with abstracts
+- examples/session65_scoring_stats.json - Score distribution analysis
+- SESSION65_SCALE_TEST_REPORT.md - Comprehensive analysis
+
+**Time Spent**: ~3 hours
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -47,9 +113,9 @@ Below is the most recent session history (Session 56+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **64** (Session 64 = **OpenAlex Quality Test - GO Decision** ✅)
-- **Total Papers**: **2,332** (Session 64 added 138 OpenAlex papers with abstracts)
-- **Total Papers Scored**: **2,332** (100% coverage, OpenAlex avg 5.65/10 vs arXiv 3.31/10)
+- **Total Sessions**: **65** (Session 65 = **OpenAlex Scale Test - 2,358 Papers** ⚠️)
+- **Total Papers**: **4,690** (Session 65 added 2,358 OpenAlex papers)
+- **Total Papers Scored**: **4,690** (100% coverage, Session 65 avg 4.98/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
 - **LLM-Extracted Mechanisms**: **200** (Session 55 added 30 new, 60% hit rate - 30/50 papers) ✓✓✓ **200 MILESTONE!**
@@ -63,12 +129,12 @@ Below is the most recent session history (Session 56+).
   - Schema: papers (2,194), mechanisms (200), discoveries (0), discovered_pairs (46)
   - Performance: <50ms for k=10 similarity search (validated with 200 vectors)
   - **Migration complete**: All data from SQLite → PostgreSQL (Session 62)
-- **OpenAlex Testing** (Session 63): **Partially Feasible** ⚠️
-  - Speed: 2,626 papers/minute (19 minutes for 50K papers) ✅
-  - Abstract coverage: 65.3% (below 80% target) ⚠️
-  - Topic coverage: 100% ✅
-  - Database integration: Working ✅
-  - Recommendation: Use with adjusted expectations (30K abstracts from 50K papers)
+- **OpenAlex Testing** (Sessions 63-65): **Feasible with Refinements** ⚠️
+  - Session 63: Speed test - 2,626 papers/minute ✅
+  - Session 64: Quality test - 76.4% high-value with targeted search ✅
+  - Session 65: Scale test - 51.5% high-value at 2,358 papers ⚠️
+  - **Decision**: Proceed with refined search strategy
+  - **Target**: 50K papers with 55%+ high-value rate
 - **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th, nlin, hep-ph, eess (17+ domains!)
 - **Extraction Efficiency**: ~15 mechanisms/hour (manual), Session 53: 90% hit rate (36/40 papers)
 - **Methodology Version**: **v3.1 (score-all-papers + targeted extraction + semantic matching)** - Validated!

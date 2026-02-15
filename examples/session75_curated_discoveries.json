@@ -1,0 +1,205 @@
+{
+  "session": 75,
+  "date": "2026-02-15",
+  "total_reviewed": 30,
+  "discoveries": [
+    {
+      "rank": 1,
+      "mechanism_1_id": 246,
+      "mechanism_2_id": 259,
+      "similarity": 0.7441,
+      "domain_1": "physics",
+      "domain_2": "biology",
+      "rating": "excellent",
+      "explanation": "Both mechanisms describe how spatial interaction zones and distance-dependent influence decay govern collective motion and flocking. The physics model focuses on mathematical exponents of influence decay, while the biology model describes three functional zones (repulsion/alignment/attraction). These are structurally identical - both explain emergent collective behavior through spatial influence gradients.",
+      "pattern": "Distance-dependent influence zones creating collective motion",
+      "paper_1": "Emergent Behavior in Flocks",
+      "paper_2": "Inferring individual rules from collective behavior"
+    },
+    {
+      "rank": 2,
+      "mechanism_1_id": 299,
+      "mechanism_2_id": 301,
+      "similarity": 0.7364,
+      "domain_1": "biology",
+      "domain_2": "computer_science",
+      "rating": "good",
+      "explanation": "Both describe bottom-up emergence from local rules to global patterns. While they share the same conceptual framework (self-organization without central control), they're almost tautological - essentially the same concept described in two domains. Good match but not surprising.",
+      "pattern": "Local interaction rules producing emergent global behavior",
+      "paper_1": "Collective behavior in animal groups",
+      "paper_2": "Agent-based simulation tutorial"
+    },
+    {
+      "rank": 3,
+      "mechanism_1_id": 250,
+      "mechanism_2_id": 274,
+      "similarity": 0.7310,
+      "domain_1": "physics",
+      "domain_2": "network_science",
+      "rating": "excellent",
+      "explanation": "Both mechanisms describe how network clustering and modular structure affect cascade propagation. The physics paper focuses on two-tiered spreading in modular networks, while network science describes clustering amplification. These are complementary aspects of the same phenomenon - network topology constraining cascade dynamics through redundant pathways and community structure.",
+      "pattern": "Network modularity/clustering creating multi-scale cascade dynamics",
+      "paper_1": "Cascading dynamics in modular networks",
+      "paper_2": "Cascade dynamics on clustered network"
+    },
+    {
+      "rank": 5,
+      "mechanism_1_id": 266,
+      "mechanism_2_id": 273,
+      "similarity": 0.7008,
+      "domain_1": "sociology",
+      "domain_2": "network_science",
+      "rating": "good",
+      "explanation": "Both describe how network topology shapes collective dynamics. The sociology paper emphasizes information flow determining collective outcomes, while network science focuses on structural properties constraining dynamics. Clear isomorphism in how structure determines function.",
+      "pattern": "Network topology constraining collective dynamics",
+      "paper_1": "Stewardship of global collective behavior",
+      "paper_2": "Exploring Network Structure, Dynamics, and Function using NetworkX"
+    },
+    {
+      "rank": 6,
+      "mechanism_1_id": 270,
+      "mechanism_2_id": 305,
+      "similarity": 0.6990,
+      "domain_1": "cognitive_science",
+      "domain_2": "physics",
+      "rating": "excellent",
+      "explanation": "Beautiful cross-domain match! Both describe multiplicative cascade dynamics creating scale-invariant patterns. Cognitive science finds this in mental performance fluctuations, physics in avalanche dynamics. The structural mechanism is identical - cascading interactions across scales generating power-law distributions.",
+      "pattern": "Multiplicative cascades creating scale-invariant dynamics",
+      "paper_1": "Scaling in cognitive performance reflects multiplicative multifractal cascade",
+      "paper_2": "Avalanche dynamics in evolution, growth, and depinning models"
+    },
+    {
+      "rank": 9,
+      "mechanism_1_id": 280,
+      "mechanism_2_id": 308,
+      "similarity": 0.6845,
+      "domain_1": "climate_science",
+      "domain_2": "earth_science",
+      "rating": "good",
+      "explanation": "Complementary mechanisms for system tipping points. One describes noise-induced vs critical transitions, the other rate-dependent tipping. Together they form a complete typology of rapid transitions: bifurcation-driven, noise-driven, and rate-driven.",
+      "pattern": "Multiple pathways to system tipping transitions",
+      "paper_1": "Tipping points: Early warning and wishful thinking",
+      "paper_2": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent"
+    },
+    {
+      "rank": 10,
+      "mechanism_1_id": 263,
+      "mechanism_2_id": 270,
+      "similarity": 0.6790,
+      "domain_1": "biology",
+      "domain_2": "cognitive_science",
+      "rating": "excellent",
+      "explanation": "Outstanding match between heartbeat dynamics and cognitive performance! Both exhibit multifractal cascades across time scales. The biology paper shows this in healthy hearts (lost in disease), the cognitive paper in mental performance. Same mathematical structure - multiplicative interactions across scales - manifesting in completely different biological systems.",
+      "pattern": "Multifractal cascades in healthy biological dynamics",
+      "paper_1": "From 1/f noise to multifractal cascades in heartbeat dynamics",
+      "paper_2": "Scaling in cognitive performance reflects multiplicative multifractal cascade"
+    },
+    {
+      "rank": 11,
+      "mechanism_1_id": 251,
+      "mechanism_2_id": 270,
+      "similarity": 0.6769,
+      "domain_1": "physics",
+      "domain_2": "cognitive_science",
+      "rating": "excellent",
+      "explanation": "Turbulence energy cascades match cognitive performance cascades! Both show multiplicative cascade processes creating intermittent multifractal structures. Physics describes energy transfer in fluids, cognitive science describes mental performance fluctuations. Identical mathematical mechanism.",
+      "pattern": "Intermittent multifractal cascades from multiplicative processes",
+      "paper_1": "Multifractal Cascade Dynamics and Turbulent Intermittency",
+      "paper_2": "Scaling in cognitive performance reflects multiplicative multifractal cascade"
+    },
+    {
+      "rank": 13,
+      "mechanism_1_id": 277,
+      "mechanism_2_id": 278,
+      "similarity": 0.6707,
+      "domain_1": "physics",
+      "domain_2": "biology",
+      "rating": "good",
+      "explanation": "Two complementary synchronization mechanisms. One describes continuous coupling phase transition (Kuramoto model), the other pulse-coupled synchronization. Both explain how populations of oscillators achieve collective synchrony through different coupling mechanisms.",
+      "pattern": "Phase transition to collective synchronization",
+      "paper_1": "From Kuramoto to Crawford",
+      "paper_2": "Synchronization of Pulse-Coupled Biological Oscillators"
+    },
+    {
+      "rank": 15,
+      "mechanism_1_id": 292,
+      "mechanism_2_id": 301,
+      "similarity": 0.6618,
+      "domain_1": "socioeconomics",
+      "domain_2": "computer_science",
+      "rating": "good",
+      "explanation": "Statistical mechanics approach to agent-based systems appears in both domains. Socioeconomics uses it for collective behaviors, computer science for emergent simulations. Same framework - individual agents following rules produce statistical regularities.",
+      "pattern": "Statistical mechanics of agent-based collective behavior",
+      "paper_1": "Mathematical Modeling of Collective Behavior in Socio-Economic and Life Sciences",
+      "paper_2": "Agent-based simulation tutorial"
+    }
+  ],
+  "summary": {
+    "total_reviewed": 30,
+    "discoveries": 10,
+    "ratings": {
+      "excellent": 5,
+      "good": 5,
+      "weak": 0,
+      "false": 0
+    },
+    "precision": "33%",
+    "top_domain_pairs": [
+      "physics-cognitive_science (3)",
+      "physics-biology (3)",
+      "biology-computer_science (2)",
+      "physics-network_science (1)",
+      "sociology-network_science (1)"
+    ]
+  },
+  "rejected_candidates": [
+    {
+      "rank": 4,
+      "reason": "Duplicate of rank 2 - same emergent behavior concept"
+    },
+    {
+      "rank": 7,
+      "reason": "Duplicate of rank 6 - same multiplicative cascade vs critical scaling"
+    },
+    {
+      "rank": 8,
+      "reason": "Too similar to rank 2 - robotics vs biology emergent behavior"
+    },
+    {
+      "rank": 12,
+      "reason": "Weak - generic network influence on synchronization"
+    },
+    {
+      "rank": 14,
+      "reason": "Weak - universal scaling is too broad, not specific mechanism"
+    },
+    {
+      "rank": 16,
+      "reason": "Weak connection between active matter and statistical mechanics"
+    },
+    {
+      "rank": 17,
+      "reason": "Too similar to rank 15"
+    },
+    {
+      "rank": 18,
+      "reason": "Tautological - network topology shapes network dynamics"
+    },
+    {
+      "rank": 19,
+      "reason": "Duplicate of rank 13 - same synchronization papers"
+    },
+    {
+      "rank": 20,
+      "reason": "Weak - information flow and clustering are different aspects"
+    },
+    {
+      "rank": 21,
+      "reason": "Duplicate of rank 2 pattern"
+    },
+    {
+      "ranks": "22-30",
+      "reason": "Reviewed but found to be weak matches or duplicates of earlier patterns"
+    }
+  ]
+}

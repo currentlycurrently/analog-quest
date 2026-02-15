@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-02-14",
-    "total_pairs": 46,
+    "last_updated": "2026-02-15",
+    "total_pairs": 56,
     "description": "Tracks all discovered paper pairs to prevent duplication across sessions",
     "note": "Created in Session 59 after Session 58 audit revealed 54% duplication problem. All 46 unique discoveries after deduplication."
   },
@@ -327,6 +327,76 @@
       "similarity": 0.5099,
       "rating": "good",
       "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 246,
+      "paper_2_id": 259,
+      "similarity": 0.7441,
+      "rating": "excellent",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 299,
+      "paper_2_id": 301,
+      "similarity": 0.7364,
+      "rating": "good",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 250,
+      "paper_2_id": 274,
+      "similarity": 0.731,
+      "rating": "excellent",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 266,
+      "paper_2_id": 273,
+      "similarity": 0.7008,
+      "rating": "good",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 270,
+      "paper_2_id": 305,
+      "similarity": 0.699,
+      "rating": "excellent",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 280,
+      "paper_2_id": 308,
+      "similarity": 0.6845,
+      "rating": "good",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 263,
+      "paper_2_id": 270,
+      "similarity": 0.679,
+      "rating": "excellent",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 251,
+      "paper_2_id": 270,
+      "similarity": 0.6769,
+      "rating": "excellent",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 277,
+      "paper_2_id": 278,
+      "similarity": 0.6707,
+      "rating": "good",
+      "discovered_in_session": 75
+    },
+    {
+      "paper_1_id": 292,
+      "paper_2_id": 301,
+      "similarity": 0.6618,
+      "rating": "good",
+      "discovered_in_session": 75
     }
   ]
 }

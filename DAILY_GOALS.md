@@ -4,31 +4,30 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 75 Goals - CURATE DISCOVERIES FROM 595 CANDIDATES 🎯
+## Session 76 Goals - CONTINUE CURATION OR EXTRACTION 🎯
 
-**Mission**: Review the 595 cross-domain candidates from Session 74 to find new discoveries!
+**Mission**: Continue progress toward 100 discoveries - multiple paths available!
 
-### Context from Session 74:
-- **305 mechanisms** in database (300+ milestone achieved! 🎉)
-- **595 cross-domain candidates** generated (threshold ≥0.35)
-- Top similarity: 0.7441 (physics ↔ biology)
-- Top domain pairs: biology-physics (25.7%), network_science-physics (5.2%)
-- Currently **46 unique discoveries** (need 54 more for 100 milestone)
+### Context from Session 75:
+- **305 mechanisms** in database
+- **56 unique discoveries** (10 new found in Session 75!)
+- **565 remaining candidates** from Session 74 batch (30 reviewed, 565 left)
+- **44 discoveries needed** to reach 100 milestone (56% complete)
+- Session 75 precision: 33% (10/30 reviewed)
 
-### Primary Goals for Session 75
+### Primary Goals for Session 76
 
-1. **Review Top Candidates** (Main Work)
-   - Load `examples/session74_candidates.json` (595 candidates)
-   - Review top 30-50 candidates systematically
-   - Apply quality standards from DATA_QUALITY_STANDARDS.md
-   - Rate each as: excellent / good / weak / false
-   - Document structural explanations for discoveries
+**Option 1: Continue Curation** (Recommended - we have momentum!)
+   - Review candidates 31-80 from `examples/session74_candidates.json`
+   - These are in 0.60-0.65 similarity range (historically good precision)
+   - Expected: 15-20 new discoveries based on 33% precision
+   - Would reach ~70-75 total discoveries!
 
-2. **Expected Outcomes**
-   - Review 30-50 candidates from top of list
-   - Expected precision: 35-45% (based on historical data)
-   - Target: Find 10-20 new discoveries
-   - Progress toward 100 discovery milestone (currently 46/100)
+**Option 2: More Extraction**
+   - Create diverse search terms (materials science, chemistry, systems biology)
+   - Run 3-4 Claude Code Pipeline batches
+   - Extract 15-20 mechanisms → reach 320-325 total
+   - Generate fresh candidates for next session
 
 3. **Quality Standards** (from DATA_QUALITY_STANDARDS.md)
    - **Excellent**: Clear structural isomorphism, non-obvious connection, generalizable
@@ -121,6 +120,13 @@ WHERE m1.id = [mech1_id] AND m2.id = [mech2_id];
 ---
 
 ## Previous Session Reference
+
+### Session 75 (2026-02-15) - **COMPLETED** ✓✓✓
+**Curation Sprint - 10 New Discoveries!**
+- Reviewed 30 candidates from Session 74 batch
+- Found 10 new discoveries (5 excellent, 5 good)
+- Total discoveries: 56 (56% to goal!)
+- Key finding: Multifractal cascades appear across physics, biology, and cognition
 
 ### Session 74 (2026-02-15) - **COMPLETED** ✓✓✓
 **Pipeline Evolution - 300+ Milestone!**

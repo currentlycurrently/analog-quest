@@ -4,152 +4,168 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 67 Goals - Alternative Strategy After Refinement Failure
+## Session 68 Goals - Begin Existing Corpus Mining
 
-**Mission**: Implement alternative approach after Session 66's refined search terms failed
+**Mission**: Start extracting mechanisms from the 431 unprocessed high-value papers
 
-### Context from Session 66
-- Refined compound search terms FAILED
-- Quality dropped to 33.8% high-value (from 51.5%)
-- Complex terms performed worse than simple ones
-- **Key Learning**: Keep search terms simple for OpenAlex
+### Context from Session 67 Decision
+- 50K fetch abandoned - not viable with current approaches
+- Pivoting to mine existing 4,690 papers
+- 431 high-value papers (score ≥5) still unprocessed
+- Potential for 250-300 more mechanisms
+- Goal: Reach 100-150 total discoveries
 
 ### Primary Goals
 
-1. **Implement Simple Terms with Quality Filtering**
-   - Use Session 65's top-performing simple terms
-   - Fetch larger dataset (accept 50% quality)
-   - Implement post-fetch quality filtering
-   - Target: Extract high-quality subset
+1. **Select Next Batch of Papers**
+   - Query PostgreSQL for papers with score = 7
+   - Exclude already-extracted paper IDs
+   - Select 50 papers for this session
+   - Diverse domains if possible
 
-2. **Test Hybrid Data Source Approach**
-   - Fetch high-quality papers from arXiv (physics/math)
-   - Combine with OpenAlex for breadth
-   - Balance quality vs diversity
-   - Compare extraction potential
+2. **Extract Mechanisms Manually**
+   - Read abstracts carefully
+   - Extract domain-neutral structural patterns
+   - Expect 30-40 mechanisms (60-80% hit rate)
+   - Focus on causal relationships
 
-3. **Develop Smart Filtering Pipeline**
-   - Score papers immediately after fetch
-   - Filter to top 30% by score
-   - Only store high-value papers
-   - Reduce storage/processing overhead
+3. **Generate New Candidates**
+   - Add mechanisms to PostgreSQL
+   - Generate embeddings
+   - Find cross-domain matches (≥0.35 similarity)
+   - Export candidates for future curation
 
 ### Deliverables
 
-1. **Simple Terms Strategy**: `scripts/session67_simple_fetch.py`
-   - Use proven high-performers from Session 65
-   - Larger volume to compensate for quality
-   - Built-in quality filtering
+1. **Extraction Script**: `scripts/session68_extract_batch.py`
+   - Select 50 papers with score = 7
+   - Display for manual extraction
 
-2. **Quality Filter**: `scripts/session67_quality_filter.py`
-   - Fast scoring algorithm
-   - Filter papers before storage
-   - Keep only score ≥6 papers
+2. **Mechanisms File**: `examples/session68_mechanisms.json`
+   - 30-40 new mechanisms
+   - Domain-neutral descriptions
+   - Structural patterns only
 
-3. **Hybrid Source Test**: `scripts/session67_hybrid_test.py`
-   - Fetch from both arXiv and OpenAlex
-   - Compare quality metrics
-   - Optimal source mix recommendation
+3. **Candidates File**: `examples/session68_candidates.json`
+   - New cross-domain pairs
+   - Similarity scores
+   - Ready for curation
 
 ### Success Criteria
 
 **Minimum**:
-- Identify viable path to 50K papers
-- Achieve 45%+ high-value rate after filtering
-- Clear GO/NO-GO decision
+- Extract 25+ mechanisms
+- 50% hit rate on papers
+- Generate 200+ new candidates
 
 **Target**:
-- Working pipeline for filtered fetch
-- 15,000+ high-value papers identified
-- Ready for mechanism extraction
+- Extract 30-40 mechanisms
+- 60-80% hit rate
+- Generate 400+ new candidates
+- Mechanisms total: 230-240
 
 **Stretch**:
-- Begin actual 50K filtered fetch
-- Extract mechanisms from top 1,000
-- Generate initial discoveries
+- Extract 40+ mechanisms
+- Begin curation immediately
+- Find 5-10 new discoveries
 
 ### Time Estimate
-- Strategy selection: 30 min
-- Implementation: 1.5 hours
-- Testing: 1 hour
-- Analysis: 30 min
-- **Total**: 3 hours
+- Paper selection: 30 min
+- Mechanism extraction: 2 hours
+- Embedding & matching: 30 min
+- Documentation: 30 min
+- **Total**: 3-3.5 hours
 
-### Next Steps After Session 67
+### Progress Tracking
+- Current mechanisms: 200
+- Target mechanisms: 450-500
+- Current discoveries: 46
+- Target discoveries: 100-150
+- Papers to process: 431 high-value
 
-Based on results:
-- **If filtering works**: Session 68 - Full 50K filtered fetch
-- **If hybrid better**: Session 68 - Implement dual-source pipeline
-- **If still struggling**: Session 68 - Focus on existing 2K papers
+### Next Steps After Session 68
+
+- **Session 69**: Continue extraction (next 50 papers)
+- **Session 70**: Continue extraction (next 50 papers)
+- **Session 71**: Curate accumulated candidates
+- **Session 72**: Continue extraction/curation
+- **Session 73-74**: Update frontend with discoveries
+- **Session 75-80**: Strategic expansion or wrap-up
 
 ---
 
 ## Previous Sessions Reference
 
+### Session 67 (2026-02-15) - **COMPLETED** 🔄
+- Tested alternative strategies
+- Simple filtering: quality good, volume bad
+- Made pivot decision: mine existing corpus
+- Abandoned 50K fetch goal
+
 ### Session 66 (2026-02-15) - **COMPLETED** ❌
-- Tested refined compound search terms
-- Quality DROPPED to 33.8% (from 51.5%)
-- Complex terms performed worse
-- Lesson: Keep search simple
+- Refined search terms FAILED
+- Quality dropped to 33.8%
+- Lesson: Keep it simple
 
 ### Session 65 (2026-02-15) - **COMPLETED** ⚠️
-- Fetched 2,358 papers from OpenAlex
-- 51.5% high-value rate with simple terms
-- Identified top performers
-
-### Session 64 (2026-02-14) - **COMPLETED** ✅
-- Small sample: 76.4% high-value
-- Proved OpenAlex potential with right terms
+- 2,358 papers from OpenAlex
+- 51.5% high-value rate
+- Provided baseline for decisions
 
 ---
 
-## Key Learnings for Session 67
+## Three-Phase Pivot Plan (Sessions 68-80)
 
-**From Session 66 Failure**:
-1. Complex compound terms reduce quality
-2. OpenAlex search works better with simple terms
-3. High variability in term performance
-4. Need different approach for quality
+### Phase 1: Complete Mining (68-72)
+- Extract from 431 high-value papers
+- Target 250-300 new mechanisms
+- Generate 2,000+ candidates
+- Curate to 100-150 discoveries
 
-**Best Performing Simple Terms** (Session 65):
-- "learning feedback" - 25 papers
-- "synchronization stability" - 23 papers
-- "feedback control systems" - 22 papers
-- "homeostatic feedback" - 22 papers
-- "cross-scale coupling" - 22 papers
+### Phase 2: Frontend Update (73-74)
+- Deploy all discoveries
+- Improve visualizations
+- Add methodology page
+- Polish UI/UX
 
-**Alternative Strategies**:
-1. Volume + Filtering: Accept lower quality, filter aggressively
-2. Source Mixing: Combine OpenAlex breadth with arXiv quality
-3. Focused Fetch: Only use proven high-quality terms
-4. Existing Corpus: Focus on extracting from current 4,690 papers
+### Phase 3: Strategic Next Steps (75-80)
+- Evaluate success
+- Consider targeted expansion
+- Or declare victory at 100-150
+- Document learnings
 
 ---
 
-## Important Files for Session 67
+## Key Insights from Session 67
 
-**Read First**:
-1. **SESSION66_QUALITY_TEST_REPORT.md** - Why refinement failed
-2. **examples/session65_fetch_stats.json** - Simple term performance
-3. **examples/session66_quality_test.json** - What went wrong
+1. **Quality-volume trade-off is real** - can't have both
+2. **Existing corpus is rich** - 431 papers await
+3. **Pragmatism wins** - 100 real > 200 hypothetical
+4. **Mining > Fetching** - proven 60-100% hit rates
+5. **Focus brings results** - depth over breadth
+
+---
+
+## Important Files for Session 68
 
 **Reference**:
-- `scripts/session65_openalex_fetch_simple.py` - Working simple fetch
-- `scripts/session65_score_papers.py` - Scoring algorithm
+1. `database/papers.db` - Has paper scores
+2. PostgreSQL database - Current papers/mechanisms
+3. `examples/session55_all_mechanisms.json` - Current 200
 
 **Create**:
-- Alternative strategy implementation
-- Quality filtering pipeline
-- Decision report for next steps
+- Extraction script for batch selection
+- New mechanisms file
+- Candidate generation script
 
 ---
 
 ## Notes for Agent
 
-- Don't over-engineer - Session 66 showed complex isn't better
-- Consider stopping 50K fetch if quality can't be improved
-- Existing 4,690 papers might be enough for prototype
-- Focus on achievable goals given quality constraints
-- Document decision rationale clearly
+- Focus on papers with score = 7 (good balance)
+- Don't re-extract from papers already done
+- Keep mechanism descriptions structural
+- This is the path to 100 discoveries
+- Quality over quantity in extraction
 
-This session determines whether to continue with large-scale fetch or pivot to working with existing data.
+The pivot to existing corpus is the right call. Let's execute well.

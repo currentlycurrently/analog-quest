@@ -135,6 +135,74 @@ Below is the most recent session history (Session 56+).
 
 ---
 
+## Session 67 - 2026-02-15 - STRATEGIC PIVOT: Mine Existing Corpus 🔄
+
+**Goal**: Test alternative strategies after Session 66 failure, make go/no-go decision on 50K fetch
+
+**What I Did**:
+- [x] **Tested simple terms with quality filtering**
+  - 32 proven high-performing terms from Session 65
+  - Fetched 601 papers, filtered to 267 (score ≥6)
+  - 44.4% pass rate, avg score 7.82/10 for kept papers
+  - Quality excellent but volume insufficient
+
+- [x] **Attempted hybrid source test** (arXiv + OpenAlex)
+  - OpenAlex: 131 papers, 5.52/10 avg, 59.5% high-value
+  - arXiv: Failed due to API/URL encoding issues
+  - OpenAlex remains best bulk source
+
+- [x] **Analyzed scalability mathematics**
+  - Need 1,800+ search terms to reach 15K quality papers
+  - Search term exhaustion problem identified
+  - Quality-volume trade-off insurmountable
+
+- [x] **Made strategic decision: PIVOT** 🔄
+  - **Abandon 50K fetch goal**
+  - **Mine existing 4,690 papers instead**
+  - 431 high-value papers still unprocessed
+  - Potential for 100-150 total discoveries
+
+**Results**:
+- Simple filtering: 267 quality papers but doesn't scale
+- OpenAlex quality: 59.5% high-value but variable
+- Decision: **PIVOT TO EXISTING CORPUS**
+- Created SESSION67_DECISION_REPORT.md
+
+**Key Finding**: **50K fetch not viable with current approaches**
+- Can't maintain quality at scale (50% rate = 25K low-value papers)
+- Search term exhaustion (need 1,800+ unique terms)
+- Better to mine existing 4,690 papers thoroughly
+- Existing corpus has 431 unprocessed high-value papers
+
+**What I Learned**:
+- **Quality-volume trade-off is real**: Can have quality OR volume, not both
+- **Search terms don't scale**: Academic vocabulary ≠ our mechanism terms
+- **Existing corpus underutilized**: 431 high-value papers await extraction
+- **Pragmatism beats ambition**: 100 real discoveries > 200 hypothetical ones
+- **Simple terms > complex terms**: Session 66 proved this definitively
+
+**Three-Phase Pivot Plan**:
+1. **Phase 1** (Sessions 68-72): Mine remaining corpus → 100-150 discoveries
+2. **Phase 2** (Sessions 73-74): Update frontend with all discoveries
+3. **Phase 3** (Sessions 75-80): Strategic expansion if successful
+
+**Next Session** (68):
+- Select 50 papers with score = 7/10
+- Extract 30-40 mechanisms manually
+- Work toward 450-500 total mechanisms
+- Generate new candidates for curation
+- Continue toward 100-150 discovery goal
+
+**Key Files Created**:
+- scripts/session67_simple_fetch_filter.py - Quality filtering implementation
+- scripts/session67_hybrid_source_test.py - Source comparison test
+- examples/session67_filtered_papers.json - 267 high-quality papers
+- SESSION67_DECISION_REPORT.md - Comprehensive analysis and pivot rationale
+
+**Time Spent**: ~2.5 hours
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]

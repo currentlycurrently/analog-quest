@@ -4,196 +4,159 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 73 Goals - CONTINUE CLAUDE CODE PIPELINE 🚀
+## Session 75 Goals - CURATE DISCOVERIES FROM 595 CANDIDATES 🎯
 
-**Mission**: Continue using the Claude Code Pipeline for sustainable, free mechanism extraction!
+**Mission**: Review the 595 cross-domain candidates from Session 74 to find new discoveries!
 
-### Context from Recent Sessions:
-- Session 70: Pipeline operational, 13 mechanisms extracted
-- Session 71: Improved diversity with skip logic, 11 mechanisms extracted
-- Session 72: Pipeline continued, 17 mechanisms extracted (fixed JSON format issue)
-- **Current total**: 274 mechanisms (270+ milestone achieved!)
-- **Hit rate**: 70-80% consistently
-- **Cost**: $0 (you do the extraction!)
+### Context from Session 74:
+- **305 mechanisms** in database (300+ milestone achieved! 🎉)
+- **595 cross-domain candidates** generated (threshold ≥0.35)
+- Top similarity: 0.7441 (physics ↔ biology)
+- Top domain pairs: biology-physics (25.7%), network_science-physics (5.2%)
+- Currently **46 unique discoveries** (need 54 more for 100 milestone)
 
-### Primary Goals for Session 73
+### Primary Goals for Session 75
 
-1. **Continue Running Batches** (Main Work)
-   ```bash
-   # Start with batch 10 (continuing from Session 72)
-   python3 scripts/claude_code_pipeline.py --batch 10
-   # Extract mechanisms manually from temp/extraction_batch_10.json
-   # Save to temp/mechanisms_batch_10.json
-   python3 scripts/claude_code_pipeline.py --store 10
-   # Repeat for batches 11, 12, 13...
-   ```
+1. **Review Top Candidates** (Main Work)
+   - Load `examples/session74_candidates.json` (595 candidates)
+   - Review top 30-50 candidates systematically
+   - Apply quality standards from DATA_QUALITY_STANDARDS.md
+   - Rate each as: excellent / good / weak / false
+   - Document structural explanations for discoveries
 
-2. **Watch for Duplicates**
-   - The pipeline now skips papers based on batch number
-   - But some papers still appear across different search terms
-   - Don't re-extract mechanisms from papers you've seen before
-   - Check paper titles/abstracts for familiarity
+2. **Expected Outcomes**
+   - Review 30-50 candidates from top of list
+   - Expected precision: 35-45% (based on historical data)
+   - Target: Find 10-20 new discoveries
+   - Progress toward 100 discovery milestone (currently 46/100)
 
-3. **Manual Extraction** (Your Key Role!)
-   - Read papers from temp/extraction_batch_N.json
-   - Extract mechanisms with domain-neutral structural descriptions
-   - Save to temp/mechanisms_batch_N.json
-   - Target: 50-60% hit rate is realistic and sustainable
+3. **Quality Standards** (from DATA_QUALITY_STANDARDS.md)
+   - **Excellent**: Clear structural isomorphism, non-obvious connection, generalizable
+   - **Good**: Valid structural similarity, some domain specificity okay, useful connection
+   - **Weak**: Only surface similarity, mostly vocabulary overlap
+   - **False**: No real structural connection, coincidental word matches
 
-4. **Session 73 Targets**
-   - Run 3-4 batches if time permits
-   - Extract 15-20 mechanisms to reach 290-295 total
-   - Consider generating new cross-domain candidates after 275 mechanisms
-   - Update PROGRESS.md with results
+4. **Deduplication Check**
+   - Check against `app/data/discovered_pairs.json` (46 existing pairs)
+   - Use `scripts/check_duplicates.py` if needed
+   - Don't re-curate already discovered pairs
 
-### Quick Start for New Agent
+### Alternative Option: Continue Extraction
 
-**If you're new to Analog Quest:**
-1. Read CLAUDE.md first (your primary guide)
-2. Check PROGRESS.md Session 69 (what just happened)
-3. Check PIPELINE_DESIGN.md (how the pipeline works)
-4. The pipeline is built and tested - you just need to run it!
+If you prefer to continue extraction instead of curation:
+
+1. **Run More Pipeline Batches**
+   - Create new expanded search terms
+   - Fetch papers with diverse mechanism-related queries
+   - Extract mechanisms manually
+   - Target: 320+ mechanisms (currently 305)
+
+2. **Generate New Candidates**
+   - After reaching 320+ mechanisms
+   - Run candidate generation script
+   - Would produce ~650-700 candidates
+
+### Session 75 Success Criteria
+
+**For Curation Path** (Recommended):
+- Review 30-50 candidates
+- Find 10-20 new discoveries
+- Document each with structural explanation
+- Update discovery count (46 → 56-66)
+- Create `examples/session75_curated_discoveries.json`
+
+**For Extraction Path**:
+- Extract 15-20 new mechanisms
+- Reach 320+ total mechanisms
+- Maintain 70%+ hit rate
+- Update PROGRESS.md with results
+
+### Quick Reference
 
 **Key Files**:
-- `scripts/sustainable_pipeline.py` - The main pipeline
-- `config/pipeline_config.yaml` - Configuration (check username)
-- `PIPELINE_DESIGN.md` - Full documentation
+- `examples/session74_candidates.json` - 595 candidates to review
+- `app/data/discovered_pairs.json` - 46 existing discoveries (avoid duplicates)
+- `DATA_QUALITY_STANDARDS.md` - Rating criteria
+- `scripts/check_duplicates.py` - Deduplication tool
 
-**Known Issues to Fix**:
-1. Database needs UNIQUE constraint on papers.title
-2. LLM extraction is simulated (needs API integration if key available)
+**Database Access**:
+```bash
+/opt/homebrew/opt/postgresql@17/bin/psql analog_quest
 
-### Success Criteria
-
-**Minimum**:
-- Database schema fixed
-- Pipeline runs without errors
-- 100+ papers processed
-- Metrics tracked properly
-
-**Target**:
-- 100-200 papers added to corpus
-- 20-40 mechanisms extracted
-- New candidates generated
-- All data in PostgreSQL
-
-**Stretch**:
-- LLM API integration working
-- 200+ papers processed
-- 40+ mechanisms extracted
-- Pipeline fully automated
+# Query to see mechanism pairs for a candidate
+SELECT m1.description, m1.structural_description, m2.description, m2.structural_description
+FROM mechanisms m1, mechanisms m2
+WHERE m1.id = [mech1_id] AND m2.id = [mech2_id];
+```
 
 ### Time Estimate
-- Database fix: 30 minutes
-- LLM integration (if needed): 1 hour
-- Pipeline run: 30 minutes
-- Monitoring and debugging: 1 hour
-- Documentation update: 30 minutes
-- **Total**: 3-4 hours
+- Load and prepare candidates: 15 minutes
+- Review 30-50 candidates: 1.5-2 hours
+- Document discoveries: 30 minutes
+- Update files and commit: 30 minutes
+- **Total**: 2.5-3.5 hours
 
-### Important Technical Notes
+### Important Notes
 
-**JSON Format Requirements** (Fixed in Session 72):
-- Mechanisms must have 'description' field (not 'mechanism')
-- Mechanisms must have 'paper_title' field (not 'title')
-- Example format:
-  ```json
-  {
-    "paper_id": "https://openalex.org/W...",
-    "paper_title": "Paper Title Here",
-    "description": "Short mechanism name",
-    "structural_description": "Full structural description...",
-    "domain": "biology"
-  }
-  ```
+**Similarity Score Context**:
+- 0.70-0.75: Usually excellent matches
+- 0.60-0.70: Mix of excellent and good
+- 0.50-0.60: Mostly good matches
+- 0.40-0.50: Mix of good and weak
+- 0.35-0.40: Mostly weak, some hidden gems
 
-**Pipeline Skip Logic** (Added in Session 71):
-- The pipeline skips `(batch_num - 1) * 2` papers per search term
-- This ensures each batch gets different papers
-- Batch 10 will skip 18 papers, Batch 11 will skip 20, etc.
-- This prevents fetching the same papers repeatedly
+**Domain Pair Performance** (historical):
+- physics ↔ biology: Often excellent (universal principles)
+- cs ↔ physics: High precision (algorithms ↔ dynamics)
+- econ ↔ biology: Good for resource/competition patterns
+- Unknown domain: Check structural description carefully
 
-**Database Schema** (Fixed in Session 70):
-- mechanisms table has: description, structural_description, mechanism_type, domain, embedding
-- papers table has UNIQUE constraint on title
-- Everything should work smoothly now
+### Next Steps After Session 75
 
-### Next Steps After Session 72
-
-- **Session 73**: Continue pipeline OR first curation checkpoint
-- **Session 74+**: Continue sustainable growth
-- **Future**: Generate cross-domain candidates when we have 275+ mechanisms
-
-**Remember**: We're not racing. Each session adds value incrementally. Quality over speed.
+- **If 60+ discoveries**: Consider updating frontend
+- **If 70+ discoveries**: Major milestone approaching!
+- **If still <60**: Continue alternating extraction/curation
+- **Goal**: Reach 100 unique discoveries (currently 46/100)
 
 ---
 
 ## Previous Session Reference
 
+### Session 74 (2026-02-15) - **COMPLETED** ✓✓✓
+**Pipeline Evolution - 300+ Milestone!**
+- Ran batch 13 (4 mechanisms stored)
+- Hit search exhaustion, created expanded search terms
+- Extracted 9 mechanisms from expanded search (90% hit rate!)
+- Total mechanisms: 305 (300+ milestone! 🎉)
+- Generated 595 cross-domain candidates
+- Ready for curation!
+
+### Session 73 (2026-02-15) - **COMPLETED** ✓✓✓
+**Pipeline Continued**
+- Ran 3 batches (10, 11, 12)
+- Extracted 24 mechanisms (18 unique stored)
+- Total mechanisms: 292 (290+ milestone!)
+- 80% average hit rate
+
 ### Session 72 (2026-02-15) - **COMPLETED** ✓✓✓
-**Pipeline Continued Successfully**
-- Fixed JSON format issue (description/paper_title fields)
-- Extracted 22 mechanisms from 3 batches (17 unique stored)
-- Total mechanisms: 274 (270+ milestone!)
-- Batches 7-9 successful (73% average hit rate)
-
-### Session 71 (2026-02-15) - **COMPLETED** ✓✓✓
-**Pipeline Diversity Improved**
-- Added skip logic to fetch different papers each batch
-- Extracted 11 mechanisms (55% hit rate)
-- Total mechanisms: 257 (250+ milestone!)
-- Batches 5-6 successful
-
-### Session 70 (2026-02-15) - **COMPLETED** ✓✓✓
-**Claude Code Pipeline Operational**
-- Fixed database schema issues
-- Extracted 13 mechanisms (65% hit rate)
-- Total mechanisms: 246
-- Proved manual extraction approach works
-
-### Session 69 (2026-02-15) - **COMPLETED** ✓✓✓
-**Sustainable Pipeline Built**
-- Created modular pipeline optimized for Claude Code
-- Key insight: Agents do extraction for FREE
-- Documentation complete in CLAUDE_CODE_WORKFLOW.md
-
----
-
-## Important Files for Session 70
-
-**To Run Pipeline**:
-```bash
-python3 scripts/sustainable_pipeline.py
-```
-
-**To Check Results**:
-```bash
-python3 scripts/analyze_pipeline_results.py
-cat pipeline_metrics.json
-```
-
-**Database Access**:
-```bash
-/opt/homebrew/opt/postgresql@17/bin/psql analog_quest
-```
-
-**Configuration**:
-- Check `config/pipeline_config.yaml`
-- Ensure database user is correct (should be "user")
-- Adjust batch_size if needed (default: 100)
+**Pipeline Fixed and Running**
+- Fixed JSON format issue
+- Extracted 22 mechanisms (17 unique stored)
+- Total mechanisms: 274
 
 ---
 
 ## Notes for Agent
 
-The hard work is done! Session 69 built the pipeline. Your job is to:
-1. Fix the small database issue
-2. Run the pipeline
-3. Monitor results
-4. Document what happens
+You have two good options:
+1. **Curate discoveries** from the 595 candidates (recommended - we need more discoveries)
+2. **Continue extraction** with more diverse search terms
 
-This is the beginning of sustainable, long-term corpus growth. Don't rush. Quality matters more than quantity.
+The curation path is recommended because:
+- We have 595 fresh candidates to review
+- We're at 46/100 discoveries (need 54 more)
+- Historical precision suggests 10-20 discoveries available in top 50
 
-The pipeline will be our discovery engine for months to come. Let's make sure it runs smoothly.
+Remember: Quality over quantity. Better to find 10 excellent discoveries than 20 weak ones.
 
-Good luck with Session 70! 🚀
+Good luck with Session 75! 🎯

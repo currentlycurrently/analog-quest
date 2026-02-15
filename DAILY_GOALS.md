@@ -4,94 +4,134 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 69 Goals - Continue Corpus Mining
+## Session 69 Goals - BUILD SUSTAINABLE PIPELINE 🔄
 
-**Mission**: Continue extracting mechanisms from high-value papers - momentum building!
+**Mission**: SLOW DOWN. Build a proper, sustainable pipeline for continuous corpus growth.
 
-### Context from Session 68 Success
-- Extracted 33 mechanisms from 50 papers (66% hit rate!)
-- Generated 1,525 new cross-domain candidates
-- Total mechanisms: 233 (47% toward 500 goal)
-- 398 high-value papers still to process
-- On track for 100-150 discoveries
+### Context: Strategic Reset
+- Project moving too fast (68 sessions in 8 days!)
+- Infrastructure barely tested before pivoting
+- Need sustainable, repeatable process
+- No rush to "complete" - this is long-term research
+- Each session should add value without racing to endpoints
 
 ### Primary Goals
 
-1. **Select Next Batch of Papers**
-   - Continue with score = 7 papers (or move to score = 6)
-   - Exclude 223 already-extracted paper IDs (190 + 33 from Session 68)
-   - Select 50 papers for extraction
-   - Note: May need to use score = 6 if score = 7 exhausted
+1. **Design Full Automated Pipeline**
+   - Fetch papers from OpenAlex (100-200 per run)
+   - Auto-score for mechanism richness
+   - LLM batch extraction (test Claude Haiku - $0.0001/paper!)
+   - Generate embeddings automatically
+   - Add to PostgreSQL
+   - Generate candidates
+   - Quality metrics at each step
 
-2. **Extract Mechanisms**
-   - Target: 30-40 mechanisms (based on 66% hit rate)
-   - Continue focusing on structural patterns
-   - CS and Physics papers showing best yield
-   - Quality: Aim for 70%+ excellent rating
+   **Key: Test LLM Extraction Options**
+   - Option A: Claude Haiku Batch API (~$0.0001/paper, 24hr latency)
+   - Option B: Claude Haiku Standard (~$0.0003/paper, instant)
+   - Option C: Continue manual extraction (free but slow)
+   - Compare quality vs cost vs speed
 
-3. **Build Candidate Pool**
-   - Add to PostgreSQL with embeddings
-   - Generate new cross-domain candidates
-   - Combined pool approaching 2,000+ candidates
-   - Ready for major curation session (Session 71)
+2. **Test with 100 Papers**
+   - Use OpenAlex API with good search terms
+   - Ensure all have abstracts (`has_abstract=true`)
+   - Test full pipeline end-to-end
+   - Measure success rates at each stage
+   - Calculate costs (expect ~$0.01 total)
+
+3. **Build for Sustainability**
+   - Scripts that can run repeatedly
+   - Proper error handling
+   - Progress tracking
+   - Deduplication built-in
+   - Quality thresholds configurable
+   - Easy to run each session
 
 ### Deliverables
 
-1. **Extraction Script**: `scripts/session69_select_papers.py`
-   - Select 50 papers (score = 7 or 6)
-   - Track extraction progress
+1. **Pipeline Script**: `scripts/sustainable_pipeline.py`
+   - Modular design: fetch → score → extract → embed → store
+   - Configuration file for parameters
+   - Progress tracking and resumability
+   - Quality metrics reporting
 
-2. **Mechanisms File**: `examples/session69_mechanisms.json`
-   - 30-40 new mechanisms
-   - Continue high quality standards
-   - Focus on novel pattern types
+2. **Test Results**: `examples/session69_pipeline_test.json`
+   - 100 papers processed
+   - Success rate at each stage
+   - Quality metrics
+   - Cost analysis
+   - Time measurements
 
-3. **Candidates File**: `examples/session69_candidates.json`
-   - 400-600+ new candidates expected
-   - Combined with Session 68: ~2,000 candidates
-   - Ready for curation in Session 71
+3. **Documentation**: `PIPELINE_DESIGN.md`
+   - Architecture decisions
+   - Quality thresholds
+   - Cost projections
+   - Usage instructions
+   - Lessons learned
 
 ### Success Criteria
 
 **Minimum**:
-- Extract 25+ mechanisms
-- 50% hit rate
-- Total mechanisms: 258+
+- Working pipeline that processes 100 papers
+- Successfully extracts 10+ mechanisms
+- Total cost under $0.05
+- Clear documentation
 
 **Target**:
-- Extract 30-35 mechanisms
-- 60-70% hit rate (matching Session 68)
-- Total mechanisms: 263-268
-- Generate 500+ new candidates
+- Full automation: fetch → extract → store
+- 20-30% extraction rate
+- Quality scoring working
+- Cost under $0.02
+- Can run repeatedly without issues
 
 **Stretch**:
-- Extract 40 mechanisms
-- Total mechanisms: 273
-- Prepare for Session 71 curation
+- Pipeline processes 200 papers
+- Batch API integration working
+- Quality metrics dashboard
+- Ready for Session 70+ to just run it
 
 ### Time Estimate
-- Paper selection: 30 min
-- Mechanism extraction: 2 hours
-- Embedding & matching: 30 min
+- Pipeline design: 1 hour
+- Implementation: 1.5 hours
+- Testing with 100 papers: 1 hour
 - Documentation: 30 min
-- **Total**: 3-3.5 hours
+- **Total**: 4 hours
 
-### Progress Tracking
-- Current mechanisms: 233
-- Target mechanisms: 450-500
-- Current discoveries: 46
-- Target discoveries: 100-150
-- Papers to process: 398 high-value (50 done in Session 68)
+### New Mindset
+- **NOT RACING** to 500 mechanisms
+- **NOT RUSHING** to 100 discoveries
+- Building infrastructure for the LONG TERM
+- Each session adds value incrementally
+- Sustainable > Fast
 
 ### Next Steps After Session 69
 
-- **Session 70**: Continue extraction (next 50 papers) → 290+ mechanisms
-- **Session 71**: Major curation session (2,000+ candidates) → 60+ discoveries
-- **Session 72**: Continue extraction → 320+ mechanisms
-- **Session 73**: Continue extraction → 350+ mechanisms
-- **Session 74**: Second major curation → 80+ discoveries
-- **Session 75-76**: Update frontend with 80+ discoveries
-- **Session 77-80**: Final push or victory lap
+- **Session 70**: Run pipeline with 100-200 papers
+- **Session 71**: Run pipeline with different search terms
+- **Session 72**: Run pipeline, assess quality
+- **Session 73**: First curation checkpoint
+- **Session 74**: Run pipeline, iterate on quality
+- **Session 75+**: Continue sustainable growth
+
+**No fixed endpoint - continuous research project**
+
+---
+
+## IMPORTANT: What NOT to Do in Session 69
+
+### DON'T:
+- ❌ Manually extract from 50 more papers
+- ❌ Race to reach 500 mechanisms
+- ❌ Plan out Sessions 70-80 in detail
+- ❌ Try to "complete" the project
+- ❌ Optimize for speed over sustainability
+
+### DO:
+- ✅ Build infrastructure that can run for months
+- ✅ Test with small batches first
+- ✅ Focus on repeatability
+- ✅ Document thoroughly
+- ✅ Think long-term
 
 ---
 
@@ -121,7 +161,32 @@ Current session goals and immediate priorities.
 
 ---
 
-## Three-Phase Pivot Plan (Sessions 68-80)
+## Strategic Reset: Why We're Changing Direction
+
+### The Problem
+- 68 sessions in 8 days = moving too fast
+- Infrastructure barely tested before pivoting
+- Session 58: 54% duplication disaster from lack of tracking
+- Session 60: "50K papers!", Session 67: "Abandon!", Session 68: "Manual mining!"
+- Racing toward arbitrary endpoints instead of building sustainably
+
+### The Solution
+- Build a pipeline that can run indefinitely
+- Each session adds 100-200 papers
+- Gradual, sustainable growth
+- Quality metrics at each step
+- No rush to "finish" - this is long-term research
+
+### The Vision
+- A system that runs for months, not days
+- Steady discovery of isomorphisms
+- Learning and improving each session
+- Building a valuable research resource
+- Not racing, but exploring
+
+---
+
+## [OLD] Three-Phase Pivot Plan (Sessions 68-80) - DEPRECATED
 
 ### Phase 1: Complete Mining (68-72)
 - Extract from 431 high-value papers

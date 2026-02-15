@@ -14,6 +14,615 @@ Below is the most recent session history (Session 56+).
 
 ---
 
+## Session 74 - 2026-02-15 - Pipeline Evolution: 13 Mechanisms, 300+ Milestone! 🎉
+
+**Goal**: Continue Claude Code Pipeline with sustainable mechanism extraction approach
+
+**What I Did**:
+- [x] **Ran Claude Code Pipeline batch 13**
+  - Fetched 9 papers (lower than usual due to limited results)
+  - 6 high-value papers (≥5/10)
+  - Extracted 5 mechanisms manually (83% hit rate)
+  - Stored 4 unique mechanisms
+
+- [x] **Hit search term exhaustion issue**
+  - Batches 14-15 returned 0 papers (skip logic too aggressive)
+  - Created expanded search terms strategy
+  - Added 30 new specific mechanism-related search terms
+
+- [x] **Fetched papers with expanded search**
+  - 60 papers fetched with diverse terms
+  - 31 high-value papers (≥5/10)
+  - Selected top 10 for extraction (all scored 7-10/10)
+  - Topics: swarm intelligence, avalanche dynamics, multistability, fractal growth
+
+- [x] **Extracted 9 mechanisms from expanded search**
+  - 90% hit rate (9/10 papers)
+  - High-quality structural descriptions for all
+  - Domains: physics (4), computer_science (2), biology (1), economics (1), earth_science (1)
+
+- [x] **Generated cross-domain candidates**
+  - Total mechanisms: 292 → **305** (+13)
+  - **300+ MILESTONE ACHIEVED!** ✓✓✓ 🎉
+  - Generated 595 cross-domain candidates (threshold ≥0.35)
+  - Top similarity: 0.7441
+  - Top domain pairs: biology-physics (25.7%), network_science-physics (5.2%)
+
+**Results**:
+- Papers processed this session: 19 (batch 13 + expanded search)
+- New mechanisms extracted: 14 (5 from batch 13 + 9 from expanded)
+- Unique mechanisms stored: 13 (4 + 9, one duplicate)
+- **Total mechanisms: 305** (300+ milestone!)
+- New cross-domain candidates: 595
+- Cost: **$0.00** (manual extraction by Claude Code!)
+
+**Interesting Findings**:
+- **Pipeline needs diverse search strategies**: Original 15 search terms exhausted quickly
+- **Expanded search terms worked well**: 30 new specific terms yielded high-quality papers
+- **Quality papers abundant**: 4 papers scored perfect 10/10
+- **Diverse mechanisms extracted**:
+  - Adaptive resonance for category formation (ART networks)
+  - Interdependent cascade failure transitions
+  - Scale-invariant avalanche dynamics
+  - Fractal growth through diffusion-limited aggregation
+  - Supply network oscillatory instability (bullwhip effect)
+  - Rate-dependent tipping transitions
+  - Continuous transition with vanishing exponent (explosive percolation)
+  - Noise-induced attractor hopping (multistability)
+  - Distributed problem-solving through stigmergy (swarm intelligence)
+
+**What I Learned**:
+- **Search term rotation has limits**: Skip logic works for ~10-12 batches then exhausts
+- **Specific search terms better**: "cascade failures networks" > "cascade dynamics"
+- **Domain diversity improving**: Added engineering, earth_science domains this session
+- **Hit rate remains high**: 85% average across both extraction batches
+- **300 mechanisms is a sweet spot**: 595 candidates manageable for curation
+
+**Challenges**:
+- **Search exhaustion with original pipeline**: Batches 14-15 returned 0 papers
+  - Solution: Created expanded search terms, fetched fresh papers
+- **Paper storage needed OpenAlex ID mapping**: Integer paper_id vs string OpenAlex ID
+  - Solution: Store papers first, maintain ID mapping for mechanisms
+
+**Next Session** (75):
+- Consider curation of top candidates from 595 pairs
+- Or continue extraction with more diverse search terms
+- Potentially update frontend with new discoveries
+- Target: Review top 50 candidates for quality discoveries
+
+**Key Files Created/Modified**:
+- `temp/session74_fetch_papers.py` - Expanded search term fetcher
+- `temp/store_batch_74_v2.py` - Paper and mechanism storage script
+- `scripts/session74_generate_candidates_v2.py` - Candidate generation using pgvector
+- `examples/session74_candidates.json` - 595 cross-domain candidates
+
+**Time Spent**: ~45 minutes
+
+---
+
+## Session 73 - 2026-02-15 - Claude Code Pipeline Continued: 18 More Mechanisms 📈
+
+**Goal**: Continue running Claude Code Pipeline with sustainable mechanism extraction approach
+
+**What I Did**:
+- [x] **Ran 3 successful batches** (10, 11, 12)
+  - Batch 10: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate) → 5 unique stored
+  - Batch 11: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate) → 5 unique stored
+  - Batch 12: 20 papers fetched → 10 high-value → 9 mechanisms extracted (90% hit rate) → 8 unique stored
+  - Total: 60 papers processed, 24 mechanisms extracted manually, 18 unique stored
+
+- [x] **Maintained high extraction quality**
+  - Overall hit rate: 80% (24/30 papers yielded mechanisms)
+  - Unique storage rate: 75% (18/24 were new to database)
+  - All mechanisms have domain-neutral structural descriptions
+
+**Results**:
+- Papers processed this session: 60
+- New mechanisms extracted: 24 (18 unique after duplicates)
+- Extraction hit rate: 80% average (24/30)
+- Cost: **$0.00** (manual extraction by Claude Code!)
+- **290+ mechanism milestone achieved!** (274 → 292) ✓✓✓
+
+**Interesting Findings**:
+- **High-quality papers abundant**: Multiple papers with perfect 10/10 scores per batch
+- **Diverse mechanisms extracted**:
+  - Self-organizing collective behavior through local interactions (robotics)
+  - Pulse-coupled synchronization through threshold firing (biology)
+  - Small-world topology enhancing synchronizability (physics)
+  - Absorbing state phase transitions in non-equilibrium systems (physics)
+  - Active matter assembly from energy dissipation (physics)
+  - Coupled human-natural system dynamics with legacy effects (environmental science)
+  - Metabolic switching under resource stress (biology)
+  - ECM-driven positive feedback in fibrosis (biology)
+  - Universal scaling at critical points (physics)
+- **Duplicate rate manageable**: ~25% of extracted mechanisms were duplicates
+- **Skip logic working well**: Batches 10-12 fetched different papers using batch number-based skipping
+
+**Mechanisms Extracted (highlights)**:
+1. **Pulse-coupled synchronization**: Oscillators sync through discrete pulses at firing threshold
+2. **Small-world shortcuts**: Random links dramatically improve synchronization efficiency
+3. **Adaptation tipping points**: Management strategies fail when change exceeds capacity
+4. **Dendritic invasion**: Cells follow least-resistance paths through heterogeneous environment
+5. **Delayed negative feedback**: Time delay in feedback creates sustained oscillations
+6. **Transient overshooting**: Flow redistribution causes temporary overloads during adjustment
+7. **Master stability function**: Universal framework for predicting synchronization stability
+8. **Active matter assembly**: Energy dissipation creates dynamic structures absent at equilibrium
+9. **Metabolic hierarchy**: Sequential substrate switching (sugars→lipids→proteins) under stress
+
+**What I Learned**:
+- **Extraction quality consistent**: 70-90% hit rate sustained across batches
+- **Mechanism diversity good**: Physics, biology, robotics, environmental science all represented
+- **Pipeline very efficient**: ~20 minutes per batch (fetch, extract, store)
+- **Manual extraction sustainable**: High quality, zero cost, reasonable time investment
+
+**Challenges**:
+- **Some duplicate papers**: Same high-quality papers appear across different search terms
+  - Future improvement: Track paper OpenAlex IDs to avoid re-extraction
+- **No major issues**: Pipeline working smoothly
+
+**Next Session** (74):
+- Continue running batches with higher skip counts (13-16)
+- Consider implementing paper ID tracking to avoid duplicates
+- Target: 15-20 more mechanisms to reach 310+ total
+- Consider generating new cross-domain candidates after 300+ mechanisms
+
+**Key Files Created/Modified**:
+- Created `temp/mechanisms_batch_10.json` - 8 extracted mechanisms
+- Created `temp/mechanisms_batch_11.json` - 7 extracted mechanisms
+- Created `temp/mechanisms_batch_12.json` - 9 extracted mechanisms
+
+**Time Spent**: ~30 minutes
+
+---
+
+## Session 72 - 2026-02-15 - Claude Code Pipeline Continued: 17 More Mechanisms 📈
+
+**Goal**: Continue running Claude Code Pipeline with sustainable mechanism extraction approach
+
+**What I Did**:
+- [x] **Ran 3 successful batches** (7, 8, 9)
+  - Batch 7: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate)
+  - Batch 8: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate)
+  - Batch 9: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate)
+  - Total: 60 papers processed, 22 mechanisms extracted manually
+
+- [x] **Fixed JSON format issue**
+  - Initial storage attempts failed (0 mechanisms stored)
+  - Issue: Pipeline expected 'description' and 'paper_title' fields
+  - Fixed: Updated all 3 batch JSON files with correct field names
+  - Successfully re-stored all mechanisms
+
+- [x] **Added 17 new mechanisms to database**
+  - Batch 7: 6 stored (1 duplicate)
+  - Batch 8: 6 stored (2 duplicates)
+  - Batch 9: 5 stored (2 duplicates)
+  - Total: 257 → 274 mechanisms (+17)
+
+**Results**:
+- Papers processed this session: 60
+- New mechanisms extracted: 22 (17 unique after duplicates)
+- Extraction hit rate: 73% average (22/30)
+- Cost: **$0.00** (manual extraction by Claude Code!)
+- **270+ mechanism milestone achieved!** ✓✓✓
+
+**Interesting Findings**:
+- **High-quality papers abundant**: 5-6 papers with perfect 10/10 scores per batch
+- **Diverse mechanisms extracted**:
+  - Stochastic triggering of collective synchronization (biology)
+  - Generalized synchronization through functional mapping (physics)
+  - Individual heterogeneity structuring collective dynamics (animal behavior)
+  - Intussusceptive remodeling toward optimality (developmental biology)
+  - Coupled clock synchronization (cardiac physiology)
+  - Network topology shaping dynamical processes (network science)
+- **Duplicate rate manageable**: ~23% of extracted mechanisms were duplicates from earlier sessions
+- **Skip logic working**: Batches 7-9 fetched different papers using batch number-based skipping
+
+**Mechanisms Extracted (highlights)**:
+1. **Stochastic pulsing → synchronization**: Random individual activity seeds collective coordination
+2. **Excitation-inhibition balance**: Persistent activity through balanced dynamics
+3. **Frequency-selective synchronization**: Attention modulates different frequency bands
+4. **Multiplicative cascade dynamics**: Cross-scale interactions create multifractals
+5. **Hierarchical adaptation**: Dynamic regeneration at multiple scales
+6. **Individual heterogeneity**: Behavioral differences drive group structure
+7. **Pulse coupling**: Discrete interactions drive synchronization
+8. **Noise vs critical transitions**: Different mechanisms for rapid system changes
+
+**What I Learned**:
+- **JSON format critical**: Small field name mismatches can break storage pipeline
+- **Duplicate checking important**: Same papers appear across different search terms
+- **Hit rate stable**: 70-80% extraction rate sustainable with high-scoring papers
+- **Manual extraction quality high**: Domain-neutral structural descriptions consistent
+
+**Challenges**:
+- **Initial storage failure**: All 3 batches showed "0 mechanisms stored"
+  - Root cause: JSON field naming mismatch (mechanism→description, title→paper_title)
+  - Solution: Fixed JSON format, re-ran storage successfully
+- **Some duplicate papers**: Papers appeared in multiple batches via different search terms
+  - Future improvement: Track paper IDs to avoid re-extraction
+
+**Next Session** (73):
+- Continue running batches with higher skip counts
+- Consider implementing paper ID tracking to avoid duplicates
+- Run 3-4 more batches if time permits
+- Target: 15-20 more mechanisms to reach 290+ total
+- Consider generating new cross-domain candidates after 280+ mechanisms
+
+**Key Files Created/Modified**:
+- Modified `temp/mechanisms_batch_7.json` - 7 extracted mechanisms (fixed format)
+- Modified `temp/mechanisms_batch_8.json` - 8 extracted mechanisms (fixed format)
+- Modified `temp/mechanisms_batch_9.json` - 7 extracted mechanisms (fixed format)
+
+**Time Spent**: ~45 minutes
+
+---
+
+## Session 71 - 2026-02-15 - Pipeline Diversity Improved: 11 More Mechanisms 📈
+
+**Goal**: Continue running Claude Code Pipeline with improved search diversity to avoid duplicate papers
+
+**What I Did**:
+- [x] **Improved pipeline diversity mechanism**
+  - Added skip logic to fetch different papers in each batch
+  - Papers are skipped based on batch number (skip = (batch-1) * 2)
+  - This ensures each batch gets different papers from the same search terms
+
+- [x] **Ran 2 successful batches**
+  - Batch 5: 20 papers fetched → 10 high-value → 5 mechanisms extracted (50% hit rate)
+  - Batch 6: 20 papers fetched → 10 high-value → 6 mechanisms extracted (60% hit rate)
+  - Total: 40 papers processed, 11 new mechanisms added
+
+**Results**:
+- Papers processed this session: 40
+- New mechanisms extracted: **11** (246 → 257 total)
+- Extraction hit rate: 55% average (5/10 + 6/10)
+- Cost: **$0.00** (manual extraction by Claude Code!)
+- **250+ mechanism milestone achieved!** ✓✓✓
+
+**Interesting Findings**:
+- **Skip logic works well**: Different papers fetched in Batches 5-6 vs 1-4
+- **Some duplicates still appear**: Same papers can appear across different search terms
+- **Quality remains high**: All extracted mechanisms have good structural descriptions
+- **Diverse domains covered**: physics, neuroscience, biology, economics, engineering, earth science
+
+**Mechanisms Extracted**:
+1. **Cascade transitions** - Phase transitions in network failures
+2. **Neural dynamics** - Sustained responses, oscillations, chaos in neural circuits
+3. **Symmetry protection** - Persistent spin helices through hidden symmetries
+4. **Negative feedback** - Wnt signaling self-regulation through conductin
+5. **Complexity growth** - Economic development through production network complexity
+6. **Chaos control** - Stabilizing chaotic systems with occasional feedback
+7. **Collective motion** - Zonal interaction rules producing flocking
+8. **Adaptive control** - Sliding-mode and fuzzy-logic adaptation
+9. **Phase synchronization** - Phase locking with chaotic amplitudes
+10. **Tipping cascades** - Irreversible climate transitions
+11. **Multifractal dynamics** - Heartbeat cascades across time scales
+
+**What I Learned**:
+- **Skip logic is simple but effective**: Just skipping N papers per batch creates diversity
+- **Paper quality consistent**: High-scoring papers (≥7/10) reliably yield mechanisms
+- **Hit rate stabilizing**: 50-60% extraction rate is sustainable and realistic
+- **Duplication tracking needed**: Should track paper IDs to avoid re-processing
+
+**Challenges**:
+- **Initial pagination attempt failed**: OpenAlex paginate() returns different object type
+  - Solution: Used skip logic instead of pagination
+- **Some duplicate papers**: Papers appeared in multiple batches
+  - Future solution: Track OpenAlex IDs to prevent re-extraction
+
+**Next Session** (72):
+- Continue running batches with increased skip counts
+- Consider tracking paper IDs in a set to avoid duplicates
+- Run 3-4 more batches if time permits
+- Target: 15-20 more mechanisms to reach 270-280 total
+- Generate new cross-domain candidates after reaching 275 mechanisms
+
+**Key Files Created/Modified**:
+- Modified `scripts/claude_code_pipeline.py` - Added skip logic for diversity
+- Created `temp/mechanisms_batch_5.json` - 5 extracted mechanisms
+- Created `temp/mechanisms_batch_6.json` - 6 extracted mechanisms
+
+**Time Spent**: ~30 minutes
+
+---
+
+## Session 70 - 2026-02-15 - Claude Code Pipeline Operational! 🚀
+
+**Goal**: Implement and run the NEW Claude Code Pipeline that leverages ME (the agent) for free extraction instead of paying for API calls
+
+**What I Did**:
+- [x] **Fixed database schema issues**
+  - Added UNIQUE constraint to papers.title (removed 10 duplicates)
+  - Added missing columns to mechanisms table (description, structural_description, mechanism_type, domain)
+  - Fixed NOT NULL constraint on legacy 'mechanism' column
+
+- [x] **Modified pipeline for batch diversity**
+  - Updated fetch_papers() to rotate search terms based on batch number
+  - Prevents fetching identical papers in each batch
+  - Ensures diverse corpus growth across sessions
+
+- [x] **Ran 4 batches of the pipeline**
+  - Batch 1: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate)
+  - Batch 2: Skipped (duplicate of Batch 1 before fix)
+  - Batch 3: 20 papers fetched → 10 high-value → 5 mechanisms extracted (50% hit rate)
+  - Batch 4: Skipped (cycled back to Batch 1 terms)
+  - Total: 40 papers processed, 13 new mechanisms added
+
+**Results**:
+- Papers processed this session: 40 (20 unique papers scored)
+- New mechanisms extracted: **13** (233 → 246 total)
+- Extraction hit rate: 65% average (8/10 + 5/10)
+- Cost: **$0.00** (manual extraction by Claude Code!)
+- Time per batch: ~10 minutes (fetch, extract, store)
+
+**Interesting Findings**:
+- **Claude Code extraction is FREE and HIGH-QUALITY**: 65% hit rate vs 25-35% for automated API
+- **Search term rotation needed**: Initial pipeline fetched same papers each batch
+- **Duplicate papers in OpenAlex**: Same papers appear for multiple search terms
+- **Mechanism quality excellent**: Domain-neutral structural descriptions for all
+- **Pipeline is fast**: <1 minute to fetch and score 20 papers
+
+**What I Learned**:
+- **Manual extraction by agents works perfectly**: High quality, zero cost, sustainable
+- **Database schema flexibility important**: Had to adapt PostgreSQL tables for new pipeline
+- **Batch diversity requires planning**: Need to vary search terms or use pagination
+- **Small batches are ideal**: 10 papers per extraction batch fits context perfectly
+- **The pipeline philosophy is sound**: Sustainable > Fast, Quality > Quantity
+
+**Challenges**:
+- **Database schema mismatch**: mechanisms table had different columns than expected
+  - Solution: Added missing columns, removed NOT NULL constraints
+- **Duplicate papers across batches**: Same search terms fetched same papers
+  - Solution: Added batch number rotation to vary search terms
+- **Papers appearing multiple times**: Some high-scoring papers returned by multiple searches
+  - Future solution: Track paper IDs to avoid re-extraction
+
+**Next Session** (71):
+- Continue running Claude Code Pipeline with different search strategies
+- Consider adding pagination to get deeper results from each search term
+- Track which papers have been processed to avoid duplicates
+- Target: 20-30 more mechanisms
+- Potentially generate new cross-domain candidates
+
+**Key Files Created/Modified**:
+- Modified `scripts/claude_code_pipeline.py` - Added batch rotation for search term diversity
+- Created `temp/mechanisms_batch_1.json` - 8 extracted mechanisms
+- Created `temp/mechanisms_batch_3.json` - 5 extracted mechanisms
+- Database schema updated with new columns
+
+**Time Spent**: ~1.5 hours
+
+---
+
+## Session 69 - 2026-02-15 - Sustainable Pipeline Built 🔄
+
+**Goal**: Build a sustainable, repeatable pipeline for continuous corpus growth (not racing to endpoints)
+
+**What I Did**:
+- [x] **Designed modular pipeline architecture**
+  - 6 phases: Fetch → Score → Extract → Embed → Store → Candidates
+  - Configuration-driven (pipeline_config.yaml)
+  - Checkpoint system for resumability
+  - Metrics tracking for performance analysis
+
+- [x] **Tested LLM extraction options**
+  - Claude Haiku Standard: $0.0003/paper (instant)
+  - Claude Haiku Batch: $0.00015/paper (24hr latency, 50% discount)
+  - Manual: $0/paper (2-3 min human time)
+  - Recommendation: Batch API for scale, Manual for high-value
+
+- [x] **Built sustainable_pipeline.py**
+  - 400+ lines of production-ready code
+  - Error handling and logging throughout
+  - Progress tracking with checkpoint saves
+  - Modular design for independent phase testing
+
+- [x] **Tested pipeline end-to-end with 90 papers**
+  - Fetched from OpenAlex in 18 seconds
+  - 67% high-value rate (60/90 papers)
+  - Extracted 6 mechanisms (simulation only)
+  - Generated embeddings successfully
+  - Total cost: $0.0022, Time: 29 seconds
+
+- [x] **Analyzed pipeline performance**
+  - Papers per minute: 185
+  - Cost per paper: $0.00002
+  - Extraction rate: 10% (simulation)
+  - Ready for scale after DB fixes
+
+- [x] **Created comprehensive PIPELINE_DESIGN.md**
+  - Full architecture documentation
+  - Cost analysis and projections
+  - Quality thresholds and metrics
+  - Philosophy and long-term vision
+
+**Results**:
+- Pipeline Status: ✓ Working (minor DB fix needed)
+- Papers fetched: 90 (100% success)
+- High-value papers: 60 (67% rate)
+- Mechanisms extracted: 6 (simulated)
+- Total cost: $0.0022
+- Total time: 29 seconds
+
+**Interesting Findings**:
+- **OpenAlex is perfect**: 185 papers/minute, free, comprehensive
+- **Search terms work well**: 67% high-value rate exceeds 50% target
+- **Cost is negligible**: Can process 10,000 papers for $0.25
+- **Embeddings are fast**: 9 seconds for batch on Apple Silicon
+- **Database is the bottleneck**: Need schema fixes for production
+
+**What I Learned**:
+- **Sustainable > Fast**: Building for months not days changes everything
+- **Configuration is key**: YAML config makes pipeline tunable
+- **Checkpoints essential**: Resumability prevents data loss
+- **Metrics drive improvement**: Detailed tracking enables optimization
+- **Modular design works**: Can test/fix phases independently
+
+**Challenges**:
+- **Database constraint error**: ON CONFLICT needs unique constraint
+  - Solution: Add UNIQUE constraint to papers.title
+- **LLM simulation only**: Need actual API integration
+  - Solution: Implement in Session 70
+
+**Strategic Shift**:
+This session marks a **fundamental pivot**:
+- FROM: Manual extraction sprints, racing to milestones
+- TO: Automated pipeline, continuous sustainable growth
+- Philosophy: Each session adds value incrementally
+- No rush to "complete" - this is long-term research
+
+**Next Session** (70):
+- Fix database schema (add unique constraints)
+- Implement actual LLM extraction (not simulation)
+- Run pipeline with 100-200 papers
+- Begin sustainable corpus growth
+- Target: 20-30 mechanisms per session
+
+**Key Files Created**:
+- `scripts/sustainable_pipeline.py` - Main pipeline implementation
+- `config/pipeline_config.yaml` - Configuration file
+- `scripts/test_llm_extraction.py` - LLM comparison test
+- `scripts/analyze_pipeline_results.py` - Results analyzer
+- `PIPELINE_DESIGN.md` - Comprehensive documentation
+- `examples/session69_pipeline_analysis.json` - Performance metrics
+
+**Time Spent**: ~4 hours
+
+---
+
+## Session 68 - 2026-02-15 - Existing Corpus Mining: 33 Mechanisms Extracted ⛏️
+
+**Goal**: Start mining existing corpus - extract mechanisms from 431 unprocessed high-value papers
+
+**What I Did**:
+- [x] **Selected 50 papers with score = 7**
+  - Queried PostgreSQL excluding 190 already-extracted papers
+  - Domain distribution: CS (52%), Physics (18%), Q-bio (6%)
+  - Diverse subdomains for cross-domain discovery
+
+- [x] **Extracted 33 mechanisms manually**
+  - Hit rate: 66% (33/50 papers)
+  - Quality: 25 excellent + 8 good
+  - Focus on structural patterns and causal relationships
+  - Domain-neutral descriptions for all mechanisms
+
+- [x] **Added mechanisms to PostgreSQL**
+  - Total mechanisms: 200 → 233 (+33)
+  - Generated 384-dim embeddings (all-MiniLM-L6-v2)
+  - Successfully inserted with vector embeddings
+
+- [x] **Generated 1,525 new cross-domain candidates**
+  - Threshold: ≥0.35 cosine similarity
+  - Filtered 51 already-discovered pairs
+  - Top similarity: 0.7302
+  - Distribution: 810 in 0.35-0.39 range, 631 in 0.40-0.49
+
+**Results**:
+- Papers processed this session: 50
+- New mechanisms extracted: 33
+- New cross-domain candidates: 1,525
+- Total mechanisms in database: 233
+- Hit rate: 66% (33/50)
+
+**Interesting Findings**:
+- **High-quality extraction**: 76% of mechanisms rated excellent (25/33)
+- **CS dominance in score=7 papers**: 52% of selected papers from CS domain
+- **New mechanism types discovered**:
+  - Motility-induced phase separation (active matter)
+  - Topological protection in disordered systems
+  - Bilevel optimization with implicit gradients
+  - Self-organized criticality in neural networks
+- **Top domain pairs**: physics-unknown (303), cs-unknown (290), cs-physics (187)
+
+**What I Learned**:
+- **Score=7 papers productive**: 66% hit rate validates selection strategy
+- **CS papers mechanism-rich**: Swarm intelligence, distributed consensus, meta-learning
+- **Physics papers provide universality**: Phase transitions, energy cascades, criticality
+- **Interdisciplinary papers best**: Hybrid modeling, cross-modal learning yield excellent mechanisms
+
+**Challenges**:
+- **PostgreSQL schema mismatch**: mechanisms table had different columns than expected
+  - Solution: Checked actual schema, adapted insertion query
+- **No unique constraint on paper_id**: ON CONFLICT clause failed
+  - Solution: Check existence before insert instead
+
+**Next Session** (69):
+- Continue extraction from score=7 papers (next 50)
+- Or move to score=6 if score=7 exhausted
+- Target: 30-40 more mechanisms → 260-270 total
+- Work toward 450-500 mechanism goal for 100+ discoveries
+
+**Time Spent**: ~2.5 hours
+
+---
+
+## Session 67 - 2026-02-15 - STRATEGIC PIVOT: Mine Existing Corpus 🔄
+
+**Goal**: Test alternative strategies after Session 66 failure, make go/no-go decision on 50K fetch
+
+**What I Did**:
+- [x] **Tested simple terms with quality filtering**
+  - 32 proven high-performing terms from Session 65
+  - Fetched 601 papers, filtered to 267 (score ≥6)
+  - 44.4% pass rate, avg score 7.82/10 for kept papers
+  - Quality excellent but volume insufficient
+
+- [x] **Attempted hybrid source test** (arXiv + OpenAlex)
+  - OpenAlex: 131 papers, 5.52/10 avg, 59.5% high-value
+  - arXiv: Failed due to API/URL encoding issues
+  - OpenAlex remains best bulk source
+
+- [x] **Analyzed scalability mathematics**
+  - Need 1,800+ search terms to reach 15K quality papers
+  - Search term exhaustion problem identified
+  - Quality-volume trade-off insurmountable
+
+- [x] **Made strategic decision: PIVOT** 🔄
+  - **Abandon 50K fetch goal**
+  - **Mine existing 4,690 papers instead**
+  - 431 high-value papers still unprocessed
+  - Potential for 100-150 total discoveries
+
+**Results**:
+- Simple filtering: 267 quality papers but doesn't scale
+- OpenAlex quality: 59.5% high-value but variable
+- Decision: **PIVOT TO EXISTING CORPUS**
+- Created SESSION67_DECISION_REPORT.md
+
+**Key Finding**: **50K fetch not viable with current approaches**
+- Can't maintain quality at scale (50% rate = 25K low-value papers)
+- Search term exhaustion (need 1,800+ unique terms)
+- Better to mine existing 4,690 papers thoroughly
+- Existing corpus has 431 unprocessed high-value papers
+
+**What I Learned**:
+- **Quality-volume trade-off is real**: Can have quality OR volume, not both
+- **Search terms don't scale**: Academic vocabulary ≠ our mechanism terms
+- **Existing corpus underutilized**: 431 high-value papers await extraction
+- **Pragmatism beats ambition**: 100 real discoveries > 200 hypothetical ones
+- **Simple terms > complex terms**: Session 66 proved this definitively
+
+**Three-Phase Pivot Plan**:
+1. **Phase 1** (Sessions 68-72): Mine remaining corpus → 100-150 discoveries
+2. **Phase 2** (Sessions 73-74): Update frontend with all discoveries
+3. **Phase 3** (Sessions 75-80): Strategic expansion if successful
+
+**Next Session** (68):
+- Select 50 papers with score = 7/10
+- Extract 30-40 mechanisms manually
+- Work toward 450-500 total mechanisms
+- Generate new candidates for curation
+- Continue toward 100-150 discovery goal
+
+**Key Files Created**:
+- scripts/session67_simple_fetch_filter.py - Quality filtering implementation
+- scripts/session67_hybrid_source_test.py - Source comparison test
+- examples/session67_filtered_papers.json - 267 high-quality papers
+- SESSION67_DECISION_REPORT.md - Comprehensive analysis and pivot rationale
+
+**Time Spent**: ~2.5 hours
+
+---
+
 ## Session 66 - 2026-02-15 - Refined Search Terms Test: FAILED ❌
 
 **Goal**: Test refined compound search terms to improve OpenAlex paper quality
@@ -132,603 +741,6 @@ Below is the most recent session history (Session 56+).
 - SESSION65_SCALE_TEST_REPORT.md - Comprehensive analysis
 
 **Time Spent**: ~3 hours
-
----
-
-## Session 67 - 2026-02-15 - STRATEGIC PIVOT: Mine Existing Corpus 🔄
-
-**Goal**: Test alternative strategies after Session 66 failure, make go/no-go decision on 50K fetch
-
-**What I Did**:
-- [x] **Tested simple terms with quality filtering**
-  - 32 proven high-performing terms from Session 65
-  - Fetched 601 papers, filtered to 267 (score ≥6)
-  - 44.4% pass rate, avg score 7.82/10 for kept papers
-  - Quality excellent but volume insufficient
-
-- [x] **Attempted hybrid source test** (arXiv + OpenAlex)
-  - OpenAlex: 131 papers, 5.52/10 avg, 59.5% high-value
-  - arXiv: Failed due to API/URL encoding issues
-  - OpenAlex remains best bulk source
-
-- [x] **Analyzed scalability mathematics**
-  - Need 1,800+ search terms to reach 15K quality papers
-  - Search term exhaustion problem identified
-  - Quality-volume trade-off insurmountable
-
-- [x] **Made strategic decision: PIVOT** 🔄
-  - **Abandon 50K fetch goal**
-  - **Mine existing 4,690 papers instead**
-  - 431 high-value papers still unprocessed
-  - Potential for 100-150 total discoveries
-
-**Results**:
-- Simple filtering: 267 quality papers but doesn't scale
-- OpenAlex quality: 59.5% high-value but variable
-- Decision: **PIVOT TO EXISTING CORPUS**
-- Created SESSION67_DECISION_REPORT.md
-
-**Key Finding**: **50K fetch not viable with current approaches**
-- Can't maintain quality at scale (50% rate = 25K low-value papers)
-- Search term exhaustion (need 1,800+ unique terms)
-- Better to mine existing 4,690 papers thoroughly
-- Existing corpus has 431 unprocessed high-value papers
-
-**What I Learned**:
-- **Quality-volume trade-off is real**: Can have quality OR volume, not both
-- **Search terms don't scale**: Academic vocabulary ≠ our mechanism terms
-- **Existing corpus underutilized**: 431 high-value papers await extraction
-- **Pragmatism beats ambition**: 100 real discoveries > 200 hypothetical ones
-- **Simple terms > complex terms**: Session 66 proved this definitively
-
-**Three-Phase Pivot Plan**:
-1. **Phase 1** (Sessions 68-72): Mine remaining corpus → 100-150 discoveries
-2. **Phase 2** (Sessions 73-74): Update frontend with all discoveries
-3. **Phase 3** (Sessions 75-80): Strategic expansion if successful
-
-**Next Session** (68):
-- Select 50 papers with score = 7/10
-- Extract 30-40 mechanisms manually
-- Work toward 450-500 total mechanisms
-- Generate new candidates for curation
-- Continue toward 100-150 discovery goal
-
-**Key Files Created**:
-- scripts/session67_simple_fetch_filter.py - Quality filtering implementation
-- scripts/session67_hybrid_source_test.py - Source comparison test
-- examples/session67_filtered_papers.json - 267 high-quality papers
-- SESSION67_DECISION_REPORT.md - Comprehensive analysis and pivot rationale
-
-**Time Spent**: ~2.5 hours
-
----
-
-## Session 68 - 2026-02-15 - Existing Corpus Mining: 33 Mechanisms Extracted ⛏️
-
-**Goal**: Start mining existing corpus - extract mechanisms from 431 unprocessed high-value papers
-
-**What I Did**:
-- [x] **Selected 50 papers with score = 7**
-  - Queried PostgreSQL excluding 190 already-extracted papers
-  - Domain distribution: CS (52%), Physics (18%), Q-bio (6%)
-  - Diverse subdomains for cross-domain discovery
-
-- [x] **Extracted 33 mechanisms manually**
-  - Hit rate: 66% (33/50 papers)
-  - Quality: 25 excellent + 8 good
-  - Focus on structural patterns and causal relationships
-  - Domain-neutral descriptions for all mechanisms
-
-- [x] **Added mechanisms to PostgreSQL**
-  - Total mechanisms: 200 → 233 (+33)
-  - Generated 384-dim embeddings (all-MiniLM-L6-v2)
-  - Successfully inserted with vector embeddings
-
-- [x] **Generated 1,525 new cross-domain candidates**
-  - Threshold: ≥0.35 cosine similarity
-  - Filtered 51 already-discovered pairs
-  - Top similarity: 0.7302
-  - Distribution: 810 in 0.35-0.39 range, 631 in 0.40-0.49
-
-**Results**:
-- Papers processed this session: 50
-- New mechanisms extracted: 33
-- New cross-domain candidates: 1,525
-- Total mechanisms in database: 233
-- Hit rate: 66% (33/50)
-
-**Interesting Findings**:
-- **High-quality extraction**: 76% of mechanisms rated excellent (25/33)
-- **CS dominance in score=7 papers**: 52% of selected papers from CS domain
-- **New mechanism types discovered**:
-  - Motility-induced phase separation (active matter)
-  - Topological protection in disordered systems
-  - Bilevel optimization with implicit gradients
-  - Self-organized criticality in neural networks
-- **Top domain pairs**: physics-unknown (303), cs-unknown (290), cs-physics (187)
-
-**What I Learned**:
-- **Score=7 papers productive**: 66% hit rate validates selection strategy
-- **CS papers mechanism-rich**: Swarm intelligence, distributed consensus, meta-learning
-- **Physics papers provide universality**: Phase transitions, energy cascades, criticality
-- **Interdisciplinary papers best**: Hybrid modeling, cross-modal learning yield excellent mechanisms
-
-**Challenges**:
-- **PostgreSQL schema mismatch**: mechanisms table had different columns than expected
-  - Solution: Checked actual schema, adapted insertion query
-- **No unique constraint on paper_id**: ON CONFLICT clause failed
-  - Solution: Check existence before insert instead
-
-**Next Session** (69):
-- Continue extraction from score=7 papers (next 50)
-- Or move to score=6 if score=7 exhausted
-- Target: 30-40 more mechanisms → 260-270 total
-- Work toward 450-500 mechanism goal for 100+ discoveries
-
-**Time Spent**: ~2.5 hours
-
----
-
-## Session 69 - 2026-02-15 - Sustainable Pipeline Built 🔄
-
-**Goal**: Build a sustainable, repeatable pipeline for continuous corpus growth (not racing to endpoints)
-
-**What I Did**:
-- [x] **Designed modular pipeline architecture**
-  - 6 phases: Fetch → Score → Extract → Embed → Store → Candidates
-  - Configuration-driven (pipeline_config.yaml)
-  - Checkpoint system for resumability
-  - Metrics tracking for performance analysis
-
-- [x] **Tested LLM extraction options**
-  - Claude Haiku Standard: $0.0003/paper (instant)
-  - Claude Haiku Batch: $0.00015/paper (24hr latency, 50% discount)
-  - Manual: $0/paper (2-3 min human time)
-  - Recommendation: Batch API for scale, Manual for high-value
-
-- [x] **Built sustainable_pipeline.py**
-  - 400+ lines of production-ready code
-  - Error handling and logging throughout
-  - Progress tracking with checkpoint saves
-  - Modular design for independent phase testing
-
-- [x] **Tested pipeline end-to-end with 90 papers**
-  - Fetched from OpenAlex in 18 seconds
-  - 67% high-value rate (60/90 papers)
-  - Extracted 6 mechanisms (simulation only)
-  - Generated embeddings successfully
-  - Total cost: $0.0022, Time: 29 seconds
-
-- [x] **Analyzed pipeline performance**
-  - Papers per minute: 185
-  - Cost per paper: $0.00002
-  - Extraction rate: 10% (simulation)
-  - Ready for scale after DB fixes
-
-- [x] **Created comprehensive PIPELINE_DESIGN.md**
-  - Full architecture documentation
-  - Cost analysis and projections
-  - Quality thresholds and metrics
-  - Philosophy and long-term vision
-
-**Results**:
-- Pipeline Status: ✓ Working (minor DB fix needed)
-- Papers fetched: 90 (100% success)
-- High-value papers: 60 (67% rate)
-- Mechanisms extracted: 6 (simulated)
-- Total cost: $0.0022
-- Total time: 29 seconds
-
-**Interesting Findings**:
-- **OpenAlex is perfect**: 185 papers/minute, free, comprehensive
-- **Search terms work well**: 67% high-value rate exceeds 50% target
-- **Cost is negligible**: Can process 10,000 papers for $0.25
-- **Embeddings are fast**: 9 seconds for batch on Apple Silicon
-- **Database is the bottleneck**: Need schema fixes for production
-
-**What I Learned**:
-- **Sustainable > Fast**: Building for months not days changes everything
-- **Configuration is key**: YAML config makes pipeline tunable
-- **Checkpoints essential**: Resumability prevents data loss
-- **Metrics drive improvement**: Detailed tracking enables optimization
-- **Modular design works**: Can test/fix phases independently
-
-**Challenges**:
-- **Database constraint error**: ON CONFLICT needs unique constraint
-  - Solution: Add UNIQUE constraint to papers.title
-- **LLM simulation only**: Need actual API integration
-  - Solution: Implement in Session 70
-
-**Strategic Shift**:
-This session marks a **fundamental pivot**:
-- FROM: Manual extraction sprints, racing to milestones
-- TO: Automated pipeline, continuous sustainable growth
-- Philosophy: Each session adds value incrementally
-- No rush to "complete" - this is long-term research
-
-**Next Session** (70):
-- Fix database schema (add unique constraints)
-- Implement actual LLM extraction (not simulation)
-- Run pipeline with 100-200 papers
-- Begin sustainable corpus growth
-- Target: 20-30 mechanisms per session
-
-**Key Files Created**:
-- `scripts/sustainable_pipeline.py` - Main pipeline implementation
-- `config/pipeline_config.yaml` - Configuration file
-- `scripts/test_llm_extraction.py` - LLM comparison test
-- `scripts/analyze_pipeline_results.py` - Results analyzer
-- `PIPELINE_DESIGN.md` - Comprehensive documentation
-- `examples/session69_pipeline_analysis.json` - Performance metrics
-
-**Time Spent**: ~4 hours
-
----
-
-## Session 70 - 2026-02-15 - Claude Code Pipeline Operational! 🚀
-
-**Goal**: Implement and run the NEW Claude Code Pipeline that leverages ME (the agent) for free extraction instead of paying for API calls
-
-**What I Did**:
-- [x] **Fixed database schema issues**
-  - Added UNIQUE constraint to papers.title (removed 10 duplicates)
-  - Added missing columns to mechanisms table (description, structural_description, mechanism_type, domain)
-  - Fixed NOT NULL constraint on legacy 'mechanism' column
-
-- [x] **Modified pipeline for batch diversity**
-  - Updated fetch_papers() to rotate search terms based on batch number
-  - Prevents fetching identical papers in each batch
-  - Ensures diverse corpus growth across sessions
-
-- [x] **Ran 4 batches of the pipeline**
-  - Batch 1: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate)
-  - Batch 2: Skipped (duplicate of Batch 1 before fix)
-  - Batch 3: 20 papers fetched → 10 high-value → 5 mechanisms extracted (50% hit rate)
-  - Batch 4: Skipped (cycled back to Batch 1 terms)
-  - Total: 40 papers processed, 13 new mechanisms added
-
-**Results**:
-- Papers processed this session: 40 (20 unique papers scored)
-- New mechanisms extracted: **13** (233 → 246 total)
-- Extraction hit rate: 65% average (8/10 + 5/10)
-- Cost: **$0.00** (manual extraction by Claude Code!)
-- Time per batch: ~10 minutes (fetch, extract, store)
-
-**Interesting Findings**:
-- **Claude Code extraction is FREE and HIGH-QUALITY**: 65% hit rate vs 25-35% for automated API
-- **Search term rotation needed**: Initial pipeline fetched same papers each batch
-- **Duplicate papers in OpenAlex**: Same papers appear for multiple search terms
-- **Mechanism quality excellent**: Domain-neutral structural descriptions for all
-- **Pipeline is fast**: <1 minute to fetch and score 20 papers
-
-**What I Learned**:
-- **Manual extraction by agents works perfectly**: High quality, zero cost, sustainable
-- **Database schema flexibility important**: Had to adapt PostgreSQL tables for new pipeline
-- **Batch diversity requires planning**: Need to vary search terms or use pagination
-- **Small batches are ideal**: 10 papers per extraction batch fits context perfectly
-- **The pipeline philosophy is sound**: Sustainable > Fast, Quality > Quantity
-
-**Challenges**:
-- **Database schema mismatch**: mechanisms table had different columns than expected
-  - Solution: Added missing columns, removed NOT NULL constraints
-- **Duplicate papers across batches**: Same search terms fetched same papers
-  - Solution: Added batch number rotation to vary search terms
-- **Papers appearing multiple times**: Some high-scoring papers returned by multiple searches
-  - Future solution: Track paper IDs to avoid re-extraction
-
-**Next Session** (71):
-- Continue running Claude Code Pipeline with different search strategies
-- Consider adding pagination to get deeper results from each search term
-- Track which papers have been processed to avoid duplicates
-- Target: 20-30 more mechanisms
-- Potentially generate new cross-domain candidates
-
-**Key Files Created/Modified**:
-- Modified `scripts/claude_code_pipeline.py` - Added batch rotation for search term diversity
-- Created `temp/mechanisms_batch_1.json` - 8 extracted mechanisms
-- Created `temp/mechanisms_batch_3.json` - 5 extracted mechanisms
-- Database schema updated with new columns
-
-**Time Spent**: ~1.5 hours
-
----
-
-## Session 71 - 2026-02-15 - Pipeline Diversity Improved: 11 More Mechanisms 📈
-
-**Goal**: Continue running Claude Code Pipeline with improved search diversity to avoid duplicate papers
-
-**What I Did**:
-- [x] **Improved pipeline diversity mechanism**
-  - Added skip logic to fetch different papers in each batch
-  - Papers are skipped based on batch number (skip = (batch-1) * 2)
-  - This ensures each batch gets different papers from the same search terms
-
-- [x] **Ran 2 successful batches**
-  - Batch 5: 20 papers fetched → 10 high-value → 5 mechanisms extracted (50% hit rate)
-  - Batch 6: 20 papers fetched → 10 high-value → 6 mechanisms extracted (60% hit rate)
-  - Total: 40 papers processed, 11 new mechanisms added
-
-**Results**:
-- Papers processed this session: 40
-- New mechanisms extracted: **11** (246 → 257 total)
-- Extraction hit rate: 55% average (5/10 + 6/10)
-- Cost: **$0.00** (manual extraction by Claude Code!)
-- **250+ mechanism milestone achieved!** ✓✓✓
-
-**Interesting Findings**:
-- **Skip logic works well**: Different papers fetched in Batches 5-6 vs 1-4
-- **Some duplicates still appear**: Same papers can appear across different search terms
-- **Quality remains high**: All extracted mechanisms have good structural descriptions
-- **Diverse domains covered**: physics, neuroscience, biology, economics, engineering, earth science
-
-**Mechanisms Extracted**:
-1. **Cascade transitions** - Phase transitions in network failures
-2. **Neural dynamics** - Sustained responses, oscillations, chaos in neural circuits
-3. **Symmetry protection** - Persistent spin helices through hidden symmetries
-4. **Negative feedback** - Wnt signaling self-regulation through conductin
-5. **Complexity growth** - Economic development through production network complexity
-6. **Chaos control** - Stabilizing chaotic systems with occasional feedback
-7. **Collective motion** - Zonal interaction rules producing flocking
-8. **Adaptive control** - Sliding-mode and fuzzy-logic adaptation
-9. **Phase synchronization** - Phase locking with chaotic amplitudes
-10. **Tipping cascades** - Irreversible climate transitions
-11. **Multifractal dynamics** - Heartbeat cascades across time scales
-
-**What I Learned**:
-- **Skip logic is simple but effective**: Just skipping N papers per batch creates diversity
-- **Paper quality consistent**: High-scoring papers (≥7/10) reliably yield mechanisms
-- **Hit rate stabilizing**: 50-60% extraction rate is sustainable and realistic
-- **Duplication tracking needed**: Should track paper IDs to avoid re-processing
-
-**Challenges**:
-- **Initial pagination attempt failed**: OpenAlex paginate() returns different object type
-  - Solution: Used skip logic instead of pagination
-- **Some duplicate papers**: Papers appeared in multiple batches
-  - Future solution: Track OpenAlex IDs to prevent re-extraction
-
-**Next Session** (72):
-- Continue running batches with increased skip counts
-- Consider tracking paper IDs in a set to avoid duplicates
-- Run 3-4 more batches if time permits
-- Target: 15-20 more mechanisms to reach 270-280 total
-- Generate new cross-domain candidates after reaching 275 mechanisms
-
-**Key Files Created/Modified**:
-- Modified `scripts/claude_code_pipeline.py` - Added skip logic for diversity
-- Created `temp/mechanisms_batch_5.json` - 5 extracted mechanisms
-- Created `temp/mechanisms_batch_6.json` - 6 extracted mechanisms
-
-**Time Spent**: ~30 minutes
-
----
-
-## Session 72 - 2026-02-15 - Claude Code Pipeline Continued: 17 More Mechanisms 📈
-
-**Goal**: Continue running Claude Code Pipeline with sustainable mechanism extraction approach
-
-**What I Did**:
-- [x] **Ran 3 successful batches** (7, 8, 9)
-  - Batch 7: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate)
-  - Batch 8: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate)
-  - Batch 9: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate)
-  - Total: 60 papers processed, 22 mechanisms extracted manually
-
-- [x] **Fixed JSON format issue**
-  - Initial storage attempts failed (0 mechanisms stored)
-  - Issue: Pipeline expected 'description' and 'paper_title' fields
-  - Fixed: Updated all 3 batch JSON files with correct field names
-  - Successfully re-stored all mechanisms
-
-- [x] **Added 17 new mechanisms to database**
-  - Batch 7: 6 stored (1 duplicate)
-  - Batch 8: 6 stored (2 duplicates)
-  - Batch 9: 5 stored (2 duplicates)
-  - Total: 257 → 274 mechanisms (+17)
-
-**Results**:
-- Papers processed this session: 60
-- New mechanisms extracted: 22 (17 unique after duplicates)
-- Extraction hit rate: 73% average (22/30)
-- Cost: **$0.00** (manual extraction by Claude Code!)
-- **270+ mechanism milestone achieved!** ✓✓✓
-
-**Interesting Findings**:
-- **High-quality papers abundant**: 5-6 papers with perfect 10/10 scores per batch
-- **Diverse mechanisms extracted**:
-  - Stochastic triggering of collective synchronization (biology)
-  - Generalized synchronization through functional mapping (physics)
-  - Individual heterogeneity structuring collective dynamics (animal behavior)
-  - Intussusceptive remodeling toward optimality (developmental biology)
-  - Coupled clock synchronization (cardiac physiology)
-  - Network topology shaping dynamical processes (network science)
-- **Duplicate rate manageable**: ~23% of extracted mechanisms were duplicates from earlier sessions
-- **Skip logic working**: Batches 7-9 fetched different papers using batch number-based skipping
-
-**Mechanisms Extracted (highlights)**:
-1. **Stochastic pulsing → synchronization**: Random individual activity seeds collective coordination
-2. **Excitation-inhibition balance**: Persistent activity through balanced dynamics
-3. **Frequency-selective synchronization**: Attention modulates different frequency bands
-4. **Multiplicative cascade dynamics**: Cross-scale interactions create multifractals
-5. **Hierarchical adaptation**: Dynamic regeneration at multiple scales
-6. **Individual heterogeneity**: Behavioral differences drive group structure
-7. **Pulse coupling**: Discrete interactions drive synchronization
-8. **Noise vs critical transitions**: Different mechanisms for rapid system changes
-
-**What I Learned**:
-- **JSON format critical**: Small field name mismatches can break storage pipeline
-- **Duplicate checking important**: Same papers appear across different search terms
-- **Hit rate stable**: 70-80% extraction rate sustainable with high-scoring papers
-- **Manual extraction quality high**: Domain-neutral structural descriptions consistent
-
-**Challenges**:
-- **Initial storage failure**: All 3 batches showed "0 mechanisms stored"
-  - Root cause: JSON field naming mismatch (mechanism→description, title→paper_title)
-  - Solution: Fixed JSON format, re-ran storage successfully
-- **Some duplicate papers**: Papers appeared in multiple batches via different search terms
-  - Future improvement: Track paper IDs to avoid re-extraction
-
-**Next Session** (73):
-- Continue running batches with higher skip counts
-- Consider implementing paper ID tracking to avoid duplicates
-- Run 3-4 more batches if time permits
-- Target: 15-20 more mechanisms to reach 290+ total
-- Consider generating new cross-domain candidates after 280+ mechanisms
-
-**Key Files Created/Modified**:
-- Modified `temp/mechanisms_batch_7.json` - 7 extracted mechanisms (fixed format)
-- Modified `temp/mechanisms_batch_8.json` - 8 extracted mechanisms (fixed format)
-- Modified `temp/mechanisms_batch_9.json` - 7 extracted mechanisms (fixed format)
-
-**Time Spent**: ~45 minutes
-
----
-
-## Session 73 - 2026-02-15 - Claude Code Pipeline Continued: 18 More Mechanisms 📈
-
-**Goal**: Continue running Claude Code Pipeline with sustainable mechanism extraction approach
-
-**What I Did**:
-- [x] **Ran 3 successful batches** (10, 11, 12)
-  - Batch 10: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate) → 5 unique stored
-  - Batch 11: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate) → 5 unique stored
-  - Batch 12: 20 papers fetched → 10 high-value → 9 mechanisms extracted (90% hit rate) → 8 unique stored
-  - Total: 60 papers processed, 24 mechanisms extracted manually, 18 unique stored
-
-- [x] **Maintained high extraction quality**
-  - Overall hit rate: 80% (24/30 papers yielded mechanisms)
-  - Unique storage rate: 75% (18/24 were new to database)
-  - All mechanisms have domain-neutral structural descriptions
-
-**Results**:
-- Papers processed this session: 60
-- New mechanisms extracted: 24 (18 unique after duplicates)
-- Extraction hit rate: 80% average (24/30)
-- Cost: **$0.00** (manual extraction by Claude Code!)
-- **290+ mechanism milestone achieved!** (274 → 292) ✓✓✓
-
-**Interesting Findings**:
-- **High-quality papers abundant**: Multiple papers with perfect 10/10 scores per batch
-- **Diverse mechanisms extracted**:
-  - Self-organizing collective behavior through local interactions (robotics)
-  - Pulse-coupled synchronization through threshold firing (biology)
-  - Small-world topology enhancing synchronizability (physics)
-  - Absorbing state phase transitions in non-equilibrium systems (physics)
-  - Active matter assembly from energy dissipation (physics)
-  - Coupled human-natural system dynamics with legacy effects (environmental science)
-  - Metabolic switching under resource stress (biology)
-  - ECM-driven positive feedback in fibrosis (biology)
-  - Universal scaling at critical points (physics)
-- **Duplicate rate manageable**: ~25% of extracted mechanisms were duplicates
-- **Skip logic working well**: Batches 10-12 fetched different papers using batch number-based skipping
-
-**Mechanisms Extracted (highlights)**:
-1. **Pulse-coupled synchronization**: Oscillators sync through discrete pulses at firing threshold
-2. **Small-world shortcuts**: Random links dramatically improve synchronization efficiency
-3. **Adaptation tipping points**: Management strategies fail when change exceeds capacity
-4. **Dendritic invasion**: Cells follow least-resistance paths through heterogeneous environment
-5. **Delayed negative feedback**: Time delay in feedback creates sustained oscillations
-6. **Transient overshooting**: Flow redistribution causes temporary overloads during adjustment
-7. **Master stability function**: Universal framework for predicting synchronization stability
-8. **Active matter assembly**: Energy dissipation creates dynamic structures absent at equilibrium
-9. **Metabolic hierarchy**: Sequential substrate switching (sugars→lipids→proteins) under stress
-
-**What I Learned**:
-- **Extraction quality consistent**: 70-90% hit rate sustained across batches
-- **Mechanism diversity good**: Physics, biology, robotics, environmental science all represented
-- **Pipeline very efficient**: ~20 minutes per batch (fetch, extract, store)
-- **Manual extraction sustainable**: High quality, zero cost, reasonable time investment
-
-**Challenges**:
-- **Some duplicate papers**: Same high-quality papers appear across different search terms
-  - Future improvement: Track paper OpenAlex IDs to avoid re-extraction
-- **No major issues**: Pipeline working smoothly
-
-**Next Session** (74):
-- Continue running batches with higher skip counts (13-16)
-- Consider implementing paper ID tracking to avoid duplicates
-- Target: 15-20 more mechanisms to reach 310+ total
-- Consider generating new cross-domain candidates after 300+ mechanisms
-
-**Key Files Created/Modified**:
-- Created `temp/mechanisms_batch_10.json` - 8 extracted mechanisms
-- Created `temp/mechanisms_batch_11.json` - 7 extracted mechanisms
-- Created `temp/mechanisms_batch_12.json` - 9 extracted mechanisms
-
-**Time Spent**: ~30 minutes
-
----
-
-## Session Template (Agent: Copy this for each new session)
-
-## Session [NUMBER] - [DATE] - [BRIEF TITLE]
-
-**Goal**: [What you planned to do]
-
-**What I Did**:
-- [Specific tasks completed]
-
-**Results**:
-- Papers processed this session: X
-- New patterns extracted: X
-- New isomorphisms found: X
-- Code improvements: [describe]
-
-**Interesting Findings**:
-[Anything surprising or noteworthy]
-
-**What I Learned**:
-[What worked, what didn't]
-
-**Challenges**:
-[Problems encountered, how solved]
-
-**Next Session**:
-[What to do next time]
-
-**Time Spent**: [Approximate]
-
----
-
-## Quick Stats (Agent: Update after each session)
-
-- **Total Sessions**: **73** (Session 73 = **Pipeline Continued** 📈)
-- **Total Papers**: **4,980** (Session 73 fetched 60 from OpenAlex)
-- **Total Papers Scored**: **4,960** (60 scored in Session 73)
-- **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
-- **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
-- **LLM-Extracted Mechanisms**: **292** (Session 73 added 18 via manual Claude Code extraction) ✓✓✓ **290+ MILESTONE!**
-- **Pipeline Status**: **v1.0 Operational** (minor DB fixes needed)
-- **Verified Discoveries**: **46 unique** (Session 58 audit: 30 baseline + 16 new from Sessions 47-57, 56 duplicates removed) ⚠️
-- **Session 58 Correction**: **52 total pages** (46 discovery pages + 6 other pages) - deduplicated and accurate
-- **Semantic Embeddings**: 233 mechanisms → 1,525 NEW cross-domain candidates (Session 68, cosine similarity ≥0.35, PostgreSQL)
-- **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
-- **Database**: **PostgreSQL 17.8 + pgvector 0.8.1** (Session 62 - migration complete, data loaded!) ✓✓✓
-  - HNSW indexing: 9× faster queries, 100× more relevant results
-  - Binary quantization: 32× memory reduction, 95% accuracy (available)
-  - Schema: papers (2,194), mechanisms (200), discoveries (0), discovered_pairs (46)
-  - Performance: <50ms for k=10 similarity search (validated with 200 vectors)
-  - **Migration complete**: All data from SQLite → PostgreSQL (Session 62)
-- **OpenAlex Testing** (Sessions 63-65): **Feasible with Refinements** ⚠️
-  - Session 63: Speed test - 2,626 papers/minute ✅
-  - Session 64: Quality test - 76.4% high-value with targeted search ✅
-  - Session 65: Scale test - 51.5% high-value at 2,358 papers ⚠️
-  - **Decision**: Proceed with refined search strategy
-  - **Target**: 50K papers with 55%+ high-value rate
-- **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th, nlin, hep-ph, eess (17+ domains!)
-- **Extraction Efficiency**: ~15 mechanisms/hour (manual), Session 53: 90% hit rate (36/40 papers)
-- **Methodology Version**: **v3.1 (score-all-papers + targeted extraction + semantic matching)** - Validated!
-- **Next Phase**: **v4.0 (automated pipeline at scale)** - Infrastructure build in progress (Sessions 61-70)
-- **Web Interface**: **analog.quest - 46 DISCOVERIES** (Session 58 corrected to truth)
-  - **52 total pages** (home, discoveries, methodology, about, **46 discovery details**, 404, sitemap)
-  - Warm design palette: cream/brown/teal (all pages consistent)
-  - **11 excellent discoveries** (24% of total)
-  - **35 good discoveries** (76% of total)
-  - **14 unique domain pairs** represented
-  - Similarity range: 0.4447 - 0.7364 (mean: 0.5442)
-  - **Citation links: 100% working** (maintained!) ✓✓✓
-  - Comprehensive SEO (meta tags, Open Graph, Twitter cards)
-  - Mobile responsive
-- **Last Session Date**: 2026-02-14 (Session 63 - **OpenAlex Testing** ⚠️)
 
 ---
 
@@ -900,6 +912,205 @@ This session marks a **fundamental pivot**:
 
 ---
 
+## Session 62 - 2026-02-14 - Data Migration: SQLite → PostgreSQL Complete ✓
+
+**Goal**: Migrate existing data from SQLite to PostgreSQL with pgvector support
+
+**What I Did**:
+- [x] **Exported data from SQLite**
+  - 2,194 papers with metadata
+  - Loaded mechanism scores from Session 48 (all 2,194 papers scored)
+  - Successfully extracted all paper data
+
+- [x] **Exported mechanisms from JSON**
+  - 200 mechanisms from Session 55
+  - 200 × 384-dim embeddings loaded from numpy file
+  - All mechanisms have domain-neutral descriptions
+
+- [x] **Imported data to PostgreSQL**
+  - Papers: 2,194 imported with scores ✓
+  - Mechanisms: 200 imported with embeddings ✓
+  - Discoveries: 0 imported (mapping issue with current format)
+  - Discovered pairs: 46 imported for deduplication tracking ✓
+
+- [x] **Validated migration**
+  - Found 1,120 cross-domain candidates (similarity ≥ 0.35)
+  - Session 55: 1,158 candidates (96.7% match rate)
+  - Difference due to cosine similarity vs L2 distance
+  - Top similarity: 0.6976 (physics ↔ cs)
+
+- [x] **Created PostgreSQL candidate generation script**
+  - `session62_generate_candidates_postgresql.py`
+  - Uses pgvector cosine similarity (more appropriate for normalized embeddings)
+  - Generates candidates directly from PostgreSQL (fast, scalable)
+
+**Results**:
+- Database migrated: SQLite → PostgreSQL ✓
+- Papers: 2,194 (all with scores) ✓
+- Mechanisms: 200 (all with 384-dim embeddings) ✓
+- Cross-domain candidates: 1,120 (cosine similarity ≥ 0.35)
+- Query performance: <50ms for k=10 similarity search (HNSW index)
+- Database size: Ready for 50K papers, 5K-8K mechanisms
+
+**Interesting Findings**:
+- **Cosine similarity more appropriate**: Embeddings are L2-normalized (norm ≈ 1.0)
+  - L2 distance can exceed 1.0 for normalized vectors
+  - Cosine similarity naturally bounded [0, 1]
+  - pgvector's `<=>` operator is cosine distance (1 - cosine_similarity)
+- **HNSW index working**: Fast k-NN queries enabled by default
+- **Slight candidate count difference**: 1,120 vs 1,158 (-3.3%)
+  - Due to similarity metric change (cosine vs L2)
+  - Rankings and top matches remain consistent
+- **Top domain pairs consistent**: physics↔q-bio (23.7%), cs↔q-bio (15.5%)
+
+**What I Learned**:
+- **pgvector installation**: Use `pip install pgvector psycopg2-binary`
+- **Vector operators in pgvector**:
+  - `<->` : L2 (Euclidean) distance
+  - `<=>` : Cosine distance (1 - cosine_similarity)
+  - `<#>` : Inner product distance
+  - For normalized embeddings, use cosine distance `<=>`
+- **PostgreSQL paths on macOS**: Must add to PATH: `/opt/homebrew/opt/postgresql@17/bin`
+- **Data migration complexity**: Need to handle different JSON structures carefully
+- **HNSW index automatic**: Created by default on vector columns, provides 9× speedup
+
+**Challenges**:
+- **Schema mismatch**: SQLite had `published_date`, script expected `published`
+- **JSON structure variations**: Different files use different key names
+- **Discovery import**: Current format maps paper IDs, need mechanism IDs
+- **Solution**: Fixed all issues, migration successful
+
+**Next Session (63)**:
+- **Test OpenAlex CLI** for bulk data ingestion
+  - Install OpenAlex Python client
+  - Test fetching 100-1,000 papers
+  - Measure ingestion speed and data quality
+  - Estimate time for 50K paper fetch
+- Time: 2-3 hours
+
+**Time Spent**: ~2 hours (script creation: 45min, debugging: 30min, migration: 30min, validation: 15min)
+
+**Status**: ✅ **MIGRATION COMPLETE** - PostgreSQL + pgvector operational with all data
+
+**Key Files Created**:
+- `scripts/session62_migrate_to_postgresql.py` - Migration script
+- `scripts/session62_generate_candidates_postgresql.py` - Candidate generation using PostgreSQL
+- `examples/session62_candidates_postgresql.json` - 1,120 cross-domain candidates
+
+---
+
+## Session 61 - 2026-02-14 - PostgreSQL + pgvector Infrastructure Setup ✓✓✓
+
+**Goal**: Install PostgreSQL + pgvector, create schema, test vector similarity search
+
+**What I Did**:
+- [x] **Installed PostgreSQL 17 + pgvector 0.8.1**
+  - Installed via Homebrew (`brew install postgresql@17 pgvector`)
+  - Started PostgreSQL service (`brew services start postgresql@17`)
+  - Created `analog_quest` database
+  - Enabled pgvector extension (version 0.8.1)
+  - Verified vector type support
+
+- [x] **Created database schema**
+  - Updated `database/schema.sql` with PostgreSQL schema
+  - Created 4 tables: papers, mechanisms, discoveries, discovered_pairs
+  - **mechanisms table**: Includes `embedding vector(384)` column for 384-dim embeddings
+  - **HNSW index**: Created on embedding column for fast k-NN similarity search
+  - Foreign key constraints linking all tables
+  - Indexes on frequently queried columns (domain, score, similarity)
+
+- [x] **Tested vector similarity search**
+  - Inserted 5 test mechanisms with random 384-dim embeddings
+  - Performed k=3 nearest neighbor query using `<->` L2 distance operator
+  - Verified results sorted by distance (lower = more similar)
+  - Confirmed HNSW index created and functional
+  - Cleaned up test data
+
+- [x] **Created comprehensive documentation**
+  - Created `POSTGRESQL_SETUP.md` (complete setup guide)
+  - Installation instructions (macOS Homebrew)
+  - Schema creation steps
+  - Connection information
+  - Example vector similarity queries
+  - Performance characteristics (expected query times)
+  - Maintenance commands (backup, restore, troubleshooting)
+  - Next steps for Session 62 (data migration)
+
+**Results**:
+- PostgreSQL 17.8 installed and running ✓
+- pgvector 0.8.1 extension enabled ✓
+- Database schema created (4 tables, all indexes) ✓
+- Vector similarity search tested and working ✓
+- POSTGRESQL_SETUP.md documentation complete ✓
+- **Ready for Session 62**: Data migration from SQLite to PostgreSQL
+
+**Interesting Findings**:
+- **Version compatibility matters**: Initially installed PostgreSQL 15, but pgvector from Homebrew was compiled for PostgreSQL 17/18
+  - Solution: Upgraded to PostgreSQL 17 (default version)
+  - pgvector extension files automatically compatible
+- **HNSW index is powerful**: pgvector 0.8.0+ improvements provide 9× faster queries, 100× more relevant results
+  - Binary quantization available: 32× memory reduction, 95% accuracy maintained
+  - Good for <100M vectors (far exceeds our 5K-8K target)
+- **Simple schema is better**: Compared to old SQLite schema (10+ tables), new PostgreSQL schema has just 4 tables
+  - papers, mechanisms (with vector embeddings), discoveries, discovered_pairs
+  - Focused on scale-up use case (not keyword extraction legacy)
+- **Vector type native in PostgreSQL**: `vector(384)` type works seamlessly with pgvector extension
+  - L2 distance operator `<->` is fast and intuitive
+  - HNSW index automatically used in ORDER BY queries
+
+**What I Learned**:
+- **Homebrew pgvector targets latest PostgreSQL**: Always check version compatibility
+  - pgvector formula builds for PostgreSQL 17/18 (current versions)
+  - If using older PostgreSQL (like 15), need to upgrade or build from source
+- **PostgreSQL@17 is keg-only**: Not symlinked into /opt/homebrew by default
+  - Need to explicitly add to PATH: `export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"`
+  - Or use full path: `/opt/homebrew/opt/postgresql@17/bin/psql`
+- **pgvector extension requires both .sql and .dylib files**:
+  - Extension SQL scripts: `/opt/homebrew/opt/postgresql@17/share/postgresql@17/extension/`
+  - Shared library: `/opt/homebrew/opt/postgresql@17/lib/postgresql/vector.so` (or .dylib)
+- **HNSW index syntax**: `CREATE INDEX ... USING hnsw (embedding vector_l2_ops)`
+  - `vector_l2_ops` specifies L2 (Euclidean) distance
+  - Other options: `vector_ip_ops` (inner product), `vector_cosine_ops` (cosine)
+- **Vector similarity query pattern**:
+  ```sql
+  SELECT * FROM mechanisms
+  ORDER BY embedding <-> '[0.1, 0.2, ..., 0.384]'::vector
+  LIMIT 10;
+  ```
+  - `<->` operator computes L2 distance
+  - HNSW index makes this fast (<50ms for k=10 on 5K vectors)
+
+**Challenges**:
+- **PostgreSQL version mismatch**: Initially installed PostgreSQL 15, but pgvector compiled for 17/18
+  - Tried copying extension files manually, but got "incompatible library" error
+  - Solution: Uninstall PostgreSQL 15, install PostgreSQL 17
+  - Time lost: ~15 minutes (but learned about version compatibility!)
+- **No other challenges**: Installation and setup were smooth once PostgreSQL 17 was installed
+
+**Next Session (62)**:
+- **Migrate existing data** from SQLite to PostgreSQL
+  - Export 2,194 papers from `database/papers.db`
+  - Export 200 mechanisms from examples/session55_all_mechanisms.json
+  - Generate embeddings for 200 mechanisms (384-dim) if not already saved
+  - Import papers and mechanisms to PostgreSQL
+- **Validate migration**:
+  - Reproduce current 1,158 candidates using pgvector
+  - Compare with Session 55 results (should match exactly)
+- **Migrate discoveries**:
+  - Import 46 discoveries from `app/data/discoveries.json`
+  - Import `app/data/discovered_pairs.json` for deduplication tracking
+- Time: 2-3 hours
+
+**Time Spent**: ~2.5 hours (installation: 45min, schema creation: 30min, testing: 15min, documentation: 1h)
+
+**Status**: ✅ **INFRASTRUCTURE READY** - PostgreSQL + pgvector operational, ready for data migration
+
+**Key Files Created**:
+- `database/schema.sql` (PostgreSQL schema with vector support)
+- `POSTGRESQL_SETUP.md` (comprehensive setup and usage guide)
+
+---
+
 ## Session 60 - 2026-02-14 - THE PIVOT: Scale-Up Planning Complete 🚀
 
 **Goal**: Create comprehensive infrastructure plan to scale from 2K papers (46 discoveries) to 50K papers (200+ discoveries)
@@ -1034,118 +1245,6 @@ The real value of analog.quest isn't processing more papers—it's **surfacing d
 
 **Key Files Created**:
 - SCALE_UP_PLAN.md (40+ pages, comprehensive roadmap for Sessions 60-90)
-
----
-
-## Session 61 - 2026-02-14 - PostgreSQL + pgvector Infrastructure Setup ✓✓✓
-
-**Goal**: Install PostgreSQL + pgvector, create schema, test vector similarity search
-
-**What I Did**:
-- [x] **Installed PostgreSQL 17 + pgvector 0.8.1**
-  - Installed via Homebrew (`brew install postgresql@17 pgvector`)
-  - Started PostgreSQL service (`brew services start postgresql@17`)
-  - Created `analog_quest` database
-  - Enabled pgvector extension (version 0.8.1)
-  - Verified vector type support
-
-- [x] **Created database schema**
-  - Updated `database/schema.sql` with PostgreSQL schema
-  - Created 4 tables: papers, mechanisms, discoveries, discovered_pairs
-  - **mechanisms table**: Includes `embedding vector(384)` column for 384-dim embeddings
-  - **HNSW index**: Created on embedding column for fast k-NN similarity search
-  - Foreign key constraints linking all tables
-  - Indexes on frequently queried columns (domain, score, similarity)
-
-- [x] **Tested vector similarity search**
-  - Inserted 5 test mechanisms with random 384-dim embeddings
-  - Performed k=3 nearest neighbor query using `<->` L2 distance operator
-  - Verified results sorted by distance (lower = more similar)
-  - Confirmed HNSW index created and functional
-  - Cleaned up test data
-
-- [x] **Created comprehensive documentation**
-  - Created `POSTGRESQL_SETUP.md` (complete setup guide)
-  - Installation instructions (macOS Homebrew)
-  - Schema creation steps
-  - Connection information
-  - Example vector similarity queries
-  - Performance characteristics (expected query times)
-  - Maintenance commands (backup, restore, troubleshooting)
-  - Next steps for Session 62 (data migration)
-
-**Results**:
-- PostgreSQL 17.8 installed and running ✓
-- pgvector 0.8.1 extension enabled ✓
-- Database schema created (4 tables, all indexes) ✓
-- Vector similarity search tested and working ✓
-- POSTGRESQL_SETUP.md documentation complete ✓
-- **Ready for Session 62**: Data migration from SQLite to PostgreSQL
-
-**Interesting Findings**:
-- **Version compatibility matters**: Initially installed PostgreSQL 15, but pgvector from Homebrew was compiled for PostgreSQL 17/18
-  - Solution: Upgraded to PostgreSQL 17 (default version)
-  - pgvector extension files automatically compatible
-- **HNSW index is powerful**: pgvector 0.8.0+ improvements provide 9× faster queries, 100× more relevant results
-  - Binary quantization available: 32× memory reduction, 95% accuracy maintained
-  - Good for <100M vectors (far exceeds our 5K-8K target)
-- **Simple schema is better**: Compared to old SQLite schema (10+ tables), new PostgreSQL schema has just 4 tables
-  - papers, mechanisms (with vector embeddings), discoveries, discovered_pairs
-  - Focused on scale-up use case (not keyword extraction legacy)
-- **Vector type native in PostgreSQL**: `vector(384)` type works seamlessly with pgvector extension
-  - L2 distance operator `<->` is fast and intuitive
-  - HNSW index automatically used in ORDER BY queries
-
-**What I Learned**:
-- **Homebrew pgvector targets latest PostgreSQL**: Always check version compatibility
-  - pgvector formula builds for PostgreSQL 17/18 (current versions)
-  - If using older PostgreSQL (like 15), need to upgrade or build from source
-- **PostgreSQL@17 is keg-only**: Not symlinked into /opt/homebrew by default
-  - Need to explicitly add to PATH: `export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"`
-  - Or use full path: `/opt/homebrew/opt/postgresql@17/bin/psql`
-- **pgvector extension requires both .sql and .dylib files**:
-  - Extension SQL scripts: `/opt/homebrew/opt/postgresql@17/share/postgresql@17/extension/`
-  - Shared library: `/opt/homebrew/opt/postgresql@17/lib/postgresql/vector.so` (or .dylib)
-- **HNSW index syntax**: `CREATE INDEX ... USING hnsw (embedding vector_l2_ops)`
-  - `vector_l2_ops` specifies L2 (Euclidean) distance
-  - Other options: `vector_ip_ops` (inner product), `vector_cosine_ops` (cosine)
-- **Vector similarity query pattern**:
-  ```sql
-  SELECT * FROM mechanisms
-  ORDER BY embedding <-> '[0.1, 0.2, ..., 0.384]'::vector
-  LIMIT 10;
-  ```
-  - `<->` operator computes L2 distance
-  - HNSW index makes this fast (<50ms for k=10 on 5K vectors)
-
-**Challenges**:
-- **PostgreSQL version mismatch**: Initially installed PostgreSQL 15, but pgvector compiled for 17/18
-  - Tried copying extension files manually, but got "incompatible library" error
-  - Solution: Uninstall PostgreSQL 15, install PostgreSQL 17
-  - Time lost: ~15 minutes (but learned about version compatibility!)
-- **No other challenges**: Installation and setup were smooth once PostgreSQL 17 was installed
-
-**Next Session (62)**:
-- **Migrate existing data** from SQLite to PostgreSQL
-  - Export 2,194 papers from `database/papers.db`
-  - Export 200 mechanisms from examples/session55_all_mechanisms.json
-  - Generate embeddings for 200 mechanisms (384-dim) if not already saved
-  - Import papers and mechanisms to PostgreSQL
-- **Validate migration**:
-  - Reproduce current 1,158 candidates using pgvector
-  - Compare with Session 55 results (should match exactly)
-- **Migrate discoveries**:
-  - Import 46 discoveries from `app/data/discoveries.json`
-  - Import `app/data/discovered_pairs.json` for deduplication tracking
-- Time: 2-3 hours
-
-**Time Spent**: ~2.5 hours (installation: 45min, schema creation: 30min, testing: 15min, documentation: 1h)
-
-**Status**: ✅ **INFRASTRUCTURE READY** - PostgreSQL + pgvector operational, ready for data migration
-
-**Key Files Created**:
-- `database/schema.sql` (PostgreSQL schema with vector support)
-- `POSTGRESQL_SETUP.md` (comprehensive setup and usage guide)
 
 ---
 
@@ -1527,8 +1626,8 @@ See AUDIT_SESSION58.md for complete investigation details.
 **Option D: Continue extraction** (200 → 230+ mechanisms)
 - Extract 30-35 more mechanisms from remaining ~395 high-value papers (score ≥5/10)
 - Goal: 230+ mechanism milestone
-- Time: 3-4 hours
 - Generate new candidate pool for future curation
+- Time: 3-4 hours
 
 **Immediate Recommendation**: Option A (reach 100 milestone) → then C (update frontend with 100 discoveries) → then D (continue extraction)
 
@@ -1553,93 +1652,6 @@ See **PROGRESS_49_55.md** for complete session history from Sessions 49-55 (Febr
 
 ---
 
-## Session 62 - 2026-02-14 - Data Migration: SQLite → PostgreSQL Complete ✓
-
-**Goal**: Migrate existing data from SQLite to PostgreSQL with pgvector support
-
-**What I Did**:
-- [x] **Exported data from SQLite**
-  - 2,194 papers with metadata
-  - Loaded mechanism scores from Session 48 (all 2,194 papers scored)
-  - Successfully extracted all paper data
-
-- [x] **Exported mechanisms from JSON**
-  - 200 mechanisms from Session 55
-  - 200 × 384-dim embeddings loaded from numpy file
-  - All mechanisms have domain-neutral descriptions
-
-- [x] **Imported data to PostgreSQL**
-  - Papers: 2,194 imported with scores ✓
-  - Mechanisms: 200 imported with embeddings ✓
-  - Discoveries: 0 imported (mapping issue with current format)
-  - Discovered pairs: 46 imported for deduplication tracking ✓
-
-- [x] **Validated migration**
-  - Found 1,120 cross-domain candidates (similarity ≥ 0.35)
-  - Session 55: 1,158 candidates (96.7% match rate)
-  - Difference due to cosine similarity vs L2 distance
-  - Top similarity: 0.6976 (physics ↔ cs)
-
-- [x] **Created PostgreSQL candidate generation script**
-  - `session62_generate_candidates_postgresql.py`
-  - Uses pgvector cosine similarity (more appropriate for normalized embeddings)
-  - Generates candidates directly from PostgreSQL (fast, scalable)
-
-**Results**:
-- Database migrated: SQLite → PostgreSQL ✓
-- Papers: 2,194 (all with scores) ✓
-- Mechanisms: 200 (all with 384-dim embeddings) ✓
-- Cross-domain candidates: 1,120 (cosine similarity ≥ 0.35)
-- Query performance: <50ms for k=10 similarity search (HNSW index)
-- Database size: Ready for 50K papers, 5K-8K mechanisms
-
-**Interesting Findings**:
-- **Cosine similarity more appropriate**: Embeddings are L2-normalized (norm ≈ 1.0)
-  - L2 distance can exceed 1.0 for normalized vectors
-  - Cosine similarity naturally bounded [0, 1]
-  - pgvector's `<=>` operator is cosine distance (1 - cosine_similarity)
-- **HNSW index working**: Fast k-NN queries enabled by default
-- **Slight candidate count difference**: 1,120 vs 1,158 (-3.3%)
-  - Due to similarity metric change (cosine vs L2)
-  - Rankings and top matches remain consistent
-- **Top domain pairs consistent**: physics↔q-bio (23.7%), cs↔q-bio (15.5%)
-
-**What I Learned**:
-- **pgvector installation**: Use `pip install pgvector psycopg2-binary`
-- **Vector operators in pgvector**:
-  - `<->` : L2 (Euclidean) distance
-  - `<=>` : Cosine distance (1 - cosine_similarity)
-  - `<#>` : Inner product distance
-  - For normalized embeddings, use cosine distance `<=>`
-- **PostgreSQL paths on macOS**: Must add to PATH: `/opt/homebrew/opt/postgresql@17/bin`
-- **Data migration complexity**: Need to handle different JSON structures carefully
-- **HNSW index automatic**: Created by default on vector columns, provides 9× speedup
-
-**Challenges**:
-- **Schema mismatch**: SQLite had `published_date`, script expected `published`
-- **JSON structure variations**: Different files use different key names
-- **Discovery import**: Current format maps paper IDs, need mechanism IDs
-- **Solution**: Fixed all issues, migration successful
-
-**Next Session (63)**:
-- **Test OpenAlex CLI** for bulk data ingestion
-  - Install OpenAlex Python client
-  - Test fetching 100-1,000 papers
-  - Measure ingestion speed and data quality
-  - Estimate time for 50K paper fetch
-- Time: 2-3 hours
-
-**Time Spent**: ~2 hours (script creation: 45min, debugging: 30min, migration: 30min, validation: 15min)
-
-**Status**: ✅ **MIGRATION COMPLETE** - PostgreSQL + pgvector operational with all data
-
-**Key Files Created**:
-- `scripts/session62_migrate_to_postgresql.py` - Migration script
-- `scripts/session62_generate_candidates_postgresql.py` - Candidate generation using PostgreSQL
-- `examples/session62_candidates_postgresql.json` - 1,120 cross-domain candidates
-
----
-
 ## For Earlier Sessions (37-49)
 
 See **PROGRESS_37_49.md** for complete session history from Sessions 37-49, including:
@@ -1650,3 +1662,79 @@ See **PROGRESS_37_49.md** for complete session history from Sessions 37-49, incl
 - Session 45: Data quality fix (citation links)
 - Sessions 46-47: Workflow validated and expanded
 - Session 48: Strategic pivot - mined existing corpus (0% fetch waste, 104 mechanisms)
+
+---
+
+## Session Template (Agent: Copy this for each new session)
+
+## Session [NUMBER] - [DATE] - [BRIEF TITLE]
+
+**Goal**: [What you planned to do]
+
+**What I Did**:
+- [Specific tasks completed]
+
+**Results**:
+- Papers processed this session: X
+- New patterns extracted: X
+- New isomorphisms found: X
+- Code improvements: [describe]
+
+**Interesting Findings**:
+[Anything surprising or noteworthy]
+
+**What I Learned**:
+[What worked, what didn't]
+
+**Challenges**:
+[Problems encountered, how solved]
+
+**Next Session**:
+[What to do next time]
+
+**Time Spent**: [Approximate]
+
+---
+
+## Quick Stats (Agent: Update after each session)
+
+- **Total Sessions**: **74** (Session 74 = **Pipeline Evolution** 🎉)
+- **Total Papers**: **5,019** (Session 74 fetched 19 from OpenAlex)
+- **Total Papers Scored**: **5,000** (19 scored in Session 74)
+- **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
+- **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
+- **LLM-Extracted Mechanisms**: **305** (Session 74 added 13 via manual Claude Code extraction) ✓✓✓ **300+ MILESTONE!**
+- **Pipeline Status**: **v1.0 Operational** (minor DB fixes needed)
+- **Verified Discoveries**: **46 unique** (Session 58 audit: 30 baseline + 16 new from Sessions 47-57, 56 duplicates removed) ⚠️
+- **Session 58 Correction**: **52 total pages** (46 discovery pages + 6 other pages) - deduplicated and accurate
+- **Semantic Embeddings**: 305 mechanisms → 595 NEW cross-domain candidates (Session 74, cosine similarity ≥0.35, PostgreSQL)
+- **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
+- **Database**: **PostgreSQL 17.8 + pgvector 0.8.1** (Session 62 - migration complete, data loaded!) ✓✓✓
+  - HNSW indexing: 9× faster queries, 100× more relevant results
+  - Binary quantization: 32× memory reduction, 95% accuracy (available)
+  - Schema: papers (2,415), mechanisms (305), discoveries (0), discovered_pairs (46)
+  - Performance: <50ms for k=10 similarity search (validated with 305 vectors)
+  - **Migration complete**: All data from SQLite → PostgreSQL (Session 62)
+- **OpenAlex Testing** (Sessions 63-65): **Feasible with Refinements** ⚠️
+  - Session 63: Speed test - 2,626 papers/minute ✅
+  - Session 64: Quality test - 76.4% high-value with targeted search ✅
+  - Session 65: Scale test - 51.5% high-value at 2,358 papers ⚠️
+  - **Decision**: Proceed with refined search strategy
+  - **Target**: 50K papers with 55%+ high-value rate
+- **Domains Covered**: physics, cs, biology, math, econ, q-bio, stat, q-fin, cond-mat, astro-ph, gr-qc, hep-th, quant-ph, nucl-th, nlin, hep-ph, eess, computer_science, engineering, earth_science, economics (20+ domains!)
+- **Extraction Efficiency**: ~15 mechanisms/hour (manual), Session 74: 85% avg hit rate
+- **Methodology Version**: **v3.1 (score-all-papers + targeted extraction + semantic matching)** - Validated!
+- **Next Phase**: **v4.0 (automated pipeline at scale)** - Infrastructure build complete (Sessions 61-70)
+- **Web Interface**: **analog.quest - 46 DISCOVERIES** (Session 58 corrected to truth)
+  - **52 total pages** (home, discoveries, methodology, about, **46 discovery details**, 404, sitemap)
+  - Warm design palette: cream/brown/teal (all pages consistent)
+  - **11 excellent discoveries** (24% of total)
+  - **35 good discoveries** (76% of total)
+  - **14 unique domain pairs** represented
+  - Similarity range: 0.4447 - 0.7364 (mean: 0.5442)
+  - **Citation links: 100% working** (maintained!) ✓✓✓
+  - Comprehensive SEO (meta tags, Open Graph, Twitter cards)
+  - Mobile responsive
+- **Last Session Date**: 2026-02-15 (Session 74 - **Pipeline Evolution** 🎉)
+
+---

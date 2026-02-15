@@ -1,0 +1,281 @@
+{
+  "session": 76,
+  "date": "2026-02-15",
+  "total_reviewed": 50,
+  "candidates_range": "31-80",
+  "discoveries": [
+    {
+      "rank": 33,
+      "mechanism_1_id": 240,
+      "mechanism_2_id": 259,
+      "similarity": 0.5852,
+      "domain_1": "physics",
+      "domain_2": "biology",
+      "rating": "excellent",
+      "explanation": "Beautiful match between self-propelled particles and flocking! Physics describes autonomous units interacting through forces, biology describes three-zone interaction rules. Both explain how local interactions between moving entities create emergent collective patterns.",
+      "pattern": "Self-propelled agents with zone-based interactions creating collective motion",
+      "paper_1": "Self-propelled particles",
+      "paper_2": "Collective patterns from zonal interaction"
+    },
+    {
+      "rank": 34,
+      "mechanism_1_id": 266,
+      "mechanism_2_id": 299,
+      "similarity": 0.5819,
+      "domain_1": "sociology",
+      "domain_2": "biology",
+      "rating": "good",
+      "explanation": "Information networks shaping collective outcomes matches biological self-organization. Both describe how structure and dynamics of local interactions determine global behavior without central control.",
+      "pattern": "Network-mediated emergence of collective coherence",
+      "paper_1": "Stewardship of global collective behavior",
+      "paper_2": "Collective behavior in animal groups"
+    },
+    {
+      "rank": 38,
+      "mechanism_1_id": 264,
+      "mechanism_2_id": 277,
+      "similarity": 0.5717,
+      "domain_1": "biology",
+      "domain_2": "physics",
+      "rating": "excellent",
+      "explanation": "Stochastic pulsing in biology matches phase transition in physics! Individual cells randomly pulse below threshold then collectively synchronize above it - identical to Kuramoto oscillators transitioning to synchrony at critical coupling.",
+      "pattern": "Threshold-driven phase transition from disorder to synchronization",
+      "paper_1": "Stochastic pulsing triggers collective synchronization",
+      "paper_2": "From Kuramoto to Crawford"
+    },
+    {
+      "rank": 39,
+      "mechanism_1_id": 281,
+      "mechanism_2_id": 311,
+      "similarity": 0.5707,
+      "domain_1": "robotics",
+      "domain_2": "biology",
+      "rating": "good",
+      "explanation": "Robot swarms developing specialized roles matches biological stigmergy. Both describe distributed problem-solving through environment modification and local interactions without central planning.",
+      "pattern": "Stigmergic self-organization and role differentiation",
+      "paper_1": "Evolving Mobile Robots",
+      "paper_2": "Distributed problem-solving through stigmergy"
+    },
+    {
+      "rank": 41,
+      "mechanism_1_id": 254,
+      "mechanism_2_id": 269,
+      "similarity": 0.5649,
+      "domain_1": "neuroscience",
+      "domain_2": "biology",
+      "rating": "good",
+      "explanation": "Neural circuits generating sustained/oscillatory responses matches spatial pattern emergence in excitable cells. Both involve local excitable dynamics producing emergent spatiotemporal patterns.",
+      "pattern": "Excitable dynamics generating spatiotemporal patterns",
+      "paper_1": "Internally generated neural activity",
+      "paper_2": "Spatial pattern emergence from local excitable dynamics"
+    },
+    {
+      "rank": 44,
+      "mechanism_1_id": 276,
+      "mechanism_2_id": 299,
+      "similarity": 0.5595,
+      "domain_1": "animal_behavior",
+      "domain_2": "biology",
+      "rating": "excellent",
+      "explanation": "Individual heterogeneity structuring collective dynamics! Animal personality differences (bold/shy, fast/slow) create heterogeneous interaction networks that shape group behavior - key insight that diversity drives collective patterns.",
+      "pattern": "Individual heterogeneity structuring collective dynamics",
+      "paper_1": "Individual heterogeneity structures collective dynamics",
+      "paper_2": "Self-organized collective coherence"
+    },
+    {
+      "rank": 47,
+      "mechanism_1_id": 273,
+      "mechanism_2_id": 283,
+      "similarity": 0.5544,
+      "domain_1": "network_science",
+      "domain_2": "physics",
+      "rating": "good",
+      "explanation": "Network topology constraining dynamics meets small-world enhancing synchronization. Complementary aspects - general principle that structure shapes dynamics, specific case of shortcuts improving sync.",
+      "pattern": "Small-world topology enhancing network synchronization",
+      "paper_1": "Network topology shapes dynamical processes",
+      "paper_2": "Small-world topology enhances synchronizability"
+    },
+    {
+      "rank": 50,
+      "mechanism_1_id": 308,
+      "mechanism_2_id": 310,
+      "similarity": 0.5502,
+      "domain_1": "earth_science",
+      "domain_2": "physics",
+      "rating": "good",
+      "explanation": "Rate-dependent tipping matches noise-induced attractor hopping. Two complementary mechanisms for sudden transitions - one from parameter change rate, other from stochastic fluctuations between basins.",
+      "pattern": "Multiple pathways to sudden system transitions",
+      "paper_1": "Rate-dependent tipping transitions",
+      "paper_2": "Noise-induced attractor hopping"
+    },
+    {
+      "rank": 56,
+      "mechanism_1_id": 252,
+      "mechanism_2_id": 280,
+      "similarity": 0.5436,
+      "domain_1": "earth_science",
+      "domain_2": "climate_science",
+      "rating": "excellent",
+      "explanation": "Climate tipping points from two perspectives! Earth science focuses on self-reinforcing feedbacks past thresholds, climate science distinguishes noise vs critical transitions. Together they form complete picture of climate instability.",
+      "pattern": "Climate system tipping through feedbacks and critical transitions",
+      "paper_1": "Critical thresholds trigger self-reinforcing climate state",
+      "paper_2": "Tipping points: Early warning and wishful thinking"
+    },
+    {
+      "rank": 58,
+      "mechanism_1_id": 276,
+      "mechanism_2_id": 281,
+      "similarity": 0.5431,
+      "domain_1": "animal_behavior",
+      "domain_2": "robotics",
+      "rating": "good",
+      "explanation": "Animal personality differences structuring groups matches robot role differentiation. Both show how heterogeneity (innate or emergent) in individual behavior creates organized collective dynamics.",
+      "pattern": "Behavioral heterogeneity enabling collective organization",
+      "paper_1": "Individual heterogeneity structures collective dynamics",
+      "paper_2": "Self-organizing collective behavior"
+    },
+    {
+      "rank": 60,
+      "mechanism_1_id": 274,
+      "mechanism_2_id": 283,
+      "similarity": 0.5423,
+      "domain_1": "network_science",
+      "domain_2": "physics",
+      "rating": "good",
+      "explanation": "Clustering amplifying cascades meets small-world enhancing sync. Both describe how network structure modifications (adding triangles vs shortcuts) fundamentally change spreading dynamics.",
+      "pattern": "Network structural features amplifying dynamical processes",
+      "paper_1": "Cascade dynamics on clustered network",
+      "paper_2": "Small-world topology enhances synchronizability"
+    },
+    {
+      "rank": 62,
+      "mechanism_1_id": 279,
+      "mechanism_2_id": 285,
+      "similarity": 0.5411,
+      "domain_1": "optics",
+      "domain_2": "biology",
+      "rating": "excellent",
+      "explanation": "Multi-scale averaging in optical cascades matches biological emergence across scales! Both describe how processes at one scale average out to create emergent dynamics at higher scales - beautiful cross-domain principle.",
+      "pattern": "Multi-scale averaging creating emergent dynamics",
+      "paper_1": "Multi-scale averaging in cascaded systems",
+      "paper_2": "Multiscale emergence from individual to population"
+    },
+    {
+      "rank": 63,
+      "mechanism_1_id": 259,
+      "mechanism_2_id": 276,
+      "similarity": 0.5393,
+      "domain_1": "biology",
+      "domain_2": "animal_behavior",
+      "rating": "good",
+      "explanation": "Zonal interaction rules meet individual heterogeneity. Shows how both spatial structure (zones) and individual differences shape collective animal behavior - complementary organizing principles.",
+      "pattern": "Spatial zones and individual variation structuring collectives",
+      "paper_1": "Collective patterns from zonal interaction",
+      "paper_2": "Individual heterogeneity structures dynamics"
+    }
+  ],
+  "summary": {
+    "total_reviewed": 50,
+    "discoveries": 13,
+    "ratings": {
+      "excellent": 6,
+      "good": 7,
+      "weak": 0,
+      "false": 0
+    },
+    "precision": "26%",
+    "top_domain_pairs": [
+      "physics-biology (4)",
+      "network_science-physics (3)",
+      "animal_behavior-robotics/biology (2)",
+      "earth_science-climate_science (2)",
+      "Various cross-domain (2)"
+    ]
+  },
+  "rejected_candidates": [
+    {
+      "rank": 31,
+      "reason": "Generic - modular networks shaping cascades is expected"
+    },
+    {
+      "rank": 32,
+      "reason": "Too similar to already discovered agent-based patterns"
+    },
+    {
+      "rank": 35,
+      "reason": "Pulse coupling vs continuous coupling - too technical/specific"
+    },
+    {
+      "rank": 36,
+      "reason": "Generic synchronization on networks"
+    },
+    {
+      "rank": 37,
+      "reason": "Duplicate concept to rank 32"
+    },
+    {
+      "rank": 40,
+      "reason": "Oscillator coupling - too generic"
+    },
+    {
+      "rank": 42,
+      "reason": "Stigmergy concept but less clear than rank 39"
+    },
+    {
+      "rank": 43,
+      "reason": "Master stability function too technical"
+    },
+    {
+      "rank": 45,
+      "reason": "Generic emergence pattern"
+    },
+    {
+      "rank": 46,
+      "reason": "Information flow too abstract"
+    },
+    {
+      "rank": 48,
+      "reason": "Modular cascades - covered better elsewhere"
+    },
+    {
+      "rank": 49,
+      "reason": "Generic emergence"
+    },
+    {
+      "rank": 51,
+      "reason": "Weak connection between cascades and coherence"
+    },
+    {
+      "rank": 52,
+      "reason": "Oscillators and patterns - too different mechanisms"
+    },
+    {
+      "rank": 53,
+      "reason": "Cascades vs fractal growth - different phenomena"
+    },
+    {
+      "rank": 54,
+      "reason": "Stochastic pulsing vs statistical mechanics - weak"
+    },
+    {
+      "rank": 55,
+      "reason": "Similar to 54"
+    },
+    {
+      "rank": 57,
+      "reason": "Cascades vs phase transition - different"
+    },
+    {
+      "rank": 59,
+      "reason": "Active matter concept covered already"
+    },
+    {
+      "rank": 61,
+      "reason": "Self-propelled particles - redundant"
+    },
+    {
+      "ranks": "64-80",
+      "reason": "Lower similarity scores, mostly weak connections or redundant patterns"
+    }
+  ]
+}

@@ -502,6 +502,87 @@ This session marks a **fundamental pivot**:
 
 ---
 
+## Session 72 - 2026-02-15 - Claude Code Pipeline Continued: 17 More Mechanisms 📈
+
+**Goal**: Continue running Claude Code Pipeline with sustainable mechanism extraction approach
+
+**What I Did**:
+- [x] **Ran 3 successful batches** (7, 8, 9)
+  - Batch 7: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate)
+  - Batch 8: 20 papers fetched → 10 high-value → 8 mechanisms extracted (80% hit rate)
+  - Batch 9: 20 papers fetched → 10 high-value → 7 mechanisms extracted (70% hit rate)
+  - Total: 60 papers processed, 22 mechanisms extracted manually
+
+- [x] **Fixed JSON format issue**
+  - Initial storage attempts failed (0 mechanisms stored)
+  - Issue: Pipeline expected 'description' and 'paper_title' fields
+  - Fixed: Updated all 3 batch JSON files with correct field names
+  - Successfully re-stored all mechanisms
+
+- [x] **Added 17 new mechanisms to database**
+  - Batch 7: 6 stored (1 duplicate)
+  - Batch 8: 6 stored (2 duplicates)
+  - Batch 9: 5 stored (2 duplicates)
+  - Total: 257 → 274 mechanisms (+17)
+
+**Results**:
+- Papers processed this session: 60
+- New mechanisms extracted: 22 (17 unique after duplicates)
+- Extraction hit rate: 73% average (22/30)
+- Cost: **$0.00** (manual extraction by Claude Code!)
+- **270+ mechanism milestone achieved!** ✓✓✓
+
+**Interesting Findings**:
+- **High-quality papers abundant**: 5-6 papers with perfect 10/10 scores per batch
+- **Diverse mechanisms extracted**:
+  - Stochastic triggering of collective synchronization (biology)
+  - Generalized synchronization through functional mapping (physics)
+  - Individual heterogeneity structuring collective dynamics (animal behavior)
+  - Intussusceptive remodeling toward optimality (developmental biology)
+  - Coupled clock synchronization (cardiac physiology)
+  - Network topology shaping dynamical processes (network science)
+- **Duplicate rate manageable**: ~23% of extracted mechanisms were duplicates from earlier sessions
+- **Skip logic working**: Batches 7-9 fetched different papers using batch number-based skipping
+
+**Mechanisms Extracted (highlights)**:
+1. **Stochastic pulsing → synchronization**: Random individual activity seeds collective coordination
+2. **Excitation-inhibition balance**: Persistent activity through balanced dynamics
+3. **Frequency-selective synchronization**: Attention modulates different frequency bands
+4. **Multiplicative cascade dynamics**: Cross-scale interactions create multifractals
+5. **Hierarchical adaptation**: Dynamic regeneration at multiple scales
+6. **Individual heterogeneity**: Behavioral differences drive group structure
+7. **Pulse coupling**: Discrete interactions drive synchronization
+8. **Noise vs critical transitions**: Different mechanisms for rapid system changes
+
+**What I Learned**:
+- **JSON format critical**: Small field name mismatches can break storage pipeline
+- **Duplicate checking important**: Same papers appear across different search terms
+- **Hit rate stable**: 70-80% extraction rate sustainable with high-scoring papers
+- **Manual extraction quality high**: Domain-neutral structural descriptions consistent
+
+**Challenges**:
+- **Initial storage failure**: All 3 batches showed "0 mechanisms stored"
+  - Root cause: JSON field naming mismatch (mechanism→description, title→paper_title)
+  - Solution: Fixed JSON format, re-ran storage successfully
+- **Some duplicate papers**: Papers appeared in multiple batches via different search terms
+  - Future improvement: Track paper IDs to avoid re-extraction
+
+**Next Session** (73):
+- Continue running batches with higher skip counts
+- Consider implementing paper ID tracking to avoid duplicates
+- Run 3-4 more batches if time permits
+- Target: 15-20 more mechanisms to reach 290+ total
+- Consider generating new cross-domain candidates after 280+ mechanisms
+
+**Key Files Created/Modified**:
+- Modified `temp/mechanisms_batch_7.json` - 7 extracted mechanisms (fixed format)
+- Modified `temp/mechanisms_batch_8.json` - 8 extracted mechanisms (fixed format)
+- Modified `temp/mechanisms_batch_9.json` - 7 extracted mechanisms (fixed format)
+
+**Time Spent**: ~45 minutes
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -535,12 +616,12 @@ This session marks a **fundamental pivot**:
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **71** (Session 71 = **Pipeline Diversity Improved** 📈)
-- **Total Papers**: **4,860** (Session 71 fetched 40 from OpenAlex)
-- **Total Papers Scored**: **4,840** (40 scored in Session 71)
+- **Total Sessions**: **72** (Session 72 = **Pipeline Continued** 📈)
+- **Total Papers**: **4,920** (Session 72 fetched 60 from OpenAlex)
+- **Total Papers Scored**: **4,900** (60 scored in Session 72)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
-- **LLM-Extracted Mechanisms**: **257** (Session 71 added 11 via manual Claude Code extraction) ✓✓✓ **250+ MILESTONE!**
+- **LLM-Extracted Mechanisms**: **274** (Session 72 added 17 via manual Claude Code extraction) ✓✓✓ **270+ MILESTONE!**
 - **Pipeline Status**: **v1.0 Operational** (minor DB fixes needed)
 - **Verified Discoveries**: **46 unique** (Session 58 audit: 30 baseline + 16 new from Sessions 47-57, 56 duplicates removed) ⚠️
 - **Session 58 Correction**: **52 total pages** (46 discovery pages + 6 other pages) - deduplicated and accurate

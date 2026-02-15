@@ -4,27 +4,28 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 72 Goals - CONTINUE CLAUDE CODE PIPELINE 🚀
+## Session 73 Goals - CONTINUE CLAUDE CODE PIPELINE 🚀
 
 **Mission**: Continue using the Claude Code Pipeline for sustainable, free mechanism extraction!
 
 ### Context from Recent Sessions:
 - Session 70: Pipeline operational, 13 mechanisms extracted
 - Session 71: Improved diversity with skip logic, 11 mechanisms extracted
-- **Current total**: 257 mechanisms (250+ milestone achieved!)
-- **Hit rate**: 50-60% consistently
+- Session 72: Pipeline continued, 17 mechanisms extracted (fixed JSON format issue)
+- **Current total**: 274 mechanisms (270+ milestone achieved!)
+- **Hit rate**: 70-80% consistently
 - **Cost**: $0 (you do the extraction!)
 
-### Primary Goals for Session 72
+### Primary Goals for Session 73
 
 1. **Continue Running Batches** (Main Work)
    ```bash
-   # Start with batch 7 (or check what's the next batch)
-   python3 scripts/claude_code_pipeline.py --batch 7
-   # Extract mechanisms manually from temp/extraction_batch_7.json
-   # Save to temp/mechanisms_batch_7.json
-   python3 scripts/claude_code_pipeline.py --store 7
-   # Repeat for batches 8, 9, 10...
+   # Start with batch 10 (continuing from Session 72)
+   python3 scripts/claude_code_pipeline.py --batch 10
+   # Extract mechanisms manually from temp/extraction_batch_10.json
+   # Save to temp/mechanisms_batch_10.json
+   python3 scripts/claude_code_pipeline.py --store 10
+   # Repeat for batches 11, 12, 13...
    ```
 
 2. **Watch for Duplicates**
@@ -39,9 +40,9 @@ Current session goals and immediate priorities.
    - Save to temp/mechanisms_batch_N.json
    - Target: 50-60% hit rate is realistic and sustainable
 
-4. **Session 72 Targets**
+4. **Session 73 Targets**
    - Run 3-4 batches if time permits
-   - Extract 15-20 mechanisms to reach 270-280 total
+   - Extract 15-20 mechanisms to reach 290-295 total
    - Consider generating new cross-domain candidates after 275 mechanisms
    - Update PROGRESS.md with results
 
@@ -92,10 +93,24 @@ Current session goals and immediate priorities.
 
 ### Important Technical Notes
 
+**JSON Format Requirements** (Fixed in Session 72):
+- Mechanisms must have 'description' field (not 'mechanism')
+- Mechanisms must have 'paper_title' field (not 'title')
+- Example format:
+  ```json
+  {
+    "paper_id": "https://openalex.org/W...",
+    "paper_title": "Paper Title Here",
+    "description": "Short mechanism name",
+    "structural_description": "Full structural description...",
+    "domain": "biology"
+  }
+  ```
+
 **Pipeline Skip Logic** (Added in Session 71):
 - The pipeline skips `(batch_num - 1) * 2` papers per search term
 - This ensures each batch gets different papers
-- Batch 7 will skip 12 papers, Batch 8 will skip 14, etc.
+- Batch 10 will skip 18 papers, Batch 11 will skip 20, etc.
 - This prevents fetching the same papers repeatedly
 
 **Database Schema** (Fixed in Session 70):
@@ -114,6 +129,13 @@ Current session goals and immediate priorities.
 ---
 
 ## Previous Session Reference
+
+### Session 72 (2026-02-15) - **COMPLETED** ✓✓✓
+**Pipeline Continued Successfully**
+- Fixed JSON format issue (description/paper_title fields)
+- Extracted 22 mechanisms from 3 batches (17 unique stored)
+- Total mechanisms: 274 (270+ milestone!)
+- Batches 7-9 successful (73% average hit rate)
 
 ### Session 71 (2026-02-15) - **COMPLETED** ✓✓✓
 **Pipeline Diversity Improved**

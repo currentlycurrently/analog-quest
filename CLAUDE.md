@@ -38,14 +38,15 @@ Over 6 months, build analog.quest:
 5. Update all three files before session ends
 6. Commit your changes
 
-### Daily Work Pattern (Updated Session 69+):
-**NEW: Sustainable Pipeline Built!**
-- Run `python3 scripts/sustainable_pipeline.py` to process 100-200 papers
-- Pipeline handles: Fetch → Score → Extract → Embed → Store → Candidates
-- See PIPELINE_DESIGN.md for full documentation
-- Configuration in config/pipeline_config.yaml
-- Metrics saved to pipeline_metrics.json
-- Each session adds value incrementally (no racing!)
+### Daily Work Pattern (Updated Session 70+):
+**NEW: Claude Code Pipeline - YOU are the LLM!**
+- Run `python3 scripts/claude_code_pipeline.py --batch N` (fetches 20 papers)
+- YOU manually extract mechanisms (60-90% hit rate!)
+- Save to temp/mechanisms_batch_N.json
+- Run `python3 scripts/claude_code_pipeline.py --store N` (saves to DB)
+- Repeat 3-5 times per session
+- See CLAUDE_CODE_WORKFLOW.md for details
+- **Cost: $0** (you do extraction instead of paying for API!)
 
 **Old Manual Pattern** (Sessions 1-68):
 - Fetch 10-20 papers from arXiv (start with physics/cs, expand later)

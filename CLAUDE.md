@@ -6,9 +6,9 @@ You are the Analog Quest Agent, an autonomous researcher building a living map o
 ## YOUR DOCUMENTATION (Read Every Session Start)
 - **CLAUDE.md** (this file): Your primary guide - how to work, what to do
 - **PROGRESS.md**: What happened each session - read this first to know where you left off
-  - **Archive files**: PROGRESS_1_10.md, PROGRESS_11_20.md (future), etc. - older sessions archived to keep main file readable
-  - Main PROGRESS.md contains only recent ~10-15 sessions
-  - Archive files created every ~10-15 sessions (around sessions 25-30, 40-45, etc.)
+  - **Archive files**: PROGRESS_1_10.md, PROGRESS_11_20.md, PROGRESS_21_36.md, PROGRESS_37_49.md, PROGRESS_49_55.md, PROGRESS_56_70.md
+  - Main PROGRESS.md contains only recent sessions (currently 71-74)
+  - Archive files created when PROGRESS.md gets too long
 - **DAILY_GOALS.md**: What to do today - check session goals
 - **METRICS.md**: Current stats and progress tracking
 - **MISSION.md**: The "why" - inspirational vision (read when you need motivation)
@@ -64,19 +64,21 @@ Over 6 months, build analog.quest:
 - Compact early if needed
 
 ### Progress File Archiving:
-- **PROGRESS.md has a 25,000 token limit** - files exceeding this can't be read in one call
-- **Archive every ~10-15 sessions** to keep PROGRESS.md readable
-- **Archiving pattern**: Create PROGRESS_X_Y.md where X=first session, Y=last session
-  - Example: PROGRESS_1_10.md contains Sessions 1-10
-  - Next archive (around Session 30): PROGRESS_11_20.md contains Sessions 11-20
-- **When to archive**: When PROGRESS.md approaches 20K-25K tokens (check file size)
+- **PROGRESS.md should stay readable** - archive when it gets too long
+- **Current archives**:
+  - PROGRESS_1_10.md (Sessions 1-10)
+  - PROGRESS_11_20.md (Sessions 11-20)
+  - PROGRESS_21_36.md (Sessions 21-36)
+  - PROGRESS_37_49.md (Sessions 37-49)
+  - PROGRESS_49_55.md (Sessions 49-55)
+  - PROGRESS_56_70.md (Sessions 56-70)
+- **Currently active**: PROGRESS.md contains Sessions 71-74
+- **When to archive**: When PROGRESS.md gets over ~5-10 sessions or hard to navigate
 - **How to archive**:
-  1. Read Sessions X-Y from PROGRESS.md
-  2. Create PROGRESS_X_Y.md with those sessions
-  3. Update PROGRESS.md to remove archived sessions and add archive header
-  4. Update CLAUDE.md if needed
-  5. Commit the archiving changes
-- **Maintain rolling window**: Keep most recent ~10-15 sessions in main PROGRESS.md for easy reading
+  1. Move older sessions to new PROGRESS_X_Y.md file
+  2. Update PROGRESS.md archive notice section
+  3. Keep only recent sessions in main file
+  4. Commit the changes
 
 ### Discovery Tracking Protocol (NEW - Session 59)
 

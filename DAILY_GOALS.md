@@ -4,40 +4,45 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 70 Goals - RUN SUSTAINABLE PIPELINE 🚀
+## Session 70 Goals - RUN CLAUDE CODE PIPELINE 🚀
 
-**Mission**: Fix database issues and run the pipeline for real corpus growth.
+**Mission**: Use the NEW Claude Code Pipeline that leverages YOU (the agent) for free extraction!
 
-### Context: Pipeline is Built, Time to Use It
-- Session 69 built the sustainable pipeline
-- Minor database fixes needed (unique constraints)
-- LLM integration needs actual API (currently simulated)
-- Ready to begin continuous corpus growth
-- No rushing - steady, sustainable progress
+### Context: Better Approach Discovered!
+- Session 69 built pipeline but wanted external LLM API
+- **NEW INSIGHT**: Why pay for API when Claude Code agents can extract for FREE?
+- **NEW SCRIPT**: `claude_code_pipeline.py` optimized for Claude Code agents
+- You ARE the LLM - do the extraction yourself!
+- Run multiple small batches per session
 
 ### Primary Goals
 
-1. **Fix Database Schema**
+1. **Fix Database Schema** (Quick)
    - Add UNIQUE constraint to papers.title
    - Test ON CONFLICT clause works properly
    - Verify storage phase completes without errors
 
-2. **Implement Actual LLM Extraction** (Optional)
-   - If API key available: Use Claude Haiku Standard
-   - If not: Continue with simulation for now
-   - Target: 20-30% extraction rate from high-value papers
+2. **Run Multiple Batches** (Main Work)
+   ```bash
+   # Run 3-5 batches in the session
+   python3 scripts/claude_code_pipeline.py --batch 1
+   # Extract mechanisms manually from temp/extraction_batch_1.json
+   # Save to temp/mechanisms_batch_1.json
+   python3 scripts/claude_code_pipeline.py --store 1
+   # Repeat for batches 2, 3, 4...
+   ```
 
-3. **Run Pipeline with 100-200 Papers**
-   - Use sustainable_pipeline.py
-   - Monitor all phases for issues
-   - Track metrics at each stage
-   - Save checkpoint for resumability
+3. **Manual Extraction** (Your Key Role!)
+   - Read papers from temp/extraction_batch_N.json
+   - Extract mechanisms with domain-neutral descriptions
+   - Save to temp/mechanisms_batch_N.json
+   - Target: 60-80% hit rate on high-value papers
 
-4. **Begin Sustainable Growth**
-   - Add 100-200 papers to corpus
-   - Extract 20-40 mechanisms (if LLM working)
-   - Generate new cross-domain candidates
-   - Update PostgreSQL database
+4. **Achieve Sustainable Growth**
+   - Process 60-100 papers across 3-5 batches
+   - Extract 20-30+ mechanisms manually
+   - All FREE (no API costs!)
+   - Higher quality than automated extraction
 
 ### Quick Start for New Agent
 

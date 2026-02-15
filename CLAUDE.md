@@ -38,7 +38,16 @@ Over 6 months, build analog.quest:
 5. Update all three files before session ends
 6. Commit your changes
 
-### Daily Work Pattern:
+### Daily Work Pattern (Updated Session 69+):
+**NEW: Sustainable Pipeline Built!**
+- Run `python3 scripts/sustainable_pipeline.py` to process 100-200 papers
+- Pipeline handles: Fetch → Score → Extract → Embed → Store → Candidates
+- See PIPELINE_DESIGN.md for full documentation
+- Configuration in config/pipeline_config.yaml
+- Metrics saved to pipeline_metrics.json
+- Each session adds value incrementally (no racing!)
+
+**Old Manual Pattern** (Sessions 1-68):
 - Fetch 10-20 papers from arXiv (start with physics/cs, expand later)
 - Extract patterns using NLP
 - Store patterns in database/papers.db

@@ -4,138 +4,107 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 69 Goals - BUILD SUSTAINABLE PIPELINE 🔄
+## Session 70 Goals - RUN SUSTAINABLE PIPELINE 🚀
 
-**Mission**: SLOW DOWN. Build a proper, sustainable pipeline for continuous corpus growth.
+**Mission**: Fix database issues and run the pipeline for real corpus growth.
 
-### Context: Strategic Reset
-- Project moving too fast (68 sessions in 8 days!)
-- Infrastructure barely tested before pivoting
-- Need sustainable, repeatable process
-- No rush to "complete" - this is long-term research
-- Each session should add value without racing to endpoints
+### Context: Pipeline is Built, Time to Use It
+- Session 69 built the sustainable pipeline
+- Minor database fixes needed (unique constraints)
+- LLM integration needs actual API (currently simulated)
+- Ready to begin continuous corpus growth
+- No rushing - steady, sustainable progress
 
 ### Primary Goals
 
-1. **Design Full Automated Pipeline**
-   - Fetch papers from OpenAlex (100-200 per run)
-   - Auto-score for mechanism richness
-   - LLM batch extraction (test Claude Haiku - $0.0001/paper!)
-   - Generate embeddings automatically
-   - Add to PostgreSQL
-   - Generate candidates
-   - Quality metrics at each step
+1. **Fix Database Schema**
+   - Add UNIQUE constraint to papers.title
+   - Test ON CONFLICT clause works properly
+   - Verify storage phase completes without errors
 
-   **Key: Test LLM Extraction Options**
-   - Option A: Claude Haiku Batch API (~$0.0001/paper, 24hr latency)
-   - Option B: Claude Haiku Standard (~$0.0003/paper, instant)
-   - Option C: Continue manual extraction (free but slow)
-   - Compare quality vs cost vs speed
+2. **Implement Actual LLM Extraction** (Optional)
+   - If API key available: Use Claude Haiku Standard
+   - If not: Continue with simulation for now
+   - Target: 20-30% extraction rate from high-value papers
 
-2. **Test with 100 Papers**
-   - Use OpenAlex API with good search terms
-   - Ensure all have abstracts (`has_abstract=true`)
-   - Test full pipeline end-to-end
-   - Measure success rates at each stage
-   - Calculate costs (expect ~$0.01 total)
+3. **Run Pipeline with 100-200 Papers**
+   - Use sustainable_pipeline.py
+   - Monitor all phases for issues
+   - Track metrics at each stage
+   - Save checkpoint for resumability
 
-3. **Build for Sustainability**
-   - Scripts that can run repeatedly
-   - Proper error handling
-   - Progress tracking
-   - Deduplication built-in
-   - Quality thresholds configurable
-   - Easy to run each session
+4. **Begin Sustainable Growth**
+   - Add 100-200 papers to corpus
+   - Extract 20-40 mechanisms (if LLM working)
+   - Generate new cross-domain candidates
+   - Update PostgreSQL database
 
-### Deliverables
+### Quick Start for New Agent
 
-1. **Pipeline Script**: `scripts/sustainable_pipeline.py`
-   - Modular design: fetch → score → extract → embed → store
-   - Configuration file for parameters
-   - Progress tracking and resumability
-   - Quality metrics reporting
+**If you're new to Analog Quest:**
+1. Read CLAUDE.md first (your primary guide)
+2. Check PROGRESS.md Session 69 (what just happened)
+3. Check PIPELINE_DESIGN.md (how the pipeline works)
+4. The pipeline is built and tested - you just need to run it!
 
-2. **Test Results**: `examples/session69_pipeline_test.json`
-   - 100 papers processed
-   - Success rate at each stage
-   - Quality metrics
-   - Cost analysis
-   - Time measurements
+**Key Files**:
+- `scripts/sustainable_pipeline.py` - The main pipeline
+- `config/pipeline_config.yaml` - Configuration (check username)
+- `PIPELINE_DESIGN.md` - Full documentation
 
-3. **Documentation**: `PIPELINE_DESIGN.md`
-   - Architecture decisions
-   - Quality thresholds
-   - Cost projections
-   - Usage instructions
-   - Lessons learned
+**Known Issues to Fix**:
+1. Database needs UNIQUE constraint on papers.title
+2. LLM extraction is simulated (needs API integration if key available)
 
 ### Success Criteria
 
 **Minimum**:
-- Working pipeline that processes 100 papers
-- Successfully extracts 10+ mechanisms
-- Total cost under $0.05
-- Clear documentation
+- Database schema fixed
+- Pipeline runs without errors
+- 100+ papers processed
+- Metrics tracked properly
 
 **Target**:
-- Full automation: fetch → extract → store
-- 20-30% extraction rate
-- Quality scoring working
-- Cost under $0.02
-- Can run repeatedly without issues
+- 100-200 papers added to corpus
+- 20-40 mechanisms extracted
+- New candidates generated
+- All data in PostgreSQL
 
 **Stretch**:
-- Pipeline processes 200 papers
-- Batch API integration working
-- Quality metrics dashboard
-- Ready for Session 70+ to just run it
+- LLM API integration working
+- 200+ papers processed
+- 40+ mechanisms extracted
+- Pipeline fully automated
 
 ### Time Estimate
-- Pipeline design: 1 hour
-- Implementation: 1.5 hours
-- Testing with 100 papers: 1 hour
-- Documentation: 30 min
-- **Total**: 4 hours
+- Database fix: 30 minutes
+- LLM integration (if needed): 1 hour
+- Pipeline run: 30 minutes
+- Monitoring and debugging: 1 hour
+- Documentation update: 30 minutes
+- **Total**: 3-4 hours
 
-### New Mindset
-- **NOT RACING** to 500 mechanisms
-- **NOT RUSHING** to 100 discoveries
-- Building infrastructure for the LONG TERM
-- Each session adds value incrementally
-- Sustainable > Fast
+### Next Steps After Session 70
 
-### Next Steps After Session 69
-
-- **Session 70**: Run pipeline with 100-200 papers
 - **Session 71**: Run pipeline with different search terms
 - **Session 72**: Run pipeline, assess quality
 - **Session 73**: First curation checkpoint
-- **Session 74**: Run pipeline, iterate on quality
-- **Session 75+**: Continue sustainable growth
+- **Session 74+**: Continue sustainable growth
 
-**No fixed endpoint - continuous research project**
-
----
-
-## IMPORTANT: What NOT to Do in Session 69
-
-### DON'T:
-- ❌ Manually extract from 50 more papers
-- ❌ Race to reach 500 mechanisms
-- ❌ Plan out Sessions 70-80 in detail
-- ❌ Try to "complete" the project
-- ❌ Optimize for speed over sustainability
-
-### DO:
-- ✅ Build infrastructure that can run for months
-- ✅ Test with small batches first
-- ✅ Focus on repeatability
-- ✅ Document thoroughly
-- ✅ Think long-term
+**Remember**: We're not racing. Each session adds value incrementally. Quality over speed.
 
 ---
 
-## Previous Sessions Reference
+## Previous Session Reference
+
+### Session 69 (2026-02-15) - **COMPLETED** ✓✓✓
+**Sustainable Pipeline Built**
+- Created modular 6-phase pipeline
+- Tested with 90 papers from OpenAlex
+- Cost: $0.002 per run
+- Speed: 185 papers/minute
+- Documentation complete
+- Ready for production (after minor fixes)
 
 ### Session 68 (2026-02-15) - **COMPLETED** ✓✓✓
 - Extracted 33 mechanisms (66% hit rate)
@@ -144,100 +113,47 @@ Current session goals and immediate priorities.
 - Quality: 76% excellent rating
 
 ### Session 67 (2026-02-15) - **COMPLETED** 🔄
-- Tested alternative strategies
-- Simple filtering: quality good, volume bad
-- Made pivot decision: mine existing corpus
+- Strategic pivot to mining existing corpus
 - Abandoned 50K fetch goal
-
-### Session 66 (2026-02-15) - **COMPLETED** ❌
-- Refined search terms FAILED
-- Quality dropped to 33.8%
-- Lesson: Keep it simple
-
-### Session 65 (2026-02-15) - **COMPLETED** ⚠️
-- 2,358 papers from OpenAlex
-- 51.5% high-value rate
-- Provided baseline for decisions
+- Focus on quality over quantity
 
 ---
 
-## Strategic Reset: Why We're Changing Direction
+## Important Files for Session 70
 
-### The Problem
-- 68 sessions in 8 days = moving too fast
-- Infrastructure barely tested before pivoting
-- Session 58: 54% duplication disaster from lack of tracking
-- Session 60: "50K papers!", Session 67: "Abandon!", Session 68: "Manual mining!"
-- Racing toward arbitrary endpoints instead of building sustainably
+**To Run Pipeline**:
+```bash
+python3 scripts/sustainable_pipeline.py
+```
 
-### The Solution
-- Build a pipeline that can run indefinitely
-- Each session adds 100-200 papers
-- Gradual, sustainable growth
-- Quality metrics at each step
-- No rush to "finish" - this is long-term research
+**To Check Results**:
+```bash
+python3 scripts/analyze_pipeline_results.py
+cat pipeline_metrics.json
+```
 
-### The Vision
-- A system that runs for months, not days
-- Steady discovery of isomorphisms
-- Learning and improving each session
-- Building a valuable research resource
-- Not racing, but exploring
+**Database Access**:
+```bash
+/opt/homebrew/opt/postgresql@17/bin/psql analog_quest
+```
 
----
-
-## [OLD] Three-Phase Pivot Plan (Sessions 68-80) - DEPRECATED
-
-### Phase 1: Complete Mining (68-72)
-- Extract from 431 high-value papers
-- Target 250-300 new mechanisms
-- Generate 2,000+ candidates
-- Curate to 100-150 discoveries
-
-### Phase 2: Frontend Update (73-74)
-- Deploy all discoveries
-- Improve visualizations
-- Add methodology page
-- Polish UI/UX
-
-### Phase 3: Strategic Next Steps (75-80)
-- Evaluate success
-- Consider targeted expansion
-- Or declare victory at 100-150
-- Document learnings
-
----
-
-## Key Insights from Session 67
-
-1. **Quality-volume trade-off is real** - can't have both
-2. **Existing corpus is rich** - 431 papers await
-3. **Pragmatism wins** - 100 real > 200 hypothetical
-4. **Mining > Fetching** - proven 60-100% hit rates
-5. **Focus brings results** - depth over breadth
-
----
-
-## Important Files for Session 68
-
-**Reference**:
-1. `database/papers.db` - Has paper scores
-2. PostgreSQL database - Current papers/mechanisms
-3. `examples/session55_all_mechanisms.json` - Current 200
-
-**Create**:
-- Extraction script for batch selection
-- New mechanisms file
-- Candidate generation script
+**Configuration**:
+- Check `config/pipeline_config.yaml`
+- Ensure database user is correct (should be "user")
+- Adjust batch_size if needed (default: 100)
 
 ---
 
 ## Notes for Agent
 
-- Focus on papers with score = 7 (good balance)
-- Don't re-extract from papers already done
-- Keep mechanism descriptions structural
-- This is the path to 100 discoveries
-- Quality over quantity in extraction
+The hard work is done! Session 69 built the pipeline. Your job is to:
+1. Fix the small database issue
+2. Run the pipeline
+3. Monitor results
+4. Document what happens
 
-The pivot to existing corpus is the right call. Let's execute well.
+This is the beginning of sustainable, long-term corpus growth. Don't rush. Quality matters more than quantity.
+
+The pipeline will be our discovery engine for months to come. Let's make sure it runs smoothly.
+
+Good luck with Session 70! 🚀

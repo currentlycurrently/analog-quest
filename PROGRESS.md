@@ -203,6 +203,72 @@ Below is the most recent session history (Session 56+).
 
 ---
 
+## Session 68 - 2026-02-15 - Existing Corpus Mining: 33 Mechanisms Extracted ⛏️
+
+**Goal**: Start mining existing corpus - extract mechanisms from 431 unprocessed high-value papers
+
+**What I Did**:
+- [x] **Selected 50 papers with score = 7**
+  - Queried PostgreSQL excluding 190 already-extracted papers
+  - Domain distribution: CS (52%), Physics (18%), Q-bio (6%)
+  - Diverse subdomains for cross-domain discovery
+
+- [x] **Extracted 33 mechanisms manually**
+  - Hit rate: 66% (33/50 papers)
+  - Quality: 25 excellent + 8 good
+  - Focus on structural patterns and causal relationships
+  - Domain-neutral descriptions for all mechanisms
+
+- [x] **Added mechanisms to PostgreSQL**
+  - Total mechanisms: 200 → 233 (+33)
+  - Generated 384-dim embeddings (all-MiniLM-L6-v2)
+  - Successfully inserted with vector embeddings
+
+- [x] **Generated 1,525 new cross-domain candidates**
+  - Threshold: ≥0.35 cosine similarity
+  - Filtered 51 already-discovered pairs
+  - Top similarity: 0.7302
+  - Distribution: 810 in 0.35-0.39 range, 631 in 0.40-0.49
+
+**Results**:
+- Papers processed this session: 50
+- New mechanisms extracted: 33
+- New cross-domain candidates: 1,525
+- Total mechanisms in database: 233
+- Hit rate: 66% (33/50)
+
+**Interesting Findings**:
+- **High-quality extraction**: 76% of mechanisms rated excellent (25/33)
+- **CS dominance in score=7 papers**: 52% of selected papers from CS domain
+- **New mechanism types discovered**:
+  - Motility-induced phase separation (active matter)
+  - Topological protection in disordered systems
+  - Bilevel optimization with implicit gradients
+  - Self-organized criticality in neural networks
+- **Top domain pairs**: physics-unknown (303), cs-unknown (290), cs-physics (187)
+
+**What I Learned**:
+- **Score=7 papers productive**: 66% hit rate validates selection strategy
+- **CS papers mechanism-rich**: Swarm intelligence, distributed consensus, meta-learning
+- **Physics papers provide universality**: Phase transitions, energy cascades, criticality
+- **Interdisciplinary papers best**: Hybrid modeling, cross-modal learning yield excellent mechanisms
+
+**Challenges**:
+- **PostgreSQL schema mismatch**: mechanisms table had different columns than expected
+  - Solution: Checked actual schema, adapted insertion query
+- **No unique constraint on paper_id**: ON CONFLICT clause failed
+  - Solution: Check existence before insert instead
+
+**Next Session** (69):
+- Continue extraction from score=7 papers (next 50)
+- Or move to score=6 if score=7 exhausted
+- Target: 30-40 more mechanisms → 260-270 total
+- Work toward 450-500 mechanism goal for 100+ discoveries
+
+**Time Spent**: ~2.5 hours
+
+---
+
 ## Session Template (Agent: Copy this for each new session)
 
 ## Session [NUMBER] - [DATE] - [BRIEF TITLE]
@@ -236,15 +302,15 @@ Below is the most recent session history (Session 56+).
 
 ## Quick Stats (Agent: Update after each session)
 
-- **Total Sessions**: **66** (Session 66 = **Refined Terms Test - FAILED** ❌)
+- **Total Sessions**: **68** (Session 68 = **Corpus Mining - 33 Mechanisms** ⛏️)
 - **Total Papers**: **4,690** (Session 65 added 2,358 OpenAlex papers)
 - **Total Papers Scored**: **4,690** (100% coverage, Session 65 avg 4.98/10)
 - **Total Patterns (keyword-based)**: 6,125 (deprecated - semantic embeddings now primary)
 - **Total Isomorphisms (keyword-based)**: **616** (deprecated - semantic matching now primary)
-- **LLM-Extracted Mechanisms**: **200** (Session 55 added 30 new, 60% hit rate - 30/50 papers) ✓✓✓ **200 MILESTONE!**
+- **LLM-Extracted Mechanisms**: **233** (Session 68 added 33 new, 66% hit rate - 33/50 papers) ✓✓✓ **230+ MILESTONE!**
 - **Verified Discoveries**: **46 unique** (Session 58 audit: 30 baseline + 16 new from Sessions 47-57, 56 duplicates removed) ⚠️
 - **Session 58 Correction**: **52 total pages** (46 discovery pages + 6 other pages) - deduplicated and accurate
-- **Semantic Embeddings**: 200 mechanisms → 1,120 cross-domain candidates (cosine similarity ≥0.35, PostgreSQL)
+- **Semantic Embeddings**: 233 mechanisms → 1,525 NEW cross-domain candidates (Session 68, cosine similarity ≥0.35, PostgreSQL)
 - **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
 - **Database**: **PostgreSQL 17.8 + pgvector 0.8.1** (Session 62 - migration complete, data loaded!) ✓✓✓
   - HNSW indexing: 9× faster queries, 100× more relevant results

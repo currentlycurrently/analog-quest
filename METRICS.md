@@ -8,9 +8,9 @@ Agent updates these numbers after each session.
 
 ## Current Stats
 
-**Last Updated**: Session 59 - 2026-02-14
+**Last Updated**: Session 68 - 2026-02-15
 
-**Methodology Version**: LLM Extraction + Semantic Embeddings + Manual Curation + Strategic Targeting (Validated!)
+**Methodology Version**: LLM Extraction + Semantic Embeddings + Manual Curation + Corpus Mining (Validated!)
 
 **⚠️ SESSION 58 - CRITICAL AUDIT: 54% DUPLICATION DISCOVERED & CORRECTED ⚠️**
 **Session 58: Attempted frontend update but discovered **54% duplication problem**. Systematic audit revealed cumulative mechanism pools + no tracking = same pairs rediscovered across sessions. **Ground truth: 46 unique discoveries** (30 baseline + 16 new), not 101 as claimed. 56 duplicates removed. Created deduplication system, corrected all data, rebuilt frontend with accurate count (52 pages). Quality maintained: 11 excellent + 35 good. See AUDIT_SESSION58.md for full investigation.**
@@ -65,8 +65,8 @@ Agent updates these numbers after each session.
   - Agent: 75 (new in top-20!)
   - (+ 30+ more types)
 
-### LLM-Extracted Mechanisms (Session 37-55)
-- **Total Mechanisms**: **200** (Session 55 added 30 new) ✓✓✓ **200 MILESTONE ACHIEVED!**
+### LLM-Extracted Mechanisms (Session 37-68)
+- **Total Mechanisms**: **233** (Session 68 added 33 new) ✓✓✓ **230+ MILESTONE!**
 - **Session 37**: 28 mechanisms (50% hit rate on strategic selection)
 - **Session 46**: 5 mechanisms (100% hit rate on pre-scored papers)
 - **Session 47**: 31 mechanisms (100% hit rate on pre-scored papers, 2h extraction time)
@@ -74,13 +74,15 @@ Agent updates these numbers after each session.
 - **Session 51**: 30 mechanisms (73% hit rate - duplicates in batch, papers scored 8-10/10)
 - **Session 53**: 36 mechanisms (90% hit rate, papers scored 7/10, 2h extraction time)
 - **Session 55**: 30 mechanisms (60% hit rate, papers scored 7/10, 2h extraction time)
+- **Session 68**: 33 mechanisms (66% hit rate, 50 papers scored 7/10, 2.5h total)
 - **Extraction Method**: Manual (domain-neutral, structural descriptions)
 - **Quality**: All mechanisms domain-neutral, causal, structural
-- **Session 55 Match Results**:
-  - Combined 200 mechanisms → **1,158 cross-domain candidates** (threshold ≥0.35)
-  - Top similarity: **0.7364** (unknown ↔ q-bio - same as Sessions 48 & 53!)
-  - Similarity range: 0.350 - 0.7364
-  - Top domain pairs: physics-q-bio (20.1%), cs-q-bio (13.6%), cs-physics (9.9%)
+- **Session 68 Match Results**:
+  - Combined 233 mechanisms → **1,525 NEW cross-domain candidates** (51 duplicates filtered)
+  - Top similarity: **0.7302** (slightly lower than Session 55's 0.7364)
+  - Similarity range: 0.350 - 0.7302
+  - Top domain pairs: physics-unknown (303), cs-unknown (290), cs-physics (187)
+  - Quality distribution: 25 excellent + 8 good (76% excellent rate)
 
 ### Verified Discoveries (Manual Curation)
 - **Total Verified (CORRECTED)**: **46 unique** (Session 58 audit revealed 54% duplication) ⚠️

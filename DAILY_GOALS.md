@@ -4,70 +4,70 @@ Current session goals and immediate priorities.
 
 ---
 
-## Session 68 Goals - Begin Existing Corpus Mining
+## Session 69 Goals - Continue Corpus Mining
 
-**Mission**: Start extracting mechanisms from the 431 unprocessed high-value papers
+**Mission**: Continue extracting mechanisms from high-value papers - momentum building!
 
-### Context from Session 67 Decision
-- 50K fetch abandoned - not viable with current approaches
-- Pivoting to mine existing 4,690 papers
-- 431 high-value papers (score ≥5) still unprocessed
-- Potential for 250-300 more mechanisms
-- Goal: Reach 100-150 total discoveries
+### Context from Session 68 Success
+- Extracted 33 mechanisms from 50 papers (66% hit rate!)
+- Generated 1,525 new cross-domain candidates
+- Total mechanisms: 233 (47% toward 500 goal)
+- 398 high-value papers still to process
+- On track for 100-150 discoveries
 
 ### Primary Goals
 
 1. **Select Next Batch of Papers**
-   - Query PostgreSQL for papers with score = 7
-   - Exclude already-extracted paper IDs
-   - Select 50 papers for this session
-   - Diverse domains if possible
+   - Continue with score = 7 papers (or move to score = 6)
+   - Exclude 223 already-extracted paper IDs (190 + 33 from Session 68)
+   - Select 50 papers for extraction
+   - Note: May need to use score = 6 if score = 7 exhausted
 
-2. **Extract Mechanisms Manually**
-   - Read abstracts carefully
-   - Extract domain-neutral structural patterns
-   - Expect 30-40 mechanisms (60-80% hit rate)
-   - Focus on causal relationships
+2. **Extract Mechanisms**
+   - Target: 30-40 mechanisms (based on 66% hit rate)
+   - Continue focusing on structural patterns
+   - CS and Physics papers showing best yield
+   - Quality: Aim for 70%+ excellent rating
 
-3. **Generate New Candidates**
-   - Add mechanisms to PostgreSQL
-   - Generate embeddings
-   - Find cross-domain matches (≥0.35 similarity)
-   - Export candidates for future curation
+3. **Build Candidate Pool**
+   - Add to PostgreSQL with embeddings
+   - Generate new cross-domain candidates
+   - Combined pool approaching 2,000+ candidates
+   - Ready for major curation session (Session 71)
 
 ### Deliverables
 
-1. **Extraction Script**: `scripts/session68_extract_batch.py`
-   - Select 50 papers with score = 7
-   - Display for manual extraction
+1. **Extraction Script**: `scripts/session69_select_papers.py`
+   - Select 50 papers (score = 7 or 6)
+   - Track extraction progress
 
-2. **Mechanisms File**: `examples/session68_mechanisms.json`
+2. **Mechanisms File**: `examples/session69_mechanisms.json`
    - 30-40 new mechanisms
-   - Domain-neutral descriptions
-   - Structural patterns only
+   - Continue high quality standards
+   - Focus on novel pattern types
 
-3. **Candidates File**: `examples/session68_candidates.json`
-   - New cross-domain pairs
-   - Similarity scores
-   - Ready for curation
+3. **Candidates File**: `examples/session69_candidates.json`
+   - 400-600+ new candidates expected
+   - Combined with Session 68: ~2,000 candidates
+   - Ready for curation in Session 71
 
 ### Success Criteria
 
 **Minimum**:
 - Extract 25+ mechanisms
-- 50% hit rate on papers
-- Generate 200+ new candidates
+- 50% hit rate
+- Total mechanisms: 258+
 
 **Target**:
-- Extract 30-40 mechanisms
-- 60-80% hit rate
-- Generate 400+ new candidates
-- Mechanisms total: 230-240
+- Extract 30-35 mechanisms
+- 60-70% hit rate (matching Session 68)
+- Total mechanisms: 263-268
+- Generate 500+ new candidates
 
 **Stretch**:
-- Extract 40+ mechanisms
-- Begin curation immediately
-- Find 5-10 new discoveries
+- Extract 40 mechanisms
+- Total mechanisms: 273
+- Prepare for Session 71 curation
 
 ### Time Estimate
 - Paper selection: 30 min
@@ -77,24 +77,31 @@ Current session goals and immediate priorities.
 - **Total**: 3-3.5 hours
 
 ### Progress Tracking
-- Current mechanisms: 200
+- Current mechanisms: 233
 - Target mechanisms: 450-500
 - Current discoveries: 46
 - Target discoveries: 100-150
-- Papers to process: 431 high-value
+- Papers to process: 398 high-value (50 done in Session 68)
 
-### Next Steps After Session 68
+### Next Steps After Session 69
 
-- **Session 69**: Continue extraction (next 50 papers)
-- **Session 70**: Continue extraction (next 50 papers)
-- **Session 71**: Curate accumulated candidates
-- **Session 72**: Continue extraction/curation
-- **Session 73-74**: Update frontend with discoveries
-- **Session 75-80**: Strategic expansion or wrap-up
+- **Session 70**: Continue extraction (next 50 papers) → 290+ mechanisms
+- **Session 71**: Major curation session (2,000+ candidates) → 60+ discoveries
+- **Session 72**: Continue extraction → 320+ mechanisms
+- **Session 73**: Continue extraction → 350+ mechanisms
+- **Session 74**: Second major curation → 80+ discoveries
+- **Session 75-76**: Update frontend with 80+ discoveries
+- **Session 77-80**: Final push or victory lap
 
 ---
 
 ## Previous Sessions Reference
+
+### Session 68 (2026-02-15) - **COMPLETED** ✓✓✓
+- Extracted 33 mechanisms (66% hit rate)
+- Generated 1,525 new candidates
+- Total mechanisms: 233 (230+ milestone!)
+- Quality: 76% excellent rating
 
 ### Session 67 (2026-02-15) - **COMPLETED** 🔄
 - Tested alternative strategies

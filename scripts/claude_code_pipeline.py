@@ -33,7 +33,7 @@ def load_config():
     with open('config/pipeline_config.yaml', 'r') as f:
         return yaml.safe_load(f)
 
-def fetch_papers(num_papers: int = 20) -> List[Dict]:
+def fetch_papers(num_papers: int = 20, batch_num: int = 1) -> List[Dict]:
     """
     Fetch a small batch of papers for Claude Code to process
     Keep batches small so Claude can extract in context
@@ -43,11 +43,15 @@ def fetch_papers(num_papers: int = 20) -> List[Dict]:
     config = load_config()
     papers = []
 
-    # Use diverse search terms
+    # Use diverse search terms, rotating based on batch number
     search_terms = config['search_terms']
     papers_per_term = max(2, num_papers // len(search_terms))
 
-    for i, term in enumerate(search_terms):
+    # Rotate search terms based on batch number to get different papers each batch
+    start_idx = ((batch_num - 1) * 10) % len(search_terms)
+    rotated_terms = search_terms[start_idx:] + search_terms[:start_idx]
+
+    for i, term in enumerate(rotated_terms):
         if len(papers) >= num_papers:
             break
 
@@ -269,7 +273,7 @@ def run_batch(batch_num: int):
     print(f"{'='*60}")
 
     # 1. Fetch small batch of papers
-    papers = fetch_papers(num_papers=20)
+    papers = fetch_papers(num_papers=20, batch_num=batch_num)
 
     # 2. Score them
     papers = score_papers(papers)

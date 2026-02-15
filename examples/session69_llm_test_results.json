@@ -1,0 +1,14 @@
+{
+  "test_papers": 10,
+  "methods_tested": [
+    "haiku_standard",
+    "haiku_batch",
+    "manual"
+  ],
+  "recommendation": "Use Haiku Standard for testing, Batch for scale-up",
+  "estimated_cost_100_papers": {
+    "haiku_standard": 0.03,
+    "haiku_batch": 0.015,
+    "manual": 0.0
+  }
+}

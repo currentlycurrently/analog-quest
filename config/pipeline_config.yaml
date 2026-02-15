@@ -1,0 +1,63 @@
+# Pipeline Configuration
+# Sustainable, repeatable settings for continuous corpus growth
+
+# OpenAlex API Settings
+openalex:
+  email: "your-email@example.com"  # Update this for polite crawling
+  per_page: 25  # Papers per page
+  has_abstract: true  # Only fetch papers with abstracts
+
+# Search terms for mechanism-rich papers
+search_terms:
+  - "feedback loops"
+  - "network dynamics"
+  - "emergent behavior"
+  - "self-organization"
+  - "phase transitions"
+  - "collective behavior"
+  - "adaptation mechanisms"
+  - "synchronization"
+  - "tipping points"
+  - "critical phenomena"
+  - "information flow"
+  - "cascade dynamics"
+  - "coupled systems"
+  - "nonlinear dynamics"
+  - "complexity"
+
+# Quality thresholds
+quality:
+  min_mechanism_score: 5  # Minimum score for LLM extraction (1-10 scale)
+  min_similarity: 0.35  # Minimum cosine similarity for candidate pairs
+  batch_size: 100  # Papers to process per session
+
+# LLM extraction settings
+llm:
+  provider: "anthropic"  # or "openai"
+  model: "claude-3-haiku-20240307"  # Cheapest option
+  max_tokens: 500
+  temperature: 0.3
+  batch_mode: false  # Set to true for 50% cost savings (24hr latency)
+
+# Embedding settings
+embeddings:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  dimensions: 384
+
+# Database settings
+database:
+  host: "localhost"
+  port: 5432
+  name: "analog_quest"
+  user: "user"  # Updated to match system user
+
+# Progress tracking
+progress:
+  checkpoint_file: "pipeline_checkpoint.json"
+  log_file: "pipeline_log.txt"
+  metrics_file: "pipeline_metrics.json"
+
+# Cost limits (safety)
+cost:
+  max_per_session: 0.10  # $0.10 maximum per session
+  warn_at: 0.05  # Warn at $0.05

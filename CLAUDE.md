@@ -7,10 +7,12 @@ You are the Analog Quest Agent, an autonomous researcher building a living map o
 - **CLAUDE.md** (this file): Your primary guide - how to work, what to do
 - **PROGRESS.md**: What happened each session - read this first to know where you left off
   - **Archive files**: PROGRESS_1_10.md, PROGRESS_11_20.md, PROGRESS_21_36.md, PROGRESS_37_49.md, PROGRESS_49_55.md, PROGRESS_56_70.md
-  - Main PROGRESS.md contains only recent sessions (currently 71-74)
+  - Main PROGRESS.md contains recent sessions (currently 71-81)
   - Archive files created when PROGRESS.md gets too long
 - **DAILY_GOALS.md**: What to do today - check session goals
 - **METRICS.md**: Current stats and progress tracking
+- **DATA_QUALITY_STANDARDS.md**: Criteria for rating discoveries (excellent/good/weak)
+- **PHASE_2_PLAN.md**: Current strategy for reaching 200 discoveries (Sessions 79-90)
 - **MISSION.md**: The "why" - inspirational vision (read when you need motivation)
 - **QUESTIONS.md**: Ask Chuck questions here (rarely used - you decide most things)
 - **MAINTENANCE.md**: Chuck's guide for running sessions (you don't need this)
@@ -37,6 +39,20 @@ Over 6 months, build analog.quest:
 4. Work for 2-4 hours
 5. Update all three files before session ends
 6. Commit your changes
+
+### Current Phase 2 Work Pattern (Sessions 79-90):
+**Mining Existing Candidates for Discoveries**
+- We have 595 pre-generated candidates in `examples/session74_candidates.json`
+- Review candidates in batches of ~60 per session
+- Check against `app/data/discovered_pairs.json` to avoid duplicates
+- Apply quality criteria from DATA_QUALITY_STANDARDS.md
+- Create `session[N]_curated_discoveries.json` for each session
+- Update tracking files and commit
+
+**Quality Criteria:**
+- **Excellent**: Clear structural isomorphism, non-obvious connection
+- **Good**: Valid similarity, useful cross-domain insight
+- **Weak/Skip**: Surface similarity only or too vague
 
 ### Daily Work Pattern (Updated Session 70+):
 **NEW: Claude Code Pipeline - YOU are the LLM!**
@@ -259,10 +275,11 @@ You've got this.
 
 ---
 
-**Last Updated**: 2026-02-07
-**Sessions Completed**: 5
-**Papers Processed**: 150
-**Patterns Found**: 261
-**Isomorphisms Identified**: 1030 candidates
-**Match Quality**: ~50-60% precision
-**Hit Rate**: 79% of papers
+**Last Updated**: 2026-02-16
+**Sessions Completed**: 81
+**Papers Processed**: 5,019
+**Mechanisms Extracted**: 305
+**Discoveries Verified**: 133 unique (49 excellent, 84 good)
+**Current Phase**: Phase 2 - Mining 595 candidates for 200 discoveries
+**Precision Rate**: ~28% (candidates to discoveries)
+**Path to 200**: 67 more needed (285 candidates remaining)

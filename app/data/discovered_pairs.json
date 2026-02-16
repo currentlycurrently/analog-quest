@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-02-15",
-    "total_pairs": 100,
+    "last_updated": "2026-02-16",
+    "total_pairs": 116,
     "description": "Tracks all discovered paper pairs to prevent duplication across sessions",
     "note": "Created in Session 59 after Session 58 audit revealed 54% duplication problem. All 46 unique discoveries after deduplication."
   },
@@ -705,6 +705,118 @@
       "similarity": 0.4569,
       "rating": "good",
       "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 165,
+      "paper_2_id": 70,
+      "similarity": 0.4546,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 165,
+      "paper_2_id": 177,
+      "similarity": 0.4542,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 180,
+      "paper_2_id": 86,
+      "similarity": 0.4527,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 203,
+      "paper_2_id": 19,
+      "similarity": 0.4525,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 31,
+      "paper_2_id": 217,
+      "similarity": 0.4525,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 220,
+      "paper_2_id": 104,
+      "similarity": 0.4516,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 70,
+      "paper_2_id": 45,
+      "similarity": 0.4513,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 48,
+      "paper_2_id": 222,
+      "similarity": 0.45,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 21,
+      "paper_2_id": 139,
+      "similarity": 0.4493,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 180,
+      "paper_2_id": 64,
+      "similarity": 0.4487,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 31,
+      "paper_2_id": 197,
+      "similarity": 0.446,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 180,
+      "paper_2_id": 192,
+      "similarity": 0.4444,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 192,
+      "paper_2_id": 170,
+      "similarity": 0.4423,
+      "rating": "good",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 45,
+      "paper_2_id": 210,
+      "similarity": 0.4411,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 217,
+      "paper_2_id": 273,
+      "similarity": 0.44,
+      "rating": "excellent",
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 229,
+      "paper_2_id": 86,
+      "similarity": 0.4467,
+      "rating": "good",
+      "discovered_in_session": 80
     }
   ]
 }

@@ -12,6 +12,9 @@ You are the Analog Quest Agent, an autonomous researcher building a living map o
 - **DAILY_GOALS.md**: What to do today - check session goals
 - **METRICS.md**: Current stats and progress tracking
 - **DATA_QUALITY_STANDARDS.md**: Criteria for rating discoveries (excellent/good/weak)
+- **DATABASE_STATUS.md**: Current database architecture (SQLite legacy, file-based active)
+- **NAMING_CONVENTIONS.md**: File naming standards for consistency
+- **TECH_DEBT_REPORT.md**: Known issues and cleanup status
 - **PHASE_2_PLAN.md**: Current strategy for reaching 200 discoveries (Sessions 79-90)
 - **MISSION.md**: The "why" - inspirational vision (read when you need motivation)
 - **QUESTIONS.md**: Ask Chuck questions here (rarely used - you decide most things)
@@ -185,10 +188,10 @@ Example domains: ecology (predator-prey), economics (supply-demand), chemistry (
 - Start with abstracts, add full text later
 
 ### Your Scripts:
-- `scripts/fetch_papers.py` - Get papers from APIs
-- `scripts/extract_patterns.py` - NLP to find structural patterns
-- `scripts/find_matches.py` - Match patterns across domains
-- `scripts/utils.py` - Helper functions
+- Core utilities in `scripts/` (most session-specific scripts archived)
+- `scripts/backup_critical_data.sh` - Run before major changes
+- Recent session scripts kept for reference (session74, session80)
+- Archived scripts in `archive/scripts/` for historical reference
 
 ### Your Database:
 ```sql
@@ -280,6 +283,8 @@ You've got this.
 **Papers Processed**: 5,019
 **Mechanisms Extracted**: 305
 **Discoveries Verified**: 133 unique (49 excellent, 84 good)
+**Frontend Status**: 141 discoveries displayed (includes some duplicates)
 **Current Phase**: Phase 2 - Mining 595 candidates for 200 discoveries
 **Precision Rate**: ~28% (candidates to discoveries)
 **Path to 200**: 67 more needed (285 candidates remaining)
+**Repository Status**: CLEANED - Old files archived, backups configured

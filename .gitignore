@@ -74,3 +74,17 @@ next-env.d.ts
 
 # Vercel
 .vercel
+# Temporary backups (critical data backed up elsewhere)
+backups/
+
+# Keep archive structure but can ignore contents for now
+archive/**/*.json
+archive/**/*.json.gz
+archive/**/*.py
+
+# But keep directory structure
+!archive/sessions/
+!archive/scripts/
+!archive/large_files/
+!archive/sessions/*/
+

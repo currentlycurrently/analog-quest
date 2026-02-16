@@ -1,13 +1,15 @@
 {
-  "total_discoveries": 108,
-  "excellent": 36,
-  "good": 72,
+  "total_discoveries": 141,
+  "excellent": 50,
+  "good": 91,
   "top_similarity": 0.7441,
   "sessions_included": [
     75,
     76,
     77,
+    80,
     49,
+    81,
     52,
     54,
     56,

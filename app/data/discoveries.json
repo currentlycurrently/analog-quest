@@ -2776,5 +2776,698 @@
         "mechanism": "Chaotic synchronization through functional mapping parallels pulse-coupled phase advancement."
       }
     }
+  },
+  {
+    "id": 109,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4546,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 165,
+      "mechanism_2": 70
+    },
+    "papers": {
+      "paper_1": "Emergent behavior in active colloids",
+      "paper_2": "Learning and detecting emergent behavior in networks of cardiac myocytes"
+    }
+  },
+  {
+    "id": 110,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4542,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 165,
+      "mechanism_2": 177
+    },
+    "papers": {
+      "paper_1": "Emergent behavior in active colloids",
+      "paper_2": "Swarm Intelligence"
+    }
+  },
+  {
+    "id": 111,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4527,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 180,
+      "mechanism_2": 86
+    },
+    "papers": {
+      "paper_1": "Theory of dynamic critical phenomena",
+      "paper_2": "Collective behavior in animal groups: Theoretical models and empirical studies"
+    }
+  },
+  {
+    "id": 112,
+    "title": "Neuroscience \u2194 Biology",
+    "domains": [
+      "neuroscience",
+      "biology"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4525,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 203,
+      "mechanism_2": 19
+    },
+    "papers": {
+      "paper_1": "Modulation of Oscillatory Neuronal Synchronization by Selective Visual Attention",
+      "paper_2": "Synchronization of Pulse-Coupled Biological Oscillators"
+    }
+  },
+  {
+    "id": 113,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4525,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 31,
+      "mechanism_2": 217
+    },
+    "papers": {
+      "paper_1": "Synchronization of Pulse-Coupled Biological Oscillators",
+      "paper_2": "Synchronization: coupled systems to complex networks"
+    }
+  },
+  {
+    "id": 114,
+    "title": "Earth Science \u2194 Environmental_Science",
+    "domains": [
+      "earth_science",
+      "environmental_science"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4516,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 220,
+      "mechanism_2": 104
+    },
+    "papers": {
+      "paper_1": "Exceeding 1.5\u00b0C global warming could trigger multiple climate tipping points",
+      "paper_2": "Complexity of Coupled Human and Natural Systems"
+    }
+  },
+  {
+    "id": 115,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4513,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 70,
+      "mechanism_2": 45
+    },
+    "papers": {
+      "paper_1": "Learning and detecting emergent behavior in networks of cardiac myocytes",
+      "paper_2": "Synchronization: coupled systems to complex networks"
+    }
+  },
+  {
+    "id": 116,
+    "title": "Physics \u2194 Economics",
+    "domains": [
+      "physics",
+      "economics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.45,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 48,
+      "mechanism_2": 222
+    },
+    "papers": {
+      "paper_1": "Chaotic behavior in simple dynamical systems",
+      "paper_2": "Supply network equilibria with capacity constraints"
+    }
+  },
+  {
+    "id": 117,
+    "title": "Physics \u2194 Neuroscience",
+    "domains": [
+      "physics",
+      "neuroscience"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4493,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 21,
+      "mechanism_2": 139
+    },
+    "papers": {
+      "paper_1": "Chaotic behavior in simple dynamical systems",
+      "paper_2": "Internally Coupled Ears in a Katydid Generate Two Distinct Mechanical Responses to the Same Sound"
+    }
+  },
+  {
+    "id": 118,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4487,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 180,
+      "mechanism_2": 64
+    },
+    "papers": {
+      "paper_1": "Theory of dynamic critical phenomena",
+      "paper_2": "Long-lived transients in ecology: Nearly neutral coexistence in a model of tropical rain forest tree communities"
+    }
+  },
+  {
+    "id": 119,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4467,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 229,
+      "mechanism_2": 86
+    },
+    "papers": {
+      "paper_1": "Active matter: Quantifying the departure from equilibrium",
+      "paper_2": "Collective behavior in animal groups: Theoretical models and empirical studies"
+    }
+  },
+  {
+    "id": 120,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.446,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 31,
+      "mechanism_2": 197
+    },
+    "papers": {
+      "paper_1": "Synchronization of Pulse-Coupled Biological Oscillators",
+      "paper_2": "Synchronization: coupled systems to complex networks"
+    }
+  },
+  {
+    "id": 121,
+    "title": "Physics \u2194 Network Science",
+    "domains": [
+      "physics",
+      "network_science"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4444,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 180,
+      "mechanism_2": 192
+    },
+    "papers": {
+      "paper_1": "Theory of dynamic critical phenomena",
+      "paper_2": "Complex Networks: Structure and Dynamics"
+    }
+  },
+  {
+    "id": 122,
+    "title": "Network Science \u2194 Physics",
+    "domains": [
+      "network_science",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4423,
+    "rating": "good",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 192,
+      "mechanism_2": 170
+    },
+    "papers": {
+      "paper_1": "Complex Networks: Structure and Dynamics",
+      "paper_2": "Avalanches, Barkhausen Noise, and Plain Old Criticality"
+    }
+  },
+  {
+    "id": 123,
+    "title": "Physics \u2194 Climate Science",
+    "domains": [
+      "physics",
+      "climate_science"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4411,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 45,
+      "mechanism_2": 210
+    },
+    "papers": {
+      "paper_1": "Synchronization: coupled systems to complex networks",
+      "paper_2": "Tipping points: Early warning and wishful thinking"
+    }
+  },
+  {
+    "id": 124,
+    "title": "Physics \u2194 Engineering",
+    "domains": [
+      "physics",
+      "engineering"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.44,
+    "rating": "excellent",
+    "session": 80,
+    "mechanism_ids": {
+      "mechanism_1": 217,
+      "mechanism_2": 273
+    },
+    "papers": {
+      "paper_1": "Synchronization: coupled systems to complex networks",
+      "paper_2": "Control of Multi-Agent Systems: A Superstability Approach"
+    }
+  },
+  {
+    "id": 125,
+    "title": "Network Science \u2194 Physics",
+    "domains": [
+      "network_science",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4399,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 192,
+      "mechanism_2": 249
+    },
+    "papers": {
+      "paper_1": "Complex Networks: Structure and Dynamics",
+      "paper_2": "Theory of dynamic critical phenomena"
+    }
+  },
+  {
+    "id": 126,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4398,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 53,
+      "mechanism_2": 244
+    },
+    "papers": {
+      "paper_1": "From local rules to global patterns: emergence in biological systems",
+      "paper_2": "Collective motion in active matter: From microscopic to macroscopic scales"
+    }
+  },
+  {
+    "id": 127,
+    "title": "Physics \u2194 Computer_Science",
+    "domains": [
+      "physics",
+      "computer_science"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4396,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 194,
+      "mechanism_2": 287
+    },
+    "papers": {
+      "paper_1": "Physics of microswimmers\u2014single particle motion and collective behavior: a review",
+      "paper_2": "Emergent Collective Behavior in Large Numbers of Globally Coupled Independently Stochastic Agents"
+    }
+  },
+  {
+    "id": 128,
+    "title": "Neuroscience \u2194 Physics",
+    "domains": [
+      "neuroscience",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4373,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 139,
+      "mechanism_2": 254
+    },
+    "papers": {
+      "paper_1": "Internally Coupled Ears in a Katydid Generate Two Distinct Mechanical Responses to the Same Sound",
+      "paper_2": "Controlling chaos in the brain"
+    }
+  },
+  {
+    "id": 129,
+    "title": "Sociology \u2194 Physics",
+    "domains": [
+      "sociology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4364,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 284,
+      "mechanism_2": 260
+    },
+    "papers": {
+      "paper_1": "Information Dynamics in Small-World Boolean Networks",
+      "paper_2": "Small-world networks: Evidence for a crossover picture"
+    }
+  },
+  {
+    "id": 130,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4355,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 19,
+      "mechanism_2": 197
+    },
+    "papers": {
+      "paper_1": "Synchronization of Pulse-Coupled Biological Oscillators",
+      "paper_2": "Synchronization: coupled systems to complex networks"
+    }
+  },
+  {
+    "id": 131,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4343,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 86,
+      "mechanism_2": 249
+    },
+    "papers": {
+      "paper_1": "Collective behavior in animal groups: Theoretical models and empirical studies",
+      "paper_2": "Theory of dynamic critical phenomena"
+    }
+  },
+  {
+    "id": 132,
+    "title": "Biology \u2194 Network Science",
+    "domains": [
+      "biology",
+      "network_science"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4343,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 53,
+      "mechanism_2": 267
+    },
+    "papers": {
+      "paper_1": "From local rules to global patterns: emergence in biological systems",
+      "paper_2": "Cascade dynamics on clustered networks"
+    }
+  },
+  {
+    "id": 133,
+    "title": "Biology \u2194 Optics",
+    "domains": [
+      "biology",
+      "optics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4314,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 117,
+      "mechanism_2": 269
+    },
+    "papers": {
+      "paper_1": "From 1/f noise to multifractal cascades in heartbeat dynamics",
+      "paper_2": "Averaged pulse dynamics in a cascaded transmission system with passive dispersion"
+    }
+  },
+  {
+    "id": 134,
+    "title": "Physics \u2194 Engineering",
+    "domains": [
+      "physics",
+      "engineering"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.431,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 57,
+      "mechanism_2": 273
+    },
+    "papers": {
+      "paper_1": "Synchronization: coupled systems to complex networks",
+      "paper_2": "Control of Multi-Agent Systems: A Superstability Approach"
+    }
+  },
+  {
+    "id": 135,
+    "title": "Physics \u2194 Earth Science",
+    "domains": [
+      "physics",
+      "earth_science"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4306,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 275,
+      "mechanism_2": 276
+    },
+    "papers": {
+      "paper_1": "Absorbing state phase transitions in interacting particle systems",
+      "paper_2": "Rate and state dependent friction and the stability of sliding between elastically deformable solids"
+    }
+  },
+  {
+    "id": 136,
+    "title": "Earth Science \u2194 Physics",
+    "domains": [
+      "earth_science",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4299,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 220,
+      "mechanism_2": 275
+    },
+    "papers": {
+      "paper_1": "Exceeding 1.5\u00b0C global warming could trigger multiple climate tipping points",
+      "paper_2": "Absorbing state phase transitions in interacting particle systems"
+    }
+  },
+  {
+    "id": 137,
+    "title": "Neuroscience \u2194 Physics",
+    "domains": [
+      "neuroscience",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4282,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 279,
+      "mechanism_2": 280
+    },
+    "papers": {
+      "paper_1": "Mechanisms of persistent activity in cortical circuits: possible neural substrates for working memory",
+      "paper_2": "Noise-induced transitions in physics, chemistry, and biology"
+    }
+  },
+  {
+    "id": 138,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.426,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 117,
+      "mechanism_2": 249
+    },
+    "papers": {
+      "paper_1": "From 1/f noise to multifractal cascades in heartbeat dynamics",
+      "paper_2": "Theory of dynamic critical phenomena"
+    }
+  },
+  {
+    "id": 139,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4236,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 64,
+      "mechanism_2": 282
+    },
+    "papers": {
+      "paper_1": "Long-lived transients in ecology: Nearly neutral coexistence in a model of tropical rain forest tree communities",
+      "paper_2": "Synchronization: coupled systems to complex networks"
+    }
+  },
+  {
+    "id": 140,
+    "title": "Climate Science \u2194 Physics",
+    "domains": [
+      "climate_science",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4225,
+    "rating": "excellent",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 210,
+      "mechanism_2": 283
+    },
+    "papers": {
+      "paper_1": "Tipping points: Early warning and wishful thinking",
+      "paper_2": "Catastrophic cascade of failures in interdependent networks"
+    }
+  },
+  {
+    "id": 141,
+    "title": "Physics \u2194 Economics",
+    "domains": [
+      "physics",
+      "economics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.4224,
+    "rating": "good",
+    "session": 81,
+    "mechanism_ids": {
+      "mechanism_1": 47,
+      "mechanism_2": 222
+    },
+    "papers": {
+      "paper_1": "Catastrophic cascade of failures in interdependent networks",
+      "paper_2": "Supply network equilibria with capacity constraints"
+    }
   }
 ]

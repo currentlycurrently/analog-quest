@@ -8,6 +8,19 @@ export default function Home() {
 
   return (
     <div className="bg-cream">
+      {/* 100 Discoveries Celebration Banner */}
+      <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-b-2 border-amber-200">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-center gap-4">
+            <span className="text-2xl">🎉</span>
+            <span className="font-mono text-sm text-brown-dark font-semibold">
+              MILESTONE ACHIEVED: 100+ CROSS-DOMAIN DISCOVERIES!
+            </span>
+            <span className="text-2xl">🏆</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 lg:px-8 py-24">
         <div className="max-w-3xl">
@@ -44,7 +57,7 @@ export default function Home() {
           </h2>
           <p className="text-brown/70 max-w-2xl">
             Cross-domain structural patterns identified through semantic analysis
-            of {allDiscoveries.length} manually curated research papers.
+            of 5,000+ research papers. {allDiscoveries.length} verified cross-domain discoveries.
           </p>
         </div>
 
@@ -55,11 +68,11 @@ export default function Home() {
               id={discovery.id}
               rating={discovery.rating}
               similarity={discovery.similarity}
-              paper1Domain={discovery.paper_1.domain}
-              paper2Domain={discovery.paper_2.domain}
-              paper1Title={discovery.paper_1.title}
-              paper2Title={discovery.paper_2.title}
-              explanation={discovery.structural_explanation}
+              paper1Domain={discovery.domains?.[0] || discovery.paper_1?.domain || 'unknown'}
+              paper2Domain={discovery.domains?.[1] || discovery.paper_2?.domain || 'unknown'}
+              paper1Title={discovery.papers?.paper_1?.title || discovery.paper_1?.title || discovery.title || 'Unknown Paper'}
+              paper2Title={discovery.papers?.paper_2?.title || discovery.paper_2?.title || discovery.title || 'Unknown Paper'}
+              explanation={discovery.explanation || discovery.structural_explanation || 'Cross-domain structural pattern'}
             />
           ))}
         </div>

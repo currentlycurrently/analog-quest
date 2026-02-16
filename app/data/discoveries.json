@@ -1,1001 +1,2780 @@
-{
-  "metadata": {
-    "session": 57,
-    "date": "2026-02-14",
-    "description": "Manually curated verified isomorphisms from Sessions 38-57",
-    "total_verified": 46,
-    "excellent": 11,
-    "good": 35,
-    "similarity_range": {
-      "min": 0.44465914368629456,
-      "max": 0.7363924980163574,
-      "mean": 0.5441548497956733
+[
+  {
+    "id": 1,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Both mechanisms describe how spatial interaction zones and distance-dependent influence decay govern collective motion and flocking. The physics model focuses on mathematical exponents of influence decay, while the biology model describes three functional zones (repulsion/alignment/attraction). These are structurally identical - both explain emergent collective behavior through spatial influence gradients.",
+    "pattern": "Distance-dependent influence zones creating collective motion",
+    "similarity": 0.7441,
+    "rating": "excellent",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 246,
+      "mechanism_2": 259
     },
-    "methodology": "LLM extraction + semantic embeddings (384-dim) + manual curation",
-    "selection_criteria": "All excellent + all good discoveries from manual curation"
+    "papers": {
+      "paper_1": "Emergent Behavior in Flocks",
+      "paper_2": "Inferring individual rules from collective behavior"
+    }
   },
-  "domain_pairs": {
-    "q-bio-unknown": 4,
-    "econ-unknown": 4,
-    "nlin-unknown": 2,
-    "econ-q-bio": 7,
-    "physics-q-bio": 7,
-    "cs-econ": 4,
-    "cs-physics": 3,
-    "econ-physics": 6,
-    "cs-unknown": 1,
-    "econ-nlin": 1,
-    "nlin-physics": 3,
-    "cs-q-bio": 2,
-    "biology-cs": 1,
-    "cs-stat": 1
-  },
-  "verified_isomorphisms": [
-    {
-      "id": 1,
-      "original_candidate_id": 41,
-      "rating": "excellent",
-      "similarity": 0.7363924980163574,
-      "structural_explanation": "Both describe cell size feedback control through phase-specific mechanisms (sizer/timer/adder). Extrinsic (population-density) vs intrinsic (size-deviation) feedback loops. Trade-offs between control strategies. Perfect structural isomorphism across different cell types.",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 540,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Coarse-graining and stochastic oscillations in cell-size homeostasis",
-        "mechanism": "Cell size feedback operates through size deviations (difference between absolute size and cell-cycle progression). Feedback from size to growth rate and cycle timing creates coupled dynamics. In linear regime, dynamics reduce to stochastically forced harmonic oscillator. Cell-cycle timing and intrinsic fluctuations jointly shape size control strategy. Mechanistic feedback structure may differ from apparent coarse-grained correlations due to noise integration."
-      }
+  {
+    "id": 2,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.7364,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
     },
-    {
-      "id": 2,
-      "original_candidate_id": 36,
-      "rating": "excellent",
-      "similarity": 0.7064264416694641,
-      "structural_explanation": "Both describe size homeostasis through feedback. Extrinsic noise and population structure jointly determine size distributions. Noise integration and control strategies. Same mechanism as #1 but different organisms (fibroblasts vs bacteria).",
+    "papers": {
       "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
       },
       "paper_2": {
-        "paper_id": 530,
-        "arxiv_id": "2602.00044v1",
-        "domain": "q-bio",
-        "title": "Cell size control in bacteria",
-        "mechanism": "Cell size fluctuates due to noisy growth rates and size-dependent division noise. Size homeostasis mechanisms compensate for fluctuations through size control strategies. Population dynamics alter size distributions compared to single lineages - exponential population growth changes the effective size control measured in constant-volume experiments. Extrinsic growth noise and population structure jointly determine observed size distributions."
-      }
-    },
-    {
-      "id": 3,
-      "original_candidate_id": 27,
-      "rating": "excellent",
-      "similarity": 0.6691850423812866,
-      "structural_explanation": "Network position determines productivity through strategic complementarities. Central nodes access diverse knowledge/connections. Preferential attachment reinforces centrality advantage. Isomorphism: innovation networks (Sweden) vs science/tech networks.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      }
-    },
-    {
-      "id": 4,
-      "original_candidate_id": 38,
-      "rating": "good",
-      "similarity": 0.6278334856033325,
-      "structural_explanation": "Both about cell size control but through different mechanisms. Paper 1: feedback across phases. Paper 2: proliferation-driven variability vs mechanical relaxation. Related but not perfect structural match.",
-      "paper_1": {
-        "paper_id": 525,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Effects of multi-phase control mechanism on fibroblast dynamics",
-        "mechanism": "Cell size determined by control mechanisms across cell cycle phases (sizer, timer, adder strategies). Division kernel and phase-specific control govern size distribution. Population-density-dependent regulation limits total cell numbers (extrinsic feedback). Cell-size-dependent regulation suppresses size variability (intrinsic feedback). Trade-off between extrinsic and intrinsic control."
-      },
-      "paper_2": {
-        "paper_id": 528,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Cell proliferation maintains cell area polydispersity in the growing fruit fly wing epithelium",
-        "mechanism": "Cell proliferation generates area variability while mechanical forces regulate packing. Cell division creates size asymmetry between daughter cells. Mechanical constraints from neighbors limit expansion. Area polydispersity emerges from balance between proliferation-driven variability and mechanical relaxation. Cell-cell adhesion and cortical tension determine equilibrium distributions."
-      }
-    },
-    {
-      "id": 5,
-      "original_candidate_id": 59,
-      "rating": "good",
-      "similarity": 0.5998806953430176,
-      "structural_explanation": "Both describe positive Lyapunov exponents (sensitivity to initial conditions), scaling laws, and self-similarity. One in discrete dynamical systems with fractal attractors, one in black hole particle motion. Solid structural match.",
-      "paper_1": {
-        "paper_id": 2,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Discrete dynamical systems with scaling and inversion symmetries",
-        "mechanism": "System state evolves discretely through iterated function. Scaling symmetry preserves dynamics under magnification/contraction. Near fixed points, small perturbations grow exponentially (positive Lyapunov exponent) causing sensitive dependence. Trajectories confined to fractal attractor with non-integer dimension. Chaotic regime characterized by scaling laws and self-similarity across scales."
-      },
-      "paper_2": {
-        "paper_id": 916,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Chaotic Dynamics in Black Holes",
-        "mechanism": "Particle motion in extremal configurations exhibits positive Lyapunov exponents indicating sensitivity to initial conditions. Chaos persists even at zero temperature. System parameters (spin, charge) modulate chaos strength - increasing one parameter strengthens chaotic behavior while the other weakens it."
-      }
-    },
-    {
-      "id": 6,
-      "original_candidate_id": 81,
-      "rating": "excellent",
-      "similarity": 0.5997282862663269,
-      "structural_explanation": "Cooperation shaped by behavioral feedback AND resource constraints. Strategic behavior creates reputation/norms while simultaneously affecting shared resources. Feedback between social dynamics and ecological/environmental state. Perfect two-layer coupling.",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Human-AI Cooperation in Public Goods Game",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 7,
-      "original_candidate_id": 60,
-      "rating": "good",
-      "similarity": 0.5702585577964783,
-      "structural_explanation": "Both involve scaling laws and critical behavior. Paper 1: fractal attractors and self-similarity. Paper 2: critical slowing down at bifurcations with diverging timescales. Related mathematical structures.",
-      "paper_1": {
-        "paper_id": 2,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Discrete dynamical systems with scaling and inversion symmetries",
-        "mechanism": "System state evolves discretely through iterated function. Scaling symmetry preserves dynamics under magnification/contraction. Near fixed points, small perturbations grow exponentially (positive Lyapunov exponent) causing sensitive dependence. Trajectories confined to fractal attractor with non-integer dimension. Chaotic regime characterized by scaling laws and self-similarity across scales."
-      },
-      "paper_2": {
-        "paper_id": 917,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Critical Slowing Down at Bifurcations",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      }
-    },
-    {
-      "id": 8,
-      "original_candidate_id": 29,
-      "rating": "good",
-      "similarity": 0.5687321424484253,
-      "structural_explanation": "Both about R&D/innovation networks. Network centrality \u2192 innovation output. Strategic interactions (Paper 2 adds Stackelberg/Nash equilibrium). Spillovers through connections. Solid match but Paper 1 more specific.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 953,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "R&D Spillovers and Regional Innovation",
-        "mechanism": "R&D spillovers from one entity enhance innovation in neighboring entities. Strategic interactions follow Stackelberg dynamics where leaders and followers reach Nash equilibrium. Highly-qualified employment amplifies spillover effects, creating synergies between different types of R&D investment and regional innovation output."
-      }
-    },
-    {
-      "id": 9,
-      "original_candidate_id": 126,
-      "rating": "excellent",
-      "similarity": 0.548354983329773,
-      "structural_explanation": "Free-rider problem with multi-stability and hysteresis (shared resource cleaning) vs cooperation-epidemic coevolution with structural heterogeneity. Both show: heterogeneity as double-edged (creates leverage points AND weak links), multi-stability, and strategic trade-offs between local/global incentives. Beautiful isomorphism!",
-      "paper_1": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Free-Rider Problem in Shared Resources",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 10,
-      "original_candidate_id": 90,
-      "rating": "good",
-      "similarity": 0.5442763566970825,
-      "structural_explanation": "Shock propagation through networks. Network topology determines cascade extent. DeFi contagion vs physical network damage. Seed node position critical in both. Solid structural match.",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "DeFi Credit Exposures and Contagion",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 1943,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Seed Node Position and Network Damage",
-        "mechanism": "Localized damage initiates at a seed node and propagates to neighbors. The structural position of the seed node (local connectivity and topology) amplifies or dampens damage progression. Cumulative link severing during attack progression depends critically on seed node characteristics rather than average network properties."
-      }
-    },
-    {
-      "id": 11,
-      "original_candidate_id": 112,
-      "rating": "good",
-      "similarity": 0.5400546193122864,
-      "structural_explanation": "Both show: heterogeneity enables coexistence (homogeneous \u2192 marginal/unstable). Spatial structure + network topology govern dynamics. Paper 2 adds high-dimensional chaos. Related but not perfect match.",
-      "paper_1": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      },
-      "paper_2": {
-        "paper_id": 168,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Cross-feeding yields high-dimensional chaos and coexistence of species",
-        "mechanism": "Species cross-feed through metabolite leakage and uptake. Competitive uptake of leaked chemicals creates coupled population-chemical dynamics. Network structure determines attractor types: fixed points, limit cycles, low-dimensional chaos, or high-dimensional chaos. High-dimensional chaos enables coexistence beyond competitive exclusion limits through intermittent switching among quasi-stationary states. Chemical dynamics explore high-dimensional space while populations switch intermittently."
-      }
-    },
-    {
-      "id": 12,
-      "original_candidate_id": 88,
-      "rating": "excellent",
-      "similarity": 0.5368675589561462,
-      "structural_explanation": "Coevolution of network structure and node attributes. Feedback loop: attributes affect connections, connections affect attributes. Individual cognitive structure (semantic overlap) vs opinion distance. Network-level redundancy emerges. Perfect structural isomorphism!",
-      "paper_1": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 13,
-      "original_candidate_id": 69,
-      "rating": "excellent",
-      "similarity": 0.5339190363883972,
-      "structural_explanation": "Network position determines output. Strategic complementarities through connections. Lower initial overlap \u2192 larger gains (Paper 2) mirrors centrality advantage (Paper 1). Both show feedback between individual structure and collective outcomes. Perfect match!",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      }
-    },
-    {
-      "id": 14,
-      "original_candidate_id": 3,
-      "rating": "good",
-      "similarity": 0.5338948965072632,
-      "structural_explanation": "Both about spatial structure enabling persistence. Facilitation-competition balance creates threshold dynamics (Allee effect) vs heterogeneity threshold for coexistence. Related mechanisms but different flavors.",
-      "paper_1": {
-        "paper_id": 448,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns",
-        "mechanism": "Plants facilitate neighboring growth through local resource modification. Facilitation competes with resource competition. When precipitation is intermittent, facilitation-competition balance creates spatial vegetation patterns. Below threshold density, vegetation collapses due to weakened facilitation (spatial Allee effect)."
-      },
-      "paper_2": {
-        "paper_id": 1970,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Habitat Heterogeneity and Metacommunity Dynamics",
-        "mechanism": "Spatial structure and dispersal networks jointly determine species persistence. Heterogeneous habitats support stable coexistence only above a critical heterogeneity threshold. Homogeneous environments allow coexistence only in a fine-tuned marginal state, creating instability. Network topology encodes dispersal effectiveness through an effective kernel."
-      }
-    },
-    {
-      "id": 15,
-      "original_candidate_id": 74,
-      "rating": "good",
-      "similarity": 0.5299366116523743,
-      "structural_explanation": "Network centrality \u2192 productivity through strategic complementarities vs cooperation-epidemic coevolution with heterogeneity. Both show heterogeneity affects strategic behavior but mechanisms differ.",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 16,
-      "original_candidate_id": 147,
-      "rating": "good",
-      "similarity": 0.5260351896286011,
-      "structural_explanation": "Network-mediated competitive pressures. Peer comparison affects strategic behavior. Heterogeneity creates asymmetries. Related but Paper 1 more financial, Paper 2 more epidemiological.",
-      "paper_1": {
-        "paper_id": 199,
-        "arxiv_id": "2506.03914v1",
-        "domain": "econ",
-        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 17,
-      "original_candidate_id": 75,
-      "rating": "good",
-      "similarity": 0.5077577829360962,
-      "structural_explanation": "Network position \u2192 productivity/influence through strategic interactions. Coevolution of attributes and network structure. Similar to #15 but less clear in Paper 1.",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 18,
-      "original_candidate_id": 31,
-      "rating": "good",
-      "similarity": 0.5039563179016113,
-      "structural_explanation": "Network externalities in technology adoption vs innovation networks. Preferential attachment and network topology determine outcomes. Strategic complementarities through connections.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 191,
-        "arxiv_id": "2506.07896v1",
-        "domain": "econ",
-        "title": "Technology Adoption and Network Externalities in Financial Systems",
-        "mechanism": "Technology adoption spreads through spatial and network channels. Spatial spillovers and network externalities interact multiplicatively - nearby adoption and connected peer adoption amplify each other. Cumulative adoption pressure accumulates along stochastic paths through spatial-network space. Network position amplifies or dampens spatial effects, creating non-linear adoption dynamics."
-      }
-    },
-    {
-      "id": 19,
-      "original_candidate_id": 135,
-      "rating": "good",
-      "similarity": 0.5011242032051086,
-      "structural_explanation": "Both show cooperation coevolving with environmental/network constraints. Feedback between strategic behavior and external state. Paper 1: reputation+resources. Paper 2: cooperation+epidemic. Similar structure.",
-      "paper_1": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 20,
-      "original_candidate_id": 73,
-      "rating": "good",
-      "similarity": 0.5004019141197205,
-      "structural_explanation": "Strategic complementarities through network connections. Asymmetric effects (scientific\u2192tech but not reverse) vs reputation-resource feedback. Network-mediated strategic behavior in both.",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      }
-    },
-    {
-      "id": 21,
-      "original_candidate_id": 134,
-      "rating": "good",
-      "similarity": 0.484524130821228,
-      "structural_explanation": "Network-mediated strategic behavior with feedback. Reputation+resources vs relative performance concerns. Both show strategic interdependencies through network links.",
-      "paper_1": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      },
-      "paper_2": {
-        "paper_id": 199,
-        "arxiv_id": "2506.03914v1",
-        "domain": "econ",
-        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      }
-    },
-    {
-      "id": 22,
-      "original_candidate_id": 70,
-      "rating": "good",
-      "similarity": 0.4831656515598297,
-      "structural_explanation": "Network position determines resource access/productivity. Centrality advantage through strategic complementarities vs threshold-based redistribution in kinship networks.",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Strategic Interactions in Science and Technology Networks",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 1972,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Kinship Networks",
-        "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
-      }
-    },
-    {
-      "id": 23,
-      "original_candidate_id": 121,
-      "rating": "good",
-      "similarity": 0.4821402132511139,
-      "structural_explanation": "Network-based cooperation with thresholds. Resource redistribution in kinship networks vs cooperation-epidemic coevolution with heterogeneity as leverage/weak-link.",
-      "paper_1": {
-        "paper_id": 1972,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Kinship Networks",
-        "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
-      },
-      "paper_2": {
-        "paper_id": 352,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "The impact of heterogeneity on the co-evolution of cooperation and epidemics",
-        "mechanism": "Cooperation and disease transmission coevolve through network structure. Structural heterogeneity creates leverage points - highly connected hubs adopt protection due to amplified risk, catalyzing cooperation. Cost heterogeneity creates weakest links - low-risk individuals free-ride and act as disease reservoirs, undermining cooperation. Heterogeneity is double-edged: influence asymmetry facilitates cooperation, motivation asymmetry degrades it."
-      }
-    },
-    {
-      "id": 24,
-      "original_candidate_id": 28,
-      "rating": "excellent",
-      "similarity": 0.4743817448616028,
-      "structural_explanation": "Network structure determines collective outcomes. Innovation output from network centrality vs ideational breadth from semantic network topology. Both show feedback between individual position and collective results.",
-      "paper_1": {
-        "paper_id": 77,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden",
-        "mechanism": "Firms collaborate forming innovation network. Central firms access diverse knowledge from multiple partners enhancing innovation output. Peripheral firms limited by fewer connections. Network structure (centrality) determines innovation capacity. Successful innovators attract more partners (preferential attachment) reinforcing centrality advantage."
-      },
-      "paper_2": {
-        "paper_id": 644,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Semantic Memory to Collective Creativity",
-        "mechanism": "Individual semantic network topology determines ideational breadth. When agents exchange ideation traces, lower initial overlap predicts larger stimulation gains. Shared inspiration sources create network-level redundancy, forming feedback between individual cognitive structure and collective outcomes."
-      }
-    },
-    {
-      "id": 25,
-      "original_candidate_id": 120,
-      "rating": "good",
-      "similarity": 0.4681107997894287,
-      "structural_explanation": "Network-mediated strategic behavior. Threshold resource redistribution based on relatedness vs relative performance concerns driving risk-taking. Both show network feedback on strategic decisions.",
-      "paper_1": {
-        "paper_id": 1972,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Kinship Networks",
-        "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
-      },
-      "paper_2": {
-        "paper_id": 199,
-        "arxiv_id": "2506.03914v1",
-        "domain": "econ",
-        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      }
-    },
-    {
-      "id": 26,
-      "original_candidate_id": 89,
-      "rating": "good",
-      "similarity": 0.46404770016670227,
-      "structural_explanation": "Network-mediated shock/event propagation. Contagion through dependency links vs extreme event suppression through drive. Both show network topology affects system-wide dynamics.",
-      "paper_1": {
-        "paper_id": 814,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "DeFi Credit Exposures and Contagion",
-        "mechanism": "Token-mediated dependencies create dense inter-component connections. A shock to one component propagates through dependency links causing contagion effects. Network topology and link weights determine the extent and path of cascading failures across the system."
-      },
-      "paper_2": {
-        "paper_id": 922,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Controlling Extreme Events in Networks",
-        "mechanism": "A single driving signal applied to one network component suppresses extreme events throughout the system. In coupled components, drive breaks phase-locking between elements. In networked systems, drive disrupts protoevent frequency dynamics causing frequency decoupling that prevents extreme event cascades."
-      }
-    },
-    {
-      "id": 27,
-      "original_candidate_id": 78,
-      "rating": "good",
-      "similarity": 0.46291446685791016,
-      "structural_explanation": "Cooperation dilemmas with network structure. Public goods reciprocity vs threshold-based resource redistribution. Both involve cooperative behavior shaped by social connections.",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Human-AI Cooperation in Public Goods Game",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 1972,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Threshold Resource Redistribution in Kinship Networks",
-        "mechanism": "When agents fall below a resource threshold, they solicit resources from connected neighbors based on relatedness. Redistribution creates feedback between kinship network structure and reproduction ability. This enables population survival at lower resource densities but increases network heterogeneity and local centralization."
-      }
-    },
-    {
-      "id": 28,
-      "original_candidate_id": 148,
-      "rating": "excellent",
-      "similarity": 0.4626443088054657,
-      "structural_explanation": "Coevolution of node attributes and network structure. Relative performance concerns vs opinion-network dynamics. Both show feedback: attributes affect connections, connections affect attributes.",
-      "paper_1": {
-        "paper_id": 199,
-        "arxiv_id": "2506.03914v1",
-        "domain": "econ",
-        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 29,
-      "original_candidate_id": 79,
-      "rating": "good",
-      "similarity": 0.45332223176956177,
-      "structural_explanation": "Both are cooperation dilemmas with free-riding. Public goods game vs shared resource cleaning problem. Multi-stability and behavioral feedback in both.",
-      "paper_1": {
-        "paper_id": 100,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Human-AI Cooperation in Public Goods Game",
-        "mechanism": "Reciprocal group dynamics and behavioral inertia drive cooperation levels in groups. Cooperation depends on observed group behavior patterns rather than the identity of participants. These normative mechanisms operate identically regardless of agent type, creating stable cooperation patterns through behavioral feedback."
-      },
-      "paper_2": {
-        "paper_id": 1973,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Free-Rider Problem in Shared Resources",
-        "mechanism": "Shared resource use creates a cooperation dilemma with cleaning costs, contamination risk, and social incentives forming competing pressures. Cleaning cost primarily determines stability of altruistic behavior. The system exhibits multi-stability and hysteresis - small parameter changes can cause abrupt shifts between cooperation and free-riding equilibria."
-      }
-    },
-    {
-      "id": 30,
-      "original_candidate_id": 136,
-      "rating": "excellent",
-      "similarity": 0.44465914368629456,
-      "structural_explanation": "Coevolution of individual states and network/environmental structure. Reputation-resource feedback vs opinion-network coevolution. Both show bidirectional coupling between behavioral states and structural constraints.",
-      "paper_1": {
-        "paper_id": 461,
-        "arxiv_id": "2602.03835v1",
-        "domain": "q-bio",
-        "title": "Indirect Reciprocity with Environmental Feedback",
-        "mechanism": "Individual behaviors shape reputation through social norms while simultaneously affecting collective resource levels. Environmental changes alter payoff structures, creating feedback between strategic behavior and resource dynamics. Reputation-based cooperation interacts with ecological constraints - cooperative behaviors deplete or enhance shared resources, which then reshape the incentives for future cooperation."
-      },
-      "paper_2": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergent structures in coupled opinion and network dynamics",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      }
-    },
-    {
-      "id": 31,
-      "original_candidate_id": "session47_0",
-      "rating": "excellent",
-      "similarity": 0.6193699836730957,
-      "structural_explanation": "Heterogeneous thresholds + decentralized coordination across groups (division of labor) vs information diversity through group sampling (structure-aware updates). Both use threshold heterogeneity + group-level information aggregation to enable collective decision-making.",
-      "paper_1": {
-        "paper_id": 2061,
-        "arxiv_id": "2602.08840v1",
-        "domain": "q-bio",
-        "title": "Division of labor enables efficient collective decision-making under uncertainty",
-        "mechanism": "Decentralized collective decision-making through heterogeneous threshold-based strategies. Small subset of agents explores continuously (low threshold for action) while majority remains idle until expected reward exceeds threshold (high threshold). Information sharing across group enables synchronized action by majority when conditions improve. Optimal explorer fraction scales sublinearly with group size due to information redundancy. Ecological pressure (cost/reward ratio) modulates heterogeneity: intermediate pressure maximizes diversity, extreme conditions favor homogeneity. No central coordination required - group-level policy emerges from individual threshold rules."
-      },
-      "paper_2": {
-        "paper_id": 2044,
-        "arxiv_id": "2602.09503v1",
-        "domain": "physics",
-        "title": "Structure-aware imitation dynamics on higher-order networks",
-        "mechanism": "Agent strategy updating through structure-aware sampling: number of groups sampled and number of peers consulted within each group jointly determine information diversity. Higher information diversity across groups promotes cooperation in multiplayer dilemmas. Update rules interact with group structure (hypergraph topology): sampling more groups increases cross-group information flow, sampling more peers within groups increases within-group consensus. Weak selection regime reveals analytical threshold for cooperation success as function of information diversity metric. Design principle: diversify information sources across groups to enhance cooperation."
-      }
-    },
-    {
-      "id": 34,
-      "original_candidate_id": "session47_3",
-      "rating": "good",
-      "similarity": 0.5783430337905884,
-      "structural_explanation": "Structure-aware sampling (group-level information diversity) promotes cooperation in multiplayer dilemmas vs network opacity traps agents in echo chambers competing against hallucinated peers. Both use information sampling structure to shape collective strategic outcomes.",
-      "paper_1": {
-        "paper_id": 2044,
-        "arxiv_id": "2602.09503v1",
-        "domain": "physics",
-        "title": "Structure-aware imitation dynamics on higher-order networks",
-        "mechanism": "Agent strategy updating through structure-aware sampling: number of groups sampled and number of peers consulted within each group jointly determine information diversity. Higher information diversity across groups promotes cooperation in multiplayer dilemmas. Update rules interact with group structure (hypergraph topology): sampling more groups increases cross-group information flow, sampling more peers within groups increases within-group consensus. Weak selection regime reveals analytical threshold for cooperation success as function of information diversity metric. Design principle: diversify information sources across groups to enhance cooperation."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "2602.10053v1",
-        "domain": "cs",
-        "title": "The Architecture of Illusion: Network Opacity",
-        "mechanism": "Escalation principle in strategic complements: Restricting information (reducing network transparency p) traps agents in echo chambers where they compete against hallucinated high-sophistication peers. In games of strategic complements, opacity maximizes aggregate effort by preventing agents from coordinating on low-effort equilibrium. Conversely, transparency required in coordination games to minimize variance. Network topology functions as cognitive zoom lens."
-      }
-    },
-    {
-      "id": 35,
-      "original_candidate_id": "session47_4",
-      "rating": "good",
-      "similarity": 0.5527722835540771,
-      "structural_explanation": "Relative performance concerns create strategic interdependencies through network links; peer comparisons drive behavior vs opacity induces sophisticated bias where agents overestimate opponent depth based on local sample. Network structure biases perception and strategy in both.",
-      "paper_1": {
-        "paper_id": 199,
-        "arxiv_id": "2506.03914v1",
-        "domain": "econ",
-        "title": "Mean-Field Price Formation with Network of Relative Performance Concerns",
-        "mechanism": "Agents care about their performance relative to connected peers. Relative performance concerns create strategic interdependencies through network links. Risk-taking behavior adjusts based on peer comparisons. Network topology determines how competitive pressures propagate. This peer comparison mechanism affects equilibrium asset prices through aggregated strategic adjustments."
-      },
-      "paper_2": {
-        "paper_id": 2170,
-        "arxiv_id": "2602.10053v1",
-        "domain": "cs",
-        "title": "The Architecture of Illusion: Network Opacity",
-        "mechanism": "Escalation principle in strategic complements: Restricting information (reducing network transparency p) traps agents in echo chambers where they compete against hallucinated high-sophistication peers. In games of strategic complements, opacity maximizes aggregate effort by preventing agents from coordinating on low-effort equilibrium. Conversely, transparency required in coordination games to minimize variance. Network topology functions as cognitive zoom lens."
-      }
-    },
-    {
-      "id": 40,
-      "original_candidate_id": "session47_9",
-      "rating": "good",
-      "similarity": 0.5331863760948181,
-      "structural_explanation": "Spatial spillovers and network externalities amplify each other multiplicatively; cumulative pressure accumulates along paths vs local cohesion-seeking rewires ego networks (decreasing context overlap, increasing mobility), causing global fragmentation. Both demonstrate unintended collective outcomes from individual-level dynamics on spatial-network structures.",
-      "paper_1": {
-        "paper_id": 191,
-        "arxiv_id": "2506.07896v1",
-        "domain": "econ",
-        "title": "Technology Adoption and Network Externalities in Financial Systems",
-        "mechanism": "Technology adoption spreads through spatial and network channels. Spatial spillovers and network externalities interact multiplicatively - nearby adoption and connected peer adoption amplify each other. Cumulative adoption pressure accumulates along stochastic paths through spatial-network space. Network position amplifies or dampens spatial effects, creating non-linear adoption dynamics."
-      },
-      "paper_2": {
-        "paper_id": 2083,
-        "arxiv_id": "2602.00234v2",
-        "domain": "physics",
-        "title": "Fragmentation of longitudinal social network",
-        "mechanism": "Local cohesion-seeking yields global fragmentation: Social cohesion (average closure) declines >15% over 12 years despite no demographic compositional change. Decline due to rewiring in individual ego networks\u2014decreasing overlap of social contexts, greater geographical mobility. Residential relocation temporarily increases local closure, but causes global network fragmentation. Demonstrates unintended collective consequence: individual-level cohesion-seeking behavior fragments population-scale structure."
-      }
-    },
-    {
-      "id": 38,
-      "original_candidate_id": "session49_3",
-      "rating": "good",
-      "similarity": 0.6166112422943115,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 917,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Critical Slowing Down at Bifurcations",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      },
-      "paper_2": {
-        "paper_id": 153,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Heterogeneity dominates irreversibility in random Markov models",
-        "mechanism": "Markov dynamics combine heterogeneity and asymmetry (broken detailed balance). Heterogeneity parameter controls transition rate variability. Asymmetry parameter controls forward-backward correlation. Critical locus emerges where relaxation times diverge. Entropy production and predictive information depend strongly on heterogeneity but weakly on asymmetry. Near criticality, small heterogeneity changes cause large dynamical shifts."
-      }
-    },
-    {
-      "id": 39,
-      "original_candidate_id": "session49_4",
-      "rating": "good",
-      "similarity": 0.6001496911048889,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 457,
-        "arxiv_id": "2602.01492v1",
-        "domain": "q-bio",
-        "title": "From Discrete to Continuous Mixed Populations of Conformists, Nonconformists, and Imitators",
-        "mechanism": "Three behavioral types interact: conformists benefit from choosing common strategies, nonconformists profit from rare strategies, and imitators copy highest earners. Population proportions fluctuate in finite populations but equilibrate as population size increases. Strategy proportions undergo perpetual oscillations in small populations, but fluctuation amplitudes approach zero in large populations through stochastic averaging."
-      },
-      "paper_2": {
-        "paper_id": 369,
-        "arxiv_id": "2602.00948v1",
-        "domain": "physics",
-        "title": "FinEvo: From Isolated Backtests to Ecological Market Games for Multi-Agent Financial Strategy Evolution",
-        "mechanism": "Strategy distributions evolve through selection (performance-based survival), innovation (mutation), and environmental perturbation (external shocks). Individual agents adapt using local signals while population composition shifts based on relative fitness. Two-layer adaptation - individual learning plus population-level evolution - determines whether strategies persist, collapse, or form coalitions."
-      }
-    },
-    {
-      "id": 46,
-      "original_candidate_id": "session52_9",
-      "rating": "good",
-      "similarity": 0.509902834892273,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 917,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Critical Slowing Down at Bifurcations",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      },
-      "paper_2": {
-        "paper_id": 2194,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Emergence of Superintelligence from Critical Dynamics",
-        "mechanism": "Qualitative phase transition via spectral condensation at criticality. Progressive reentrant coupling drives system toward infrared critical regime where extensive band of slow collective modes emerges (spectral condensation), reorganizing dynamics qualitatively. Creates emergent capabilities absent at subcritical regime - transition in kind not degree, regardless of system scale."
-      }
-    },
-    {
-      "id": 48,
-      "original_candidate_id": "session52_11",
-      "rating": "good",
-      "similarity": 0.5062606334686279,
-      "structural_explanation": "",
-      "paper_1": {
-        "paper_id": 191,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Technology Adoption and Network Externalities in Financial Systems",
-        "mechanism": "Technology adoption spreads through spatial and network channels. Spatial spillovers and network externalities interact multiplicatively - nearby adoption and connected peer adoption amplify each other. Cumulative adoption pressure accumulates along stochastic paths through spatial-network space. Network position amplifies or dampens spatial effects, creating non-linear adoption dynamics."
-      },
-      "paper_2": {
-        "paper_id": 2044,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Structure-aware imitation dynamics on higher-order networks",
-        "mechanism": "Higher-order network structure (beyond pairwise) shapes imitation dynamics through group-dependent adoption rates. Information diversity achieved through structured sampling from local neighborhoods. Adoption probability depends on group composition and size, not just neighbor count. Network hypergraph structure determines equilibrium strategy distributions through sampling bias."
-      }
-    },
-    {
-      "id": 45,
-      "original_candidate_id": "session54_13",
-      "rating": "good",
-      "similarity": 0.5757,
-      "structural_explanation": "Both describe transfer learning across related but distinct domains by separating shared vs domain-specific components. Mechanism 1 uses explicit disentanglement (domain-invariant + domain-specific features) with mutual information optimization. Mechanism 2 uses structured graph representations to identify shared principles. Structural match around the problem: leverage commonalities for transfer while preserving domain-specific distinctiveness.",
-      "paper_1": {
-        "paper_id": 1425,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Feature disentanglement into domain-invariant and domain-specific components mitigates negative transfer in multi-dataset training. Cross-attention fusion adaptively models component interactions. Mutual information optimization maximizes domain-invariant consistency while minimizing domain-specific redundancy. Complementary shared-private representations enable knowledge transfer while preserving dataset-specific discriminability."
-      },
-      "paper_2": {
-        "paper_id": 117,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Untitled",
-        "mechanism": "Transfer learning with structured graph representations enables few-shot adaptation across related domains by identifying shared interaction principles from well-studied systems and rapidly adapting to new contexts with minimal training data."
-      }
-    },
-    {
-      "id": 47,
-      "original_candidate_id": "session54_18",
-      "rating": "good",
-      "similarity": 0.5663,
-      "structural_explanation": "Both describe world models that learn action-conditioned prediction for control. Mechanism 1 focuses on in-context learning of flexible bindings (objects \u2194 locations) through sequential prediction. Mechanism 2 focuses on transfer from human video to robot control via latent action representations. Structural match: action-conditioned prediction as substrate for world modeling that enables planning and control through learned dynamics.",
-      "paper_1": {
-        "paper_id": 42,
-        "arxiv_id": "N/A",
-        "domain": "biology",
-        "title": "Untitled",
-        "mechanism": "Action-conditioned sequential prediction enables path integration and dynamic object-location binding for world modeling. Prediction accuracy improves across sequence through in-context learning. Structured representations with flexible binding emerge to support prediction - new bindings learnable late in sequence, out-of-distribution bindings acquirable through sequential exposure."
-      },
-      "paper_2": {
-        "paper_id": 1500,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Continuous latent actions serve as unified proxy actions, enabling interaction knowledge transfer from unlabeled human videos to robot control. World model learns diverse interactions from 44k hours of egocentric video. Post-training on small-scale robot data yields physics understanding and precise action controllability. Generative modeling enables teleoperation, policy evaluation, and planning."
-      }
-    },
-    {
-      "id": 53,
-      "original_candidate_id": "session54_30",
-      "rating": "good",
-      "similarity": 0.5344,
-      "structural_explanation": "Both describe negative feedback mechanisms preventing unsustainable extremes. Mechanism 1: resource exploitation creates depletion feedback (over-exploitation \u2192 stock collapse \u2192 forced reduction). Mechanism 2: leverage creates cost feedback (extreme positions \u2192 high funding costs \u2192 rebalancing \u2192 mean reversion). Structural match: economic feedback loops that regulate behavior by making extreme states economically unsustainable, preventing runaway dynamics through automatic stabilization.",
-      "paper_1": {
-        "paper_id": 451,
-        "arxiv_id": "N/A",
-        "domain": "unknown",
-        "title": "Untitled",
-        "mechanism": "Resource stock accumulates from production flow. Exploitation (flow out) versus conservation (stock maintenance) tradeoff. Maximum sustainable yield occurs at intermediate stock level. Over-exploitation depletes stock below replenishment threshold causing collapse."
-      },
-      "paper_2": {
-        "paper_id": 194,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Untitled",
-        "mechanism": "Funding rates in perpetual futures impose economic costs on leveraged positions. High funding creates pressure to reduce directional exposure. Capital rebalancing occurs when funding costs exceed expected returns. Funding mechanisms act as negative feedback regulating trader behavior - extreme positions become economically unsustainable, creating mean-reverting pressure that defines trading ranges."
-      }
-    },
-    {
-      "id": 54,
-      "original_candidate_id": "session54_35",
-      "rating": "good",
-      "similarity": 0.5275,
-      "structural_explanation": "Both describe learned adaptive resource allocation strategies. Mechanism 1: task difficulty creates phase transition in optimal strategy (gradual decay vs maintain-then-drop), threshold based on signal-to-noise ratio. Mechanism 2: entropy-based dual-signal allocation concentrates resources where information gain is highest (global: high-value samples, local: critical moments). Structural match: adaptive allocation based on informativeness/difficulty, with system learning to concentrate resources where they provide maximum learning value rather than distributing uniformly.",
-      "paper_1": {
-        "paper_id": 1540,
-        "arxiv_id": "N/A",
-        "domain": "stat",
-        "title": "Untitled",
-        "mechanism": "Phase transition in optimal strategy based on task difficulty regime. System exhibits qualitatively different behaviors (power decay vs warmup-stable-decay) separated by sharp threshold determined by ratio of signal learning rate to noise forgetting capacity. Easy-task regime benefits from gradual decay, hard-task regime requires maintaining peak resources until near completion."
-      },
-      "paper_2": {
-        "paper_id": 1565,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Untitled",
-        "mechanism": "Dual-signal adaptive resource allocation using entropy as proxy for learning value. Global level: relative entropy change identifies high-value samples for prioritized exploration. Local level: absolute entropy peaks identify critical moments within each trajectory. Concentrates computation where information gain is highest rather than uniform distribution."
-      }
-    },
-    {
-      "id": 49,
-      "original_candidate_id": "session56_5",
-      "rating": "good",
-      "similarity": 0.6976,
-      "structural_explanation": "Both describe opinion evolution through multiple interacting processes operating at different scales. One emphasizes opinion-network coevolution with bidirectional feedback (opinions shape network, network shapes opinions), while the other emphasizes diffusion-convection-reaction coupling across local, global, and individual scales. Good structural match showing multi-scale coupling in opinion formation.",
-      "paper_1": {
-        "paper_id": 354,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Multi-level opinion dynamics with coupled processes",
-        "mechanism": "Individuals' opinions and network edge weights coevolve through coupled dynamics. Interaction strength depends on opinion distance. Similar opinions strengthen network connections. Connection strength amplifies opinion influence. This creates feedback between opinion convergence and network structure formation. Interaction function form determines emergent structures and stability."
-      },
-      "paper_2": {
-        "paper_id": 632,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Multi-level opinion dynamics with coupled processes",
-        "mechanism": "Opinion evolution emerges from three coupled processes: diffusion (local influence spreading), convection (directional opinion flow driven by global trends), and reaction (endogenous opinion change). Each level operates at distinct scales\u2014local peer-to-peer, global population-wide, and individual internal\u2014that interact through multi-scale coupling. The system exhibits dynamics from interacting particle theory projected onto opinion space."
-      }
-    },
-    {
-      "id": 60,
-      "original_candidate_id": "session56_41",
-      "rating": "good",
-      "similarity": 0.528,
-      "structural_explanation": "Both describe how network position creates productivity advantages, but with important distinction between relational importance (routing, interaction frequency) and intrinsic causal importance. One emphasizes centrality creating complementarities, other reveals frequently-routed experts may have limited functional impact while sparsely-routed ones are causally critical. Good structural match showing surface vs deep network effects.",
-      "paper_1": {
-        "paper_id": 87,
-        "arxiv_id": "N/A",
-        "domain": "econ",
-        "title": "Dual importance structure: relational vs causal influence",
-        "mechanism": "An agent's position in a collaboration network determines their productivity. Higher network centrality increases output through strategic complementarities with connected agents. Activity in one domain (scientific) enhances productivity in another domain (technological), but this effect is asymmetric - the reverse direction shows no detectable influence."
-      },
-      "paper_2": {
-        "paper_id": 668,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Dual importance structure: relational vs causal influence",
-        "mechanism": "Expert importance exhibits dual structure: relational importance (routing frequency, interaction centrality) diverges from intrinsic importance (causal influence via gradient attribution). Frequently-routed experts may act as structural hubs with limited functional impact, while sparsely-routed experts can be causally critical. Masking intrinsically-important experts causes disproportionate collapse in interaction topology compared to masking frequent peers, revealing hidden causal dependencies."
-      }
-    },
-    {
-      "id": 45,
-      "original_candidate_id": "session57_62",
-      "rating": "good",
-      "similarity": 0.5102,
-      "structural_explanation": "Both mechanisms describe dual-scope representation learning where systems must capture both context-invariant structure AND context-specific details simultaneously. M1 decomposes features into domain-invariant (shared across datasets) and domain-specific (private) components using mutual information optimization. M2 uses dual-head architecture to capture local pairwise regulatory logic and global cross-context expression patterns. Universal structure: complementary representations (shared-private or local-global) enable robust performance under distributional shift. Both use contrastive/mutual-information regularization to maintain separation between scopes while enabling knowledge transfer.",
-      "paper_1": {
-        "paper_id": 1425,
-        "arxiv_id": "N/A",
-        "domain": "cs",
-        "title": "Dual-scope representation: invariant vs specific",
-        "mechanism": "Feature disentanglement into domain-invariant and domain-specific components mitigates negative transfer in multi-dataset training. Cross-attention fusion adaptively models component interactions. Mutual information optimization maximizes domain-invariant consistency while minimizing domain-specific redundancy. Complementary shared-private representations enable knowledge transfer while preserving dataset-specific discriminability."
-      },
-      "paper_2": {
-        "paper_id": 125,
-        "arxiv_id": "N/A",
-        "domain": "q-bio",
-        "title": "Dual-scope representation: invariant vs specific",
-        "mechanism": "Dual-scope representation learning with contrastive regularization under distribution shift. System captures both local pairwise regulatory logic and global cross-context expression patterns via dual-head architecture. Contrastive learning enforces structural constraints in representation space, providing robustness against noise, sparsity, and cross-domain distributional shifts beyond what supervised signal alone provides."
-      }
-    },
-    {
-      "id": 46,
-      "original_candidate_id": "session57_63",
-      "rating": "good",
-      "similarity": 0.5099,
-      "structural_explanation": "Both mechanisms describe how approaching criticality creates slow dynamics that qualitatively reorganize system behavior. M1: near bifurcation, convergence to steady state slows dramatically with relaxation time diverging according to universal scaling laws. M2: progressive coupling drives system toward infrared critical regime where spectral condensation creates extensive band of slow collective modes. Universal structure: criticality \u2192 emergence of slow timescales \u2192 qualitative transition in dynamics (not just degree). Both show transition from fast convergence (subcritical) to slow dynamics (critical) that reorganizes the entire system.",
-      "paper_1": {
-        "paper_id": 921,
-        "arxiv_id": "N/A",
-        "domain": "nlin",
-        "title": "Critical phenomena \u2192 slow dynamics",
-        "mechanism": "As a system approaches a bifurcation point, convergence to steady state slows dramatically. Near criticality, relaxation time diverges according to universal scaling laws. The system exhibits characteristic critical exponents that govern short-time behavior, asymptotic decay, and crossover between regimes."
-      },
-      "paper_2": {
-        "paper_id": 2194,
-        "arxiv_id": "N/A",
-        "domain": "physics",
-        "title": "Critical phenomena \u2192 slow dynamics",
-        "mechanism": "Qualitative phase transition via spectral condensation at criticality. Progressive reentrant coupling drives system toward infrared critical regime where extensive band of slow collective modes emerges (spectral condensation), reorganizing dynamics qualitatively. Creates emergent capabilities absent at subcritical regime - transition in kind not degree, regardless of system scale."
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
       }
     }
-  ]
-}
+  },
+  {
+    "id": 3,
+    "title": "Unknown \u2194 Q-Bio",
+    "domains": [
+      "unknown",
+      "q-bio"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.7364,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": "Biology \u2194 Computer_Science",
+    "domains": [
+      "biology",
+      "computer_science"
+    ],
+    "explanation": "Both describe bottom-up emergence from local rules to global patterns. While they share the same conceptual framework (self-organization without central control), they're almost tautological - essentially the same concept described in two domains. Good match but not surprising.",
+    "pattern": "Local interaction rules producing emergent global behavior",
+    "similarity": 0.7364,
+    "rating": "good",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 299,
+      "mechanism_2": 301
+    },
+    "papers": {
+      "paper_1": "Collective behavior in animal groups",
+      "paper_2": "Agent-based simulation tutorial"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.7364,
+    "rating": "excellent",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "title": "Physics \u2194 Network Science",
+    "domains": [
+      "physics",
+      "network_science"
+    ],
+    "explanation": "Both mechanisms describe how network clustering and modular structure affect cascade propagation. The physics paper focuses on two-tiered spreading in modular networks, while network science describes clustering amplification. These are complementary aspects of the same phenomenon - network topology constraining cascade dynamics through redundant pathways and community structure.",
+    "pattern": "Network modularity/clustering creating multi-scale cascade dynamics",
+    "similarity": 0.731,
+    "rating": "excellent",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 250,
+      "mechanism_2": 274
+    },
+    "papers": {
+      "paper_1": "Cascading dynamics in modular networks",
+      "paper_2": "Cascade dynamics on clustered network"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.7064,
+    "rating": "excellent",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.7064,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "title": "Unknown \u2194 Q-Bio",
+    "domains": [
+      "unknown",
+      "q-bio"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.7064,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "title": "Sociology \u2194 Network Science",
+    "domains": [
+      "sociology",
+      "network_science"
+    ],
+    "explanation": "Both describe how network topology shapes collective dynamics. The sociology paper emphasizes information flow determining collective outcomes, while network science focuses on structural properties constraining dynamics. Clear isomorphism in how structure determines function.",
+    "pattern": "Network topology constraining collective dynamics",
+    "similarity": 0.7008,
+    "rating": "good",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 266,
+      "mechanism_2": 273
+    },
+    "papers": {
+      "paper_1": "Stewardship of global collective behavior",
+      "paper_2": "Exploring Network Structure, Dynamics, and Function using NetworkX"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Cognitive Science \u2194 Physics",
+    "domains": [
+      "cognitive_science",
+      "physics"
+    ],
+    "explanation": "Beautiful cross-domain match! Both describe multiplicative cascade dynamics creating scale-invariant patterns. Cognitive science finds this in mental performance fluctuations, physics in avalanche dynamics. The structural mechanism is identical - cascading interactions across scales generating power-law distributions.",
+    "pattern": "Multiplicative cascades creating scale-invariant dynamics",
+    "similarity": 0.699,
+    "rating": "excellent",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 270,
+      "mechanism_2": 305
+    },
+    "papers": {
+      "paper_1": "Scaling in cognitive performance reflects multiplicative multifractal cascade",
+      "paper_2": "Avalanche dynamics in evolution, growth, and depinning models"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Physics \u2194 Cs",
+    "domains": [
+      "physics",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6976,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 13,
+    "title": "Climate Science \u2194 Earth Science",
+    "domains": [
+      "climate_science",
+      "earth_science"
+    ],
+    "explanation": "Complementary mechanisms for system tipping points. One describes noise-induced vs critical transitions, the other rate-dependent tipping. Together they form a complete typology of rapid transitions: bifurcation-driven, noise-driven, and rate-driven.",
+    "pattern": "Multiple pathways to system tipping transitions",
+    "similarity": 0.6845,
+    "rating": "good",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 280,
+      "mechanism_2": 308
+    },
+    "papers": {
+      "paper_1": "Tipping points: Early warning and wishful thinking",
+      "paper_2": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Biology \u2194 Cognitive Science",
+    "domains": [
+      "biology",
+      "cognitive_science"
+    ],
+    "explanation": "Outstanding match between heartbeat dynamics and cognitive performance! Both exhibit multifractal cascades across time scales. The biology paper shows this in healthy hearts (lost in disease), the cognitive paper in mental performance. Same mathematical structure - multiplicative interactions across scales - manifesting in completely different biological systems.",
+    "pattern": "Multifractal cascades in healthy biological dynamics",
+    "similarity": 0.679,
+    "rating": "excellent",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 263,
+      "mechanism_2": 270
+    },
+    "papers": {
+      "paper_1": "From 1/f noise to multifractal cascades in heartbeat dynamics",
+      "paper_2": "Scaling in cognitive performance reflects multiplicative multifractal cascade"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Physics \u2194 Cognitive Science",
+    "domains": [
+      "physics",
+      "cognitive_science"
+    ],
+    "explanation": "Turbulence energy cascades match cognitive performance cascades! Both show multiplicative cascade processes creating intermittent multifractal structures. Physics describes energy transfer in fluids, cognitive science describes mental performance fluctuations. Identical mathematical mechanism.",
+    "pattern": "Intermittent multifractal cascades from multiplicative processes",
+    "similarity": 0.6769,
+    "rating": "excellent",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 251,
+      "mechanism_2": 270
+    },
+    "papers": {
+      "paper_1": "Multifractal Cascade Dynamics and Turbulent Intermittency",
+      "paper_2": "Scaling in cognitive performance reflects multiplicative multifractal cascade"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Two complementary synchronization mechanisms. One describes continuous coupling phase transition (Kuramoto model), the other pulse-coupled synchronization. Both explain how populations of oscillators achieve collective synchrony through different coupling mechanisms.",
+    "pattern": "Phase transition to collective synchronization",
+    "similarity": 0.6707,
+    "rating": "good",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 277,
+      "mechanism_2": 278
+    },
+    "papers": {
+      "paper_1": "From Kuramoto to Crawford",
+      "paper_2": "Synchronization of Pulse-Coupled Biological Oscillators"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6692,
+    "rating": "excellent",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 18,
+    "title": "Unknown \u2194 Econ",
+    "domains": [
+      "unknown",
+      "econ"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6692,
+    "rating": "excellent",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in econ",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6692,
+    "rating": "excellent",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 20,
+    "title": "Socioeconomics \u2194 Computer_Science",
+    "domains": [
+      "socioeconomics",
+      "computer_science"
+    ],
+    "explanation": "Statistical mechanics approach to agent-based systems appears in both domains. Socioeconomics uses it for collective behaviors, computer science for emergent simulations. Same framework - individual agents following rules produce statistical regularities.",
+    "pattern": "Statistical mechanics of agent-based collective behavior",
+    "similarity": 0.6618,
+    "rating": "good",
+    "session": 75,
+    "mechanism_ids": {
+      "mechanism_1": 292,
+      "mechanism_2": 301
+    },
+    "papers": {
+      "paper_1": "Mathematical Modeling of Collective Behavior in Socio-Economic and Life Sciences",
+      "paper_2": "Agent-based simulation tutorial"
+    }
+  },
+  {
+    "id": 21,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6278,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 22,
+    "title": "Unknown \u2194 Q-Bio",
+    "domains": [
+      "unknown",
+      "q-bio"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6278,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 23,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6166,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 24,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6166,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 25,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6166,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "title": "Nlin \u2194 Physics",
+    "domains": [
+      "nlin",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6166,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in nlin",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 27,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6001,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 28,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6001,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 29,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6001,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 30,
+    "title": "Q-Bio \u2194 Physics",
+    "domains": [
+      "q-bio",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.6001,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 31,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5997,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 32,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5997,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 33,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5997,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "title": "Econ \u2194 Q-Bio",
+    "domains": [
+      "econ",
+      "q-bio"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5997,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in econ",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Beautiful match between self-propelled particles and flocking! Physics describes autonomous units interacting through forces, biology describes three-zone interaction rules. Both explain how local interactions between moving entities create emergent collective patterns.",
+    "pattern": "Self-propelled agents with zone-based interactions creating collective motion",
+    "similarity": 0.5852,
+    "rating": "excellent",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 240,
+      "mechanism_2": 259
+    },
+    "papers": {
+      "paper_1": "Self-propelled particles",
+      "paper_2": "Collective patterns from zonal interaction"
+    }
+  },
+  {
+    "id": 36,
+    "title": "Sociology \u2194 Biology",
+    "domains": [
+      "sociology",
+      "biology"
+    ],
+    "explanation": "Information networks shaping collective outcomes matches biological self-organization. Both describe how structure and dynamics of local interactions determine global behavior without central control.",
+    "pattern": "Network-mediated emergence of collective coherence",
+    "similarity": 0.5819,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 266,
+      "mechanism_2": 299
+    },
+    "papers": {
+      "paper_1": "Stewardship of global collective behavior",
+      "paper_2": "Collective behavior in animal groups"
+    }
+  },
+  {
+    "id": 37,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5757,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 38,
+    "title": "Cs \u2194 Q-Bio",
+    "domains": [
+      "cs",
+      "q-bio"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5757,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 39,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Stochastic pulsing in biology matches phase transition in physics! Individual cells randomly pulse below threshold then collectively synchronize above it - identical to Kuramoto oscillators transitioning to synchrony at critical coupling.",
+    "pattern": "Threshold-driven phase transition from disorder to synchronization",
+    "similarity": 0.5717,
+    "rating": "excellent",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 264,
+      "mechanism_2": 277
+    },
+    "papers": {
+      "paper_1": "Stochastic pulsing triggers collective synchronization",
+      "paper_2": "From Kuramoto to Crawford"
+    }
+  },
+  {
+    "id": 40,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5714,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 41,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5714,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 42,
+    "title": "Econ \u2194 Cs",
+    "domains": [
+      "econ",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5714,
+    "rating": "excellent",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in econ",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 43,
+    "title": "Robotics \u2194 Biology",
+    "domains": [
+      "robotics",
+      "biology"
+    ],
+    "explanation": "Robot swarms developing specialized roles matches biological stigmergy. Both describe distributed problem-solving through environment modification and local interactions without central planning.",
+    "pattern": "Stigmergic self-organization and role differentiation",
+    "similarity": 0.5707,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 281,
+      "mechanism_2": 311
+    },
+    "papers": {
+      "paper_1": "Evolving Mobile Robots",
+      "paper_2": "Distributed problem-solving through stigmergy"
+    }
+  },
+  {
+    "id": 44,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5687,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 45,
+    "title": "Unknown \u2194 Econ",
+    "domains": [
+      "unknown",
+      "econ"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5687,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in econ",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 46,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5663,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 47,
+    "title": "Biology \u2194 Cs",
+    "domains": [
+      "biology",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5663,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in biology",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 48,
+    "title": "Neuroscience \u2194 Biology",
+    "domains": [
+      "neuroscience",
+      "biology"
+    ],
+    "explanation": "Neural circuits generating sustained/oscillatory responses matches spatial pattern emergence in excitable cells. Both involve local excitable dynamics producing emergent spatiotemporal patterns.",
+    "pattern": "Excitable dynamics generating spatiotemporal patterns",
+    "similarity": 0.5649,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 254,
+      "mechanism_2": 269
+    },
+    "papers": {
+      "paper_1": "Internally generated neural activity",
+      "paper_2": "Spatial pattern emergence from local excitable dynamics"
+    }
+  },
+  {
+    "id": 49,
+    "title": "Animal Behavior \u2194 Biology",
+    "domains": [
+      "animal_behavior",
+      "biology"
+    ],
+    "explanation": "Individual heterogeneity structuring collective dynamics! Animal personality differences (bold/shy, fast/slow) create heterogeneous interaction networks that shape group behavior - key insight that diversity drives collective patterns.",
+    "pattern": "Individual heterogeneity structuring collective dynamics",
+    "similarity": 0.5595,
+    "rating": "excellent",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 276,
+      "mechanism_2": 299
+    },
+    "papers": {
+      "paper_1": "Individual heterogeneity structures collective dynamics",
+      "paper_2": "Self-organized collective coherence"
+    }
+  },
+  {
+    "id": 50,
+    "title": "Network Science \u2194 Physics",
+    "domains": [
+      "network_science",
+      "physics"
+    ],
+    "explanation": "Network topology constraining dynamics meets small-world enhancing synchronization. Complementary aspects - general principle that structure shapes dynamics, specific case of shortcuts improving sync.",
+    "pattern": "Small-world topology enhancing network synchronization",
+    "similarity": 0.5544,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 273,
+      "mechanism_2": 283
+    },
+    "papers": {
+      "paper_1": "Network topology shapes dynamical processes",
+      "paper_2": "Small-world topology enhances synchronizability"
+    }
+  },
+  {
+    "id": 51,
+    "title": "Earth Science \u2194 Physics",
+    "domains": [
+      "earth_science",
+      "physics"
+    ],
+    "explanation": "Rate-dependent tipping matches noise-induced attractor hopping. Two complementary mechanisms for sudden transitions - one from parameter change rate, other from stochastic fluctuations between basins.",
+    "pattern": "Multiple pathways to sudden system transitions",
+    "similarity": 0.5502,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 308,
+      "mechanism_2": 310
+    },
+    "papers": {
+      "paper_1": "Rate-dependent tipping transitions",
+      "paper_2": "Noise-induced attractor hopping"
+    }
+  },
+  {
+    "id": 52,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5484,
+    "rating": "excellent",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 53,
+    "title": "Q-Bio \u2194 Physics",
+    "domains": [
+      "q-bio",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5484,
+    "rating": "excellent",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 54,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5484,
+    "rating": "excellent",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 55,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5484,
+    "rating": "excellent",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 56,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5468,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 57,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5468,
+    "rating": "excellent",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 58,
+    "title": "Physics \u2194 Cs",
+    "domains": [
+      "physics",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5468,
+    "rating": "excellent",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 59,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5443,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 60,
+    "title": "Econ \u2194 Cs",
+    "domains": [
+      "econ",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5443,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in econ",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 61,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5443,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 62,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5443,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 63,
+    "title": "Earth Science \u2194 Climate Science",
+    "domains": [
+      "earth_science",
+      "climate_science"
+    ],
+    "explanation": "Climate tipping points from two perspectives! Earth science focuses on self-reinforcing feedbacks past thresholds, climate science distinguishes noise vs critical transitions. Together they form complete picture of climate instability.",
+    "pattern": "Climate system tipping through feedbacks and critical transitions",
+    "similarity": 0.5436,
+    "rating": "excellent",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 252,
+      "mechanism_2": 280
+    },
+    "papers": {
+      "paper_1": "Critical thresholds trigger self-reinforcing climate state",
+      "paper_2": "Tipping points: Early warning and wishful thinking"
+    }
+  },
+  {
+    "id": 64,
+    "title": "Animal Behavior \u2194 Robotics",
+    "domains": [
+      "animal_behavior",
+      "robotics"
+    ],
+    "explanation": "Animal personality differences structuring groups matches robot role differentiation. Both show how heterogeneity (innate or emergent) in individual behavior creates organized collective dynamics.",
+    "pattern": "Behavioral heterogeneity enabling collective organization",
+    "similarity": 0.5431,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 276,
+      "mechanism_2": 281
+    },
+    "papers": {
+      "paper_1": "Individual heterogeneity structures collective dynamics",
+      "paper_2": "Self-organizing collective behavior"
+    }
+  },
+  {
+    "id": 65,
+    "title": "Network Science \u2194 Physics",
+    "domains": [
+      "network_science",
+      "physics"
+    ],
+    "explanation": "Clustering amplifying cascades meets small-world enhancing sync. Both describe how network structure modifications (adding triangles vs shortcuts) fundamentally change spreading dynamics.",
+    "pattern": "Network structural features amplifying dynamical processes",
+    "similarity": 0.5423,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 274,
+      "mechanism_2": 283
+    },
+    "papers": {
+      "paper_1": "Cascade dynamics on clustered network",
+      "paper_2": "Small-world topology enhances synchronizability"
+    }
+  },
+  {
+    "id": 66,
+    "title": "Optics \u2194 Biology",
+    "domains": [
+      "optics",
+      "biology"
+    ],
+    "explanation": "Multi-scale averaging in optical cascades matches biological emergence across scales! Both describe how processes at one scale average out to create emergent dynamics at higher scales - beautiful cross-domain principle.",
+    "pattern": "Multi-scale averaging creating emergent dynamics",
+    "similarity": 0.5411,
+    "rating": "excellent",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 279,
+      "mechanism_2": 285
+    },
+    "papers": {
+      "paper_1": "Multi-scale averaging in cascaded systems",
+      "paper_2": "Multiscale emergence from individual to population"
+    }
+  },
+  {
+    "id": 67,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5401,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 68,
+    "title": "Q-Bio \u2194 Physics",
+    "domains": [
+      "q-bio",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5401,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 69,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5401,
+    "rating": "good",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 70,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5401,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 71,
+    "title": "Biology \u2194 Animal Behavior",
+    "domains": [
+      "biology",
+      "animal_behavior"
+    ],
+    "explanation": "Zonal interaction rules meet individual heterogeneity. Shows how both spatial structure (zones) and individual differences shape collective animal behavior - complementary organizing principles.",
+    "pattern": "Spatial zones and individual variation structuring collectives",
+    "similarity": 0.5393,
+    "rating": "good",
+    "session": 76,
+    "mechanism_ids": {
+      "mechanism_1": 259,
+      "mechanism_2": 276
+    },
+    "papers": {
+      "paper_1": "Collective patterns from zonal interaction",
+      "paper_2": "Individual heterogeneity structures dynamics"
+    }
+  },
+  {
+    "id": 72,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5369,
+    "rating": "excellent",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 73,
+    "title": "Cs \u2194 Physics",
+    "domains": [
+      "cs",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5369,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 74,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5369,
+    "rating": "excellent",
+    "session": 49,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 75,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5369,
+    "rating": "excellent",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 76,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5344,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 77,
+    "title": "Econ \u2194 Cs",
+    "domains": [
+      "econ",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.528,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in econ",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 78,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5275,
+    "rating": "good",
+    "session": 54,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 79,
+    "title": "Stat \u2194 Cs",
+    "domains": [
+      "stat",
+      "cs"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5275,
+    "rating": "good",
+    "session": 56,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in stat",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 80,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Critical phenomena scaling matches heartbeat multifractal cascades - both show scale-invariant fluctuations at critical points.",
+    "pattern": "Critical scaling and multifractal cascades",
+    "similarity": 0.5186,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 247,
+      "mechanism_2": 263
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring critical scaling and multifractal cascades in physics",
+        "mechanism": "Critical phenomena scaling matches heartbeat multifractal cascades"
+      },
+      "paper_2": {
+        "title": "Paper studying critical scaling and multifractal cascades in biology",
+        "mechanism": "both show scale-invariant fluctuations at critical points."
+      }
+    }
+  },
+  {
+    "id": 81,
+    "title": "Physics \u2194 Economics",
+    "domains": [
+      "physics",
+      "economics"
+    ],
+    "explanation": "Network load redistribution failures match supply chain oscillatory instability - both describe cascading failures from overload.",
+    "pattern": "Cascading network failures from redistribution",
+    "similarity": 0.518,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 253,
+      "mechanism_2": 255
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring cascading network failures from redistribution in physics",
+        "mechanism": "Network load redistribution failures match supply chain oscillatory instability"
+      },
+      "paper_2": {
+        "title": "Paper studying cascading network failures from redistribution in economics",
+        "mechanism": "both describe cascading failures from overload."
+      }
+    }
+  },
+  {
+    "id": 82,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Network synchronization stability matches pulse coupling synchronization - identical mathematical structures for sync stability!",
+    "pattern": "Synchronization stability through coupling",
+    "similarity": 0.5164,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 249,
+      "mechanism_2": 278
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring synchronization stability through coupling in physics",
+        "mechanism": "Network synchronization stability matches pulse coupling synchronization"
+      },
+      "paper_2": {
+        "title": "Paper studying synchronization stability through coupling in biology",
+        "mechanism": "identical mathematical structures for sync stability!"
+      }
+    }
+  },
+  {
+    "id": 83,
+    "title": "Physics \u2194 Earth Science",
+    "domains": [
+      "physics",
+      "earth_science"
+    ],
+    "explanation": "Chaotic bifurcations in phase space match rate-dependent climate tipping - both show sudden transitions from parameter changes.",
+    "pattern": "Bifurcation-driven tipping transitions",
+    "similarity": 0.5139,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 248,
+      "mechanism_2": 308
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring bifurcation-driven tipping transitions in physics",
+        "mechanism": "Chaotic bifurcations in phase space match rate-dependent climate tipping"
+      },
+      "paper_2": {
+        "title": "Paper studying bifurcation-driven tipping transitions in earth_science",
+        "mechanism": "both show sudden transitions from parameter changes."
+      }
+    }
+  },
+  {
+    "id": 84,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Coupled oscillators aligning rhythms perfectly matches biological collective coherence - universal phase-locking principle!",
+    "pattern": "Phase-locking through mutual coupling",
+    "similarity": 0.513,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 243,
+      "mechanism_2": 299
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring phase-locking through mutual coupling in physics",
+        "mechanism": "Coupled oscillators aligning rhythms perfectly matches biological collective coherence"
+      },
+      "paper_2": {
+        "title": "Paper studying phase-locking through mutual coupling in biology",
+        "mechanism": "universal phase-locking principle!"
+      }
+    }
+  },
+  {
+    "id": 85,
+    "title": "Physics \u2194 Computer_Science",
+    "domains": [
+      "physics",
+      "computer_science"
+    ],
+    "explanation": "Self-propelled particle emergence matches bottom-up agent behavior - validates physics models in computational systems.",
+    "pattern": "Emergence from self-propelled agents",
+    "similarity": 0.5103,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 240,
+      "mechanism_2": 301
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring emergence from self-propelled agents in physics",
+        "mechanism": "Self-propelled particle emergence matches bottom-up agent behavior"
+      },
+      "paper_2": {
+        "title": "Paper studying emergence from self-propelled agents in computer_science",
+        "mechanism": "validates physics models in computational systems."
+      }
+    }
+  },
+  {
+    "id": 86,
+    "title": "Cs \u2194 Q-Bio",
+    "domains": [
+      "cs",
+      "q-bio"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5102,
+    "rating": "good",
+    "session": 57,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in cs",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in q-bio",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 87,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5099,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 88,
+    "title": "Nlin \u2194 Physics",
+    "domains": [
+      "nlin",
+      "physics"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5099,
+    "rating": "good",
+    "session": 57,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in nlin",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in physics",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 89,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5078,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 90,
+    "title": "Unknown \u2194 Unknown",
+    "domains": [
+      "unknown",
+      "unknown"
+    ],
+    "explanation": "Cross-domain structural similarity identified",
+    "pattern": "Shared structural mechanism",
+    "similarity": 0.5063,
+    "rating": "good",
+    "session": 52,
+    "mechanism_ids": {
+      "mechanism_1": 0,
+      "mechanism_2": 0
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      },
+      "paper_2": {
+        "title": "Paper studying shared structural mechanism in unknown",
+        "mechanism": "Cross-domain structural similarity identified"
+      }
+    }
+  },
+  {
+    "id": 91,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Phase transition to synchronization matches biological collective coherence - confirms critical coupling threshold universality.",
+    "pattern": "Critical transition to collective synchronization",
+    "similarity": 0.503,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 277,
+      "mechanism_2": 299
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring critical transition to collective synchronization in physics",
+        "mechanism": "Phase transition to synchronization matches biological collective coherence"
+      },
+      "paper_2": {
+        "title": "Paper studying critical transition to collective synchronization in biology",
+        "mechanism": "confirms critical coupling threshold universality."
+      }
+    }
+  },
+  {
+    "id": 92,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Coupled oscillators match pulse-coupled threshold firing - biology implements the physics description exactly!",
+    "pattern": "Oscillator synchronization through pulsed coupling",
+    "similarity": 0.5027,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 243,
+      "mechanism_2": 282
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring oscillator synchronization through pulsed coupling in physics",
+        "mechanism": "Coupled oscillators match pulse-coupled threshold firing"
+      },
+      "paper_2": {
+        "title": "Paper studying oscillator synchronization through pulsed coupling in biology",
+        "mechanism": "biology implements the physics description exactly!"
+      }
+    }
+  },
+  {
+    "id": 93,
+    "title": "Physics \u2194 Socioeconomics",
+    "domains": [
+      "physics",
+      "socioeconomics"
+    ],
+    "explanation": "Active matter assembly matches statistical mechanics of agent behavior - energy dissipation drives collective patterns.",
+    "pattern": "Dissipative collective assembly",
+    "similarity": 0.4834,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 291,
+      "mechanism_2": 292
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring dissipative collective assembly in physics",
+        "mechanism": "Active matter assembly matches statistical mechanics of agent behavior"
+      },
+      "paper_2": {
+        "title": "Paper studying dissipative collective assembly in socioeconomics",
+        "mechanism": "energy dissipation drives collective patterns."
+      }
+    }
+  },
+  {
+    "id": 94,
+    "title": "Network Science \u2194 Socioeconomics",
+    "domains": [
+      "network_science",
+      "socioeconomics"
+    ],
+    "explanation": "Network topology shapes agent-based collective behaviors - structure constrains dynamics universally.",
+    "pattern": "Topology-constrained collective dynamics",
+    "similarity": 0.4828,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 273,
+      "mechanism_2": 292
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring topology-constrained collective dynamics in network_science",
+        "mechanism": "Network topology shapes agent-based collective behaviors"
+      },
+      "paper_2": {
+        "title": "Paper studying topology-constrained collective dynamics in socioeconomics",
+        "mechanism": "structure constrains dynamics universally."
+      }
+    }
+  },
+  {
+    "id": 95,
+    "title": "Physics \u2194 Ecology",
+    "domains": [
+      "physics",
+      "ecology"
+    ],
+    "explanation": "Modular network cascades match habitat heterogeneity from confluence-driven flows - modularity shapes dynamics.",
+    "pattern": "Modular structure shaping cascades",
+    "similarity": 0.4808,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 250,
+      "mechanism_2": 267
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring modular structure shaping cascades in physics",
+        "mechanism": "Modular network cascades match habitat heterogeneity from confluence-driven flows"
+      },
+      "paper_2": {
+        "title": "Paper studying modular structure shaping cascades in ecology",
+        "mechanism": "modularity shapes dynamics."
+      }
+    }
+  },
+  {
+    "id": 96,
+    "title": "Cognitive Science \u2194 Network Science",
+    "domains": [
+      "cognitive_science",
+      "network_science"
+    ],
+    "explanation": "Multiplicative cascades and network topology both control perturbation propagation - structure determines spread.",
+    "pattern": "Structural control of cascade propagation",
+    "similarity": 0.4802,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 270,
+      "mechanism_2": 273
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring structural control of cascade propagation in cognitive_science",
+        "mechanism": "Multiplicative cascades and network topology both control perturbation propagation"
+      },
+      "paper_2": {
+        "title": "Paper studying structural control of cascade propagation in network_science",
+        "mechanism": "structure determines spread."
+      }
+    }
+  },
+  {
+    "id": 97,
+    "title": "Physics \u2194 Computer_Science",
+    "domains": [
+      "physics",
+      "computer_science"
+    ],
+    "explanation": "Synchronization in networked systems parallels emergent bottom-up behavior - local to global coherence.",
+    "pattern": "Network synchronization as emergence",
+    "similarity": 0.48,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 293,
+      "mechanism_2": 301
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring network synchronization as emergence in physics",
+        "mechanism": "Synchronization in networked systems parallels emergent bottom-up behavior"
+      },
+      "paper_2": {
+        "title": "Paper studying network synchronization as emergence in computer_science",
+        "mechanism": "local to global coherence."
+      }
+    }
+  },
+  {
+    "id": 98,
+    "title": "Physics \u2194 Optics",
+    "domains": [
+      "physics",
+      "optics"
+    ],
+    "explanation": "Universal scaling at critical points matches multi-scale averaging in cascaded systems - critical behavior across scales.",
+    "pattern": "Critical scaling and multi-scale averaging",
+    "similarity": 0.4792,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 302,
+      "mechanism_2": 279
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring critical scaling and multi-scale averaging in physics",
+        "mechanism": "Universal scaling at critical points matches multi-scale averaging in cascaded systems"
+      },
+      "paper_2": {
+        "title": "Paper studying critical scaling and multi-scale averaging in optics",
+        "mechanism": "critical behavior across scales."
+      }
+    }
+  },
+  {
+    "id": 99,
+    "title": "Network Science \u2194 Physics",
+    "domains": [
+      "network_science",
+      "physics"
+    ],
+    "explanation": "Clustering amplifies cascades matches interdependent network failures - modularity creates vulnerability.",
+    "pattern": "Modular amplification of cascade failures",
+    "similarity": 0.4789,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 274,
+      "mechanism_2": 284
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring modular amplification of cascade failures in network_science",
+        "mechanism": "Clustering amplifies cascades matches interdependent network failures"
+      },
+      "paper_2": {
+        "title": "Paper studying modular amplification of cascade failures in physics",
+        "mechanism": "modularity creates vulnerability."
+      }
+    }
+  },
+  {
+    "id": 100,
+    "title": "Physics \u2194 Environmental_Science",
+    "domains": [
+      "physics",
+      "environmental_science"
+    ],
+    "explanation": "Phase transition to synchronization mirrors coupled human-natural system tipping - critical thresholds in coupled systems.",
+    "pattern": "Coupled system phase transitions",
+    "similarity": 0.4769,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 277,
+      "mechanism_2": 296
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring coupled system phase transitions in physics",
+        "mechanism": "Phase transition to synchronization mirrors coupled human-natural system tipping"
+      },
+      "paper_2": {
+        "title": "Paper studying coupled system phase transitions in environmental_science",
+        "mechanism": "critical thresholds in coupled systems."
+      }
+    }
+  },
+  {
+    "id": 101,
+    "title": "Biology \u2194 Physics",
+    "domains": [
+      "biology",
+      "physics"
+    ],
+    "explanation": "Pulse-coupled synchronization matches master stability function - both determine sync stability conditions.",
+    "pattern": "Stability criteria for synchronization",
+    "similarity": 0.4753,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 282,
+      "mechanism_2": 249
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring stability criteria for synchronization in biology",
+        "mechanism": "Pulse-coupled synchronization matches master stability function"
+      },
+      "paper_2": {
+        "title": "Paper studying stability criteria for synchronization in physics",
+        "mechanism": "both determine sync stability conditions."
+      }
+    }
+  },
+  {
+    "id": 102,
+    "title": "Physics \u2194 Earth Science",
+    "domains": [
+      "physics",
+      "earth_science"
+    ],
+    "explanation": "Coupling-strength stability translates to rate-dependent tipping - parameter change rate determines stability.",
+    "pattern": "Rate-dependent stability transitions",
+    "similarity": 0.4751,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 286,
+      "mechanism_2": 308
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring rate-dependent stability transitions in physics",
+        "mechanism": "Coupling-strength stability translates to rate-dependent tipping"
+      },
+      "paper_2": {
+        "title": "Paper studying rate-dependent stability transitions in earth_science",
+        "mechanism": "parameter change rate determines stability."
+      }
+    }
+  },
+  {
+    "id": 103,
+    "title": "Physics \u2194 Climate Science",
+    "domains": [
+      "physics",
+      "climate_science"
+    ],
+    "explanation": "Network cascade failures show same critical/noise duality as climate tipping - multiple pathways to collapse.",
+    "pattern": "Dual pathways to system collapse",
+    "similarity": 0.4683,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 253,
+      "mechanism_2": 280
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring dual pathways to system collapse in physics",
+        "mechanism": "Network cascade failures show same critical/noise duality as climate tipping"
+      },
+      "paper_2": {
+        "title": "Paper studying dual pathways to system collapse in climate_science",
+        "mechanism": "multiple pathways to collapse."
+      }
+    }
+  },
+  {
+    "id": 104,
+    "title": "Cognitive Science \u2194 Physics",
+    "domains": [
+      "cognitive_science",
+      "physics"
+    ],
+    "explanation": "Multiplicative cascades produce absorbing state transitions - identical multiplicative structure across domains!",
+    "pattern": "Multiplicative cascades to absorbing states",
+    "similarity": 0.4669,
+    "rating": "excellent",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 270,
+      "mechanism_2": 304
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring multiplicative cascades to absorbing states in cognitive_science",
+        "mechanism": "Multiplicative cascades produce absorbing state transitions"
+      },
+      "paper_2": {
+        "title": "Paper studying multiplicative cascades to absorbing states in physics",
+        "mechanism": "identical multiplicative structure across domains!"
+      }
+    }
+  },
+  {
+    "id": 105,
+    "title": "Neuroscience \u2194 Biology",
+    "domains": [
+      "neuroscience",
+      "biology"
+    ],
+    "explanation": "Neural sustained activity and pulse coupling both achieve synchronization through threshold crossing.",
+    "pattern": "Threshold-based synchronization",
+    "similarity": 0.4663,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 254,
+      "mechanism_2": 278
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring threshold-based synchronization in neuroscience",
+        "mechanism": "Neural sustained activity and pulse coupling both achieve synchronization through threshold crossing"
+      },
+      "paper_2": {
+        "title": "Paper studying threshold-based synchronization in biology",
+        "mechanism": "Neural sustained activity and pulse coupling both achieve synchronization through threshold crossing"
+      }
+    }
+  },
+  {
+    "id": 106,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Generalized synchronization mirrors pulse-coupled threshold synchronization - deterministic state mapping.",
+    "pattern": "Generalized synchronization mapping",
+    "similarity": 0.4637,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 298,
+      "mechanism_2": 282
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring generalized synchronization mapping in physics",
+        "mechanism": "Generalized synchronization mirrors pulse-coupled threshold synchronization"
+      },
+      "paper_2": {
+        "title": "Paper studying generalized synchronization mapping in biology",
+        "mechanism": "deterministic state mapping."
+      }
+    }
+  },
+  {
+    "id": 107,
+    "title": "Physics \u2194 Earth Science",
+    "domains": [
+      "physics",
+      "earth_science"
+    ],
+    "explanation": "Oscillator phase transitions and rate-dependent tipping both show critical parameter thresholds.",
+    "pattern": "Critical parameter thresholds",
+    "similarity": 0.4604,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 277,
+      "mechanism_2": 308
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring critical parameter thresholds in physics",
+        "mechanism": "Oscillator phase transitions and rate-dependent tipping both show critical parameter thresholds."
+      },
+      "paper_2": {
+        "title": "Paper studying critical parameter thresholds in earth_science",
+        "mechanism": "Oscillator phase transitions and rate-dependent tipping both show critical parameter thresholds."
+      }
+    }
+  },
+  {
+    "id": 108,
+    "title": "Physics \u2194 Biology",
+    "domains": [
+      "physics",
+      "biology"
+    ],
+    "explanation": "Chaotic synchronization through functional mapping parallels pulse-coupled phase advancement.",
+    "pattern": "Functional synchronization mapping",
+    "similarity": 0.4602,
+    "rating": "good",
+    "session": 77,
+    "mechanism_ids": {
+      "mechanism_1": 298,
+      "mechanism_2": 278
+    },
+    "papers": {
+      "paper_1": {
+        "title": "Paper exploring functional synchronization mapping in physics",
+        "mechanism": "Chaotic synchronization through functional mapping parallels pulse-coupled phase advancement."
+      },
+      "paper_2": {
+        "title": "Paper studying functional synchronization mapping in biology",
+        "mechanism": "Chaotic synchronization through functional mapping parallels pulse-coupled phase advancement."
+      }
+    }
+  }
+]

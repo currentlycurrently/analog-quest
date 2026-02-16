@@ -91,11 +91,11 @@ export default function DiscoveriesPage() {
               id={discovery.id}
               rating={discovery.rating}
               similarity={discovery.similarity}
-              paper1Domain={discovery.paper_1.domain}
-              paper2Domain={discovery.paper_2.domain}
-              paper1Title={discovery.paper_1.title}
-              paper2Title={discovery.paper_2.title}
-              explanation={discovery.structural_explanation}
+              paper1Domain={discovery.domains?.[0] || discovery.paper_1?.domain || 'unknown'}
+              paper2Domain={discovery.domains?.[1] || discovery.paper_2?.domain || 'unknown'}
+              paper1Title={discovery.papers?.paper_1?.title || discovery.paper_1?.title || discovery.title || 'Unknown Paper'}
+              paper2Title={discovery.papers?.paper_2?.title || discovery.paper_2?.title || discovery.title || 'Unknown Paper'}
+              explanation={discovery.explanation || discovery.structural_explanation || 'Cross-domain structural pattern'}
             />
           ))}
         </div>

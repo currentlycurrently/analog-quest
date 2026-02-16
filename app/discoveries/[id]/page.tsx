@@ -77,9 +77,15 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
 
           {/* Domain Pair */}
           <div className="flex items-center gap-3">
-            <DomainBadge domain={discovery.paper_1.domain} size="md" />
+            <DomainBadge
+              domain={discovery.domains?.[0] || discovery.paper_1?.domain || 'unknown'}
+              size="md"
+            />
             <span className="text-brown/40 font-bold text-xl">↔</span>
-            <DomainBadge domain={discovery.paper_2.domain} size="md" />
+            <DomainBadge
+              domain={discovery.domains?.[1] || discovery.paper_2?.domain || 'unknown'}
+              size="md"
+            />
           </div>
         </div>
 
@@ -137,9 +143,21 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
 
         {/* Comparison View */}
         <ComparisonView
-          paper1={discovery.paper_1}
-          paper2={discovery.paper_2}
-          structuralExplanation={discovery.structural_explanation}
+          paper1={discovery.paper_1 || {
+            paper_id: 0,
+            arxiv_id: '',
+            domain: discovery.domains?.[0] || 'unknown',
+            title: discovery.papers?.paper_1?.title || discovery.title || 'Paper 1',
+            mechanism: discovery.papers?.paper_1?.mechanism || discovery.explanation || ''
+          }}
+          paper2={discovery.paper_2 || {
+            paper_id: 0,
+            arxiv_id: '',
+            domain: discovery.domains?.[1] || 'unknown',
+            title: discovery.papers?.paper_2?.title || discovery.title || 'Paper 2',
+            mechanism: discovery.papers?.paper_2?.mechanism || discovery.pattern || ''
+          }}
+          structuralExplanation={discovery.structural_explanation || discovery.explanation || 'Cross-domain structural similarity'}
         />
 
         {/* Navigation */}

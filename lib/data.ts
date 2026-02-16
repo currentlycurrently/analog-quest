@@ -3,18 +3,38 @@ import editorialData from '@/app/data/discoveries_editorial.json';
 
 export interface Discovery {
   id: number;
-  original_candidate_id: number;
-  rating: 'excellent' | 'good';
+  title: string;
+  domains: string[];
+  explanation: string;
+  pattern: string;
   similarity: number;
-  structural_explanation: string;
-  paper_1: {
+  rating: 'excellent' | 'good';
+  session: number;
+  mechanism_ids?: {
+    mechanism_1: number;
+    mechanism_2: number;
+  };
+  papers?: {
+    paper_1: {
+      title: string;
+      mechanism: string;
+    };
+    paper_2: {
+      title: string;
+      mechanism: string;
+    };
+  };
+  // Legacy fields for compatibility
+  original_candidate_id?: number;
+  structural_explanation?: string;
+  paper_1?: {
     paper_id: number;
     arxiv_id: string;
     domain: string;
     title: string;
     mechanism: string;
   };
-  paper_2: {
+  paper_2?: {
     paper_id: number;
     arxiv_id: string;
     domain: string;
@@ -58,16 +78,45 @@ export interface DiscoveriesData {
 
 // Load all discoveries
 export function getAllDiscoveries(): Discovery[] {
-  return (discoveriesData as DiscoveriesData).verified_isomorphisms;
+  // Handle both old and new formats
+  if (Array.isArray(discoveriesData)) {
+    return discoveriesData as Discovery[];
+  }
+  return (discoveriesData as DiscoveriesData).verified_isomorphisms || [];
 }
 
 // Get metadata
 export function getMetadata() {
+  if (Array.isArray(discoveriesData)) {
+    return {
+      session: 77,
+      date: '2026-02-15',
+      description: '100+ Cross-Domain Discoveries',
+      total_verified: discoveriesData.length,
+      excellent: discoveriesData.filter((d: any) => d.rating === 'excellent').length,
+      good: discoveriesData.filter((d: any) => d.rating === 'good').length,
+      similarity_range: {
+        min: Math.min(...discoveriesData.map((d: any) => d.similarity)),
+        max: Math.max(...discoveriesData.map((d: any) => d.similarity)),
+        mean: discoveriesData.reduce((sum: number, d: any) => sum + d.similarity, 0) / discoveriesData.length,
+      },
+      methodology: 'LLM extraction + semantic embeddings',
+      selection_criteria: 'Structural isomorphism with domain-neutral patterns'
+    };
+  }
   return (discoveriesData as DiscoveriesData).metadata;
 }
 
 // Get domain pairs stats
 export function getDomainPairs() {
+  if (Array.isArray(discoveriesData)) {
+    const pairs: Record<string, number> = {};
+    discoveriesData.forEach((d: any) => {
+      const key = d.domains ? d.domains.sort().join('-') : 'unknown';
+      pairs[key] = (pairs[key] || 0) + 1;
+    });
+    return pairs;
+  }
   return (discoveriesData as DiscoveriesData).domain_pairs;
 }
 
@@ -107,8 +156,12 @@ export function getFeaturedDiscoveries(): Discovery[] {
 export function getUniqueDomains(): string[] {
   const domains = new Set<string>();
   getAllDiscoveries().forEach((d) => {
-    domains.add(d.paper_1.domain);
-    domains.add(d.paper_2.domain);
+    if (d.domains) {
+      d.domains.forEach(domain => domains.add(domain));
+    } else if (d.paper_1 && d.paper_2) {
+      domains.add(d.paper_1.domain);
+      domains.add(d.paper_2.domain);
+    }
   });
   return Array.from(domains).sort();
 }
@@ -117,10 +170,15 @@ export function getUniqueDomains(): string[] {
 export function getUniqueDomainPairs(): string[] {
   const pairs = new Set<string>();
   getAllDiscoveries().forEach((d) => {
-    const domain1 = d.paper_1.domain;
-    const domain2 = d.paper_2.domain;
-    const pair = [domain1, domain2].sort().join('-');
-    pairs.add(pair);
+    if (d.domains) {
+      const pair = d.domains.sort().join('-');
+      pairs.add(pair);
+    } else if (d.paper_1 && d.paper_2) {
+      const domain1 = d.paper_1.domain;
+      const domain2 = d.paper_2.domain;
+      const pair = [domain1, domain2].sort().join('-');
+      pairs.add(pair);
+    }
   });
   return Array.from(pairs).sort();
 }
@@ -137,10 +195,16 @@ export function filterDiscoveries(options: FilterOptions): Discovery[] {
 
   if (options.domainPair) {
     filtered = filtered.filter((d) => {
-      const domain1 = d.paper_1.domain;
-      const domain2 = d.paper_2.domain;
-      const pair = [domain1, domain2].sort().join('-');
-      return pair === options.domainPair;
+      if (d.domains) {
+        const pair = d.domains.sort().join('-');
+        return pair === options.domainPair;
+      } else if (d.paper_1 && d.paper_2) {
+        const domain1 = d.paper_1.domain;
+        const domain2 = d.paper_2.domain;
+        const pair = [domain1, domain2].sort().join('-');
+        return pair === options.domainPair;
+      }
+      return false;
     });
   }
 
@@ -175,8 +239,18 @@ export function sortDiscoveries(
       });
     case 'domain':
       return sorted.sort((a, b) => {
-        const pairA = [a.paper_1.domain, a.paper_2.domain].sort().join('-');
-        const pairB = [b.paper_1.domain, b.paper_2.domain].sort().join('-');
+        let pairA: string;
+        let pairB: string;
+
+        if (a.domains && b.domains) {
+          pairA = a.domains.sort().join('-');
+          pairB = b.domains.sort().join('-');
+        } else if (a.paper_1 && a.paper_2 && b.paper_1 && b.paper_2) {
+          pairA = [a.paper_1.domain, a.paper_2.domain].sort().join('-');
+          pairB = [b.paper_1.domain, b.paper_2.domain].sort().join('-');
+        } else {
+          return 0;
+        }
         return pairA.localeCompare(pairB);
       });
     default:

@@ -34,32 +34,30 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  // In production, enhance with API data to get URLs
-  if (process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV) {
-    try {
-      const baseUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'https://analog.quest';
+  // Try to enhance with API data to get URLs (works with ISR)
+  try {
+    // Determine base URL
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NODE_ENV === 'production'
+      ? 'https://analog.quest'
+      : 'http://localhost:3000';
 
-      const response = await fetch(`${baseUrl}/api/discoveries/${discoveryId}`, {
-        next: { revalidate: 60 }, // Cache for 60 seconds
-        cache: 'no-store' // Don't cache during build
-      });
+    const response = await fetch(`${baseUrl}/api/discoveries/${discoveryId}`, {
+      next: { revalidate: 60 }, // Revalidate every 60 seconds (ISR)
+    });
 
-      if (response.ok) {
-        const data = await response.json();
-        // Merge API data (with URLs) with static data
-        discovery = { ...staticDiscovery, ...data.data };
-      } else {
-        // Fallback to static data if API fails
-        discovery = staticDiscovery;
-      }
-    } catch (error) {
-      console.error('API fetch failed, using static data:', error);
+    if (response.ok) {
+      const data = await response.json();
+      // Merge API data (with URLs) with static data
+      discovery = { ...staticDiscovery, ...data.data };
+    } else {
+      // Fallback to static data if API fails
       discovery = staticDiscovery;
     }
-  } else {
-    // During build or local dev, use static data
+  } catch (error) {
+    // During build or if fetch fails, use static data
+    console.log('Using static data:', error instanceof Error ? error.message : 'Unknown error');
     discovery = staticDiscovery;
   }
 

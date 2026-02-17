@@ -24,6 +24,15 @@ export interface Discovery {
       mechanism: string;
     };
   };
+  // URL fields from database
+  paper_1_url?: string;
+  paper_2_url?: string;
+  paper_1_arxiv_id?: string;
+  paper_2_arxiv_id?: string;
+  paper_1_title?: string;
+  paper_2_title?: string;
+  paper_1_domain?: string;
+  paper_2_domain?: string;
   // Legacy fields for compatibility
   original_candidate_id?: number;
   structural_explanation?: string;

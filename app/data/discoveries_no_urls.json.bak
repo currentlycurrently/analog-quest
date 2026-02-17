@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -18,19 +18,11 @@
     "papers": {
       "paper_1": "Emergent Behavior in Flocks",
       "paper_2": "Inferring individual rules from collective behavior"
-    },
-    "paper_1_url": "https://openalex.org/W2103714988",
-    "paper_2_url": "https://openalex.org/W2067035389",
-    "paper_1_arxiv_id": "https://openalex.org/W2103714988",
-    "paper_2_arxiv_id": "https://openalex.org/W2067035389",
-    "paper_1_title": "Emergent Behavior in Flocks",
-    "paper_2_title": "Inferring individual rules from collective behavior",
-    "paper_1_domain": "Distributed Control Multi-Agent Systems",
-    "paper_2_domain": "Evacuation and Crowd Dynamics"
+    }
   },
   {
     "id": 2,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -53,19 +45,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W1981425595",
-    "paper_2_url": "https://openalex.org/W4240303379",
-    "paper_1_arxiv_id": "https://openalex.org/W1981425595",
-    "paper_2_arxiv_id": "https://openalex.org/W4240303379",
-    "paper_1_title": "Collective behavior in animal groups: Theoretical models and empirical studies",
-    "paper_2_title": "Agent-based simulation tutorial - simulation of emergent behavior and differences between agent-based simulation and discrete-event simulation",
-    "paper_1_domain": "Evolutionary Game Theory and Cooperation",
-    "paper_2_domain": "Evacuation and Crowd Dynamics"
+    }
   },
   {
     "id": 3,
-    "title": "Unknown ↔ Q-Bio",
+    "title": "Unknown \u2194 Q-Bio",
     "domains": [
       "unknown",
       "q-bio"
@@ -88,19 +72,11 @@
         "title": "Paper studying shared structural mechanism in q-bio",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2063595837",
-    "paper_2_url": "https://openalex.org/W1982591743",
-    "paper_1_arxiv_id": "https://openalex.org/W2063595837",
-    "paper_2_arxiv_id": "https://openalex.org/W1982591743",
-    "paper_1_title": "Cascading dynamics in modular networks",
-    "paper_2_title": "Cascade dynamics on clustered network",
-    "paper_1_domain": "Complex Network Analysis Techniques",
-    "paper_2_domain": "Opinion Dynamics and Social Influence"
+    }
   },
   {
     "id": 4,
-    "title": "Biology ↔ Computer_Science",
+    "title": "Biology \u2194 Computer_Science",
     "domains": [
       "biology",
       "computer_science"
@@ -117,19 +93,11 @@
     "papers": {
       "paper_1": "Collective behavior in animal groups",
       "paper_2": "Agent-based simulation tutorial"
-    },
-    "paper_1_url": "https://openalex.org/W3177125472",
-    "paper_2_url": "https://openalex.org/W2132022337",
-    "paper_1_arxiv_id": "https://openalex.org/W3177125472",
-    "paper_2_arxiv_id": "https://openalex.org/W2132022337",
-    "paper_1_title": "Stewardship of global collective behavior",
-    "paper_2_title": "Exploring Network Structure, Dynamics, and Function using NetworkX",
-    "paper_1_domain": "Opinion Dynamics and Social Influence",
-    "paper_2_domain": "Complex Network Analysis Techniques"
+    }
   },
   {
     "id": 5,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -152,19 +120,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2084737855",
-    "paper_2_url": "https://openalex.org/W2070368466",
-    "paper_1_arxiv_id": "https://openalex.org/W2084737855",
-    "paper_2_arxiv_id": "https://openalex.org/W2070368466",
-    "paper_1_title": "Scaling in cognitive performance reflects multiplicative multifractal cascade dynamics",
-    "paper_2_title": "Avalanche dynamics in evolution, growth, and depinning models",
-    "paper_1_domain": "Complex Systems and Time Series Analysis",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 6,
-    "title": "Physics ↔ Network Science",
+    "title": "Physics \u2194 Network Science",
     "domains": [
       "physics",
       "network_science"
@@ -181,19 +141,11 @@
     "papers": {
       "paper_1": "Cascading dynamics in modular networks",
       "paper_2": "Cascade dynamics on clustered network"
-    },
-    "paper_1_url": "https://openalex.org/W1545410837",
-    "paper_2_url": "https://openalex.org/W2134761831",
-    "paper_1_arxiv_id": "https://openalex.org/W1545410837",
-    "paper_2_arxiv_id": "https://openalex.org/W2134761831",
-    "paper_1_title": "Tipping points: Early warning and wishful thinking",
-    "paper_2_title": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent examples in the climate system",
-    "paper_1_domain": "Ecosystem dynamics and resilience",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 7,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -216,19 +168,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2125290397",
-    "paper_2_url": "https://openalex.org/W2084737855",
-    "paper_1_arxiv_id": "https://openalex.org/W2125290397",
-    "paper_2_arxiv_id": "https://openalex.org/W2084737855",
-    "paper_1_title": "From 1/f noise to multifractal cascades in heartbeat dynamics",
-    "paper_2_title": "Scaling in cognitive performance reflects multiplicative multifractal cascade dynamics",
-    "paper_1_domain": "Complex Systems and Time Series Analysis",
-    "paper_2_domain": "Complex Systems and Time Series Analysis"
+    }
   },
   {
     "id": 8,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -251,19 +195,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2086893123",
-    "paper_2_url": "https://openalex.org/W2084737855",
-    "paper_1_arxiv_id": "https://openalex.org/W2086893123",
-    "paper_2_arxiv_id": "https://openalex.org/W2084737855",
-    "paper_1_title": "Multifractal Cascade Dynamics and Turbulent Intermittency",
-    "paper_2_title": "Scaling in cognitive performance reflects multiplicative multifractal cascade dynamics",
-    "paper_1_domain": "Complex Systems and Time Series Analysis",
-    "paper_2_domain": "Complex Systems and Time Series Analysis"
+    }
   },
   {
     "id": 9,
-    "title": "Unknown ↔ Q-Bio",
+    "title": "Unknown \u2194 Q-Bio",
     "domains": [
       "unknown",
       "q-bio"
@@ -286,19 +222,11 @@
         "title": "Paper studying shared structural mechanism in q-bio",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2130518506",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "https://openalex.org/W2130518506",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 10,
-    "title": "Sociology ↔ Network Science",
+    "title": "Sociology \u2194 Network Science",
     "domains": [
       "sociology",
       "network_science"
@@ -315,19 +243,11 @@
     "papers": {
       "paper_1": "Stewardship of global collective behavior",
       "paper_2": "Exploring Network Structure, Dynamics, and Function using NetworkX"
-    },
-    "paper_1_url": "https://openalex.org/W12091289",
-    "paper_2_url": "https://openalex.org/W4240303379",
-    "paper_1_arxiv_id": "https://openalex.org/W12091289",
-    "paper_2_arxiv_id": "https://openalex.org/W4240303379",
-    "paper_1_title": "Mathematical Modeling of Collective Behavior in Socio-Economic and Life Sciences",
-    "paper_2_title": "Agent-based simulation tutorial - simulation of emergent behavior and differences between agent-based simulation and discrete-event simulation",
-    "paper_1_domain": "Opinion Dynamics and Social Influence",
-    "paper_2_domain": "Evacuation and Crowd Dynamics"
+    }
   },
   {
     "id": 11,
-    "title": "Cognitive Science ↔ Physics",
+    "title": "Cognitive Science \u2194 Physics",
     "domains": [
       "cognitive_science",
       "physics"
@@ -344,19 +264,11 @@
     "papers": {
       "paper_1": "Scaling in cognitive performance reflects multiplicative multifractal cascade",
       "paper_2": "Avalanche dynamics in evolution, growth, and depinning models"
-    },
-    "paper_1_url": "https://openalex.org/W2254944678",
-    "paper_2_url": "https://openalex.org/W2067035389",
-    "paper_1_arxiv_id": "https://openalex.org/W2254944678",
-    "paper_2_arxiv_id": "https://openalex.org/W2067035389",
-    "paper_1_title": "Emergent behavior in active colloids",
-    "paper_2_title": "Inferring individual rules from collective behavior",
-    "paper_1_domain": "Micro and Nano Robotics",
-    "paper_2_domain": "Evacuation and Crowd Dynamics"
+    }
   },
   {
     "id": 12,
-    "title": "Physics ↔ Cs",
+    "title": "Physics \u2194 Cs",
     "domains": [
       "physics",
       "cs"
@@ -379,19 +291,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W3177125472",
-    "paper_2_url": "https://openalex.org/W1981425595",
-    "paper_1_arxiv_id": "https://openalex.org/W3177125472",
-    "paper_2_arxiv_id": "https://openalex.org/W1981425595",
-    "paper_1_title": "Stewardship of global collective behavior",
-    "paper_2_title": "Collective behavior in animal groups: Theoretical models and empirical studies",
-    "paper_1_domain": "Opinion Dynamics and Social Influence",
-    "paper_2_domain": "Evolutionary Game Theory and Cooperation"
+    }
   },
   {
     "id": 13,
-    "title": "Climate Science ↔ Earth Science",
+    "title": "Climate Science \u2194 Earth Science",
     "domains": [
       "climate_science",
       "earth_science"
@@ -408,19 +312,11 @@
     "papers": {
       "paper_1": "Tipping points: Early warning and wishful thinking",
       "paper_2": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent"
-    },
-    "paper_1_url": "https://openalex.org/W2043291304",
-    "paper_2_url": "https://openalex.org/W2130518506",
-    "paper_1_arxiv_id": "https://openalex.org/W2043291304",
-    "paper_2_arxiv_id": "https://openalex.org/W2130518506",
-    "paper_1_title": "The Onset of Collective Behavior in Social Amoebae",
-    "paper_2_title": "From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators",
-    "paper_1_domain": "Cellular Mechanics and Interactions",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 14,
-    "title": "Biology ↔ Cognitive Science",
+    "title": "Biology \u2194 Cognitive Science",
     "domains": [
       "biology",
       "cognitive_science"
@@ -437,19 +333,11 @@
     "papers": {
       "paper_1": "From 1/f noise to multifractal cascades in heartbeat dynamics",
       "paper_2": "Scaling in cognitive performance reflects multiplicative multifractal cascade"
-    },
-    "paper_1_url": "https://openalex.org/W2136901392",
-    "paper_2_url": "https://openalex.org/W2126554879",
-    "paper_1_arxiv_id": "https://openalex.org/W2136901392",
-    "paper_2_arxiv_id": "https://openalex.org/W2126554879",
-    "paper_1_title": "Evolving Mobile Robots Able to Display Collective Behaviors",
-    "paper_2_title": "Swarm Intelligence",
-    "paper_1_domain": "Modular Robots and Swarm Intelligence",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 15,
-    "title": "Physics ↔ Cognitive Science",
+    "title": "Physics \u2194 Cognitive Science",
     "domains": [
       "physics",
       "cognitive_science"
@@ -466,19 +354,11 @@
     "papers": {
       "paper_1": "Multifractal Cascade Dynamics and Turbulent Intermittency",
       "paper_2": "Scaling in cognitive performance reflects multiplicative multifractal cascade"
-    },
-    "paper_1_url": "https://openalex.org/W2123745704",
-    "paper_2_url": "https://openalex.org/W2060408509",
-    "paper_1_arxiv_id": "https://openalex.org/W2123745704",
-    "paper_2_arxiv_id": "https://openalex.org/W2060408509",
-    "paper_1_title": "NEURAL NETWORK DYNAMICS",
-    "paper_2_title": "Learning and detecting emergent behavior in networks of cardiac myocytes",
-    "paper_1_domain": "Neural dynamics and brain function",
-    "paper_2_domain": "Formal Methods in Verification"
+    }
   },
   {
     "id": 16,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -495,19 +375,11 @@
     "papers": {
       "paper_1": "From Kuramoto to Crawford",
       "paper_2": "Synchronization of Pulse-Coupled Biological Oscillators"
-    },
-    "paper_1_url": "https://openalex.org/W2611714591",
-    "paper_2_url": "https://openalex.org/W1981425595",
-    "paper_1_arxiv_id": "https://openalex.org/W2611714591",
-    "paper_2_arxiv_id": "https://openalex.org/W1981425595",
-    "paper_1_title": "Consistent Individual Differences Drive Collective Behavior and Group Functioning of Schooling Fish",
-    "paper_2_title": "Collective behavior in animal groups: Theoretical models and empirical studies",
-    "paper_1_domain": "Animal Behavior and Reproduction",
-    "paper_2_domain": "Evolutionary Game Theory and Cooperation"
+    }
   },
   {
     "id": 17,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -530,19 +402,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2132022337",
-    "paper_2_url": "https://openalex.org/W2014217492",
-    "paper_1_arxiv_id": "https://openalex.org/W2132022337",
-    "paper_2_arxiv_id": "https://openalex.org/W2014217492",
-    "paper_1_title": "Exploring Network Structure, Dynamics, and Function using NetworkX",
-    "paper_2_title": "Synchronization in Small-World Systems",
-    "paper_1_domain": "Complex Network Analysis Techniques",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 18,
-    "title": "Unknown ↔ Econ",
+    "title": "Unknown \u2194 Econ",
     "domains": [
       "unknown",
       "econ"
@@ -565,19 +429,11 @@
         "title": "Paper studying shared structural mechanism in econ",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2134761831",
-    "paper_2_url": "https://openalex.org/W2051008133",
-    "paper_1_arxiv_id": "https://openalex.org/W2134761831",
-    "paper_2_arxiv_id": "https://openalex.org/W2051008133",
-    "paper_1_title": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent examples in the climate system",
-    "paper_2_title": "COMPLEX DYNAMICS IN MULTISTABLE SYSTEMS",
-    "paper_1_domain": "openalex",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 19,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -600,19 +456,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W4295088938",
-    "paper_2_url": "https://openalex.org/W1545410837",
-    "paper_1_arxiv_id": "https://openalex.org/W4295088938",
-    "paper_2_arxiv_id": "https://openalex.org/W1545410837",
-    "paper_1_title": "Exceeding 1.5°C global warming could trigger multiple climate tipping points",
-    "paper_2_title": "Tipping points: Early warning and wishful thinking",
-    "paper_1_domain": "Ecosystem dynamics and resilience",
-    "paper_2_domain": "Ecosystem dynamics and resilience"
+    }
   },
   {
     "id": 20,
-    "title": "Socioeconomics ↔ Computer_Science",
+    "title": "Socioeconomics \u2194 Computer_Science",
     "domains": [
       "socioeconomics",
       "computer_science"
@@ -629,19 +477,11 @@
     "papers": {
       "paper_1": "Mathematical Modeling of Collective Behavior in Socio-Economic and Life Sciences",
       "paper_2": "Agent-based simulation tutorial"
-    },
-    "paper_1_url": "https://openalex.org/W2611714591",
-    "paper_2_url": "https://openalex.org/W2136901392",
-    "paper_1_arxiv_id": "https://openalex.org/W2611714591",
-    "paper_2_arxiv_id": "https://openalex.org/W2136901392",
-    "paper_1_title": "Consistent Individual Differences Drive Collective Behavior and Group Functioning of Schooling Fish",
-    "paper_2_title": "Evolving Mobile Robots Able to Display Collective Behaviors",
-    "paper_1_domain": "Animal Behavior and Reproduction",
-    "paper_2_domain": "Modular Robots and Swarm Intelligence"
+    }
   },
   {
     "id": 21,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -664,19 +504,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W1982591743",
-    "paper_2_url": "https://openalex.org/W2014217492",
-    "paper_1_arxiv_id": "https://openalex.org/W1982591743",
-    "paper_2_arxiv_id": "https://openalex.org/W2014217492",
-    "paper_1_title": "Cascade dynamics on clustered network",
-    "paper_2_title": "Synchronization in Small-World Systems",
-    "paper_1_domain": "Opinion Dynamics and Social Influence",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 22,
-    "title": "Unknown ↔ Q-Bio",
+    "title": "Unknown \u2194 Q-Bio",
     "domains": [
       "unknown",
       "q-bio"
@@ -699,19 +531,11 @@
         "title": "Paper studying shared structural mechanism in q-bio",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W1628909031",
-    "paper_2_url": "https://openalex.org/W1999939431",
-    "paper_1_arxiv_id": "https://openalex.org/W1628909031",
-    "paper_2_arxiv_id": "https://openalex.org/W1999939431",
-    "paper_1_title": "Averaged pulse dynamics in a cascaded transmission system with passive dispersion compensation",
-    "paper_2_title": "From Individual to Collective Behavior in Bacterial Chemotaxis",
-    "paper_1_domain": "Advanced Fiber Laser Technologies",
-    "paper_2_domain": "Mathematical Biology Tumor Growth"
+    }
   },
   {
     "id": 23,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -734,19 +558,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2067035389",
-    "paper_2_url": "https://openalex.org/W2611714591",
-    "paper_1_arxiv_id": "https://openalex.org/W2067035389",
-    "paper_2_arxiv_id": "https://openalex.org/W2611714591",
-    "paper_1_title": "Inferring individual rules from collective behavior",
-    "paper_2_title": "Consistent Individual Differences Drive Collective Behavior and Group Functioning of Schooling Fish",
-    "paper_1_domain": "Evacuation and Crowd Dynamics",
-    "paper_2_domain": "Animal Behavior and Reproduction"
+    }
   },
   {
     "id": 24,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -769,19 +585,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2066359652",
-    "paper_2_url": "https://openalex.org/W2125290397",
-    "paper_1_arxiv_id": "https://openalex.org/W2066359652",
-    "paper_2_arxiv_id": "https://openalex.org/W2125290397",
-    "paper_1_title": "Theory of dynamic critical phenomena",
-    "paper_2_title": "From 1/f noise to multifractal cascades in heartbeat dynamics",
-    "paper_1_domain": "Quantum, superfluid, helium dynamics",
-    "paper_2_domain": "Complex Systems and Time Series Analysis"
+    }
   },
   {
     "id": 25,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -804,19 +612,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2317855277",
-    "paper_2_url": "https://openalex.org/W2165423495",
-    "paper_1_arxiv_id": "https://openalex.org/W2317855277",
-    "paper_2_arxiv_id": "https://openalex.org/W2165423495",
-    "paper_1_title": "Cascading dynamics on random networks: Crossover in phase transition",
-    "paper_2_title": "Exact SU(2) Symmetry and Persistent Spin Helix in a Spin-Orbit Coupled System",
-    "paper_1_domain": "Complex Network Analysis Techniques",
-    "paper_2_domain": "Advanced Condensed Matter Physics"
+    }
   },
   {
     "id": 26,
-    "title": "Nlin ↔ Physics",
+    "title": "Nlin \u2194 Physics",
     "domains": [
       "nlin",
       "physics"
@@ -839,19 +639,11 @@
         "title": "Paper studying shared structural mechanism in physics",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2083787309",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "https://openalex.org/W2083787309",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "Master Stability Functions for Synchronized Coupled Systems",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 27,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -874,19 +666,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2027674062",
-    "paper_2_url": "https://openalex.org/W2134761831",
-    "paper_1_arxiv_id": "https://openalex.org/W2027674062",
-    "paper_2_arxiv_id": "https://openalex.org/W2134761831",
-    "paper_1_title": "Nonlinear Dynamics and Chaos",
-    "paper_2_title": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent examples in the climate system",
-    "paper_1_domain": "Aquatic and Environmental Studies",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 28,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -909,19 +693,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W950991549",
-    "paper_2_url": "https://openalex.org/W1981425595",
-    "paper_1_arxiv_id": "https://openalex.org/W950991549",
-    "paper_2_arxiv_id": "https://openalex.org/W1981425595",
-    "paper_1_title": "Synchronization",
-    "paper_2_title": "Collective behavior in animal groups: Theoretical models and empirical studies",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Evolutionary Game Theory and Cooperation"
+    }
   },
   {
     "id": 29,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -944,19 +720,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2254944678",
-    "paper_2_url": "https://openalex.org/W4240303379",
-    "paper_1_arxiv_id": "https://openalex.org/W2254944678",
-    "paper_2_arxiv_id": "https://openalex.org/W4240303379",
-    "paper_1_title": "Emergent behavior in active colloids",
-    "paper_2_title": "Agent-based simulation tutorial - simulation of emergent behavior and differences between agent-based simulation and discrete-event simulation",
-    "paper_1_domain": "Micro and Nano Robotics",
-    "paper_2_domain": "Evacuation and Crowd Dynamics"
+    }
   },
   {
     "id": 30,
-    "title": "Q-Bio ↔ Physics",
+    "title": "Q-Bio \u2194 Physics",
     "domains": [
       "q-bio",
       "physics"
@@ -979,19 +747,11 @@
         "title": "Paper studying shared structural mechanism in physics",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2130518506",
-    "paper_2_url": "https://openalex.org/W1981425595",
-    "paper_1_arxiv_id": "https://openalex.org/W2130518506",
-    "paper_2_arxiv_id": "https://openalex.org/W1981425595",
-    "paper_1_title": "From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators",
-    "paper_2_title": "Collective behavior in animal groups: Theoretical models and empirical studies",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Evolutionary Game Theory and Cooperation"
+    }
   },
   {
     "id": 31,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1014,19 +774,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W950991549",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "https://openalex.org/W950991549",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "Synchronization",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 32,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1049,19 +801,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2142809461",
-    "paper_2_url": "https://openalex.org/W1628909031",
-    "paper_1_arxiv_id": "https://openalex.org/W2142809461",
-    "paper_2_arxiv_id": "https://openalex.org/W1628909031",
-    "paper_1_title": "Scaling, universality, and renormalization: Three pillars of modern critical phenomena",
-    "paper_2_title": "Averaged pulse dynamics in a cascaded transmission system with passive dispersion compensation",
-    "paper_1_domain": "Theoretical and Computational Physics",
-    "paper_2_domain": "Advanced Fiber Laser Technologies"
+    }
   },
   {
     "id": 33,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1084,19 +828,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W1982591743",
-    "paper_2_url": "https://openalex.org/W2040232110",
-    "paper_1_arxiv_id": "https://openalex.org/W1982591743",
-    "paper_2_arxiv_id": "https://openalex.org/W2040232110",
-    "paper_1_title": "Cascade dynamics on clustered network",
-    "paper_2_title": "Non-equilibrium critical phenomena and phase transitions into absorbing states",
-    "paper_1_domain": "Opinion Dynamics and Social Influence",
-    "paper_2_domain": "Theoretical and Computational Physics"
+    }
   },
   {
     "id": 34,
-    "title": "Econ ↔ Q-Bio",
+    "title": "Econ \u2194 Q-Bio",
     "domains": [
       "econ",
       "q-bio"
@@ -1119,19 +855,11 @@
         "title": "Paper studying shared structural mechanism in q-bio",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2130518506",
-    "paper_2_url": "https://openalex.org/W2001510177",
-    "paper_1_arxiv_id": "https://openalex.org/W2130518506",
-    "paper_2_arxiv_id": "https://openalex.org/W2001510177",
-    "paper_1_title": "From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators",
-    "paper_2_title": "Synchronizing chaotic circuits",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Chaos control and synchronization"
+    }
   },
   {
     "id": 35,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -1148,19 +876,11 @@
     "papers": {
       "paper_1": "Self-propelled particles",
       "paper_2": "Collective patterns from zonal interaction"
-    },
-    "paper_1_url": "https://openalex.org/W2154953441",
-    "paper_2_url": "https://openalex.org/W2083787309",
-    "paper_1_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_2_arxiv_id": "https://openalex.org/W2083787309",
-    "paper_1_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_2_title": "Master Stability Functions for Synchronized Coupled Systems",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 36,
-    "title": "Sociology ↔ Biology",
+    "title": "Sociology \u2194 Biology",
     "domains": [
       "sociology",
       "biology"
@@ -1177,19 +897,11 @@
     "papers": {
       "paper_1": "Stewardship of global collective behavior",
       "paper_2": "Collective behavior in animal groups"
-    },
-    "paper_1_url": "https://openalex.org/W2093627340",
-    "paper_2_url": "https://openalex.org/W2134761831",
-    "paper_1_arxiv_id": "https://openalex.org/W2093627340",
-    "paper_2_arxiv_id": "https://openalex.org/W2134761831",
-    "paper_1_title": "Stability Theory of Synchronized Motion in Coupled-Oscillator Systems",
-    "paper_2_title": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent examples in the climate system",
-    "paper_1_domain": "Quantum chaos and dynamical systems",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 37,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1212,19 +924,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2317855277",
-    "paper_2_url": "https://openalex.org/W1545410837",
-    "paper_1_arxiv_id": "https://openalex.org/W2317855277",
-    "paper_2_arxiv_id": "https://openalex.org/W1545410837",
-    "paper_1_title": "Cascading dynamics on random networks: Crossover in phase transition",
-    "paper_2_title": "Tipping points: Early warning and wishful thinking",
-    "paper_1_domain": "Complex Network Analysis Techniques",
-    "paper_2_domain": "Ecosystem dynamics and resilience"
+    }
   },
   {
     "id": 38,
-    "title": "Cs ↔ Q-Bio",
+    "title": "Cs \u2194 Q-Bio",
     "domains": [
       "cs",
       "q-bio"
@@ -1247,19 +951,11 @@
         "title": "Paper studying shared structural mechanism in q-bio",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2084737855",
-    "paper_2_url": "https://openalex.org/W2157480076",
-    "paper_1_arxiv_id": "https://openalex.org/W2084737855",
-    "paper_2_arxiv_id": "https://openalex.org/W2157480076",
-    "paper_1_title": "Scaling in cognitive performance reflects multiplicative multifractal cascade dynamics",
-    "paper_2_title": "Interdependent Networks: Reducing the Coupling Strength Leads to a Change from a First to Second Order Percolation Transition",
-    "paper_1_domain": "Complex Systems and Time Series Analysis",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 39,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -1276,19 +972,11 @@
     "papers": {
       "paper_1": "Stochastic pulsing triggers collective synchronization",
       "paper_2": "From Kuramoto to Crawford"
-    },
-    "paper_1_url": "https://openalex.org/W561848945",
-    "paper_2_url": "https://openalex.org/W12091289",
-    "paper_1_arxiv_id": "https://openalex.org/W561848945",
-    "paper_2_arxiv_id": "https://openalex.org/W12091289",
-    "paper_1_title": "From One to Many: Dynamic Assembly and Collective Behavior of Self-Propelled Colloidal Motors",
-    "paper_2_title": "Mathematical Modeling of Collective Behavior in Socio-Economic and Life Sciences",
-    "paper_1_domain": "Micro and Nano Robotics",
-    "paper_2_domain": "Opinion Dynamics and Social Influence"
+    }
   },
   {
     "id": 40,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1311,19 +999,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2132022337",
-    "paper_2_url": "https://openalex.org/W12091289",
-    "paper_1_arxiv_id": "https://openalex.org/W2132022337",
-    "paper_2_arxiv_id": "https://openalex.org/W12091289",
-    "paper_1_title": "Exploring Network Structure, Dynamics, and Function using NetworkX",
-    "paper_2_title": "Mathematical Modeling of Collective Behavior in Socio-Economic and Life Sciences",
-    "paper_1_domain": "Complex Network Analysis Techniques",
-    "paper_2_domain": "Opinion Dynamics and Social Influence"
+    }
   },
   {
     "id": 41,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1346,19 +1026,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2063595837",
-    "paper_2_url": "https://openalex.org/W2149237816",
-    "paper_1_arxiv_id": "https://openalex.org/W2063595837",
-    "paper_2_arxiv_id": "https://openalex.org/W2149237816",
-    "paper_1_title": "Cascading dynamics in modular networks",
-    "paper_2_title": "MRAS Sensorless Vector Control of an Induction Motor Using New Sliding-Mode and Fuzzy-Logic Adaptation Mechanisms",
-    "paper_1_domain": "Complex Network Analysis Techniques",
-    "paper_2_domain": "Sensorless Control of Electric Motors"
+    }
   },
   {
     "id": 42,
-    "title": "Econ ↔ Cs",
+    "title": "Econ \u2194 Cs",
     "domains": [
       "econ",
       "cs"
@@ -1381,19 +1053,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2084737855",
-    "paper_2_url": "https://openalex.org/W2132022337",
-    "paper_1_arxiv_id": "https://openalex.org/W2084737855",
-    "paper_2_arxiv_id": "https://openalex.org/W2132022337",
-    "paper_1_title": "Scaling in cognitive performance reflects multiplicative multifractal cascade dynamics",
-    "paper_2_title": "Exploring Network Structure, Dynamics, and Function using NetworkX",
-    "paper_1_domain": "Complex Systems and Time Series Analysis",
-    "paper_2_domain": "Complex Network Analysis Techniques"
+    }
   },
   {
     "id": 43,
-    "title": "Robotics ↔ Biology",
+    "title": "Robotics \u2194 Biology",
     "domains": [
       "robotics",
       "biology"
@@ -1410,19 +1074,11 @@
     "papers": {
       "paper_1": "Evolving Mobile Robots",
       "paper_2": "Distributed problem-solving through stigmergy"
-    },
-    "paper_1_url": "https://openalex.org/W2789832915",
-    "paper_2_url": "https://openalex.org/W4240303379",
-    "paper_1_arxiv_id": "https://openalex.org/W2789832915",
-    "paper_2_arxiv_id": "https://openalex.org/W4240303379",
-    "paper_1_title": "Synchronization: coupled systems to complex networks",
-    "paper_2_title": "Agent-based simulation tutorial - simulation of emergent behavior and differences between agent-based simulation and discrete-event simulation",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "Evacuation and Crowd Dynamics"
+    }
   },
   {
     "id": 44,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1445,19 +1101,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2123745704",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "https://openalex.org/W2123745704",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "NEURAL NETWORK DYNAMICS",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "Neural dynamics and brain function",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 45,
-    "title": "Unknown ↔ Econ",
+    "title": "Unknown \u2194 Econ",
     "domains": [
       "unknown",
       "econ"
@@ -1480,19 +1128,11 @@
         "title": "Paper studying shared structural mechanism in econ",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2116043657",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "https://openalex.org/W2116043657",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "Fibrotic extracellular matrix activates a profibrotic positive feedback loop",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 46,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1515,19 +1155,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2130518506",
-    "paper_2_url": "https://openalex.org/W2134761831",
-    "paper_1_arxiv_id": "https://openalex.org/W2130518506",
-    "paper_2_arxiv_id": "https://openalex.org/W2134761831",
-    "paper_1_title": "From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators",
-    "paper_2_title": "Tipping points in open systems: bifurcation, noise-induced and rate-dependent examples in the climate system",
-    "paper_1_domain": "Nonlinear Dynamics and Pattern Formation",
-    "paper_2_domain": "openalex"
+    }
   },
   {
     "id": 47,
-    "title": "Biology ↔ Cs",
+    "title": "Biology \u2194 Cs",
     "domains": [
       "biology",
       "cs"
@@ -1550,19 +1182,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2116043657",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "https://openalex.org/W2116043657",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "Fibrotic extracellular matrix activates a profibrotic positive feedback loop",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 48,
-    "title": "Neuroscience ↔ Biology",
+    "title": "Neuroscience \u2194 Biology",
     "domains": [
       "neuroscience",
       "biology"
@@ -1579,19 +1203,11 @@
     "papers": {
       "paper_1": "Internally generated neural activity",
       "paper_2": "Spatial pattern emergence from local excitable dynamics"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.21079v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03225v1",
-    "paper_1_arxiv_id": "2601.21079v1",
-    "paper_2_arxiv_id": "2602.03225v1",
-    "paper_1_title": "The quenched structured coalescent for diploid population models on finite graphs with large migrations and uneven offspring distributions",
-    "paper_2_title": "Tuning interactions between static-field-shielded polar molecules with microwaves",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 49,
-    "title": "Animal Behavior ↔ Biology",
+    "title": "Animal Behavior \u2194 Biology",
     "domains": [
       "animal_behavior",
       "biology"
@@ -1608,19 +1224,11 @@
     "papers": {
       "paper_1": "Individual heterogeneity structures collective dynamics",
       "paper_2": "Self-organized collective coherence"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.21079v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05565v1",
-    "paper_1_arxiv_id": "2601.21079v1",
-    "paper_2_arxiv_id": "2602.05565v1",
-    "paper_1_title": "The quenched structured coalescent for diploid population models on finite graphs with large migrations and uneven offspring distributions",
-    "paper_2_title": "On Path-based Marginal Cost of Heterogeneous Traffic Flow for General Networks",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "math"
+    }
   },
   {
     "id": 50,
-    "title": "Network Science ↔ Physics",
+    "title": "Network Science \u2194 Physics",
     "domains": [
       "network_science",
       "physics"
@@ -1637,19 +1245,11 @@
     "papers": {
       "paper_1": "Network topology shapes dynamical processes",
       "paper_2": "Small-world topology enhances synchronizability"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.04326v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05970v1",
-    "paper_1_arxiv_id": "2602.04326v1",
-    "paper_2_arxiv_id": "2602.05970v1",
-    "paper_1_title": "From Assumptions to Actions: Turning LLM Reasoning into Uncertainty-Aware Planning for Embodied Agents",
-    "paper_2_title": "Inverse Depth Scaling From Most Layers Being Similar",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 51,
-    "title": "Earth Science ↔ Physics",
+    "title": "Earth Science \u2194 Physics",
     "domains": [
       "earth_science",
       "physics"
@@ -1666,19 +1266,11 @@
     "papers": {
       "paper_1": "Rate-dependent tipping transitions",
       "paper_2": "Noise-induced attractor hopping"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.03307v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04423v1",
-    "paper_1_arxiv_id": "2601.03307v1",
-    "paper_2_arxiv_id": "2602.04423v1",
-    "paper_1_title": "Understanding the temperature response of biological systems: Part II -- Network-level mechanisms and emergent dynamics",
-    "paper_2_title": "Chaotic Dynamics in Extremal Black Holes: A Challenge to the Chaos Bound",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "nlin"
+    }
   },
   {
     "id": 52,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1701,19 +1293,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06106v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05120v1",
-    "paper_1_arxiv_id": "2602.06106v1",
-    "paper_2_arxiv_id": "2602.05120v1",
-    "paper_1_title": "To clean or not to clean: The free-rider problem in sequentially shared resources",
-    "paper_2_title": "Certifiable Boolean Reasoning Is Universal",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 53,
-    "title": "Q-Bio ↔ Physics",
+    "title": "Q-Bio \u2194 Physics",
     "domains": [
       "q-bio",
       "physics"
@@ -1736,19 +1320,11 @@
         "title": "Paper studying shared structural mechanism in physics",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05670v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06829v1",
-    "paper_1_arxiv_id": "2602.05670v1",
-    "paper_2_arxiv_id": "2602.06829v1",
-    "paper_1_title": "HyperPotter: Spell the Charm of High-Order Interactions in Audio Deepfake Detection",
-    "paper_2_title": "On the occupation measure of evolution models with vanishing mutations",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "math"
+    }
   },
   {
     "id": 54,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1771,19 +1347,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03225v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.22293v1",
-    "paper_1_arxiv_id": "2602.03225v1",
-    "paper_2_arxiv_id": "2601.22293v1",
-    "paper_1_title": "Tuning interactions between static-field-shielded polar molecules with microwaves",
-    "paper_2_title": "Distinguishable spreading dynamics in microbial communities",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 55,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1806,19 +1374,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03738v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03624v1",
-    "paper_1_arxiv_id": "2602.03738v1",
-    "paper_2_arxiv_id": "2602.03624v1",
-    "paper_1_title": "Emergent structures in coupled opinion and network dynamics",
-    "paper_2_title": "A Multi-decoder Neural Tracking Method for Accurately Predicting Speech Intelligibility",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 56,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1841,19 +1401,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02681v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.08483v1",
-    "paper_1_arxiv_id": "2602.02681v1",
-    "paper_2_arxiv_id": "2602.08483v1",
-    "paper_1_title": "Thermalization in classical systems with discrete phase space",
-    "paper_2_title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
-    "paper_1_domain": "nlin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 57,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1876,19 +1428,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.04326v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05476v1",
-    "paper_1_arxiv_id": "2602.04326v1",
-    "paper_2_arxiv_id": "2602.05476v1",
-    "paper_1_title": "From Assumptions to Actions: Turning LLM Reasoning into Uncertainty-Aware Planning for Embodied Agents",
-    "paper_2_title": "Tight FPT Approximations for Fair $k$-center with Outliers",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 58,
-    "title": "Physics ↔ Cs",
+    "title": "Physics \u2194 Cs",
     "domains": [
       "physics",
       "cs"
@@ -1911,19 +1455,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06106v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05020v1",
-    "paper_1_arxiv_id": "2602.06106v1",
-    "paper_2_arxiv_id": "2602.05020v1",
-    "paper_1_title": "To clean or not to clean: The free-rider problem in sequentially shared resources",
-    "paper_2_title": "Decaying Sensitivity of the Zero Solution for a Class of Nonlinear Optimal Control Problems",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "math"
+    }
   },
   {
     "id": 59,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -1946,19 +1482,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.04326v1",
-    "paper_2_url": "http://arxiv.org/abs/2512.08732v1",
-    "paper_1_arxiv_id": "2602.04326v1",
-    "paper_2_arxiv_id": "2512.08732v1",
-    "paper_1_title": "From Assumptions to Actions: Turning LLM Reasoning into Uncertainty-Aware Planning for Embodied Agents",
-    "paper_2_title": "Neural Ordinary Differential Equations for Simulating Metabolic Pathway Dynamics from Time-Series Multiomics Data",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 60,
-    "title": "Econ ↔ Cs",
+    "title": "Econ \u2194 Cs",
     "domains": [
       "econ",
       "cs"
@@ -1981,19 +1509,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2512.08732v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.16384v1",
-    "paper_1_arxiv_id": "2512.08732v1",
-    "paper_2_arxiv_id": "2601.16384v1",
-    "paper_1_title": "Neural Ordinary Differential Equations for Simulating Metabolic Pathway Dynamics from Time-Series Multiomics Data",
-    "paper_2_title": "Modeling tumor progression in heterogeneous microenvironments: A cellular automata approach",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 61,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2016,19 +1536,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.22293v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06018v1",
-    "paper_1_arxiv_id": "2601.22293v1",
-    "paper_2_arxiv_id": "2602.06018v1",
-    "paper_1_title": "Distinguishable spreading dynamics in microbial communities",
-    "paper_2_title": "Towards uncertainty quantification of a model for cancer-on-chip experiments",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "math"
+    }
   },
   {
     "id": 62,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2051,19 +1563,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05120v1",
-    "paper_2_url": "https://openalex.org/W2132022337",
-    "paper_1_arxiv_id": "2602.05120v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2132022337",
-    "paper_1_title": "Certifiable Boolean Reasoning Is Universal",
-    "paper_2_title": "Exploring Network Structure, Dynamics, and Function using NetworkX",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "Complex Network Analysis Techniques"
+    }
   },
   {
     "id": 63,
-    "title": "Earth Science ↔ Climate Science",
+    "title": "Earth Science \u2194 Climate Science",
     "domains": [
       "earth_science",
       "climate_science"
@@ -2080,19 +1584,11 @@
     "papers": {
       "paper_1": "Critical thresholds trigger self-reinforcing climate state",
       "paper_2": "Tipping points: Early warning and wishful thinking"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03928v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05970v1",
-    "paper_1_arxiv_id": "2602.03928v1",
-    "paper_2_arxiv_id": "2602.05970v1",
-    "paper_1_title": "The local void model for the Hubble and BAO tensions",
-    "paper_2_title": "Inverse Depth Scaling From Most Layers Being Similar",
-    "paper_1_domain": "astro-ph",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 64,
-    "title": "Animal Behavior ↔ Robotics",
+    "title": "Animal Behavior \u2194 Robotics",
     "domains": [
       "animal_behavior",
       "robotics"
@@ -2109,19 +1605,11 @@
     "papers": {
       "paper_1": "Individual heterogeneity structures collective dynamics",
       "paper_2": "Self-organizing collective behavior"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2512.08732v1",
-    "paper_2_url": "https://openalex.org/W2083787309",
-    "paper_1_arxiv_id": "2512.08732v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2083787309",
-    "paper_1_title": "Neural Ordinary Differential Equations for Simulating Metabolic Pathway Dynamics from Time-Series Multiomics Data",
-    "paper_2_title": "Master Stability Functions for Synchronized Coupled Systems",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 65,
-    "title": "Network Science ↔ Physics",
+    "title": "Network Science \u2194 Physics",
     "domains": [
       "network_science",
       "physics"
@@ -2138,19 +1626,11 @@
     "papers": {
       "paper_1": "Cascade dynamics on clustered network",
       "paper_2": "Small-world topology enhances synchronizability"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05918v1",
-    "paper_2_url": "https://openalex.org/W1994362240",
-    "paper_1_arxiv_id": "2602.05918v1",
-    "paper_2_arxiv_id": "https://openalex.org/W1994362240",
-    "paper_1_title": "Photonic neuromorphic processing with coupled spiking silicon microrings",
-    "paper_2_title": "Biochemical adaptation: Mechanism and process in physiological evolution",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "Genetics and Physical Performance"
+    }
   },
   {
     "id": 66,
-    "title": "Optics ↔ Biology",
+    "title": "Optics \u2194 Biology",
     "domains": [
       "optics",
       "biology"
@@ -2167,19 +1647,11 @@
     "papers": {
       "paper_1": "Multi-scale averaging in cascaded systems",
       "paper_2": "Multiscale emergence from individual to population"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.08483v1",
-    "paper_2_url": "https://openalex.org/W2123745704",
-    "paper_1_arxiv_id": "2602.08483v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2123745704",
-    "paper_1_title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
-    "paper_2_title": "NEURAL NETWORK DYNAMICS",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "Neural dynamics and brain function"
+    }
   },
   {
     "id": 67,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2202,19 +1674,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2040232110",
-    "paper_2_url": "https://openalex.org/W2149237816",
-    "paper_1_arxiv_id": "https://openalex.org/W2040232110",
-    "paper_2_arxiv_id": "https://openalex.org/W2149237816",
-    "paper_1_title": "Non-equilibrium critical phenomena and phase transitions into absorbing states",
-    "paper_2_title": "MRAS Sensorless Vector Control of an Induction Motor Using New Sliding-Mode and Fuzzy-Logic Adaptation Mechanisms",
-    "paper_1_domain": "Theoretical and Computational Physics",
-    "paper_2_domain": "Sensorless Control of Electric Motors"
+    }
   },
   {
     "id": 68,
-    "title": "Q-Bio ↔ Physics",
+    "title": "Q-Bio \u2194 Physics",
     "domains": [
       "q-bio",
       "physics"
@@ -2237,19 +1701,11 @@
         "title": "Paper studying shared structural mechanism in physics",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.04423v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05020v1",
-    "paper_1_arxiv_id": "2602.04423v1",
-    "paper_2_arxiv_id": "2602.05020v1",
-    "paper_1_title": "Chaotic Dynamics in Extremal Black Holes: A Challenge to the Chaos Bound",
-    "paper_2_title": "Decaying Sensitivity of the Zero Solution for a Class of Nonlinear Optimal Control Problems",
-    "paper_1_domain": "nlin",
-    "paper_2_domain": "math"
+    }
   },
   {
     "id": 69,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2272,19 +1728,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05970v1",
-    "paper_2_url": "https://openalex.org/W2083787309",
-    "paper_1_arxiv_id": "2602.05970v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2083787309",
-    "paper_1_title": "Inverse Depth Scaling From Most Layers Being Similar",
-    "paper_2_title": "Master Stability Functions for Synchronized Coupled Systems",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 70,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2307,19 +1755,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05918v1",
-    "paper_2_url": "https://openalex.org/W2149237816",
-    "paper_1_arxiv_id": "2602.05918v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2149237816",
-    "paper_1_title": "Photonic neuromorphic processing with coupled spiking silicon microrings",
-    "paper_2_title": "MRAS Sensorless Vector Control of an Induction Motor Using New Sliding-Mode and Fuzzy-Logic Adaptation Mechanisms",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "Sensorless Control of Electric Motors"
+    }
   },
   {
     "id": 71,
-    "title": "Biology ↔ Animal Behavior",
+    "title": "Biology \u2194 Animal Behavior",
     "domains": [
       "biology",
       "animal_behavior"
@@ -2336,19 +1776,11 @@
     "papers": {
       "paper_1": "Collective patterns from zonal interaction",
       "paper_2": "Individual heterogeneity structures dynamics"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06178v1",
-    "paper_2_url": "https://openalex.org/W2060408509",
-    "paper_1_arxiv_id": "2602.06178v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2060408509",
-    "paper_1_title": "Optimal Control Strategies for Epidemic Dynamics: Integrating SIR-SI and Lotka--Volterra Models",
-    "paper_2_title": "Learning and detecting emergent behavior in networks of cardiac myocytes",
-    "paper_1_domain": "math",
-    "paper_2_domain": "Formal Methods in Verification"
+    }
   },
   {
     "id": 72,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2371,19 +1803,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2512.21455v1",
-    "paper_2_url": "https://openalex.org/W2132022337",
-    "paper_1_arxiv_id": "2512.21455v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2132022337",
-    "paper_1_title": "Distributed delay stabilizes bistable genetic networks",
-    "paper_2_title": "Exploring Network Structure, Dynamics, and Function using NetworkX",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "Complex Network Analysis Techniques"
+    }
   },
   {
     "id": 73,
-    "title": "Cs ↔ Physics",
+    "title": "Cs \u2194 Physics",
     "domains": [
       "cs",
       "physics"
@@ -2406,19 +1830,11 @@
         "title": "Paper studying shared structural mechanism in physics",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W2173929419",
-    "paper_2_url": "https://openalex.org/W2611714591",
-    "paper_1_arxiv_id": "https://openalex.org/W2173929419",
-    "paper_2_arxiv_id": "https://openalex.org/W2611714591",
-    "paper_1_title": "The Network Dynamics Hypothesis: How Channel Networks Structure Riverine Habitats",
-    "paper_2_title": "Consistent Individual Differences Drive Collective Behavior and Group Functioning of Schooling Fish",
-    "paper_1_domain": "Hydrology and Sediment Transport Processes",
-    "paper_2_domain": "Animal Behavior and Reproduction"
+    }
   },
   {
     "id": 74,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2441,19 +1857,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05670v1",
-    "paper_2_url": "https://openalex.org/W2173929419",
-    "paper_1_arxiv_id": "2602.05670v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2173929419",
-    "paper_1_title": "HyperPotter: Spell the Charm of High-Order Interactions in Audio Deepfake Detection",
-    "paper_2_title": "The Network Dynamics Hypothesis: How Channel Networks Structure Riverine Habitats",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "Hydrology and Sediment Transport Processes"
+    }
   },
   {
     "id": 75,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2476,19 +1884,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "https://openalex.org/W1628909031",
-    "paper_2_url": "https://openalex.org/W1545410837",
-    "paper_1_arxiv_id": "https://openalex.org/W1628909031",
-    "paper_2_arxiv_id": "https://openalex.org/W1545410837",
-    "paper_1_title": "Averaged pulse dynamics in a cascaded transmission system with passive dispersion compensation",
-    "paper_2_title": "Tipping points: Early warning and wishful thinking",
-    "paper_1_domain": "Advanced Fiber Laser Technologies",
-    "paper_2_domain": "Ecosystem dynamics and resilience"
+    }
   },
   {
     "id": 76,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2511,19 +1911,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06178v1",
-    "paper_2_url": "https://openalex.org/W2083787309",
-    "paper_1_arxiv_id": "2602.06178v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2083787309",
-    "paper_1_title": "Optimal Control Strategies for Epidemic Dynamics: Integrating SIR-SI and Lotka--Volterra Models",
-    "paper_2_title": "Master Stability Functions for Synchronized Coupled Systems",
-    "paper_1_domain": "math",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 77,
-    "title": "Econ ↔ Cs",
+    "title": "Econ \u2194 Cs",
     "domains": [
       "econ",
       "cs"
@@ -2546,19 +1938,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05476v1",
-    "paper_2_url": "https://openalex.org/W2154953441",
-    "paper_1_arxiv_id": "2602.05476v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2154953441",
-    "paper_1_title": "Tight FPT Approximations for Fair $k$-center with Outliers",
-    "paper_2_title": "Synchronization of Pulse-Coupled Biological Oscillators",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 78,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2581,19 +1965,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06018v1",
-    "paper_2_url": "https://openalex.org/W2014217492",
-    "paper_1_arxiv_id": "2602.06018v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2014217492",
-    "paper_1_title": "Towards uncertainty quantification of a model for cancer-on-chip experiments",
-    "paper_2_title": "Synchronization in Small-World Systems",
-    "paper_1_domain": "math",
-    "paper_2_domain": "Nonlinear Dynamics and Pattern Formation"
+    }
   },
   {
     "id": 79,
-    "title": "Stat ↔ Cs",
+    "title": "Stat \u2194 Cs",
     "domains": [
       "stat",
       "cs"
@@ -2616,19 +1992,11 @@
         "title": "Paper studying shared structural mechanism in cs",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.00200v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03624v1",
-    "paper_1_arxiv_id": "2602.00200v1",
-    "paper_2_arxiv_id": "2602.03624v1",
-    "paper_1_title": "Intelligent Control of Transportation Flow in Physarum Networks",
-    "paper_2_title": "A Multi-decoder Neural Tracking Method for Accurately Predicting Speech Intelligibility",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 80,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -2651,19 +2019,11 @@
         "title": "Paper studying critical scaling and multifractal cascades in biology",
         "mechanism": "both show scale-invariant fluctuations at critical points."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05721v1",
-    "paper_2_url": "https://openalex.org/W2335431483",
-    "paper_1_arxiv_id": "2602.05721v1",
-    "paper_2_arxiv_id": "https://openalex.org/W2335431483",
-    "paper_1_title": "A Dual-Loop Agent Framework for Automated Vulnerability Reproduction",
-    "paper_2_title": "Emergent Behavior of Soil Fungal Dynamics",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "Mycorrhizal Fungi and Plant Interactions"
+    }
   },
   {
     "id": 81,
-    "title": "Physics ↔ Economics",
+    "title": "Physics \u2194 Economics",
     "domains": [
       "physics",
       "economics"
@@ -2686,19 +2046,11 @@
         "title": "Paper studying cascading network failures from redistribution in economics",
         "mechanism": "both describe cascading failures from overload."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.22613v1",
-    "paper_2_url": "http://arxiv.org/abs/2512.08024v1",
-    "paper_1_arxiv_id": "2601.22613v1",
-    "paper_2_arxiv_id": "2512.08024v1",
-    "paper_1_title": "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
-    "paper_2_title": "Coarse-graining and stochastic oscillations in a phenomenological model of cell-size homeostasis",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 82,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -2721,19 +2073,11 @@
         "title": "Paper studying synchronization stability through coupling in biology",
         "mechanism": "identical mathematical structures for sync stability!"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.22613v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.05193v1",
-    "paper_1_arxiv_id": "2601.22613v1",
-    "paper_2_arxiv_id": "2601.05193v1",
-    "paper_1_title": "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
-    "paper_2_title": "Cell size control in bacteria is modulated through extrinsic noise, single-cell- and population-growth",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 83,
-    "title": "Physics ↔ Earth Science",
+    "title": "Physics \u2194 Earth Science",
     "domains": [
       "physics",
       "earth_science"
@@ -2756,19 +2100,11 @@
         "title": "Paper studying bifurcation-driven tipping transitions in earth_science",
         "mechanism": "both show sudden transitions from parameter changes."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05112v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_1_arxiv_id": "2602.05112v1",
-    "paper_2_arxiv_id": "2602.02403v1",
-    "paper_1_title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
-    "paper_2_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "econ"
+    }
   },
   {
     "id": 84,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -2791,19 +2127,11 @@
         "title": "Paper studying phase-locking through mutual coupling in biology",
         "mechanism": "universal phase-locking principle!"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.22613v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.14509v1",
-    "paper_1_arxiv_id": "2601.22613v1",
-    "paper_2_arxiv_id": "2601.14509v1",
-    "paper_1_title": "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
-    "paper_2_title": "Cell proliferation maintains cell area polydispersity in the growing fruit fly wing epithelium",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 85,
-    "title": "Physics ↔ Computer_Science",
+    "title": "Physics \u2194 Computer_Science",
     "domains": [
       "physics",
       "computer_science"
@@ -2826,19 +2154,11 @@
         "title": "Paper studying emergence from self-propelled agents in computer_science",
         "mechanism": "validates physics models in computational systems."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02622v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04423v1",
-    "paper_1_arxiv_id": "2602.02622v1",
-    "paper_2_arxiv_id": "2602.04423v1",
-    "paper_1_title": "Discrete dynamical systems with scaling and inversion symmetries",
-    "paper_2_title": "Chaotic Dynamics in Extremal Black Holes: A Challenge to the Chaos Bound",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "nlin"
+    }
   },
   {
     "id": 86,
-    "title": "Cs ↔ Q-Bio",
+    "title": "Cs \u2194 Q-Bio",
     "domains": [
       "cs",
       "q-bio"
@@ -2861,19 +2181,11 @@
         "title": "Paper studying shared structural mechanism in q-bio",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.20487v2",
-    "paper_2_url": "http://arxiv.org/abs/2602.02553v1",
-    "paper_1_arxiv_id": "2601.20487v2",
-    "paper_2_arxiv_id": "2602.02553v1",
-    "paper_1_title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups",
-    "paper_2_title": "Indirect Reciprocity with Environmental Feedback",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 87,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2896,19 +2208,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02622v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04091v1",
-    "paper_1_arxiv_id": "2602.02622v1",
-    "paper_2_arxiv_id": "2602.04091v1",
-    "paper_1_title": "Discrete dynamical systems with scaling and inversion symmetries",
-    "paper_2_title": "A phenomenological description of critical slowing down at period-doubling bifurcations",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "nlin"
+    }
   },
   {
     "id": 88,
-    "title": "Nlin ↔ Physics",
+    "title": "Nlin \u2194 Physics",
     "domains": [
       "nlin",
       "physics"
@@ -2931,19 +2235,11 @@
         "title": "Paper studying shared structural mechanism in physics",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05112v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.02274v1",
-    "paper_1_arxiv_id": "2602.05112v1",
-    "paper_2_arxiv_id": "2602.02274v1",
-    "paper_1_title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
-    "paper_2_title": "The relationship between R&D spillovers and regional innovation: Licensing patents through royalties and the Stackelberg duopoly with subgame perfect Nash equilibrium",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "econ"
+    }
   },
   {
     "id": 89,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -2966,19 +2262,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06106v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04481v1",
-    "paper_1_arxiv_id": "2602.06106v1",
-    "paper_2_arxiv_id": "2602.04481v1",
-    "paper_1_title": "To clean or not to clean: The free-rider problem in sequentially shared resources",
-    "paper_2_title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 90,
-    "title": "Unknown ↔ Unknown",
+    "title": "Unknown \u2194 Unknown",
     "domains": [
       "unknown",
       "unknown"
@@ -3001,19 +2289,11 @@
         "title": "Paper studying shared structural mechanism in unknown",
         "mechanism": "Cross-domain structural similarity identified"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03981v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06436v1",
-    "paper_1_arxiv_id": "2602.03981v1",
-    "paper_2_arxiv_id": "2602.06436v1",
-    "paper_1_title": "DeXposure-FM: A Time-series, Graph Foundation Model for Credit Exposures and Stability on Decentralized Financial Networks",
-    "paper_2_title": "Impact of seed node position on network robustness under localized attacks",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 91,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3036,19 +2316,11 @@
         "title": "Paper studying critical transition to collective synchronization in biology",
         "mechanism": "confirms critical coupling threshold universality."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06640v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.22564v1",
-    "paper_1_arxiv_id": "2602.06640v1",
-    "paper_2_arxiv_id": "2601.22564v1",
-    "paper_1_title": "Habitat heterogeneity and dispersal network structure as drivers of metacommunity dynamics",
-    "paper_2_title": "Cross-feeding yields high-dimensional chaos and coexistence of species beyond exclusion principle",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 92,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3071,19 +2343,11 @@
         "title": "Paper studying oscillator synchronization through pulsed coupling in biology",
         "mechanism": "biology implements the physics description exactly!"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03068v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03738v1",
-    "paper_1_arxiv_id": "2602.03068v1",
-    "paper_2_arxiv_id": "2602.03738v1",
-    "paper_1_title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
-    "paper_2_title": "Emergent structures in coupled opinion and network dynamics",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 93,
-    "title": "Physics ↔ Socioeconomics",
+    "title": "Physics \u2194 Socioeconomics",
     "domains": [
       "physics",
       "socioeconomics"
@@ -3106,19 +2370,11 @@
         "title": "Paper studying dissipative collective assembly in socioeconomics",
         "mechanism": "energy dissipation drives collective patterns."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03068v1",
-    "paper_1_arxiv_id": "2602.02403v1",
-    "paper_2_arxiv_id": "2602.03068v1",
-    "paper_1_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_2_title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 94,
-    "title": "Network Science ↔ Socioeconomics",
+    "title": "Network Science \u2194 Socioeconomics",
     "domains": [
       "network_science",
       "socioeconomics"
@@ -3141,19 +2397,11 @@
         "title": "Paper studying topology-constrained collective dynamics in socioeconomics",
         "mechanism": "structure constrains dynamics universally."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05583v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06640v1",
-    "paper_1_arxiv_id": "2602.05583v1",
-    "paper_2_arxiv_id": "2602.06640v1",
-    "paper_1_title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns in semiarid ecosystems",
-    "paper_2_title": "Habitat heterogeneity and dispersal network structure as drivers of metacommunity dynamics",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 95,
-    "title": "Physics ↔ Ecology",
+    "title": "Physics \u2194 Ecology",
     "domains": [
       "physics",
       "ecology"
@@ -3176,19 +2424,11 @@
         "title": "Paper studying modular structure shaping cascades in ecology",
         "mechanism": "modularity shapes dynamics."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04481v1",
-    "paper_1_arxiv_id": "2602.02403v1",
-    "paper_2_arxiv_id": "2602.04481v1",
-    "paper_1_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_2_title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 96,
-    "title": "Cognitive Science ↔ Network Science",
+    "title": "Cognitive Science \u2194 Network Science",
     "domains": [
       "cognitive_science",
       "network_science"
@@ -3211,19 +2451,11 @@
         "title": "Paper studying structural control of cascade propagation in network_science",
         "mechanism": "structure determines spread."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2512.21621v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04481v1",
-    "paper_1_arxiv_id": "2512.21621v1",
-    "paper_2_arxiv_id": "2602.04481v1",
-    "paper_1_title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
-    "paper_2_title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
-    "paper_1_domain": "q-fin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 97,
-    "title": "Physics ↔ Computer_Science",
+    "title": "Physics \u2194 Computer_Science",
     "domains": [
       "physics",
       "computer_science"
@@ -3246,19 +2478,11 @@
         "title": "Paper studying network synchronization as emergence in computer_science",
         "mechanism": "local to global coherence."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03738v1",
-    "paper_1_arxiv_id": "2602.02403v1",
-    "paper_2_arxiv_id": "2602.03738v1",
-    "paper_1_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_2_title": "Emergent structures in coupled opinion and network dynamics",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 98,
-    "title": "Physics ↔ Optics",
+    "title": "Physics \u2194 Optics",
     "domains": [
       "physics",
       "optics"
@@ -3281,19 +2505,11 @@
         "title": "Paper studying critical scaling and multi-scale averaging in optics",
         "mechanism": "critical behavior across scales."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05112v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.04246v2",
-    "paper_1_arxiv_id": "2602.05112v1",
-    "paper_2_arxiv_id": "2601.04246v2",
-    "paper_1_title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
-    "paper_2_title": "Technology Adoption and Network Externalities in Financial Systems: A Spatial-Network Approach",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "q-fin"
+    }
   },
   {
     "id": 99,
-    "title": "Network Science ↔ Physics",
+    "title": "Network Science \u2194 Physics",
     "domains": [
       "network_science",
       "physics"
@@ -3316,19 +2532,11 @@
         "title": "Paper studying modular amplification of cascade failures in physics",
         "mechanism": "modularity creates vulnerability."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02553v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04481v1",
-    "paper_1_arxiv_id": "2602.02553v1",
-    "paper_2_arxiv_id": "2602.04481v1",
-    "paper_1_title": "Indirect Reciprocity with Environmental Feedback",
-    "paper_2_title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 100,
-    "title": "Physics ↔ Environmental_Science",
+    "title": "Physics \u2194 Environmental_Science",
     "domains": [
       "physics",
       "environmental_science"
@@ -3351,19 +2559,11 @@
         "title": "Paper studying coupled system phase transitions in environmental_science",
         "mechanism": "critical thresholds in coupled systems."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.02553v1",
-    "paper_1_arxiv_id": "2602.02403v1",
-    "paper_2_arxiv_id": "2602.02553v1",
-    "paper_1_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_2_title": "Indirect Reciprocity with Environmental Feedback",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 101,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -3386,19 +2586,11 @@
         "title": "Paper studying stability criteria for synchronization in physics",
         "mechanism": "both determine sync stability conditions."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02553v1",
-    "paper_2_url": "http://arxiv.org/abs/2512.21621v1",
-    "paper_1_arxiv_id": "2602.02553v1",
-    "paper_2_arxiv_id": "2512.21621v1",
-    "paper_1_title": "Indirect Reciprocity with Environmental Feedback",
-    "paper_2_title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-fin"
+    }
   },
   {
     "id": 102,
-    "title": "Physics ↔ Earth Science",
+    "title": "Physics \u2194 Earth Science",
     "domains": [
       "physics",
       "earth_science"
@@ -3421,19 +2613,11 @@
         "title": "Paper studying rate-dependent stability transitions in earth_science",
         "mechanism": "parameter change rate determines stability."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06200v1",
-    "paper_1_arxiv_id": "2602.02403v1",
-    "paper_2_arxiv_id": "2602.06200v1",
-    "paper_1_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_2_title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 103,
-    "title": "Physics ↔ Climate Science",
+    "title": "Physics \u2194 Climate Science",
     "domains": [
       "physics",
       "climate_science"
@@ -3456,19 +2640,11 @@
         "title": "Paper studying dual pathways to system collapse in climate_science",
         "mechanism": "multiple pathways to collapse."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06200v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04481v1",
-    "paper_1_arxiv_id": "2602.06200v1",
-    "paper_2_arxiv_id": "2602.04481v1",
-    "paper_1_title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
-    "paper_2_title": "The impact of heterogeneity on the co-evolution of cooperation and epidemic spreading in complex networks",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 104,
-    "title": "Cognitive Science ↔ Physics",
+    "title": "Cognitive Science \u2194 Physics",
     "domains": [
       "cognitive_science",
       "physics"
@@ -3491,19 +2667,11 @@
         "title": "Paper studying multiplicative cascades to absorbing states in physics",
         "mechanism": "identical multiplicative structure across domains!"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05112v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03068v1",
-    "paper_1_arxiv_id": "2602.05112v1",
-    "paper_2_arxiv_id": "2602.03068v1",
-    "paper_1_title": "Collaboration for the Bioeconomy -- Evidence from Innovation Output in Sweden, 1970-2021",
-    "paper_2_title": "From semantic memory to collective creativity: A generative cognitive foundation for social creativity models",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 105,
-    "title": "Neuroscience ↔ Biology",
+    "title": "Neuroscience \u2194 Biology",
     "domains": [
       "neuroscience",
       "biology"
@@ -3526,19 +2694,11 @@
         "title": "Paper studying threshold-based synchronization in biology",
         "mechanism": "Neural sustained activity and pulse coupling both achieve synchronization through threshold crossing"
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06200v1",
-    "paper_2_url": "http://arxiv.org/abs/2512.21621v1",
-    "paper_1_arxiv_id": "2602.06200v1",
-    "paper_2_arxiv_id": "2512.21621v1",
-    "paper_1_title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
-    "paper_2_title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-fin"
+    }
   },
   {
     "id": 106,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3561,19 +2721,11 @@
         "title": "Paper studying generalized synchronization mapping in biology",
         "mechanism": "deterministic state mapping."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03981v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.01234v1",
-    "paper_1_arxiv_id": "2602.03981v1",
-    "paper_2_arxiv_id": "2602.01234v1",
-    "paper_1_title": "DeXposure-FM: A Time-series, Graph Foundation Model for Credit Exposures and Stability on Decentralized Financial Networks",
-    "paper_2_title": "Controlling extreme events in neuronal networks: A single driving signal approach",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "nlin"
+    }
   },
   {
     "id": 107,
-    "title": "Physics ↔ Earth Science",
+    "title": "Physics \u2194 Earth Science",
     "domains": [
       "physics",
       "earth_science"
@@ -3596,19 +2748,11 @@
         "title": "Paper studying critical parameter thresholds in earth_science",
         "mechanism": "Oscillator phase transitions and rate-dependent tipping both show critical parameter thresholds."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.20487v2",
-    "paper_2_url": "http://arxiv.org/abs/2602.06200v1",
-    "paper_1_arxiv_id": "2601.20487v2",
-    "paper_2_arxiv_id": "2602.06200v1",
-    "paper_1_title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups",
-    "paper_2_title": "Threshold Resource Redistribution in Spatially-Structured Kinship Networks",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 108,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3631,19 +2775,11 @@
         "title": "Paper studying functional synchronization mapping in biology",
         "mechanism": "Chaotic synchronization through functional mapping parallels pulse-coupled phase advancement."
       }
-    },
-    "paper_1_url": "http://arxiv.org/abs/2512.21621v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03738v1",
-    "paper_1_arxiv_id": "2512.21621v1",
-    "paper_2_arxiv_id": "2602.03738v1",
-    "paper_1_title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
-    "paper_2_title": "Emergent structures in coupled opinion and network dynamics",
-    "paper_1_domain": "q-fin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 109,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3660,19 +2796,11 @@
     "papers": {
       "paper_1": "Emergent behavior in active colloids",
       "paper_2": "Learning and detecting emergent behavior in networks of cardiac myocytes"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.20487v2",
-    "paper_2_url": "http://arxiv.org/abs/2602.06106v1",
-    "paper_1_arxiv_id": "2601.20487v2",
-    "paper_2_arxiv_id": "2602.06106v1",
-    "paper_1_title": "Normative Equivalence in Human-AI Cooperation: Behaviour, Not Identity, Drives Cooperation in Mixed-Agent Groups",
-    "paper_2_title": "To clean or not to clean: The free-rider problem in sequentially shared resources",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 110,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3689,19 +2817,11 @@
     "papers": {
       "paper_1": "Emergent behavior in active colloids",
       "paper_2": "Swarm Intelligence"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02553v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.03738v1",
-    "paper_1_arxiv_id": "2602.02553v1",
-    "paper_2_arxiv_id": "2602.03738v1",
-    "paper_1_title": "Indirect Reciprocity with Environmental Feedback",
-    "paper_2_title": "Emergent structures in coupled opinion and network dynamics",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 111,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3718,19 +2838,11 @@
     "papers": {
       "paper_1": "Theory of dynamic critical phenomena",
       "paper_2": "Collective behavior in animal groups: Theoretical models and empirical studies"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.08840v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.09503v1",
-    "paper_1_arxiv_id": "2602.08840v1",
-    "paper_2_arxiv_id": "2602.09503v1",
-    "paper_1_title": "Division of labor enables efficient collective decision-making under uncertainty",
-    "paper_2_title": "Structure-aware imitation dynamics on higher-order networks",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 112,
-    "title": "Neuroscience ↔ Biology",
+    "title": "Neuroscience \u2194 Biology",
     "domains": [
       "neuroscience",
       "biology"
@@ -3747,19 +2859,11 @@
     "papers": {
       "paper_1": "Modulation of Oscillatory Neuronal Synchronization by Selective Visual Attention",
       "paper_2": "Synchronization of Pulse-Coupled Biological Oscillators"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.09503v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.10053v1",
-    "paper_1_arxiv_id": "2602.09503v1",
-    "paper_2_arxiv_id": "2602.10053v1",
-    "paper_1_title": "Structure-aware imitation dynamics on higher-order networks",
-    "paper_2_title": "The Architecture of Illusion: Network Opacity and Strategic Escalation",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 113,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -3776,19 +2880,11 @@
     "papers": {
       "paper_1": "Synchronization of Pulse-Coupled Biological Oscillators",
       "paper_2": "Synchronization: coupled systems to complex networks"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2512.21621v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.10053v1",
-    "paper_1_arxiv_id": "2512.21621v1",
-    "paper_2_arxiv_id": "2602.10053v1",
-    "paper_1_title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
-    "paper_2_title": "The Architecture of Illusion: Network Opacity and Strategic Escalation",
-    "paper_1_domain": "q-fin",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 114,
-    "title": "Earth Science ↔ Environmental_Science",
+    "title": "Earth Science \u2194 Environmental_Science",
     "domains": [
       "earth_science",
       "environmental_science"
@@ -3803,21 +2899,13 @@
       "mechanism_2": 104
     },
     "papers": {
-      "paper_1": "Exceeding 1.5°C global warming could trigger multiple climate tipping points",
+      "paper_1": "Exceeding 1.5\u00b0C global warming could trigger multiple climate tipping points",
       "paper_2": "Complexity of Coupled Human and Natural Systems"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.04091v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04905v1",
-    "paper_1_arxiv_id": "2602.04091v1",
-    "paper_2_arxiv_id": "2602.04905v1",
-    "paper_1_title": "A phenomenological description of critical slowing down at period-doubling bifurcations",
-    "paper_2_title": "Heterogeneity dominates irreversibility in random Markov models",
-    "paper_1_domain": "nlin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 115,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -3834,19 +2922,11 @@
     "papers": {
       "paper_1": "Learning and detecting emergent behavior in networks of cardiac myocytes",
       "paper_2": "Synchronization: coupled systems to complex networks"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.01492v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.00948v1",
-    "paper_1_arxiv_id": "2602.01492v1",
-    "paper_2_arxiv_id": "2602.00948v1",
-    "paper_1_title": "From Discrete to Continuous Mixed Populations of Conformists, Nonconformists, and Imitators",
-    "paper_2_title": "FinEvo: From Isolated Backtests to Ecological Market Games for Multi-Agent Financial Strategy Evolution",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 116,
-    "title": "Physics ↔ Economics",
+    "title": "Physics \u2194 Economics",
     "domains": [
       "physics",
       "economics"
@@ -3863,19 +2943,11 @@
     "papers": {
       "paper_1": "Chaotic behavior in simple dynamical systems",
       "paper_2": "Supply network equilibria with capacity constraints"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.04091v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.08483v1",
-    "paper_1_arxiv_id": "2602.04091v1",
-    "paper_2_arxiv_id": "2602.08483v1",
-    "paper_1_title": "A phenomenological description of critical slowing down at period-doubling bifurcations",
-    "paper_2_title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
-    "paper_1_domain": "nlin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 117,
-    "title": "Physics ↔ Neuroscience",
+    "title": "Physics \u2194 Neuroscience",
     "domains": [
       "physics",
       "neuroscience"
@@ -3892,19 +2964,11 @@
     "papers": {
       "paper_1": "Chaotic behavior in simple dynamical systems",
       "paper_2": "Internally Coupled Ears in a Katydid Generate Two Distinct Mechanical Responses to the Same Sound"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2601.04246v2",
-    "paper_2_url": "http://arxiv.org/abs/2602.09503v1",
-    "paper_1_arxiv_id": "2601.04246v2",
-    "paper_2_arxiv_id": "2602.09503v1",
-    "paper_1_title": "Technology Adoption and Network Externalities in Financial Systems: A Spatial-Network Approach",
-    "paper_2_title": "Structure-aware imitation dynamics on higher-order networks",
-    "paper_1_domain": "q-fin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 118,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3921,19 +2985,11 @@
     "papers": {
       "paper_1": "Theory of dynamic critical phenomena",
       "paper_2": "Long-lived transients in ecology: Nearly neutral coexistence in a model of tropical rain forest tree communities"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.01540v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.15886v1",
-    "paper_1_arxiv_id": "2602.01540v1",
-    "paper_2_arxiv_id": "2601.15886v1",
-    "paper_1_title": "FSCA-Net: Feature-Separated Cross-Attention Network for Robust Multi-Dataset Training",
-    "paper_2_title": "PhageMind: Generalized Strain-level Phage Host Range Prediction via Meta-learning",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 119,
-    "title": "Physics ↔ Biology",
+    "title": "Physics \u2194 Biology",
     "domains": [
       "physics",
       "biology"
@@ -3950,19 +3006,11 @@
     "papers": {
       "paper_1": "Active matter: Quantifying the departure from equilibrium",
       "paper_2": "Collective behavior in animal groups: Theoretical models and empirical studies"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03490v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06949v1",
-    "paper_1_arxiv_id": "2602.03490v1",
-    "paper_2_arxiv_id": "2602.06949v1",
-    "paper_1_title": "A Minimal Task Reveals Emergent Path Integration and Object-Location Binding in a Predictive Sequence Model",
-    "paper_2_title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
-    "paper_1_domain": "biology",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 120,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -3979,19 +3027,11 @@
     "papers": {
       "paper_1": "Synchronization of Pulse-Coupled Biological Oscillators",
       "paper_2": "Synchronization: coupled systems to complex networks"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.05071v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.06084v1",
-    "paper_1_arxiv_id": "2602.05071v1",
-    "paper_2_arxiv_id": "2601.06084v1",
-    "paper_1_title": "Optimal Harvesting in Stream Networks: Maximizing Biomass and Yield",
-    "paper_2_title": "Who sets the range? Funding mechanics and 4h context in crypto markets",
-    "paper_1_domain": "q-bio",
-    "paper_2_domain": "q-fin"
+    }
   },
   {
     "id": 121,
-    "title": "Physics ↔ Network Science",
+    "title": "Physics \u2194 Network Science",
     "domains": [
       "physics",
       "network_science"
@@ -4008,19 +3048,11 @@
     "papers": {
       "paper_1": "Theory of dynamic critical phenomena",
       "paper_2": "Complex Networks: Structure and Dynamics"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.06797v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.06825v1",
-    "paper_1_arxiv_id": "2602.06797v1",
-    "paper_2_arxiv_id": "2602.06825v1",
-    "paper_1_title": "Optimal Learning-Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay",
-    "paper_2_title": "AEGPO: Adaptive Entropy-Guided Policy Optimization for Diffusion Models",
-    "paper_1_domain": "stat",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 122,
-    "title": "Network Science ↔ Physics",
+    "title": "Network Science \u2194 Physics",
     "domains": [
       "network_science",
       "physics"
@@ -4037,19 +3069,11 @@
     "papers": {
       "paper_1": "Complex Networks: Structure and Dynamics",
       "paper_2": "Avalanches, Barkhausen Noise, and Plain Old Criticality"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.03738v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.05403v1",
-    "paper_1_arxiv_id": "2602.03738v1",
-    "paper_2_arxiv_id": "2602.05403v1",
-    "paper_1_title": "Emergent structures in coupled opinion and network dynamics",
-    "paper_2_title": "Advancing Opinion Dynamics Modeling with Neural Diffusion-Convection-Reaction Equation",
-    "paper_1_domain": "physics",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 123,
-    "title": "Physics ↔ Climate Science",
+    "title": "Physics \u2194 Climate Science",
     "domains": [
       "physics",
       "climate_science"
@@ -4066,19 +3090,11 @@
     "papers": {
       "paper_1": "Synchronization: coupled systems to complex networks",
       "paper_2": "Tipping points: Early warning and wishful thinking"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.02403v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.04291v1",
-    "paper_1_arxiv_id": "2602.02403v1",
-    "paper_2_arxiv_id": "2602.04291v1",
-    "paper_1_title": "Strategic Interactions in Science and Technology Networks: Substitutes or Complements?",
-    "paper_2_title": "Disentangling Causal Importance from Emergent Structure in Multi-Expert Orchestration",
-    "paper_1_domain": "econ",
-    "paper_2_domain": "cs"
+    }
   },
   {
     "id": 124,
-    "title": "Physics ↔ Engineering",
+    "title": "Physics \u2194 Engineering",
     "domains": [
       "physics",
       "engineering"
@@ -4095,19 +3111,11 @@
     "papers": {
       "paper_1": "Synchronization: coupled systems to complex networks",
       "paper_2": "Control of Multi-Agent Systems: A Superstability Approach"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.01540v1",
-    "paper_2_url": "http://arxiv.org/abs/2601.10995v1",
-    "paper_1_arxiv_id": "2602.01540v1",
-    "paper_2_arxiv_id": "2601.10995v1",
-    "paper_1_title": "FSCA-Net: Feature-Separated Cross-Attention Network for Robust Multi-Dataset Training",
-    "paper_2_title": "GP-DHT: A Dual-Head Transformer with Contras-tive Learning for Predicting Gene Regulatory Rela-tionships across Species from Single-Cell Data",
-    "paper_1_domain": "cs",
-    "paper_2_domain": "q-bio"
+    }
   },
   {
     "id": 125,
-    "title": "Network Science ↔ Physics",
+    "title": "Network Science \u2194 Physics",
     "domains": [
       "network_science",
       "physics"
@@ -4124,19 +3132,11 @@
     "papers": {
       "paper_1": "Complex Networks: Structure and Dynamics",
       "paper_2": "Theory of dynamic critical phenomena"
-    },
-    "paper_1_url": "http://arxiv.org/abs/2602.01402v1",
-    "paper_2_url": "http://arxiv.org/abs/2602.08483v1",
-    "paper_1_arxiv_id": "2602.01402v1",
-    "paper_2_arxiv_id": "2602.08483v1",
-    "paper_1_title": "Analytical and numerical study of a parametrically excited 2DOF oscillator with nonlinear restoring magnetic force and rotating rectangular rod",
-    "paper_2_title": "Emergence of Superintelligence from Collective Near-Critical Dynamics in Reentrant Neural Fields",
-    "paper_1_domain": "nlin",
-    "paper_2_domain": "physics"
+    }
   },
   {
     "id": 126,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -4157,7 +3157,7 @@
   },
   {
     "id": 127,
-    "title": "Physics ↔ Computer_Science",
+    "title": "Physics \u2194 Computer_Science",
     "domains": [
       "physics",
       "computer_science"
@@ -4172,13 +3172,13 @@
       "mechanism_2": 287
     },
     "papers": {
-      "paper_1": "Physics of microswimmers—single particle motion and collective behavior: a review",
+      "paper_1": "Physics of microswimmers\u2014single particle motion and collective behavior: a review",
       "paper_2": "Emergent Collective Behavior in Large Numbers of Globally Coupled Independently Stochastic Agents"
     }
   },
   {
     "id": 128,
-    "title": "Neuroscience ↔ Physics",
+    "title": "Neuroscience \u2194 Physics",
     "domains": [
       "neuroscience",
       "physics"
@@ -4199,7 +3199,7 @@
   },
   {
     "id": 129,
-    "title": "Sociology ↔ Physics",
+    "title": "Sociology \u2194 Physics",
     "domains": [
       "sociology",
       "physics"
@@ -4220,7 +3220,7 @@
   },
   {
     "id": 130,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -4241,7 +3241,7 @@
   },
   {
     "id": 131,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -4262,7 +3262,7 @@
   },
   {
     "id": 132,
-    "title": "Biology ↔ Network Science",
+    "title": "Biology \u2194 Network Science",
     "domains": [
       "biology",
       "network_science"
@@ -4283,7 +3283,7 @@
   },
   {
     "id": 133,
-    "title": "Biology ↔ Optics",
+    "title": "Biology \u2194 Optics",
     "domains": [
       "biology",
       "optics"
@@ -4304,7 +3304,7 @@
   },
   {
     "id": 134,
-    "title": "Physics ↔ Engineering",
+    "title": "Physics \u2194 Engineering",
     "domains": [
       "physics",
       "engineering"
@@ -4325,7 +3325,7 @@
   },
   {
     "id": 135,
-    "title": "Physics ↔ Earth Science",
+    "title": "Physics \u2194 Earth Science",
     "domains": [
       "physics",
       "earth_science"
@@ -4346,7 +3346,7 @@
   },
   {
     "id": 136,
-    "title": "Earth Science ↔ Physics",
+    "title": "Earth Science \u2194 Physics",
     "domains": [
       "earth_science",
       "physics"
@@ -4361,13 +3361,13 @@
       "mechanism_2": 275
     },
     "papers": {
-      "paper_1": "Exceeding 1.5°C global warming could trigger multiple climate tipping points",
+      "paper_1": "Exceeding 1.5\u00b0C global warming could trigger multiple climate tipping points",
       "paper_2": "Absorbing state phase transitions in interacting particle systems"
     }
   },
   {
     "id": 137,
-    "title": "Neuroscience ↔ Physics",
+    "title": "Neuroscience \u2194 Physics",
     "domains": [
       "neuroscience",
       "physics"
@@ -4388,7 +3388,7 @@
   },
   {
     "id": 138,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -4409,7 +3409,7 @@
   },
   {
     "id": 139,
-    "title": "Biology ↔ Physics",
+    "title": "Biology \u2194 Physics",
     "domains": [
       "biology",
       "physics"
@@ -4430,7 +3430,7 @@
   },
   {
     "id": 140,
-    "title": "Climate Science ↔ Physics",
+    "title": "Climate Science \u2194 Physics",
     "domains": [
       "climate_science",
       "physics"
@@ -4451,7 +3451,7 @@
   },
   {
     "id": 141,
-    "title": "Physics ↔ Economics",
+    "title": "Physics \u2194 Economics",
     "domains": [
       "physics",
       "economics"

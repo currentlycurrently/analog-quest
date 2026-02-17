@@ -1,301 +1,315 @@
-# MAINTENANCE.md - Guide for Chuck
+# Maintenance Guide - Analog Quest
 
-How to keep analog.quest running smoothly with minimal effort.
-
----
-
-## Daily Routine (5 minutes)
+## Quick Start (Daily)
 
 ### Start a Session
 ```bash
-cd analog.quest
+cd /Users/user/Dev/nextjs/analog-quest
 claude --continue
 ```
 
-That's it! The agent knows what to do.
-
-### Or Start Fresh (if something seems off)
+### Check Production Health
 ```bash
-cd analog.quest
-claude
+# API Health
+curl https://analog.quest/api/health | jq
+
+# View recent discoveries
+curl https://analog.quest/api/discoveries?limit=5 | jq '.data[].id'
 ```
-Then say: "Read CLAUDE.md and continue from where we left off"
 
----
+## Infrastructure Overview
 
-## Weekly Check-in (15 minutes)
+### Production Stack
+- **Frontend**: Next.js 15 on Vercel (analog.quest)
+- **Database**: PostgreSQL on Neon (2,397 papers, 305 mechanisms, 133 discoveries)
+- **API**: Next.js API routes with database connection pooling
+- **Repository**: github.com/currentlycurrently/analog-quest
 
-### Review Progress
+### Key Files
+- `app/data/discoveries.json` - Static discovery data with URLs
+- `app/data/discovered_pairs.json` - Tracking for unique discoveries
+- `lib/db.ts` - Database connection and queries
+- `ROADMAP.md` - Development priorities and timeline
+
+## Daily Operations
+
+### Pre-Session Checklist
+- [ ] Check API health: `curl https://analog.quest/api/health | jq`
+- [ ] Review recent commits: `git log --oneline -5`
+- [ ] Pull latest changes: `git pull`
+- [ ] Check Vercel dashboard for deployment status
+
+### During Session
+- [ ] Mine candidates from `examples/session74_candidates.json`
+- [ ] Update `discovered_pairs.json` with new discoveries
+- [ ] Test locally before pushing: `npm run build`
+- [ ] Document in PROGRESS.md
+- [ ] Update METRICS.md
+
+### End of Session
+- [ ] Commit with clear message
+- [ ] Push to GitHub
+- [ ] Monitor Vercel deployment
+- [ ] Check production site
+
+## Weekly Tasks
+
+### Data Quality Audit
 ```bash
-cat METRICS.md
+# Check for duplicates in discovered_pairs
+cat app/data/discovered_pairs.json | jq '.discovered_pairs | group_by(.paper_1_id, .paper_2_id) | map(select(length > 1))'
+
+# Verify discovery count matches
+curl https://analog.quest/api/health | jq '.checks.database.tables'
 ```
 
-Look for:
-- Are papers being processed? (should increase each session)
-- Are patterns being found? (should be ~2-5 per paper)
-- Are isomorphisms being discovered? (will be slow at first)
-
-### Check for Questions
+### Database Backup
 ```bash
-cat QUESTIONS.md
+# Run backup script
+./scripts/backup_critical_data.sh
+
+# Verify backup
+ls -lah backups/
 ```
 
-If there are open questions:
-- Read the question
-- Provide your answer
-- Move to "Answered" section
-- Agent will see it next session
-
-### Review Recent Work
+### Clean Technical Debt
 ```bash
-cat PROGRESS.md | tail -100
+# Remove old backup files
+rm -f app/data/*.bak
+
+# Archive old session scripts
+mv scripts/session[0-7]*.py archive/scripts/
 ```
 
-Skim the last few sessions - anything interesting?
+## Common Tasks
 
----
+### Add New Discoveries
+1. Review candidates from `examples/session74_candidates.json`
+2. Apply quality criteria from `DATA_QUALITY_STANDARDS.md`
+3. Add to `discovered_pairs.json`
+4. Update static data: `npm run update-static-data`
+5. Commit and push
 
-## Monthly Review (30 minutes)
+### Fix Duplicate Discoveries
+```sql
+-- Connect to database
+psql $DATABASE_URL
 
-### Database Health
-```bash
-sqlite3 database/papers.db "SELECT * FROM stats;"
+-- Find duplicates
+SELECT paper_1_id, paper_2_id, COUNT(*)
+FROM discovered_pairs
+GROUP BY paper_1_id, paper_2_id
+HAVING COUNT(*) > 1;
+
+-- Remove duplicates (keep first)
+DELETE FROM discovered_pairs a
+USING discovered_pairs b
+WHERE a.ctid > b.ctid
+  AND a.paper_1_id = b.paper_1_id
+  AND a.paper_2_id = b.paper_2_id;
 ```
 
-Check:
-- Total papers (should grow steadily)
-- Total patterns (should be 2-5x papers)
-- Total isomorphisms (slower growth, that's normal)
-- Domains covered (should expand over time)
+### Update Paper URLs
+```javascript
+// Update static JSON with URLs from database
+node scripts/update_discoveries_with_urls.js
 
-### Backup Database
-```bash
-cp database/papers.db database/backup/papers_$(date +%Y%m%d).db
+// Commit and push
+git add app/data/discoveries.json
+git commit -m "Update paper URLs in static data"
+git push
 ```
-
-### Review Quality
-Look at a few isomorphisms:
-```bash
-sqlite3 database/papers.db "SELECT * FROM high_confidence_matches LIMIT 5;"
-```
-
-Do they make sense? Are they genuinely cross-domain?
-
-### Provide Feedback
-If something looks off, add a note in QUESTIONS.md:
-```
-### From Chuck - [DATE]
-I noticed [thing]. Should we [suggestion]?
-```
-
-Agent will address it next session.
-
----
 
 ## Troubleshooting
 
-### "Nothing's happening"
-Check when last session was:
+### "Build Failing on Vercel"
 ```bash
-git log -1
+# Test locally
+npm run build
+
+# Check TypeScript errors
+npx tsc --noEmit
+
+# Check environment variables
+vercel env pull
 ```
 
-If it's been >1 week, just start a new session. Agent will pick up where it left off.
-
-### "Database seems wrong"
+### "Database Connection Issues"
 ```bash
-# Check database integrity
-sqlite3 database/papers.db "PRAGMA integrity_check;"
+# Test connection
+psql $DATABASE_URL -c "SELECT 1"
 
-# If corrupted, restore from backup
-ls -lt database/backup/
-# Find most recent backup
-cp database/backup/papers_YYYYMMDD.db database/papers.db
+# Check Neon status
+curl https://status.neon.tech
+
+# Verify connection string
+echo $DATABASE_URL | grep -o "sslmode=require"
 ```
 
-### "Agent is stuck in a loop"
-```bash
-# Start fresh session with explicit instruction
-claude
+### "Paper URLs Not Showing"
+1. Check database has URLs: `psql $DATABASE_URL -c "SELECT COUNT(*) FROM papers WHERE url IS NOT NULL"`
+2. Update static JSON: `node scripts/update_discoveries_with_urls.js`
+3. Push and redeploy
 
-# Then say:
-"Stop what you were doing. Read CLAUDE.md, check PROGRESS.md 
-for your last successful session, and continue from there with 
-a fresh approach."
+### "Duplicate Discoveries"
+1. Query database for duplicates
+2. Update `discovered_pairs.json`
+3. Clean discoveries table
+4. Rebuild and deploy
+
+## Quality Standards
+
+### Discovery Ratings
+- **Excellent**: Clear isomorphism, non-obvious, valuable
+- **Good**: Valid similarity, useful connection
+- **Weak**: Surface-level or obvious - REJECT
+
+### Required for Each Discovery
+- [ ] Both paper URLs present
+- [ ] Clear structural explanation
+- [ ] Proper domain classification
+- [ ] Quality rating assigned
+- [ ] No duplicate pairs
+
+## Monitoring
+
+### Health Endpoints
+```bash
+# Overall health
+curl https://analog.quest/api/health | jq
+
+# Discovery stats
+curl https://analog.quest/api/discoveries?limit=1 | jq '.metadata.stats'
+
+# Pairs count
+curl https://analog.quest/api/pairs?limit=1 | jq '.metadata.total'
 ```
 
-### "Token usage seems high"
-This shouldn't happen (designed to be efficient), but if it does:
+### Database Stats
 ```bash
-# Check what's using tokens
-cat ~/.claude/settings.json
-```
-
-Agent should be auto-compacting. If not, add to QUESTIONS.md.
-
----
-
-## Maintenance Commands
-
-### View Database Stats
-```bash
-sqlite3 database/papers.db << EOF
-SELECT 'Papers: ' || COUNT(*) FROM papers;
-SELECT 'Patterns: ' || COUNT(*) FROM patterns;
-SELECT 'Isomorphisms: ' || COUNT(*) FROM isomorphisms;
-SELECT 'Domains: ' || COUNT(DISTINCT domain) FROM papers;
+psql $DATABASE_URL << EOF
+  SELECT 'Papers' as type, COUNT(*) FROM papers
+  UNION ALL
+  SELECT 'Mechanisms', COUNT(*) FROM mechanisms
+  UNION ALL
+  SELECT 'Discoveries', COUNT(*) FROM discoveries
+  UNION ALL
+  SELECT 'Pairs', COUNT(*) FROM discovered_pairs;
 EOF
 ```
 
-### See Recent Papers
+## Development Workflow
+
+### Local Development
 ```bash
-sqlite3 database/papers.db \
-  "SELECT title, domain, published_date FROM papers 
-   ORDER BY processed_date DESC LIMIT 10;"
+# Start dev server
+npm run dev
+
+# Test API locally
+curl http://localhost:3000/api/health
+
+# Test with production database
+DATABASE_URL="postgresql://..." npm run dev
 ```
 
-### See Recent Isomorphisms
+### Deployment Process
 ```bash
-sqlite3 database/papers.db \
-  "SELECT explanation, similarity_score FROM isomorphisms 
-   ORDER BY discovered_date DESC LIMIT 5;"
+# 1. Test locally
+npm run build
+
+# 2. Commit changes
+git add .
+git commit -m "Description of changes"
+
+# 3. Push to trigger deployment
+git push
+
+# 4. Monitor deployment
+# Check Vercel dashboard or wait ~2 minutes
+
+# 5. Verify production
+curl https://analog.quest/api/health
 ```
 
-### Export Data (if needed)
+## Emergency Procedures
+
+### Rollback Deployment
 ```bash
-# Export to CSV
-sqlite3 -header -csv database/papers.db \
-  "SELECT * FROM cross_domain_matches;" > matches.csv
+# Revert last commit
+git revert HEAD
+git push
+
+# Or reset to specific commit
+git reset --hard <commit-hash>
+git push --force
 ```
 
----
+### Database Recovery
+```bash
+# From local backup
+psql $DATABASE_URL < backups/analog_quest_backup_YYYYMMDD.sql
 
-## What to Expect Over Time
-
-### Week 1
-- Agent figuring things out
-- Rough pattern extraction
-- ~100 papers processed
-- Pipeline working
-
-### Month 1
-- Pattern quality improving
-- ~500 papers
-- First real isomorphisms
-- Agent self-correcting
-
-### Month 2
-- Expanding to more domains
-- ~1000 papers
-- Patterns getting refined
-- Web interface maybe appearing
-
-### Month 3-6
-- Steady progress
-- Finding interesting connections
-- Quality > quantity
-- Mission approaching completion
-
----
-
-## Signs of Success
-
-### Good Signs:
-- Papers processed increasing
-- Pattern extraction improving (check examples/)
-- Isomorphisms have clear explanations
-- Agent updating its own code
-- Domains expanding
-- QUESTIONS.md mostly empty (agent self-sufficient)
-
-### Warning Signs:
-- No progress for 2+ weeks (you forgot to start sessions!)
-- Same error repeated in PROGRESS.md (agent stuck)
-- Database not growing (fetch broken)
-- All patterns look the same (extraction broken)
-
-If you see warning signs, just start a session and ask agent to diagnose.
-
----
-
-## Cost Monitoring
-
-### Check Claude Usage
-(Go to claude.ai account settings)
-
-Should be well within Max plan limits (~$200/month).
-
-Agent is designed to be efficient:
-- Processes in batches
-- Stores in database (not context)
-- Auto-compacts
-- Doesn't re-process data
-
-If costs spike unexpectedly, add to QUESTIONS.md.
-
----
-
-## When to Intervene
-
-### DO intervene if:
-- Agent explicitly asks in QUESTIONS.md
-- No progress for 2+ weeks
-- Database corrupted
-- Quality clearly degrading
-- Something interesting you want to discuss
-
-### DON'T intervene if:
-- Agent is working (trust the process)
-- Progress is slow (that's normal)
-- Patterns look rough early on (they'll improve)
-- You're just curious (wait for weekly check-in)
-
-The agent is designed to be autonomous. Let it work.
-
----
-
-## Celebrating Milestones
-
-When the agent hits milestones, acknowledge it!
-
-In next session, start with:
-```
-"Congrats on hitting [milestone]! That's awesome. 
-Keep up the good work. Continue from where you left off."
+# From Neon dashboard
+# Go to Neon console > Backups > Restore
 ```
 
-Positive reinforcement helps (even for AI agents, apparently).
+### Clear Cache
+```bash
+# Force rebuild on Vercel
+vercel --force
+
+# Clear ISR cache (visit pages)
+for i in {1..10}; do
+  curl https://analog.quest/discoveries/$i > /dev/null
+done
+```
+
+## Cost Management
+
+### Monitor Usage
+- Check Vercel dashboard for bandwidth/invocations
+- Review Neon dashboard for database usage
+- Track Claude usage in sessions
+
+### Optimization Tips
+- Use ISR instead of SSR for discovery pages
+- Batch database operations
+- Archive old session data
+- Clean up unused files
+
+## Maintenance Schedule
+
+### Daily
+- [ ] Start Claude session
+- [ ] Check production health
+- [ ] Review and commit changes
+
+### Weekly
+- [ ] Database backup
+- [ ] Quality audit
+- [ ] Clean technical debt
+- [ ] Update documentation
+
+### Monthly
+- [ ] Review roadmap progress
+- [ ] Optimize database queries
+- [ ] Security updates
+- [ ] Archive old data
+
+## Contact & Support
+
+### Services
+- **Vercel Status**: status.vercel.com
+- **Neon Status**: status.neon.tech
+- **GitHub Status**: githubstatus.com
+
+### Documentation
+- **Next.js**: nextjs.org/docs
+- **Neon**: neon.tech/docs
+- **Vercel**: vercel.com/docs
 
 ---
 
-## Emergency Contacts
-
-If something is fundamentally broken:
-
-1. Check QUESTIONS.md
-2. Read last few PROGRESS.md entries
-3. Try starting fresh session with explicit instruction
-4. If still stuck, delete last commit and restore from earlier state
-5. If completely lost, start new session with: "Read BOOTSTRAP.md again and rebuild from scratch"
-
-The database persists, so work is never truly lost.
-
----
-
-## Final Thoughts
-
-This project succeeds if you:
-1. Start sessions regularly (3-7x per week)
-2. Check progress weekly
-3. Trust the agent to do its work
-4. Provide feedback when needed
-
-That's it. The agent handles the rest.
-
-Enjoy watching something interesting emerge over 6 months!
-
----
-
-**Questions?** 
-
-Add them to QUESTIONS.md and agent will address them.
+**Last Updated**: February 17, 2026
+**Next Review**: February 24, 2026
+**Maintained By**: Chuck & Claude Agent

@@ -169,12 +169,14 @@ export interface DiscoveryWithDetails extends Discovery {
   paper_1_title?: string;
   paper_1_domain?: string;
   paper_1_arxiv_id?: string;
+  paper_1_url?: string;
   mechanism_1_description?: string;
 
   paper_2_id?: number;
   paper_2_title?: string;
   paper_2_domain?: string;
   paper_2_arxiv_id?: string;
+  paper_2_url?: string;
   mechanism_2_description?: string;
 
   domains?: string[];
@@ -211,6 +213,7 @@ export const queries = {
         p1.title as paper_1_title,
         p1.domain as paper_1_domain,
         p1.arxiv_id as paper_1_arxiv_id,
+        p1.url as paper_1_url,
 
         -- Mechanism 1 details
         m1.description as mechanism_1_description,
@@ -220,6 +223,7 @@ export const queries = {
         p2.title as paper_2_title,
         p2.domain as paper_2_domain,
         p2.arxiv_id as paper_2_arxiv_id,
+        p2.url as paper_2_url,
 
         -- Mechanism 2 details
         m2.description as mechanism_2_description
@@ -310,6 +314,7 @@ export const queries = {
         p1.abstract as paper_1_abstract,
         p1.domain as paper_1_domain,
         p1.arxiv_id as paper_1_arxiv_id,
+        p1.url as paper_1_url,
 
         -- Mechanism 1 details
         m1.description as mechanism_1_description,
@@ -320,6 +325,7 @@ export const queries = {
         p2.abstract as paper_2_abstract,
         p2.domain as paper_2_domain,
         p2.arxiv_id as paper_2_arxiv_id,
+        p2.url as paper_2_url,
 
         -- Mechanism 2 details
         m2.description as mechanism_2_description

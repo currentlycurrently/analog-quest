@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import discoveriesData from '@/app/data/discoveries.json';
-import discoveredPairsData from '@/app/data/discovered_pairs.json';
+import { queries } from '@/lib/db';
 
 // GET /api/discoveries - Get all discoveries or filtered results
 export async function GET(request: NextRequest) {
@@ -8,75 +7,38 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
 
     // Get query parameters
-    const rating = searchParams.get('rating');
-    const domain = searchParams.get('domain');
-    const minSimilarity = searchParams.get('minSimilarity');
-    const limit = searchParams.get('limit');
-    const offset = searchParams.get('offset');
+    const rating = searchParams.get('rating') || undefined;
+    const domain = searchParams.get('domain') || undefined;
+    const minSimilarity = searchParams.get('minSimilarity')
+      ? parseFloat(searchParams.get('minSimilarity')!)
+      : undefined;
+    const limit = searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : undefined;
+    const offset = searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0;
     const sortBy = searchParams.get('sortBy') || 'similarity';
-    const order = searchParams.get('order') || 'desc';
+    const order = (searchParams.get('order') || 'desc') as 'asc' | 'desc';
 
-    // Start with all discoveries
-    let discoveries = [...discoveriesData];
+    // Fetch discoveries from database with filters
+    // Run queries in parallel for performance
+    const [discoveries, total, stats] = await Promise.all([
+      queries.getAllDiscoveriesWithDetails({
+        rating,
+        domain,
+        minSimilarity,
+        limit,
+        offset,
+        sortBy,
+        order
+      }),
+      // Count total matching records (without pagination) for metadata
+      queries.countDiscoveries({ rating, domain, minSimilarity }),
+      // Get overall database statistics
+      queries.getDiscoveryStats()
+    ]);
 
-    // Apply filters
-    if (rating) {
-      discoveries = discoveries.filter(d => d.rating === rating);
-    }
-
-    if (domain) {
-      discoveries = discoveries.filter(d =>
-        d.domains && d.domains.includes(domain)
-      );
-    }
-
-    if (minSimilarity) {
-      const threshold = parseFloat(minSimilarity);
-      discoveries = discoveries.filter(d => d.similarity >= threshold);
-    }
-
-    // Apply sorting
-    discoveries.sort((a, b) => {
-      let comparison = 0;
-
-      switch (sortBy) {
-        case 'similarity':
-          comparison = b.similarity - a.similarity;
-          break;
-        case 'rating':
-          // Excellent first, then by similarity
-          if (a.rating === 'excellent' && b.rating === 'good') comparison = -1;
-          else if (a.rating === 'good' && b.rating === 'excellent') comparison = 1;
-          else comparison = b.similarity - a.similarity;
-          break;
-        case 'id':
-          comparison = a.id - b.id;
-          break;
-        case 'session':
-          comparison = (a.session || 0) - (b.session || 0);
-          break;
-        default:
-          comparison = b.similarity - a.similarity;
-      }
-
-      return order === 'desc' ? comparison : -comparison;
-    });
-
-    // Calculate metadata before pagination
-    const total = discoveries.length;
+    // Calculate stats for current page
     const excellent = discoveries.filter(d => d.rating === 'excellent').length;
     const good = discoveries.filter(d => d.rating === 'good').length;
     const uniqueDomains = [...new Set(discoveries.flatMap(d => d.domains || []))];
-
-    // Apply pagination
-    const limitNum = limit ? parseInt(limit) : undefined;
-    const offsetNum = offset ? parseInt(offset) : 0;
-
-    if (limitNum) {
-      discoveries = discoveries.slice(offsetNum, offsetNum + limitNum);
-    } else if (offsetNum > 0) {
-      discoveries = discoveries.slice(offsetNum);
-    }
 
     // Return response with metadata
     return NextResponse.json({
@@ -84,21 +46,22 @@ export async function GET(request: NextRequest) {
       metadata: {
         total,
         returned: discoveries.length,
-        offset: offsetNum,
-        limit: limitNum,
+        offset,
+        limit,
         filters: {
           rating,
           domain,
-          minSimilarity: minSimilarity ? parseFloat(minSimilarity) : null
+          minSimilarity
         },
         stats: {
           excellent,
           good,
           uniqueDomains: uniqueDomains.length,
-          domains: uniqueDomains.sort()
+          domains: uniqueDomains.sort(),
+          database_stats: stats
         },
-        source: 'static_json',
-        note: 'Currently serving from static JSON. Database integration coming soon.'
+        source: 'postgresql',
+        database: 'analog_quest'
       }
     });
 
@@ -111,23 +74,33 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// GET /api/discoveries/[id] - We'll need a dynamic route for this
-// For now, you can get by ID using a filter
-
-// POST /api/discoveries - Add a new discovery (placeholder for future)
+// POST /api/discoveries - Add a new discovery (future feature)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // For now, return an error since we can't write to static JSON
-    // This will be implemented when we add database support
+    // Check if write operations are enabled
+    const enableWriteOps = process.env.ENABLE_WRITE_OPS === 'true';
+
+    if (!enableWriteOps) {
+      return NextResponse.json(
+        {
+          error: 'Write operations not enabled',
+          message: 'Set ENABLE_WRITE_OPS=true in environment to enable',
+          received: body
+        },
+        { status: 501 } // Not Implemented
+      );
+    }
+
+    // TODO: Implement when write operations are enabled
     return NextResponse.json(
       {
-        error: 'Write operations not yet supported',
-        message: 'Database integration required for adding new discoveries',
+        error: 'Not implemented',
+        message: 'Write operations coming soon',
         received: body
       },
-      { status: 501 } // Not Implemented
+      { status: 501 }
     );
 
   } catch (error) {
@@ -139,31 +112,34 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Helper endpoint to get statistics
+// OPTIONS /api/discoveries - Get statistics and capabilities
 export async function OPTIONS(request: NextRequest) {
-  const stats = {
-    total_discoveries: discoveriesData.length,
-    unique_pairs: discoveredPairsData.discovered_pairs.length,
-    ratings: {
-      excellent: discoveriesData.filter(d => d.rating === 'excellent').length,
-      good: discoveriesData.filter(d => d.rating === 'good').length
-    },
-    similarity_range: {
-      min: Math.min(...discoveriesData.map(d => d.similarity)),
-      max: Math.max(...discoveriesData.map(d => d.similarity)),
-      avg: discoveriesData.reduce((sum, d) => sum + d.similarity, 0) / discoveriesData.length
-    },
-    domains: [...new Set(discoveriesData.flatMap(d => d.domains || []))].sort(),
-    sessions: [...new Set(discoveriesData.map(d => d.session || 0))].sort((a, b) => a - b),
-    api_version: '1.0.0',
-    capabilities: {
-      filtering: true,
-      sorting: true,
-      pagination: true,
-      writing: false,
-      database: false
-    }
-  };
+  try {
+    const stats = await queries.getDiscoveryStats();
 
-  return NextResponse.json(stats);
+    return NextResponse.json({
+      api_version: '2.0.0',
+      database: 'postgresql',
+      capabilities: {
+        filtering: true,
+        sorting: true,
+        pagination: true,
+        writing: process.env.ENABLE_WRITE_OPS === 'true',
+        database: true
+      },
+      stats: stats,
+      endpoints: {
+        list: 'GET /api/discoveries',
+        detail: 'GET /api/discoveries/[id]',
+        create: 'POST /api/discoveries (not enabled)',
+        statistics: 'OPTIONS /api/discoveries'
+      }
+    });
+  } catch (error) {
+    console.error('Error in OPTIONS /api/discoveries:', error);
+    return NextResponse.json(
+      { error: 'Failed to get statistics', details: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 500 }
+    );
+  }
 }

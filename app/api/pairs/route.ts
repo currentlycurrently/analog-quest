@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import discoveredPairsData from '@/app/data/discovered_pairs.json';
+import { queries, query } from '@/lib/db';
 
 // GET /api/pairs - Get discovered pairs (source of truth for unique discoveries)
 export async function GET(request: NextRequest) {
@@ -7,65 +7,56 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
 
     // Get query parameters
-    const session = searchParams.get('session');
-    const rating = searchParams.get('rating');
-    const minSimilarity = searchParams.get('minSimilarity');
-    const limit = searchParams.get('limit');
-    const offset = searchParams.get('offset');
+    const session = searchParams.get('session') ? parseInt(searchParams.get('session')!) : undefined;
+    const rating = searchParams.get('rating') || undefined;
+    const minSimilarity = searchParams.get('minSimilarity')
+      ? parseFloat(searchParams.get('minSimilarity')!)
+      : undefined;
+    const limit = searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : undefined;
+    const offset = searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0;
 
-    // Start with all pairs
-    let pairs = [...discoveredPairsData.discovered_pairs];
+    // Fetch discovered pairs from database
+    const pairs = await queries.getAllDiscoveredPairs({
+      session,
+      rating,
+      minSimilarity,
+      limit,
+      offset
+    });
 
-    // Apply filters
-    if (session) {
-      const sessionNum = parseInt(session);
-      pairs = pairs.filter(p => p.discovered_in_session === sessionNum);
-    }
-
-    if (rating) {
-      pairs = pairs.filter(p => p.rating === rating);
-    }
-
-    if (minSimilarity) {
-      const threshold = parseFloat(minSimilarity);
-      pairs = pairs.filter(p => p.similarity >= threshold);
-    }
-
-    // Sort by similarity (highest first)
-    pairs.sort((a, b) => b.similarity - a.similarity);
-
-    // Calculate stats before pagination
+    // Calculate stats
     const total = pairs.length;
     const stats = {
       total,
       excellent: pairs.filter(p => p.rating === 'excellent').length,
       good: pairs.filter(p => p.rating === 'good').length,
       sessions: [...new Set(pairs.map(p => p.discovered_in_session))].sort((a, b) => a - b),
-      similarity_range: {
+      similarity_range: pairs.length > 0 ? {
         min: Math.min(...pairs.map(p => p.similarity)),
         max: Math.max(...pairs.map(p => p.similarity)),
         avg: pairs.reduce((sum, p) => sum + p.similarity, 0) / pairs.length
-      }
+      } : null
     };
 
-    // Apply pagination
-    const limitNum = limit ? parseInt(limit) : undefined;
-    const offsetNum = offset ? parseInt(offset) : 0;
-
-    if (limitNum) {
-      pairs = pairs.slice(offsetNum, offsetNum + limitNum);
-    } else if (offsetNum > 0) {
-      pairs = pairs.slice(offsetNum);
-    }
+    // Get metadata about the discovered_pairs table
+    const countResult = await query('SELECT COUNT(*) as total FROM discovered_pairs');
+    const totalInDb = parseInt(countResult.rows[0]?.total || '0');
 
     return NextResponse.json({
       data: pairs,
       metadata: {
-        ...discoveredPairsData.metadata,
+        total: totalInDb,
         returned: pairs.length,
-        offset: offsetNum,
-        limit: limitNum,
-        stats
+        offset,
+        limit,
+        filters: {
+          session,
+          rating,
+          minSimilarity
+        },
+        stats,
+        source: 'postgresql',
+        database: 'analog_quest'
       }
     });
 
@@ -78,10 +69,23 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// POST /api/pairs - Add a new discovered pair (placeholder)
+// POST /api/pairs - Add a new discovered pair (future feature)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+
+    const enableWriteOps = process.env.ENABLE_WRITE_OPS === 'true';
+
+    if (!enableWriteOps) {
+      return NextResponse.json(
+        {
+          error: 'Write operations not enabled',
+          message: 'Set ENABLE_WRITE_OPS=true in environment to enable',
+          received: body
+        },
+        { status: 501 }
+      );
+    }
 
     // Validate required fields
     const required = ['paper_1_id', 'paper_2_id', 'similarity', 'rating', 'discovered_in_session'];
@@ -98,13 +102,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // For now, we can't actually save to the JSON file
+    // TODO: Implement when write operations are enabled
     return NextResponse.json(
       {
-        error: 'Write operations not yet supported',
-        message: 'Database integration required for adding new pairs',
-        received: body,
-        note: 'Use scripts/add_discovered_pair.py locally for now'
+        error: 'Not implemented',
+        message: 'Write operations coming soon',
+        received: body
       },
       { status: 501 }
     );

@@ -1,107 +1,154 @@
 import { NextResponse } from 'next/server';
-import discoveriesData from '@/app/data/discoveries.json';
-import discoveredPairsData from '@/app/data/discovered_pairs.json';
+import { checkConnection, getStats } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
 
 // GET /api/health - Check API and data health
 export async function GET() {
   try {
-    const checks = {
+    const checks: {
+      api: string;
+      database: any;
+      data_sources: any;
+      issues: any[];
+      recommendations: string[];
+    } = {
       api: 'healthy',
-      data_sources: {},
       database: {},
+      data_sources: {},
       issues: [],
       recommendations: []
     };
 
-    // Check static JSON data
-    checks.data_sources = {
-      discoveries_json: {
-        status: 'available',
-        count: discoveriesData.length,
-        last_id: Math.max(...discoveriesData.map(d => d.id))
-      },
-      discovered_pairs_json: {
-        status: 'available',
-        count: discoveredPairsData.discovered_pairs.length,
-        metadata: discoveredPairsData.metadata
-      }
-    };
+    // Check PostgreSQL database connection
+    let dbHealthy = false;
+    let dbStats: Record<string, number> | null = null;
 
-    // Check for data inconsistencies
-    const discrepancy = discoveriesData.length - discoveredPairsData.discovered_pairs.length;
-    if (discrepancy > 0) {
+    try {
+      dbHealthy = await checkConnection();
+      if (dbHealthy) {
+        dbStats = await getStats();
+        checks.database = {
+          status: 'connected',
+          type: 'postgresql',
+          database: 'analog_quest',
+          tables: dbStats
+        };
+      } else {
+        checks.database = {
+          status: 'disconnected',
+          type: 'postgresql',
+          error: 'Connection check failed'
+        };
+        checks.issues.push({
+          type: 'database_connection',
+          message: 'PostgreSQL connection failed',
+          severity: 'error'
+        });
+      }
+    } catch (error) {
+      checks.database = {
+        status: 'error',
+        type: 'postgresql',
+        error: error instanceof Error ? error.message : 'Unknown error'
+      };
       checks.issues.push({
-        type: 'data_inconsistency',
-        message: `Frontend shows ${discoveriesData.length} discoveries but only ${discoveredPairsData.discovered_pairs.length} unique pairs tracked`,
-        discrepancy,
-        severity: 'warning'
+        type: 'database_error',
+        message: `Database error: ${error instanceof Error ? error.message : 'Unknown'}`,
+        severity: 'error'
       });
-      checks.recommendations.push('Run deduplication script to sync discoveries with discovered_pairs');
+      checks.recommendations.push('Check PostgreSQL connection settings in .env.local');
     }
 
-    // Check if database file exists (but don't try to connect)
-    const dbPath = path.join(process.cwd(), 'database', 'papers.db');
+    // Check if legacy SQLite database exists (for reference)
+    const sqlitePath = path.join(process.cwd(), 'database', 'papers.db');
     try {
-      const stats = fs.statSync(dbPath);
-      checks.database = {
-        sqlite_file: 'exists',
+      const stats = fs.statSync(sqlitePath);
+      checks.data_sources.sqlite_legacy = {
+        status: 'available',
         size_mb: (stats.size / (1024 * 1024)).toFixed(2),
-        connection: 'not_configured',
-        note: 'Database exists locally but not connected to API'
+        note: 'Legacy database - not actively used'
       };
-      checks.issues.push({
-        type: 'database_disconnected',
-        message: 'SQLite database exists but API uses static JSON',
-        severity: 'info'
-      });
-      checks.recommendations.push('Configure database connection for dynamic data');
     } catch (e) {
-      checks.database = {
-        sqlite_file: 'not_found',
-        connection: 'not_configured'
-      };
+      // SQLite doesn't exist, that's fine
+    }
+
+    // Check static JSON files (for editorial content)
+    const jsonFiles = ['discoveries.json', 'discovered_pairs.json', 'discoveries_editorial.json'];
+    for (const filename of jsonFiles) {
+      const filePath = path.join(process.cwd(), 'app', 'data', filename);
+      try {
+        const exists = fs.existsSync(filePath);
+        checks.data_sources[filename] = {
+          status: exists ? 'available' : 'missing',
+          note: exists ? 'Available for reference/editorial' : 'Not found'
+        };
+      } catch (e) {
+        checks.data_sources[filename] = {
+          status: 'error',
+          error: e instanceof Error ? e.message : 'Unknown'
+        };
+      }
     }
 
     // Check environment variables (without exposing values)
     const envVars = {
       has_postgres_url: !!process.env.POSTGRES_URL,
       has_database_url: !!process.env.DATABASE_URL,
+      use_database: process.env.USE_DATABASE === 'true',
+      enable_write_ops: process.env.ENABLE_WRITE_OPS === 'true',
       node_env: process.env.NODE_ENV || 'development',
       vercel_env: process.env.VERCEL_ENV || 'local'
     };
 
+    // Data integrity checks
+    if (dbHealthy && dbStats) {
+      const discoveryCount = dbStats.discoveries || 0;
+      const pairCount = dbStats.discovered_pairs || 0;
+
+      if (discoveryCount !== pairCount) {
+        checks.issues.push({
+          type: 'data_sync',
+          message: `Discovery count (${discoveryCount}) differs from pair count (${pairCount})`,
+          severity: 'info'
+        });
+      }
+    }
+
     // Overall status
-    const overallStatus = checks.issues.filter(i => i.severity === 'error').length > 0 ? 'degraded' : 'healthy';
+    const hasErrors = checks.issues.filter(i => i.severity === 'error').length > 0;
+    const overallStatus = hasErrors ? 'degraded' : 'healthy';
+
+    // Recommendations based on status
+    if (!dbHealthy) {
+      checks.recommendations.push('Fix PostgreSQL connection');
+    }
+    if (!envVars.enable_write_ops) {
+      checks.recommendations.push('Enable write operations when ready (ENABLE_WRITE_OPS=true)');
+    }
 
     return NextResponse.json({
       status: overallStatus,
       timestamp: new Date().toISOString(),
+      version: '2.0.0',
       environment: envVars,
       checks,
       api_endpoints: {
         discoveries: {
-          list: '/api/discoveries',
-          detail: '/api/discoveries/[id]',
+          list: 'GET /api/discoveries',
+          detail: 'GET /api/discoveries/[id]',
+          statistics: 'OPTIONS /api/discoveries',
           capabilities: ['read', 'filter', 'sort', 'paginate']
         },
         pairs: {
-          list: '/api/pairs',
+          list: 'GET /api/pairs',
           capabilities: ['read', 'filter', 'paginate']
         },
         health: {
-          status: '/api/health',
+          status: 'GET /api/health',
           capabilities: ['monitor']
         }
-      },
-      next_steps: [
-        '1. Set up database connection (Neon, Supabase, or Vercel Postgres)',
-        '2. Create database schema and migrate data',
-        '3. Update API routes to use database',
-        '4. Implement write operations',
-        '5. Add authentication for write endpoints'
-      ]
+      }
     });
 
   } catch (error) {
@@ -110,7 +157,8 @@ export async function GET() {
       {
         status: 'error',
         error: 'Health check failed',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        details: error instanceof Error ? error.message : 'Unknown error',
+        timestamp: new Date().toISOString()
       },
       { status: 500 }
     );

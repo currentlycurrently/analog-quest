@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import discoveriesData from '@/app/data/discoveries.json';
-import editorialData from '@/app/data/discoveries_editorial.json';
+import { queries } from '@/lib/db';
+import fs from 'fs';
+import path from 'path';
 
 interface RouteParams {
   params: {
@@ -20,8 +21,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       );
     }
 
-    // Find the discovery
-    const discovery = discoveriesData.find(d => d.id === id);
+    // Fetch discovery from database
+    const discovery = await queries.getDiscoveryById(id);
 
     if (!discovery) {
       return NextResponse.json(
@@ -33,8 +34,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Try to get editorial content if it exists
     let editorial = null;
     try {
-      const editorials = (editorialData as any).editorials;
-      editorial = editorials[id.toString()] || null;
+      const editorialPath = path.join(process.cwd(), 'app', 'data', 'discoveries_editorial.json');
+      if (fs.existsSync(editorialPath)) {
+        const editorialData = JSON.parse(fs.readFileSync(editorialPath, 'utf-8'));
+        editorial = editorialData.editorials?.[id.toString()] || null;
+      }
     } catch (e) {
       // Editorial data might not exist or be in different format
       console.log('No editorial data found for discovery', id);
@@ -48,7 +52,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       },
       metadata: {
         has_editorial: editorial !== null,
-        source: 'static_json'
+        source: 'postgresql',
+        database: 'analog_quest'
       }
     });
 
@@ -61,16 +66,31 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   }
 }
 
-// PUT /api/discoveries/[id] - Update a discovery (placeholder)
+// PUT /api/discoveries/[id] - Update a discovery (future feature)
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
     const id = parseInt(params.id);
     const body = await request.json();
 
+    const enableWriteOps = process.env.ENABLE_WRITE_OPS === 'true';
+
+    if (!enableWriteOps) {
+      return NextResponse.json(
+        {
+          error: 'Write operations not enabled',
+          message: 'Set ENABLE_WRITE_OPS=true in environment to enable',
+          id,
+          received: body
+        },
+        { status: 501 }
+      );
+    }
+
+    // TODO: Implement when write operations are enabled
     return NextResponse.json(
       {
-        error: 'Update operations not yet supported',
-        message: 'Database integration required for updating discoveries',
+        error: 'Not implemented',
+        message: 'Update operations coming soon',
         id,
         received: body
       },
@@ -85,15 +105,29 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
   }
 }
 
-// DELETE /api/discoveries/[id] - Delete a discovery (placeholder)
+// DELETE /api/discoveries/[id] - Delete a discovery (future feature)
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
     const id = parseInt(params.id);
 
+    const enableWriteOps = process.env.ENABLE_WRITE_OPS === 'true';
+
+    if (!enableWriteOps) {
+      return NextResponse.json(
+        {
+          error: 'Write operations not enabled',
+          message: 'Set ENABLE_WRITE_OPS=true in environment to enable',
+          id
+        },
+        { status: 501 }
+      );
+    }
+
+    // TODO: Implement when write operations are enabled
     return NextResponse.json(
       {
-        error: 'Delete operations not yet supported',
-        message: 'Database integration required for deleting discoveries',
+        error: 'Not implemented',
+        message: 'Delete operations coming soon',
         id
       },
       { status: 501 }

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllDiscoveries, getDiscoveryWithEditorial } from '@/lib/data';
+import { getAllDiscoveries } from '@/lib/data';
 import ComparisonView from '@/components/ComparisonView';
 import SimilarityScore from '@/components/SimilarityScore';
 import DomainBadge from '@/components/DomainBadge';
@@ -22,10 +22,45 @@ export function generateStaticParams() {
 export default async function DiscoveryDetailPage({ params }: PageProps) {
   const { id } = await params;
   const discoveryId = parseInt(id);
-  const discovery = getDiscoveryWithEditorial(discoveryId);
 
-  if (!discovery) {
+  // Use hybrid approach - static data with API enhancement for URLs
+  let discovery: any = null;
+
+  // First try to get from static data (for build time)
+  const { getDiscoveryWithEditorial } = await import('@/lib/data');
+  const staticDiscovery = getDiscoveryWithEditorial(discoveryId);
+
+  if (!staticDiscovery) {
     notFound();
+  }
+
+  // In production, enhance with API data to get URLs
+  if (process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV) {
+    try {
+      const baseUrl = process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'https://analog.quest';
+
+      const response = await fetch(`${baseUrl}/api/discoveries/${discoveryId}`, {
+        next: { revalidate: 60 }, // Cache for 60 seconds
+        cache: 'no-store' // Don't cache during build
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        // Merge API data (with URLs) with static data
+        discovery = { ...staticDiscovery, ...data.data };
+      } else {
+        // Fallback to static data if API fails
+        discovery = staticDiscovery;
+      }
+    } catch (error) {
+      console.error('API fetch failed, using static data:', error);
+      discovery = staticDiscovery;
+    }
+  } else {
+    // During build or local dev, use static data
+    discovery = staticDiscovery;
   }
 
   // Get previous and next discovery IDs for navigation
@@ -95,7 +130,7 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
             {/* Tags */}
             {discovery.editorial.tags && discovery.editorial.tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
-                {discovery.editorial.tags.map((tag) => (
+                {discovery.editorial.tags.map((tag: string) => (
                   <span
                     key={tag}
                     className="px-3 py-1 text-xs font-mono rounded bg-teal-light text-brown-dark"
@@ -143,19 +178,21 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
 
         {/* Comparison View */}
         <ComparisonView
-          paper1={discovery.paper_1 || {
-            paper_id: 0,
-            arxiv_id: '',
-            domain: discovery.domains?.[0] || 'unknown',
-            title: discovery.papers?.paper_1?.title || discovery.title || 'Paper 1',
-            mechanism: discovery.papers?.paper_1?.mechanism || discovery.explanation || ''
+          paper1={{
+            paper_id: discovery.paper_1_id || 0,
+            arxiv_id: discovery.paper_1_arxiv_id || '',
+            url: discovery.paper_1_url,
+            domain: discovery.paper_1_domain || discovery.domains?.[0] || 'unknown',
+            title: discovery.paper_1_title || discovery.papers?.paper_1?.title || discovery.title || 'Paper 1',
+            mechanism: discovery.mechanism_1_description || discovery.papers?.paper_1?.mechanism || discovery.explanation || ''
           }}
-          paper2={discovery.paper_2 || {
-            paper_id: 0,
-            arxiv_id: '',
-            domain: discovery.domains?.[1] || 'unknown',
-            title: discovery.papers?.paper_2?.title || discovery.title || 'Paper 2',
-            mechanism: discovery.papers?.paper_2?.mechanism || discovery.pattern || ''
+          paper2={{
+            paper_id: discovery.paper_2_id || 0,
+            arxiv_id: discovery.paper_2_arxiv_id || '',
+            url: discovery.paper_2_url,
+            domain: discovery.paper_2_domain || discovery.domains?.[1] || 'unknown',
+            title: discovery.paper_2_title || discovery.papers?.paper_2?.title || discovery.title || 'Paper 2',
+            mechanism: discovery.mechanism_2_description || discovery.papers?.paper_2?.mechanism || discovery.pattern || ''
           }}
           structuralExplanation={discovery.structural_explanation || discovery.explanation || 'Cross-domain structural similarity'}
         />

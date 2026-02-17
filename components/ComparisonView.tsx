@@ -3,6 +3,7 @@ import DomainBadge from './DomainBadge';
 interface Paper {
   paper_id: number;
   arxiv_id: string;
+  url?: string;  // Add URL field
   domain: string;
   title: string;
   mechanism: string;
@@ -19,8 +20,9 @@ export default function ComparisonView({
   paper2,
   structuralExplanation,
 }: ComparisonViewProps) {
-  const hasArxivId1 = paper1.arxiv_id && paper1.arxiv_id !== 'N/A';
-  const hasArxivId2 = paper2.arxiv_id && paper2.arxiv_id !== 'N/A';
+  // Use URL if available, otherwise try to construct from arxiv_id
+  const paper1Link = paper1.url || (paper1.arxiv_id && paper1.arxiv_id !== 'N/A' ? `https://arxiv.org/abs/${paper1.arxiv_id}` : null);
+  const paper2Link = paper2.url || (paper2.arxiv_id && paper2.arxiv_id !== 'N/A' ? `https://arxiv.org/abs/${paper2.arxiv_id}` : null);
 
   return (
     <div className="space-y-6">
@@ -54,20 +56,19 @@ export default function ComparisonView({
             <p className="text-brown text-sm leading-relaxed mb-4">
               {paper1.mechanism}
             </p>
-            {hasArxivId1 && (
+            {paper1Link ? (
               <a
-                href={`https://arxiv.org/abs/${paper1.arxiv_id}`}
+                href={paper1Link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-brown-dark hover:text-brown text-sm font-mono transition-colors"
               >
-                view on arxiv
+                view paper
                 <span className="ml-1">→</span>
               </a>
-            )}
-            {!hasArxivId1 && (
+            ) : (
               <p className="text-brown/40 text-sm font-mono italic">
-                arxiv id not available
+                paper link not available
               </p>
             )}
           </div>
@@ -91,20 +92,19 @@ export default function ComparisonView({
             <p className="text-brown text-sm leading-relaxed mb-4">
               {paper2.mechanism}
             </p>
-            {hasArxivId2 && (
+            {paper2Link ? (
               <a
-                href={`https://arxiv.org/abs/${paper2.arxiv_id}`}
+                href={paper2Link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-brown-dark hover:text-brown text-sm font-mono transition-colors"
               >
-                view on arxiv
+                view paper
                 <span className="ml-1">→</span>
               </a>
-            )}
-            {!hasArxivId2 && (
+            ) : (
               <p className="text-brown/40 text-sm font-mono italic">
-                arxiv id not available
+                paper link not available
               </p>
             )}
           </div>

@@ -3,16 +3,17 @@ import { queries } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
 
-interface RouteParams {
-  params: {
+type RouteParams = {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 // GET /api/discoveries/[id] - Get a single discovery by ID
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const id = parseInt(params.id);
+    const resolvedParams = await params;
+    const id = parseInt(resolvedParams.id);
 
     if (isNaN(id)) {
       return NextResponse.json(
@@ -69,7 +70,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PUT /api/discoveries/[id] - Update a discovery (future feature)
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
-    const id = parseInt(params.id);
+    const resolvedParams = await params;
+    const id = parseInt(resolvedParams.id);
     const body = await request.json();
 
     const enableWriteOps = process.env.ENABLE_WRITE_OPS === 'true';
@@ -108,7 +110,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 // DELETE /api/discoveries/[id] - Delete a discovery (future feature)
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
-    const id = parseInt(params.id);
+    const resolvedParams = await params;
+    const id = parseInt(resolvedParams.id);
 
     const enableWriteOps = process.env.ENABLE_WRITE_OPS === 'true';
 

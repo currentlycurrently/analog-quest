@@ -30,11 +30,11 @@ export async function GET(request: NextRequest) {
       total,
       excellent: pairs.filter(p => p.rating === 'excellent').length,
       good: pairs.filter(p => p.rating === 'good').length,
-      sessions: [...new Set(pairs.map(p => p.discovered_in_session))].sort((a, b) => a - b),
+      sessions: [...new Set(pairs.map(p => p.discovered_in_session))].filter(s => s !== undefined).sort((a, b) => (a ?? 0) - (b ?? 0)),
       similarity_range: pairs.length > 0 ? {
-        min: Math.min(...pairs.map(p => p.similarity)),
-        max: Math.max(...pairs.map(p => p.similarity)),
-        avg: pairs.reduce((sum, p) => sum + p.similarity, 0) / pairs.length
+        min: Math.min(...pairs.filter(p => p.similarity !== undefined).map(p => p.similarity!)),
+        max: Math.max(...pairs.filter(p => p.similarity !== undefined).map(p => p.similarity!)),
+        avg: pairs.filter(p => p.similarity !== undefined).reduce((sum, p) => sum + p.similarity!, 0) / pairs.filter(p => p.similarity !== undefined).length
       } : null
     };
 

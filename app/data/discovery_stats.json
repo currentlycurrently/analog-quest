@@ -1,18 +1,6 @@
 {
-  "total_discoveries": 141,
-  "excellent": 50,
-  "good": 91,
-  "top_similarity": 0.7441,
-  "sessions_included": [
-    75,
-    76,
-    77,
-    80,
-    49,
-    81,
-    52,
-    54,
-    56,
-    57
-  ]
+  "total_discoveries": 0,
+  "excellent": 0,
+  "good": 0,
+  "last_updated": "2026-02-18T02:29:13.691325"
 }

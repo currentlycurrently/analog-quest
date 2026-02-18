@@ -16,19 +16,6 @@ export default async function Home() {
 
   return (
     <div className="bg-cream">
-      {/* 100 Discoveries Celebration Banner */}
-      <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-b-2 border-amber-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-center gap-4">
-            <span className="text-2xl">🎉</span>
-            <span className="font-mono text-sm text-brown-dark font-semibold">
-              MILESTONE ACHIEVED: {allDiscoveries.length} CROSS-DOMAIN DISCOVERIES!
-            </span>
-            <span className="text-2xl">🏆</span>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 lg:px-8 py-24">
         <div className="max-w-3xl">

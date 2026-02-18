@@ -29,7 +29,7 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
   const discoveryId = parseInt(id);
 
   // Fetch discovery from API
-  let discovery = null as Discovery | null;
+  let discovery: any = null;
 
   try {
     const response = await fetchDiscoveryById(discoveryId);

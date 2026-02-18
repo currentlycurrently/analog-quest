@@ -33,6 +33,8 @@ export interface Discovery {
   paper_2_title?: string;
   paper_1_domain?: string;
   paper_2_domain?: string;
+  mechanism_1_description?: string;
+  mechanism_2_description?: string;
   // Legacy fields for compatibility
   original_candidate_id?: number;
   structural_explanation?: string;

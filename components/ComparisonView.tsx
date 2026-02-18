@@ -1,7 +1,8 @@
 import DomainBadge from './DomainBadge';
+import type { Discovery } from '@/lib/data';
 
 interface ComparisonViewProps {
-  discovery: any;  // Accept discovery object with various formats
+  discovery: Discovery;
 }
 
 export default function ComparisonView({ discovery }: ComparisonViewProps) {

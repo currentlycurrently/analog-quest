@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { fetchDiscoveryById, fetchDiscoveries } from '@/lib/api-client';
+import type { Discovery } from '@/lib/data';
 import ComparisonView from '@/components/ComparisonView';
 import SimilarityScore from '@/components/SimilarityScore';
 import DomainBadge from '@/components/DomainBadge';
@@ -28,7 +29,7 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
   const discoveryId = parseInt(id);
 
   // Fetch discovery from API
-  let discovery: any = null;
+  let discovery = null as Discovery | null;
 
   try {
     const response = await fetchDiscoveryById(discoveryId);

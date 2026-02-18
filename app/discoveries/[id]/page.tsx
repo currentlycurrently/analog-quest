@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllDiscoveries } from '@/lib/data';
+import { fetchDiscoveryById, fetchDiscoveries } from '@/lib/api-client';
 import ComparisonView from '@/components/ComparisonView';
 import SimilarityScore from '@/components/SimilarityScore';
 import DomainBadge from '@/components/DomainBadge';
+import editorialData from '@/app/data/discoveries_editorial.json';
 
 interface PageProps {
   params: Promise<{
@@ -11,58 +12,44 @@ interface PageProps {
   }>;
 }
 
-// Generate static params for all discoveries
-export function generateStaticParams() {
-  const discoveries = getAllDiscoveries();
-  return discoveries.map((discovery) => ({
-    id: discovery.id.toString(),
-  }));
+// Disable static generation - use dynamic rendering instead
+// This allows the page to work without requiring API at build time
+export const dynamic = 'force-dynamic';
+
+// Get editorial data for a discovery (if available)
+function getEditorialById(id: number) {
+  const editorials = (editorialData as any).editorials;
+  const editorial = editorials[id.toString()];
+  return editorial || undefined;
 }
 
 export default async function DiscoveryDetailPage({ params }: PageProps) {
   const { id } = await params;
   const discoveryId = parseInt(id);
 
-  // Use hybrid approach - static data with API enhancement for URLs
+  // Fetch discovery from API
   let discovery: any = null;
 
-  // First try to get from static data (for build time)
-  const { getDiscoveryWithEditorial } = await import('@/lib/data');
-  const staticDiscovery = getDiscoveryWithEditorial(discoveryId);
-
-  if (!staticDiscovery) {
+  try {
+    const response = await fetchDiscoveryById(discoveryId);
+    discovery = response.data;
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('not found')) {
+      notFound();
+    }
+    // For other errors, return 404 as well
     notFound();
   }
 
-  // Try to enhance with API data to get URLs (works with ISR)
-  try {
-    // Determine base URL
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.NODE_ENV === 'production'
-      ? 'https://analog.quest'
-      : 'http://localhost:3000';
-
-    const response = await fetch(`${baseUrl}/api/discoveries/${discoveryId}`, {
-      next: { revalidate: 60 }, // Revalidate every 60 seconds (ISR)
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      // Merge API data (with URLs) with static data
-      discovery = { ...staticDiscovery, ...data.data };
-    } else {
-      // Fallback to static data if API fails
-      discovery = staticDiscovery;
-    }
-  } catch (error) {
-    // During build or if fetch fails, use static data
-    console.log('Using static data:', error instanceof Error ? error.message : 'Unknown error');
-    discovery = staticDiscovery;
+  // Enhance with editorial data if available
+  const editorial = getEditorialById(discoveryId);
+  if (editorial) {
+    discovery.editorial = editorial;
   }
 
   // Get previous and next discovery IDs for navigation
-  const allDiscoveries = getAllDiscoveries();
+  const allDiscoveriesResponse = await fetchDiscoveries({ limit: 200 });
+  const allDiscoveries = allDiscoveriesResponse.data;
   const currentIndex = allDiscoveries.findIndex((d) => d.id === discoveryId);
   const prevDiscovery = currentIndex > 0 ? allDiscoveries[currentIndex - 1] : null;
   const nextDiscovery = currentIndex < allDiscoveries.length - 1 ? allDiscoveries[currentIndex + 1] : null;
@@ -111,12 +98,12 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
           {/* Domain Pair */}
           <div className="flex items-center gap-3">
             <DomainBadge
-              domain={discovery.domains?.[0] || discovery.paper_1?.domain || 'unknown'}
+              domain={discovery.domains?.[0] || discovery.paper_1?.domain || discovery.paper_1_domain || 'unknown'}
               size="md"
             />
             <span className="text-brown/40 font-bold text-xl">↔</span>
             <DomainBadge
-              domain={discovery.domains?.[1] || discovery.paper_2?.domain || 'unknown'}
+              domain={discovery.domains?.[1] || discovery.paper_2?.domain || discovery.paper_2_domain || 'unknown'}
               size="md"
             />
           </div>
@@ -148,101 +135,86 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
 
             {/* Mechanism Anchor */}
             {discovery.editorial.mechanism_anchor && (
-              <div className="bg-teal-light/30 border-l-4 border-brown-dark/30 p-4 rounded">
-                <p className="text-sm font-mono text-brown">
-                  <span className="text-brown-dark font-medium">mechanism:</span>{' '}
+              <div className="p-6 bg-teal-light/30 rounded-lg border border-teal/20">
+                <h3 className="text-sm font-mono text-brown mb-2 uppercase tracking-wide">
+                  Core Mechanism
+                </h3>
+                <p className="text-lg text-brown-dark font-serif leading-relaxed">
                   {discovery.editorial.mechanism_anchor}
                 </p>
               </div>
             )}
 
-            {/* Editorial Body (if written) */}
+            {/* Body Content */}
             {discovery.editorial.body && (
               <div className="prose prose-brown max-w-none">
-                <div className="text-brown leading-relaxed whitespace-pre-line">
+                <p className="text-lg leading-relaxed text-brown-dark whitespace-pre-wrap">
                   {discovery.editorial.body}
-                </div>
+                </p>
               </div>
             )}
 
             {/* Evidence Basis */}
             {discovery.editorial.evidence_basis && (
-              <p className="text-sm font-mono text-brown/60 italic">
-                {discovery.editorial.evidence_basis}
-              </p>
+              <div className="p-4 bg-cream-dark rounded border border-brown/10">
+                <h4 className="text-sm font-mono text-brown mb-2">Evidence Basis:</h4>
+                <p className="text-brown-dark text-sm leading-relaxed">
+                  {discovery.editorial.evidence_basis}
+                </p>
+              </div>
             )}
           </div>
         )}
 
-        {/* Comparison View */}
-        <ComparisonView
-          paper1={{
-            paper_id: discovery.paper_1_id || 0,
-            arxiv_id: discovery.paper_1_arxiv_id || '',
-            url: discovery.paper_1_url,
-            domain: discovery.paper_1_domain || discovery.domains?.[0] || 'unknown',
-            title: discovery.paper_1_title || discovery.papers?.paper_1?.title || discovery.title || 'Paper 1',
-            mechanism: discovery.mechanism_1_description || discovery.papers?.paper_1?.mechanism || discovery.explanation || ''
-          }}
-          paper2={{
-            paper_id: discovery.paper_2_id || 0,
-            arxiv_id: discovery.paper_2_arxiv_id || '',
-            url: discovery.paper_2_url,
-            domain: discovery.paper_2_domain || discovery.domains?.[1] || 'unknown',
-            title: discovery.paper_2_title || discovery.papers?.paper_2?.title || discovery.title || 'Paper 2',
-            mechanism: discovery.mechanism_2_description || discovery.papers?.paper_2?.mechanism || discovery.pattern || ''
-          }}
-          structuralExplanation={discovery.structural_explanation || discovery.explanation || 'Cross-domain structural similarity'}
-        />
-
-        {/* Navigation */}
-        <div className="mt-12 pt-8 border-t border-brown/10">
-          <div className="flex justify-between items-center">
-            <div>
-              {prevDiscovery ? (
-                <Link
-                  href={`/discoveries/${prevDiscovery.id}`}
-                  className="inline-flex items-center text-brown-dark hover:text-brown font-mono text-sm transition-colors"
-                >
-                  <span className="mr-2">←</span>
-                  previous discovery
-                </Link>
-              ) : (
-                <span className="text-brown/40 text-sm font-mono">no previous discovery</span>
-              )}
-            </div>
-            <div>
-              {nextDiscovery ? (
-                <Link
-                  href={`/discoveries/${nextDiscovery.id}`}
-                  className="inline-flex items-center text-brown-dark hover:text-brown font-mono text-sm transition-colors"
-                >
-                  next discovery
-                  <span className="ml-2">→</span>
-                </Link>
-              ) : (
-                <span className="text-brown/40 text-sm font-mono">no next discovery</span>
-              )}
-            </div>
+        {/* Main Content - Pattern Comparison */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-serif text-brown mb-6">Structural Pattern</h2>
+          <div className="bg-white rounded-lg shadow-sm p-6 border border-brown/10">
+            <p className="text-lg text-brown-dark leading-relaxed">
+              {discovery.pattern || discovery.structural_explanation || discovery.explanation}
+            </p>
           </div>
         </div>
 
-        {/* Share/CTA */}
-        <div className="mt-12 bg-teal-light/50 border border-brown/10 rounded-lg p-8 text-center">
-          <h3 className="text-xl font-serif font-normal text-brown-dark mb-3">
-            Explore More Discoveries
-          </h3>
-          <p className="text-brown mb-6">
-            See all {allDiscoveries.length} verified cross-domain isomorphisms
-          </p>
-          <Link
-            href="/discoveries"
-            className="inline-block bg-brown-dark text-cream px-6 py-3 rounded-lg font-mono text-sm hover:bg-brown transition-colors"
-          >
-            browse all discoveries
-          </Link>
+        {/* Papers Comparison */}
+        <ComparisonView discovery={discovery} />
+
+        {/* Navigation */}
+        <div className="flex justify-between items-center pt-12 border-t border-brown/10 mt-12">
+          {prevDiscovery ? (
+            <Link
+              href={`/discoveries/${prevDiscovery.id}`}
+              className="flex items-center gap-2 text-brown-dark hover:text-brown transition-colors font-mono text-sm"
+            >
+              <span>←</span>
+              <div className="text-left">
+                <div className="text-xs text-brown/60">Previous</div>
+                <div>Discovery #{prevDiscovery.id}</div>
+              </div>
+            </Link>
+          ) : (
+            <div />
+          )}
+
+          {nextDiscovery ? (
+            <Link
+              href={`/discoveries/${nextDiscovery.id}`}
+              className="flex items-center gap-2 text-brown-dark hover:text-brown transition-colors font-mono text-sm"
+            >
+              <div className="text-right">
+                <div className="text-xs text-brown/60">Next</div>
+                <div>Discovery #{nextDiscovery.id}</div>
+              </div>
+              <span>→</span>
+            </Link>
+          ) : (
+            <div />
+          )}
         </div>
       </div>
     </div>
   );
 }
+
+// Enable ISR with 60 second revalidation
+export const revalidate = 60;

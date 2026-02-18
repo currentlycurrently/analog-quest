@@ -1,10 +1,18 @@
 import Link from 'next/link';
-import { getAllDiscoveries, getFeaturedDiscoveries } from '@/lib/data';
+import { fetchDiscoveries, getFeaturedDiscoveries } from '@/lib/api-client';
 import DiscoveryCard from '@/components/DiscoveryCard';
 
-export default function Home() {
-  const allDiscoveries = getAllDiscoveries();
-  const featuredDiscoveries = getFeaturedDiscoveries();
+// Use dynamic rendering for the homepage to fetch latest data
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  // Fetch all discoveries and featured discoveries in parallel
+  const [allDiscoveriesResponse, featuredDiscoveries] = await Promise.all([
+    fetchDiscoveries({ limit: 200 }),
+    getFeaturedDiscoveries(3)
+  ]);
+
+  const allDiscoveries = allDiscoveriesResponse.data;
 
   return (
     <div className="bg-cream">
@@ -14,7 +22,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4">
             <span className="text-2xl">🎉</span>
             <span className="font-mono text-sm text-brown-dark font-semibold">
-              MILESTONE ACHIEVED: 100+ CROSS-DOMAIN DISCOVERIES!
+              MILESTONE ACHIEVED: {allDiscoveries.length} CROSS-DOMAIN DISCOVERIES!
             </span>
             <span className="text-2xl">🏆</span>
           </div>
@@ -68,11 +76,11 @@ export default function Home() {
               id={discovery.id}
               rating={discovery.rating}
               similarity={discovery.similarity}
-              paper1Domain={discovery.domains?.[0] || discovery.paper_1?.domain || 'unknown'}
-              paper2Domain={discovery.domains?.[1] || discovery.paper_2?.domain || 'unknown'}
-              paper1Title={discovery.papers?.paper_1?.title || discovery.paper_1?.title || discovery.title || 'Unknown Paper'}
-              paper2Title={discovery.papers?.paper_2?.title || discovery.paper_2?.title || discovery.title || 'Unknown Paper'}
-              explanation={discovery.explanation || discovery.structural_explanation || 'Cross-domain structural pattern'}
+              paper1Domain={discovery.domains?.[0] || discovery.paper_1?.domain || discovery.paper_1_domain || 'unknown'}
+              paper2Domain={discovery.domains?.[1] || discovery.paper_2?.domain || discovery.paper_2_domain || 'unknown'}
+              paper1Title={discovery.papers?.paper_1?.title || discovery.paper_1?.title || discovery.paper_1_title || discovery.title || 'Unknown Paper'}
+              paper2Title={discovery.papers?.paper_2?.title || discovery.paper_2?.title || discovery.paper_2_title || discovery.title || 'Unknown Paper'}
+              explanation={discovery.explanation || discovery.structural_explanation || discovery.pattern || 'Cross-domain structural pattern'}
             />
           ))}
         </div>

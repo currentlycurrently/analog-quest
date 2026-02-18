@@ -1,28 +1,38 @@
 import DomainBadge from './DomainBadge';
 
-interface Paper {
-  paper_id: number;
-  arxiv_id: string;
-  url?: string;  // Add URL field
-  domain: string;
-  title: string;
-  mechanism: string;
-}
-
 interface ComparisonViewProps {
-  paper1: Paper;
-  paper2: Paper;
-  structuralExplanation: string;
+  discovery: any;  // Accept discovery object with various formats
 }
 
-export default function ComparisonView({
-  paper1,
-  paper2,
-  structuralExplanation,
-}: ComparisonViewProps) {
-  // Use URL if available, otherwise try to construct from arxiv_id
-  const paper1Link = paper1.url || (paper1.arxiv_id && paper1.arxiv_id !== 'N/A' ? `https://arxiv.org/abs/${paper1.arxiv_id}` : null);
-  const paper2Link = paper2.url || (paper2.arxiv_id && paper2.arxiv_id !== 'N/A' ? `https://arxiv.org/abs/${paper2.arxiv_id}` : null);
+export default function ComparisonView({ discovery }: ComparisonViewProps) {
+  // Extract paper information from various possible formats
+  const paper1 = {
+    title: discovery.paper_1_title || discovery.paper_1?.title || discovery.papers?.paper_1?.title || 'Unknown Paper',
+    domain: discovery.paper_1_domain || discovery.paper_1?.domain || discovery.domains?.[0] || 'unknown',
+    mechanism: discovery.mechanism_1_description || discovery.paper_1?.mechanism || discovery.papers?.paper_1?.mechanism || 'Mechanism not available',
+    url: discovery.paper_1_url,
+    arxiv_id: discovery.paper_1_arxiv_id || discovery.paper_1?.arxiv_id
+  };
+
+  const paper2 = {
+    title: discovery.paper_2_title || discovery.paper_2?.title || discovery.papers?.paper_2?.title || 'Unknown Paper',
+    domain: discovery.paper_2_domain || discovery.paper_2?.domain || discovery.domains?.[1] || 'unknown',
+    mechanism: discovery.mechanism_2_description || discovery.paper_2?.mechanism || discovery.papers?.paper_2?.mechanism || 'Mechanism not available',
+    url: discovery.paper_2_url,
+    arxiv_id: discovery.paper_2_arxiv_id || discovery.paper_2?.arxiv_id
+  };
+
+  // Get structural explanation
+  const structuralExplanation = discovery.explanation || discovery.structural_explanation || discovery.pattern || 'Cross-domain structural pattern';
+
+  // Determine paper links
+  const paper1Link = paper1.url || (paper1.arxiv_id && paper1.arxiv_id !== 'N/A' && !paper1.arxiv_id.startsWith('http')
+    ? `https://arxiv.org/abs/${paper1.arxiv_id}`
+    : paper1.arxiv_id?.startsWith('http') ? paper1.arxiv_id : null);
+
+  const paper2Link = paper2.url || (paper2.arxiv_id && paper2.arxiv_id !== 'N/A' && !paper2.arxiv_id.startsWith('http')
+    ? `https://arxiv.org/abs/${paper2.arxiv_id}`
+    : paper2.arxiv_id?.startsWith('http') ? paper2.arxiv_id : null);
 
   return (
     <div className="space-y-6">
@@ -109,6 +119,11 @@ export default function ComparisonView({
             )}
           </div>
         </div>
+      </div>
+
+      {/* Connection Visualization */}
+      <div className="text-center py-4">
+        <span className="text-brown/30 text-2xl">⟷</span>
       </div>
     </div>
   );

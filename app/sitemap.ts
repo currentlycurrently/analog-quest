@@ -1,9 +1,20 @@
 import { MetadataRoute } from 'next';
-import { getAllDiscoveries } from '@/lib/data';
+import { getAllDiscoveries } from '@/lib/api-client';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Use dynamic rendering
+export const dynamic = 'force-dynamic';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://analog.quest';
-  const discoveries = getAllDiscoveries();
+
+  // Try to fetch discoveries, but fall back to static pages if API is unavailable
+  let discoveries: any[] = [];
+  try {
+    discoveries = await getAllDiscoveries();
+  } catch (error) {
+    // If API is unavailable during build, just use static pages
+    console.log('Could not fetch discoveries for sitemap, using static pages only');
+  }
 
   // Static pages
   const staticPages = [

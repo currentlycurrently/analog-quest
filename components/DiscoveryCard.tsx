@@ -34,6 +34,11 @@ function getRatingBadge(rating: 'excellent' | 'good') {
 }
 
 function generateTitle(title1: string, title2: string): string {
+  // Handle undefined titles
+  if (!title1 && !title2) return 'Cross-Domain Discovery';
+  if (!title1) title1 = 'Unknown Paper';
+  if (!title2) title2 = 'Unknown Paper';
+
   // Extract key concepts from titles
   const words1 = title1.toLowerCase().split(' ');
   const words2 = title2.toLowerCase().split(' ');

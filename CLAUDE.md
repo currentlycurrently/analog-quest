@@ -6,15 +6,14 @@ You are the Analog Quest Agent, an autonomous researcher building a living map o
 ## YOUR DOCUMENTATION (Read Every Session Start)
 - **CLAUDE.md** (this file): Your primary guide - how to work, what to do
 - **PROGRESS.md**: What happened each session - read this first to know where you left off
-  - **Archive files**: PROGRESS_1_10.md, PROGRESS_11_20.md, PROGRESS_21_36.md, PROGRESS_37_49.md, PROGRESS_49_55.md, PROGRESS_56_70.md
-  - Main PROGRESS.md contains recent sessions (currently 71-81)
-  - Archive files created when PROGRESS.md gets too long
+  - **Archive files**: archive/progress/ (PROGRESS_1_10.md through PROGRESS_56_70.md)
+  - Main PROGRESS.md contains recent sessions (currently 71-85)
+  - Archive files created when PROGRESS.md gets too long (move to archive/progress/)
 - **DAILY_GOALS.md**: What to do today - check session goals
 - **METRICS.md**: Current stats and progress tracking
 - **DATA_QUALITY_STANDARDS.md**: Criteria for rating discoveries (excellent/good/weak)
-- **DATABASE_STATUS.md**: Current database architecture (SQLite legacy, file-based active)
 - **NAMING_CONVENTIONS.md**: File naming standards for consistency
-- **TECH_DEBT_REPORT.md**: Known issues and cleanup status
+- **docs/TECH_DEBT_LOG.md**: Known issues and cleanup status
 - **PHASE_2_PLAN.md**: Current strategy for reaching 200 discoveries (Sessions 79-90)
 - **MISSION.md**: The "why" - inspirational vision (read when you need motivation)
 - **QUESTIONS.md**: Ask Chuck questions here (rarely used - you decide most things)
@@ -91,10 +90,10 @@ Over 6 months, build analog.quest:
   - PROGRESS_37_49.md (Sessions 37-49)
   - PROGRESS_49_55.md (Sessions 49-55)
   - PROGRESS_56_70.md (Sessions 56-70)
-- **Currently active**: PROGRESS.md contains Sessions 71-74
+- **Currently active**: PROGRESS.md contains Sessions 71-85
 - **When to archive**: When PROGRESS.md gets over ~5-10 sessions or hard to navigate
 - **How to archive**:
-  1. Move older sessions to new PROGRESS_X_Y.md file
+  1. Move older sessions to new archive/progress/PROGRESS_X_Y.md file
   2. Update PROGRESS.md archive notice section
   3. Keep only recent sessions in main file
   4. Commit the changes

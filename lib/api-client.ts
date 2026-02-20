@@ -4,6 +4,11 @@ import { Discovery } from '@/lib/data';
 function getApiUrl() {
   // Server-side: Use internal URL or localhost
   if (typeof window === 'undefined') {
+    // In production (Vercel), use the deployment URL
+    if (process.env.VERCEL_URL) {
+      return `https://${process.env.VERCEL_URL}`;
+    }
+    // Fallback for local development
     return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
   }
   // Client-side: Use relative URL (works for any deployment)

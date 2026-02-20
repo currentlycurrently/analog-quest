@@ -167,16 +167,6 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
           </div>
         )}
 
-        {/* Main Content - Pattern Comparison */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-serif text-brown mb-6">Structural Pattern</h2>
-          <div className="bg-white rounded-lg shadow-sm p-6 border border-brown/10">
-            <p className="text-lg text-brown-dark leading-relaxed">
-              {discovery.pattern || discovery.structural_explanation || discovery.explanation}
-            </p>
-          </div>
-        </div>
-
         {/* Papers Comparison */}
         <ComparisonView discovery={discovery} />
 

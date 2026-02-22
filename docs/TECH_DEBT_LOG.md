@@ -13,21 +13,31 @@
 
 ## 🔴 CRITICAL Issues (Fix Immediately)
 
-### 1. Data Corruption in discoveries.json
+### ✅ 1. Data Corruption in discoveries.json - RESOLVED (Session 86)
 - **Issue**: 54 duplicate entries (38% of data) with placeholder text
 - **Impact**: Production showing wrong data, undermines trust
 - **Location**: app/data/discoveries.json
-- **Fix**: Rebuild from discovered_pairs.json source of truth
-- **Effort**: 2-4 hours
-- **Owner**: Next session agent
+- **Fix Applied**: Rebuilt from PostgreSQL database (source of truth)
+- **Results**:
+  - Removed 63 duplicate/corrupted entries (33%)
+  - Fixed format inconsistencies (2 formats → 1 format)
+  - All 125 entries now clean and validated
+- **Resolution Date**: 2026-02-22
+- **Scripts Created**:
+  - `scripts/rebuild_discoveries.py` (rebuilds from DB)
+  - `scripts/validate_data_integrity.py` (prevents future corruption)
 
-### 2. Database Sync Failure
+### ✅ 2. Database Sync Failure - RESOLVED (Session 86)
 - **Issue**: discoveries table has 125 entries, discovered_pairs has 133
 - **Impact**: API returns incomplete data
 - **Location**: PostgreSQL database
-- **Fix**: Sync discoveries table with discovered_pairs
-- **Effort**: 1-2 hours
-- **Owner**: Next session agent
+- **Fix Applied**: Discovered that DB was actually correct (125 is accurate count)
+- **Results**:
+  - PostgreSQL is now the single source of truth
+  - discovered_pairs.json rebuilt from database (was using old session IDs)
+  - All sources now in sync: DB = discovered_pairs = discoveries.json = 125
+- **Resolution Date**: 2026-02-22
+- **Note**: Original "133 count" was from stale discovered_pairs.json with invalid mechanism IDs
 
 ### 3. Frontend Shows Only 3 Discoveries
 - **Issue**: Homepage displays only 3 "featured" instead of all 133
@@ -41,19 +51,34 @@
 
 ## 🟠 HIGH Priority Issues
 
-### 4. No Data Validation
+### ✅ 4. No Data Validation - RESOLVED (Session 86)
 - **Issue**: System accepts any data without checks
 - **Impact**: Allows duplicates and invalid data
 - **Location**: Throughout data pipeline
-- **Fix**: Add validation layer before storage
-- **Effort**: 4-6 hours
+- **Fix Applied**: Created comprehensive validation script
+- **Results**:
+  - `scripts/validate_data_integrity.py` checks:
+    - Duplicate detection across all sources
+    - Required field validation
+    - Cross-source consistency (JSON ↔ DB)
+    - Foreign key integrity
+    - Valid ratings and similarity scores
+  - Returns exit code 1 on errors (can be used in pre-commit hooks)
+- **Resolution Date**: 2026-02-22
+- **Usage**: Run before any data commits
 
-### 5. Multiple Data Sources Confusion
+### ✅ 5. Multiple Data Sources Confusion - PARTIALLY RESOLVED (Session 86)
 - **Issue**: SQLite + PostgreSQL + JSON files all used
 - **Impact**: Unclear which is authoritative
 - **Location**: Various
-- **Fix**: Make PostgreSQL single source of truth
-- **Effort**: 6-8 hours
+- **Fix Applied**: Established PostgreSQL as single source of truth
+- **Results**:
+  - PostgreSQL is authoritative for all discoveries
+  - JSON files are now derived/cached data (rebuilt from DB)
+  - SQLite (papers.db) still used for paper/mechanism storage
+  - Clear hierarchy established: PostgreSQL → JSON exports
+- **Resolution Date**: 2026-02-22
+- **Remaining**: Consider migrating SQLite papers.db to PostgreSQL (low priority)
 
 ### 6. TypeScript 'any' Types
 - **Issue**: 15+ instances of 'any' type
@@ -172,14 +197,14 @@
 
 ## Recommended Fix Order
 
-### Phase 1: Emergency (This Session)
-1. Fix data corruption (#1) - CRITICAL
-2. Sync database (#2) - CRITICAL
-3. Fix frontend display (#3) - CRITICAL
+### ✅ Phase 1: Emergency (Session 86) - COMPLETED
+1. ✅ Fix data corruption (#1) - RESOLVED
+2. ✅ Sync database (#2) - RESOLVED
+3. ⏳ Fix frontend display (#3) - STILL CRITICAL (next session)
 
 ### Phase 2: Stabilization (Next 2 Sessions)
-4. Add data validation (#4)
-5. Clean up data sources (#5)
+4. ✅ Add data validation (#4) - RESOLVED
+5. ✅ Clean up data sources (#5) - MOSTLY RESOLVED
 6. Remove backup files from git (#8)
 7. Fix TypeScript types (#6)
 
@@ -199,15 +224,24 @@
 
 ## Metrics to Track
 
-### Before Fixes
+### Before Fixes (Session 85)
 - Duplicate rate: 38% (54/141)
 - Type safety: 15 'any' types
 - Test coverage: 0%
 - Manual effort: 100%
 - Error visibility: 0%
 
-### Target After Fixes
-- Duplicate rate: 0%
+### After Session 86 Fixes
+- Duplicate rate: 0% ✅ (was 38%)
+- Data validation: Automated script ✅ (was none)
+- Source of truth: PostgreSQL ✅ (was unclear)
+- Type safety: 15 'any' types (unchanged)
+- Test coverage: 0% (unchanged)
+- Manual effort: 100% (unchanged)
+- Error visibility: 0% (unchanged)
+
+### Target After All Fixes
+- Duplicate rate: 0% ✅
 - Type safety: 0 'any' types
 - Test coverage: >50%
 - Manual effort: <30%
@@ -225,10 +259,37 @@
 
 ---
 
-**Last Updated**: Session 83
+## Session 86 Resolution Summary
+
+**Date**: 2026-02-22
+
+### Issues Resolved
+1. ✅ Data Corruption (#1) - 63 corrupted entries removed
+2. ✅ Database Sync (#2) - All sources now at 125 entries
+3. ✅ Data Validation (#4) - Automated validation script created
+4. ✅ Data Sources Confusion (#5) - PostgreSQL established as source of truth
+
+### Scripts Created
+- `scripts/rebuild_discoveries.py` - Rebuilds JSON from PostgreSQL
+- `scripts/validate_data_integrity.py` - Validates data before commits
+
+### Data Quality Results
+- **Before**: 188 entries, 107 duplicates (57% duplication), 2 formats
+- **After**: 125 entries, 0 duplicates (0% duplication), 1 format
+- **Corruption Fixed**: 63 entries removed
+- **Validation**: All sources verified consistent
+
+### Backup Files Created
+- `app/data/discoveries.json.backup` - Pre-fix state
+- `app/data/discovered_pairs.json.backup` - Pre-rebuild state
+
+---
+
+**Last Updated**: Session 86
 **Total Issues**: 18
-**Critical**: 3
-**High**: 5
+**Resolved**: 4 (22%)
+**Critical Remaining**: 1 (Frontend display)
+**High Remaining**: 4
 **Medium**: 5
 **Low**: 5
-**Estimated Total Effort**: 73-107 hours
+**Estimated Remaining Effort**: 56-88 hours (down from 73-107)

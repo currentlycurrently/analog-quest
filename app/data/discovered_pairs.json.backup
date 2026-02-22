@@ -1,324 +1,331 @@
 {
   "metadata": {
-    "last_updated": "2026-02-22",
-    "total_pairs": 125,
+    "last_updated": "2026-02-16",
+    "total_pairs": 133,
     "description": "Tracks all discovered paper pairs to prevent duplication across sessions",
-    "note": "REBUILT FROM DATABASE - Session 86 corruption fix. IDs are mechanism_ids, not paper_ids."
+    "note": "Created in Session 59 after Session 58 audit revealed 54% duplication problem. All 46 unique discoveries after deduplication."
   },
   "discovered_pairs": [
     {
-      "paper_1_id": 11,
-      "paper_2_id": 56,
+      "paper_1_id": 525,
+      "paper_2_id": 540,
       "similarity": 0.7363924980163574,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 11,
-      "paper_2_id": 36,
+      "paper_1_id": 525,
+      "paper_2_id": 530,
       "similarity": 0.7064264416694641,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 48,
-      "paper_2_id": 176,
-      "similarity": 0.6976,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 10,
-      "paper_2_id": 15,
+      "paper_1_id": 77,
+      "paper_2_id": 87,
       "similarity": 0.6691850423812866,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 11,
-      "paper_2_id": 49,
+      "paper_1_id": 525,
+      "paper_2_id": 528,
       "similarity": 0.6278334856033325,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 107,
-      "paper_2_id": 105,
-      "similarity": 0.6193699836730957,
-      "rating": "excellent",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 20,
-      "paper_2_id": 54,
-      "similarity": 0.6166112422943115,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 32,
-      "paper_2_id": 62,
-      "similarity": 0.6001496911048889,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 14,
-      "paper_2_id": 19,
+      "paper_1_id": 2,
+      "paper_2_id": 916,
       "similarity": 0.5998806953430176,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 16,
-      "paper_2_id": 33,
+      "paper_1_id": 100,
+      "paper_2_id": 461,
       "similarity": 0.5997282862663269,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 105,
-      "paper_2_id": 138,
-      "similarity": 0.5783430337905884,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 92,
-      "paper_2_id": 140,
-      "similarity": 0.5757,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 14,
-      "paper_2_id": 20,
+      "paper_1_id": 2,
+      "paper_2_id": 917,
       "similarity": 0.5702585577964783,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 10,
-      "paper_2_id": 25,
+      "paper_1_id": 77,
+      "paper_2_id": 953,
       "similarity": 0.5687321424484253,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 87,
-      "paper_2_id": 93,
-      "similarity": 0.5663,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 38,
-      "paper_2_id": 138,
-      "similarity": 0.5527722835540771,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 31,
-      "paper_2_id": 46,
+      "paper_1_id": 1973,
+      "paper_2_id": 352,
       "similarity": 0.548354983329773,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 18,
-      "paper_2_id": 26,
+      "paper_1_id": 814,
+      "paper_2_id": 1943,
       "similarity": 0.5442763566970825,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 28,
-      "paper_2_id": 44,
+      "paper_1_id": 1970,
+      "paper_2_id": 168,
       "similarity": 0.5400546193122864,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 17,
-      "paper_2_id": 48,
+      "paper_1_id": 644,
+      "paper_2_id": 354,
       "similarity": 0.5368675589561462,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 8,
-      "paper_2_id": 39,
-      "similarity": 0.5344,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 15,
-      "paper_2_id": 17,
+      "paper_1_id": 87,
+      "paper_2_id": 644,
       "similarity": 0.5339190363883972,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 6,
-      "paper_2_id": 28,
+      "paper_1_id": 448,
+      "paper_2_id": 1970,
       "similarity": 0.5338948965072632,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 15,
-      "paper_2_id": 46,
+      "paper_1_id": 87,
+      "paper_2_id": 352,
       "similarity": 0.5299366116523743,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 15,
-      "paper_2_id": 181,
-      "similarity": 0.528,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 115,
-      "paper_2_id": 116,
-      "similarity": 0.5275,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 38,
-      "paper_2_id": 46,
+      "paper_1_id": 199,
+      "paper_2_id": 352,
       "similarity": 0.5260351896286011,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 92,
-      "paper_2_id": 122,
-      "similarity": 0.5102,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 20,
-      "paper_2_id": 139,
-      "similarity": 0.509902834892273,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 22,
-      "paper_2_id": 139,
-      "similarity": 0.5099,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 15,
-      "paper_2_id": 48,
+      "paper_1_id": 87,
+      "paper_2_id": 354,
       "similarity": 0.5077577829360962,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 37,
-      "paper_2_id": 105,
-      "similarity": 0.5062606334686279,
-      "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 10,
-      "paper_2_id": 37,
+      "paper_1_id": 77,
+      "paper_2_id": 191,
       "similarity": 0.5039563179016113,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 33,
-      "paper_2_id": 46,
+      "paper_1_id": 461,
+      "paper_2_id": 352,
       "similarity": 0.5011242032051086,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 15,
-      "paper_2_id": 33,
+      "paper_1_id": 87,
+      "paper_2_id": 461,
       "similarity": 0.5004019141197205,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 33,
-      "paper_2_id": 38,
+      "paper_1_id": 461,
+      "paper_2_id": 199,
       "similarity": 0.484524130821228,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 15,
-      "paper_2_id": 30,
+      "paper_1_id": 87,
+      "paper_2_id": 1972,
       "similarity": 0.4831656515598297,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 30,
-      "paper_2_id": 46,
+      "paper_1_id": 1972,
+      "paper_2_id": 352,
       "similarity": 0.4821402132511139,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 10,
-      "paper_2_id": 17,
+      "paper_1_id": 77,
+      "paper_2_id": 644,
       "similarity": 0.4743817448616028,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 30,
-      "paper_2_id": 38,
+      "paper_1_id": 1972,
+      "paper_2_id": 199,
       "similarity": 0.4681107997894287,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 18,
-      "paper_2_id": 23,
+      "paper_1_id": 814,
+      "paper_2_id": 922,
       "similarity": 0.46404770016670227,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 16,
-      "paper_2_id": 30,
+      "paper_1_id": 100,
+      "paper_2_id": 1972,
       "similarity": 0.46291446685791016,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 38,
-      "paper_2_id": 48,
+      "paper_1_id": 199,
+      "paper_2_id": 354,
       "similarity": 0.4626443088054657,
       "rating": "excellent",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 16,
-      "paper_2_id": 31,
+      "paper_1_id": 100,
+      "paper_2_id": 1973,
       "similarity": 0.45332223176956177,
       "rating": "good",
       "discovered_in_session": 38
     },
     {
-      "paper_1_id": 33,
-      "paper_2_id": 48,
+      "paper_1_id": 461,
+      "paper_2_id": 354,
       "similarity": 0.44465914368629456,
       "rating": "excellent",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 2061,
+      "paper_2_id": 2044,
+      "similarity": 0.6193699836730957,
+      "rating": "excellent",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 2044,
+      "paper_2_id": 2170,
+      "similarity": 0.5783430337905884,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 199,
+      "paper_2_id": 2170,
+      "similarity": 0.5527722835540771,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 191,
+      "paper_2_id": 2083,
+      "similarity": 0.5331863760948181,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 917,
+      "paper_2_id": 153,
+      "similarity": 0.6166112422943115,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 457,
+      "paper_2_id": 369,
+      "similarity": 0.6001496911048889,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 917,
+      "paper_2_id": 2194,
+      "similarity": 0.509902834892273,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 191,
+      "paper_2_id": 2044,
+      "similarity": 0.5062606334686279,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 1425,
+      "paper_2_id": 117,
+      "similarity": 0.5757,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 42,
+      "paper_2_id": 1500,
+      "similarity": 0.5663,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 451,
+      "paper_2_id": 194,
+      "similarity": 0.5344,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 1540,
+      "paper_2_id": 1565,
+      "similarity": 0.5275,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 354,
+      "paper_2_id": 632,
+      "similarity": 0.6976,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 87,
+      "paper_2_id": 668,
+      "similarity": 0.528,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 1425,
+      "paper_2_id": 125,
+      "similarity": 0.5102,
+      "rating": "good",
+      "discovered_in_session": 38
+    },
+    {
+      "paper_1_id": 921,
+      "paper_2_id": 2194,
+      "similarity": 0.5099,
+      "rating": "good",
       "discovered_in_session": 38
     },
     {
@@ -539,41 +546,6 @@
       "discovered_in_session": 77
     },
     {
-      "paper_1_id": 291,
-      "paper_2_id": 292,
-      "similarity": 0.4834,
-      "rating": "good",
-      "discovered_in_session": 77
-    },
-    {
-      "paper_1_id": 273,
-      "paper_2_id": 292,
-      "similarity": 0.4828,
-      "rating": "good",
-      "discovered_in_session": 77
-    },
-    {
-      "paper_1_id": 250,
-      "paper_2_id": 267,
-      "similarity": 0.4808,
-      "rating": "good",
-      "discovered_in_session": 77
-    },
-    {
-      "paper_1_id": 270,
-      "paper_2_id": 273,
-      "similarity": 0.4802,
-      "rating": "good",
-      "discovered_in_session": 77
-    },
-    {
-      "paper_1_id": 293,
-      "paper_2_id": 301,
-      "similarity": 0.48,
-      "rating": "good",
-      "discovered_in_session": 77
-    },
-    {
       "paper_1_id": 302,
       "paper_2_id": 279,
       "similarity": 0.4792,
@@ -623,6 +595,41 @@
       "discovered_in_session": 77
     },
     {
+      "paper_1_id": 291,
+      "paper_2_id": 292,
+      "similarity": 0.4834,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 273,
+      "paper_2_id": 292,
+      "similarity": 0.4828,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 250,
+      "paper_2_id": 267,
+      "similarity": 0.4808,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 270,
+      "paper_2_id": 273,
+      "similarity": 0.4802,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 293,
+      "paper_2_id": 301,
+      "similarity": 0.48,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
       "paper_1_id": 254,
       "paper_2_id": 278,
       "similarity": 0.4663,
@@ -651,235 +658,284 @@
       "discovered_in_session": 77
     },
     {
+      "paper_1_id": 249,
+      "paper_2_id": 294,
+      "similarity": 0.4586,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 264,
+      "paper_2_id": 270,
+      "similarity": 0.4569,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 266,
+      "paper_2_id": 304,
+      "similarity": 0.4566,
+      "rating": "excellent",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 278,
+      "paper_2_id": 293,
+      "similarity": 0.4565,
+      "rating": "excellent",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 274,
+      "paper_2_id": 293,
+      "similarity": 0.4552,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 283,
+      "paper_2_id": 300,
+      "similarity": 0.4546,
+      "rating": "excellent",
+      "discovered_in_session": 77
+    },
+    {
+      "paper_1_id": 241,
+      "paper_2_id": 296,
+      "similarity": 0.4569,
+      "rating": "good",
+      "discovered_in_session": 77
+    },
+    {
       "paper_1_id": 165,
       "paper_2_id": 70,
       "similarity": 0.4546,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 165,
       "paper_2_id": 177,
       "similarity": 0.4542,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 180,
       "paper_2_id": 86,
       "similarity": 0.4527,
       "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 31,
-      "paper_2_id": 217,
-      "similarity": 0.4525,
-      "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 203,
       "paper_2_id": 19,
       "similarity": 0.4525,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 31,
+      "paper_2_id": 217,
+      "similarity": 0.4525,
+      "rating": "excellent",
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 220,
       "paper_2_id": 104,
       "similarity": 0.4516,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 70,
       "paper_2_id": 45,
       "similarity": 0.4513,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 48,
       "paper_2_id": 222,
       "similarity": 0.45,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 21,
       "paper_2_id": 139,
       "similarity": 0.4493,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 180,
       "paper_2_id": 64,
       "similarity": 0.4487,
       "rating": "good",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 229,
-      "paper_2_id": 86,
-      "similarity": 0.4467,
-      "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 31,
       "paper_2_id": 197,
       "similarity": 0.446,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 180,
       "paper_2_id": 192,
       "similarity": 0.4444,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 192,
       "paper_2_id": 170,
       "similarity": 0.4423,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 45,
       "paper_2_id": 210,
       "similarity": 0.4411,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 217,
       "paper_2_id": 273,
       "similarity": 0.44,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 80
+    },
+    {
+      "paper_1_id": 229,
+      "paper_2_id": 86,
+      "similarity": 0.4467,
+      "rating": "good",
+      "discovered_in_session": 80
     },
     {
       "paper_1_id": 192,
       "paper_2_id": 249,
       "similarity": 0.4399,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 53,
       "paper_2_id": 244,
       "similarity": 0.4398,
       "rating": "excellent",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 194,
-      "paper_2_id": 287,
-      "similarity": 0.4396,
-      "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 139,
       "paper_2_id": 254,
       "similarity": 0.4373,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 284,
       "paper_2_id": 260,
       "similarity": 0.4364,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 19,
       "paper_2_id": 197,
       "similarity": 0.4355,
       "rating": "excellent",
-      "discovered_in_session": 38
-    },
-    {
-      "paper_1_id": 53,
-      "paper_2_id": 267,
-      "similarity": 0.4343,
-      "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 86,
       "paper_2_id": 249,
       "similarity": 0.4343,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
+    },
+    {
+      "paper_1_id": 53,
+      "paper_2_id": 267,
+      "similarity": 0.4343,
+      "rating": "good",
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 117,
       "paper_2_id": 269,
       "similarity": 0.4314,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 57,
       "paper_2_id": 273,
       "similarity": 0.431,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 275,
       "paper_2_id": 276,
       "similarity": 0.4306,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 220,
       "paper_2_id": 275,
       "similarity": 0.4299,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 279,
       "paper_2_id": 280,
       "similarity": 0.4282,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 117,
       "paper_2_id": 249,
       "similarity": 0.426,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 64,
       "paper_2_id": 282,
       "similarity": 0.4236,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 210,
       "paper_2_id": 283,
       "similarity": 0.4225,
       "rating": "excellent",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
     },
     {
       "paper_1_id": 47,
       "paper_2_id": 222,
       "similarity": 0.4224,
       "rating": "good",
-      "discovered_in_session": 38
+      "discovered_in_session": 81
+    },
+    {
+      "paper_1_id": 194,
+      "paper_2_id": 287,
+      "similarity": 0.4396,
+      "rating": "good",
+      "discovered_in_session": 81
     }
   ]
 }

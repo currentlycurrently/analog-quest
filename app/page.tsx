@@ -1,145 +1,186 @@
 import Link from 'next/link';
-import { queries } from '@/lib/db';
-import DiscoveryCard from '@/components/DiscoveryCard';
+import { fetchDiscoveries } from '@/lib/api-client';
+import RebuildNotice from '@/components/RebuildNotice';
+import IsomorphismCard from '@/components/IsomorphismCard';
+import fs from 'fs/promises';
+import path from 'path';
 
 // Use dynamic rendering for the homepage to fetch latest data
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  // Fetch data directly from database (server-side only)
-  const [allDiscoveries, featuredDiscoveries, recentDiscoveries, stats] = await Promise.all([
-    queries.getAllDiscoveriesWithDetails({ limit: 200 }),
-    queries.getAllDiscoveriesWithDetails({ rating: 'excellent', sortBy: 'similarity', order: 'desc', limit: 3 }),
-    queries.getAllDiscoveriesWithDetails({ sortBy: 'id', order: 'desc', limit: 12 }),
-    queries.getDiscoveryStats()
-  ]);
+  // Load the real isomorphisms
+  const isomorphismsPath = path.join(process.cwd(), 'app/data/real_isomorphisms.json');
+  const isomorphismsData = await fs.readFile(isomorphismsPath, 'utf-8');
+  const realIsomorphisms = JSON.parse(isomorphismsData);
 
-  const metadata = {
-    total: allDiscoveries.length,
-    stats: {
-      excellent: allDiscoveries.filter(d => d.rating === 'excellent').length,
-      good: allDiscoveries.filter(d => d.rating === 'good').length,
-      uniqueDomains: stats.uniqueDomains.length,
-      database_stats: stats
-    }
-  };
+  // Load rebuild status
+  const statusPath = path.join(process.cwd(), 'app/data/rebuild_status.json');
+  const statusData = await fs.readFile(statusPath, 'utf-8');
+  const rebuildStatus = JSON.parse(statusData);
 
   return (
     <div className="bg-cream">
+      {/* Rebuild Notice */}
+      <RebuildNotice status={rebuildStatus} />
+
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 lg:px-8 py-24">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-serif font-normal text-brown mb-8 leading-tight">
-            The same ideas appear in different fields, expressed in different languages
+            Finding the deep mathematical structures that unite all of science
           </h1>
           <p className="text-lg text-brown/80 mb-12 leading-relaxed max-w-2xl">
-            Analog Quest reveals structural patterns that span academic domains.
-            A mechanism discovered in economics might be identical to one found in biology.
-            Same structure, different vocabulary.
+            Analog Quest reveals when different fields are solving the <strong>exact same equation</strong>.
+            Not semantic similarity. Not "both have feedback loops."
+            Real mathematical isomorphisms like discovering the Black-Scholes equation IS the heat equation.
           </p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-12">
+            <h3 className="font-mono text-sm font-semibold text-brown mb-2">
+              FUNDAMENTAL REBUILD IN PROGRESS
+            </h3>
+            <p className="text-brown/80">
+              After analyzing 125 "discoveries", we found <strong>0% were real mathematical isomorphisms</strong>.
+              We're rebuilding from scratch to find actual structural equivalences.
+            </p>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/discoveries"
+              href="/methodology"
               className="inline-block bg-brown-dark text-cream px-8 py-3 font-mono text-sm hover:bg-brown transition-colors"
             >
-              view discoveries
+              new methodology
             </Link>
             <Link
-              href="/methodology"
+              href="#real-examples"
               className="inline-block border border-brown/20 text-brown px-8 py-3 font-mono text-sm hover:border-brown/40 transition-colors"
             >
-              how it works
+              see real isomorphisms
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="max-w-5xl mx-auto px-6 lg:px-8 py-12 border-t border-brown/10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-serif text-brown mb-2">{metadata.total}</div>
-            <div className="text-sm font-mono text-brown/60">total discoveries</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-serif text-brown mb-2">{metadata.stats.excellent}</div>
-            <div className="text-sm font-mono text-brown/60">excellent rated</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-serif text-brown mb-2">{metadata.stats.uniqueDomains}</div>
-            <div className="text-sm font-mono text-brown/60">unique domains</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-serif text-brown mb-2">
-              {Math.round(metadata.stats.database_stats.similarity.avg * 100)}%
+      {/* What Changed Section */}
+      <section className="bg-brown-dark text-cream py-16">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <h2 className="text-3xl font-serif font-normal mb-8">What Changed?</h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="font-mono text-sm mb-4 text-yellow-300">OLD APPROACH (Shallow)</h3>
+              <div className="bg-brown/30 p-6 rounded">
+                <p className="font-mono text-sm mb-2">"This paper mentions feedback loops"</p>
+                <p className="font-mono text-sm mb-2">"This other paper also mentions feedback"</p>
+                <p className="font-mono text-sm text-red-300">→ "Discovery!" (worthless)</p>
+              </div>
+              <p className="mt-4 text-cream/80">
+                Result: 125 trivial observations that anyone could make.
+              </p>
             </div>
-            <div className="text-sm font-mono text-brown/60">avg similarity</div>
+
+            <div>
+              <h3 className="font-mono text-sm mb-4 text-green-300">NEW APPROACH (Deep)</h3>
+              <div className="bg-brown/30 p-6 rounded">
+                <p className="font-mono text-sm mb-2">dx/dt = ax - bxy</p>
+                <p className="font-mono text-sm mb-2">d[A]/dt = k₁[A] - k₂[A][B]</p>
+                <p className="font-mono text-sm text-green-300">→ Lotka-Volterra isomorphism!</p>
+              </div>
+              <p className="mt-4 text-cream/80">
+                Result: Real mathematical equivalences that enable cross-domain method transfer.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Discoveries */}
-      <section className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
-        <div className="mb-12">
+      {/* Real Isomorphisms Section */}
+      <section id="real-examples" className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
+        <div className="mb-16">
           <h2 className="text-3xl font-serif font-normal text-brown mb-4">
-            Featured Discoveries
+            Verified Mathematical Isomorphisms
           </h2>
           <p className="text-brown/70 max-w-2xl">
-            Top-rated cross-domain isomorphisms identified through semantic analysis
-            of 5,000+ research papers.
+            These are the only {realIsomorphisms.length} verified isomorphisms from our database of 5,000+ papers.
+            Each represents an exact mathematical equivalence between different fields.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {featuredDiscoveries.map((discovery) => (
-            <DiscoveryCard
-              key={discovery.id}
-              id={discovery.id}
-              rating={discovery.rating}
-              similarity={discovery.similarity}
-              paper1Domain={discovery.domains?.[0] || discovery.paper_1?.domain || discovery.paper_1_domain || 'unknown'}
-              paper2Domain={discovery.domains?.[1] || discovery.paper_2?.domain || discovery.paper_2_domain || 'unknown'}
-              paper1Title={discovery.papers?.paper_1?.title || discovery.paper_1?.title || discovery.paper_1_title || discovery.title || 'Unknown Paper'}
-              paper2Title={discovery.papers?.paper_2?.title || discovery.paper_2?.title || discovery.paper_2_title || discovery.title || 'Unknown Paper'}
-              explanation={discovery.explanation || discovery.structural_explanation || discovery.pattern || 'Cross-domain structural pattern'}
-            />
+        <div className="grid md:grid-cols-2 gap-8">
+          {realIsomorphisms.map((iso: any) => (
+            <IsomorphismCard key={iso.id} isomorphism={iso} />
           ))}
+        </div>
+
+        <div className="mt-12 p-6 bg-gray-50 rounded">
+          <p className="text-sm text-gray-600">
+            <strong>Why only {realIsomorphisms.length}?</strong> Real isomorphisms are rare and valuable.
+            Finding that two fields use the exact same mathematical structure is a potential breakthrough.
+            We'd rather have {realIsomorphisms.length} real discoveries than 125 trivial observations.
+          </p>
         </div>
       </section>
 
-      {/* Recent Discoveries */}
-      <section className="max-w-5xl mx-auto px-6 lg:px-8 py-16 border-t border-brown/10">
-        <div className="mb-12">
-          <h2 className="text-3xl font-serif font-normal text-brown mb-4">
-            Recent Discoveries
+      {/* Timeline Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <h2 className="text-3xl font-serif font-normal text-brown mb-8">
+            Rebuild Timeline
           </h2>
-          <p className="text-brown/70 max-w-2xl">
-            Latest cross-domain patterns added to the database.
+
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-mono text-sm">✓</div>
+              <div>
+                <h3 className="font-semibold">Week 0: Proof of Concept</h3>
+                <p className="text-gray-600">Built pattern matching for Lotka-Volterra, Heat equation detection</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-yellow-500 text-white rounded-full flex items-center justify-center font-mono text-sm">...</div>
+              <div>
+                <h3 className="font-semibold">Weeks 1-4: Equation Extraction</h3>
+                <p className="text-gray-600">LaTeX parsing, SymPy integration, canonical forms</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-gray-300 text-white rounded-full flex items-center justify-center font-mono text-sm">5-7</div>
+              <div>
+                <h3 className="font-semibold">Weeks 5-7: Graph Structures</h3>
+                <p className="text-gray-600">NetworkX integration, graph isomorphism detection</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-gray-300 text-white rounded-full flex items-center justify-center font-mono text-sm">8+</div>
+              <div>
+                <h3 className="font-semibold">Weeks 8-16: Scale & Validate</h3>
+                <p className="text-gray-600">Process 1,000+ papers, find 10+ publication-worthy discoveries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-brown-dark text-cream py-16">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-serif font-normal mb-6">
+            This is Science, Not Pattern Matching
+          </h2>
+          <p className="text-lg mb-8 text-cream/80">
+            We're building something that could actually advance scientific understanding.
+            Follow the rebuild as we search for the deep mathematical structures that unite all fields.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {recentDiscoveries.map((discovery) => (
-            <DiscoveryCard
-              key={discovery.id}
-              id={discovery.id}
-              rating={discovery.rating}
-              similarity={discovery.similarity}
-              paper1Domain={discovery.domains?.[0] || discovery.paper_1?.domain || discovery.paper_1_domain || 'unknown'}
-              paper2Domain={discovery.domains?.[1] || discovery.paper_2?.domain || discovery.paper_2_domain || 'unknown'}
-              paper1Title={discovery.papers?.paper_1?.title || discovery.paper_1?.title || discovery.paper_1_title || discovery.title || 'Unknown Paper'}
-              paper2Title={discovery.papers?.paper_2?.title || discovery.paper_2?.title || discovery.paper_2_title || discovery.title || 'Unknown Paper'}
-              explanation={discovery.explanation || discovery.structural_explanation || discovery.pattern || 'Cross-domain structural pattern'}
-            />
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
           <Link
-            href="/discoveries"
-            className="inline-block bg-brown-dark text-cream px-8 py-3 font-mono text-sm hover:bg-brown transition-colors"
+            href="/methodology"
+            className="inline-block bg-yellow-400 text-brown px-8 py-3 font-mono text-sm hover:bg-yellow-300 transition-colors"
           >
-            view all {metadata.total} discoveries →
+            Read the Technical Specification
           </Link>
         </div>
       </section>

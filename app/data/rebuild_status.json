@@ -1,0 +1,13 @@
+{
+  "status": "rebuilding",
+  "message": "Analog Quest is undergoing a fundamental rebuild to find REAL mathematical isomorphisms.",
+  "old_discoveries": 125,
+  "real_isomorphisms": 2,
+  "explanation": "Previous 'discoveries' were shallow pattern matches like 'both have feedback loops'. We're now detecting actual mathematical equivalences like Lotka-Volterra dynamics and Heat equations that appear across different scientific domains.",
+  "timeline": "16-week rebuild in progress",
+  "new_standards": {
+    "requirement": "Exact mathematical structure equivalence",
+    "example": "Black-Scholes equation (finance) \u2261 Heat equation (physics)",
+    "not_accepted": "Generic patterns like 'feedback', 'networks', 'emergence'"
+  }
+}

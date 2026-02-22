@@ -299,8 +299,10 @@ export const queries = {
    * Get a single discovery by ID with full details
    */
   getDiscoveryById: async (id: number): Promise<DiscoveryWithDetails | null> => {
-    // Special handling for isomorphisms (IDs 1 and 2)
-    if (id === 1 || id === 2) {
+    // First, check if this ID is an isomorphism
+    const checkIso = await queryOne<{id: number}>('SELECT id FROM isomorphisms WHERE id = $1', [id]);
+
+    if (checkIso) {
       const isoQuery = `
         SELECT
           i.id,

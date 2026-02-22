@@ -82,7 +82,6 @@ export default function IsomorphismCard({ isomorphism }: IsomorphismCardProps) {
             {isomorphism.paper_2.title}
           </p>
         </div>
-      </div>
 
         {/* ArXiv Links */}
         <div className="flex gap-2 mt-3">
@@ -105,6 +104,7 @@ export default function IsomorphismCard({ isomorphism }: IsomorphismCardProps) {
           </span>
         </div>
       </div>
+    </div>
     </Link>
   );
 }

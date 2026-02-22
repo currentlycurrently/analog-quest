@@ -11,11 +11,13 @@
     "explanation": "Both AI diffusion models for image generation and MRI diffusion imaging follow the same heat equation. The mathematical structure \u2202u/\u2202t = k\u2207\u00b2u describes how information (AI) or water molecules (MRI) diffuse through space over time.",
     "paper_1": {
       "title": "Causality in Video Diffusers is Separable from Denoising",
-      "domain": "cs"
+      "domain": "cs",
+      "arxiv_id": "2602.10095v1"
     },
     "paper_2": {
       "title": "Open diffusion MRI and connectivity data for epilepsy and surgery",
-      "domain": "q-bio"
+      "domain": "q-bio",
+      "arxiv_id": "2602.09852v1"
     },
     "confidence": 0.9,
     "rating": "verified",
@@ -33,11 +35,13 @@
     "explanation": "Robot task segmentation and sleep stage transitions both follow Lotka-Volterra dynamics. The coupled nonlinear ODEs dx/dt = ax - bxy, dy/dt = -cy + dxy describe competing states (task modes or sleep stages) with mutual inhibition.",
     "paper_1": {
       "title": "RoboSubtaskNet: Temporal Sub-task Segmentation for Human-to-Robot Skill Transfer",
-      "domain": "cs"
+      "domain": "cs",
+      "arxiv_id": "2602.10015v1"
     },
     "paper_2": {
       "title": "Fully-automated sleep staging: multicenter validation",
-      "domain": "q-bio"
+      "domain": "q-bio",
+      "arxiv_id": "2602.09793v1"
     },
     "confidence": 0.85,
     "rating": "verified",

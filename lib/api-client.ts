@@ -8,8 +8,9 @@ function getApiUrl() {
     if (process.env.VERCEL_URL) {
       return `https://${process.env.VERCEL_URL}`;
     }
-    // Fallback for local development
-    return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    // For local development during SSR, use relative URL to avoid port issues
+    // Next.js will resolve this correctly during server rendering
+    return '';
   }
   // Client-side: Use relative URL (works for any deployment)
   return '';

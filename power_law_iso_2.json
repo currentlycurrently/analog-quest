@@ -1,0 +1,21 @@
+{
+  "title": "POWER_LAW: physics \u2194 nlin",
+  "isomorphism_class": "POWER_LAW",
+  "mathematical_structure": "P(x) \u221d x^(-\u03b1)",
+  "explanation": "Both papers study power law distributions P(x) \u221d x^(-\u03b1). The physics paper applies this to physics systems showing scale-free behavior, while the nlin paper finds the same mathematical structure in nlin phenomena. Despite different domains, both follow identical power law scaling.",
+  "confidence": 0.9,
+  "verification_status": "verified",
+  "discovered_session": 86,
+  "paper_1": {
+    "title": "Compressing Complexity: A Critical Synthesis of Structural, Analytical, and Data-Driven Dimensionality Reduction in Dynamical Networks",
+    "domain": "physics",
+    "arxiv_id": "2602.00039v1",
+    "abstract": "The contemporary scientific landscape is characterized by a \"curse of dimensionality,\" where our capacity to collect high-dimensional network data frequently outstrips our ability to computationally simulate or intuitively comprehend the underlying dynamics. This review provides a comprehensive synthesis of the methodologies developed to resolve this paradox by extracting low-dimensional \"macroscopic theories\" from complex systems. We classify these approaches into three distinct methodological "
+  },
+  "paper_2": {
+    "title": "Pattern Formation in Excitable Neuronal Maps",
+    "domain": "nlin",
+    "arxiv_id": "2601.21671v1",
+    "abstract": "Coupled excitable systems can generate a variety of patterns. In this work, we investigate coupled Chialvo maps in two dimensions under two types of nearest-neighbor couplings. One coupling produces ringlike patterns, while the other produces spirals. The rings expand with increasing coupling, whereas spirals evolve into turbulence and dissipate at stronger coupling. To quantify these patterns, we introduce an analogue of the discriminant of the velocity gradient tensor and examine the persisten"
+  }
+}

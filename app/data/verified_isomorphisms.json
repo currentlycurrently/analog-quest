@@ -1,0 +1,128 @@
+[
+  {
+    "id": 3,
+    "title": "ISING_MODEL: math \u2194 q-bio",
+    "isomorphism_class": "ISING_MODEL",
+    "mathematical_structure": "H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i",
+    "explanation": "Both papers study binary state systems with nearest-neighbor interactions. The math paper applies this to math systems, while the q-bio paper uses the identical mathematical framework for q-bio applications. Despite the different domains, the underlying mathematics (H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i) is isomorphic.",
+    "confidence": 0.95,
+    "rating": "verified",
+    "paper_1": {
+      "title": "Excursion decomposition of the XOR-Ising model",
+      "domain": "math",
+      "arxiv_id": "2602.06011v1",
+      "url": "https://arxiv.org/abs/2602.06011v1"
+    },
+    "paper_2": {
+      "title": "In vitro binding energies capture Klf4 occupancy across the human genome",
+      "domain": "q-bio",
+      "arxiv_id": "2601.16151v1",
+      "url": "https://arxiv.org/abs/2601.16151v1"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Diffusion Models (AI) \u2194 MRI Diffusion (Medicine)",
+    "isomorphism_class": "HEAT_EQUATION",
+    "mathematical_structure": "\u2202u/\u2202t = k\u2207\u00b2u",
+    "explanation": "Both AI diffusion models for image generation and MRI diffusion imaging follow the same heat equation. The mathematical structure \u2202u/\u2202t = k\u2207\u00b2u describes how information (AI) or water molecules (MRI) diffuse through space over time.",
+    "confidence": 0.9,
+    "rating": "verified",
+    "paper_1": {
+      "title": "Causality in Video Diffusers is Separable from Denoising",
+      "domain": "cs",
+      "arxiv_id": "2602.10095v1",
+      "url": "https://arxiv.org/abs/2602.10095v1"
+    },
+    "paper_2": {
+      "title": "Open diffusion MRI and connectivity data for epilepsy and surgery",
+      "domain": "q-bio",
+      "arxiv_id": "2602.09852v1",
+      "url": "https://arxiv.org/abs/2602.09852v1"
+    }
+  },
+  {
+    "id": 4,
+    "title": "POWER_LAW: physics \u2194 q-fin",
+    "isomorphism_class": "POWER_LAW",
+    "mathematical_structure": "P(x) \u221d x^(-\u03b1)",
+    "explanation": "Both papers study power law distributions P(x) \u221d x^(-\u03b1). The physics paper applies this to physics systems showing scale-free behavior, while the q-fin paper finds the same mathematical structure in q-fin phenomena. Despite different domains, both follow identical power law scaling.",
+    "confidence": 0.9,
+    "rating": "verified",
+    "paper_1": {
+      "title": "Compressing Complexity: A Critical Synthesis of Structural, Analytical, and Data-Driven Dimensionality Reduction in Dynamical Networks",
+      "domain": "physics",
+      "arxiv_id": "2602.00039v1",
+      "url": "https://arxiv.org/abs/2602.00039v1"
+    },
+    "paper_2": {
+      "title": "A unified theory of order flow, market impact, and volatility",
+      "domain": "q-fin",
+      "arxiv_id": "2601.23172v2",
+      "url": "https://arxiv.org/abs/2601.23172v2"
+    }
+  },
+  {
+    "id": 5,
+    "title": "POWER_LAW: physics \u2194 nlin",
+    "isomorphism_class": "POWER_LAW",
+    "mathematical_structure": "P(x) \u221d x^(-\u03b1)",
+    "explanation": "Both papers study power law distributions P(x) \u221d x^(-\u03b1). The physics paper applies this to physics systems showing scale-free behavior, while the nlin paper finds the same mathematical structure in nlin phenomena. Despite different domains, both follow identical power law scaling.",
+    "confidence": 0.9,
+    "rating": "verified",
+    "paper_1": {
+      "title": "Compressing Complexity: A Critical Synthesis of Structural, Analytical, and Data-Driven Dimensionality Reduction in Dynamical Networks",
+      "domain": "physics",
+      "arxiv_id": "2602.00039v1",
+      "url": "https://arxiv.org/abs/2602.00039v1"
+    },
+    "paper_2": {
+      "title": "Pattern Formation in Excitable Neuronal Maps",
+      "domain": "nlin",
+      "arxiv_id": "2601.21671v1",
+      "url": "https://arxiv.org/abs/2601.21671v1"
+    }
+  },
+  {
+    "id": 6,
+    "title": "POWER_LAW: cond-mat \u2194 q-fin",
+    "isomorphism_class": "POWER_LAW",
+    "mathematical_structure": "P(x) \u221d x^(-\u03b1)",
+    "explanation": "Both papers study power law distributions P(x) \u221d x^(-\u03b1). The cond-mat paper applies this to cond-mat systems showing scale-free behavior, while the q-fin paper finds the same mathematical structure in q-fin phenomena. Despite different domains, both follow identical power law scaling.",
+    "confidence": 0.9,
+    "rating": "verified",
+    "paper_1": {
+      "title": "Broken neural scaling laws in materials science",
+      "domain": "cond-mat",
+      "arxiv_id": "2602.05702v1",
+      "url": "https://arxiv.org/abs/2602.05702v1"
+    },
+    "paper_2": {
+      "title": "A unified theory of order flow, market impact, and volatility",
+      "domain": "q-fin",
+      "arxiv_id": "2601.23172v2",
+      "url": "https://arxiv.org/abs/2601.23172v2"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Robot Task Segmentation \u2194 Sleep Stage Dynamics",
+    "isomorphism_class": "LOTKA_VOLTERRA",
+    "mathematical_structure": "dx/dt = ax - bxy, dy/dt = -cy + dxy",
+    "explanation": "Robot task segmentation and sleep stage transitions both follow Lotka-Volterra dynamics. The coupled nonlinear ODEs dx/dt = ax - bxy, dy/dt = -cy + dxy describe competing states (task modes or sleep stages) with mutual inhibition.",
+    "confidence": 0.85,
+    "rating": "verified",
+    "paper_1": {
+      "title": "RoboSubtaskNet: Temporal Sub-task Segmentation for Human-to-Robot Skill Transfer",
+      "domain": "cs",
+      "arxiv_id": "2602.10015v1",
+      "url": "https://arxiv.org/abs/2602.10015v1"
+    },
+    "paper_2": {
+      "title": "Fully-automated sleep staging: multicenter validation",
+      "domain": "q-bio",
+      "arxiv_id": "2602.09793v1",
+      "url": "https://arxiv.org/abs/2602.09793v1"
+    }
+  }
+]

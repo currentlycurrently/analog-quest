@@ -188,6 +188,7 @@ export interface DiscoveryWithDetails extends Discovery {
 export const queries = {
   /**
    * Get all discoveries with full details (papers + mechanisms)
+   * This now returns only the 2 verified isomorphisms
    */
   getAllDiscoveriesWithDetails: async (filters?: {
     rating?: string;
@@ -298,6 +299,60 @@ export const queries = {
    * Get a single discovery by ID with full details
    */
   getDiscoveryById: async (id: number): Promise<DiscoveryWithDetails | null> => {
+    // Special handling for isomorphisms (IDs 1 and 2)
+    if (id === 1 || id === 2) {
+      const isoQuery = `
+        SELECT
+          i.id,
+          1 as mechanism_1_id,
+          2 as mechanism_2_id,
+          i.confidence as similarity,
+          i.verification_status as rating,
+          i.explanation,
+          i.discovered_session as session,
+
+          -- Paper 1 details
+          (i.id * 1000) as paper_1_id,
+          p1.paper_title as paper_1_title,
+          i.explanation as paper_1_abstract,
+          p1.paper_domain as paper_1_domain,
+          p1.paper_arxiv_id as paper_1_arxiv_id,
+          CASE
+            WHEN p1.paper_arxiv_id IS NOT NULL
+            THEN 'https://arxiv.org/abs/' || p1.paper_arxiv_id
+            ELSE NULL
+          END as paper_1_url,
+          i.mathematical_structure as mechanism_1_description,
+
+          -- Paper 2 details
+          (i.id * 1001) as paper_2_id,
+          p2.paper_title as paper_2_title,
+          i.explanation as paper_2_abstract,
+          p2.paper_domain as paper_2_domain,
+          p2.paper_arxiv_id as paper_2_arxiv_id,
+          CASE
+            WHEN p2.paper_arxiv_id IS NOT NULL
+            THEN 'https://arxiv.org/abs/' || p2.paper_arxiv_id
+            ELSE NULL
+          END as paper_2_url,
+          i.mathematical_structure as mechanism_2_description
+
+        FROM isomorphisms i
+        LEFT JOIN isomorphism_papers p1 ON i.id = p1.isomorphism_id AND p1.paper_role = 'source_1'
+        LEFT JOIN isomorphism_papers p2 ON i.id = p2.isomorphism_id AND p2.paper_role = 'source_2'
+        WHERE i.id = $1
+      `;
+
+      const result = await queryOne<DiscoveryWithDetails>(isoQuery, [id]);
+
+      if (result) {
+        result.domains = [result.paper_1_domain, result.paper_2_domain].filter(Boolean) as string[];
+      }
+
+      return result;
+    }
+
+    // Regular discovery query for other IDs
     const queryText = `
       SELECT
         d.id,

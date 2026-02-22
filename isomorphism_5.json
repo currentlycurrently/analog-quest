@@ -1,0 +1,21 @@
+{
+  "title": "ISING_MODEL: physics \u2194 q-bio",
+  "isomorphism_class": "ISING_MODEL",
+  "mathematical_structure": "H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i",
+  "explanation": "Both papers study binary state systems with nearest-neighbor interactions. The physics paper applies this to physics systems, while the q-bio paper uses the identical mathematical framework for q-bio applications. Despite the different domains, the underlying mathematics (H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i) is isomorphic.",
+  "confidence": 0.95,
+  "verification_status": "verified",
+  "discovered_session": 86,
+  "paper_1": {
+    "title": "Branch-and-Bound Tensor Networks for Exact Ground-State Characterization",
+    "domain": "physics",
+    "arxiv_id": "2602.05470v1",
+    "abstract": "Characterizing the ground-state properties of disordered systems, such as spin glasses and combinatorial optimization problems, is fundamental to science and engineering. However, computing exact ground states and counting their degeneracies are generally NP-hard and #P-hard problems, respectively, posing a formidable challenge for exact algorithms. Recently, Tensor Networks methods, which utilize high-dimensional linear algebra and achieve massive hardware parallelization, have emerged as a rap"
+  },
+  "paper_2": {
+    "title": "In vitro binding energies capture Klf4 occupancy across the human genome",
+    "domain": "q-bio",
+    "arxiv_id": "2601.16151v1",
+    "abstract": "Transcription factors (TFs) regulate gene expression by binding to specific genomic loci determined by DNA sequence. Their sequence specificity is commonly summarized by a consensus binding motif. However, eukaryotic genomes contain billions of low-affinity DNA sequences to which TFs associate with a sequence-dependent binding energy. We currently lack insight into how the genomic sequence defines this spectrum of binding energies and the resulting pattern of TF localization. Here, we set out to"
+  }
+}

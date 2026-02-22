@@ -9,8 +9,8 @@ import path from 'path';
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  // Load the real isomorphisms
-  const isomorphismsPath = path.join(process.cwd(), 'app/data/real_isomorphisms.json');
+  // Load the verified isomorphisms from database
+  const isomorphismsPath = path.join(process.cwd(), 'app/data/verified_isomorphisms.json');
   const isomorphismsData = await fs.readFile(isomorphismsPath, 'utf-8');
   const realIsomorphisms = JSON.parse(isomorphismsData);
 

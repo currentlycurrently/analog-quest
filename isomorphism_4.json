@@ -1,0 +1,21 @@
+{
+  "title": "ISING_MODEL: math \u2194 q-bio",
+  "isomorphism_class": "ISING_MODEL",
+  "mathematical_structure": "H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i",
+  "explanation": "Both papers study binary state systems with nearest-neighbor interactions. The math paper applies this to math systems, while the q-bio paper uses the identical mathematical framework for q-bio applications. Despite the different domains, the underlying mathematics (H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i) is isomorphic.",
+  "confidence": 0.95,
+  "verification_status": "verified",
+  "discovered_session": 86,
+  "paper_1": {
+    "title": "The Ising magnetisation field and the Gaussian free field",
+    "domain": "math",
+    "arxiv_id": "2602.05886v1",
+    "abstract": "We construct a natural coupling between the continuum Gaussian free field (GFF) and the critical Ising magnetisation field (IMF) in a planar domain. In fact, we show that two independent IMFs with $+$ boundary conditions and two independent IMFs with free boundary conditions are a deterministic function of a single instance of the GFF together with a sequence of independent coin flips. This construction should be seen as an extension of the bosonisation phenomenon, and to the best of our knowled"
+  },
+  "paper_2": {
+    "title": "In vitro binding energies capture Klf4 occupancy across the human genome",
+    "domain": "q-bio",
+    "arxiv_id": "2601.16151v1",
+    "abstract": "Transcription factors (TFs) regulate gene expression by binding to specific genomic loci determined by DNA sequence. Their sequence specificity is commonly summarized by a consensus binding motif. However, eukaryotic genomes contain billions of low-affinity DNA sequences to which TFs associate with a sequence-dependent binding energy. We currently lack insight into how the genomic sequence defines this spectrum of binding energies and the resulting pattern of TF localization. Here, we set out to"
+  }
+}

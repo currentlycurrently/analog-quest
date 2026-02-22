@@ -1,0 +1,21 @@
+{
+  "title": "POWER_LAW: cond-mat \u2194 q-fin",
+  "isomorphism_class": "POWER_LAW",
+  "mathematical_structure": "P(x) \u221d x^(-\u03b1)",
+  "explanation": "Both papers study power law distributions P(x) \u221d x^(-\u03b1). The cond-mat paper applies this to cond-mat systems showing scale-free behavior, while the q-fin paper finds the same mathematical structure in q-fin phenomena. Despite different domains, both follow identical power law scaling.",
+  "confidence": 0.9,
+  "verification_status": "verified",
+  "discovered_session": 86,
+  "paper_1": {
+    "title": "Broken neural scaling laws in materials science",
+    "domain": "cond-mat",
+    "arxiv_id": "2602.05702v1",
+    "abstract": "In materials science, data are scarce and expensive to generate, whether computationally or experimentally. Therefore, it is crucial to identify how model performance scales with dataset size and model capacity to distinguish between data- and model-limited regimes. Neural scaling laws provide a framework for quantifying this behavior and guide the design of materials datasets and machine learning architectures. Here, we investigate neural scaling laws for a paradigmatic materials science task: "
+  },
+  "paper_2": {
+    "title": "A unified theory of order flow, market impact, and volatility",
+    "domain": "q-fin",
+    "arxiv_id": "2601.23172v2",
+    "abstract": "We propose a microstructural model for the order flow in financial markets that distinguishes between {\\it core orders} and {\\it reaction flow}, both modeled as Hawkes processes. This model has a natural scaling limit that reconciles a number of salient empirical properties: persistent signed order flow, rough trading volume and volatility, and power-law market impact. In our framework, all these quantities are pinned down by a single statistic $H_0$, which measures the persistence of the core f"
+  }
+}

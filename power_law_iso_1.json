@@ -1,0 +1,21 @@
+{
+  "title": "POWER_LAW: physics \u2194 q-fin",
+  "isomorphism_class": "POWER_LAW",
+  "mathematical_structure": "P(x) \u221d x^(-\u03b1)",
+  "explanation": "Both papers study power law distributions P(x) \u221d x^(-\u03b1). The physics paper applies this to physics systems showing scale-free behavior, while the q-fin paper finds the same mathematical structure in q-fin phenomena. Despite different domains, both follow identical power law scaling.",
+  "confidence": 0.9,
+  "verification_status": "verified",
+  "discovered_session": 86,
+  "paper_1": {
+    "title": "Compressing Complexity: A Critical Synthesis of Structural, Analytical, and Data-Driven Dimensionality Reduction in Dynamical Networks",
+    "domain": "physics",
+    "arxiv_id": "2602.00039v1",
+    "abstract": "The contemporary scientific landscape is characterized by a \"curse of dimensionality,\" where our capacity to collect high-dimensional network data frequently outstrips our ability to computationally simulate or intuitively comprehend the underlying dynamics. This review provides a comprehensive synthesis of the methodologies developed to resolve this paradox by extracting low-dimensional \"macroscopic theories\" from complex systems. We classify these approaches into three distinct methodological "
+  },
+  "paper_2": {
+    "title": "A unified theory of order flow, market impact, and volatility",
+    "domain": "q-fin",
+    "arxiv_id": "2601.23172v2",
+    "abstract": "We propose a microstructural model for the order flow in financial markets that distinguishes between {\\it core orders} and {\\it reaction flow}, both modeled as Hawkes processes. This model has a natural scaling limit that reconciles a number of salient empirical properties: persistent signed order flow, rough trading volume and volatility, and power-law market impact. In our framework, all these quantities are pinned down by a single statistic $H_0$, which measures the persistence of the core f"
+  }
+}

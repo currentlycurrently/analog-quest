@@ -1,0 +1,342 @@
+[
+  {
+    "paper_1": {
+      "id": 20,
+      "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+      "domain": "cs",
+      "arxiv_id": "2602.06023v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Virtual reality (VR) has emerged as a powerful tool for evaluating school security measures in high-risk scenarios such as school shootings, offering experimental control and high behavioral fidelity. However, assessing new interventions in VR requires recruiting new participant cohorts for each condition, making large-scale or iterative evaluation difficult. These limitations are especially restrictive when attempting to learn effective intervention strategies, which typically require many trai"
+    },
+    "paper_2": {
+      "id": 128,
+      "title": "Causal Inference on Stopped Random Walks in Online Advertising",
+      "domain": "stat",
+      "arxiv_id": "2602.05997v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising "
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (cs) approaches it from cs perspective while Paper 2 (stat) uses stat framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 20,
+      "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+      "domain": "cs",
+      "arxiv_id": "2602.06023v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Virtual reality (VR) has emerged as a powerful tool for evaluating school security measures in high-risk scenarios such as school shootings, offering experimental control and high behavioral fidelity. However, assessing new interventions in VR requires recruiting new participant cohorts for each condition, making large-scale or iterative evaluation difficult. These limitations are especially restrictive when attempting to learn effective intervention strategies, which typically require many trai"
+    },
+    "paper_2": {
+      "id": 148,
+      "title": "Piecewise Deterministic Markov Processes for Bayesian Inference of PDE Coefficients",
+      "domain": "stat",
+      "arxiv_id": "2602.05559v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We develop a general framework for piecewise deterministic Markov process (PDMP) samplers that enables efficient Bayesian inference in non-linear inverse problems with expensive likelihoods. The key ingredient is a surrogate-assisted thinning scheme in which a surrogate model provides a proposal event rate and a robust correction mechanism enforces an upper bound on the true rate by dynamically adjusting an additive offset whenever violations are detected. This construction is agnostic to the ch"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (cs) approaches it from cs perspective while Paper 2 (stat) uses stat framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 20,
+      "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+      "domain": "cs",
+      "arxiv_id": "2602.06023v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Virtual reality (VR) has emerged as a powerful tool for evaluating school security measures in high-risk scenarios such as school shootings, offering experimental control and high behavioral fidelity. However, assessing new interventions in VR requires recruiting new participant cohorts for each condition, making large-scale or iterative evaluation difficult. These limitations are especially restrictive when attempting to learn effective intervention strategies, which typically require many trai"
+    },
+    "paper_2": {
+      "id": 358,
+      "title": "Emergence and co-existence of periodic and unstructured motion in future-avoiding random walks",
+      "domain": "physics",
+      "arxiv_id": "2602.03308v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Self-avoiding random walks on graphs can be seen as walkers interacting with their own past history. This letter considers a complementary class of dynamics: Mutual future avoiding random walks (MFARWs), where stochastically driven walkers are avoiding each others planned future trajectories. Such systems arise naturally in conceptual models of shared mobility. We show that periodic behavior emerges spontaneously in such MFARWs, and that periodic and unstructured behavior coexist, providing a fi"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (cs) approaches it from cs perspective while Paper 2 (physics) uses physics framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 20,
+      "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+      "domain": "cs",
+      "arxiv_id": "2602.06023v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Virtual reality (VR) has emerged as a powerful tool for evaluating school security measures in high-risk scenarios such as school shootings, offering experimental control and high behavioral fidelity. However, assessing new interventions in VR requires recruiting new participant cohorts for each condition, making large-scale or iterative evaluation difficult. These limitations are especially restrictive when attempting to learn effective intervention strategies, which typically require many trai"
+    },
+    "paper_2": {
+      "id": 448,
+      "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns in semiarid ecosystems",
+      "domain": "q-bio",
+      "arxiv_id": "2602.05583v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Vegetation in semi-arid ecosystems frequently organizes into spatially heterogeneous mosaics that regulate ecosystem functioning, productivity, and resilience. These patterns arise from local biological interactions, including facilitation among neighboring plants and competition for limiting resources. Classical theoretical approaches have attributed such organization to scale-dependent feedbacks, predicting regular spatial patterns and abrupt transitions to collapse. However, growing empirical"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (cs) approaches it from cs perspective while Paper 2 (q-bio) uses q-bio framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 20,
+      "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+      "domain": "cs",
+      "arxiv_id": "2602.06023v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Virtual reality (VR) has emerged as a powerful tool for evaluating school security measures in high-risk scenarios such as school shootings, offering experimental control and high behavioral fidelity. However, assessing new interventions in VR requires recruiting new participant cohorts for each condition, making large-scale or iterative evaluation difficult. These limitations are especially restrictive when attempting to learn effective intervention strategies, which typically require many trai"
+    },
+    "paper_2": {
+      "id": 467,
+      "title": "The quenched structured coalescent for diploid population models on finite graphs with large migrations and uneven offspring distributions",
+      "domain": "q-bio",
+      "arxiv_id": "2601.21079v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "In this work we describe a new model for the evolution of a diploid structured population backwards in time that allows for large migrations and uneven offspring distributions. The model generalizes both the mean-field model of Birkner et al. [\\textit{Electron. J. Probab.} 23: 1-44 (2018)] and the haploid structured model of M\u00f6hle [\\textit{Theor. Popul. Biol.} 2024 Apr:156:103-116]. We show convergence, with mild conditions on the joint distribution of offspring frequencies and migrations, of ge"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (cs) approaches it from cs perspective while Paper 2 (q-bio) uses q-bio framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 128,
+      "title": "Causal Inference on Stopped Random Walks in Online Advertising",
+      "domain": "stat",
+      "arxiv_id": "2602.05997v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising "
+    },
+    "paper_2": {
+      "id": 358,
+      "title": "Emergence and co-existence of periodic and unstructured motion in future-avoiding random walks",
+      "domain": "physics",
+      "arxiv_id": "2602.03308v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Self-avoiding random walks on graphs can be seen as walkers interacting with their own past history. This letter considers a complementary class of dynamics: Mutual future avoiding random walks (MFARWs), where stochastically driven walkers are avoiding each others planned future trajectories. Such systems arise naturally in conceptual models of shared mobility. We show that periodic behavior emerges spontaneously in such MFARWs, and that periodic and unstructured behavior coexist, providing a fi"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (stat) approaches it from stat perspective while Paper 2 (physics) uses physics framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 148,
+      "title": "Piecewise Deterministic Markov Processes for Bayesian Inference of PDE Coefficients",
+      "domain": "stat",
+      "arxiv_id": "2602.05559v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We develop a general framework for piecewise deterministic Markov process (PDMP) samplers that enables efficient Bayesian inference in non-linear inverse problems with expensive likelihoods. The key ingredient is a surrogate-assisted thinning scheme in which a surrogate model provides a proposal event rate and a robust correction mechanism enforces an upper bound on the true rate by dynamically adjusting an additive offset whenever violations are detected. This construction is agnostic to the ch"
+    },
+    "paper_2": {
+      "id": 358,
+      "title": "Emergence and co-existence of periodic and unstructured motion in future-avoiding random walks",
+      "domain": "physics",
+      "arxiv_id": "2602.03308v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Self-avoiding random walks on graphs can be seen as walkers interacting with their own past history. This letter considers a complementary class of dynamics: Mutual future avoiding random walks (MFARWs), where stochastically driven walkers are avoiding each others planned future trajectories. Such systems arise naturally in conceptual models of shared mobility. We show that periodic behavior emerges spontaneously in such MFARWs, and that periodic and unstructured behavior coexist, providing a fi"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (stat) approaches it from stat perspective while Paper 2 (physics) uses physics framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 128,
+      "title": "Causal Inference on Stopped Random Walks in Online Advertising",
+      "domain": "stat",
+      "arxiv_id": "2602.05997v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising "
+    },
+    "paper_2": {
+      "id": 448,
+      "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns in semiarid ecosystems",
+      "domain": "q-bio",
+      "arxiv_id": "2602.05583v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Vegetation in semi-arid ecosystems frequently organizes into spatially heterogeneous mosaics that regulate ecosystem functioning, productivity, and resilience. These patterns arise from local biological interactions, including facilitation among neighboring plants and competition for limiting resources. Classical theoretical approaches have attributed such organization to scale-dependent feedbacks, predicting regular spatial patterns and abrupt transitions to collapse. However, growing empirical"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (stat) approaches it from stat perspective while Paper 2 (q-bio) uses q-bio framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 128,
+      "title": "Causal Inference on Stopped Random Walks in Online Advertising",
+      "domain": "stat",
+      "arxiv_id": "2602.05997v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising "
+    },
+    "paper_2": {
+      "id": 467,
+      "title": "The quenched structured coalescent for diploid population models on finite graphs with large migrations and uneven offspring distributions",
+      "domain": "q-bio",
+      "arxiv_id": "2601.21079v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "In this work we describe a new model for the evolution of a diploid structured population backwards in time that allows for large migrations and uneven offspring distributions. The model generalizes both the mean-field model of Birkner et al. [\\textit{Electron. J. Probab.} 23: 1-44 (2018)] and the haploid structured model of M\u00f6hle [\\textit{Theor. Popul. Biol.} 2024 Apr:156:103-116]. We show convergence, with mild conditions on the joint distribution of offspring frequencies and migrations, of ge"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (stat) approaches it from stat perspective while Paper 2 (q-bio) uses q-bio framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  },
+  {
+    "paper_1": {
+      "id": 148,
+      "title": "Piecewise Deterministic Markov Processes for Bayesian Inference of PDE Coefficients",
+      "domain": "stat",
+      "arxiv_id": "2602.05559v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "We develop a general framework for piecewise deterministic Markov process (PDMP) samplers that enables efficient Bayesian inference in non-linear inverse problems with expensive likelihoods. The key ingredient is a surrogate-assisted thinning scheme in which a surrogate model provides a proposal event rate and a robust correction mechanism enforces an upper bound on the true rate by dynamically adjusting an additive offset whenever violations are detected. This construction is agnostic to the ch"
+    },
+    "paper_2": {
+      "id": 448,
+      "title": "Intermittent precipitation and spatial Allee effects drive irregular vegetation patterns in semiarid ecosystems",
+      "domain": "q-bio",
+      "arxiv_id": "2602.05583v1",
+      "structure": {
+        "class": "RANDOM_WALK",
+        "structure": "<x\u00b2> = 2Dt",
+        "description": "Stochastic motion with diffusive scaling"
+      },
+      "abstract": "Vegetation in semi-arid ecosystems frequently organizes into spatially heterogeneous mosaics that regulate ecosystem functioning, productivity, and resilience. These patterns arise from local biological interactions, including facilitation among neighboring plants and competition for limiting resources. Classical theoretical approaches have attributed such organization to scale-dependent feedbacks, predicting regular spatial patterns and abrupt transitions to collapse. However, growing empirical"
+    },
+    "isomorphism_class": "RANDOM_WALK",
+    "structure": {
+      "class": "RANDOM_WALK",
+      "structure": "<x\u00b2> = 2Dt",
+      "description": "Stochastic motion with diffusive scaling"
+    },
+    "confidence": 0.9,
+    "explanation": "Both papers describe Stochastic motion with diffusive scaling. Paper 1 (stat) approaches it from stat perspective while Paper 2 (q-bio) uses q-bio framework, but the underlying mathematical structure <x\u00b2> = 2Dt is identical."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "title": "ISING_MODEL: math \u2194 q-bio",
+  "isomorphism_class": "ISING_MODEL",
+  "mathematical_structure": "H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i",
+  "explanation": "Both papers study binary state systems with nearest-neighbor interactions. The math paper applies this to math systems, while the q-bio paper uses the identical mathematical framework for q-bio applications. Despite the different domains, the underlying mathematics (H = -J \u03a3 \u03c3i \u03c3j - h \u03a3 \u03c3i) is isomorphic.",
+  "confidence": 0.95,
+  "verification_status": "verified",
+  "discovered_session": 86,
+  "paper_1": {
+    "title": "Excursion decomposition of the XOR-Ising model",
+    "domain": "math",
+    "arxiv_id": "2602.06011v1",
+    "abstract": "We study the excursion decomposition of the two-dimensional critical XOR-Ising model with either $+$ or free boundary conditions. In the first part, we construct the decomposition directly in the continuum. This construction relies on the identification of the XOR-Ising field with the cosine or sine of a Gaussian free field (GFF) $\u03c6$ multiplied by $\u03b1= 1/\\sqrt{2}$, and is obtained by an appropriate exploration of two-valued level sets of the GFF. More generally, the same construction applies to t"
+  },
+  "paper_2": {
+    "title": "In vitro binding energies capture Klf4 occupancy across the human genome",
+    "domain": "q-bio",
+    "arxiv_id": "2601.16151v1",
+    "abstract": "Transcription factors (TFs) regulate gene expression by binding to specific genomic loci determined by DNA sequence. Their sequence specificity is commonly summarized by a consensus binding motif. However, eukaryotic genomes contain billions of low-affinity DNA sequences to which TFs associate with a sequence-dependent binding energy. We currently lack insight into how the genomic sequence defines this spectrum of binding energies and the resulting pattern of TF localization. Here, we set out to"
+  }
+}

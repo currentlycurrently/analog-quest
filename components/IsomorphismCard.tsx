@@ -64,7 +64,7 @@ export default function IsomorphismCard({ isomorphism }: IsomorphismCardProps) {
       {/* Papers */}
       <div className="space-y-3 border-t pt-4">
         <div>
-          <span className={`inline-block px-2 py-1 rounded text-xs mr-2 ${domainColors[isomorphism.domains[0]] || 'bg-gray-100'}`}>
+          <span className={`inline-block px-2 py-1 rounded text-xs mr-2 ${domainColors[isomorphism.paper_1.domain] || 'bg-gray-100'}`}>
             {isomorphism.paper_1.domain}
           </span>
           <p className="text-xs text-gray-600 mt-1">
@@ -75,7 +75,7 @@ export default function IsomorphismCard({ isomorphism }: IsomorphismCardProps) {
         <div className="text-center text-gray-400">↕</div>
 
         <div>
-          <span className={`inline-block px-2 py-1 rounded text-xs mr-2 ${domainColors[isomorphism.domains[1]] || 'bg-gray-100'}`}>
+          <span className={`inline-block px-2 py-1 rounded text-xs mr-2 ${domainColors[isomorphism.paper_2.domain] || 'bg-gray-100'}`}>
             {isomorphism.paper_2.domain}
           </span>
           <p className="text-xs text-gray-600 mt-1">

@@ -25,8 +25,9 @@ function getEditorialById(id: number) {
 }
 
 export default async function DiscoveryDetailPage({ params }: PageProps) {
-  const { id } = await params;
-  const discoveryId = parseInt(id);
+  // Get the ID from params
+  const resolvedParams = await params;
+  const discoveryId = parseInt(resolvedParams.id);
 
   // Fetch discovery from API
   let discovery: any = null;
@@ -48,7 +49,7 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
     discovery.editorial = editorial;
   }
 
-  // Get previous and next discovery IDs for navigation
+  // Get all discoveries for navigation
   const allDiscoveriesResponse = await fetchDiscoveries({ limit: 200 });
   const allDiscoveries = allDiscoveriesResponse.data;
   const currentIndex = allDiscoveries.findIndex((d) => d.id === discoveryId);
@@ -206,6 +207,3 @@ export default async function DiscoveryDetailPage({ params }: PageProps) {
     </div>
   );
 }
-
-// Enable ISR with 60 second revalidation
-export const revalidate = 60;

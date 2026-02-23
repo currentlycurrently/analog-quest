@@ -23,15 +23,17 @@ export default function SimilarityScore({
   showBar = false,
   showLabel = true,
 }: SimilarityScoreProps) {
-  const percentage = Math.round(score * 100);
-  const colorClass = getScoreColor(score);
-  const barColorClass = getBarColor(score);
+  // Ensure score is a number (in case it comes as a string from DB)
+  const numericScore = typeof score === 'string' ? parseFloat(score) : score;
+  const percentage = Math.round(numericScore * 100);
+  const colorClass = getScoreColor(numericScore);
+  const barColorClass = getBarColor(numericScore);
 
   return (
     <div className="flex items-center gap-2">
       {showLabel && (
         <span className={`font-mono text-xs ${colorClass}`}>
-          {score.toFixed(2)}
+          {numericScore.toFixed(2)}
         </span>
       )}
       {showBar && (

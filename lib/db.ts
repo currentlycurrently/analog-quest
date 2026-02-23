@@ -199,41 +199,44 @@ export const queries = {
     sortBy?: string;
     order?: 'asc' | 'desc';
   }): Promise<DiscoveryWithDetails[]> => {
-    let queryText = `
+    // Get isomorphisms converted to discovery format
+    let isomorphismsQuery = `
       SELECT
-        d.id,
-        d.mechanism_1_id,
-        d.mechanism_2_id,
-        d.similarity,
-        d.rating,
-        d.explanation,
-        d.session,
+        i.id,
+        1 as mechanism_1_id,
+        2 as mechanism_2_id,
+        i.confidence as similarity,
+        i.verification_status as rating,
+        i.explanation,
+        i.discovered_session as session,
 
         -- Paper 1 details
-        p1.id as paper_1_id,
-        p1.title as paper_1_title,
-        p1.domain as paper_1_domain,
-        p1.arxiv_id as paper_1_arxiv_id,
-        p1.url as paper_1_url,
-
-        -- Mechanism 1 details
-        m1.description as mechanism_1_description,
+        (i.id * 1000) as paper_1_id,
+        p1.paper_title as paper_1_title,
+        p1.paper_domain as paper_1_domain,
+        p1.paper_arxiv_id as paper_1_arxiv_id,
+        CASE
+          WHEN p1.paper_arxiv_id IS NOT NULL
+          THEN 'https://arxiv.org/abs/' || p1.paper_arxiv_id
+          ELSE NULL
+        END as paper_1_url,
+        i.mathematical_structure as mechanism_1_description,
 
         -- Paper 2 details
-        p2.id as paper_2_id,
-        p2.title as paper_2_title,
-        p2.domain as paper_2_domain,
-        p2.arxiv_id as paper_2_arxiv_id,
-        p2.url as paper_2_url,
+        (i.id * 1001) as paper_2_id,
+        p2.paper_title as paper_2_title,
+        p2.paper_domain as paper_2_domain,
+        p2.paper_arxiv_id as paper_2_arxiv_id,
+        CASE
+          WHEN p2.paper_arxiv_id IS NOT NULL
+          THEN 'https://arxiv.org/abs/' || p2.paper_arxiv_id
+          ELSE NULL
+        END as paper_2_url,
+        i.mathematical_structure as mechanism_2_description
 
-        -- Mechanism 2 details
-        m2.description as mechanism_2_description
-
-      FROM discoveries d
-      JOIN mechanisms m1 ON d.mechanism_1_id = m1.id
-      JOIN mechanisms m2 ON d.mechanism_2_id = m2.id
-      JOIN papers p1 ON m1.paper_id = p1.id
-      JOIN papers p2 ON m2.paper_id = p2.id
+      FROM isomorphisms i
+      LEFT JOIN isomorphism_papers p1 ON i.id = p1.isomorphism_id AND p1.paper_role = 'source_1'
+      LEFT JOIN isomorphism_papers p2 ON i.id = p2.isomorphism_id AND p2.paper_role = 'source_2'
       WHERE 1=1
     `;
 
@@ -242,19 +245,19 @@ export const queries = {
 
     // Apply filters
     if (filters?.rating) {
-      queryText += ` AND d.rating = $${paramIndex}`;
+      isomorphismsQuery += ` AND i.verification_status = $${paramIndex}`;
       params.push(filters.rating);
       paramIndex++;
     }
 
     if (filters?.domain) {
-      queryText += ` AND (p1.domain = $${paramIndex} OR p2.domain = $${paramIndex})`;
+      isomorphismsQuery += ` AND (p1.paper_domain = $${paramIndex} OR p2.paper_domain = $${paramIndex})`;
       params.push(filters.domain);
       paramIndex++;
     }
 
     if (filters?.minSimilarity) {
-      queryText += ` AND d.similarity >= $${paramIndex}`;
+      isomorphismsQuery += ` AND i.confidence >= $${paramIndex}`;
       params.push(filters.minSimilarity);
       paramIndex++;
     }
@@ -264,29 +267,29 @@ export const queries = {
     const order = filters?.order || 'desc';
 
     if (sortBy === 'similarity') {
-      queryText += ` ORDER BY d.similarity ${order.toUpperCase()}`;
+      isomorphismsQuery += ` ORDER BY i.confidence ${order.toUpperCase()}`;
     } else if (sortBy === 'rating') {
-      queryText += ` ORDER BY d.rating ${order.toUpperCase()}, d.similarity DESC`;
+      isomorphismsQuery += ` ORDER BY i.verification_status ${order.toUpperCase()}, i.confidence DESC`;
     } else if (sortBy === 'session') {
-      queryText += ` ORDER BY d.session ${order.toUpperCase()}`;
+      isomorphismsQuery += ` ORDER BY i.discovered_session ${order.toUpperCase()}`;
     } else {
-      queryText += ` ORDER BY d.id ${order.toUpperCase()}`;
+      isomorphismsQuery += ` ORDER BY i.id ${order.toUpperCase()}`;
     }
 
     // Apply pagination
     if (filters?.limit) {
-      queryText += ` LIMIT $${paramIndex}`;
+      isomorphismsQuery += ` LIMIT $${paramIndex}`;
       params.push(filters.limit);
       paramIndex++;
     }
 
     if (filters?.offset) {
-      queryText += ` OFFSET $${paramIndex}`;
+      isomorphismsQuery += ` OFFSET $${paramIndex}`;
       params.push(filters.offset);
       paramIndex++;
     }
 
-    const result = await query<DiscoveryWithDetails>(queryText, params);
+    const result = await query<DiscoveryWithDetails>(isomorphismsQuery, params);
 
     // Add domains array to each discovery
     return result.rows.map(row => ({

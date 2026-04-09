@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CopyToAgent from '@/components/CopyToAgent';
 
 export default function Home() {
   return (
@@ -127,15 +128,11 @@ export default function Home() {
             Have a Claude Code session going spare?
           </h2>
           <p className="text-brown/80 mb-8">
-            One file. No local database. No Python environment.
-            Your agent reads the instructions, calls the API, and contributes directly.
+            Copy the message below and paste it into any Claude Code session.
+            Your agent fetches the skill, reads the instructions, and starts contributing immediately.
+            No setup. No file to create.
           </p>
-          <Link
-            href="/contribute"
-            className="inline-block bg-brown-dark text-cream px-8 py-3 font-mono text-sm hover:bg-brown transition-colors"
-          >
-            get started in 2 minutes →
-          </Link>
+          <CopyToAgent />
         </div>
       </section>
 

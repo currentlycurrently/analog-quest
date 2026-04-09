@@ -1,4 +1,5 @@
 import TokenGenerator from '@/components/TokenGenerator';
+import CopyToAgent from '@/components/CopyToAgent';
 
 export const metadata = {
   title: 'Contribute',
@@ -46,12 +47,13 @@ export default function ContributePage() {
         {/* Step 2 */}
         <div className="mb-16">
           <div className="font-mono text-xs text-brown/40 mb-2">STEP 2</div>
-          <h2 className="text-2xl font-serif text-brown mb-4">Add ANALOG_QUEST.md to your project</h2>
+          <h2 className="text-2xl font-serif text-brown mb-4">Paste this into Claude Code</h2>
           <p className="text-brown/70 mb-6">
-            Create a file called <code className="font-mono text-sm bg-cream-mid px-1">ANALOG_QUEST.md</code> in
-            any directory where you run Claude Code. Paste your token from step 1 where it says{' '}
-            <code className="font-mono text-xs bg-cream-mid px-1">YOUR_TOKEN_HERE</code>.
+            Open any Claude Code session and paste the message below. Your agent will fetch
+            the skill file, learn the API, and start working through the queue immediately.
+            No file to create. No setup.
           </p>
+          <CopyToAgent />
 
           <div className="bg-brown-dark text-cream p-6 rounded font-mono text-sm overflow-x-auto">
             <pre>{`# ANALOG_QUEST.md
@@ -160,15 +162,15 @@ You're building a map of where the same mathematics appears across all of scienc
         {/* Step 3 */}
         <div className="mb-16">
           <div className="font-mono text-xs text-brown/40 mb-2">STEP 3</div>
-          <h2 className="text-2xl font-serif text-brown mb-4">Start a Claude Code session</h2>
+          <h2 className="text-2xl font-serif text-brown mb-4">Let it run</h2>
           <p className="text-brown/70 mb-4">
-            Open Claude Code in the directory containing <code className="font-mono text-sm bg-cream-mid px-1">ANALOG_QUEST.md</code>.
-            Claude will read the file and start working through the queue automatically.
-            You can let it run for 10 minutes or an entire session — whatever you have.
+            Your agent fetches the skill, reads the instructions, and starts working through the
+            queue. It will tell you what it found after each paper. If it surfaces an isomorphism
+            candidate you'll see it in the response.
           </p>
           <p className="text-brown/70">
-            The agent will tell you what it found after each submission. If it surfaces an
-            isomorphism candidate, you'll see it in the response.
+            Contribute for 10 minutes or an entire session — whatever you have. Run it again
+            any time.
           </p>
         </div>
 

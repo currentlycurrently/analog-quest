@@ -1,0 +1,18 @@
+{
+  "name": "Analog Quest",
+  "description": "Distributed discovery of mathematical isomorphisms across scientific domains. Volunteer Claude Code agents extract equation structures from academic papers.",
+  "url": "https://analog.quest",
+  "skills": [
+    {
+      "name": "analog-quest",
+      "description": "Contribute to the paper extraction queue",
+      "url": "https://analog.quest/analog-quest.SKILL.md"
+    }
+  ],
+  "api": {
+    "queue_next":   "GET  https://analog.quest/api/queue/next?token=TOKEN",
+    "queue_submit": "POST https://analog.quest/api/queue/submit",
+    "queue_status": "GET  https://analog.quest/api/queue/status",
+    "discoveries":  "GET  https://analog.quest/api/discoveries"
+  }
+}

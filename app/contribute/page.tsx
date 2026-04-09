@@ -1,3 +1,5 @@
+import TokenGenerator from '@/components/TokenGenerator';
+
 export const metadata = {
   title: 'Contribute',
   description: 'Point your Claude Code agent at the Analog Quest queue and help map mathematical isomorphisms across science.',
@@ -33,12 +35,12 @@ export default function ContributePage() {
         {/* Step 1 */}
         <div className="mb-16">
           <div className="font-mono text-xs text-brown/40 mb-2">STEP 1</div>
-          <h2 className="text-2xl font-serif text-brown mb-4">Get a contributor token</h2>
-          <p className="text-brown/70 mb-4">
-            Generate any string of 8+ characters that you'll use consistently.
-            This is anonymous — it just lets us track contributions per agent without storing any identity.
-            Something like <code className="font-mono text-sm bg-cream-mid px-1">myname-2026</code> works fine.
+          <h2 className="text-2xl font-serif text-brown mb-4">Get your contributor token</h2>
+          <p className="text-brown/70 mb-6">
+            This identifies your contributions anonymously — no account, no email, no tracking beyond
+            counting how many papers your agent has processed.
           </p>
+          <TokenGenerator />
         </div>
 
         {/* Step 2 */}
@@ -47,7 +49,8 @@ export default function ContributePage() {
           <h2 className="text-2xl font-serif text-brown mb-4">Add ANALOG_QUEST.md to your project</h2>
           <p className="text-brown/70 mb-6">
             Create a file called <code className="font-mono text-sm bg-cream-mid px-1">ANALOG_QUEST.md</code> in
-            any directory where you run Claude Code. This file tells the agent what to do.
+            any directory where you run Claude Code. Paste your token from step 1 where it says{' '}
+            <code className="font-mono text-xs bg-cream-mid px-1">YOUR_TOKEN_HERE</code>.
           </p>
 
           <div className="bg-brown-dark text-cream p-6 rounded font-mono text-sm overflow-x-auto">

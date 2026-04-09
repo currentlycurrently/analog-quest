@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""
+seed_queue.py — Fetch papers from arXiv and load them into the Analog Quest queue.
+
+Usage:
+    python3 scripts/seed_queue.py
+
+Requires:
+    pip install psycopg2-binary
+
+Environment:
+    POSTGRES_URL  — your Neon connection string (or set DATABASE_URL)
+    Reads .env.local automatically if present.
+
+The script fetches papers from arXiv across domains known to contain
+mathematical structure, inserts them into the `papers` table, and adds
+each to the `queue` with status='pending'. Safe to run multiple times —
+duplicates are skipped via ON CONFLICT.
+"""
+
+import os
+import sys
+import time
+import urllib.request
+import urllib.parse
+import xml.etree.ElementTree as ET
+from datetime import datetime
+
+# ---------------------------------------------------------------------------
+# Config
+# ---------------------------------------------------------------------------
+
+# arXiv categories and the domain label we assign them
+CATEGORIES = [
+    ('physics:cond-mat',   'physics'),
+    ('physics:nlin',       'physics'),
+    ('physics:q-bio',      'biology'),
+    ('q-bio',              'biology'),
+    ('econ',               'economics'),
+    ('q-fin',              'finance'),
+    ('cs.SY',              'cs'),        # systems & control
+    ('math.DS',            'math'),      # dynamical systems
+    ('math.MP',            'math'),      # mathematical physics
+    ('astro-ph',           'physics'),
+]
+
+PAPERS_PER_CATEGORY = 50   # fetched per run; increase freely
+ARXIV_API_DELAY     = 3    # seconds between requests (arXiv asks for ≥3s)
+
+NS = '{http://www.w3.org/2005/Atom}'
+
+# ---------------------------------------------------------------------------
+# .env.local loader (so you don't need to export the var manually)
+# ---------------------------------------------------------------------------
+
+def load_env():
+    env_path = os.path.join(os.path.dirname(__file__), '..', '.env.local')
+    if not os.path.exists(env_path):
+        return
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, _, val = line.partition('=')
+                val = val.strip().strip('"').strip("'")
+                os.environ.setdefault(key.strip(), val)
+
+# ---------------------------------------------------------------------------
+# arXiv fetch
+# ---------------------------------------------------------------------------
+
+def fetch_arxiv(category: str, max_results: int, start: int = 0) -> list[dict]:
+    params = urllib.parse.urlencode({
+        'search_query': f'cat:{category}',
+        'start':        start,
+        'max_results':  max_results,
+        'sortBy':       'submittedDate',
+        'sortOrder':    'descending',
+    })
+    url = f'http://export.arxiv.org/api/query?{params}'
+
+    req = urllib.request.Request(url, headers={'User-Agent': 'analog-quest/1.0 (seed script)'})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        xml = resp.read()
+
+    root = ET.fromstring(xml)
+    papers = []
+
+    for entry in root.findall(f'{NS}entry'):
+        arxiv_id_raw = entry.findtext(f'{NS}id', '').strip()
+        # id is like http://arxiv.org/abs/2103.00020v1 — extract just the base ID
+        arxiv_id = arxiv_id_raw.split('/abs/')[-1].split('v')[0]
+
+        title = (entry.findtext(f'{NS}title') or '').replace('\n', ' ').strip()
+        abstract = (entry.findtext(f'{NS}summary') or '').replace('\n', ' ').strip()
+        published_raw = entry.findtext(f'{NS}published', '')
+        published = published_raw[:10] if published_raw else None  # YYYY-MM-DD
+
+        if not arxiv_id or not title or not abstract:
+            continue
+
+        papers.append({
+            'arxiv_id':  arxiv_id,
+            'title':     title,
+            'abstract':  abstract,
+            'published': published,
+            'url':       f'https://arxiv.org/abs/{arxiv_id}',
+        })
+
+    return papers
+
+# ---------------------------------------------------------------------------
+# DB insert
+# ---------------------------------------------------------------------------
+
+def insert_papers(conn, papers: list[dict], domain: str) -> tuple[int, int]:
+    """Returns (inserted, skipped)."""
+    inserted = skipped = 0
+    with conn.cursor() as cur:
+        for p in papers:
+            cur.execute("""
+                INSERT INTO papers (arxiv_id, title, abstract, domain, published, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+                ON CONFLICT (arxiv_id) DO NOTHING
+                RETURNING id
+            """, (p['arxiv_id'], p['title'], p['abstract'], domain, p['published'], p['url']))
+
+            row = cur.fetchone()
+            if row is None:
+                skipped += 1
+                continue
+
+            paper_id = row[0]
+            cur.execute("""
+                INSERT INTO queue (paper_id, status)
+                VALUES (%s, 'pending')
+                ON CONFLICT (paper_id) DO NOTHING
+            """, (paper_id,))
+
+            inserted += 1
+
+    conn.commit()
+    return inserted, skipped
+
+# ---------------------------------------------------------------------------
+# Queue stats
+# ---------------------------------------------------------------------------
+
+def print_stats(conn):
+    with conn.cursor() as cur:
+        cur.execute("SELECT status, COUNT(*) FROM queue GROUP BY status ORDER BY status")
+        rows = cur.fetchall()
+        cur.execute("SELECT COUNT(*) FROM papers")
+        total_papers = cur.fetchone()[0]
+
+    print(f'\n  Papers in DB : {total_papers}')
+    for status, count in rows:
+        print(f'  Queue [{status:12s}]: {count}')
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main():
+    load_env()
+
+    db_url = (
+        os.environ.get('POSTGRES_URL') or
+        os.environ.get('POSTGRES_URL_NON_POOLING') or
+        os.environ.get('DATABASE_URL')
+    )
+    if not db_url:
+        print('Error: set POSTGRES_URL in .env.local or environment')
+        sys.exit(1)
+
+    try:
+        import psycopg2
+    except ImportError:
+        print('Error: pip install psycopg2-binary')
+        sys.exit(1)
+
+    conn = psycopg2.connect(db_url, sslmode='require')
+    print(f'Connected to database.\n')
+
+    total_inserted = total_skipped = 0
+
+    for category, domain in CATEGORIES:
+        print(f'Fetching {PAPERS_PER_CATEGORY} papers from arXiv:{category} ({domain})...')
+        try:
+            papers = fetch_arxiv(category, PAPERS_PER_CATEGORY)
+            ins, skp = insert_papers(conn, papers, domain)
+            total_inserted += ins
+            total_skipped  += skp
+            print(f'  → {ins} added, {skp} already existed')
+        except Exception as e:
+            print(f'  ✗ Failed: {e}')
+
+        time.sleep(ARXIV_API_DELAY)
+
+    print(f'\nDone. {total_inserted} new papers queued, {total_skipped} skipped.')
+    print_stats(conn)
+    conn.close()
+
+if __name__ == '__main__':
+    main()

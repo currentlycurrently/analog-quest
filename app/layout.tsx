@@ -6,56 +6,29 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   metadataBase: new URL('https://analog.quest'),
   title: {
-    default: 'Analog Quest - Cross-Domain Structural Isomorphisms',
+    default: 'Analog Quest — Mathematical Isomorphisms Across Science',
     template: '%s | Analog Quest',
   },
   description:
-    'AI-assisted discovery of structural patterns across 5,000+ academic papers. 125 verified cross-domain isomorphisms revealing identical mechanisms in different fields.',
-  keywords: [
-    'structural isomorphisms',
-    'cross-domain patterns',
-    'academic research',
-    'AI research',
-    'mechanism discovery',
-    'pattern recognition',
-    'knowledge synthesis',
-  ],
-  authors: [{ name: 'Chuck' }],
-  creator: 'Chuck',
+    'A distributed effort to find cases where different scientific fields are solving the exact same equation. Anyone with Claude Code can contribute.',
+  keywords: ['structural isomorphisms', 'cross-domain science', 'mathematical equivalence', 'open science', 'Claude Code'],
+  authors: [{ name: 'chuckyatsuk' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://analog.quest',
-    title: 'Analog Quest - Cross-Domain Structural Isomorphisms',
-    description:
-      'AI-assisted discovery of structural patterns across 5,000+ academic papers. 125 verified cross-domain isomorphisms.',
+    title: 'Analog Quest — Mathematical Isomorphisms Across Science',
+    description: 'Distributed discovery of mathematical equivalences across scientific domains.',
     siteName: 'Analog Quest',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Analog Quest - Cross-Domain Structural Isomorphisms',
-    description:
-      'AI-assisted discovery of structural patterns across 5,000+ academic papers. 125 verified cross-domain isomorphisms.',
-    creator: '@analogquest',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    title: 'Analog Quest',
+    description: 'Distributed discovery of mathematical equivalences across scientific domains.',
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>

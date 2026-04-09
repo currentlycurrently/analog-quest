@@ -1,73 +1,86 @@
--- Analog Quest PostgreSQL Schema
--- Created: 2026-02-14 (Session 61)
--- Purpose: Vector similarity search for cross-domain mechanism discovery
--- Database: PostgreSQL 17 with pgvector 0.8.1
+-- Analog Quest Schema
+-- Distributed volunteer extraction of mathematical isomorphisms from academic papers
 
--- Papers table (will hold 50K rows at scale)
+-- Enable pgvector for future embedding-based comparison
+CREATE EXTENSION IF NOT EXISTS vector;
+
+-- Papers sourced from arXiv / OpenAlex
 CREATE TABLE papers (
-    id SERIAL PRIMARY KEY,
-    openalex_id TEXT UNIQUE,  -- e.g., "W2741809807"
-    arxiv_id TEXT,             -- e.g., "2103.00020" (if available)
-    title TEXT NOT NULL,
-    abstract TEXT,
-    domain TEXT,               -- e.g., "cs", "physics", "q-bio"
-    subdomain TEXT,            -- e.g., "cs.AI", "physics.bio-ph"
-    published_date DATE,
-    mechanism_score FLOAT,     -- 0-10 scale (from scoring algorithm)
-    url TEXT,                  -- arXiv or DOI link
-    created_at TIMESTAMP DEFAULT NOW()
+    id          SERIAL PRIMARY KEY,
+    arxiv_id    TEXT UNIQUE,          -- e.g. "2103.00020"
+    openalex_id TEXT UNIQUE,          -- e.g. "W2741809807"
+    title       TEXT NOT NULL,
+    abstract    TEXT,
+    domain      TEXT,                 -- e.g. "cs", "physics", "q-bio", "econ"
+    published   DATE,
+    url         TEXT,
+    created_at  TIMESTAMP DEFAULT NOW()
 );
 
 CREATE INDEX idx_papers_domain ON papers(domain);
-CREATE INDEX idx_papers_score ON papers(mechanism_score DESC);
-CREATE INDEX idx_papers_date ON papers(published_date DESC);
-CREATE INDEX idx_papers_arxiv_id ON papers(arxiv_id);
+CREATE INDEX idx_papers_published ON papers(published DESC);
 
--- Mechanisms table (will hold 5K-8K rows at scale)
-CREATE TABLE mechanisms (
-    id SERIAL PRIMARY KEY,
-    paper_id INTEGER REFERENCES papers(id),
-    mechanism TEXT NOT NULL,   -- domain-neutral structural description
-    extracted_at TIMESTAMP DEFAULT NOW(),
-    extraction_model TEXT,     -- e.g., "claude-haiku-4.5-batch"
-    quality_score FLOAT,       -- optional: LLM self-assessment
-    embedding vector(384)      -- pgvector type! 384 dims
+-- Work queue: papers waiting to be processed by volunteer agents
+CREATE TABLE queue (
+    id              SERIAL PRIMARY KEY,
+    paper_id        INTEGER NOT NULL REFERENCES papers(id),
+    status          TEXT NOT NULL DEFAULT 'pending',  -- pending | checked_out | done | skipped
+    checked_out_at  TIMESTAMP,
+    checked_out_by  TEXT,       -- contributor identifier (anonymous token)
+    created_at      TIMESTAMP DEFAULT NOW(),
+    UNIQUE(paper_id)
 );
 
-CREATE INDEX idx_mechanisms_paper ON mechanisms(paper_id);
+CREATE INDEX idx_queue_status ON queue(status);
+CREATE INDEX idx_queue_checkout ON queue(checked_out_at);
 
--- HNSW index for fast vector similarity search
--- This enables <50ms queries for k-NN similarity search on 5K-8K vectors
-CREATE INDEX idx_mechanisms_embedding ON mechanisms USING hnsw (embedding vector_l2_ops);
-
--- Discoveries table (will hold 200-400 rows at scale)
-CREATE TABLE discoveries (
-    id SERIAL PRIMARY KEY,
-    mechanism_1_id INTEGER REFERENCES mechanisms(id),
-    mechanism_2_id INTEGER REFERENCES mechanisms(id),
-    similarity FLOAT NOT NULL, -- 0.35-0.74 range
-    rating TEXT,               -- 'excellent', 'good', 'weak', 'false'
-    explanation TEXT,          -- why is this a match? (structural pattern)
-    curated_by TEXT,           -- 'human' or 'llm-haiku' or 'llm-sonnet'
-    curated_at TIMESTAMP DEFAULT NOW(),
-    session INTEGER,           -- which session discovered this
-    UNIQUE(mechanism_1_id, mechanism_2_id)  -- prevent duplicates
+-- Extractions submitted by volunteer agents
+-- Multiple agents may extract the same paper; consensus validates
+CREATE TABLE extractions (
+    id                  SERIAL PRIMARY KEY,
+    paper_id            INTEGER NOT NULL REFERENCES papers(id),
+    contributor_token   TEXT NOT NULL,   -- anonymous but consistent per volunteer
+    equation_class      TEXT,            -- LOTKA_VOLTERRA | HEAT_EQUATION | HOPF_BIFURCATION |
+                                         -- ISING_MODEL | POWER_LAW | KURAMOTO | SIR | SCHRODINGER |
+                                         -- NAVIER_STOKES | GAME_THEORY | OTHER | NONE
+    latex_fragments     TEXT[],          -- raw LaTeX strings from the paper
+    variables           JSONB,           -- [{"symbol": "x", "meaning": "prey population"}]
+    domain              TEXT,            -- the paper's scientific domain as extracted
+    confidence          FLOAT,           -- 0.0–1.0 agent self-assessment
+    notes               TEXT,            -- brief free-text from agent
+    submitted_at        TIMESTAMP DEFAULT NOW()
 );
 
-CREATE INDEX idx_discoveries_rating ON discoveries(rating);
-CREATE INDEX idx_discoveries_similarity ON discoveries(similarity DESC);
-CREATE INDEX idx_discoveries_session ON discoveries(session);
+CREATE INDEX idx_extractions_paper ON extractions(paper_id);
+CREATE INDEX idx_extractions_class ON extractions(equation_class);
+CREATE INDEX idx_extractions_contributor ON extractions(contributor_token);
 
--- Deduplication tracking (from Session 59)
--- This prevents re-discovering the same pairs across sessions
-CREATE TABLE discovered_pairs (
-    paper_1_id INTEGER REFERENCES papers(id),
-    paper_2_id INTEGER REFERENCES papers(id),
-    discovered_in_session INTEGER,
-    PRIMARY KEY(paper_1_id, paper_2_id)
+-- Validated isomorphisms: when 2+ extractions on different papers agree on equation_class
+-- These are the real discoveries
+CREATE TABLE isomorphisms (
+    id                  SERIAL PRIMARY KEY,
+    paper_1_id          INTEGER NOT NULL REFERENCES papers(id),
+    paper_2_id          INTEGER NOT NULL REFERENCES papers(id),
+    equation_class      TEXT NOT NULL,
+    latex_paper_1       TEXT[],
+    latex_paper_2       TEXT[],
+    explanation         TEXT,
+    confidence          FLOAT NOT NULL,
+    validation_count    INTEGER DEFAULT 1,   -- how many independent extractions agree
+    status              TEXT DEFAULT 'candidate',  -- candidate | verified | rejected
+    discovered_at       TIMESTAMP DEFAULT NOW(),
+    UNIQUE(paper_1_id, paper_2_id, equation_class)
 );
 
-CREATE INDEX idx_discovered_pairs_session ON discovered_pairs(discovered_in_session);
+CREATE INDEX idx_isomorphisms_class ON isomorphisms(equation_class);
+CREATE INDEX idx_isomorphisms_status ON isomorphisms(status);
+CREATE INDEX idx_isomorphisms_confidence ON isomorphisms(confidence DESC);
 
--- Verify vector extension is enabled
-SELECT extname, extversion FROM pg_extension WHERE extname = 'vector';
+-- Contributor stats (anonymous tokens only, no PII)
+CREATE TABLE contributors (
+    token           TEXT PRIMARY KEY,
+    extractions     INTEGER DEFAULT 0,
+    validations     INTEGER DEFAULT 0,
+    first_seen      TIMESTAMP DEFAULT NOW(),
+    last_seen       TIMESTAMP DEFAULT NOW()
+);

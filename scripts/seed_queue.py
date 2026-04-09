@@ -32,16 +32,16 @@ from datetime import datetime
 
 # arXiv categories and the domain label we assign them
 CATEGORIES = [
-    ('physics:cond-mat',   'physics'),
-    ('physics:nlin',       'physics'),
-    ('physics:q-bio',      'biology'),
-    ('q-bio',              'biology'),
+    ('cond-mat',           'physics'),   # condensed matter
+    ('nlin',               'physics'),   # nonlinear sciences
+    ('q-bio',              'biology'),   # quantitative biology
     ('econ',               'economics'),
     ('q-fin',              'finance'),
     ('cs.SY',              'cs'),        # systems & control
+    ('cs.NE',              'cs'),        # neural & evolutionary computing
     ('math.DS',            'math'),      # dynamical systems
     ('math.MP',            'math'),      # mathematical physics
-    ('astro-ph',           'physics'),
+    ('astro-ph',           'physics'),   # astrophysics
 ]
 
 PAPERS_PER_CATEGORY = 50   # fetched per run; increase freely

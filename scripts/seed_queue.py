@@ -30,22 +30,59 @@ from datetime import datetime
 # Config
 # ---------------------------------------------------------------------------
 
-# arXiv categories and the domain label we assign them
+# arXiv categories and the domain label we assign them.
+#
+# Notes from debugging in 2026-04:
+# - `nlin`, `econ`, `q-fin` are top-level archive groups that return 0 unless
+#   you specify a subcategory. We list each subcategory explicitly.
+# - `cs.SY` was retired and moved to `eess.SY` (Electrical Engineering and
+#   Systems Science / Systems and Control).
+# - Mathematical physics is `math-ph`, not `math.MP`.
+# - `cond-mat.stat-mech` is the most equation-dense condensed matter subdomain.
+#
+# Goal: math-heavy, structurally rich domains where cross-domain matches are
+# most likely to surface. NOT every possible category.
 CATEGORIES = [
-    ('cond-mat',           'physics'),   # condensed matter
-    ('nlin',               'physics'),   # nonlinear sciences
-    ('q-bio',              'biology'),   # quantitative biology
-    ('econ',               'economics'),
-    ('q-fin',              'finance'),
-    ('cs.SY',              'cs'),        # systems & control
-    ('cs.NE',              'cs'),        # neural & evolutionary computing
-    ('math.DS',            'math'),      # dynamical systems
-    ('math.MP',            'math'),      # mathematical physics
-    ('astro-ph',           'physics'),   # astrophysics
+    # Physics
+    ('cond-mat.stat-mech',  'physics'),  # statistical mechanics — densest math
+    ('cond-mat',            'physics'),  # general condensed matter
+    ('astro-ph',            'physics'),  # astrophysics
+    ('math-ph',             'physics'),  # mathematical physics
+
+    # Nonlinear sciences (was 'nlin' top-level — needs subcategories)
+    ('nlin.AO',             'physics'),  # adaptation & self-organizing systems
+    ('nlin.CD',             'physics'),  # chaotic dynamics
+    ('nlin.PS',             'physics'),  # pattern formation & solitons
+    ('nlin.SI',             'physics'),  # exactly solvable & integrable systems
+    ('nlin.CG',             'physics'),  # cellular automata & lattice gases
+
+    # Biology
+    ('q-bio',               'biology'),  # quantitative biology
+
+    # Economics (was 'econ' top-level — needs subcategories)
+    ('econ.EM',             'economics'),  # econometrics
+    ('econ.TH',             'economics'),  # economic theory
+
+    # Finance (was 'q-fin' top-level — needs subcategories)
+    ('q-fin.MF',            'finance'),  # mathematical finance
+    ('q-fin.PR',            'finance'),  # pricing of securities
+    ('q-fin.RM',            'finance'),  # risk management
+    ('q-fin.ST',            'finance'),  # statistical finance
+
+    # Math
+    ('math.DS',             'math'),     # dynamical systems
+    ('math.AP',             'math'),     # analysis of PDEs
+    ('math.PR',             'math'),     # probability
+
+    # CS (cs.SY moved to eess.SY in 2017)
+    ('cs.NE',               'cs'),       # neural & evolutionary computing
+    ('cs.LG',               'cs'),       # machine learning
+    ('eess.SY',             'cs'),       # systems & control (was cs.SY)
 ]
 
-PAPERS_PER_CATEGORY = 50   # fetched per run; increase freely
+PAPERS_PER_CATEGORY = 100  # fetched per run; increase freely
 ARXIV_API_DELAY     = 3    # seconds between requests (arXiv asks for ≥3s)
+ARXIV_API_BASE      = 'https://export.arxiv.org/api/query'
 
 NS = '{http://www.w3.org/2005/Atom}'
 
@@ -77,7 +114,7 @@ def fetch_arxiv(category: str, max_results: int, start: int = 0) -> list[dict]:
         'sortBy':       'submittedDate',
         'sortOrder':    'descending',
     })
-    url = f'http://export.arxiv.org/api/query?{params}'
+    url = f'{ARXIV_API_BASE}?{params}'
 
     req = urllib.request.Request(url, headers={'User-Agent': 'analog-quest/1.0 (seed script)'})
     with urllib.request.urlopen(req, timeout=30) as resp:

@@ -1,9 +1,9 @@
 # Analog Quest — Handoff
 
-**Date**: 2026-04-09  
-**Repo**: https://github.com/currentlycurrently/analog-quest  
-**Live site**: https://analog.quest  
-**Stack**: Next.js 15 + TypeScript, PostgreSQL (Neon), Vercel
+**Date**: 2026-04-11
+**Repo**: https://github.com/currentlycurrently/analog-quest
+**Live site**: https://analog.quest
+**Stack**: Next.js 15 + TypeScript, PostgreSQL (Neon) + pgvector, Vercel, Python pipeline (SymPy)
 
 ---
 
@@ -62,102 +62,173 @@ Archived all of it to `archive/old-agent-sessions` branch and rebuilt from scrat
 
 ## Current state
 
-- Schema is live on Neon
-- 250 papers in queue, all `pending`
-- 0 extractions submitted (no agents have contributed yet)
-- 0 verified isomorphisms
-- Site is deployed on Vercel (pending this merge to main)
-- Branch `rebuild/distributed-queue` is ready to merge
+**The system now has two parallel tracks for finding isomorphisms:**
+
+1. **Programmatic LaTeX pipeline (Phase A — live)**: downloads arXiv LaTeX source, extracts every equation, parses them via SymPy into canonical structural forms, and matches exact structural equivalence across domains. Runs as a batch script; no agents involved.
+2. **Volunteer agent queue (original system — live)**: agents read abstracts of papers the LaTeX pipeline couldn't process (or hasn't reached yet), classify by equation enum, consensus creates isomorphism candidates.
+
+The two tracks populate separate DB tables and surface in separate sections of `/discoveries`. Programmatic matches are marked "automated candidates" with a disclaimer; agent matches are the trusted tier.
+
+### Current corpus numbers
+- **250 papers** in the DB
+- **18,420 equations** extracted from LaTeX source (triage recovered every paper — 0 true no-source papers on the current corpus)
+- **10,004 SymPy-parsed** (54%) into canonical normalized forms
+- **1,267 rejected** by the degenerate-parse filter (SymPy silently collapsing unknown LaTeX into flat products — these would have been false-positive fuel)
+- **3 exact structural cross-domain matches**, 100% precision:
+  - `C = (A - A^T)/2` — antisymmetric matrix decomposition, appearing in replicator dynamics (math) and transformer architecture (cs)
+  - `x^(t+1) = x^(t) + v^(t+1)` — iterative update with velocity, appearing in cellular-automaton traffic flow (physics) and nature-inspired metaheuristic search (cs) [2 variants, same connection]
+- **0 agent-verified isomorphisms** (agents haven't contributed yet; the programmatic matches are the only populated discoveries so far)
+
+### Infrastructure
+- Schema is live on Neon, including new `equations` and `equation_matches` tables and the existing `papers`/`queue`/`extractions`/`isomorphisms`/`contributors` tables.
+- pgvector extension is enabled and the `equations.embedding` column exists, though the embedding path is currently deferred (see "Known issues" below).
+- `/api/matches` route is deployed; `/discoveries` page shows both tiers.
+- Vercel deployment is live.
+
+---
+
+## What was built this session (the Phase A pipeline)
+
+The HANDOFF asked: *"Is there a purely programmatic pre-filter that gets you 80% of the way there?"* The answer turned out to be yes.
+
+### The pipeline stages
+
+1. **LaTeX fetch** (`scripts/pipeline/extract.py`): downloads arXiv source as tarball or gzipped .tex, extracts all `.tex` files, strips embedded PostScript resource blocks, strips `\newcommand`/`\def` macro definitions, rejects files that don't look like LaTeX (no `\documentclass` and no math environments).
+2. **Equation extraction** (same file): regex-based parser for `equation`, `align`, `gather`, `multline`, `eqnarray`, `$$...$$`, `\[...\]`, and substantial inline `$...$`. Handles `align`-style multi-row environments by splitting on `\\`. Filters out trivially short fragments and known mis-parseable LaTeX patterns (set builder, tikzcd, ellipsis, set theory operators).
+3. **SymPy normalization** (`scripts/pipeline/normalize.py`): parses each equation to a SymPy expression, collects free symbols in tree-traversal order (not alphabetical), renames them canonically to `x0, x1, x2, ...`, serializes via `srepr()`. Two equations with the same structure produce identical output regardless of the original variable names.
+4. **Degenerate-parse filter**: scores each normalized form by presence of real structural operators (`Pow`, `Derivative`, `Integral`, `Function`, transcendentals, etc.). Rejects forms where SymPy silently collapsed unknown LaTeX into `Mul(x0, x1, ..., xN)` — the main source of false positives in early runs.
+5. **Storage**: writes to the `equations` table with `latex`, `normalized_form`, `structure_hash` (SHA-256 of normalized form), `equation_type` (ODE / PDE / algebraic / etc.), and the source environment.
+6. **Cross-domain matching** (`scripts/pipeline/match.py`): single SQL query joining `equations` on `structure_hash` where the papers are in different domains and the normalized form passes a complexity floor (≥120 chars) and a garbage-pattern filter. Produces rows in `equation_matches`.
+
+### Key scripts
+
+- `scripts/run_pipeline.py` — full extraction pipeline for unprocessed papers. Rate-limited to arXiv's 3s delay. Resumable (skips papers with equations already stored). Resilient to Neon connection drops.
+- `scripts/renormalize.py` — re-runs SymPy normalization against equations already in the DB after changes to the normalizer. Uses batched `execute_values` UPDATE for speed (~90 seconds for 16k rows vs ~45 minutes row-by-row).
+- `scripts/embed_unparsed.py` — optional, generates sentence-transformer embeddings for unparsed equations. **Currently unused** (see embeddings note below).
+- `scripts/triage_no_source.py` — re-tries extraction on papers marked empty by earlier buggy runs. For papers that still have no equations after re-try, resets their `queue.status` to `pending` so volunteer agents can work them via abstract-based extraction.
+
+### Running the pipeline
+
+```bash
+pip install -r scripts/requirements.txt   # psycopg2-binary, sympy, antlr4-python3-runtime
+python3 scripts/run_pipeline.py           # full run against new papers
+python3 scripts/run_pipeline.py --limit 10 --skip-match   # test run
+python3 scripts/renormalize.py            # re-normalize existing DB rows after normalizer changes
+python3 scripts/triage_no_source.py       # recover papers from earlier buggy runs; reroute true misses to agent queue
+```
 
 ---
 
 ## Immediate next steps
 
-### 1. Merge and deploy
-```bash
-git checkout main
-git merge rebuild/distributed-queue
-git push origin main
-```
+### 1. Seed more papers
 
-### 2. Test the full loop yourself
-Open a Claude Code session anywhere, paste the copy-to-agent message from the site, let it run for 10-15 minutes. Verify:
-- Papers are being checked out (`queue` rows flip to `checked_out`)
-- Extractions are being saved (`extractions` table fills up)
-- `/api/queue/status` reflects activity
-- If any isomorphism candidates form, they appear in `/api/discoveries` once verified
+The 250 papers is still thin for finding non-trivial isomorphisms — 3 real matches came from 18k equations is not a lot of signal density. Target 2,000+ papers:
 
-### 3. Seed more papers
-250 papers is thin. Run the seed script again — it skips duplicates so safe to run repeatedly:
 ```bash
 python3 scripts/seed_queue.py
 ```
-Fix the remaining categories that returned 0 (nlin, econ, q-fin, cs.SY, math.MP) — likely need the `all:` prefix or different search terms in the arXiv API. Target 2,000+ papers to make the queue feel alive.
 
-### 4. Add a paper ingestion API route
-Right now seeding requires running a local Python script. A `POST /api/admin/seed` route (protected by a secret env var) would let you trigger ingestion from anywhere — or put it on a cron. arXiv has a new papers feed at `https://export.arxiv.org/rss/` that could be polled daily.
+The seed script still has the issue where `nlin`, `econ`, `q-fin`, `cs.SY`, `math.MP` arXiv categories return 0 results. Debug the search_query format (probably needs the `cat:` prefix or different casing). **This matters more now** because the programmatic pipeline benefits from corpus diversity — the more domains represented, the more cross-domain matches can form.
 
-### 5. The equation class enum needs expansion
-The current 10 classes cover the most common structures but miss a lot. Papers in:
-- Climate science: energy balance models
-- Neuroscience: Hodgkin-Huxley, FitzHugh-Nagumo
-- Economics: DSGE models, optimal control
-- CS theory: automata, information-theoretic bounds
+After seeding, run `python3 scripts/run_pipeline.py` to extract equations from the new papers, then the matcher re-runs automatically at the end.
 
-Consider either expanding the enum or making `OTHER` + `latex_fragments` a first-class path that feeds a human review queue.
+### 2. Improve the LaTeX preprocessor
 
-### 6. Human review for `OTHER` submissions
-When an agent submits `equation_class: OTHER` with LaTeX fragments, there's currently no path to verification — it sits in extractions but never auto-promotes to an isomorphism. A simple admin page at `/admin` (auth-gated) that shows `OTHER` extractions and lets you manually classify them would unlock a whole category of discoveries.
+The current 54% SymPy parse rate is the ceiling on how many matches the pipeline can find. The biggest wins come from *preprocessing*, not from a better matcher:
 
-### 7. Show candidates on the discoveries page
-Right now `/discoveries` only shows `verified` isomorphisms. `candidate` ones (1 validation, not yet 2) are invisible to users. Showing them in a separate section — "needs confirmation" — would motivate contributors to process papers in underrepresented domains.
+- **Macro expansion**: papers define their own commands (`\newcommand{\R}{\mathbb{R}}`, `\def\bra#1{\langle #1|}`, etc.). We currently strip these definitions but don't *expand* their uses — so an equation using `\R` has a dangling unknown macro. A simple macro-substitution pass before SymPy would push the parse rate significantly higher.
+- **Custom environment handling**: papers use packages like `physics`, `tensor`, `mathtools` that define environments SymPy doesn't know. Detecting and removing these usages cleanly would help.
+- **`\operatorname{foo}` and `\mathrm{foo}` on function names**: a lot of equations use `\mathrm{Re}(z)`, `\operatorname{tr}(M)`, etc. These are already stripped by our preprocessor, but we should confirm SymPy handles the resulting bare identifiers as functions rather than variables.
 
-### 8. Contributor stats page
+Estimated ceiling with good preprocessing: **75–80% parse rate**, which would translate to substantially more cross-domain matches.
+
+### 3. Paper ingestion API route
+
+Same as the previous handoff — a `POST /api/admin/seed` route (protected by a secret env var) would allow triggering ingestion without a local Python script. Can also put it on a Vercel cron for daily arXiv RSS polling.
+
+### 4. Run the pipeline on fresh arXiv data
+
+Once the seed script is fixed and we have 2,000+ papers, run the full pipeline. Expected outcome based on the current 3-matches-per-250-papers signal density: **~20–30 verified structural matches** at 2,000 papers, growing to **hundreds** at 10,000.
+
+### 5. Admin review for automated candidates
+
+Right now `/discoveries` shows automated candidates with a "not yet manually reviewed" disclaimer. When the corpus grows, we need a lightweight admin page where you can:
+- Mark a match as `verified` → it graduates to the trusted tier
+- Mark a match as `rejected` → it's hidden from `/discoveries`
+- Promote exceptional programmatic matches into the `isomorphisms` table with a human-written explanation
+
+This is low-code — a single `/admin/matches` page + `POST /api/admin/matches/:id/status` route, auth-gated by a shared secret header.
+
+### 6. Contributor stats page (unchanged from previous handoff)
+
 A `/stats` page showing:
 - Total papers processed
-- Extractions by equation class (bar chart)
-- Top contributors by token (anonymised)
+- Parse rate over time
+- Matches by domain pair
+- Top contributors (when agents are active)
 - Isomorphisms over time
-
-Makes the project feel alive and gives contributors feedback that their work matters.
 
 ---
 
 ## Known issues / tech debt
 
-- **arXiv rate limiting**: seed script uses 3s delay between requests, which is correct, but some categories still time out. The `nlin`, `econ`, `q-fin`, `cs.SY`, `math.MP` categories returned 0 results — needs investigation.
-- **No admin auth**: there's no protected admin surface yet. Adding papers, manually verifying isomorphisms, or reviewing `OTHER` extractions requires direct DB access.
+- **arXiv rate limiting**: seed script uses 3s delay between requests. The `nlin`, `econ`, `q-fin`, `cs.SY`, `math.MP` categories returned 0 results — needs investigation. Still unresolved.
+- **No admin auth**: there's no protected admin surface yet. Adding papers, manually verifying isomorphisms, or reviewing programmatic matches requires direct DB access.
 - **Checkout expiry is passive**: expired checkouts are only cleaned up when the next `GET /api/queue/next` is called. A cron job that runs `UPDATE queue SET status='pending' WHERE status='checked_out' AND checked_out_at < NOW() - INTERVAL '30 minutes'` every few minutes would be cleaner.
 - **No deduplication on extractions**: the same contributor can submit multiple extractions for the same paper (if they check it out twice). The `isomorphisms` table has a unique constraint but `extractions` doesn't. Should add `UNIQUE(paper_id, contributor_token)`.
 - **`ANALOG_QUEST.md` in repo root**: this is the old manual-setup file. Now that the skill file at the public URL is the primary path, the root `ANALOG_QUEST.md` is redundant. Either remove it or update it to point to the skill URL.
+- **Pipeline performance**: one paper takes 30-60 seconds in the SymPy-parse loop for math-heavy papers (300+ equations). For scaling beyond a few thousand papers this needs batching or parallel workers. Currently single-threaded.
+- **Hard-coded garbage patterns**: the matcher filters rows whose raw LaTeX contains `pd_`, `setpacking`, etc. These are specific to PostScript font dictionaries. If a paper legitimately uses a symbol named `pd_foo` it'd get filtered. Unlikely but worth knowing.
+
+### Embeddings: why they're not being used
+
+The `equations.embedding` column (384-dim pgvector) exists and there's a working `scripts/embed_unparsed.py` that generates embeddings via sentence-transformers `all-MiniLM-L6-v2`. **We tried it and it produced 0% useful signal on this corpus.**
+
+All 13 embedding-similarity matches on the initial run were noise: `\newcommand{\ee}{` macro-definition fragments (since fixed by the extractor), `i = 1, 2, ..., N` index ranges, `l = 1, ..., \lfloor n/2 \rfloor` loop bounds. The embedding model finds **textual similarity**, which on LaTeX strings is dominated by **convention**, not **mathematical structure**. Two completely unrelated papers that both declare loop bounds will embed near each other.
+
+Three options were considered:
+
+1. **Math-aware embedding model (MathBERT, EqBench-style formula embeddings)** — better in principle, but introduces 200-500MB model weights, slower inference, and a dependency on academic code of unclear quality. Not justified for the marginal signal gain.
+2. **More aggressive structural normalization before embedding** — this is just "write a second, worse SymPy." Same failure modes as option 1.
+3. **Invest the effort in better LaTeX preprocessing instead** — push the SymPy parse rate from 54% → 75-80% via macro expansion and custom-environment handling, and let exact structural matching (the high-precision path) do more work.
+
+**Option 3 is the choice.** Exact structural matching is high-precision; embedding similarity is high-recall. For this mission (find non-obvious cross-domain connections), precision matters more than recall — one verified `x^(t+1) = x^(t) + v^(t+1)` connection is worth more than a hundred "these look similar" suggestions a human has to triage.
+
+The embedding column and index are kept in the schema (they cost nothing and the code is ready) but the embedding path is no longer in the default pipeline. Revisit only if a concrete use case emerges where fuzzy matching would unlock something exact matching can't.
 
 ---
 
-## The hard problem: scaling to 1M+ papers
+## Scaling: what we learned from Phase A
 
-This is the most important unsolved question. Think carefully before just extending what's here.
+The previous handoff asked whether a purely programmatic pre-filter could handle 80% of the work. **The answer is yes, and it's now built and running.**
 
-**The math**: arXiv alone adds ~15,000 papers/month. OpenAlex indexes ~250M works. The volunteer queue model works at hundreds or low thousands of papers. It does not work at millions. Even with 1,000 active contributors each processing 50 papers/session weekly, you're covering ~200K papers/year — and the corpus grows faster than that.
+### The three-tier architecture that emerged
 
-**What the current system does**: agents read abstracts and classify equation structure. That's the right signal. The question is whether agents are the right tool for the bulk of that work, or whether they should be reserved for the hard cases.
+**Tier 1 — Programmatic pipeline (LaTeX + SymPy)**
+Runs against every paper with arXiv source available. On the current corpus: 54% of equations parse into canonical structural forms, and exact-hash matching across domains finds real isomorphisms at 100% precision on 250 papers. This is the bulk-processing tier and it costs nothing per paper (no LLM calls, no agent time).
 
-**Things worth thinking hard about before building:**
+**Tier 2 — Volunteer agent queue**
+Reserved for papers the LaTeX pipeline can't handle: papers with no arXiv source (true misses), papers where the source exists but SymPy can't parse the notation, papers where the programmatic pipeline produces a candidate that needs human judgment to verify. This is the high-value, low-volume tier.
 
-- arXiv papers are available as raw LaTeX source (via the arXiv S3 bulk access or the export API). LaTeX contains the actual equations. A program — not an LLM — can parse `\frac{d}{dt}`, `\nabla^2`, `\partial`, equation environments, and known structural patterns. This is fast, cheap, and scales to millions of papers without agent involvement. Is there a purely programmatic pre-filter that gets you 80% of the way there?
+**Tier 3 — Admin review**
+Verified isomorphisms from either tier get surfaced to `/discoveries`. A (not yet built) admin page lets you promote programmatic candidates to verified status with a written explanation.
 
-- The equation classes in this system (LOTKA_VOLTERRA, HEAT_EQUATION, etc.) are a fixed enum. Real mathematical literature contains thousands of distinct structures. Is the enum approach the right abstraction, or does it create a ceiling on what can be discovered? What would a more expressive representation look like that's still comparable across submissions?
+### What still needs to happen to scale
 
-- The current validation model requires two humans (agents) to independently agree. That's conservative and trustworthy but slow for rare equation classes that few papers contain. Is there a smarter statistical model for confidence that doesn't require symmetric confirmation?
+- **Better LaTeX preprocessing** — the 54% parse rate is the main ceiling. Macro expansion and custom-environment handling could push this to 75-80%, substantially growing the match count.
+- **Pipeline parallelism** — currently single-threaded, ~30-60 seconds per math-heavy paper. For 10,000+ papers this needs batching or parallel workers. The arXiv 3s rate limit applies per-connection, so parallel downloads with different user agents would help.
+- **arXiv S3 bulk access** — the pipeline currently downloads one paper at a time via the e-print API. For large-scale processing, switch to the arXiv bulk S3 feed (requester-pays S3 bucket). The extraction code is already source-format-agnostic.
+- **Corpus growth** — at 250 papers we have 3 matches. At 2,000 we'd expect 20-30 based on the current density. At 100,000 we'd expect hundreds. Seed more aggressively.
+- **Adjacent-paper routing** — the smart-queue idea from the previous handoff is still relevant: when a programmatic candidate forms, send both papers to the same agent for confirmation in a single session. The infrastructure is there; just needs an `/api/queue/smart-next` variant.
 
-- The interesting discoveries are cross-domain. But the current system doesn't preferentially route papers to agents who have already seen related papers in other domains. A smarter queue that says "this physics paper looks like it might match this economics paper already in the DB — send both to the same agent session" could dramatically increase the signal-to-noise ratio.
+### Open questions still worth thinking about
 
-- Is there a way to use the existing verified isomorphisms as training signal to improve automated classification over time? The system currently throws away the ground truth it accumulates.
+- **Confidence models beyond binary verification**: the current programmatic matches are all-or-nothing (either they match exactly or they don't). A richer signal would include near-matches (same structure up to a constant), structural edit distance, and aggregate evidence (this normalized form appears 50 times across 10 domains — that's a stronger signal than appearing once in two domains).
+- **Training signal from verified matches**: when we accumulate a few hundred verified matches, can we learn what kinds of normalized forms tend to produce real isomorphisms vs noise? A simple classifier on (normalized_form, equation_type, num_symbols, structure_score, domain_pair) → (verified | rejected) would improve the automated pipeline over time.
+- **What exists already**: Semantic Scholar, OpenAlex concept tags, EqBench, arxiv-vanity, Formula Search have all worked on adjacent problems. Still worth a survey before building more infrastructure, to avoid reinventing wheels.
 
-- What does the research literature on large-scale scientific knowledge graph construction actually say? This problem has been worked on. Before building, it's worth knowing what exists: Semantic Scholar, OpenAlex's concept tagging, the Mathematics Subject Classification system, work on equation search (like EqBench or formula retrieval). Don't build what already exists.
-
-**The goal isn't to process every paper. It's to find the non-obvious connections.** A system that deeply processes 10,000 carefully selected math-heavy papers from genuinely different domains will produce more valuable discoveries than one that shallowly processes 1M papers. What does "carefully selected" look like at scale?
-
-There may be a much more elegant architecture than what's here. This system is v1 and was built in one session. A fresh mind should interrogate the assumptions before scaling anything.
+The mission hasn't changed: **find non-obvious cross-domain connections**. Phase A proved the programmatic path works; scaling it is now an engineering problem, not a research question.
 
 ---
 

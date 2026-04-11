@@ -1,0 +1,7 @@
+# Core (required)
+psycopg2-binary>=2.9
+sympy>=1.12
+antlr4-python3-runtime==4.11.1   # required by sympy.parsing.latex
+
+# Embedding fallback (optional — pipeline works without it)
+sentence-transformers>=2.2

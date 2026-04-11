@@ -14,7 +14,7 @@ import { requireUser } from '@/lib/api-auth';
 import { rateLimit } from '@/lib/ratelimit';
 
 export async function POST(request: NextRequest) {
-  const authResult = await requireUser();
+  const authResult = await requireUser(request);
   if (authResult instanceof NextResponse) return authResult;
   const { user } = authResult;
 

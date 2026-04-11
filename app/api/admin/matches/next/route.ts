@@ -15,7 +15,7 @@ import { requireRole } from '@/lib/api-auth';
 import { rateLimit } from '@/lib/ratelimit';
 
 export async function GET(request: NextRequest) {
-  const authResult = await requireRole('moderator', 'admin');
+  const authResult = await requireRole(request, 'moderator', 'admin');
   if (authResult instanceof NextResponse) return authResult;
   const { user } = authResult;
 

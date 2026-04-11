@@ -76,7 +76,7 @@ function sanitize(s: string | null | undefined): string | null {
 }
 
 export async function POST(request: NextRequest) {
-  const authResult = await requireUser();
+  const authResult = await requireUser(request);
   if (authResult instanceof NextResponse) return authResult;
   const { user } = authResult;
 

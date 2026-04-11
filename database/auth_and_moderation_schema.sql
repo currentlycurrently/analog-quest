@@ -194,3 +194,26 @@ ALTER TABLE equations
     ADD COLUMN IF NOT EXISTS submitted_by_user_id INTEGER REFERENCES users(id);
 
 CREATE INDEX IF NOT EXISTS equations_submitted_by_idx ON equations(submitted_by_user_id);
+
+-- ==========================================================================
+-- CLI tokens (for agent authentication)
+-- ==========================================================================
+-- Long-lived bearer tokens that agents use to authenticate API calls.
+-- The copy-to-agent flow generates one of these on demand and embeds it
+-- in the copied message. Users can revoke them from their profile.
+-- We store a SHA-256 hash of the token, not the token itself, so a DB
+-- leak doesn't immediately grant access.
+
+CREATE TABLE IF NOT EXISTS cli_tokens (
+    id              SERIAL PRIMARY KEY,
+    user_id         INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    token_hash      TEXT NOT NULL UNIQUE,
+    label           TEXT,
+    created_at      TIMESTAMPTZ DEFAULT NOW(),
+    last_used_at    TIMESTAMPTZ,
+    revoked_at      TIMESTAMPTZ
+);
+
+CREATE INDEX IF NOT EXISTS cli_tokens_user_idx ON cli_tokens(user_id);
+CREATE INDEX IF NOT EXISTS cli_tokens_active_idx
+    ON cli_tokens(token_hash) WHERE revoked_at IS NULL;

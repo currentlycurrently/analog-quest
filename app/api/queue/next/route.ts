@@ -19,7 +19,7 @@
  *   429                                         — rate limited
  */
 
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 import { requireUser } from '@/lib/api-auth';
 import { rateLimit } from '@/lib/ratelimit';
@@ -27,8 +27,8 @@ import { rateLimit } from '@/lib/ratelimit';
 const CHECKOUT_TTL_MINUTES = 30;
 const MAX_CONCURRENT_CHECKOUTS = 3;
 
-export async function GET() {
-  const authResult = await requireUser();
+export async function GET(request: NextRequest) {
+  const authResult = await requireUser(request);
   if (authResult instanceof NextResponse) return authResult;
   const { user } = authResult;
 

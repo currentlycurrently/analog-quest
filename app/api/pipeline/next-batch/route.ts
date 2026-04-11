@@ -35,7 +35,7 @@ const DEFAULT_BATCH_SIZE = 10;
 const MAX_BATCH_SIZE = 25;
 
 export async function GET(request: NextRequest) {
-  const authResult = await requireUser();
+  const authResult = await requireUser(request);
   if (authResult instanceof NextResponse) return authResult;
   const { user } = authResult;
 

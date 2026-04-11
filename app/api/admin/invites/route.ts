@@ -22,7 +22,7 @@ const DEFAULT_EXPIRY_DAYS = 14;
 const MAX_EXPIRY_DAYS = 90;
 
 export async function POST(request: NextRequest) {
-  const authResult = await requireRole('admin');
+  const authResult = await requireRole(request, 'admin');
   if (authResult instanceof NextResponse) return authResult;
   const { user } = authResult;
 
@@ -67,8 +67,8 @@ export async function POST(request: NextRequest) {
   });
 }
 
-export async function GET() {
-  const authResult = await requireRole('admin');
+export async function GET(request: NextRequest) {
+  const authResult = await requireRole(request, 'admin');
   if (authResult instanceof NextResponse) return authResult;
 
   const result = await query<{

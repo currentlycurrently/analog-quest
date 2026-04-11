@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@auth/pg-adapter": "^1.11.1",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.37.0",
     "@vercel/postgres": "^0.10.0",
     "better-sqlite3": "^11.8.1",
     "next": "^15.1.6",

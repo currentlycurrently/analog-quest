@@ -39,8 +39,9 @@ CREATE INDEX idx_equations_paper ON equations(paper_id);
 -- Approximate matching via pgvector (cosine distance)
 CREATE INDEX idx_equations_embedding ON equations USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
 
--- Avoid re-extracting papers we've already processed
-CREATE INDEX idx_equations_paper_unique_check ON equations(paper_id, position);
+-- Avoid re-extracting papers we've already processed. UNIQUE so the Mode A
+-- pipeline API can use ON CONFLICT DO NOTHING for idempotent submissions.
+CREATE UNIQUE INDEX equations_paper_position_unique ON equations(paper_id, position);
 
 
 -- Automated isomorphism candidates from the programmatic pipeline

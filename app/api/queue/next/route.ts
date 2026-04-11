@@ -1,22 +1,43 @@
-import { NextRequest, NextResponse } from 'next/server';
+/**
+ * GET /api/queue/next
+ *
+ * Check out the next pending paper for the authenticated contributor.
+ *
+ * Auth: requires a GitHub-authenticated NextAuth session.
+ * Rate limit: 6 requests/minute per user.
+ * Concurrency: a single user may hold at most 3 checked-out papers at a time.
+ *
+ * This is the Mode B (abstract reader) contribution endpoint — the agent
+ * gets a paper title/abstract to classify. For Mode A (pipeline extraction
+ * of LaTeX source), see /api/pipeline/next-batch.
+ *
+ * Returns:
+ *   200 { queue_id, paper, checkout_expires_in_minutes }
+ *   200 { done: true }                          — queue empty
+ *   401                                         — not signed in
+ *   403                                         — too many concurrent checkouts
+ *   429                                         — rate limited
+ */
+
+import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
+import { requireUser } from '@/lib/api-auth';
+import { rateLimit } from '@/lib/ratelimit';
 
-// Checkouts expire after 30 minutes — paper goes back to pending
 const CHECKOUT_TTL_MINUTES = 30;
+const MAX_CONCURRENT_CHECKOUTS = 3;
 
-// GET /api/queue/next?token=<contributor_token>
-// Returns a paper for the agent to process. Locks it for 30 min.
-export async function GET(request: NextRequest) {
-  const token = request.nextUrl.searchParams.get('token');
+export async function GET() {
+  const authResult = await requireUser();
+  if (authResult instanceof NextResponse) return authResult;
+  const { user } = authResult;
 
-  if (!token || token.length < 8) {
-    return NextResponse.json(
-      { error: 'token required (min 8 chars). Generate one at analog.quest/contribute' },
-      { status: 400 }
-    );
-  }
+  const limited = await rateLimit('queueNext', `user:${user.id}`);
+  if (limited) return limited;
 
-  // Release any expired checkouts back to pending
+  // Release any expired checkouts across all users back to pending.
+  // Safe to run here because we hold no locks; worst case a concurrent
+  // caller will observe the release on their next query.
   await query(`
     UPDATE queue
     SET status = 'pending', checked_out_at = NULL, checked_out_by = NULL
@@ -24,7 +45,23 @@ export async function GET(request: NextRequest) {
       AND checked_out_at < NOW() - INTERVAL '${CHECKOUT_TTL_MINUTES} minutes'
   `);
 
-  // Grab the next pending paper — prefer ones not yet attempted
+  // Enforce per-user concurrent checkout limit.
+  const concurrent = await query<{ count: string }>(
+    `SELECT COUNT(*) as count FROM queue
+     WHERE status = 'checked_out' AND checked_out_by = $1`,
+    [`user:${user.id}`]
+  );
+  if (parseInt(concurrent.rows[0].count, 10) >= MAX_CONCURRENT_CHECKOUTS) {
+    return NextResponse.json(
+      {
+        error: `too many concurrent checkouts (max ${MAX_CONCURRENT_CHECKOUTS})`,
+        hint: 'submit or abandon a checked-out paper before requesting another',
+      },
+      { status: 403 }
+    );
+  }
+
+  // Atomically lock and return the next pending paper.
   const result = await query<{
     queue_id: number;
     paper_id: number;
@@ -35,7 +72,8 @@ export async function GET(request: NextRequest) {
     domain: string;
     published: string;
     url: string;
-  }>(`
+  }>(
+    `
     UPDATE queue q
     SET status = 'checked_out',
         checked_out_at = NOW(),
@@ -60,20 +98,24 @@ export async function GET(request: NextRequest) {
       p.domain,
       p.published,
       p.url
-  `, [token]);
+    `,
+    [`user:${user.id}`]
+  );
 
   if (result.rowCount === 0) {
-    return NextResponse.json({ done: true, message: 'Queue is empty — thank you for contributing!' });
+    return NextResponse.json({
+      done: true,
+      message: 'queue is empty — thank you for contributing!',
+    });
   }
 
   const paper = result.rows[0];
 
-  // Upsert contributor record
-  await query(`
-    INSERT INTO contributors (token, extractions, first_seen, last_seen)
-    VALUES ($1, 0, NOW(), NOW())
-    ON CONFLICT (token) DO UPDATE SET last_seen = NOW()
-  `, [token]);
+  // Touch last_seen so activity feeds can show this user as active.
+  await query(
+    `UPDATE contributors SET last_seen_at = NOW() WHERE user_id = $1`,
+    [user.id]
+  );
 
   return NextResponse.json({
     queue_id: paper.queue_id,
@@ -87,7 +129,7 @@ export async function GET(request: NextRequest) {
       published: paper.published,
       url: paper.url,
     },
-    instructions: 'Extract the mathematical structure. Submit to POST /api/queue/submit',
     checkout_expires_in_minutes: CHECKOUT_TTL_MINUTES,
+    instructions: 'extract the mathematical structure and POST to /api/queue/submit',
   });
 }

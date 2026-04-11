@@ -176,6 +176,30 @@ def run_tests():
         'Time iteration vs literal exponent: x^{n+1} (no parens) MUST NOT match'
     )
 
+    # ── Tautology filter ─────────────────────────────────────────────────────
+    print('\n── Tautology filter: A = A equations should not match ──')
+
+    # A literal algebraic identity and a commutativity condition both produce
+    # `canonical_form = canonical_form` after SymPy canonicalization. These
+    # should never match each other (or anything else) via the match pipeline.
+    test(
+        r'\frac{L_H}{2} (\frac{2\delta}{\mu}) = \frac{L_H}{\mu}\delta',
+        r'\pi \circ \widetilde{f^{-1}} = f^{-1} \circ \pi',
+        False,
+        'Tautology vs commutativity: both are A=A forms, MUST NOT match'
+    )
+
+    # Also verify a tautology by itself is simply rejected (not successfully parsed).
+    r_taut = normalize_latex(r'\frac{L_H}{2} (\frac{2\delta}{\mu}) = \frac{L_H}{\mu}\delta')
+    tests.append(('Tautology is rejected by the filter', not r_taut.success))
+    if not r_taut.success:
+        passed += 1
+        print(f'  [PASS] Tautology is rejected by the filter')
+    else:
+        failed += 1
+        print(f'  [FAIL] Tautology was accepted, expected rejection')
+        print(f'         form: {r_taut.normalized_form[:100]}')
+
     # ── Nonmatches: different structures ────────────────────────────────────
     print('\n── Non-matches: structurally different equations ──')
 

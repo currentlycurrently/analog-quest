@@ -7,6 +7,11 @@ without having to re-download arXiv source for every paper. Also deletes
 equations that look like PostScript garbage (retroactive fix for papers
 processed before the extractor was tightened).
 
+Uses reconnect-safe phased execution: the DB connection is closed during the
+local compute phase (which can take several minutes on a large corpus) so
+Neon's SSL connection doesn't time out mid-job. Each write phase opens a
+fresh connection.
+
 Usage:
     python3 scripts/renormalize.py [--dry-run] [--limit N]
 """
@@ -38,11 +43,10 @@ def main():
     parser.add_argument('--limit', type=int, default=None)
     args = parser.parse_args()
 
+    # ── Phase 1: Delete garbage rows and load equations (short-lived conn) ──
+    print('Phase 1: Deleting garbage rows and loading equations...')
     conn = get_connection()
-    print('Connected to database.\n')
 
-    # Step 1: Delete garbage rows
-    print('Step 1: Deleting PostScript garbage rows...')
     with conn.cursor() as cur:
         garbage_clauses = " OR ".join(["latex LIKE %s"] * len(GARBAGE_SUBSTRINGS))
         garbage_params = [f'%{p}%' for p in GARBAGE_SUBSTRINGS]
@@ -56,8 +60,6 @@ def main():
     if not args.dry_run:
         conn.commit()
 
-    # Step 2: Re-normalize remaining equations (fast batched version)
-    print('\nStep 2: Re-normalizing equations (batched)...')
     with conn.cursor() as cur:
         query = "SELECT id, latex FROM equations WHERE latex != '' ORDER BY id"
         if args.limit:
@@ -65,9 +67,12 @@ def main():
         cur.execute(query)
         rows = cur.fetchall()
 
-    print(f'  {len(rows)} equations to re-normalize locally')
+    conn.close()
+    print(f'  Loaded {len(rows)} equations. Disconnected during compute phase.\n')
 
-    # Compute all normalizations first (local, no DB roundtrips)
+    # ── Phase 2: Compute normalizations locally (no DB connection) ──
+    print('Phase 2: Normalizing (local, no DB connection)...')
+
     updates_parsed = []    # (id, normalized_form, structure_hash, equation_type)
     updates_failed = []    # (id,)
     updated_rejected = 0
@@ -91,59 +96,69 @@ def main():
           f'{len(updates_failed)} failed ({updated_rejected} rejected as degenerate)')
 
     if args.dry_run:
-        print('  [dry-run] skipping DB writes')
-    else:
-        # Batched writes via execute_values — one roundtrip per batch
-        from psycopg2.extras import execute_values
+        print('\n[dry-run] skipping DB writes and match rebuild')
+        print(f'\nDone.')
+        print(f'  Successfully parsed: {len(updates_parsed)}')
+        print(f'  Rejected (degenerate): {updated_rejected}')
+        print(f'  Failed to parse:     {updated_already_failed}')
+        print(f'  Garbage found:       {garbage_count}')
+        return
 
-        print('  Writing parsed updates...')
-        with conn.cursor() as cur:
-            execute_values(cur, """
-                UPDATE equations AS e SET
-                    sympy_parsed = TRUE,
-                    normalized_form = v.form,
-                    structure_hash = v.hash,
-                    equation_type = v.eqtype
-                FROM (VALUES %s) AS v(id, form, hash, eqtype)
-                WHERE e.id = v.id
-            """, updates_parsed, template='(%s, %s, %s, %s)', page_size=1000)
-        conn.commit()
+    # ── Phase 3: Write results with fresh connection ──
+    print('\nPhase 3: Writing updates (fresh connection)...')
+    from psycopg2.extras import execute_values
 
-        print('  Writing failed updates...')
-        with conn.cursor() as cur:
-            execute_values(cur, """
-                UPDATE equations AS e SET
-                    sympy_parsed = FALSE,
-                    normalized_form = NULL,
-                    structure_hash = NULL
-                FROM (VALUES %s) AS v(id)
-                WHERE e.id = v.id
-            """, updates_failed, template='(%s)', page_size=1000)
-        conn.commit()
+    conn = get_connection()
+    with conn.cursor() as cur:
+        execute_values(cur, """
+            UPDATE equations AS e SET
+                sympy_parsed = TRUE,
+                normalized_form = v.form,
+                structure_hash = v.hash,
+                equation_type = v.eqtype
+            FROM (VALUES %s) AS v(id, form, hash, eqtype)
+            WHERE e.id = v.id
+        """, updates_parsed, template='(%s, %s, %s, %s)', page_size=1000)
+    conn.commit()
+    print(f'  Wrote {len(updates_parsed)} parsed rows')
 
-    print(f'\nDone.')
-    print(f'  Successfully parsed: {len(updates_parsed)}')
-    print(f'  Rejected (degenerate): {updated_rejected}')
-    print(f'  Failed to parse:     {updated_already_failed}')
-    print(f'  Garbage deleted:     {garbage_count}')
+    with conn.cursor() as cur:
+        execute_values(cur, """
+            UPDATE equations AS e SET
+                sympy_parsed = FALSE,
+                normalized_form = NULL,
+                structure_hash = NULL
+            FROM (VALUES %s) AS v(id)
+            WHERE e.id = v.id
+        """, updates_failed, template='(%s)', page_size=1000)
+    conn.commit()
+    print(f'  Wrote {len(updates_failed)} failed rows')
 
-    # Step 3: Clear and rebuild equation_matches
-    if not args.dry_run:
-        print('\nStep 3: Clearing and rebuilding matches...')
-        with conn.cursor() as cur:
-            cur.execute('DELETE FROM equation_matches')
-        conn.commit()
+    # ── Phase 4: Rebuild match table ──
+    print('\nPhase 4: Clearing and rebuilding matches...')
+    with conn.cursor() as cur:
+        cur.execute('DELETE FROM equation_matches')
+    conn.commit()
 
-        from pipeline.match import find_exact_matches, get_match_stats
-        n = find_exact_matches(conn)
-        print(f'  Cross-domain structural matches: {n}')
+    from pipeline.match import find_exact_matches, get_match_stats
+    n = find_exact_matches(conn)
+    print(f'  Cross-domain structural matches: {n}')
 
-        stats = get_match_stats(conn)
+    stats = get_match_stats(conn)
+    if stats.get('top_domain_pairs'):
         print(f'\nTop cross-domain pairs:')
         for d1, d2, c in stats.get('top_domain_pairs', [])[:10]:
             print(f'  {d1:12s} <-> {d2:12s}: {c}')
 
     conn.close()
+
+    # ── Summary ──
+    print(f'\nDone.')
+    print(f'  Successfully parsed: {len(updates_parsed)}')
+    print(f'  Rejected (degenerate): {updated_rejected}')
+    print(f'  Failed to parse:     {updated_already_failed}')
+    print(f'  Garbage deleted:     {garbage_count}')
+    print(f'  New matches:         {n}')
 
 
 if __name__ == '__main__':

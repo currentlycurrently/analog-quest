@@ -479,6 +479,24 @@ def normalize_latex(latex: str) -> NormalizationResult:
         ]
         normalized_form = ' = '.join(normalized_parts)
 
+        # Tautology filter: if there are exactly two canonical parts and they
+        # are byte-identical, this is an A = A form. Two ways this happens:
+        #   1. The equation is a literal algebraic identity, e.g.
+        #      (L_H/2)(2δ/μ) = (L_H/μ)δ, which SymPy simplifies on both sides.
+        #   2. The equation is a commutativity/equivariance condition, e.g.
+        #      π ∘ f⁻¹ = f⁻¹ ∘ π, which SymPy mis-parses by treating ∘ as
+        #      commutative multiplication, producing matching canonical forms.
+        # Both cases produce pipeline matches that are not structural equivalences
+        # between different equations — they're just pairs of papers that each
+        # contain a (different) tautology. Reject them.
+        if len(normalized_parts) == 2 and normalized_parts[0] == normalized_parts[1]:
+            return NormalizationResult(
+                success=False,
+                equation_type=equation_type,
+                error='Tautology: both sides of equation reduce to identical canonical form',
+                structure_score=0,
+            )
+
         structure_score = _compute_structure_score(normalized_form)
         num_symbols = len(ordered_symbols)
 

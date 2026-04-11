@@ -114,8 +114,14 @@ export default async function DiscoveriesPage() {
       {/* Automated (programmatic pipeline) */}
       <section>
         <div className="flex items-baseline justify-between mb-4">
-          <h2>Automated candidates</h2>
+          <h2>Tier 1 candidates</h2>
           <span className="text-sm text-black/50">LaTeX + SymPy pipeline</span>
+        </div>
+
+        <div className="border border-black/20 p-4 mb-6 text-sm leading-relaxed space-y-2">
+          <p>Early pipeline matches across scientific domains, based on shared symbolic form.</p>
+          <p>Not all matches are meaningful — some reflect notation overlap rather than real structural equivalence.</p>
+          <p>Each candidate requires human review before it can be considered a substantive connection.</p>
         </div>
 
         {matches.length === 0 ? (
@@ -125,8 +131,8 @@ export default async function DiscoveriesPage() {
             {matches.map((m: any) => (
               <MatchCard
                 key={`m-${m.id}`}
-                label={m.match_type === 'exact_structural' ? 'exact structural' : m.match_type}
-                aux={`similarity ${Number(m.similarity).toFixed(2)}${m.equation_1_type ? ` · ${m.equation_1_type}` : ''}`}
+                label="Tier 1 · candidate"
+                aux={`${m.domain_1} ↔ ${m.domain_2}${m.equation_1_type ? ` · ${m.equation_1_type}` : ''}`}
                 dashed
                 p1={{
                   domain: m.domain_1,

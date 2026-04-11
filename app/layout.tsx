@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | Analog Quest',
   },
   description:
-    'A distributed effort to find cases where different scientific fields are solving the exact same equation. Anyone with Claude Code can contribute.',
+    'Finding cases where different scientific fields are solving the exact same equation under different names.',
   keywords: ['structural isomorphisms', 'cross-domain science', 'mathematical equivalence', 'open science', 'Claude Code'],
   authors: [{ name: 'chuckyatsuk' }],
   openGraph: {
@@ -18,22 +18,19 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://analog.quest',
     title: 'Analog Quest — Mathematical Isomorphisms Across Science',
-    description: 'Distributed discovery of mathematical equivalences across scientific domains.',
+    description: 'Finding cases where different scientific fields are solving the exact same equation.',
     siteName: 'Analog Quest',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Analog Quest',
-    description: 'Distributed discovery of mathematical equivalences across scientific domains.',
+    description: 'Finding cases where different scientific fields are solving the exact same equation.',
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/zyv7mik.css" />
-      </head>
       <body>
         <Navigation />
         <main className="min-h-screen">{children}</main>

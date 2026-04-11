@@ -25,7 +25,13 @@ export default function CopyToAgent() {
     setToken(getOrCreateToken());
   }, []);
 
-  if (!token) return null;
+  if (!token) {
+    return (
+      <div className="border border-black/20 p-4 font-mono text-sm text-black/40">
+        loading token…
+      </div>
+    );
+  }
 
   const message = `Fetch the Analog Quest skill from https://analog.quest/analog-quest.SKILL.md and start contributing to the paper queue with token ${token}`;
 
@@ -36,20 +42,21 @@ export default function CopyToAgent() {
   }
 
   return (
-    <div className="bg-teal p-6">
-      <p className="font-mono text-xs text-brown/60 mb-4">PASTE THIS INTO ANY CLAUDE CODE SESSION</p>
-      <div className="bg-cream/60 p-4 font-mono text-sm text-brown mb-4 leading-relaxed break-all">
+    <div>
+      <pre className="border border-black/20 p-4 font-mono text-sm whitespace-pre-wrap break-words mb-3">
         {message}
+      </pre>
+      <div className="flex items-center gap-4">
+        <button
+          onClick={copy}
+          className="border border-black px-4 py-2 text-sm hover:bg-black hover:text-white transition-colors"
+        >
+          {copied ? 'copied' : 'copy'}
+        </button>
+        <span className="text-sm text-black/50">
+          token <code className="font-mono">{token}</code> (saved in this browser)
+        </span>
       </div>
-      <button
-        onClick={copy}
-        className="font-mono text-xs bg-brown-dark text-cream px-6 py-2 hover:bg-brown transition-colors"
-      >
-        {copied ? 'copied!' : 'copy to clipboard'}
-      </button>
-      <p className="text-brown/50 text-xs mt-3">
-        Your token <code className="font-mono bg-cream/50 px-1">{token}</code> is saved in this browser.
-      </p>
     </div>
   );
 }

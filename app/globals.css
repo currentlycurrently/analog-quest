@@ -2,75 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Warm, accessible design system */
 :root {
-  --background: #FEF9ED;
-  --foreground: #5D524B;
-  --accent-teal: #CAE1E1;
-  --accent-dark: #451B25;
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'adriane', Georgia, serif;
-  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography scale - spacious and readable */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'adriane', Georgia, serif;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.75em;
-  color: var(--foreground);
+  font-weight: 600;
+  line-height: 1.25;
 }
 
-h1 {
-  font-size: 2.5rem;
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-size: 2rem;
-  letter-spacing: -0.01em;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.125rem; }
 
 p {
-  margin-bottom: 1.25em;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* Labels and interactive elements use monospace */
-label, button, .label {
-  font-family: 'degular-mono', 'Courier New', monospace;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.875rem;
-}
-
-/* Links - subtle underline */
 a {
-  color: var(--accent-dark);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 a:hover {
-  border-bottom-color: var(--accent-dark);
+  text-decoration: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+code, pre, .mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }

@@ -2,9 +2,18 @@ import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 
 // GET /api/queue/status
-// Public stats — how much work is left, what's been found
+// Public stats covering both tiers of the system:
+//   1. Programmatic LaTeX + SymPy pipeline (papers/equations/equation_matches)
+//   2. Volunteer agent queue (queue/isomorphisms/contributors)
 export async function GET() {
-  const [queueStats, isomorphismStats, contributorStats] = await Promise.all([
+  const [
+    queueStats,
+    isomorphismStats,
+    contributorStats,
+    paperStats,
+    equationStats,
+    matchStats,
+  ] = await Promise.all([
     query<{ status: string; count: string }>(`
       SELECT status, COUNT(*) as count FROM queue GROUP BY status
     `),
@@ -20,6 +29,17 @@ export async function GET() {
         COUNT(*) FILTER (WHERE last_seen > NOW() - INTERVAL '24 hours') as active_today
       FROM contributors
     `),
+    query<{ count: string }>(`SELECT COUNT(*) as count FROM papers`),
+    query<{ total: string; parsed: string }>(`
+      SELECT
+        COUNT(*) as total,
+        COUNT(*) FILTER (WHERE sympy_parsed = TRUE) as parsed
+      FROM equations
+      WHERE latex != ''
+    `),
+    query<{ count: string }>(`
+      SELECT COUNT(*) as count FROM equation_matches WHERE status != 'rejected'
+    `),
   ]);
 
   const queue: Record<string, number> = {};
@@ -27,7 +47,20 @@ export async function GET() {
     queue[row.status] = parseInt(row.count);
   }
 
+  const totalEquations = parseInt(equationStats.rows[0]?.total ?? '0');
+  const parsedEquations = parseInt(equationStats.rows[0]?.parsed ?? '0');
+
   return NextResponse.json({
+    papers: {
+      total: parseInt(paperStats.rows[0]?.count ?? '0'),
+    },
+    equations: {
+      total: totalEquations,
+      parsed: parsedEquations,
+    },
+    matches: {
+      total: parseInt(matchStats.rows[0]?.count ?? '0'),
+    },
     queue: {
       pending: queue.pending ?? 0,
       in_progress: queue.checked_out ?? 0,

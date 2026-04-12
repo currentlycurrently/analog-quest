@@ -167,9 +167,36 @@ ALTER TABLE equation_matches
             'parser_error',
             'superficial_match',
             'trivial_form',
+            'standard_canonical_object',
             'duplicate',
             'other'
         ));
+
+-- ==========================================================================
+-- Trivial hashes (moderator-learned trivia filter)
+-- ==========================================================================
+-- When a moderator rejects a match with reason 'standard_canonical_object',
+-- the canonical form's structure_hash is added here. Future matches whose
+-- structure_hash is in this table are never created in the first place —
+-- the matcher joins against this table and excludes listed hashes.
+--
+-- This gives the system a way to learn from moderator decisions: common
+-- textbook objects (the S^2 metric, F=ma, the heat equation, the SGD
+-- update rule, the Pythagorean theorem) get surfaced once, rejected once,
+-- and then never surfaced again.
+--
+-- The list can be cleared or individual hashes removed by an admin from
+-- the admin surface. example_latex is stored so a human browsing the
+-- trivia list can see what each hash represents without having to look
+-- it up in the equations table.
+
+CREATE TABLE IF NOT EXISTS trivial_hashes (
+    structure_hash  TEXT PRIMARY KEY,
+    added_by        INTEGER REFERENCES users(id),
+    added_at        TIMESTAMPTZ DEFAULT NOW(),
+    reason          TEXT,
+    example_latex   TEXT
+);
 
 CREATE INDEX IF NOT EXISTS equation_matches_tier_idx ON equation_matches(tier);
 CREATE INDEX IF NOT EXISTS equation_matches_pending_review_idx

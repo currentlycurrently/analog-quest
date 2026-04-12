@@ -25,6 +25,10 @@ const REJECT_REASONS: { value: string; label: string }[] = [
   { value: 'parser_error', label: 'Parser error (SymPy mis-parsed)' },
   { value: 'superficial_match', label: 'Superficial (same form, different meaning)' },
   { value: 'trivial_form', label: 'Trivial form (too generic to be a discovery)' },
+  {
+    value: 'standard_canonical_object',
+    label: 'Standard canonical object (textbook — adds hash to trivia list)',
+  },
   { value: 'duplicate', label: 'Duplicate of another match' },
   { value: 'other', label: 'Other (see note)' },
 ];

@@ -40,6 +40,11 @@ def find_exact_matches(conn, min_complexity: int = MIN_COMPLEXITY) -> int:
 
     garbage_sql = " ".join(garbage_clauses)
 
+    # NOT EXISTS against trivial_hashes: if a moderator has ever rejected a
+    # match on this canonical form as a "standard_canonical_object", the hash
+    # gets added to trivial_hashes, and we exclude it from future match
+    # generation. This is the moderator-learned trivia filter: the system
+    # gets smarter as humans teach it which forms are textbook objects.
     query = f"""
         INSERT INTO equation_matches
             (equation_1_id, equation_2_id, match_type, similarity,
@@ -57,6 +62,9 @@ def find_exact_matches(conn, min_complexity: int = MIN_COMPLEXITY) -> int:
         WHERE e1.structure_hash IS NOT NULL
             AND p1.domain != p2.domain
             AND LENGTH(e1.normalized_form) >= %s
+            AND NOT EXISTS (
+                SELECT 1 FROM trivial_hashes t WHERE t.structure_hash = e1.structure_hash
+            )
             {garbage_sql}
         ON CONFLICT (equation_1_id, equation_2_id) DO NOTHING
     """

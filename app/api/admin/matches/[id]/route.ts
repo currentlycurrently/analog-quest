@@ -25,6 +25,7 @@ const REJECT_REASONS = [
   'parser_error',
   'superficial_match',
   'trivial_form',
+  'standard_canonical_object',  // textbook object (S^2 metric, F=ma, etc.) — adds hash to trivia list
   'duplicate',
   'other',
 ] as const;
@@ -107,6 +108,51 @@ export async function POST(
       [matchId, body.reason, user.id]
     );
 
+    // When rejecting a match as a 'standard_canonical_object' (textbook
+    // geometry, F=ma, SGD update, etc.), add the canonical form's hash to
+    // the trivia list. Future matches on this hash will be excluded by
+    // find_exact_matches. Also retroactively reject any other currently-
+    // pending matches sharing the same hash.
+    let trivia_added = false;
+    let retroactive_rejected = 0;
+    if (body.reason === 'standard_canonical_object') {
+      // Look up the structure_hash and example latex for this match
+      const hashRow = await query<{ structure_hash: string; latex: string }>(
+        `SELECT e1.structure_hash, e1.latex
+           FROM equation_matches m
+           JOIN equations e1 ON m.equation_1_id = e1.id
+          WHERE m.id = $1`,
+        [matchId]
+      );
+      const structureHash = hashRow.rows[0]?.structure_hash;
+      const exampleLatex = hashRow.rows[0]?.latex;
+
+      if (structureHash) {
+        // Insert (or leave existing) in trivial_hashes
+        const inserted = await query(
+          `INSERT INTO trivial_hashes (structure_hash, added_by, reason, example_latex)
+           VALUES ($1, $2, $3, $4)
+           ON CONFLICT (structure_hash) DO NOTHING`,
+          [structureHash, user.id, body.note ?? null, exampleLatex ?? null]
+        );
+        trivia_added = (inserted.rowCount ?? 0) > 0;
+
+        // Retroactively reject other pending matches sharing this hash
+        const retro = await query(
+          `UPDATE equation_matches
+              SET status = 'rejected',
+                  rejected_reason = 'standard_canonical_object',
+                  tier_promoted_by = $2,
+                  tier_promoted_at = NOW()
+            WHERE id != $1
+              AND status = 'candidate'
+              AND equation_1_id IN (SELECT id FROM equations WHERE structure_hash = $3)`,
+          [matchId, user.id, structureHash]
+        );
+        retroactive_rejected = retro.rowCount ?? 0;
+      }
+    }
+
     await query(
       `INSERT INTO moderation_log (moderator_id, action, target_type, target_id, reason, note)
        VALUES ($1, 'reject', 'equation_match', $2, $3, $4)`,
@@ -118,6 +164,8 @@ export async function POST(
       match_id: matchId,
       action: 'rejected',
       reason: body.reason,
+      trivia_added,
+      retroactive_rejected,
     });
   }
 

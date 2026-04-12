@@ -128,28 +128,38 @@ export default async function DiscoveriesPage() {
           <p className="text-black/50 text-sm py-4">None yet.</p>
         ) : (
           <div className="space-y-6">
-            {matches.map((m: any) => (
-              <MatchCard
-                key={`m-${m.id}`}
-                label="Tier 1 · candidate"
-                aux={`${m.domain_1} ↔ ${m.domain_2}${m.equation_1_type ? ` · ${m.equation_1_type}` : ''}`}
-                dashed
-                p1={{
-                  domain: m.domain_1,
-                  title: m.paper_1_title,
-                  arxivId: m.paper_1_arxiv_id,
-                  url: m.paper_1_url,
-                  latex: m.equation_1_latex,
-                }}
-                p2={{
-                  domain: m.domain_2,
-                  title: m.paper_2_title,
-                  arxivId: m.paper_2_arxiv_id,
-                  url: m.paper_2_url,
-                  latex: m.equation_2_latex,
-                }}
-              />
-            ))}
+            {matches.map((m: any) => {
+              const freqEqs = Number(m.freq_equations ?? 0);
+              const freqPapers = Number(m.freq_papers ?? 0);
+              const freqDomains = Number(m.freq_domains ?? 0);
+              const frequency =
+                freqPapers > 0
+                  ? `this canonical form appears in ${freqEqs} equations across ${freqPapers} papers in ${freqDomains} domains of the current corpus`
+                  : undefined;
+              return (
+                <MatchCard
+                  key={`m-${m.id}`}
+                  label="Tier 1 · candidate"
+                  aux={`${m.domain_1} ↔ ${m.domain_2}${m.equation_1_type ? ` · ${m.equation_1_type}` : ''}`}
+                  dashed
+                  p1={{
+                    domain: m.domain_1,
+                    title: m.paper_1_title,
+                    arxivId: m.paper_1_arxiv_id,
+                    url: m.paper_1_url,
+                    latex: m.equation_1_latex,
+                  }}
+                  p2={{
+                    domain: m.domain_2,
+                    title: m.paper_2_title,
+                    arxivId: m.paper_2_arxiv_id,
+                    url: m.paper_2_url,
+                    latex: m.equation_2_latex,
+                  }}
+                  frequency={frequency}
+                />
+              );
+            })}
           </div>
         )}
       </section>
@@ -163,6 +173,7 @@ function MatchCard({
   p1,
   p2,
   explanation,
+  frequency,
   dashed,
 }: {
   label: string;
@@ -170,6 +181,7 @@ function MatchCard({
   p1: PaperSide;
   p2: PaperSide;
   explanation?: string;
+  frequency?: string;
   dashed?: boolean;
 }) {
   const borderClass = dashed ? 'border border-dashed border-black/30' : 'border border-black/20';
@@ -186,6 +198,11 @@ function MatchCard({
       {explanation && (
         <p className="mt-4 pt-4 border-t border-black/10 text-sm text-black/70">
           {explanation}
+        </p>
+      )}
+      {frequency && (
+        <p className="mt-4 pt-4 border-t border-black/10 text-xs text-black/50 font-mono">
+          {frequency}
         </p>
       )}
     </div>

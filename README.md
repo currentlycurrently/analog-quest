@@ -172,6 +172,9 @@ candidates. The things we commit to doing:
 - **Publish the failure modes.** [HANDOFF.md](./HANDOFF.md) documents what's
   broken, what we've tried that didn't work, and what a new contributor or
   agent would need to know to strengthen the approach.
+  [docs/ROADMAP.md](./docs/ROADMAP.md) is the ceiling-removal plan: what
+  structural limitations the project has, in priority order, and what
+  work removes each one.
 - **Audit trail over trust.** Every moderator action writes to
   `moderation_log` with moderator, timestamp, action, and reason. Any action
   can be reversed by another moderator. The admin can revoke moderator roles.

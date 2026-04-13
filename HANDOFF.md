@@ -316,6 +316,12 @@ like any other part of the system: it decays, and the decay is expensive.
 
 ## The path forward, in rough order of value
 
+**See also: [docs/ROADMAP.md](./docs/ROADMAP.md)** for the detailed
+ceiling-removal plan. This section is the short version; the roadmap
+document is the long-form analysis with rough cost estimates and
+honest uncertainty for each item.
+
+
 **1. Fix macro expansion in the extractor.** The biggest single improvement
 to parse rate. Estimated 1-2 days of work. Requires a two-pass approach:
 collect all `\newcommand`/`\def` definitions in the paper, then expand

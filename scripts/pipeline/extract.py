@@ -16,7 +16,29 @@ import tarfile
 import time
 import urllib.request
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Dict, List, Optional
+
+from .macros import collect_macros, expand_macros, MacroDef
+
+
+# Feature flag for macro expansion.
+#
+# Status (2026-04-24, measured over 30 random arXiv papers, ~6,600 equations):
+#   Parse rate:   -1.09 pp  (49.17% → 48.08%)
+#   HQ rate:      -0.36 pp  (19.35% → 18.99%)
+#   HQ / parsed:  +0.15 pp  (marginally better signal density)
+#
+# Net effect is a parse-rate regression. Root cause is that SymPy's LaTeX parser
+# has weak points (bare \mathrm{d} in a \frac{}, operator-name expansions like
+# \mathrm{Tr} becoming flat products, bra-ket <...> after \left/\right strip)
+# that the OLD pipeline's "unknown token = single symbol" fallback behavior
+# happened to route around. Expansion exposes these weaknesses; the SymPy side
+# needs to catch up before expansion becomes net-positive.
+#
+# The collection + expansion code (macros.py) is correct and unit-tested (31
+# passing tests). Keeping it on a flag so the infrastructure survives while
+# we work on the normalizer side. See docs/ROADMAP.md for the full analysis.
+EXPAND_MACROS = os.environ.get('ANALOG_QUEST_EXPAND_MACROS', '').lower() in ('1', 'true', 'yes')
 
 ARXIV_SOURCE_URL = 'https://export.arxiv.org/e-print/{arxiv_id}'
 ARXIV_DELAY = 3  # seconds between requests (arXiv policy)
@@ -240,8 +262,23 @@ def _looks_like_latex(tex: str) -> bool:
     return has_math_env
 
 
-def extract_equations_from_tex(tex: str) -> List[tuple]:
-    """Extract (latex, env_name) pairs from a single .tex string."""
+def extract_equations_from_tex(
+    tex: str,
+    extra_macros: Optional[Dict[str, MacroDef]] = None,
+) -> List[tuple]:
+    """Extract (latex, env_name) pairs from a single .tex string.
+
+    Macro handling runs in two steps:
+      1. Collect custom macros (\\newcommand, \\def, \\DeclareMathOperator,
+         \\let) from this file, merged with any `extra_macros` supplied by
+         the caller (for multi-file papers that split preamble and body).
+      2. After equation extraction, each equation is expanded against the
+         merged macro table so SymPy sees the fully-resolved LaTeX.
+
+    We still strip the raw definition text before the math-regex scan — the
+    definition bodies often contain $ signs that would otherwise match as
+    inline math and produce garbage equations.
+    """
     # Reject files that don't look like LaTeX at all
     if not _looks_like_latex(tex):
         return []
@@ -250,10 +287,30 @@ def extract_equations_from_tex(tex: str) -> List[tuple]:
     # because the %% markers are themselves comments.
     tex = _strip_embedded_postscript(tex)
     tex = _strip_comments(tex)
+
+    # Collect macros from the comment-stripped source (definitions in comments
+    # are not real definitions). Merge with any caller-supplied extras; the
+    # current file's definitions win on conflict since they're typically more
+    # local to the equations we're about to extract.
+    # Only populated when EXPAND_MACROS is on — collection is cheap but
+    # pointless if we're not going to use it.
+    macros: Dict[str, MacroDef] = {}
+    if EXPAND_MACROS:
+        macros = dict(extra_macros) if extra_macros else {}
+        macros.update(collect_macros(tex))
+
     # Strip macro definitions so their braced bodies (which may contain $)
     # don't get matched as inline math.
     tex = _strip_macro_definitions(tex)
     results = []
+
+    def _finalize(eq: str, env: str) -> None:
+        """Optionally expand macros, then re-run trivial-rejection."""
+        if macros:
+            eq = expand_macros(eq, macros)
+            eq = _clean_latex(eq)
+        if eq and not _is_trivial(eq):
+            results.append((eq, env))
 
     # Display environments
     for match in DISPLAY_ENV_RE.finditer(tex):
@@ -262,19 +319,19 @@ def extract_equations_from_tex(tex: str) -> List[tuple]:
         for eq in _split_align_rows(content, env_name):
             eq = _clean_latex(eq)
             if eq and not _is_trivial(eq):
-                results.append((eq, env_name))
+                _finalize(eq, env_name)
 
     # $$...$$ display math
     for match in DISPLAY_DOLLAR_RE.finditer(tex):
         eq = _clean_latex(match.group(1))
         if eq and not _is_trivial(eq):
-            results.append((eq, 'display_dollar'))
+            _finalize(eq, 'display_dollar')
 
     # \[...\] display math
     for match in BRACKET_DISPLAY_RE.finditer(tex):
         eq = _clean_latex(match.group(1))
         if eq and not _is_trivial(eq):
-            results.append((eq, 'bracket_display'))
+            _finalize(eq, 'bracket_display')
 
     # Inline math — only keep substantial ones (likely to be definitions/equations)
     for match in INLINE_MATH_RE.finditer(tex):
@@ -282,24 +339,42 @@ def extract_equations_from_tex(tex: str) -> List[tuple]:
         # Inline math is very noisy — only keep equations with operators
         # that suggest a relationship (=, \sim, \approx, \propto, derivatives)
         if eq and not _is_trivial(eq) and re.search(r'[=~]|\\sim|\\approx|\\propto|\\frac\{d|\\partial|\\nabla', eq):
-            results.append((eq, 'inline'))
+            _finalize(eq, 'inline')
 
     return results
 
 
 def extract_paper(arxiv_id: str) -> ExtractionResult:
-    """Full extraction for one paper: fetch source, extract all equations."""
+    """Full extraction for one paper: fetch source, extract all equations.
+
+    Two-pass macro handling for multi-file papers: we first walk every .tex
+    file to collect all macro definitions (papers often put \\newcommand in a
+    separate preamble file like `macros.tex` that's \\input'd from `main.tex`),
+    then extract equations with that unified macro table available for
+    expansion.
+    """
     tex_files = fetch_latex_source(arxiv_id)
 
     if tex_files is None:
         return ExtractionResult(arxiv_id=arxiv_id, source_available=False,
                                 error='Could not fetch LaTeX source')
 
+    # Pass 1: collect macros from every file. Strip embedded PostScript and
+    # comments first, same as extract_equations_from_tex does, so we don't
+    # pick up commented-out or binary-block definitions. Only runs when
+    # expansion is enabled.
+    paper_macros: Dict[str, MacroDef] = {}
+    if EXPAND_MACROS:
+        for tex in tex_files:
+            clean = _strip_comments(_strip_embedded_postscript(tex))
+            paper_macros.update(collect_macros(clean))
+
+    # Pass 2: extract equations, supplying the paper-wide macro table.
     all_equations = []
     position = 0
 
     for tex in tex_files:
-        for latex, env in extract_equations_from_tex(tex):
+        for latex, env in extract_equations_from_tex(tex, extra_macros=paper_macros):
             all_equations.append(ExtractedEquation(
                 latex=latex,
                 source_env=env,

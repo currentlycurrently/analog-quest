@@ -43,6 +43,44 @@ The other 47% are currently dead to the matching layer — they sit in the
 database as strings with no structural hash, contributing nothing to
 cross-domain candidates.
 
+### Attempted 2026-04-24: macro expansion did not work
+
+Custom-macro expansion (the highest-impact item below) was implemented and
+measured on a 30-paper random sample from the live corpus. Expected gain
+was +10–15 pp of parse rate. **Measured:** −1.09 pp parse rate, −0.36 pp
+high-quality rate, roughly flat garbage-shape rate. The feature was gated
+behind `ANALOG_QUEST_EXPAND_MACROS` (default off) and left in repo for
+future work.
+
+Why it failed: SymPy's LaTeX parser has weak points the OLD pipeline's
+"unknown token = single symbol" fallback was routing around. Expansion
+exposes those weaknesses:
+  - `\mathrm{d}` in `\frac{\mathrm{d} S_t}{S_t}` parses fine, but any
+    attempt to strip `\mathrm{}` corrupts the `\frac{}` numerator.
+  - `\mathrm{Tr}(\sigma(x))` becomes a flat product of bare symbols
+    `T*r*sigma*x` — parseable but meaningless.
+  - `\left<...\right>` (bra-ket / averaging) becomes bare `<...>` that
+    SymPy rejects entirely.
+  - `\mathfrak{sl}` becomes 2-char `sl` parsed as `s*l`, losing structure.
+
+The real ceiling is **SymPy parser quality on expanded content**, not
+macro expansion itself. Fixing the normalizer to handle these cases is
+a meaningful project — probably 1–2 weeks — and unblocks macro expansion
+as a side effect.
+
+Independent-of-expansion normalizer improvements that did land on main:
+  - `\mathfrak` and `\mathscr` added to font-macro strip (valuable for
+    algebra / Lie theory papers).
+  - `\underline{x}` decorator strip.
+  - Nested `_{_{...}}` and `_{{X}}` subscript collapse.
+  - Guarded time-index regex (fixed a latent bug where `\mathbf{x}^{(t+1)}`
+    would token-merge to `\mathbfx_{t+1}` — was masked by old font-strip
+    producing spaces rather than caring about word boundaries).
+
+**Lesson for the next session:** don't re-run this experiment without a
+different angle. Either invest in the normalizer first (so expansion
+has somewhere to land), or look at a different ceiling entirely.
+
 ### Why it matters
 
 Every percentage point of parse rate improvement roughly linearly

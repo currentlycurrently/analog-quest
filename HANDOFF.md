@@ -1,11 +1,123 @@
 # Analog Quest — Handoff
 
-**Date:** 2026-04-12
+**Last substantive update:** 2026-04-12 (bulk of doc below)
+**Most recent session:** 2026-04-24/25 — macro-expansion experiment,
+documented below under "Session log". Read that section first if you're
+picking up the project next.
 **Repo:** https://github.com/currentlycurrently/analog-quest
 **Live site:** https://analog.quest
 **Stack:** Next.js 15 + TypeScript, PostgreSQL (Neon) + pgvector, Vercel,
 Python pipeline (SymPy), NextAuth v5 with GitHub OAuth, Upstash Redis for
 rate limiting.
+
+---
+
+## Session log — 2026-04-24/25 (pause handover)
+
+The admin returned to the project after ~10 days and worked with an agent
+on Roadmap Item 1 (canonicalizer parse rate, specifically macro expansion).
+Hit a wall, documented honestly, parked the work. The admin is pausing
+again and does not know when they'll return. A future agent should read
+this section to understand what was attempted and why more engineering
+work is not the obvious next move.
+
+**What shipped to main this session:**
+  - `scripts/pipeline/macros.py` — custom macro collection + expansion
+    (`\newcommand`, `\def`, `\DeclareMathOperator`, `\let`) with 31
+    passing unit tests. **Gated behind `ANALOG_QUEST_EXPAND_MACROS` env
+    var, default off.** See the Session log note below for why.
+  - `scripts/tests/test_macros.py` — 31 tests for the above.
+  - `scripts/measure_macro_impact.py` — before/after corpus measurement
+    tool. Pulls N random papers, runs OLD vs NEW extractor path, reports
+    parse/HQ/garbage deltas. Useful for future normalizer experiments.
+  - `scripts/diagnose_regressions.py` — per-paper regression diagnostic.
+  - Conservative normalizer improvements (independent of expansion, kept
+    on main): `\mathfrak` and `\mathscr` added to font-macro strip,
+    `\underline{}` decorator strip, nested `_{_{...}}` and `_{{X}}`
+    subscript collapse, time-index regex given a `(?<![A-Za-z])` guard
+    (fixed a latent bug where `\mathbf{x}^{(t+1)}` would token-merge to
+    `\mathbfx_{t+1}` — was previously masked).
+  - `docs/ROADMAP.md` Item 1 updated with the honest measured finding.
+
+**What was measured and why the flag is default-off:**
+  - Roadmap predicted +10–15 pp parse-rate gain from macro expansion.
+  - Measured on 30 random arXiv papers (~6,600 equations): **−1.09 pp
+    parse rate, −0.36 pp high-quality rate, roughly flat garbage rate.**
+  - Root cause: SymPy's LaTeX parser has weak points the OLD pipeline's
+    "unknown token = single symbol" fallback was accidentally routing
+    around. Expansion exposes them rather than bypassing:
+    `\mathrm{d}` in `\frac{}` numerators, `\mathrm{Tr}` becoming flat
+    symbol products, `\left<...\right>` becoming bare `<...>` SymPy
+    rejects, `\mathfrak{sl}` becoming `sl` parsed as `s*l`.
+  - ~90 minutes were spent iterating normalizer fixes to compensate
+    (brace-grouping font strip, bra-ket `<...>` → `(...)` conversion).
+    All unit tests passed but real-corpus measurement got *worse* each
+    iteration (v2 −0.48pp → v3 −0.70pp → v4 −1.09pp). Those risky
+    normalizer changes were reverted before committing.
+
+**The bigger lesson for the next agent (important):**
+
+The session was an optimization exercise — "remove the ceiling the roadmap
+named" — but the roadmap item itself turned out to be a hypothesis, not
+a fact. No one had measured macro-expansion impact before. Future
+normalizer/extractor work must come with a real-corpus measurement
+before shipping. `measure_macro_impact.py` is the template.
+
+Second-order lesson: **parse rate is a proxy, not the goal.** The project
+exists to surface real cross-domain isomorphisms. Optimizing for
+parse-rate percentage points is several layers removed from that. A
+future agent staring at this handoff should ask "does this change make
+the project more likely to surface a real match?" before opening the
+normalizer. The admin made this point explicitly at the end of the
+session.
+
+**What the agent thinks the project actually needs next (not
+engineering):**
+
+  1. **A moderation pass by the admin** — currently 0 Tier 2+ matches
+     exist because no one has ever promoted one, not because the
+     pipeline has failed. The 2-sphere match needs to be rejected as
+     `standard_canonical_object` to bootstrap the trivia list.
+     Operational task, cannot be done by an agent.
+  2. **Grow the corpus breadth.** 1,770 papers, mostly physics, won't
+     produce cross-domain matches. `seed_queue.py` is self-service.
+     10,000 papers across 5+ genuinely distinct domains is where
+     hash-frequency signal becomes meaningful.
+  3. **Find one person to be a second moderator.** Item 4 in the
+     roadmap. The project's credibility rests on this and nothing has
+     moved on it. The hard part is social, not technical.
+  4. **Produce one publishable catalog entry.** Before 30, one. The
+     moment one moderator-verified match exists with a credible
+     write-up, the project transitions from "interesting idea" to
+     "thing with evidence." Roadmap Item 5.
+
+Normalizer improvements (Roadmap Item 1) and algorithmic improvements
+(Item 2) matter eventually, but without progress on items 3–5 they're
+polishing an engine that has nowhere to go.
+
+**Landscape note** (admin asked about prior art at end of session):
+The project appears genuinely underexplored. Adjacent work: Lean/Coq
+formal libraries (only-already-formalized math), Gentner's
+structure-mapping theory (academic foundation, 40 years old, not
+applied at arXiv scale), Semantic Scholar / OpenAlex (citation
+networks, not equation structure), LLM research tools like Elicit or
+Consensus (abstract-level summarization, not structural matching).
+Equation-structure matching over arXiv LaTeX with a tiered human-review
+filter is not a pattern anyone else seems to be running. The admin
+mentioned doing a day of targeted search before further investment
+would be worthwhile.
+
+**State of the repo at handover:**
+  - Committed on main: everything listed above.
+  - Live site: unchanged, still running the pre-session code paths
+    (macro expansion is off by default). Nothing needs deploying.
+  - DB state: unchanged — no re-extraction was run against the
+    corpus. Existing 39k equations still reflect the pre-session
+    extractor.
+  - Tests: 47 passing (16 normalize + 31 macros).
+  - The operational steps in "What the admin still needs to do" below
+    are still unchecked. Those remain the most important unblocked
+    work regardless of any engineering.
 
 ---
 

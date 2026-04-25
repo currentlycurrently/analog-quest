@@ -41,9 +41,12 @@ Decorator macros (removed, bare identifier kept):
   \\hat{x} → x, \\tilde{x} → x, \\bar{x} → x, \\vec{x} → x
 
 Known limitations:
-  - Custom macros (\\newcommand{\\R}{\\mathbb{R}}) are not expanded. Usage of undefined
-    custom macros in equations will cause SymPy parse failures. This is documented
-    as a known limitation; fixing it requires a two-pass extractor.
+  - Custom macro expansion is now handled upstream in extract.py (see
+    pipeline/macros.py for \\newcommand, \\def, \\DeclareMathOperator, \\let
+    support). An equation reaching normalize.py with unresolved \\customMacro
+    tokens means either (a) the definition lived outside the paper's .tex
+    files (rare), or (b) the definition uses a form macros.py doesn't support
+    (e.g. \\def with delimited parameters). Those still fail to parse.
   - \\nabla without a subscript is treated as an unknown symbol by SymPy (not a real
     gradient operator). This means \\nabla f matches \\nabla g structurally (both are
     Mul(Symbol('nabla'), Symbol(...))), which is the intended behavior for this pipeline.
@@ -119,8 +122,14 @@ def _is_unparseable(latex: str) -> bool:
 # Font/style macros that wrap a single argument.
 # We replace \command{arg} with " arg " (with spaces) to prevent token merging.
 # E.g., \nabla\mathcal{L} would otherwise become \nablaL after stripping \mathcal.
+#
+# \mathfrak and \mathscr are common in algebra/representation theory papers
+# (\mathfrak{g} for Lie algebras, \mathscr{L} for Lagrangians). SymPy's LaTeX
+# parser doesn't know either — without stripping, any equation using them
+# fails with a parse error.
 _FONT_MACROS = [
     r'\\mathcal', r'\\mathbb', r'\\mathbf', r'\\mathrm',
+    r'\\mathfrak', r'\\mathscr',
     r'\\boldsymbol', r'\\text', r'\\mathit', r'\\mathsf', r'\\mathtt',
     r'\\mathnormal',
 ]
@@ -176,8 +185,20 @@ def _preprocess_latex(latex: str) -> str:
     # - The var itself is group 2
     # - Any existing subscript (like _i) before the superscript is consumed and dropped
     #   (particle indices dropped in favor of the cleaner time-subscript form)
+    #
+    # Guard: the left boundary must NOT be a letter. Without this, `\mathbf{x}^{(t+1)}`
+    # previously matched via the optional brace branch, capturing the inner `x`,
+    # producing `\mathbfx_{t+1}` (token merge). We now have two alternations —
+    # bare form and fully-braced form — each independently guarded.
     s = re.sub(
-        r'(?:\{)?([A-Za-z])(?:\})?(?:_\{[^}]*\}|_[A-Za-z])?\^\{\(([^)]*[A-Za-z][^)]*)\)\}',
+        r'(?<![A-Za-z])([A-Za-z])\s*(?:_\{[^}]*\}|_[A-Za-z])?\s*\^\{\(([^)]*[A-Za-z][^)]*)\)\}',
+        lambda m: f'{m.group(1)}_{{{m.group(2)}}}',
+        s
+    )
+    # Handle the fully-braced form {x}^{(...)}: the char before the `{` must
+    # not be a letter, so this won't fire inside \mathbf{x}.
+    s = re.sub(
+        r'(?<![A-Za-z])\{([A-Za-z])\}\s*(?:_\{[^}]*\}|_[A-Za-z])?\s*\^\{\(([^)]*[A-Za-z][^)]*)\)\}',
         lambda m: f'{m.group(1)}_{{{m.group(2)}}}',
         s
     )
@@ -207,6 +228,15 @@ def _preprocess_latex(latex: str) -> str:
     # Without the spaces, \nabla\mathcal{L} → \nablaL (one token, parse failure).
     s = _FONT_MACRO_RE.sub(r' \2 ', s)
 
+    # Re-run the time-index rule from Step 2: font-stripping \mathbf{x}^{(t+1)}
+    # leaves ` x ^{(t+1)}` which Step 2 (running earlier, before font-strip) never
+    # saw. The \s* allowances in the regex let it match across the spaces.
+    s = re.sub(
+        r'(?<![A-Za-z])([A-Za-z])\s*(?:_\{[^}]*\}|_[A-Za-z])?\s*\^\{\(([^)]*[A-Za-z][^)]*)\)\}',
+        lambda m: f'{m.group(1)}_{{{m.group(2)}}}',
+        s
+    )
+
     # ── Step 4b: Spacing and misc macros ────────────────────────────────────
     s = s.replace(r'\quad', ' ')
     s = s.replace(r'\qquad', ' ')
@@ -232,6 +262,10 @@ def _preprocess_latex(latex: str) -> str:
     s = re.sub(r'\\widehat\{([^}]+)\}', r'\1', s)
     s = re.sub(r'\\widetilde\{([^}]+)\}', r'\1', s)
     s = re.sub(r'\\overline\{([^}]+)\}', r'\1', s)
+    # \underline{x} is visual emphasis, same as \bar in structural terms.
+    # Commonly appears in papers that use _{\underline{...}} for tensor
+    # index labels after macro expansion.
+    s = re.sub(r'\\underline\{([^}]+)\}', r'\1', s)
 
     # ── Step 7: Laplacian normalization ────────────────────────────────��────
     # In PDE context (when \partial or \nabla is present): \Delta v → \nabla^2 v
@@ -242,6 +276,22 @@ def _preprocess_latex(latex: str) -> str:
     if r'\partial' in s or r'\nabla' in s:
         s = re.sub(r'\\Delta\s+([A-Za-z{\\])', r'\\nabla^2 \1', s)
         s = re.sub(r'\\Delta\b(?!\s*[=<>])', r'\\nabla^2', s)
+
+    # ── Step 7a: Collapse nested subscripts _{_{...}} and ^{^{...}} ─────────
+    # After macro expansion, patterns like r_{_{\underline{12}}} appear: the
+    # macro was defined as {_{...}} (pushing its arg into a sub-subscript for
+    # typographic effect) and then used inside another _{...}. SymPy can't
+    # parse nested brace-only subscripts. Collapse to a single level.
+    # Run fixed-point iteration — each pass collapses one level, and font-strip
+    # artifacts like _{_{{12}}} need two passes.
+    for _ in range(6):
+        new_s = re.sub(r'_\{\s*_\{([^{}]*)\}\s*\}', r'_{\1}', s)
+        new_s = re.sub(r'\^\{\s*\^\{([^{}]*)\}\s*\}', r'^{\1}', new_s)
+        # Also collapse bare brace-wrapped groups inside sub/sup: _{{X}} → _{X}
+        new_s = re.sub(r'(_|\^)\{\{([^{}]*)\}\}', r'\1{\2}', new_s)
+        if new_s == s:
+            break
+        s = new_s
 
     # ── Step 8: Clean up double subscripts ──────────────────────────────────
     # After time-index conversion, \mathbf{x}^{(t+1)}_i becomes x_{t+1}_i.

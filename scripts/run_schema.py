@@ -35,9 +35,15 @@ if not db_url:
     print('No POSTGRES_URL found in .env.local')
     sys.exit(1)
 
-schema_path = os.path.join(os.path.dirname(__file__), '..', 'database', 'schema.sql')
+# Which schema file to apply. Default is the base schema; pass a filename
+# (relative to database/) or an absolute path to apply a specific one, e.g.
+#   python3 scripts/run_schema.py atlas_schema.sql
+arg = sys.argv[1] if len(sys.argv) > 1 else 'schema.sql'
+schema_path = arg if os.path.isabs(arg) else os.path.join(
+    os.path.dirname(__file__), '..', 'database', arg)
 with open(schema_path) as f:
     schema = f.read()
+print(f'Applying {os.path.basename(schema_path)} ...')
 
 conn = psycopg2.connect(db_url)
 conn.autocommit = True

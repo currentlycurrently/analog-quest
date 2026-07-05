@@ -231,6 +231,57 @@ the matching engine. The window is open but closing.
 
 ---
 
+## Atlas system — end-to-end runbook (2026-07-05)
+
+The atlas is now a live feature, not just an experiment. The site's primary
+product is `/atlas` (the old `/discoveries` exact-hash view redirects there).
+Full flow, all built and build-verified:
+
+**Data model** (`database/atlas_schema.sql`): `atlas_templates` (50 canonical
+structures), `atlas_equivalences` (collapses split-but-equivalent templates
+into one group), `atlas_classifications` (one row per paper→template
+assignment; NULL template = "no fit" sentinel), `atlas_trivia_templates`
+(moderator-hidden groups).
+
+**Deploy steps (admin, one-time):**
+1. Apply `database/atlas_schema.sql` to Neon.
+2. `python3 scripts/seed_atlas_templates.py` — seeds the 50 templates +
+   equivalence groups from `scripts/experiments/atlas/templates.json`.
+3. (optional) load the 60-paper pilot classifications for an immediately
+   non-empty atlas — the loader used in the 2026-07-05 session is inline in
+   that session's shell history; or just start classifying fresh.
+4. Deploy the branch. `/atlas` renders live from `/api/atlas`.
+
+**Growing the atlas (the "chip away" loop):**
+- A contributor runs the `public/analog-quest-atlas.SKILL.md` skill in a
+  Claude Code session (GitHub sign-in or CLI token).
+- The session pulls unclassified papers + the template library from
+  `GET /api/atlas/next-batch`, classifies each paper's core model against the
+  library (0–2 templates, "no fit" is valid), and submits to
+  `POST /api/atlas/classify`. Stateless and incremental — every paper is
+  permanent progress. No API key needed (classification is the agent's own
+  reasoning), which is the "crowdsource idle Claude Code compute" thesis.
+- Corpus growth (more papers to classify) is still `scripts/seed_queue.py`.
+  Note the measured arXiv source-availability rate is only ~15–25% in some
+  windows; expanding to OpenAlex is the documented future unlock (ROADMAP
+  Item 3) but should wait until the atlas earns traction.
+
+**Moderation:** `GET/POST /api/admin/atlas` (moderator/admin). GET returns
+structure groups ranked by breadth (generic-object trivia candidates first).
+POST with `{group_key, action:'trivia'|'restore'}` hides/unhides a whole group
+from the public atlas — the textbook-object defense the external reviewer
+asked for, verified working (flagging `gradient_descent` drops the bridge
+count and restore brings it back). Non-destructive; classifications are never
+deleted.
+
+**Validation status:** classification recall 0.93, cross-field join 14/15,
+distractor precision 0.93, holds on Haiku 4.5 (0.90). 60-paper real pilot
+surfaced 7 cross-field bridges — genuine ones (master eq: cond-mat↔neuro; SIR:
+physics↔bio) mixed with textbook objects (gradient descent) the trivia filter
+is built to catch. See `scripts/experiments/atlas/results/`.
+
+---
+
 ## Read this before doing anything
 
 If you're a new lead agent picking up this project, this document is the

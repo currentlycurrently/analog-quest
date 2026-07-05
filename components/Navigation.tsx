@@ -8,7 +8,7 @@ export default function Navigation() {
           analog.quest
         </Link>
         <div className="flex gap-6 text-sm">
-          <Link href="/discoveries" className="no-underline hover:underline">discoveries</Link>
+          <Link href="/atlas" className="no-underline hover:underline">atlas</Link>
           <Link href="/contribute" className="no-underline hover:underline">contribute</Link>
         </div>
       </div>

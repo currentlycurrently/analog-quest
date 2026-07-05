@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2505.15526",
+  "assignments": [
+    {
+      "template_id": "lotka_volterra",
+      "confidence": 0.85,
+      "twist": "coupled Fokker-Planck density evolution with Lotka-Volterra mean dynamics"
+    },
+    {
+      "template_id": "fokker_planck",
+      "confidence": 0.85,
+      "twist": "coupled Fokker-Planck density evolution with Lotka-Volterra mean dynamics"
+    }
+  ],
+  "core_model_summary": "Coupled Fokker-Planck equations describe density evolution for two populations with pairwise interactions, whose macroscopic means follow Lotka-Volterra predator-prey dynamics.",
+  "_model": "claude-haiku-4-5"
+}

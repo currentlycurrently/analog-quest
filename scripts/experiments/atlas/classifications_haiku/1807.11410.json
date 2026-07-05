@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1807.11410",
+  "assignments": [
+    {"template_id": "kuramoto_phase_oscillators",
+      "confidence": 0.95,
+      "twist": "directed, weighted, signed interactions on acyclic and cyclic network topologies"}
+  ],
+  "core_model_summary": "A system of phase oscillators coupled via pairwise sine-based interactions with directed weighted connections of varying signs, extended from the canonical Kuramoto model to oriented graph structures.",
+  "_model": "claude-haiku-4-5"
+}

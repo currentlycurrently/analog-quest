@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00688",
+  "assignments": [],
+  "core_model_summary": "A mixed-membership stochastic block model for attributed hypergraphs, where hyperedge counts follow a Poisson law with a bilinear community-affinity rate and node attributes follow a membership-weighted Bernoulli model, fit by likelihood maximization plus dimensionality reduction.",
+  "_model": "claude-fable-5-agent-20260705"
+}

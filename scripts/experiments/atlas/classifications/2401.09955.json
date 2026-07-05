@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.09955",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "geometric_brownian_motion",
+      "confidence": 0.55,
+      "twist": "log-asset is a regime-switching jump-diffusion with random (uncertain) coefficients, i.e. an exponential-Levy generalization of GBM analyzed via characteristic functions"}
+  ],
+  "core_model_summary": "A stochastic asset-price model whose log-price is an additive drift-plus-Brownian-plus-compound-Poisson (jump-diffusion) process with random parameters and regime switching, giving an exponential (GBM-type) price with tractable characteristic functions."
+}

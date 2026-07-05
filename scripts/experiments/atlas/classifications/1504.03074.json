@@ -1,0 +1,8 @@
+{
+  "arxiv_id": "1504.03074",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "black_scholes_pde", "confidence": 0.95, "twist": "canonical; solved via a separation-of-variables / Euler-Cauchy-equation ansatz"}
+  ],
+  "core_model_summary": "The Black-Scholes option-pricing partial differential equation, solved by an exponential-in-time separation reducing it to an Euler-Cauchy ordinary differential equation."
+}

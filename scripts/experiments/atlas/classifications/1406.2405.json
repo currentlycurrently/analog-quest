@@ -1,0 +1,8 @@
+{
+  "arxiv_id": "1406.2405",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "replicator_dynamics", "confidence": 0.9, "twist": "two-strategy replicator dynamics made stochastic with noise and payoffs/variance regime-switched by a continuous-time Markov chain"}
+  ],
+  "core_model_summary": "A two-strategy replicator dynamic on the simplex, driven by noise and with payoffs modulated by a finite-state continuous-time Markov chain, analyzed for long-run persistence versus extinction."
+}

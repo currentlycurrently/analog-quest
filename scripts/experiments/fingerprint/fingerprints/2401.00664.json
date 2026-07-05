@@ -1,0 +1,34 @@
+{
+  "arxiv_id": "2401.00664",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization over a feasible set of an empirical (finite-sample) average of a convex random objective, analyzed as a surrogate for minimizing its expectation, with high-probability and expectation bounds on the optimality gap.",
+    "canonical_form": "\\min_{x\\in\\mathcal{X}}\\ F_N(x):=\\frac{1}{N}\\sum_{j=1}^N f(x,\\xi_j)\\ \\approx\\ \\min_{x\\in\\mathcal{X}}\\ F(x):=\\mathbb{E}[f(x,\\xi)]",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "convexity_central",
+      "constrained_optimization",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "decision vector in a convex feasible set"},
+      {"role": "objective", "meaning": "expected value of a convex random function, approximated by its sample average"},
+      {"role": "noise", "meaning": "i.i.d. random samples entering the objective"},
+      {"role": "parameter", "meaning": "strong-convexity modulus, gradient-Lipschitz and moment/variance constants, target accuracy and confidence"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Minimization of a (strongly) convex objective over a convex feasible set, characterized by first-order optimality of the true expected-value objective.",
+    "structural_features": [
+      "convexity_central",
+      "constrained_optimization",
+      "fixed_point_equilibrium"
+    ]
+  },
+  "confidence": 0.72,
+  "notes": "The paper's central object is the sample-average-approximation optimization problem (minimize empirical mean of a convex random function) and its sample-complexity bounds relative to the expected-value program; Regularized (Bregman/prox) variant appears but the core is the SAA optimization. Skeleton is the underlying deterministic convex program min_x E[f(x,xi)].",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

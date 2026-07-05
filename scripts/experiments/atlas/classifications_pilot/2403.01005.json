@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2403.01005",
+  "assignments": [
+    {
+      "template_id": "gradient_descent",
+      "confidence": 0.80,
+      "twist": "policy gradient iteration over finite-dimensional control parameters with model-based warm start"
+    }
+  ],
+  "core_model_summary": "The paper uses policy optimization (gradient descent on control law parameters) with finite-difference gradient estimation to fine-tune a model-based controller for PDE tracking control.",
+  "_model": "claude-haiku-4-5"
+}

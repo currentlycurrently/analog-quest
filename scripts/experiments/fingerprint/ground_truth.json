@@ -1,0 +1,299 @@
+{
+ "description": "Gold-standard known cross-domain isomorphisms, each realized as a pair of real arXiv papers from different archives. Curated 2026-07-05 by agent search over the arXiv API; every paper's LaTeX source availability was verified at curation time.",
+ "pairs": [
+  {
+   "analogy_id": "black_scholes_heat",
+   "analogy_name": "Black-Scholes equation vs heat/diffusion equation",
+   "known_shared_structure": "Both are linear second-order parabolic PDEs; the Black-Scholes PDE transforms via a change of variables into the standard heat/diffusion equation.",
+   "side_a": {
+    "arxiv_id": "1504.03074",
+    "title": "On a method of solving the Black-Scholes Equation",
+    "primary_category": "q-fin.PR",
+    "year": 2015,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1402.3007",
+    "title": "Non-steady state heat conduction in composite walls",
+    "primary_category": "math-ph",
+    "year": 2014,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "ising_hopfield",
+   "analogy_name": "Ising model vs Hopfield network / associative memory",
+   "known_shared_structure": "Both are systems of binary spins/neurons with pairwise couplings whose dynamics minimize a quadratic energy (Lyapunov) function.",
+   "side_a": {
+    "arxiv_id": "2008.00245",
+    "title": "Two temperature Ising Model",
+    "primary_category": "cond-mat.stat-mech",
+    "year": 2020,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2202.04557",
+    "title": "Universal Hopfield Networks: A General Framework for Single-Shot Associative Memory Models",
+    "primary_category": "cs.NE",
+    "year": 2022,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "lotka_volterra_econ",
+   "analogy_name": "Lotka-Volterra predator-prey vs firm/market competition dynamics",
+   "known_shared_structure": "Both are coupled nonlinear ODEs with logistic growth and bilinear interaction terms describing competitive/predatory coupling.",
+   "side_a": {
+    "arxiv_id": "2208.02457",
+    "title": "Novel predator-prey model admitting exact analytical solution",
+    "primary_category": "q-bio.PE",
+    "year": 2022,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2505.15526",
+    "title": "Measuring inequality in society-oriented Lotka--Volterra-type kinetic equations",
+    "primary_category": "q-fin.GN",
+    "year": 2025,
+    "source_verified": true,
+    "note": "replaces 1905.06364 and 1212.1282, whose LaTeX sources were not fetchable; macroscopic dynamics of this paper are an explicit Lotka-Volterra ODE system"
+   }
+  },
+  {
+   "analogy_id": "sir_rumor",
+   "analogy_name": "SIR epidemic model vs rumor/information spreading",
+   "known_shared_structure": "Both use compartmental S-I-R(S) ODEs where individuals transition between susceptible, infected/spreader, and recovered states via mass-action contact terms.",
+   "side_a": {
+    "arxiv_id": "2004.09314",
+    "title": "Confinement strategies in a simple SIR model",
+    "primary_category": "q-bio.PE",
+    "year": 2020,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1709.01726",
+    "title": "A deterministic mathematical model for the spread of two rumors",
+    "primary_category": "physics.soc-ph",
+    "year": 2017,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "kuramoto_powergrid",
+   "analogy_name": "Kuramoto coupled-oscillator synchronization vs power-grid dynamics",
+   "known_shared_structure": "Both are networks of phase oscillators coupled through the sine of phase differences; power-grid swing equations are a second-order (inertial) Kuramoto model.",
+   "side_a": {
+    "arxiv_id": "1807.11410",
+    "title": "The Kuramoto model on oriented and signed graphs",
+    "primary_category": "nlin.AO",
+    "year": 2018,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2308.15326",
+    "title": "Dynamical heterogeneity and universality of power-grids",
+    "primary_category": "physics.soc-ph",
+    "year": 2023,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "fokker_planck_diffusion_models",
+   "analogy_name": "Fokker-Planck / Langevin dynamics vs score-based diffusion generative models",
+   "known_shared_structure": "Both describe a probability density evolving under an SDE (Langevin) whose density obeys the Fokker-Planck equation; diffusion generative models reverse this SDE using the learned score.",
+   "side_a": {
+    "arxiv_id": "1008.3331",
+    "title": "Brownian motion with dry friction: Fokker-Planck approach",
+    "primary_category": "cond-mat.stat-mech",
+    "year": 2010,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2311.15996",
+    "title": "Closing the ODE-SDE gap in score-based diffusion models through the Fokker-Planck equation",
+    "primary_category": "cs.LG",
+    "year": 2023,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "replicator_mirror_descent",
+   "analogy_name": "Replicator dynamics vs mirror descent / multiplicative weights",
+   "known_shared_structure": "Both are the same entropic/Bregman gradient flow on the probability simplex: weights updated multiplicatively in proportion to relative fitness or negative gradient.",
+   "side_a": {
+    "arxiv_id": "1406.2405",
+    "title": "Stochastic Replicator Dynamics Subject to Markovian Switching",
+    "primary_category": "q-bio.PE",
+    "year": 2014,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2004.01025",
+    "title": "Mirrorless Mirror Descent: A Natural Derivation of Mirror Descent",
+    "primary_category": "cs.LG",
+    "year": 2020,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "logistic_adoption",
+   "analogy_name": "Logistic population growth vs technology adoption / innovation diffusion",
+   "known_shared_structure": "Both are governed by the logistic (Verhulst) ODE: growth proportional to current level times remaining unsaturated capacity.",
+   "side_a": {
+    "arxiv_id": "1506.01137",
+    "title": "Stochastic dynamics and logistic population growth",
+    "primary_category": "q-bio.PE",
+    "year": 2015,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1612.08949",
+    "title": "Adoption of Innovations with Contrarians and Repentant Agents",
+    "primary_category": "physics.soc-ph",
+    "year": 2016,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "oscillator_rlc",
+   "analogy_name": "Damped driven mechanical oscillator vs electronic oscillator circuit",
+   "known_shared_structure": "Both are second-order oscillator ODEs with damping and driving/feedback terms; the mechanical-electrical analogy maps mass<->inductance, damping<->resistance, stiffness<->inverse capacitance.",
+   "side_a": {
+    "arxiv_id": "1712.01032",
+    "title": "Resonance oscillation of a damped driven simple pendulum",
+    "primary_category": "physics.class-ph",
+    "year": 2017,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2203.16300",
+    "title": "Analog cross coupled controller for oscillations: modeling and design via dominance theory",
+    "primary_category": "eess.SY",
+    "year": 2022,
+    "source_verified": true,
+    "note": "v2 replacement for 2012.11533 (Monotone RLC Circuits), whose core model was operator-theoretic optimization rather than circuit dynamics \u2014 a v1 ground-truth curation error documented in results/ANALYSIS-2026-07-05.md"
+   }
+  },
+  {
+   "analogy_id": "burgers_traffic",
+   "analogy_name": "Burgers equation vs traffic flow (LWR kinematic waves)",
+   "known_shared_structure": "Both are scalar conservation laws with nonlinear flux producing shocks and kinematic waves.",
+   "side_a": {
+    "arxiv_id": "2306.13252",
+    "title": "Self-similar solutions to the hypoviscous Burgers and SQG equations at criticality",
+    "primary_category": "physics.flu-dyn",
+    "year": 2023,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1702.01718",
+    "title": "Follow-the-Leader models can be viewed as a numerical approximation to the Lighthill-Whitham-Richards model for traffic flow",
+    "primary_category": "math.AP",
+    "year": 2017,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "maxent_inference",
+   "analogy_name": "Statistical-mechanics free energy / maximum entropy vs variational inference",
+   "known_shared_structure": "Both minimize a free energy (energy minus temperature times entropy) / maximize entropy under moment constraints; the Gibbs variational principle is formally identical to variational free-energy inference.",
+   "side_a": {
+    "arxiv_id": "1607.07287",
+    "title": "Jarzynski equality in the context of maximum path entropy",
+    "primary_category": "cond-mat.stat-mech",
+    "year": 2016,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1402.1384",
+    "title": "Variational Free Energies for Compressed Sensing",
+    "primary_category": "cs.IT",
+    "year": 2014,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "optimal_transport_econ",
+   "analogy_name": "Optimal transport (Monge-Kantorovich) vs economics matching / equilibrium",
+   "known_shared_structure": "Both couple two marginal distributions to minimize aggregate cost; Kantorovich duality yields prices/potentials, making stable matching an optimal-transport plan.",
+   "side_a": {
+    "arxiv_id": "1403.3103",
+    "title": "A characterization for solutions of the Monge-Kantorovich mass transport problem",
+    "primary_category": "math.AP",
+    "year": 2014,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2402.13378",
+    "title": "Stable Matching as Transport: a Welfarist Perspective on Market Design",
+    "primary_category": "econ.TH",
+    "year": 2024,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "cable_telegrapher",
+   "analogy_name": "Neuronal cable equation vs Telegrapher's equation",
+   "known_shared_structure": "Both are the same one-dimensional damped diffusion/wave PDE for voltage along a distributed RC/RLC line.",
+   "documented_where": "Rall (1977) cable theory; Koch, Biophysics of Computation (1999).",
+   "held_out": true,
+   "side_a": {
+    "arxiv_id": "1702.00718",
+    "title": "Cable equation for general geometry",
+    "primary_category": "q-bio.NC",
+    "year": 2017,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1602.05417",
+    "title": "Telegraph equations for the case of a waveguide with moving boundary",
+    "primary_category": "physics.class-ph",
+    "year": 2016,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "paraxial_schrodinger",
+   "analogy_name": "Paraxial wave equation (beam optics) vs Schroedinger equation",
+   "known_shared_structure": "The paraxial envelope equation for a monochromatic beam is formally identical to the 2D time-dependent Schroedinger equation (propagation coordinate as time, refractive index as potential).",
+   "documented_where": "Longhi, Laser & Photonics Reviews 3, 243 (2009).",
+   "held_out": true,
+   "side_a": {
+    "arxiv_id": "2408.11953",
+    "title": "Asymmetric Cauchy-Riemann Beams",
+    "primary_category": "physics.optics",
+    "year": 2024,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "2007.02182",
+    "title": "A new approach to solving the Schrodinger equation",
+    "primary_category": "quant-ph",
+    "year": 2020,
+    "source_verified": true
+   }
+  },
+  {
+   "analogy_id": "sine_gordon_josephson",
+   "analogy_name": "Sine-Gordon: long Josephson junction vs soliton field theory",
+   "known_shared_structure": "Long-Josephson-junction phase dynamics obey the sine-Gordon equation, the same nonlinear Klein-Gordon-type field equation studied for kink/breather solitons.",
+   "documented_where": "Barone & Paterno (1982); Dauxois & Peyrard, Physics of Solitons (2006).",
+   "held_out": true,
+   "side_a": {
+    "arxiv_id": "1501.04037",
+    "title": "Sine-Gordon breathers generation in driven long Josephson junctions",
+    "primary_category": "cond-mat.supr-con",
+    "year": 2015,
+    "source_verified": true
+   },
+   "side_b": {
+    "arxiv_id": "1511.02314",
+    "title": "Sine-Gordon solitons in networks: Scattering and transmission at vertices",
+    "primary_category": "nlin.PS",
+    "year": 2015,
+    "source_verified": true
+   }
+  }
+ ],
+ "held_out_note": "held_out pairs curated 2026-07-05 by an agent not shown the feature vocabulary or schema; reported separately, not part of the pre-registered criterion"
+}

@@ -1,0 +1,36 @@
+{
+  "arxiv_id": "1712.01032",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A scalar second-order ordinary differential equation with a linear first-derivative damping term, a sinusoidal restoring nonlinearity in the state, and a sinusoidal external forcing.",
+    "canonical_form": "\\ddot{x} + \\gamma\\dot{x} + \\omega_0^2\\sin x = F_0\\cos(\\omega t)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "driving_term",
+      "oscillatory_dynamics",
+      "energy_functional"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar angular displacement in a periodic potential"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "damping coefficient, natural frequency, and drive amplitude/frequency"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A scalar second-order ordinary differential equation with linear damping, a sinusoidal restoring nonlinearity, and periodic forcing.",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "driving_term",
+      "oscillatory_dynamics"
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "Core model is the driven damped pendulum equation (nonlinear sin restoring). It is already deterministic, so the skeleton restates it; the linear driven damped harmonic oscillator is presented as the small-angle comparison limit rather than the paper's central object.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

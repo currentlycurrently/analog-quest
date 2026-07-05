@@ -1,0 +1,41 @@
+{
+  "arxiv_id": "2505.15526",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "Two coupled evolution equations for probability densities on the half-line, each combining a state-dependent (multiplicative-noise) diffusion term and a drift, whose mean values obey a two-variable system with a bilinear cross-coupling that produces oscillations.",
+    "canonical_form": "\\partial_t f = \\tfrac{\\sigma_1 m_g}{2}\\,\\partial_{xx}\\!\\big[x^2 f\\big] + \\partial_x\\big[(a x - b)f\\big],\\quad \\partial_t g = \\tfrac{\\sigma_2 m_f}{2}\\,\\partial_{yy}\\!\\big[y^2 g\\big] + \\partial_y\\big[(c y - d)g\\big];\\qquad \\dot m_f = \\alpha m_f - \\beta m_f m_g,\\; \\dot m_g = -\\gamma' m_g + \\gamma m_f m_g",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "probability_flow",
+      "diffusion_term",
+      "advection_term",
+      "multiplicative_noise",
+      "multiplicative_interaction",
+      "oscillatory_dynamics",
+      "predator_prey_asymmetry",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "two probability densities over a positive scalar"},
+      {"role": "space", "meaning": "positive scalar carrying each distribution"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "parameter", "meaning": "growth, decay, and bilinear coupling coefficients plus diffusion strengths"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A two-component first-order system with linear self terms and a bilinear cross-product coupling giving conservative oscillations, where one variable grows at the direct expense of the other.",
+    "structural_features": [
+      "multiplicative_interaction",
+      "predator_prey_asymmetry",
+      "oscillatory_dynamics",
+      "first_order_in_time",
+      "fixed_point_equilibrium"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The paper's central object is the coupled Fokker-Planck-type system for the two densities (with state-dependent diffusion), whose mean values reduce to a Lotka-Volterra ODE pair; the auxiliary variance/coefficient-of-variation ODEs are diagnostics. The mean-value bilinear-coupled oscillatory ODE is the deterministic skeleton.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.01023",
+  "assignments": [
+    {
+      "template_id": "wave_equation",
+      "confidence": 0.9,
+      "twist": "on rough (low regularity Lipschitz) manifolds with observability and microlocal defect measure propagation"
+    }
+  ],
+  "core_model_summary": "Wave equation on a Riemannian manifold with low regularity metric, studied through measure propagation and controllability.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1402.3007",
+  "assignments": [
+    {
+      "template_id": "heat_diffusion_equation",
+      "confidence": 0.96,
+      "twist": "piecewise homogeneous composite media with interface continuity conditions"
+    }
+  ],
+  "core_model_summary": "Heat diffusion equation solved in composite materials with discontinuous thermal properties, using interface continuity of temperature and heat flux."
+}

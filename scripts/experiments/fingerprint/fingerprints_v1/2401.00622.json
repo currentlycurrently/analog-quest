@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2401.00622",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "A weighted-average minimization over multiple units of a composite objective that adds a cross-entropy term between a parametric map's normalized-exponential output and reference labels to a divergence term pulling that output toward a mixed target distribution, where the target keeps the current map's mass on newly added components and rescales a frozen earlier map's distribution on old components by one minus that new-component mass.",
+    "canonical_form": "\\min_{W} \\sum_k w_k\\, \\mathbb{E}_{(x,y)} \\Big[ L_{CE}\\big(\\sigma(g_W(x)), y\\big) + \\beta\\, D_{KL}\\big(\\sigma(g_W(x)) \\,\\|\\, z(x)\\big) \\Big], \\quad z_j(x) = \\begin{cases} \\sigma(g_W(x)/\\theta)_j, & j \\in \\mathcal{N} \\\\ \\sigma(g_{W_0}(x)/\\theta)_j \\Big(1 - \\sum_{c \\in \\mathcal{N}} \\sigma(g_W(x)/\\theta)_c \\Big), & j \\notin \\mathcal{N} \\end{cases}",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "entropy_term",
+      "normalization_constraint",
+      "multiplicative_interaction"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "current parameter vector of the map being optimized"},
+      {"role": "parameter", "meaning": "frozen parameter vector of an earlier version of the map, supplying the reference distribution over old components"},
+      {"role": "parameter", "meaning": "scalar weights: divergence-term coefficient, softening scale in the normalized exponentials, and per-unit averaging weights proportional to sample counts"},
+      {"role": "noise", "meaning": "random input-label pairs over which each unit's objective is an expectation"},
+      {"role": "objective", "meaning": "composite scalar loss (cross-entropy plus scaled divergence) averaged across units"}
+    ]
+  },
+  "confidence": 0.75,
+  "notes": "The theoretical part justifies the mixed target via the law of total probability: the old-component scores of the frozen map are treated as probabilities conditional on the complement of the new components, and multiplied by the current map's probability of that complement. The global objective is a convex combination of per-unit objectives; the outer averaging structure is standard and the mixed self-referencing target z is the paper's central construct."
+}

@@ -1,0 +1,35 @@
+{
+  "arxiv_id": "2401.00671",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A coupled slow-fast system of stochastic differential equations whose drift and diffusion coefficients depend on the law of the process itself, driven by Brownian motion and a compensated Poisson jump measure, with two separated small time-scale parameters.",
+    "canonical_form": "dX_t = b_1\\!\\left(X_t,\\mathcal{L}_{X_t},Y_t\\right)dt + \\sqrt{\\varepsilon}\\,\\sigma_1\\!\\left(X_t,\\mathcal{L}_{X_t}\\right)dW_t + \\varepsilon\\!\\int g\\!\\left(X_t,\\mathcal{L}_{X_t},z\\right)\\tilde N(dt,dz),\\qquad dY_t = \\tfrac{1}{\\delta} b_2\\!\\left(X_t,\\mathcal{L}_{X_t},Y_t\\right)dt + \\tfrac{1}{\\sqrt{\\delta}}\\sigma_2\\!\\left(X_t,\\mathcal{L}_{X_t},Y_t\\right)dW_t",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "multiplicative_noise",
+      "jump_process",
+      "mean_field_coupling",
+      "first_order_in_time",
+      "damping_term"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "slow component and fast component of the coupled process"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "noise", "meaning": "Brownian increments and a compensated Poisson jump measure"},
+      {"role": "parameter", "meaning": "small noise-intensity and small time-scale-separation parameters, plus the distribution (law) of the state entering the coefficients"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order ordinary differential equation for the slow variable with an averaged, distribution-collapsed (Dirac-measure) drift, obtained as the small-noise, time-scale-averaged limit.",
+    "structural_features": [
+      "first_order_in_time",
+      "mean_field_coupling"
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "Core is a two-time-scale McKean-Vlasov (distribution-dependent) SDE system with Poisson jumps; the paper's large deviation / averaging result shows the small-parameter limit concentrates on the Dirac measure of the solution to a deterministic ODE, which is the skeleton. Coefficients depend on state so noise is multiplicative; the fast equation's negative drift (contraction constant C_5) supports damping_term.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

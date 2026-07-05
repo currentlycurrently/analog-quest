@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.01171",
+  "assignments": [],
+  "core_model_summary": "Application of the statistical-physics mean-first-passage-time methodology to COVID-19 case-count time series, using empirically averaged passage times and their derivatives to detect the threshold marking the onset of accelerated epidemic spread.",
+  "_model": "claude-fable-5-agent-20260705"
+}

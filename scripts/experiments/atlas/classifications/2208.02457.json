@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2208.02457",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "lotka_volterra",
+      "confidence": 0.9,
+      "twist": "generalized predator-prey with arbitrary response functions f_i, sought for exact analytical solvability"},
+    {"template_id": "hamiltons_equations",
+      "confidence": 0.72,
+      "twist": "the LV class is recast as a conservative Hamiltonian system with a conserved H and canonical (q,p) equations"}
+  ],
+  "core_model_summary": "A generalized two-species predator-prey competition system, framed within a conserved Hamiltonian formalism, whose special solvable case admits an exact elementary-function solution."
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2306.13252",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "burgers_equation",
+      "confidence": 0.9,
+      "twist": "hypoviscous (fractional-dissipation) Burgers at criticality, studied via self-similar source-type solutions"}
+  ],
+  "core_model_summary": "Self-similar source-type solutions of the Burgers equation with hypoviscous (fractional) dissipation at criticality, with extension to the surface quasi-geostrophic equation."
+}

@@ -1,0 +1,34 @@
+{
+  "arxiv_id": "2308.15326",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "network_dynamics",
+    "structure_summary": "Second-order phase oscillators with inertia and linear damping, each driven by a constant term and coupled to graph neighbors through weighted sines of pairwise phase differences, with heterogeneous heavy-tailed weights and studied via order parameters measuring collective coherence.",
+    "canonical_form": "\\ddot{x}_i + a\\,\\dot{x}_i = c_i + K \\sum_{j=1}^{N} W_{ij} \\sin(x_j - x_i), \\qquad z(t) = \\frac{1}{N}\\sum_j e^{i x_j(t)}",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "driving_term",
+      "phase_coupling",
+      "pairwise_coupling",
+      "network_topology_matters",
+      "oscillatory_dynamics",
+      "scale_invariance",
+      "phase_transition"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "phase angle of each unit on the graph"},
+      {"role": "time", "meaning": "continuous independent variable"},
+      {"role": "parameter", "meaning": "linear damping coefficient on the first derivative"},
+      {"role": "parameter", "meaning": "constant per-unit driving term (heterogeneous natural drift)"},
+      {"role": "parameter", "meaning": "weighted adjacency matrix with heavy-tailed (power-law) weight distribution"},
+      {"role": "parameter", "meaning": "global coupling strength controlling the coherence transition"},
+      {"role": "objective", "meaning": "modulus of the mean complex exponential of phases, quantifying collective coherence"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The paper combines (a) the second-order phase-coupled oscillator system on empirical heterogeneous graphs and (b) empirical statistical analysis of increment fluctuations via superstatistics (mixture of Gaussians over an inverse-variance parameter, yielding q-Gaussians). The dynamical core the main synchronization results are about is (a); the superstatistics part is a data-analysis tool, noted here as a secondary candidate. Coupling weights and driving terms follow heavy-tailed distributions, which is where the scale_invariance tag applies."
+}

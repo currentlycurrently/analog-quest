@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.09955",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A piecewise-defined jump-diffusion built by concatenating regime-indexed drift, Brownian-integral, and compound-Poisson jump contributions over time-changed intervals with regime-specific random parameters, whose law is characterized through a product-factorized characteristic function.",
+    "canonical_form": "X(t)=x_0+\\sum_{j} \\Bigl(\\int_0^{s_j(t)} b_j(u,\\theta_j)\\,du + \\int_0^{s_j(t)} \\sigma_j(u,\\theta_j)\\,dW_j(u) + \\sum_{i=1}^{P_j(s_j(t))}\\eta_j(i)\\Bigr); \\quad \\varphi(u;X(t))=e^{iux_0}\\prod_j \\mathbb E\\bigl[\\varphi(u;Y_j^{\\theta_j}(s_j(t)))\\bigr]",
+    "linearity": "mixed",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "jump_process",
+      "additive_noise",
+      "first_order_in_time",
+      "driving_term",
+      "probability_flow"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "accumulated scalar process aggregating regime-segmented drift, diffusion, and jump increments"},
+      {"role": "time", "meaning": "evolution parameter, with regime-dependent time changes selecting active segments"},
+      {"role": "noise", "meaning": "Brownian motions driving the diffusion integrals and compound-Poisson jumps driving the discrete increments"},
+      {"role": "parameter", "meaning": "regime-specific coefficients drawn as random variables, marginalized over a mixing distribution"}
+    ]
+  },
+  "confidence": 0.74,
+  "notes": "Core is a regime-switching, randomly-parametrized jump-diffusion whose consistency (expressible as a standard jump diffusion) and characteristic function are the main results. Could equally be tagged 'sde' given the stochastic-integral representation; I chose 'stochastic_process' because the paper works at the level of the process law / characteristic function and mixture over random parameters rather than a driving SDE per se. Notation is heavily domain-specific and partly garbled.",
+  "_model": "claude-fable-5-agent-20260705"
+}

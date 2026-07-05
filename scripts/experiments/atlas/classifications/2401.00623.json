@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.00623",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "gross_pitaevskii",
+      "confidence": 0.55,
+      "twist": "stationary nonlinear Schrodinger standing wave gauge-coupled to a Chern-Simons field, solved for a normalized ground state with supercritical exponential nonlinearity"}
+  ],
+  "core_model_summary": "Existence of an L2-normalized ground-state standing wave for a Chern-Simons-Schrodinger system: a nonlinear Schrodinger equation coupled to a planar gauge field."
+}

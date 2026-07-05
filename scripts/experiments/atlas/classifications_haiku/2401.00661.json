@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00661",
+  "assignments": [],
+  "core_model_summary": "The paper applies Q-learning to develop a personalized dynamic pricing policy for EV charging stations, which is a reinforcement learning application to pricing strategy without canonical mathematical model instantiation.",
+  "_model": "claude-haiku-4-5"
+}

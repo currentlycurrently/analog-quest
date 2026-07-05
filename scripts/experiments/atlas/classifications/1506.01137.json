@@ -1,0 +1,9 @@
+{
+  "arxiv_id": "1506.01137",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "master_equation", "confidence": 0.85, "twist": "birth-death master equation for reaction schemes whose mean-field limit is the Verhulst logistic equation, analyzed for extinction via spectral/WKB methods"},
+    {"template_id": "logistic_growth", "confidence": 0.8, "twist": "logistic (Verhulst) equation recovered as the deterministic mean-field limit of the microscopic stochastic birth-death process"}
+  ],
+  "core_model_summary": "A microscopic birth-death stochastic process (chemical master equation) for population reactions whose deterministic mean-field limit is the logistic Verhulst growth equation, with extinction times obtained via spectral and WKB analysis."
+}

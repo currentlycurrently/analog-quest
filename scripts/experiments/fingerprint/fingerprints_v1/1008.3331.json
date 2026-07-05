@@ -1,0 +1,31 @@
+{
+  "arxiv_id": "1008.3331",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A first-order stochastic differential equation for a single scalar driven by additive white noise, with a drift that combines a linear dissipative term and a discontinuous sign-of-state term, optionally with a constant forcing.",
+    "canonical_form": "\\dot{x} = -\\,\\mathrm{sgn}(x) - \\gamma\\, x + F + \\xi(t),\\quad \\langle \\xi(t)\\xi(t')\\rangle = 2D\\,\\delta(t-t')",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "additive_noise",
+      "damping_term",
+      "threshold_nonlinearity",
+      "driving_term",
+      "first_order_in_time",
+      "probability_flow",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar dynamical variable whose relaxation and correlations are sought"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "noise", "meaning": "additive delta-correlated white noise driving the state"},
+      {"role": "parameter", "meaning": "linear damping coefficient"},
+      {"role": "parameter", "meaning": "amplitude of the state-independent sign(x) drift (piecewise-constant restoring term)"},
+      {"role": "parameter", "meaning": "constant external forcing"}
+    ]
+  },
+  "confidence": 0.72,
+  "notes": "Two candidate cores: the underlying Langevin SDE (drift = sign term + linear damping + additive white noise) versus its associated Fokker-Planck PDE whose time-dependent propagator and correlation functions are the actual results. I take the SDE as the core model per SDE<->Fokker-Planck duality; the discontinuous sign(x) drift produces matching conditions at x=0 (u(0-)=u(0+) and a jump in derivative), so boundary/matching conditions are structurally essential. Extracted equations are mostly solution formulas (parabolic-cylinder-function series) rather than the defining equation.",
+  "_model": "claude-fable-5-agent-20260705"
+}

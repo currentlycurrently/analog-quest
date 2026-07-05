@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00649",
+  "assignments": [
+    {
+      "template_id": "reaction_diffusion_turing",
+      "confidence": 0.85,
+      "twist": "nonlocal dispersal predator-prey with shifting habitat (traveling wave front in moving frame)"
+    }
+  ],
+  "core_model_summary": "Reaction-diffusion predator-prey system with nonlocal dispersal kernels and habitat shift traveling at constant speed.",
+  "_model": "claude-haiku-4-5"
+}

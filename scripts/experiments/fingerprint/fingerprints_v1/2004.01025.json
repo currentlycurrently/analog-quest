@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2004.01025",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A continuous-time first-order flow that moves a state down the gradient of a scalar function preconditioned by the inverse of a symmetric positive-definite metric operator (the Hessian of a potential), whose forward-Euler-type discretizations recover a proximal/Bregman update.",
+    "canonical_form": "\\dot{x}(t) = -H(x(t))^{-1}\\nabla F(x(t)),\\quad H=\\nabla^2\\psi;\\qquad \\text{discrete: } \\nabla\\psi(x_{k+1})=\\nabla\\psi(x_k)-\\eta\\nabla F(x_k)\\;\\Leftrightarrow\\; x_{k+1}=\\arg\\min_{x}\\;\\eta\\langle x,\\nabla F(x_k)\\rangle+D_\\psi(x,x_k)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "gradient_flow",
+      "energy_functional",
+      "convexity_central",
+      "first_order_in_time",
+      "constrained_optimization",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "point being evolved/optimized in the domain"},
+      {"role": "time", "meaning": "continuous flow time, discretized into step index"},
+      {"role": "objective", "meaning": "scalar function whose gradient drives the flow"},
+      {"role": "parameter", "meaning": "step size / discretization interval"},
+      {"role": "parameter", "meaning": "metric operator = Hessian of a strictly convex potential (defines the geometry and Bregman divergence)"}
+    ]
+  },
+  "confidence": 0.62,
+  "notes": "Genuinely dual object: the novel unifying structure is the Riemannian/Hessian-metric gradient-flow ODE, but the paper is equally about its discretizations (the mirror-descent proximal/Bregman update and natural-gradient-descent update), which could be classified object_type 'optimization' or 'discrete_update'. Chose 'ode' because the central results characterize the discrete methods as partial vs full discretizations of this flow. When H is not a Hessian, the Bregman/dual structure is dropped and only the metric-flow remains.",
+  "_model": "claude-fable-5-agent-20260705"
+}

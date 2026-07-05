@@ -1,0 +1,38 @@
+{
+  "arxiv_id": "2306.13252",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A first-order-in-time scalar evolution equation with a nonlinear (quadratic) flux and a dissipative fractional-order smoothing operator, admitting self-similar single-signed source-type solutions of the form u(x,t)=t^{-1/2}U(x/t^{1/2}).",
+    "canonical_form": "u_t + u\\,u_x = -\\nu\\,(-\\Delta)^{\\alpha} u,\\qquad u(x,t)=\\frac{1}{\\sqrt{t}}\\,U\\!\\left(\\frac{x}{\\sqrt{t}}\\right)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "nonlinear_flux",
+      "advection_term",
+      "damping_term",
+      "scale_invariance",
+      "shock_formation",
+      "conservation_law"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field evolving in one spatial dimension"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "space", "meaning": "continuous spatial coordinate"},
+      {"role": "parameter", "meaning": "dissipation strength and fractional dissipation order (criticality)"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A scalar conservation law with quadratic nonlinear flux and a dissipative term, stripped of the self-similar/near-identity change of variables.",
+    "structural_features": [
+      "nonlinear_flux",
+      "advection_term",
+      "damping_term",
+      "conservation_law"
+    ]
+  },
+  "confidence": 0.72,
+  "notes": "Core is the (hypoviscous) Burgers equation at criticality; a nonlocal/fractional dissipation replaces the standard Laplacian, and the paper's later sections extend the same nonlinear-transport-plus-dissipation structure to a 2D active-scalar (SQG-type) equation with a singular integral (Hilbert/Riesz-transform) velocity, which shares the nonlinear-flux + dissipation skeleton. Extraction noise present in the display equations; identification rests mainly on title/abstract.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

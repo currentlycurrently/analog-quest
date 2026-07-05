@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "2004.09314",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A system of coupled first-order autonomous ODEs in which mass flows irreversibly between labeled compartments, with the transfer rate given by a bilinear product of two state variables plus a linear removal term.",
+    "canonical_form": "\\dot{x}_1 = -\\alpha_1 x_1 y,\\quad \\dot{x}_2 = -\\alpha_2 x_2 y,\\quad \\dot{y} = (\\alpha_1 x_1 + \\alpha_2 x_2)\\,y - \\gamma y,\\quad \\dot{z} = \\gamma y",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "compartmental_flow",
+      "multiplicative_interaction",
+      "mass_action_kinetics",
+      "first_order_in_time",
+      "exponential_growth_or_decay",
+      "conservation_law"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "compartment occupancies whose total is conserved"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "bilinear transfer rate coefficients and linear removal rate"},
+      {"role": "control", "meaning": "time-dependent modulation of a transfer coefficient (scenario switching)"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "First-order autonomous ODE system with bilinear cross-coupling between state variables and a linear decay term, conserving the total of all states.",
+    "structural_features": [
+      "compartmental_flow",
+      "multiplicative_interaction",
+      "mass_action_kinetics",
+      "first_order_in_time",
+      "conservation_law"
+    ]
+  },
+  "confidence": 0.62,
+  "notes": "No display equations were extracted; identification of the compartmental bilinear ODE structure rests on the title/abstract (differential system, later discretised as an integrator). The discrete-time version is a numerical tool, not the core object, so the core is taken as the continuous ODE. A time-varying control on the transfer coefficient represents the confinement strategies.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

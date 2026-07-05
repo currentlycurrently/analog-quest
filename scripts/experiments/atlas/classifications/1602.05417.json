@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1602.05417",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "cable_telegrapher_equation",
+      "confidence": 0.9,
+      "twist": "telegrapher's / transmission-line equations with time-varying line parameters (L, C from a moving boundary), giving a second-order signal PDE with time-dependent coefficients that can drive exponential amplitude growth"}
+  ],
+  "core_model_summary": "The coupled transmission-line (telegrapher) equations for voltage and current in a resonator whose moving boundary makes the per-length inductance and capacitance time-dependent."
+}

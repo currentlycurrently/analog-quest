@@ -1,0 +1,37 @@
+{
+  "arxiv_id": "1807.11410",
+  "core_model": {
+    "object_type": "network_dynamics",
+    "structure_summary": "A system of coupled first-order ODEs for angular state variables, each driven by an intrinsic frequency and by a weighted (possibly asymmetric and signed) sum of sines of pairwise state differences over a graph.",
+    "canonical_form": "\\dot{x}_i = \\omega_i - \\sum_{j=1}^n a_{ij}\\,\\sin(x_i - x_j),\\quad i = 1,\\dots,n",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "phase_coupling",
+      "network_topology_matters",
+      "pairwise_coupling",
+      "oscillatory_dynamics",
+      "first_order_in_time",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "angular variables on the circle"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "intrinsic frequencies and directed/signed/weighted coupling matrix entries"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "First-order ODE system with additive constant drift and sinusoidal pairwise-difference coupling, whose synchronized/phase-locked solutions are fixed points of the difference dynamics.",
+    "structural_features": [
+      "phase_coupling",
+      "pairwise_coupling",
+      "first_order_in_time",
+      "oscillatory_dynamics",
+      "fixed_point_equilibrium"
+    ]
+  },
+  "confidence": 0.92,
+  "notes": "Clear generalized Kuramoto model with a weighted/signed/oriented adjacency matrix a_{ij}. Main results (synchronization existence/uniqueness, phase locking) concern fixed points of the phase-difference dynamics. Model is already deterministic, so the skeleton is the bare coupled-phase ODE with the graph weights left generic."
+}

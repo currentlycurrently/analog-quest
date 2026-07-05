@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2401.00625",
+  "core_model": {
+    "object_type": "algebraic",
+    "structure_summary": "A deterministic algebraic map that forms normalized similarity weights from inner products of two matrices (rescaled by a dimension factor and passed through a row-normalizing exponential) and applies them to a third matrix, with an outer concatenation of parallel such maps.",
+    "canonical_form": "Y = \\mathrm{softmax}\\!\\left(\\frac{QK^{\\top}}{\\sqrt{d}}\\right) V,\\quad \\mathrm{Multi}(Q,K,V) = \\mathrm{Concat}(Y_1,\\dots,Y_h)\\,W",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "normalization_constraint",
+      "multiplicative_interaction",
+      "entropy_term"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "input matrices carrying vector-valued rows"},
+      {"role": "parameter", "meaning": "output projection matrix and dimension scaling factor"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "algebraic",
+    "summary": "A normalized bilinear form: exponentiate and row-normalize a scaled matrix inner product, then use it to take a convex combination of rows of another matrix.",
+    "structural_features": [
+      "normalization_constraint",
+      "multiplicative_interaction"
+    ]
+  },
+  "confidence": 0.25,
+  "notes": "This is a survey (resource-efficient LLMs) with no genuine central mathematical model of its own; the only display equations are the standard scaled-dot-product / multi-head attention map, which is representative background rather than a result the paper is about. Reported with low confidence for that reason. softmax gives both a normalization (simplex) constraint and a log/exp (entropy-like) structure."
+}

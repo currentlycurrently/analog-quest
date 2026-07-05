@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "2012.11533",
+  "core_model": {
+    "object_type": "discrete_update",
+    "structure_summary": "A fixed-point iteration that repeatedly takes a damped forward step against a maximal monotone operator formed by interconnecting component operators, converging to the root where the operator vanishes.",
+    "canonical_form": "x^{j+1} = x^{j} - \\alpha\\, S(x^{j}), \\qquad S = S_1 + S_2, \\quad \\alpha = m/L^2; \\qquad \\text{fixed point: } 0 \\in S(x^\\star)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": ["fixed_point_equilibrium", "gradient_flow", "convexity_central", "pairwise_coupling", "network_topology_matters"],
+    "variables": [
+      {"role": "state", "meaning": "an iterated trajectory (periodic signal) in a function space being driven to a fixed point"},
+      {"role": "parameter", "meaning": "a step size set by monotonicity/Lipschitz constants and the interconnection structure of component operators"},
+      {"role": "objective", "meaning": "the residual of a maximal monotone operator whose zero is sought"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "The continuous-time limit of the damped iteration is a gradient-flow-type descent along a maximal monotone operator, relaxing to the operator's zero.",
+    "structural_features": ["gradient_flow", "fixed_point_equilibrium", "convexity_central"]
+  },
+  "confidence": 0.58,
+  "notes": "Central contribution is an operator-splitting fixed-point iteration for the periodic (steady) behavior of interconnected maximal monotone systems; taken as core as a discrete update, with the underlying monotone inclusion 0 in S(x). Skeleton is the continuous-time descent flow whose equilibrium solves the inclusion. Monotonicity plays the structural role that convexity plays for gradient descent.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2401.00625",
+  "core_model": {
+    "object_type": "algebraic",
+    "structure_summary": "A parameterized algebraic map that forms a normalized (row-sum-to-one) weighting from a bilinear product of two input matrices and applies it to a third matrix, optionally as a concatenation of several parallel such maps.",
+    "canonical_form": "Z = \\mathrm{softmax}\\!\\left(\\frac{Q K^{\\top}}{\\sqrt{d}}\\right) V,\\qquad \\mathrm{MultiHead} = \\mathrm{Concat}(Z_1,\\dots,Z_h)\\,W",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "multiplicative_interaction",
+      "normalization_constraint",
+      "threshold_nonlinearity"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "input query matrix"},
+      {"role": "state", "meaning": "input key matrix"},
+      {"role": "state", "meaning": "input value matrix"},
+      {"role": "parameter", "meaning": "output projection / mixing matrix"},
+      {"role": "parameter", "meaning": "scaling constant normalizing the bilinear score"}
+    ]
+  },
+  "confidence": 0.35,
+  "notes": "This is a survey paper with no central mathematical model of its own; the only display equations are the standard scaled dot-product attention and multi-head attention maps, which are cited background architecture rather than a result the paper proves. I report the attention map as the nominal core but with low confidence per the instruction to use <0.5 when the paper has no clear central model.",
+  "_model": "claude-fable-5-agent-20260705"
+}

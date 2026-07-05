@@ -1,0 +1,1 @@
+{"arxiv_id": "2403.00222", "assignments": [{"template_id": "bellman_equation", "confidence": 0.92, "twist": "Q-learning with subsampling of local agents; value function convergence with Bellman noise"}], "core_model_summary": "Reinforcement learning via Bellman value iteration on subsampled state spaces for scalable multi-agent decision-making.", "_model": "claude-haiku-4-5"}

@@ -1,0 +1,35 @@
+{
+  "arxiv_id": "2401.00688",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A generative latent-variable model on higher-order interactions in which each interaction's count is Poisson-distributed with a rate given by a bilinear form of per-node soft membership vectors and a symmetric block-affinity matrix, with node attributes drawn Bernoulli from membership-weighted probabilities.",
+    "canonical_form": "P(A_e\\mid U,W)=\\mathrm{Poisson}(\\lambda_e/\\kappa_{|e|}),\\quad \\lambda_e=\\sum_{i,j\\in e}\\sum_{k,q} u_{ik}\\,w_{kq}\\,u_{jq},\\qquad P(x_{iz}\\mid U,\\beta)=\\pi_{iz}^{x_{iz}}(1-\\pi_{iz})^{1-x_{iz}},\\ \\ \\pi_{iz}=\\sum_k u_{ik}\\beta_{kz},\\qquad \\sum_k \\beta_{kz}=1",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "network",
+    "structural_features": [
+      "network_topology_matters",
+      "multiplicative_interaction",
+      "pairwise_coupling",
+      "normalization_constraint"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "observed higher-order interaction counts and binary node attributes"},
+      {"role": "parameter", "meaning": "per-node soft membership vectors, block-affinity matrix, and attribute-membership matrix"},
+      {"role": "objective", "meaning": "the log-likelihood being maximized over the latent parameters"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Maximization of a log-likelihood in which the mean interaction rate is a low-rank bilinear form of membership matrices and a block matrix, subject to a normalization constraint on memberships.",
+    "structural_features": [
+      "multiplicative_interaction",
+      "network_topology_matters",
+      "constrained_optimization",
+      "normalization_constraint"
+    ]
+  },
+  "confidence": 0.78,
+  "notes": "Core is a mixed-membership stochastic block model for (attributed) hypergraphs: a Poisson likelihood with a bilinear u W u rate plus a Bernoulli attribute likelihood. The dimensionality-reduction/visualization layer (HyperNEO) is downstream and not the central generative model. Deterministic skeleton is the maximum-likelihood fit of the low-rank bilinear mean structure lambda = U W U^T.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

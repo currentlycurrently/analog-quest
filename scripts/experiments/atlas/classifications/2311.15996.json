@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2311.15996",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "langevin_sde",
+      "confidence": 0.85,
+      "twist": "score-based generative diffusion SDE with a learned drift (neural score) and its deterministic ODE counterpart"},
+    {"template_id": "fokker_planck",
+      "confidence": 0.85,
+      "twist": "the associated density-evolution PDE whose residual bounds the ODE-vs-SDE Wasserstein gap"}
+  ],
+  "core_model_summary": "A score-based diffusion generative model as a drift-diffusion SDE paired with its Fokker-Planck density evolution, used to bound and close the gap between ODE- and SDE-induced sampling distributions."
+}

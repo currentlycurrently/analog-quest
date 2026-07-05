@@ -12,6 +12,116 @@ rate limiting.
 
 ---
 
+## Session log — 2026-07-05 (strategic review + substrate pivot experiment)
+
+The admin returned after ~10 weeks asking a strategic question: is there
+another angle that could make this project produce meaningful results?
+The session produced a diagnosis, a prior-art landscape, and a measured
+first experiment on a new matching substrate. Read this before touching
+the normalizer or matcher again.
+
+**Diagnosis (agreed with admin):** the exact-hash matcher is structurally
+blind to its own target — cross-domain isomorphisms are by definition the
+same structure in *different* notation, and exact hashing only finds
+identical notation. See docs/ROADMAP.md Item 2, which already conceded
+this. The proposed replacement substrate: LLM structural fingerprints of
+each paper's *core model* (notation-independent JSON schema), matched on
+structure, with LLM pairwise verification feeding the existing human
+moderation layer. The 2024-era "no LLM calls" constraint that shaped the
+SymPy pipeline is obsolete — fingerprinting costs fractions of a cent per
+paper.
+
+**What happened this session:**
+
+1. **Prior-art landscape archived** at docs/LANDSCAPE.md (AI deep-research
+   scan + verification appendix). Headline: the four-part combination
+   (model-level extraction + cross-discipline matching at scale + tiered
+   human review + published catalog) is unoccupied as of mid-2026. Two
+   2025 preprints circle pieces of it; both were read and verified this
+   session — both effectively dormant. One scan claim was refuted
+   (arXiv:2507.00964 is a name collision, not a Discovery Engine
+   follow-up). Cite Romiti (2508.05724) and The Discovery Engine
+   (2505.17500) in any public write-up.
+2. **Gold-standard recall experiment built and run** at
+   scripts/experiments/fingerprint/ (self-contained; imports extract.py
+   read-only; never touches the DB). 12 canonical cross-domain
+   isomorphisms as planted paper pairs + 23 distractors, fingerprinted in
+   isolation, matched on an interpretable no-ML score.
+3. **Results** (results/report.md + results/ANALYSIS-2026-07-05.md):
+   pre-registered criterion recall@25 ≥ 0.5 **NOT met** (5/12 = 0.42),
+   but median planted rank 57/966 vs ~484 random, with 5 known
+   isomorphisms in the top 7 of 966 — including Black–Scholes↔heat and
+   Kuramoto↔power-grid, which the exact-hash substrate could never find.
+   The misses are diagnosed (single-view fingerprints split pairs that
+   dress the same skeleton differently; categorical agreement terms hurt)
+   and a concrete v2 is specified in the analysis file.
+
+**V2 was run the same day (2026-07-05, admin approved).** Changes:
+multi-view fingerprints (deterministic_skeleton), features-carry-the-score
+matching, one ground-truth correction, 3 held-out pairs curated by a
+vocabulary-blind agent. **Result: criterion NOT met again — recall@25 =
+5/12 = 0.42, identical to v1.** Full diagnosis in
+results/ANALYSIS-v2-2026-07-05.md. Key facts: canonical-adjacent pairs
+match near-perfectly (optimal-transport↔matching #1 and held-out
+sine-Gordon↔Josephson #2, both score 1.000 — the held-out hit validates
+against vocabulary bias); but as a top-25 matcher the substrate plateaus,
+while as a candidate *blocker* it reaches 11/12 recall in the top 23% of
+the ranking. The persistent misses (ising_hopfield above all) are largely
+a gold-standard realization problem: research papers are twists on
+canonical models, and pairwise paper matching must see through two layers
+of variation at once.
+
+**Path B was then measured the same day (admin approved) and it WORKED.**
+scripts/experiments/atlas/ classifies each paper against a library of 50
+canonical structures (in isolation) instead of matching papers pairwise.
+Pre-registered results (atlas/results/ANALYSIS-2026-07-05.md):
+  - C1 classification recall: **0.93** (28/30) — PASS
+  - C2 atlas join: 9/15 strict / **14/15 equivalence-class** — the 5
+    strict misses were correct classifications into split-but-equivalent
+    templates (e.g. black_scholes_pde vs heat_diffusion_equation), fixed
+    by a post-hoc template-equivalence graph; only 1 pair (logistic
+    adoption) was a true error.
+  - C3 distractor precision: **0.93** (14/15) — PASS
+The pairs pairwise matching buried deepest (ising_hopfield rank 548,
+fokker_planck 265) the atlas joins cleanly, because each paper only has
+to resemble a fixed template, not a differently-twisted partner. **Path B
+is the recommended spine.** Path A (pairwise LLM verification) is deferred
+to the novel-analogy tail.
+
+**What the next agent should do, in order:**
+1. Path B is chosen. Do NOT re-run fingerprint pairwise matching as a
+   primary matcher — it plateaued twice at 0.42 and the atlas supersedes
+   it. The remaining go/no-go input is cheap: **A/B the atlas
+   classification on a Haiku-class model** (all runs so far used Fable 5;
+   the cost model assumes a small model). If recall/precision hold,
+   corpus-scale cost is cents per 1000 papers.
+2. Build the template-equivalence graph properly (atlas/template_equivalences.json
+   is a start) — it is the atlas taxonomy backbone.
+3. Corpus pilot: classify ~2,000 real corpus papers, publish the atlas
+   ("structure X appears in fields A,B,C, here are the papers"), route
+   cross-domain joins through the existing moderation UI. First shippable
+   artifact.
+2. Whichever path is chosen: A/B fingerprint quality on a Haiku-class
+   model before any corpus-scale run (the cost model assumes a small
+   model; all measurements so far used Fable 5).
+3. If the admin parks the project instead: the re-entry tripwire is to
+   re-run scripts/experiments/fingerprint/ unchanged with the
+   then-current model — if recall@25 clears 0.5 with no engineering,
+   capabilities have caught up; revive.
+4. The operational items from the 2026-04 session log below (admin
+   moderation pass, corpus breadth, second moderator, first catalog
+   entry) are still open and still the project's real bottleneck if the
+   substrate graduates.
+
+**Uncommitted at session end:** docs/LANDSCAPE.md, HANDOFF.md edits,
+docs/ROADMAP.md edit, scripts/experiments/fingerprint/* (including
+generated data/, fingerprints/, results/). The admin decides what to
+commit; data/bundles contains ~7MB of extracted paper content that could
+reasonably be gitignored while committing the code, ground truth, and
+results.
+
+---
+
 ## Session log — 2026-04-24/25 (pause handover)
 
 The admin returned to the project after ~10 days and worked with an agent
@@ -95,17 +205,17 @@ Normalizer improvements (Roadmap Item 1) and algorithmic improvements
 (Item 2) matter eventually, but without progress on items 3–5 they're
 polishing an engine that has nowhere to go.
 
-**Landscape note** (admin asked about prior art at end of session):
-The project appears genuinely underexplored. Adjacent work: Lean/Coq
-formal libraries (only-already-formalized math), Gentner's
-structure-mapping theory (academic foundation, 40 years old, not
-applied at arXiv scale), Semantic Scholar / OpenAlex (citation
-networks, not equation structure), LLM research tools like Elicit or
-Consensus (abstract-level summarization, not structural matching).
-Equation-structure matching over arXiv LaTeX with a tiered human-review
-filter is not a pattern anyone else seems to be running. The admin
-mentioned doing a day of targeted search before further investment
-would be worthwhile.
+**Landscape note** (updated 2026-07-05; original 2026-04 note superseded):
+The "day of targeted search before further investment" happened. A full
+prior-art scan is archived at [docs/LANDSCAPE.md](./docs/LANDSCAPE.md) —
+read it before making any novelty claims. Short version: the project's
+four-part combination (notation-independent model extraction +
+cross-discipline matching at arXiv scale + tiered human review +
+published catalog) is unoccupied as of mid-2026, but two 2025 preprints
+(Romiti arXiv:2508.05724, The Discovery Engine arXiv:2505.17500) are
+circling parts of it and must be cited in any public write-up. The
+durable differentiation is the delivered human-reviewed catalog, not
+the matching engine. The window is open but closing.
 
 **State of the repo at handover:**
   - Committed on main: everything listed above.

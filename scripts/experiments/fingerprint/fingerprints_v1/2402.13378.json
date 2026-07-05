@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2402.13378",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "A parametric family of linear programs over couplings with fixed marginals that minimize the integral of a parameter-indexed cost (a concave transform of a pairwise surplus function), where the parameter interpolates between total-surplus maximization and worst-case fairness.",
+    "canonical_form": "\\min_{\\pi\\in\\Pi(\\mu,\\nu)} \\int_{X\\times Y} c_\\alpha(x,y)\\,d\\pi(x,y), \\quad c_\\alpha(x,y)=\\frac{1-\\exp(\\alpha\\,U(x,y))}{\\alpha}\\ (\\alpha\\neq0),\\quad c_0(x,y)=-U(x,y)",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "transport_cost",
+      "constrained_optimization",
+      "convexity_central",
+      "normalization_constraint",
+      "phase_transition"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "coupling measure on the product space with prescribed marginals (transport plan)"},
+      {"role": "objective", "meaning": "expected parameter-indexed cost integrated against the coupling"},
+      {"role": "parameter", "meaning": "scalar index selecting the concave cost transform (inequality-aversion / aggregation attitude)"},
+      {"role": "space", "meaning": "two coordinate spaces being matched, with a pairwise surplus/utility kernel between them"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The objective is linear in the transport plan (an optimal transport LP), but the cost kernel is a nonlinear concave transform of the surplus and the parametric family is the point of the paper, hence 'mixed' linearity. Object is a constrained optimization over probability couplings with fixed marginals; auxiliary graph/matching probability bounds at the end are not the core structure.",
+  "_model": "claude-fable-5-agent-20260705"
+}

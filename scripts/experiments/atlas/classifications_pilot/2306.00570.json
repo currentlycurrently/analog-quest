@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00570",
+  "assignments": [
+    {
+      "template_id": "gross_pitaevskii",
+      "confidence": 0.8,
+      "twist": "quasilinear (cubic nonlinearity in dispersion coefficient) defocusing variant with global scattering for small data"
+    }
+  ],
+  "core_model_summary": "Quasilinear Schrodinger equation with cubic nonlinearity, defocusing structure, and phase-rotation symmetry.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,41 @@
+{
+  "arxiv_id": "2311.15996",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A first-order Ito equation with generic drift and time-dependent state-independent noise amplitude, paired with its time-reversed equation whose drift is corrected by the gradient of the log of the evolving density, and with a noise-free first-order flow that transports the same family of densities; the results bound the discrepancy between the distributions induced by the noisy and noise-free versions via the residual of the associated second-order density-evolution equation.",
+    "canonical_form": "dx_t = f(x_t,t)\\,dt + g(t)\\,dW_t;\\quad dx_t = \\big(f(x_t,t) - g^2(t)\\,\\nabla \\log p(x_t,t)\\big)dt + g(t)\\,d\\bar{W}_t;\\quad \\frac{dx_t}{dt} = f(x_t,t) - \\tfrac{1}{2} g^2(t)\\,\\nabla \\log p(x_t,t);\\quad \\partial_t p + \\nabla\\cdot(f p) - \\tfrac{1}{2} g^2 \\nabla^2 p = 0",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "additive_noise",
+      "probability_flow",
+      "advection_term",
+      "diffusion_term",
+      "entropy_term",
+      "variational_bound"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "vector-valued trajectory whose marginal density is the object of interest"},
+      {"role": "time", "meaning": "continuous independent variable, run forward and reversed"},
+      {"role": "noise", "meaning": "standard Wiener increment with time-dependent state-independent amplitude"},
+      {"role": "parameter", "meaning": "generic drift field"},
+      {"role": "parameter", "meaning": "learned approximation to the gradient of the log density, whose error drives the studied gap"},
+      {"role": "objective", "meaning": "quadratic discrepancy between the true log-density gradient and its approximation, plus a residual of the density-evolution equation used as regularizer"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order deterministic flow whose velocity field is a base drift minus half the squared noise amplitude times the gradient of the log of the density it transports, equivalently a continuity equation advecting that density.",
+    "structural_features": [
+      "first_order_in_time",
+      "probability_flow",
+      "advection_term",
+      "entropy_term"
+    ]
+  },
+  "confidence": 0.88,
+  "notes": "Three tightly linked faces of one structure appear: the forward/reverse noisy equations, the noise-free density-transport flow, and the second-order density-evolution equation connecting them. The core model is taken as this SDE/ODE/density-equation triple since the paper's main theorem bounds the distance between the noisy- and noise-free-induced distributions by the density-equation residual. Objective functionals (score matching, KL/Wasserstein bounds, residual regularizer) are analysis tools around this core."
+}

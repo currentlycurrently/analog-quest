@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "2401.00661",
+  "core_model": {
+    "object_type": "game_theoretic",
+    "structure_summary": "A leader-follower strategic interaction in which one agent maximizes a discounted revenue objective over a bounded control while followers select among options to maximize private utilities, coupled to a temporal-difference (Q-learning) fixed-point update over the leader's control-value function.",
+    "canonical_form": "\\max_{\\{p^t\\}}\\ \\sum_{t}\\gamma^t r_t\\ \\ \\text{s.t. partition is Nash-stable},\\ p_{\\min}\\le p^t\\le p_{\\max};\\quad Q\\leftarrow Q+\\alpha\\big(r_t+\\gamma\\max_{a'}Q'-Q\\big)",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "network",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "constrained_optimization",
+      "competitive_exclusion",
+      "threshold_nonlinearity",
+      "multiplicative_interaction",
+      "first_order_in_time"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "occupancy/congestion and remaining-charge descriptors of agents and options"},
+      {"role": "control", "meaning": "bounded price set by the revenue-maximizing leader"},
+      {"role": "objective", "meaning": "discounted cumulative reward and per-agent utility functions"},
+      {"role": "parameter", "meaning": "discount factor, learning rate, utility weights, and bounds"},
+      {"role": "time", "meaning": "discrete decision epochs"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "A constrained bilevel optimization: maximize a discounted cumulative objective over a bounded control subject to an equilibrium (Nash-stable assignment) constraint among self-interested followers.",
+    "structural_features": [
+      "constrained_optimization",
+      "fixed_point_equilibrium",
+      "competitive_exclusion",
+      "threshold_nonlinearity"
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "Composite paper: a game-based follower-selection model (Nash-stable partition with utility functions), a leader revenue maximization, and a Q-learning update to solve it. Treated the game-plus-bilevel-control structure as core; the deterministic skeleton is the constrained bilevel optimization with an equilibrium constraint, stripping the stochastic RL solver. Equations are noisy (piecewise waiting-time term, utility form); confidence moderate.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

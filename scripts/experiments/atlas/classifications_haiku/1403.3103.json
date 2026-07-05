@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1403.3103",
+  "assignments": [
+    {
+      "template_id": "optimal_transport",
+      "confidence": 0.94,
+      "twist": "measure-theoretic characterization of Monge-Kantorovich solution uniqueness and support"
+    }
+  ],
+  "core_model_summary": "Optimal mass transport problem (Monge-Kantorovich) analyzed via measure theory and Kantorovich duality to characterize solution structure and uniqueness."
+}

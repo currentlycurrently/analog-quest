@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "1402.3007",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A first-order-in-time, second-order-in-space linear diffusion equation solved piecewise on adjoining domains, with the pieces coupled by continuity of the field and of its (coefficient-weighted) first spatial derivative across the interfaces.",
+    "canonical_form": "u^{(j)}_t = \\kappa_j\\, u^{(j)}_{xx}, \\quad x\\in(a_j,b_j); \\qquad u^{(j)}(x,0)=u_0^{(j)}(x); \\qquad u^{(j)}(c,t)=u^{(j+1)}(c,t), \\quad \\kappa_j u^{(j)}_x(c,t)=\\kappa_{j+1} u^{(j+1)}_x(c,t)",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "first_order_in_time",
+      "diffusion_term",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field defined on each spatial subdomain whose evolution is sought"},
+      {"role": "time", "meaning": "evolution parameter, first-order derivative"},
+      {"role": "space", "meaning": "one-dimensional position, partitioned into subdomains separated by interfaces"},
+      {"role": "parameter", "meaning": "per-domain diffusion coefficient setting the smoothing rate"}
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "Core is the piecewise linear diffusion (parabolic) equation with matching (continuity of field and weighted flux) at known interface locations plus prescribed far-field limits; the transform machinery (Fourier integrals, error functions) is solution technique, not the model.",
+  "_model": "claude-fable-5-agent-20260705"
+}

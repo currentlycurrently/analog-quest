@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "2401.01850",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A two-state continuous-time Markov process alternating between two discrete states with constant transition rates, yielding exponentially distributed dwell times whose rate parameters are the reciprocals of the mean residence times and depend on a control parameter driving a continuous transition.",
+    "canonical_form": "\\mu_A(\\tau)=\\alpha e^{-\\alpha\\tau}, \\quad \\mu_B(\\tau)=\\beta e^{-\\beta\\tau}, \\quad \\alpha=\\langle\\tau_B\\rangle^{-1},\\ \\beta=\\langle\\tau_A\\rangle^{-1}",
+    "linearity": "linear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "jump_process",
+      "spin_or_binary_units",
+      "exponential_growth_or_decay",
+      "phase_transition",
+      "detailed_balance",
+      "first_order_in_time"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "binary occupancy indicating which of two macroscopic states the system currently resides in"},
+      {"role": "time", "meaning": "continuous time, with dwell durations in each state"},
+      {"role": "parameter", "meaning": "constant switching rates between the two states, set by inverse mean dwell times"},
+      {"role": "control", "meaning": "external density-like parameter tuning the bistable transition and the dwell-time statistics"}
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "The order parameters (polarization and milling, defined from aggregate vector sums) are measurement observables; the paper's central *model* is explicitly the two-state Markov process with exponential dwell times governing the bistable switching. 'phase_transition' captures the continuous, control-parameter-driven bistability. Detailed_balance included since a two-state Markov chain is trivially reversible.",
+  "_model": "claude-fable-5-agent-20260705"
+}

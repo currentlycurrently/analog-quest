@@ -1,0 +1,35 @@
+{
+  "arxiv_id": "1403.3103",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization of a linear cost functional over the set of couplings of two fixed marginal measures, characterized through its dual and a pointwise optimality condition on the support of the optimal coupling.",
+    "canonical_form": "\\min_{\\gamma\\in\\Pi(\\mu,\\nu)} \\int c(x,y)\\,d\\gamma(x,y)\\;=\\;\\max_{\\phi(x)+\\psi(y)\\le c(x,y)}\\left(\\int \\phi\\,d\\mu+\\int\\psi\\,d\\nu\\right),\\qquad c(x,y)=\\phi(x)+\\psi(y)\\ \\text{on supp}\\,\\gamma,\\quad D_x c(x,y)=\\nabla\\phi(x)",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "transport_cost",
+      "constrained_optimization",
+      "convexity_central",
+      "variational_bound"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "coupling measure on the product space with prescribed marginals"},
+      {"role": "objective", "meaning": "integrated cost of transporting mass between two distributions"},
+      {"role": "parameter", "meaning": "cost kernel as a function of a pair of points"},
+      {"role": "control", "meaning": "dual potentials realizing Kantorovich duality"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Constrained minimization of a linear objective over probability couplings with fixed marginals, reducing to the duality/first-order optimality condition on the transport support.",
+    "structural_features": [
+      "transport_cost",
+      "constrained_optimization",
+      "convexity_central"
+    ]
+  },
+  "confidence": 0.7,
+  "notes": "The Monge-Kantorovich optimal mass transport problem with a general cost. Objective is linear in the coupling but the cost kernel is a general (possibly nonlinear) function, hence linearity 'mixed'. Display equations are heavily contaminated with LaTeX macro-definition noise; identification rests on title/abstract plus the duality equation c(T1x,T2x)=phi+psi and D1 c=grad phi.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

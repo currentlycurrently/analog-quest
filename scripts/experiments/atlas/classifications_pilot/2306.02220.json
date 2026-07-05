@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2306.02220",
+  "assignments": [
+    {
+      "template_id": "binary_spin_energy",
+      "confidence": 0.95,
+      "twist": "random bond weights on planar graphs with Kramers-Wannier duality"
+    }
+  ],
+  "_model": "claude-haiku-4-5"
+}

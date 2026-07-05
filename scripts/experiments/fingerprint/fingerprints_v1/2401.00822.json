@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2401.00822",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A system of coupled stochastic differential equations for an ordered set of interacting scalars whose drift combines a pairwise inverse-difference repulsion (the negative gradient of a logarithmic interaction potential) with a confining term, driven by state-dependent (multiplicative) noise, with an associated Fokker-Planck equation for the density.",
+    "canonical_form": "dx_\\alpha = \\Big[\\sum_{\\beta\\neq\\alpha} \\frac{g(x_\\alpha,x_\\beta)}{x_\\alpha - x_\\beta} - \\partial_\\alpha V(\\vec x)\\Big]dt + h(x_\\alpha)\\,dB_\\alpha; \\qquad V(\\vec x) = -\\tfrac12\\sum_{\\alpha\\neq\\beta}\\log|x_\\alpha - x_\\beta| + \\text{(confinement)}; \\qquad \\partial_t P = \\partial_x[(\\partial_x + 2V')P]",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "multiplicative_noise",
+      "pairwise_coupling",
+      "energy_functional",
+      "gradient_flow",
+      "probability_flow",
+      "phase_transition",
+      "mean_field_coupling"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "ordered collection of interacting scalars (eigenvalue-like) undergoing repulsion and confinement"},
+      {"role": "time", "meaning": "evolution parameter of the stochastic dynamics"},
+      {"role": "noise", "meaning": "independent Brownian increments entering multiplicatively (state-scaled)"},
+      {"role": "parameter", "meaning": "coupling/monitoring rate and dephasing strength controlling regime (Coulomb gas vs exponential separation)"},
+      {"role": "objective", "meaning": "logarithmic interaction potential whose gradient sets the deterministic drift"}
+    ]
+  },
+  "confidence": 0.83,
+  "notes": "Central object is the Dyson-Brownian-motion-type coupled SDE for the ordered scalars (with the log-repulsion / Coulomb-gas potential and multiplicative Brownian driving), together with its Fokker-Planck dual for the density. The stochastic Schrodinger equation is the upstream source; the reduced eigenvalue SDE is what the main results (stationary inverse-Marchenko-Pastur law, exact finite-time joint distribution) are about.",
+  "_model": "claude-fable-5-agent-20260705"
+}

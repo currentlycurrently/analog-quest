@@ -1,0 +1,36 @@
+{
+  "arxiv_id": "2401.00657",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization of the asymptotic convergence factor (spectral radius) of an affine fixed-point iteration over its penalty and relaxation parameters, where the iteration matrix depends on those parameters through resolvent expressions of two symmetric operators.",
+    "canonical_form": "u^{k+1}=(I+\\alpha Q(\\theta))u^{k}+c(\\theta,\\alpha),\\qquad \\min_{\\theta,\\alpha}\\ \\rho\\big(I+\\alpha Q(\\theta)\\big)=\\min_{\\theta,\\alpha}\\max_i\\,|1+\\alpha\\lambda_i(Q(\\theta))|",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "first_order_in_time",
+      "convexity_central",
+      "energy_functional",
+      "constrained_optimization"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "iterate vector converging to the fixed point of an affine map"},
+      {"role": "control", "meaning": "penalty and relaxation parameters tuning the iteration matrix"},
+      {"role": "objective", "meaning": "spectral radius / worst-case contraction factor to be minimized"},
+      {"role": "parameter", "meaning": "eigenvalues of the parameter-dependent iteration operator built from resolvents of two symmetric operators"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "discrete_update",
+    "summary": "An affine fixed-point iteration whose convergence is governed by the spectral radius of its linear part, with a quadratic objective defining the fixed point.",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "first_order_in_time",
+      "convexity_central"
+    ]
+  },
+  "confidence": 0.78,
+  "notes": "Two intertwined objects: the affine linear iteration u^{k+1}=(I+alphaQ)u^k+c (an ADMM/relaxed-ADMM solver of a quadratic problem) and the outer optimization that minimizes its convergence factor over (theta,alpha). Chose the outer parameter-optimization of a linear fixed-point iteration as core since the paper's results are the closed-form optimal parameters; skeleton is the bare linear fixed-point iteration. linearity marked mixed: iteration is affine/linear, but the objective in the parameters (spectral radius) is nonlinear.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

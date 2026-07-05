@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.00940",
+  "assignments": [
+    {"template_id": "nash_equilibrium",
+      "confidence": 0.6,
+      "twist": "best-response payoff maximization with Kuhn-Tucker/KKT conditions on a simplex-constrained routing game, yielding a congestion paradox"}
+  ],
+  "core_model_summary": "A network delivery/routing game in which each player maximizes payoff subject to flow-conservation constraints, solved via Kuhn-Tucker conditions and best-response/Nash equilibrium reasoning that produces a congestion paradox.",
+  "_model": "claude-fable-5-agent-20260705"
+}

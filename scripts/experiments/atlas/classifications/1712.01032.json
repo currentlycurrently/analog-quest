@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1712.01032",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "damped_driven_oscillator",
+      "confidence": 0.88,
+      "twist": "damped driven oscillator with a nonlinear sinusoidal (pendulum) restoring force instead of the linear Hooke term, studied numerically for its resonance characteristics in the nonchaotic regime and compared to the linear case"}
+  ],
+  "core_model_summary": "A driven, damped simple pendulum, i.e. the harmonic oscillator's forced-and-damped resonance problem generalized to a sinusoidal restoring potential."
+}

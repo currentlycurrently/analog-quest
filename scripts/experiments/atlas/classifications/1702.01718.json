@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1702.01718",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "scalar_conservation_law",
+      "confidence": 0.95,
+      "twist": "the Lighthill-Whitham-Richards traffic conservation law, shown to be the dense-traffic limit of the discrete Follow-the-Leader particle model viewed as a numerical (Lagrangian) scheme, with weak entropy solutions"}
+  ],
+  "core_model_summary": "A first-order scalar hyperbolic conservation law for traffic density (LWR) whose weak entropy solutions arise as the limit of a Follow-the-Leader discretization in Lagrangian coordinates."
+}

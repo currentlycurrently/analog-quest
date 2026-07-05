@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2203.16300",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A linear time-invariant transfer-function block in feedback with a static sector-bounded nonlinearity (a Lur'e system), analyzed via a graphical/frequency condition to certify a sustained oscillation.",
+    "canonical_form": "\\dot x = f(x), \\quad y = G(s)\\,u, \\quad u = \\varphi(y), \\quad \\partial\\varphi \\in [0,K]",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": ["oscillatory_dynamics", "threshold_nonlinearity", "damping_term", "fixed_point_equilibrium", "first_order_in_time"],
+    "variables": [
+      {"role": "state", "meaning": "internal state of the linear dynamical block"},
+      {"role": "time", "meaning": "continuous time"},
+      {"role": "control", "meaning": "feedback signal produced by the static nonlinearity"},
+      {"role": "parameter", "meaning": "slope bound of the sector nonlinearity"},
+      {"role": "parameter", "meaning": "coefficients defining the linear transfer function (plant + controller)"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A linear vector flow closed by a static sector-bounded feedback nonlinearity, whose loop admits a limit cycle.",
+    "structural_features": ["oscillatory_dynamics", "threshold_nonlinearity", "fixed_point_equilibrium", "first_order_in_time"]
+  },
+  "confidence": 0.72,
+  "notes": "Central object is the Lur'e feedback system (linear plant G(s) plus static sector nonlinearity phi) and a circle-criterion-type condition for oscillation onset. Equations given are mostly in transfer-function/frequency form; the underlying time-domain object is a first-order nonlinear ODE loop, so object_type ode with 'mixed' linearity. Some ambiguity between representing it as ode vs algebraic frequency condition.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

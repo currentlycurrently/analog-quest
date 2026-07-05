@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2401.01850",
+  "assignments": [
+    {
+      "template_id": "markov_chain",
+      "confidence": 0.85,
+      "twist": "two-state discrete system with exponentially-distributed dwell times"
+    }
+  ],
+  "core_model_summary": "A two-state Markov chain with exponential holding times characterizes the bistable transitions between polarized and milling states in confined animal groups.",
+  "_model": "claude-haiku-4-5"
+}

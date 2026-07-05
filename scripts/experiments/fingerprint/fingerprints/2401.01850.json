@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "2401.01850",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A continuous-time two-state Markov jump process alternating between two discrete configurations with constant transition rates, giving exponentially distributed dwell times in each state and a control-parameter-dependent bistability.",
+    "canonical_form": "\\mu_1(\\tau) = \\alpha e^{-\\alpha\\tau}, \\quad \\mu_2(\\tau) = \\beta e^{-\\beta\\tau}; \\qquad \\text{state} \\in \\{1,2\\}, \\; 1 \\underset{\\beta}{\\overset{\\alpha}{\\rightleftarrows}} 2, \\; \\alpha=\\alpha(\\rho),\\,\\beta=\\beta(\\rho)",
+    "linearity": "linear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": ["jump_process", "spin_or_binary_units", "phase_transition", "exponential_growth_or_decay"],
+    "variables": [
+      {"role": "state", "meaning": "a binary label indicating which of two discrete configurations the system currently occupies"},
+      {"role": "time", "meaning": "continuous time with exponentially distributed residence intervals"},
+      {"role": "parameter", "meaning": "the two constant transition rates, tuned by a scalar control (density) that drives the transition"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order linear relaxation equation for the occupation probability of one state, with two constant rates, relaxing exponentially to a fixed point.",
+    "structural_features": ["first_order_in_time", "exponential_growth_or_decay", "fixed_point_equilibrium"]
+  },
+  "confidence": 0.68,
+  "notes": "The order parameters (milling M and polarization P) are observable definitions, not the core model. The central model is the two-state Markov process with exponential waiting times whose rates depend on a control parameter (confinement density), producing a continuous transition and bistability. Skeleton is the mean-field master/rate equation for the occupation probability, a linear first-order ODE.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,35 @@
+{
+  "arxiv_id": "1402.3007",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A field on a partitioned one-dimensional domain evolves by a linear equation that is first order in time and second order in space in each subregion, coupled only through matching of the field and its weighted first derivative across the interior interfaces.",
+    "canonical_form": "u^{(j)}_t = \\kappa_j\\, u^{(j)}_{xx},\\quad x\\in(a_j,b_j);\\qquad u^{(j)}(x,0)=u_0^{(j)}(x);\\qquad u^{(j)}(c,t)=u^{(j+1)}(c,t),\\quad \\kappa_j u^{(j)}_x(c,t)=\\kappa_{j+1} u^{(j+1)}_x(c,t)",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "first_order_in_time",
+      "diffusion_term",
+      "boundary_conditions_central",
+      "exponential_growth_or_decay"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field defined piecewise on each subinterval"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "space", "meaning": "one-dimensional coordinate partitioned into subregions"},
+      {"role": "parameter", "meaning": "per-region diffusion coefficient"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A linear parabolic equation with a Laplacian smoothing term, first order in time, solved on subdomains stitched by continuity of the field and its weighted derivative.",
+    "structural_features": [
+      "first_order_in_time",
+      "diffusion_term",
+      "boundary_conditions_central"
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "Core is the linear diffusion equation on a piecewise-homogeneous domain; the essential mathematical content is the interface matching (continuity of field and weighted flux) plus far-field/initial conditions, which the extracted Fourier/error-function machinery is a solution method for, not a distinct model.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2401.01397",
+  "assignments": [
+    {
+      "template_id": "logistic_growth",
+      "confidence": 0.75,
+      "twist": "discrete Bass diffusion model on Cartesian networks with boundary effects reducing adoption rates exponentially with distance from boundaries"
+    }
+  ],
+  "core_model_summary": "Adoption process combining spontaneous adoption rate and peer-effect driven adoption across spatial networks, where boundary effects locally suppress adoption saturation."
+}

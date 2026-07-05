@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2401.01171",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "An ensemble of monotonically growing random counting trajectories is summarized by the mean first time at which trajectories reach a given level, and the derivative of this mean first-passage time with respect to the level detects a critical threshold where the growth regime qualitatively changes.",
+    "canonical_form": "\\tau(x) = \\frac{1}{M} \\sum_{i=1}^{M} t_i(x), \\qquad t_i(x) = \\inf\\{t : x_i(t) \\ge x\\}, \\qquad \\text{threshold from behavior of } \\partial \\tau(x)/\\partial x",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "jump_process",
+      "phase_transition",
+      "probability_flow"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "cumulative count of each realization, non-decreasing in time"},
+      {"role": "time", "meaning": "continuous or discrete independent variable along each trajectory"},
+      {"role": "parameter", "meaning": "target level at which first passage is recorded"},
+      {"role": "parameter", "meaning": "number of realizations in the ensemble average"},
+      {"role": "objective", "meaning": "mean first-passage time as a function of the target level, whose slope locates the critical threshold"}
+    ]
+  },
+  "confidence": 0.5,
+  "notes": "Very few equations were extracted; the paper is a methodology/data-analysis paper rather than one proposing a closed-form dynamical model. The core object is the mean first-passage time statistic of an ensemble of growing counting processes, with the regime-change threshold identified from the level-derivative of that statistic. The probability_flow and jump_process tags are inferred from the first-passage framework rather than from explicit displayed equations."
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2403.01171",
+  "assignments": [
+    {
+      "template_id": "binary_spin_energy",
+      "confidence": 0.80,
+      "twist": "ferromagnetic Ising model expanded via renormalization group on Bethe lattice, recovered as continuum quartic field theory at one-loop order"
+    }
+  ],
+  "core_model_summary": "The paper performs renormalization group expansion of the ferromagnetic Ising model on the Bethe lattice and shows the continuum limit recovers a quartic field theory with explicit coupling constants.",
+  "_model": "claude-haiku-4-5"
+}

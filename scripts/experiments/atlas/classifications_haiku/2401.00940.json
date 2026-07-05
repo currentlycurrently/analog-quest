@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2401.00940",
+  "assignments": [
+    {
+      "template_id": "nash_equilibrium",
+      "confidence": 0.75,
+      "twist": "best-response allocation under congestion costs on multi-dimensional delivery networks"
+    }
+  ],
+  "core_model_summary": "Strategic optimization of goods distribution across network nodes where players allocate resources to minimize delivery costs, with best responses characterized by Kuhn-Tucker conditions."
+}

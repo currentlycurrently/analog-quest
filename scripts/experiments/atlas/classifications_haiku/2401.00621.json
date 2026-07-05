@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2401.00621",
+  "assignments": [
+    {
+      "template_id": "linear_schrodinger",
+      "confidence": 0.85,
+      "twist": "fractional Laplacian with L2-normalized constraint and subcritical nonlinear perturbation"
+    }
+  ],
+  "core_model_summary": "Fractional Schrödinger equation with potential and nonlinearity, seeking multiplicity of solutions on a fixed L2-norm sphere via constrained minimization.",
+  "_model": "claude-haiku-4-5"
+}

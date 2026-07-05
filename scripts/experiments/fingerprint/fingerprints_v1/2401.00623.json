@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2401.00623",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "variational",
+    "structure_summary": "A ground state is sought as a constrained critical point of an energy functional over the manifold of functions with fixed squared integral norm, the critical points solving a second-order elliptic equation in two-dimensional space coupled to three auxiliary fields that are determined nonlocally by the square of the primary unknown through first-order constraint equations, with the nonlinear term growing exponentially at infinity.",
+    "canonical_form": "-\\Delta u + \\lambda u + A_0 u + (A_1^2 + A_2^2) u = f(u) \\ \\text{in } \\mathbb{R}^2; \\quad \\partial_1 A_2 - \\partial_2 A_1 = -\\tfrac{1}{2}|u|^2, \\ \\partial_1 A_1 + \\partial_2 A_2 = 0, \\ \\partial_1 A_0 = A_2 |u|^2, \\ \\partial_2 A_0 = -A_1 |u|^2; \\quad \\int_{\\mathbb{R}^2} |u|^2\\, dx = a^2; \\qquad E(u) = \\tfrac{1}{2}\\int \\big[|\\nabla u|^2 + (A_1^2 + A_2^2)|u|^2\\big] - \\int F(u)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "constrained_optimization",
+      "energy_functional",
+      "diffusion_term",
+      "quadratic_self_interaction",
+      "multiplicative_interaction"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "primary scalar function on the two-dimensional continuum, the unknown constrained minimizer"},
+      {"role": "state", "meaning": "three auxiliary fields slaved to the square of the primary unknown via first-order relations, expressible as explicit nonlocal convolution functionals of it"},
+      {"role": "space", "meaning": "two-dimensional continuous independent variable"},
+      {"role": "parameter", "meaning": "unknown multiplier enforcing the fixed-norm constraint"},
+      {"role": "parameter", "meaning": "prescribed value of the squared integral norm"},
+      {"role": "objective", "meaning": "energy functional (gradient quadratic form plus auxiliary-field coupling minus nonlinear potential) minimized on the constraint set"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "Equivalently typeable as a coupled nonlocal elliptic PDE system with a normalization constraint. The auxiliary fields make the effective equation for the primary unknown nonlocal and quintic-like in it; the exponential (critical/supercritical) growth of the nonlinearity is handled by a truncation family, and a radial ansatz reduces the system to a single nonlocal equation. The 'multiplicative_interaction' tag refers to the products of auxiliary fields with the primary unknown; 'quadratic_self_interaction' to the squared unknown sourcing the auxiliary fields."
+}

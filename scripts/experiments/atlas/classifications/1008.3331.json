@@ -1,0 +1,9 @@
+{
+  "arxiv_id": "1008.3331",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "fokker_planck", "confidence": 0.9, "twist": "dry (Coulomb) friction adds a sign(velocity) drift, giving a piecewise-linear drift and non-smooth potential"},
+    {"template_id": "langevin_sde", "confidence": 0.85, "twist": "Langevin equation with both viscous and solid-solid dry-friction forces on a Brownian particle"}
+  ],
+  "core_model_summary": "An overdamped Brownian particle subject to both viscous and dry (Coulomb) friction, solved via its Langevin equation and the associated time-dependent Fokker-Planck equation for the velocity propagator."
+}

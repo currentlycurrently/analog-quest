@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00537",
+  "assignments": [
+    {
+      "template_id": "reaction_diffusion_turing",
+      "confidence": 0.9,
+      "twist": "spatial stochastic reaction-diffusion for gene expression with bistable cross-repression motif"
+    }
+  ],
+  "core_model_summary": "Coupled spatial reaction-diffusion equations for gene expression dynamics with cross-repressive interactions stabilized by optimal parameter tuning.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "1402.1384",
+  "core_model": {
+    "object_type": "variational",
+    "structure_summary": "Minimization of a free-energy functional that bounds the log-partition function of a factorized posterior, built from Kullback-Leibler divergences between a factorized trial distribution and a prior plus a quadratic data-fidelity coupling through a linear operator, whose stationary points coincide with a message-passing fixed point.",
+    "canonical_form": "\\min_{\\{a_i\\},\\{c_i\\}} \\mathcal F = \\sum_i D_{\\mathrm{KL}}(Q_i\\Vert P_0) + \\frac{1}{2\\Delta}\\sum_\\mu\\Bigl[(y_\\mu - \\textstyle\\sum_i F_{\\mu i}a_i)^2 + \\sum_i F_{\\mu i}^2 c_i\\Bigr], \\quad y = Fx + \\xi",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "free_energy_minimization",
+      "variational_bound",
+      "entropy_term",
+      "fixed_point_equilibrium",
+      "mean_field_coupling",
+      "energy_functional"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "per-coordinate means and variances of a factorized trial distribution being estimated"},
+      {"role": "objective", "meaning": "free-energy functional (KL divergence terms plus quadratic residual) to be minimized"},
+      {"role": "parameter", "meaning": "fixed linear operator (measurement matrix) coupling latent coordinates to observations"},
+      {"role": "parameter", "meaning": "noise/variance parameter learned during optimization"},
+      {"role": "noise", "meaning": "additive Gaussian perturbation on the linear observations"}
+    ]
+  },
+  "confidence": 0.8,
+  "notes": "Underlying object is a linear observation model y=Fx+noise inferred via variational free-energy minimization; the paper's results are about the free energies (naive mean-field and Bethe) and their stationary points, so I take 'variational' as the core object rather than the generative 'statistical_model'. Equation extraction is noisy but the free-energy structure is clear.",
+  "_model": "claude-fable-5-agent-20260705"
+}

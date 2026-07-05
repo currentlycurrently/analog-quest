@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.01632",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "master_equation",
+      "confidence": 0.85,
+      "twist": "multi-species birth-death/consumer-resource master equation solved via probability generating functions for out-of-equilibrium (transient) distributions"}
+  ],
+  "core_model_summary": "A continuous-time Markovian master equation for a multi-resource consumer-resource population, with gain-loss transition rates between abundance states, whose transient and stationary probability distributions are obtained from generating functions."
+}

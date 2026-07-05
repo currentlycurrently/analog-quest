@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.00671",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "langevin_sde",
+      "confidence": 0.62,
+      "twist": "distribution-dependent (McKean-Vlasov) mean-field Ito SDE with Poisson-jump noise on two separated time scales, studied via a large-deviation / averaging principle"}
+  ],
+  "core_model_summary": "Establishes a large deviation principle for a two-time-scale McKean-Vlasov (mean-field, distribution-dependent) system of Ito SDEs with jumps, using a variational/weak-convergence framework and a Khasminskii-type averaging principle."
+}

@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.00664",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization over a convex feasible set of an expected-value objective, approximated by the empirical average of independent samples (optionally regularized by a strongly convex Bregman/norm term), with results on the sample size sufficient for the empirical minimizer to be near-optimal.",
+    "canonical_form": "\\min_{x\\in\\mathcal{X}} F(x):=\\mathbb{E}[f(x,\\xi)] \\;\\approx\\; \\min_{x\\in\\mathcal{X}} F_N(x):=N^{-1}\\sum_{j=1}^{N} f(x,\\xi_j)\\;(+\\,\\lambda_0 V(x)),\\qquad \\Pr[F(\\hat{x})-F(x^*)\\le\\epsilon]\\ge 1-\\beta",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "constrained_optimization",
+      "convexity_central",
+      "fixed_point_equilibrium",
+      "scale_invariance",
+      "entropy_term"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "decision vector in a convex feasible set"},
+      {"role": "noise", "meaning": "i.i.d. random samples entering the objective, averaged empirically"},
+      {"role": "objective", "meaning": "expected loss and its empirical (regularized) surrogate to be minimized"},
+      {"role": "parameter", "meaning": "problem dimension, target accuracy, confidence level, strong-convexity/Lipschitz constants, and regularization weight governing the sample-complexity bound"}
+    ]
+  },
+  "confidence": 0.78,
+  "notes": "Core is the sample-average-approximation of a convex stochastic program (empirical-mean minimization approximating an expectation minimization); the main results are metric-entropy-free sample-complexity bounds. convexity_central and constrained_optimization are the load-bearing structural features. scale_invariance is a weak fit for the dimension-dependence/rate scaling of the bounds; entropy_term is a marginal fit via the metric-entropy (covering-number) terms the paper removes — both included tentatively and could be dropped. fixed_point_equilibrium denotes the optimizer as a stationary/minimizing point.",
+  "_model": "claude-fable-5-agent-20260705"
+}

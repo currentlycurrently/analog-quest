@@ -1,0 +1,38 @@
+{
+  "arxiv_id": "1506.01137",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A one-step birth-death master equation for a probability distribution over a nonnegative integer count, with polynomial transition rates built from falling-factorial products of the state.",
+    "canonical_form": "\\frac{\\partial P(n,t)}{\\partial t}=\\sum_r\\big[W(n-r,r)P(n-r,t)-W(n,r)P(n,t)\\big],\\quad W(n,r)\\propto \\frac{n!}{(n-b)!}",
+    "linearity": "linear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "probability_flow",
+      "jump_process",
+      "mass_action_kinetics",
+      "compartmental_flow",
+      "first_order_in_time",
+      "logistic_saturation"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "nonnegative integer count of units"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "objective", "meaning": "probability distribution over integer states evolving in time"},
+      {"role": "parameter", "meaning": "transition rate constants and integer stoichiometric coefficients of the elementary steps"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A scalar first-order ordinary differential equation with competing power-law source and sink terms plus a linear decay, yielding logistic-type saturation of the mean.",
+    "structural_features": [
+      "first_order_in_time",
+      "logistic_saturation",
+      "quadratic_self_interaction",
+      "fixed_point_equilibrium"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "Core is the chemical/birth-death master equation (probability flow); the generating-function PDE and moment hierarchy are derived tools. Skeleton is the mean-field rate equation d(rho)/dt = (lambda a / b!) rho^b - (mu d / c!) rho^c - gamma rho, the Verhulst logistic ODE for the special-case exponents.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

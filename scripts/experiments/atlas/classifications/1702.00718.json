@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1702.00718",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "cable_telegrapher_equation",
+      "confidence": 0.93,
+      "twist": "the neuronal cable equation generalized to arbitrary cable geometry via Frenet-Serret framing, reducing to a diffusion-with-decay equation carrying a geometric source term set by the cross-section area and its derivatives"}
+  ],
+  "core_model_summary": "The dendritic/axonal cable equation (leaky diffusion of membrane voltage) extended to non-cylindrical geometry, where curvature, torsion, and varying cross-section enter as an effective geometric source term."
+}

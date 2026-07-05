@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2306.00338",
+  "assignments": [],
+  "core_model_summary": "Combinatorial optimization of arm-pulling strategies in non-stationary bandits with action-induced state dependencies, solved via linear programming relaxation and online learning.",
+  "_model": "claude-haiku-4-5"
+}

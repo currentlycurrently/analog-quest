@@ -1,0 +1,23 @@
+{
+  "arxiv_id": "2401.00743",
+  "core_model": {
+    "object_type": "algebraic",
+    "structure_summary": "An invertible linear change of basis on a function defined over a Cartesian product of finite index sets, producing signed-sum coordinates that isolate main and higher-order interaction components, together with the minimal linear dependence relations (circuits) among the raw values.",
+    "canonical_form": "c_S = \\sum_{v} \\chi_S(v)\\, w_v, \\quad \\chi_S(v)=\\prod_{i} \\phi_i(v_i); \\qquad w_{11} = w_{10} + w_{01} - w_{00} \\;\\; (\\text{a rank-one / circuit relation})",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "pairwise_coupling",
+      "conservation_law"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "values assigned to each point of a Cartesian product of finite index sets"},
+      {"role": "objective", "meaning": "transformed coordinates (signed linear combinations) measuring main effects and higher-order interactions"},
+      {"role": "parameter", "meaning": "fixed orthogonal-type sign/weight vectors defining the linear transform per coordinate"}
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "Static algebraic structure: an orthogonal (Walsh/Hadamard-type) linear transform decomposing a function on a product lattice of alleles into interaction coordinates, plus minimal linear dependence relations ('circuits'). Few controlled-vocabulary tags fit cleanly; 'pairwise_coupling' captures the interaction-coordinate emphasis and the vanishing signed sums act like linear conservation constraints. No dynamics.",
+  "_model": "claude-fable-5-agent-20260705"
+}

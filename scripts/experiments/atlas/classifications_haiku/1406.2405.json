@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1406.2405",
+  "assignments": [
+    {
+      "template_id": "replicator_dynamics",
+      "confidence": 0.93,
+      "twist": "stochastic version with Markovian switching between environments"
+    }
+  ],
+  "core_model_summary": "Stochastic replicator dynamics where payoff/environment switches via continuous-time Markov chain, generalizing deterministic frequency-dependent selection."
+}

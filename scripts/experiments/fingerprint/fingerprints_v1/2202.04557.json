@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2202.04557",
+  "core_model": {
+    "object_type": "network_dynamics",
+    "structure_summary": "A continuous-time relaxation of a state vector following the negative gradient of a scalar energy functional, whose fixed point equals a three-stage map that scores a query against stored rows by a similarity, passes the scores through a nonlinear separation (softmax-type) function, and projects back through the stored matrix.",
+    "canonical_form": "z = P\\,\\mathrm{sep}(\\mathrm{sim}(M,q)); \\qquad \\tau\\,\\dot v = -\\partial E/\\partial v, \\quad E(v) = \\tfrac12\\sum_i v_i^2 - \\log\\sum_j e^{\\mathrm{sim}(M_{ij},v_i)}; \\qquad v^{t+1} = M\\,\\sigma(M^{\\top} v^t)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "first_order_in_time",
+      "energy_functional",
+      "gradient_flow",
+      "fixed_point_equilibrium",
+      "pairwise_coupling",
+      "multiplicative_update",
+      "threshold_nonlinearity"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "vector being iteratively relaxed toward a stored pattern"},
+      {"role": "time", "meaning": "relaxation parameter for the gradient dynamics"},
+      {"role": "parameter", "meaning": "stored matrix of memory rows against which the state is scored and reprojected"},
+      {"role": "objective", "meaning": "Lyapunov energy functional whose descent drives the dynamics"}
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "The unifying object is the similarity-separation-projection map, realized equivalently as gradient descent on a Lyapunov energy with second-order (pairwise) neuron interactions; softmax separation gives the log-sum-exp energy. Could also be tagged discrete_update given the iterated fixed-point map z=P sigma(M q).",
+  "_model": "claude-fable-5-agent-20260705"
+}

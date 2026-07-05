@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2401.00661",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "bellman_equation",
+      "confidence": 0.78,
+      "twist": "Q-learning value iteration (discounted return, max over price actions) used to learn a personalized dynamic pricing policy"},
+    {"template_id": "nash_equilibrium",
+      "confidence": 0.6,
+      "twist": "Bertrand price-competition among charging stations with a Nash-stable partition constraint on self-interested users' station choices"}
+  ],
+  "core_model_summary": "A reinforcement-learning dynamic pricing policy in which a charging station maximizes discounted revenue via Q-learning while self-interested users choose stations according to a game-theoretic (Bertrand/Nash-stable) equilibrium selection model."
+}

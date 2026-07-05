@@ -1,0 +1,1 @@
+{"arxiv_id": "2306.04733", "assignments": [{"template_id": "sir_compartmental", "confidence": 0.95, "twist": "epidemic spread on group-structured populations with inter-group and intra-group contact rates"}], "core_model_summary": "SIR compartmental epidemic dynamics on populations organized into correlated group structures.", "_model": "claude-haiku-4-5"}

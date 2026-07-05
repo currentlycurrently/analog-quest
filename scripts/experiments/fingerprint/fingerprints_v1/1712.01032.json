@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "1712.01032",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A single second-order nonlinear ordinary differential equation with a first-derivative dissipative term, a sinusoidal restoring nonlinearity of the state, and a periodic external forcing term, studied near resonance.",
+    "canonical_form": "\\ddot{x} + \\gamma\\,\\dot{x} + \\omega_0^2 \\sin x = F_0\\cos(\\omega t)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "driving_term",
+      "oscillatory_dynamics",
+      "threshold_nonlinearity"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar angular displacement"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "dissipation rate, natural frequency, and drive amplitude/frequency"},
+      {"role": "control", "meaning": "periodic external forcing at tunable frequency"}
+    ]
+  },
+  "confidence": 0.88,
+  "notes": "Core is the damped driven equation with sin(x) nonlinearity; the linear (sin x -> x) harmonic-oscillator version is the comparison baseline. threshold_nonlinearity is used here in the sense of the bounded sinusoidal restoring term (no better tag for a sinusoidal potential); no strictly matching feature for sin(x) exists in the vocabulary.",
+  "_model": "claude-fable-5-agent-20260705"
+}

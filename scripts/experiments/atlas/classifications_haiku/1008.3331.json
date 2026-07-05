@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "1008.3331",
+  "assignments": [
+    {
+      "template_id": "langevin_sde",
+      "confidence": 0.95,
+      "twist": "dry friction (Coulomb) added to standard viscous friction"
+    },
+    {
+      "template_id": "fokker_planck",
+      "confidence": 0.95,
+      "twist": "FP equation with discontinuous drift at zero from dry friction"
+    }
+  ],
+  "core_model_summary": "A Langevin stochastic differential equation governing Brownian motion under both viscous and dry (Coulomb) friction, solved via the associated Fokker-Planck equation."
+}

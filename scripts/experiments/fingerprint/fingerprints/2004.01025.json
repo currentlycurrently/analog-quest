@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2004.01025",
+  "core_model": {
+    "object_type": "discrete_update",
+    "structure_summary": "An iterative update that at each step minimizes a linearized objective plus a Bregman-divergence proximity term, equivalently a metric-preconditioned gradient step obtained by discretizing a continuous flow.",
+    "canonical_form": "x_{k+1} = \\arg\\min_{x} \\; \\eta \\langle x, \\nabla F(x_k)\\rangle + D_\\psi(x, x_k), \\quad\\text{equivalently}\\quad \\nabla\\psi(x_{k+1}) = \\nabla\\psi(x_k) - \\eta \\nabla F(x_k), \\quad \\dot x = -H(x)^{-1}\\nabla F(x)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": ["gradient_flow", "energy_functional", "first_order_in_time", "convexity_central", "constrained_optimization", "fixed_point_equilibrium"],
+    "variables": [
+      {"role": "state", "meaning": "vector iterate being updated"},
+      {"role": "time", "meaning": "iteration index / continuous flow time"},
+      {"role": "objective", "meaning": "scalar function whose gradient drives the update"},
+      {"role": "parameter", "meaning": "step size / discretization scale"},
+      {"role": "parameter", "meaning": "metric tensor (Hessian of a potential) preconditioning the gradient"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order continuous flow moving down the gradient of a scalar function preconditioned by the inverse of a state-dependent metric tensor.",
+    "structural_features": ["gradient_flow", "energy_functional", "first_order_in_time", "fixed_point_equilibrium"]
+  },
+  "confidence": 0.82,
+  "notes": "Core object is the discrete mirror-descent update; the paper's central claim is that it is a 'partial' discretization of the Riemannian gradient flow xdot = -H^{-1} grad F, which is the skeleton. Two faces of one structure (ode <-> discrete_update).",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

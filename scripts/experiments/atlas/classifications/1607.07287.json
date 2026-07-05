@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1607.07287",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "maximum_entropy_free_energy",
+      "confidence": 0.85,
+      "twist": "maximum path entropy (Maximum Caliber) inference over trajectory space, using canonical Gibbs/Boltzmann equilibrium distributions and partition-function ratios to derive the Jarzynski nonequilibrium work identity"}
+  ],
+  "core_model_summary": "An inference derivation in which canonical exponential-family (Gibbs) distributions from maximum entropy over path ensembles yield the ratio of partition functions relating work to free-energy differences."
+}

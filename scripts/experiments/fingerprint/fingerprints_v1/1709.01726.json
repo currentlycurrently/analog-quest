@@ -1,0 +1,35 @@
+{
+  "arxiv_id": "1709.01726",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A system of first-order nonlinear ordinary differential equations in which a conserved total mass flows among three labeled compartments, with transfer rates proportional to products of compartment variables plus linear leakage and replenishment terms, extended by a second removal channel whose bilinear interaction weakens the effective growth threshold.",
+    "canonical_form": "\\dot{x} = -\\beta x y - \\phi x + \\gamma (N - x - y), \\quad \\dot{y} = \\beta x y + \\sigma \\beta z y - \\alpha y, \\quad \\dot{z} = \\phi x - \\sigma \\beta z y, \\quad x + y + z + w = N",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "compartmental_flow",
+      "mass_action_kinetics",
+      "multiplicative_interaction",
+      "conservation_law",
+      "fixed_point_equilibrium",
+      "phase_transition"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "mass in the susceptible-to-transfer compartment"},
+      {"role": "state", "meaning": "mass in the actively growing compartment driving bilinear transfer"},
+      {"role": "state", "meaning": "mass in a secondary protected compartment that still interacts bilinearly at reduced strength"},
+      {"role": "time", "meaning": "continuous independent variable"},
+      {"role": "parameter", "meaning": "bilinear transfer rate coefficient"},
+      {"role": "parameter", "meaning": "linear outflow rate from the active compartment"},
+      {"role": "parameter", "meaning": "linear return rate restoring mass to the first compartment"},
+      {"role": "parameter", "meaning": "rate of diversion into the protected compartment"},
+      {"role": "parameter", "meaning": "attenuation factor for the protected compartment's bilinear interaction"},
+      {"role": "parameter", "meaning": "conserved total mass, sets the critical threshold ratio"}
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "The paper builds up through simpler three-compartment variants (with and without linear return flow); the central model is the final system with the second diversion channel, whose effect is to rescale the basic threshold ratio by the attenuation factor. Deterministic throughout; equilibria analyzed via Jacobians and a quadratic fixed-point equation."
+}

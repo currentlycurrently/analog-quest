@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2004.01025",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "mirror_descent_multiplicative_weights",
+      "confidence": 0.95,
+      "twist": "derived primally as a partial forward-Euler discretization of Hessian-metric Riemannian gradient flow, generalized beyond dual/Bregman potentials"}
+  ],
+  "core_model_summary": "Mirror Descent reinterpreted as a discretized gradient flow on a Riemannian manifold whose metric is the Hessian of the mirror potential, enabling generalization to non-Hessian geometries."
+}

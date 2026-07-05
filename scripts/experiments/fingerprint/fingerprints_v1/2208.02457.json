@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2208.02457",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A planar autonomous first-order system in which each variable's rate is a nonlinear function of itself multiplied by (in the cross term) a nonlinear function of the other variable, with the coupling term entering the two equations with opposite signs, admitting an exactly conserved scalar function that renders the system canonically Hamiltonian after a monotone change of variables.",
+    "canonical_form": "\\dot{x}_1 = a\\, f_1(x_1) f_2(x_2) - b\\, f_1(x_1), \\quad \\dot{x}_2 = -c\\, f_1(x_1) f_2(x_2) + d\\, f_2(x_2); \\qquad y_i = F_i(x_i),\\ F_i' = 1/f_i \\;\\Rightarrow\\; \\dot{y}_1 = \\partial H/\\partial y_2,\\ \\dot{y}_2 = -\\partial H/\\partial y_1, \\quad \\dot{H} = 0",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "multiplicative_interaction",
+      "predator_prey_asymmetry",
+      "conservation_law",
+      "energy_functional",
+      "oscillatory_dynamics",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "two positive scalar quantities coupled antisymmetrically through a product of functions of each"},
+      {"role": "time", "meaning": "continuous evolution variable"},
+      {"role": "parameter", "meaning": "four constant rate coefficients (two coupling strengths, two self-growth/decay rates)"},
+      {"role": "parameter", "meaning": "the pair of monotone shape functions defining the family; specific choices recover the classical bilinear case or the exactly solvable case"},
+      {"role": "objective", "meaning": "conserved scalar function of both variables that generates the dynamics in transformed coordinates and confines orbits to its level curves"}
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "The paper's contribution is the general Hamiltonian family of such antisymmetrically coupled product systems and the identification of the unique member with a closed-form elementary solution (transformed coupling function linear, i.e. quadratic inverse transform), plus power-law and N-component generalizations. The classical bilinear special case (f_i identity) is the cited background, not the core novelty."
+}

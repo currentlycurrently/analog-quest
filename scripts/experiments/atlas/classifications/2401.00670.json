@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00670",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "A hybrid physics-informed dynamic bioprocess model coupling macro-kinetic ODEs of metabolite/enzyme/protein states with neural-network surrogates trained on flux-balance-analysis (LP) solutions, embedded in a control/estimation scheme; a bespoke controlled-ODE-plus-ML framework not matching any single canonical template."
+}

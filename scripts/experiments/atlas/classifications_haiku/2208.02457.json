@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2208.02457",
+  "assignments": [
+    {
+      "template_id": "lotka_volterra",
+      "confidence": 0.92,
+      "twist": "power-law competition and N-component generalization"
+    }
+  ],
+  "core_model_summary": "A generalized predator-prey dynamics system admitting exact analytical solutions through Hamiltonian formalism applied to modified competition kernels.",
+  "_model": "claude-haiku-4-5"
+}

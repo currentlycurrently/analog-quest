@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2401.00743",
+  "core_model": {
+    "object_type": "algebraic",
+    "structure_summary": "A collection of scalar values indexed by tuples over a finite alphabet is re-expressed through fixed orthogonal sign-weighted linear combinations, and minimal linear dependence relations among these combinations are characterized.",
+    "canonical_form": "W_S = \\sum_{v} \\chi_S(v)\\, w_v,\\quad \\chi_S(v)\\in\\{+1,-1\\};\\qquad w_{11} = w_{10} + w_{01} - w_{00}\\ \\text{(zero-interaction / circuit relations)}",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "conservation_law",
+      "pairwise_coupling"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar value assigned to each tuple over a finite index alphabet"},
+      {"role": "parameter", "meaning": "fixed sign pattern defining each orthogonal transform coefficient"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "algebraic",
+    "summary": "A fixed linear (orthogonal sign-weighted) transform of a finite array of scalars together with the minimal linear dependence relations (vanishing higher-order combinations) among the transformed quantities.",
+    "structural_features": [
+      "conservation_law",
+      "pairwise_coupling"
+    ]
+  },
+  "confidence": 0.72,
+  "notes": "No dynamics: the paper's core object is a static linear-algebraic structure (a sign-weighted orthogonal transform, i.e. Walsh/Hadamard-type coefficients, plus minimal linear dependence relations 'circuits') on a finite grid of scalars indexed by tuples over an alphabet of size >=2. Structural-feature vocabulary is a poor fit for pure algebra; I used conservation_law for the vanishing linear-combination relations and pairwise_coupling for the two-index interaction terms. Lower confidence reflects the vocabulary mismatch rather than uncertainty about the object.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

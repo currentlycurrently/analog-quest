@@ -1,0 +1,8 @@
+{
+  "arxiv_id": "1501.04037",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "sine_gordon", "confidence": 0.95, "twist": "damped and ac-driven (biased) long-Josephson-junction sine-Gordon model studied for breather generation via nonlinear supratransmission"}
+  ],
+  "core_model_summary": "The perturbed sine-Gordon equation for the phase difference in a long Josephson junction, with damping and external ac drive, used to generate and detect breather modes."
+}

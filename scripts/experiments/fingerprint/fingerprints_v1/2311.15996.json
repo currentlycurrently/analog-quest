@@ -1,0 +1,33 @@
+{
+  "arxiv_id": "2311.15996",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A first-order stochastic differential equation with drift plus time-dependent state-independent noise, its deterministic counterpart obtained by replacing the noise with half the squared noise amplitude times the gradient of the log-density, and the linear second-order evolution equation for the density that both should satisfy, with the discrepancy (residual) between the learned drift and the true log-density gradient controlling a bound on the distance between the two induced distributions.",
+    "canonical_form": "dx_t = f(x_t,t)\\,dt + g(t)\\,dW_t; \\quad \\frac{dx_t}{dt} = f(x_t,t) - \\tfrac{1}{2} g^2(t) \\nabla \\log p(x_t,t); \\quad \\partial_t p + \\nabla\\cdot(f p) - \\tfrac{1}{2} g^2 \\nabla^2 p = 0",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "first_order_in_time",
+      "additive_noise",
+      "probability_flow",
+      "diffusion_term",
+      "advection_term",
+      "entropy_term",
+      "variational_bound",
+      "transport_cost"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "vector-valued trajectory whose law evolves in time"},
+      {"role": "time", "meaning": "continuous independent variable over a finite horizon, run forward and reversed"},
+      {"role": "noise", "meaning": "standard Wiener process driving the stochastic dynamics"},
+      {"role": "parameter", "meaning": "drift field of the base dynamics"},
+      {"role": "parameter", "meaning": "time-dependent scalar noise amplitude"},
+      {"role": "control", "meaning": "learned approximation to the gradient of the log-density, substituted into both dynamics"},
+      {"role": "objective", "meaning": "weighted expected squared error between the learned field and the true log-density gradient, plus a residual of the density evolution equation used as a regularizer"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The paper's core object is really a triple: a forward/reverse SDE, its deterministic probability-flow counterpart, and the associated second-order density evolution PDE; the main theorem bounds the quadratic transport distance between the SDE- and deterministic-flow-induced distributions by a residual of that PDE. Classified as sde since the paired stochastic/deterministic particle dynamics are the primary structure; pde (density evolution) is an equally defensible label."
+}

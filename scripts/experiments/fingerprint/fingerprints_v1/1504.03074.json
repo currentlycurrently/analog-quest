@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "1504.03074",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A linear parabolic equation, first order in time, whose spatial operator combines a second-derivative term with coefficient quadratic in the spatial variable, a first-order term with coefficient linear in the spatial variable, and a zeroth-order term, and which is reduced by a separable exponential-in-time ansatz to an equidimensional second-order ordinary differential equation with power-law solutions.",
+    "canonical_form": "u_t + \\tfrac{1}{2}\\alpha^2 x^2 u_{xx} + \\beta x u_x - \\beta u = 0; \\qquad u(x,t)=e^{\\mu t}\\,y(x) \\;\\Rightarrow\\; x^2 y'' + a\\,x\\,y' + b\\,y = 0, \\quad y = c_1 x^{k_1} + c_2 x^{k_2}",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "diffusion_term",
+      "advection_term",
+      "first_order_in_time",
+      "exponential_growth_or_decay"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field evolving over one continuous spatial variable and time"},
+      {"role": "time", "meaning": "continuous evolution variable, entering at first order"},
+      {"role": "space", "meaning": "positive continuous independent variable whose powers weight the derivative terms"},
+      {"role": "parameter", "meaning": "constant coefficients of the second-order, first-order, and zeroth-order terms"},
+      {"role": "parameter", "meaning": "separation constant of the exponential-in-time ansatz, entering the characteristic quadratic for the power-law exponents"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "Extracted equations also contain a background derivation via a multiplicative-noise stochastic differential equation and a heat-kernel integral representation, but these are auxiliary; the paper's central object is the linear degenerate parabolic equation and its reduction (via separation of variables) to an equidimensional ODE. Terminal/boundary data are dropped in the simplified version treated."
+}

@@ -1,0 +1,8 @@
+{
+  "arxiv_id": "1402.3007",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "heat_diffusion_equation", "confidence": 0.95, "twist": "piecewise-homogeneous domains coupled only through continuity of temperature and flux at unknown-value interfaces"}
+  ],
+  "core_model_summary": "The one-dimensional linear heat/diffusion equation solved separately in each homogeneous slab of a composite wall, joined by continuity of temperature and heat flux at the interfaces."
+}

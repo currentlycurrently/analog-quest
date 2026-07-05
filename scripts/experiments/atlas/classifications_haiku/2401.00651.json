@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00651",
+  "assignments": [],
+  "core_model_summary": "The paper proposes an inductive random walk embedding method for network analysis that learns node representations without node attributes, which is a machine learning technique rather than a canonical mathematical model.",
+  "_model": "claude-haiku-4-5"
+}

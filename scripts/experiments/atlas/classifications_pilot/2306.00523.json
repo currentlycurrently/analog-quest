@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00523",
+  "assignments": [
+    {
+      "template_id": "boltzmann_transport",
+      "confidence": 0.85,
+      "twist": "phase-space kinetic transport of charged particles with long-range mean-field coupling (Vlasov rather than collisional)"
+    }
+  ],
+  "core_model_summary": "A kinetic transport equation in phase space where particles evolve under self-consistent long-range Poisson interaction with their collective density.",
+  "_model": "claude-haiku-4-5"
+}

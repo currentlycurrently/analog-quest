@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00315",
+  "assignments": [
+    {
+      "template_id": "gradient_descent",
+      "confidence": 0.75,
+      "twist": "gradient-based optimization of multi-component loss balancing treatment effect estimation and intervention constraint"
+    }
+  ],
+  "core_model_summary": "Gradient descent optimization of a composite loss combining self-interaction prediction, treatment-aware interaction modeling, and intervention constraint regularization for uplift modeling.",
+  "_model": "claude-haiku-4-5"
+}

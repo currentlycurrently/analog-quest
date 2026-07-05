@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00281",
+  "assignments": [
+    {
+      "template_id": "variational_inference_free_energy",
+      "confidence": 0.8,
+      "twist": "transfer learning adaptation of VAE for out-of-distribution music generation"
+    }
+  ],
+  "core_model_summary": "Variational autoencoder (VAE) with transfer learning, which instantiates ELBO maximization for adapting a generative model to underrepresented music genres.",
+  "_model": "claude-haiku-4-5"
+}

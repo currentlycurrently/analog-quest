@@ -1,0 +1,38 @@
+{
+  "arxiv_id": "1702.00718",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A scalar field evolves first-order in time as a second spatial derivative with a spatially varying coefficient, recast as pure diffusion plus a source term whose profile is fixed by a prescribed spatially varying coefficient, minus a state-dependent sink.",
+    "canonical_form": "\\partial_t u(x,t) = \\partial_x\\!\\left[ a(x)\\,\\partial_x u(x,t) \\right] - r(u) \\;\\; \\Longleftrightarrow \\;\\; \\partial_t u = D\\,\\partial_x^2 u + S(x)\\,\\partial_x u - r(u)",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "diffusion_term",
+      "first_order_in_time",
+      "driving_term",
+      "advection_term",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field defined along a one-dimensional continuum"},
+      {"role": "time", "meaning": "evolution parameter, first derivative only"},
+      {"role": "space", "meaning": "arclength coordinate along a one-dimensional domain"},
+      {"role": "parameter", "meaning": "spatially varying coefficient (cross-sectional measure and its derivatives) that sets the effective diffusivity and the geometric source term"},
+      {"role": "parameter", "meaning": "state-dependent sink strength"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A scalar field on a one-dimensional continuum obeys a first-order-in-time linear diffusion equation with a spatially varying diffusivity, equivalently pure diffusion plus a space-dependent source/transport term.",
+    "structural_features": [
+      "diffusion_term",
+      "first_order_in_time",
+      "driving_term",
+      "advection_term"
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "Central result is the generalized parabolic evolution equation with a geometry-induced variable coefficient, which the authors explicitly rewrite as a diffusion equation with a source term set by the cross-sectional-area profile and its derivatives. The state-dependent sink (ionic-current analog) makes the full model mixed-linearity; stripping it leaves a linear variable-coefficient diffusion PDE. Frenet-Serret / first-fundamental-form geometry is auxiliary machinery used to derive the variable coefficient, not the core dynamical object.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2401.01397",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "sir_compartmental",
+      "confidence": 0.55,
+      "twist": "SI-type peer-effect adoption (Bass model) on a bounded Cartesian lattice with a spontaneous-adoption source term, analyzed as a spatial stochastic spreading process"},
+    {"template_id": "logistic_growth",
+      "confidence": 0.4,
+      "twist": "aggregate adoption is the Bass diffusion of innovations, the mean-field sigmoidal limit of the microscopic peer-spreading rule"}
+  ],
+  "core_model_summary": "A stochastic peer-driven adoption (Bass/SI-type) spreading process on a bounded D-dimensional lattice, where each unit switches irreversibly to adopter at a rate combining spontaneous and neighbor-proportional terms, and boundary sites adopt less."
+}

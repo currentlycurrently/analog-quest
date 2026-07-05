@@ -1,0 +1,31 @@
+{
+  "arxiv_id": "2401.00940",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "game_theoretic",
+    "structure_summary": "Each of several agents maximizes a payoff that is bilinear in a continuous allocation vector constrained to the simplex and a binary activation vector indicating which allocation components are positive, minus a linear cost weighted by the activations, with best responses characterized by first-order complementary-slackness conditions and an equilibrium in which adding congestion costs makes every channel congested.",
+    "canonical_form": "\\max_{x, v} \\; \\Pi = \\sum_{j} (b_j - c_j)\\, v_j x_j \\quad \\text{s.t.} \\quad \\sum_j x_j = 1, \\; x_j \\ge 0, \\; v_j = \\mathbf{1}[x_j > 0]; \\quad \\mathcal{L} = \\sum_j (b_j - c_j) x_j + \\mu\\left(1 - \\sum_j x_j\\right)",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "constrained_optimization",
+      "normalization_constraint",
+      "fixed_point_equilibrium",
+      "multiplicative_interaction",
+      "spin_or_binary_units",
+      "threshold_nonlinearity",
+      "network_topology_matters"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "continuous allocation fractions across links, summing to one"},
+      {"role": "state", "meaning": "binary indicator variables switched on exactly when the paired continuous variable is positive"},
+      {"role": "parameter", "meaning": "per-link benefit coefficients"},
+      {"role": "parameter", "meaning": "per-link cost coefficients, each strictly below its paired benefit"},
+      {"role": "control", "meaning": "Lagrange multipliers enforcing the simplex constraint and inequality constraints"},
+      {"role": "objective", "meaning": "net payoff: benefit minus cost, bilinear in allocation and activation"}
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "The structure is a multi-agent constrained maximization on hypercube-shaped graphs of increasing dimension, analyzed via Kuhn-Tucker/Lagrangian conditions; the headline result is an equilibrium property (all channels used, hence all congested once congestion costs are added). The extracted equations are notationally idiosyncratic and the congestion-cost extension itself is not shown explicitly, so the description of that extension relies on the abstract; classification between game_theoretic and constrained optimization is soft since the game reduces to independent per-agent optimizations."
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2202.04557",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "binary_spin_energy",
+      "confidence": 0.8,
+      "twist": "continuous-state associative memory generalizing Hopfield networks via a similarity-separation-projection energy with a Lyapunov function, beyond binary spins and dot-product coupling"}
+  ],
+  "core_model_summary": "A general associative-memory framework unifying Hopfield-type networks as similarity, separation, and projection operations governed by an energy (Lyapunov) function with second-order neuron interactions."
+}

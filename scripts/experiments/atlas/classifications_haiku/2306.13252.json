@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.13252",
+  "assignments": [
+    {
+      "template_id": "burgers_equation",
+      "confidence": 0.90,
+      "twist": "hypoviscous (fractional-order) dissipation instead of standard viscosity"
+    }
+  ],
+  "core_model_summary": "Self-similar solutions to the Burgers equation with reduced-order dissipation, analyzed via transformation techniques and numerical iteration.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.00670",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A coupled system of first-order-in-time ordinary differential equations for interacting state vectors whose production rates are nonlinear learned surrogate functions and whose loss terms are elementwise dilution/degradation products, with the rates constrained by an embedded linear steady-state balance problem.",
+    "canonical_form": "\\dot{z} = b(t)\\,q_z(z,e,\\theta,\\Theta), \\qquad \\dot{e} = q_e(u,\\theta) - \\big(\\mu(z,e)\\,\\mathbf{1} + d(e)\\big)\\circ e, \\qquad q_z = f_{\\mathrm{NN}}(e,\\Theta)\\,h(z),\\ \\ \\text{s.t. } S v = 0,\\ v_{\\min}\\le v\\le v_{\\max}",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "driving_term",
+      "damping_term",
+      "multiplicative_interaction",
+      "constrained_optimization"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "vectors of extensive quantities and internal catalytic species evolving in time"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "control", "meaning": "external manipulable input driving production rates"},
+      {"role": "parameter", "meaning": "kinetic parameters and weights of the learned surrogate embedding the steady-state balance constraints"}
+    ]
+  },
+  "confidence": 0.62,
+  "notes": "The paper's central object is a hybrid dynamic model: a small system of first-order ODEs whose rate functions are machine-learning surrogates trained to reproduce an embedded constrained linear steady-state (flux-balance) optimization. Alternative core framings are the embedded constrained optimization itself or the outer optimal-control/estimation problems (MPC/MHE), but the ODE state model is the structural centerpiece the framework is built around. Loss terms (mu*1 + d)∘e give elementwise damping; production terms are driving.",
+  "_model": "claude-fable-5-agent-20260705"
+}

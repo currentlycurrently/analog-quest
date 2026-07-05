@@ -1,0 +1,1 @@
+{"arxiv_id": "2306.06407", "assignments": [{"template_id": "markov_chain", "confidence": 0.85, "twist": "birth-death Markov chain on network-structured populations with node degree dependence"}], "core_model_summary": "Moran process on graphs analyzed as discrete-state Markov chains with transition probabilities dependent on network topology.", "_model": "claude-haiku-4-5"}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2403.00900",
+  "assignments": [
+    {
+      "template_id": "sir_compartmental",
+      "confidence": 0.85,
+      "twist": "extended with undetected infectious compartment and time-varying transmission rates"
+    }
+  ],
+  "core_model_summary": "The paper extends the SIR epidemic model by adding an undetected infectious compartment to capture asymptomatic and unreported COVID-19 infections, with compartmental mass-action dynamics.",
+  "_model": "claude-haiku-4-5"
+}

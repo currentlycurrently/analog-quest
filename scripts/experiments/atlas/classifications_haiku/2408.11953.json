@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2408.11953",
+  "assignments": [
+    {
+      "template_id": "paraxial_schrodinger",
+      "confidence": 0.95,
+      "twist": "canonical"
+    }
+  ],
+  "core_model_summary": "Paraxial beam propagation in free space is governed by the paraxial approximation of the Helmholtz equation with asymmetric Gaussian-modulated entire functions.",
+  "_model": "claude-haiku-4-5"
+}

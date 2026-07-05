@@ -1,0 +1,36 @@
+{
+  "arxiv_id": "2408.11953",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A complex scalar field evolves linearly and first-order along one coordinate as the transverse Laplacian with an imaginary coefficient, i.e. a free Schrodinger-type parabolic equation solved as an initial-value problem from a prescribed transverse profile.",
+    "canonical_form": "i\\,\\partial_t u(x,y,t) = -\\tfrac{1}{2}\\,(\\partial_x^2 + \\partial_y^2)\\,u(x,y,t), \\qquad u(x,y,0) = e^{-(a x^2 + b y^2)}\\,\\mathcal{F}(x+iy)",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "diffusion_term",
+      "first_order_in_time",
+      "boundary_conditions_central",
+      "oscillatory_dynamics"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "complex scalar field over a two-dimensional transverse domain"},
+      {"role": "time", "meaning": "the propagation coordinate playing the role of an evolution parameter, first order"},
+      {"role": "space", "meaning": "two transverse continuous coordinates entering through a Laplacian"},
+      {"role": "parameter", "meaning": "coefficients of the anisotropic Gaussian modulation fixing the initial profile"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A complex scalar field obeys a linear first-order-in-evolution-parameter equation set equal to its transverse Laplacian with an imaginary coefficient (free Schrodinger / complex diffusion), advanced from an initial condition.",
+    "structural_features": [
+      "diffusion_term",
+      "first_order_in_time",
+      "boundary_conditions_central",
+      "oscillatory_dynamics"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The governing equation is the paraxial (free Schrodinger) PDE: transverse Laplacian plus i2k times the first derivative along the propagation axis equals zero. All subsequent operator-exponential machinery, Bessel/Airy expansions, and Cauchy-Riemann (entire-function) initial data are exact-solution techniques and specific initial conditions for this single linear PDE, not distinct models. Diffusion with an imaginary coefficient gives phase oscillation rather than pure smoothing, hence both diffusion_term and oscillatory_dynamics.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "1501.04037",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A scalar field on a one-dimensional continuum obeys a second-order-in-time wave equation with a linear damping term, a sinusoidal nonlinear restoring term of the field itself, external forcing, and an additive noise source, driven through the boundary.",
+    "canonical_form": "\\partial_t^2 u - \\partial_x^2 u + b\\,\\partial_t u + \\sin u = F(x,t) + \\xi(x,t), \\qquad \\partial_x u(0,t) = f(t),\\; \\partial_x u(L,t) = 0",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "driving_term",
+      "additive_noise",
+      "boundary_conditions_central",
+      "oscillatory_dynamics"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field on a one-dimensional continuum"},
+      {"role": "time", "meaning": "evolution parameter, second order (inertial)"},
+      {"role": "space", "meaning": "one continuous spatial coordinate with a wave (d'Alembertian) operator"},
+      {"role": "control", "meaning": "amplitude and frequency of the sinusoidal boundary/external forcing"},
+      {"role": "parameter", "meaning": "linear damping coefficient"},
+      {"role": "noise", "meaning": "additive stochastic source modeling fluctuations"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A scalar field on a one-dimensional continuum satisfies the undamped, unforced nonlinear wave equation whose restoring term is the sine of the field, supporting localized oscillatory solutions.",
+    "structural_features": [
+      "second_order_in_time",
+      "oscillatory_dynamics",
+      "conservation_law"
+    ]
+  },
+  "confidence": 0.88,
+  "notes": "Core model is the damped, ac-driven, thermally noisy sine-Gordon PDE (the perturbed equation is the one the numerical results are about). Stripping the dressing — remove additive noise, damping, and external/boundary forcing — leaves the bare integrable sine-Gordon wave equation u_xx - u_tt = sin(u), which is the conservative skeleton whose breather solutions the study concerns. A discrete-chain (lattice) form also appears as the numerical/cited reduction, but the continuous sine-Gordon PDE is stated as the central model.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

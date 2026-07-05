@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2401.00839",
+  "assignments": [
+    {
+      "template_id": "bellman_equation",
+      "confidence": 0.8,
+      "twist": "value function and equilibrium characterization in repeated games with endogenous information disclosure"
+    }
+  ],
+  "core_model_summary": "Dynamic game with recursive value functions determining equilibrium cooperation levels as functions of players' disclosure histories and expected lifespans."
+}

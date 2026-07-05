@@ -1,0 +1,24 @@
+{
+  "arxiv_id": "2401.00640",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A probabilistic convergence statement for multi-indexed random variables: power-law-normalized partial sums over a growing multi-index box converge almost surely, with the rate controlled by tail-integral moment conditions.",
+    "canonical_form": "\\frac{1}{|n|^{1/r}} \\sum_{k \\preceq n} \\big(X_k - \\mathbb{E}X_k\\big) \\;\\xrightarrow{\\text{a.s.}}\\; 0,\\qquad \\sum_{n} |n|^{p/r-2}\\,\\mathbb{E}\\big[\\,\\big|\\textstyle\\sum_{k\\preceq n} X_k\\big|^{p}\\,\\big] < \\infty",
+    "linearity": "linear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "scale_invariance",
+      "additive_noise"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "multi-index-indexed random variables being summed (a random field on a multi-dimensional integer lattice)"},
+      {"role": "parameter", "meaning": "multi-index upper limit defining the summation box, tending to infinity"},
+      {"role": "parameter", "meaning": "normalization exponent r controlling the power-law scaling of the sum"},
+      {"role": "parameter", "meaning": "moment/order exponent p entering the convergence-rate conditions"}
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "The paper is a pure probability-theory result (Marcinkiewicz-Zygmund strong law of large numbers and convergence rates for sums of a random field, applied to its discrete Fourier transform). The controlled feature vocabulary is dynamics/physics-oriented and fits poorly; only power-law normalization (scale_invariance) and the summation of random terms (additive_noise) genuinely apply, so the tag list is intentionally short. Extracted equations are the moment/tail-integral inequalities used in the proof, not a single defining model equation.",
+  "_model": "claude-fable-5-agent-20260705"
+}

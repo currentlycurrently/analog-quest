@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2401.09955",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A stochastic integral process built from piecewise time-dependent drift, a state-independent diffusion driven by a Wiener process, and a compound-jump term, with coefficients switching across time segments and drawn from a random parameter distribution.",
+    "canonical_form": "X(t) = x_0 + \\int_0^t \\beta(u;\\theta)\\,du + \\int_0^t \\gamma(u;\\theta)\\,d\\widetilde{W}(u) + \\sum_{k=1}^{\\widetilde{P}(t)} \\pi(k), \\qquad \\theta \\sim F_\\vartheta",
+    "linearity": "linear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": ["first_order_in_time", "additive_noise", "jump_process", "threshold_nonlinearity", "driving_term"],
+    "variables": [
+      {"role": "state", "meaning": "an accumulated scalar process evolving by drift, diffusion, and jumps"},
+      {"role": "time", "meaning": "continuous evolution parameter partitioned into switching regimes"},
+      {"role": "noise", "meaning": "a Wiener increment and an independent compound point process supplying jumps"},
+      {"role": "parameter", "meaning": "regime-dependent drift and diffusion coefficients, themselves random draws from a mixing distribution"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order ordinary differential equation whose state accumulates a piecewise (regime-switching) drift, obtained by removing the diffusion and jump terms.",
+    "structural_features": ["first_order_in_time", "threshold_nonlinearity", "driving_term"]
+  },
+  "confidence": 0.6,
+  "notes": "Core is a jump-diffusion with regime switching and random (uncertain) coefficients; labeled 'sde' for the Brownian+drift backbone with jump_process flagged separately (could equally be 'stochastic_process'). Diffusion coefficient depends on time/regime, not the state, hence additive_noise. Characteristic-function derivations are the analysis tool, not the core object. Skeleton strips noise and jumps to leave the deterministic piecewise-drift ODE.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

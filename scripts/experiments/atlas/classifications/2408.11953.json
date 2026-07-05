@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2408.11953",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "paraxial_schrodinger",
+      "confidence": 0.95,
+      "twist": "free-space paraxial propagation solved via a quantum-optics operator (evolution-operator) method for asymmetric-Gaussian-modulated entire-function beams"}
+  ],
+  "core_model_summary": "The paraxial wave (Schrodinger-type) equation governing free-space propagation of an optical beam, with z as an evolution parameter, solved by operator methods for asymmetric Gaussian beams times entire functions."
+}

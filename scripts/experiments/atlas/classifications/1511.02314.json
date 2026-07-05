@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1511.02314",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "sine_gordon",
+      "confidence": 0.97,
+      "twist": "sine-Gordon posed on a metric graph (star/tree) with bond-dependent coefficients and vertex boundary conditions ensuring reflectionless soliton transmission"}
+  ],
+  "core_model_summary": "A nonlinear relativistic wave equation with a sinusoidal restoring term, admitting kink/antikink/breather solitons, defined on a branching network with matching conditions at vertices."
+}

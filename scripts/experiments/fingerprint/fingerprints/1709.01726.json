@@ -1,0 +1,45 @@
+{
+  "arxiv_id": "1709.01726",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A system of three coupled first-order nonlinear ODEs in which a conserved total mass flows among three labeled compartments through bilinear product interactions between pairs of state variables and linear exchange terms, with a threshold parameter separating a trivial fixed point from a positive equilibrium.",
+    "canonical_form": "\\dot{x} = -a\\,x y - c\\,x + d\\,(n - x - y),\\qquad \\dot{y} = a\\,x y + e\\,a\\,z y - b\\,y,\\qquad \\dot{z} = c\\,x - e\\,a\\,z y,\\qquad x+y+z+(n-x-y-z)=n",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "compartmental_flow",
+      "mass_action_kinetics",
+      "multiplicative_interaction",
+      "conservation_law",
+      "fixed_point_equilibrium",
+      "phase_transition"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "fraction of total mass in the susceptible-type compartment"},
+      {"role": "state", "meaning": "fraction of total mass in the actively-transmitting compartment"},
+      {"role": "state", "meaning": "fraction of total mass diverted into a protected compartment by a second bilinear channel"},
+      {"role": "time", "meaning": "continuous independent variable"},
+      {"role": "parameter", "meaning": "bilinear interaction rate"},
+      {"role": "parameter", "meaning": "linear outflow/decay rate"},
+      {"role": "parameter", "meaning": "linear return rate restoring mass to the first compartment"},
+      {"role": "parameter", "meaning": "linear diversion rate into the protected compartment"},
+      {"role": "parameter", "meaning": "attenuation factor (in [0,1]) reducing the bilinear rate for the protected compartment"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "First-order compartmental ODEs on a conserved total in which one variable grows via bilinear contact with the others and decays linearly, and linear exchange terms recycle mass among compartments, with equilibria set by a ratio-threshold condition.",
+    "structural_features": [
+      "first_order_in_time",
+      "compartmental_flow",
+      "multiplicative_interaction",
+      "conservation_law",
+      "fixed_point_equilibrium"
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "The paper presents a progression of models (basic 3-compartment, temporary-return variant, and the full two-channel variant with a diverted compartment); the main results concern the full system with the second channel, so that is taken as the core model. All variants share the same bilinear compartmental skeleton. The core model is already deterministic, so the skeleton is a restatement."
+}

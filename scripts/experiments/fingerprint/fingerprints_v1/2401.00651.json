@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2401.00651",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization of a composite objective over learned vector representations of graph nodes, combining a log-sigmoid contrastive term with negative sampling and squared-error reconstruction terms, with representations produced by normalized bilinear-attention maps over random-walk statistics.",
+    "canonical_form": "\\min_{\\Theta}\\; -\\!\\!\\sum_{(i,j)\\in D}\\!\\big[p_{ij}\\ln\\sigma(u_i^{\\top} v_j/\\tau) + Q\\,n_j\\ln\\sigma(-u_i^{\\top} v_j/\\tau)\\big] \\;+\\; \\alpha \\sum \\|x - \\hat{x}\\|_2^2,\\quad Z=\\mathrm{softmax}\\!\\big(QK^{\\top}/\\sqrt{d}\\big)V",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "network",
+    "structural_features": [
+      "network_topology_matters",
+      "entropy_term",
+      "multiplicative_interaction",
+      "normalization_constraint",
+      "fixed_point_equilibrium",
+      "threshold_nonlinearity"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "learned vector representations (embeddings) of graph nodes"},
+      {"role": "objective", "meaning": "composite loss: log-sigmoid contrastive term with negative sampling plus squared-error reconstruction regularizers"},
+      {"role": "parameter", "meaning": "attention/MLP weight matrices producing embeddings from random-walk statistics"},
+      {"role": "parameter", "meaning": "co-occurrence weights p_ij and negative-sampling counts n_j from random walks on the graph"},
+      {"role": "parameter", "meaning": "temperature tau, negative-sampling factor Q, and mixing weight alpha"}
+    ]
+  },
+  "confidence": 0.55,
+  "notes": "Central object is a learned-embedding optimization: a skip-gram-style contrastive (log-sigmoid + negative sampling) loss jointly with reconstruction regularizers, minimized over node representations. Inputs are random-walk statistics on graph topology (hence stochastic sampling and network structure), and the encoder uses scaled dot-product / re-attention maps with softmax normalization. The paper also derives the stationary condition z_ij = ln p_ij - ln(Q n_j) as a fixed point of the loss gradient. Several parallel loss components make the single-core-model choice somewhat ambiguous; I take the overall joint-optimization objective as the core.",
+  "_model": "claude-fable-5-agent-20260705"
+}

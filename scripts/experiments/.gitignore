@@ -1,0 +1,9 @@
+# Generated bundles and prompts are large and reproducible from the scripts.
+fingerprint/data/bundles/
+atlas/data/bundles/
+atlas/data/pilot_bundles/
+atlas/data/prompts/
+atlas/data/pilot_prompts/
+fingerprint/data/prompts/
+**/__pycache__/
+*.bak

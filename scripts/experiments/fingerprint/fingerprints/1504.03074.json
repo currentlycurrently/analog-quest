@@ -1,0 +1,38 @@
+{
+  "arxiv_id": "1504.03074",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A linear second-order parabolic equation in one spatial-like variable and time, whose degenerate diffusion and transport coefficients scale as the square and first power of the spatial variable respectively, plus a linear decay term, solved by an exponential-in-time separation ansatz that reduces it to a second-order equidimensional ODE with power-law solutions.",
+    "canonical_form": "\\frac{\\partial u}{\\partial t} + a x^2 \\frac{\\partial^2 u}{\\partial x^2} + b x \\frac{\\partial u}{\\partial x} - c u = 0, \\qquad u(x,t) = e^{\\mu t} y(x) \\Rightarrow x^2 y'' + \\alpha x y' + \\beta y = 0",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "first_order_in_time",
+      "diffusion_term",
+      "advection_term",
+      "exponential_growth_or_decay",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field evolving over one continuous coordinate and time"},
+      {"role": "time", "meaning": "continuous evolution variable entering only through a first derivative"},
+      {"role": "space", "meaning": "continuous coordinate whose powers multiply the first and second derivative terms"},
+      {"role": "parameter", "meaning": "coefficients of the diffusion, transport, and decay terms"},
+      {"role": "parameter", "meaning": "separation constant of the exponential-in-time ansatz"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A linear first-order-in-time evolution equation with a degenerate second-order diffusion term, a first-order transport term, and a linear decay term on a one-dimensional continuum.",
+    "structural_features": [
+      "first_order_in_time",
+      "diffusion_term",
+      "advection_term",
+      "exponential_growth_or_decay"
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "Equations include a background derivation from a multiplicative-noise first-order stochastic differential equation, but that is cited setup: the paper's central object is the deterministic linear parabolic equation and its reduction by separation of variables to an equidimensional (Euler-type) ODE whose characteristic quadratic yields power-law solutions. Some extracted equations (heat-kernel integral, parity relation) are auxiliary.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

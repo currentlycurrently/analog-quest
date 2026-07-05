@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2306.00367",
+  "assignments": [
+    {
+      "template_id": "langevin_sde",
+      "confidence": 0.9,
+      "twist": "diffusion sampling dynamics with score-based drift"
+    },
+    {
+      "template_id": "fokker_planck",
+      "confidence": 0.85,
+      "twist": "density evolution derived from consistency-type model dynamics"
+    }
+  ],
+  "core_model_summary": "Stochastic differential equations for diffusion-based generative models, where the score function drives drift and Fokker-Planck equations govern density evolution, unified across consistency model formulations.",
+  "_model": "claude-haiku-4-5"
+}

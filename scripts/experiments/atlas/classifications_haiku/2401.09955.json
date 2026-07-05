@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2401.09955",
+  "assignments": [
+    {
+      "template_id": "langevin_sde",
+      "confidence": 0.8,
+      "twist": "regime-switching with random parameters and jump components"
+    }
+  ],
+  "core_model_summary": "A Markov-modulated jump-diffusion stochastic differential equation models asset prices with regime switching between different volatility states.",
+  "_model": "claude-haiku-4-5"
+}

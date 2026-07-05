@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2308.15326",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "kuramoto_phase_oscillators",
+      "confidence": 0.88,
+      "twist": "second-order inertial (swing-equation) Kuramoto model with damping on a heterogeneous power-grid network"}
+  ],
+  "core_model_summary": "Synchronization of a network of inertial, damped phase oscillators (the power-grid swing equation) with sinusoidal coupling, analyzed for heterogeneity and chimera states."
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00713",
+  "assignments": [
+    {
+      "template_id": "reaction_diffusion_turing",
+      "confidence": 0.85,
+      "twist": "traveling wave persistence in reaction-diffusion predator-prey with heterogeneous growth and functional response"
+    }
+  ],
+  "core_model_summary": "Reaction-diffusion predator-prey system with traveling wave solutions connecting different ecological states.",
+  "_model": "claude-haiku-4-5"
+}

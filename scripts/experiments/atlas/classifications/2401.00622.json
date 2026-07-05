@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00622",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "A federated class-incremental learning method combining cross-entropy and KL self-distillation losses with a conditional-probability decomposition of old- and new-class scores; no canonical library structure is its core model."
+}

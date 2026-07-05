@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1807.11410",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "kuramoto_phase_oscillators",
+      "confidence": 0.97,
+      "twist": "coupling matrix is oriented, weighted and signed (non-symmetric a_ij) rather than uniform mean-field"}
+  ],
+  "core_model_summary": "Coupled phase oscillators with heterogeneous natural frequencies interacting through sinusoidal phase differences on a directed, weighted, signed network, analyzed for synchronization."
+}

@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "2402.13378",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization of an integrated cost over all joint couplings of two fixed marginal measures, where the cost is a parametric monotone transform of a pairwise value function and the parameter tunes concavity.",
+    "canonical_form": "\\min_{\\pi \\in \\Pi(\\mu,\\nu)} \\int_{X\\times Y} c_\\alpha(x,y)\\, d\\pi(x,y), \\qquad c_\\alpha(x,y) = \\tfrac{1}{\\alpha}\\bigl(1 - e^{\\alpha\\, U(x,y)}\\bigr)",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": ["transport_cost", "constrained_optimization", "convexity_central", "fixed_point_equilibrium"],
+    "variables": [
+      {"role": "state", "meaning": "a joint coupling (transport plan) between two spaces with prescribed marginals"},
+      {"role": "parameter", "meaning": "an inequality-aversion index controlling the concavity of the cost transform, and the underlying pairwise value function"},
+      {"role": "objective", "meaning": "expected transformed pairwise value integrated against the coupling"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "A Kantorovich optimal-transport problem: minimize an integrated pairwise cost over couplings with fixed marginals, whose optimum is characterized by cyclical monotonicity.",
+    "structural_features": ["transport_cost", "constrained_optimization", "convexity_central"]
+  },
+  "confidence": 0.74,
+  "notes": "The stability/matching notions are recast as a parametric family of optimal transport (Kantorovich) linear programs over couplings; the parametric Atkinson-cost family is the core, the bare optimal-transport problem is its skeleton. The graph/perfect-matching probability bounds near the end are auxiliary approximation results.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

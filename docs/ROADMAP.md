@@ -188,6 +188,48 @@ canonical hash equivalents. That's a separate ceiling.
 **Current state:** two equations match iff their normalized SymPy srepr is
 byte-identical after canonical symbol renaming.
 
+### Measured 2026-07-05: LLM structural-fingerprint substrate, first recall test
+
+A fifth candidate approach — **E. LLM structural fingerprints** (each
+paper's core model distilled to a notation-independent JSON schema by an
+LLM, papers fingerprinted in isolation, matched on an interpretable
+feature score) — was built and measured at
+`scripts/experiments/fingerprint/`. Gold standard: 12 canonical
+cross-domain isomorphisms as planted arXiv paper pairs + 23 distractors.
+
+**Result: pre-registered criterion (recall@25 ≥ 0.5) NOT met — 5/12 =
+0.42.** But median planted rank was 57 of 966 candidate pairs (random
+baseline ~484), with 5 of 12 known isomorphisms in the top 7 overall
+(SIR↔rumor #1, Burgers↔traffic #2, Black–Scholes↔heat #4,
+Kuramoto↔power-grid #6, optimal-transport↔matching #7). Note that
+approaches A–D below would find none of these — no pair shares a
+byte-identical normalized equation. Misses are diagnosed with an ablation
+in `results/ANALYSIS-2026-07-05.md`: single-view fingerprints split pairs
+that dress the same skeleton differently (stochastic vs deterministic,
+continuous vs discrete, equilibrium vs dynamics), and hard categorical
+agreement terms make it worse. A specified v2 (multi-view /
+deterministic-skeleton field, features-carry-the-score) is the next
+measurement. Per this document's protocol: the fix is *not assumed to
+work* until the re-run clears the same criterion.
+
+This experiment also supersedes the framing of approaches A–C below for
+the cross-notation problem: the LLM fingerprint attacks notation variance
+directly, where tree-shape methods inherit SymPy's parse ceiling (Item 1)
+on top of their own noise. D (SymPy `.equals()`) remains useful as a
+post-match verification signal.
+
+**Update, same day:** v2 (multi-view skeleton fingerprints,
+features-carry-the-score, one ground-truth fix, 3 vocabulary-blind
+held-out pairs) was measured: **criterion NOT met again, recall@25 = 5/12
+= 0.42.** Canonical-adjacent pairs match at score 1.000 (including a
+held-out pair, ruling out vocabulary bias at the top of the ranking);
+blocking recall reaches 11/12 at top-23%. Verdict: fingerprint similarity
+is a strong candidate *blocker*, not a top-25 *matcher*. Do not iterate
+the same shape again. The open decision (admin's): Path A = two-stage
+blocking + LLM pairwise verification under a new pre-registered
+criterion; Path B = canonical-template indexing (atlas architecture).
+Both specified in `scripts/experiments/fingerprint/results/ANALYSIS-v2-2026-07-05.md`.
+
 ### Why it matters
 
 This is the ceiling the reviewer's friend was pointing at with "hidden

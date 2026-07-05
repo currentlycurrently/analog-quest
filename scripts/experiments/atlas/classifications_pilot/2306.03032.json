@@ -1,0 +1,1 @@
+{"arxiv_id": "2306.03032", "assignments": [], "core_model_summary": "A hypergraph neural network using attention mechanisms to represent nodes differently within each hyperedge based on relative centrality.", "_model": "claude-haiku-4-5"}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2004.01025",
+  "assignments": [
+    {"template_id": "gradient_descent",
+      "confidence": 0.85,
+      "twist": "partial discretization of gradient flow on Riemannian manifolds with Hessian-derived metric tensor"}
+  ],
+  "core_model_summary": "A continuous-time gradient flow on a Riemannian manifold where the metric tensor is the Hessian of a potential function, discretized into mirror descent updates.",
+  "_model": "claude-haiku-4-5"
+}

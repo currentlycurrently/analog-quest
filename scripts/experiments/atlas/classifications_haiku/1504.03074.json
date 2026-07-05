@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1504.03074",
+  "assignments": [
+    {
+      "template_id": "black_scholes_pde",
+      "confidence": 0.96,
+      "twist": "canonical"
+    }
+  ],
+  "core_model_summary": "Black-Scholes PDE for option pricing, solved via separation of variables and power-law ansatz to find European call option value."
+}

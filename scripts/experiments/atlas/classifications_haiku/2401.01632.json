@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2401.01632",
+  "assignments": [
+    {
+      "template_id": "master_equation",
+      "confidence": 0.85,
+      "twist": "multitype consumer-resource birth-death processes with parameter-redundancy structure revealing identifiability out-of-equilibrium via generating functions"
+    }
+  ],
+  "core_model_summary": "Chemical master equation for coupled consumer-resource population dynamics where transition rates encode feeding and handling times; identifiability emerges from out-of-equilibrium probability distributions."
+}

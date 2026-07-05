@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "2401.03776",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A probability distribution specified model-independently through its cumulants, expanded (Edgeworth/Gram-Charlier style) about a Gaussian via Hermite polynomials, from which a small-parameter asymptotic quadratic expansion of an implied-transform functional and power-law scalings of its slope and curvature are derived.",
+    "canonical_form": "q^{(m,n)}_\\theta(x)=\\phi(x+\\tfrac{\\sigma}{2})\\{1+\\kappa_3(H_3-m\\sigma H_2)\\theta^{\\beta_1}+\\kappa_4(H_4-n\\sigma H_3)\\theta^{\\beta_2}+\\dots\\};\\quad \\Sigma(z)=\\kappa_2\\big(1+\\kappa_3(\\tfrac{z}{\\kappa_2}+c\\kappa_2\\sqrt\\theta)\\theta^{\\beta_1}+\\kappa_4(\\tfrac{z^2}{\\kappa_2^2}-1)\\theta^{\\beta_2}\\big)+o(\\cdot);\\quad \\partial_k\\Sigma(0,\\theta)\\propto\\theta^{\\beta_1},\\;\\partial_k^2\\Sigma(0,\\theta)\\propto\\tilde\\kappa_4-2\\tilde\\kappa_3^2",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "scale_invariance",
+      "multiplicative_noise"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "standardized log-return random variable whose distribution is expanded"},
+      {"role": "time", "meaning": "small asymptotic parameter (time to maturity) driving the power-law expansion"},
+      {"role": "parameter", "meaning": "third cumulant / skewness controlling first-order slope term"},
+      {"role": "parameter", "meaning": "fourth cumulant / kurtosis controlling curvature term"},
+      {"role": "parameter", "meaning": "scaling exponents (including a Hurst-type exponent) governing power-law rates as the small parameter vanishes"}
+    ]
+  },
+  "confidence": 0.5,
+  "notes": "Poor fit to the dynamical controlled vocabulary. The genuine core is a distribution-based, cumulant/Hermite (Edgeworth-type) asymptotic expansion of the log-return law and the induced implied-volatility expansion, so I classified it 'statistical_model'. scale_invariance captures the power-law small-time asymptotics and the rough-volatility Hurst exponent; multiplicative_noise reflects the underlying stochastic-volatility representation dZ=-1/2 v dt + sqrt(v) dB the framework subsumes, though the results are explicitly model-independent. Only two vocabulary tags genuinely apply; did not pad to reach 3-8.",
+  "_model": "claude-fable-5-agent-20260705"
+}

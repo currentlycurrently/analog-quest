@@ -1,0 +1,41 @@
+{
+  "arxiv_id": "2008.00245",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A lattice of binary units with nearest-neighbor pairwise coupling in an energy function, whose stationary weight is not a single exponential of the energy but an equal mixture of two exponentials with different rate parameters, inducing a critical line in the two-parameter plane along which the model maps onto an effective single-exponential model.",
+    "canonical_form": "H = -J \\sum_{\\langle i,j \\rangle} s_i s_j, \\quad s_i \\in \\{-1,+1\\}; \\qquad B(E) = \\tfrac{1}{2}\\left(e^{-\\alpha_1 E} + e^{-\\alpha_2 E}\\right), \\quad p(E) \\propto B(E); \\qquad 1 - e^{-2\\alpha_{\\mathrm{eff}}} = \\frac{1-e^{-2\\alpha_1}}{1+e^{2(\\alpha_1-\\alpha_2)}} + \\frac{1-e^{-2\\alpha_2}}{1+e^{-2(\\alpha_1-\\alpha_2)}}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "spin_or_binary_units",
+      "pairwise_coupling",
+      "energy_functional",
+      "phase_transition",
+      "scale_invariance",
+      "symmetry_breaking",
+      "detailed_balance"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "binary units on lattice sites"},
+      {"role": "parameter", "meaning": "two rate parameters of the mixed exponential weight"},
+      {"role": "parameter", "meaning": "coupling strength of the pairwise energy"},
+      {"role": "parameter", "meaning": "effective single rate parameter onto which the mixture maps"},
+      {"role": "space", "meaning": "lattice sites indexing the units"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "statistical_model",
+    "summary": "Binary units on a lattice with nearest-neighbor pairwise energy whose stationary distribution is an exponential weight of that energy at a single effective rate parameter, exhibiting a symmetry-breaking transition at a critical parameter value.",
+    "structural_features": [
+      "spin_or_binary_units",
+      "pairwise_coupling",
+      "energy_functional",
+      "phase_transition",
+      "symmetry_breaking"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The paper's central object is the equilibrium lattice model with a two-component superstatistical (mixture-of-exponentials) weight; the modified local update acceptance rules and cluster link probabilities are the sampling machinery. The mapping to an effective single rate parameter, and hence to the ordinary universality class along the critical line, is the main analytic result, which is why the skeleton is the standard single-parameter binary pairwise lattice model. An n-component mixture generalization is also given.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

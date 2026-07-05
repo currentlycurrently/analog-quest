@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2007.02182",
+  "assignments": [
+    {"template_id": "linear_schrodinger",
+      "confidence": 0.92,
+      "twist": "solutions via Bohm potential decomposition of wavefunction into amplitude and phase components"}
+  ],
+  "core_model_summary": "The time-dependent Schrödinger equation solved by decomposing the wavefunction into polar form with amplitude and phase (Bohm potential) to identify restricted families of potentials yielding special solutions.",
+  "_model": "claude-haiku-4-5"
+}

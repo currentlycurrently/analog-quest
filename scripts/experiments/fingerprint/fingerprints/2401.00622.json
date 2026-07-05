@@ -1,0 +1,34 @@
+{
+  "arxiv_id": "2401.00622",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization of a weighted average, over distributed units, of local objectives each combining a log-loss between a normalized exponential output map and reference labels with a divergence term pulling the current map toward a composite target distribution built by rescaling a frozen earlier map's normalized outputs by one minus the mass the current map assigns to newly added coordinates.",
+    "canonical_form": "\\min_{W} \\sum_k \\omega_k J^k(W), \\quad J^k = \\mathbb{E}\\big[ L_{CE}(\\sigma(f(W;x)), y) + \\beta\\, D_{KL}(\\sigma(f(W;x)) \\,\\|\\, z) \\big], \\qquad z_j = \\begin{cases} \\sigma(f(W;x)/\\theta)_j, & j \\in \\mathcal{N} \\\\ \\sigma(f(W_{0};x)/\\theta)_j \\cdot \\Big(1 - \\sum_{c \\in \\mathcal{N}} \\sigma(f(W;x)/\\theta)_c\\Big), & j \\notin \\mathcal{N} \\end{cases}",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "entropy_term",
+      "normalization_constraint",
+      "mean_field_coupling"
+    ],
+    "variables": [
+      {"role": "control", "meaning": "parameter vector of the map being optimized"},
+      {"role": "parameter", "meaning": "frozen parameter vector of an earlier map used to build the composite target"},
+      {"role": "state", "meaning": "normalized nonnegative output vector on the simplex produced by exponentiating and normalizing the map's outputs"},
+      {"role": "parameter", "meaning": "scaling factor applied inside the exponential normalization and a weight balancing the two loss terms"},
+      {"role": "objective", "meaning": "weighted sum of expected log-loss and divergence terms across distributed units"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Minimization of an expected divergence between a parametric distribution on a simplex and a reference distribution assembled by the law of total probability from a fixed distribution on a coordinate subset and the current distribution's mass on the complementary subset.",
+    "structural_features": [
+      "entropy_term",
+      "normalization_constraint"
+    ]
+  },
+  "confidence": 0.7,
+  "notes": "The theoretical core is a total-probability decomposition: outputs of the frozen map are interpreted as probabilities conditional on the complement of the new coordinate set, so multiplying them by (1 - mass on new coordinates) recovers unconditional probabilities; the composite target then feeds a divergence-regularized objective. mean_field_coupling refers to the global objective being a weighted average over all distributed units. Several extracted equations are truncated (extraction noise), but the objective and target construction are unambiguous.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

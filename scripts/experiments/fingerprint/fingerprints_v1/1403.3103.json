@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "1403.3103",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "A linear minimization of an integrated pairwise cost over the set of joint measures with two fixed marginals, characterized through its dual pair of potentials whose sum touches the cost on the support of the optimizer.",
+    "canonical_form": "\\min_{\\gamma \\in \\Pi(\\mu,\\nu)} \\int c(x,y)\\,d\\gamma(x,y), \\quad \\text{s.t. marginals fixed}; \\qquad c(x,y) = \\phi(x)+\\psi(y)\\ \\text{on}\\ \\mathrm{supp}\\,\\gamma,\\ \\ D_1 c(x,y)=\\nabla\\phi(x)",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "transport_cost",
+      "constrained_optimization",
+      "convexity_central",
+      "conservation_law"
+    ],
+    "variables": [
+      {"role": "control", "meaning": "joint measure (coupling) that is optimized"},
+      {"role": "objective", "meaning": "total cost, the integral of a pairwise cost function against the coupling"},
+      {"role": "parameter", "meaning": "the two fixed prescribed marginal measures"},
+      {"role": "state", "meaning": "dual potential functions whose gradients characterize the support of the optimal plan"}
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "Monge-Kantorovich optimal transport: a linear program over couplings with marginal (mass) constraints, studied via Kantorovich duality and a support-characterization / uniqueness criterion. The objective is linear in the coupling; convexity of the feasible set and duality are load-bearing. Some extracted lines are LaTeX macro noise (\\def) and were ignored.",
+  "_model": "claude-fable-5-agent-20260705"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2403.07670",
+  "assignments": [
+    {
+      "template_id": "master_equation",
+      "confidence": 0.9,
+      "twist": "population dynamics of stochastic neurons with synaptic shot noise and reversal potentials"
+    }
+  ],
+  "core_model_summary": "A master equation describing the probability evolution of integrate-and-fire neuron membrane voltages receiving synaptic shot noise with exponentially-distributed conductances and excitatory/inhibitory reversal potentials.",
+  "_model": "claude-haiku-4-5"
+}

@@ -80,35 +80,34 @@ export default async function Home() {
       </h1>
 
       <p className="text-lg mb-6 leading-relaxed">
-        Analog Quest finds cases where different scientific fields are solving
-        the exact same equation under different names. Two ways it happens:
+        Analog Quest is building an atlas of shared mathematical structure
+        across science: a map of the canonical models — the logistic equation,
+        the Kuramoto oscillators, the Fokker–Planck equation — and every field
+        that quietly uses each one under a different name. When papers from
+        different fields land on the same structure, that&apos;s a cross-field
+        bridge.
       </p>
 
-      <ul className="text-lg mb-8 leading-relaxed list-disc pl-6 space-y-2">
-        <li>
-          A batch pipeline downloads arXiv LaTeX source, normalizes every
-          equation into canonical symbolic form, and matches structural
-          equivalents across domains.
-        </li>
-        <li>
-          Anyone with a Claude Code session can contribute by pointing an
-          agent at the shared work queue — reading papers the pipeline
-          can&apos;t handle and submitting structural classifications.
-        </li>
-      </ul>
+      <p className="text-lg mb-8 leading-relaxed">
+        It&apos;s built by reading papers, not scraping them. Anyone with a
+        Claude Code session can contribute: an agent pulls a batch of papers,
+        identifies the canonical structure each one&apos;s core model
+        instantiates, and adds them to the map. Moderators review the bridges
+        before they&apos;re featured.
+      </p>
 
       <div className="flex flex-wrap gap-3 mb-12">
         <Link
-          href="/contribute"
+          href="/atlas"
           className="border border-black px-5 py-2 text-sm no-underline hover:bg-black hover:text-white transition-colors"
         >
-          contribute a session →
+          explore the atlas →
         </Link>
         <Link
-          href="/discoveries"
+          href="/contribute"
           className="border border-black/20 px-5 py-2 text-sm no-underline hover:border-black transition-colors"
         >
-          browse discoveries
+          contribute a session
         </Link>
       </div>
 

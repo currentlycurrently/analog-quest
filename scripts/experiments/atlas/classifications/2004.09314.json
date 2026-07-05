@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2004.09314",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "sir_compartmental",
+      "confidence": 0.95,
+      "twist": "two susceptible sub-populations (confined vs non-confined) with distinct, time-varying infection rates encoding confinement policies"}
+  ],
+  "core_model_summary": "A compartmental epidemic model splitting the susceptible pool into confined and non-confined groups with different transmission rates to evaluate lockdown-exit strategies."
+}

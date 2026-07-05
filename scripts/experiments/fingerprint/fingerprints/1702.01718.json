@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "1702.01718",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A finite system of first-order ordinary differential equations in which each unit's velocity depends only on its gap to the next unit through a nonlinear monotone function, coupled in a nearest-neighbor chain.",
+    "canonical_form": "\\dot{x}_i(t) = v\\!\\left(\\frac{\\ell}{x_{i+1}(t)-x_i(t)}\\right),\\quad i=1,\\dots,N-1; \\qquad \\text{equivalently } \\dot{y}_i = \\tfrac{1}{\\ell}\\bigl(V(y_{i+1})-V(y_i)\\bigr)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "lattice",
+    "structural_features": ["first_order_in_time", "pairwise_coupling", "conservation_law", "nonlinear_flux"],
+    "variables": [
+      {"role": "state", "meaning": "position of each ordered unit along a line, or equivalently the reciprocal gap between consecutive units"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "fixed spacing scale and the monotone velocity-versus-density response function"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A scalar first-order conservation law in one space dimension with nonlinear flux, obtained as the continuum limit of the nearest-neighbor chain, whose entropy weak solutions develop shocks.",
+    "structural_features": ["conservation_law", "nonlinear_flux", "advection_term", "shock_formation", "first_order_in_time"]
+  },
+  "confidence": 0.72,
+  "notes": "Two equally central objects are linked: the discrete nearest-neighbor ODE chain (taken as core) and the scalar conservation law PDE (taken as its continuum/mean-field skeleton). The paper's thesis is precisely that the former is a numerical scheme converging to the latter, so the discrete-to-continuum relationship is the natural core/skeleton split. A Lagrangian conservation law y_t - V(y)_x = 0 also appears as an intermediate form.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

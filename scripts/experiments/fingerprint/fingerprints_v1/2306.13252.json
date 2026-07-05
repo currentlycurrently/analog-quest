@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "2306.13252",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A first-order-in-time scalar evolution equation combining a nonlinear quadratic flux with a fractional-order dissipative operator, whose long-time behaviour is captured by scale-invariant self-similar source-type solutions.",
+    "canonical_form": "u_t + \\left(\\tfrac{1}{2}u^2\\right)_x = -\\nu\\,\\Lambda^{\\alpha} u, \\qquad u(x,t) = (t+t_*)^{-a} F\\!\\left(\\frac{x}{(t+t_*)^{b}}\\right)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "nonlinear_flux",
+      "advection_term",
+      "damping_term",
+      "scale_invariance",
+      "first_order_in_time",
+      "shock_formation"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field evolving in one spatial dimension"},
+      {"role": "time", "meaning": "evolution parameter with a shifted origin"},
+      {"role": "space", "meaning": "one-dimensional continuous coordinate"},
+      {"role": "parameter", "meaning": "dissipation strength and fractional order of the nonlocal smoothing operator"}
+    ]
+  },
+  "confidence": 0.78,
+  "notes": "Two candidate cores: the hypoviscous scalar conservation law with fractional dissipation (primary, Burgers side) and a nonlocal integral operator (Hilbert/Riesz-type) governing the 2D companion equation; both share the self-similar-solution structure. Canonical form uses a fractional dissipative operator Lambda^alpha since the paper is 'hypoviscous' (order < 2). Equation extraction was noisy; the self-similar reduction and near-identity transformation are the paper's main analytical objects.",
+  "_model": "claude-fable-5-agent-20260705"
+}

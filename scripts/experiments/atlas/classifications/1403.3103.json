@@ -1,0 +1,8 @@
+{
+  "arxiv_id": "1403.3103",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "optimal_transport", "confidence": 0.95, "twist": "measure-theoretic characterization of the support and uniqueness of optimal plans for general cost functions via Kantorovich duality"}
+  ],
+  "core_model_summary": "The Monge-Kantorovich optimal mass transport problem, characterizing the support and uniqueness of optimal transport plans for general cost functions using Kantorovich duality."
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2505.15526",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "fokker_planck",
+      "confidence": 0.85,
+      "twist": "a coupled pair of Fokker-Planck-type kinetic equations with state-dependent (multiplicative) diffusion for two interacting populations' distribution densities"},
+    {"template_id": "lotka_volterra",
+      "confidence": 0.8,
+      "twist": "the macroscopic mean-value dynamics of the two coupled populations obey a predator-prey Lotka-Volterra ODE system driving the kinetic densities"}
+  ],
+  "core_model_summary": "A system of coupled Fokker-Planck kinetic equations for the distribution densities of two pairwise-interacting populations whose mean values evolve according to Lotka-Volterra predator-prey dynamics, used to track inequality via the coefficient of variation."
+}

@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00640",
+  "assignments": [],
+  "core_model_summary": "The paper establishes convergence rates for empirical averages of random field sums under weak moment conditions, which is a pure probabilistic convergence result without canonical mathematical model instantiation.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.00621",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "variational",
+    "structure_summary": "Critical points of an energy functional — a nonlocal fractional-order quadratic form plus a coefficient-weighted quadratic term minus a spatially modulated nonlinear potential term — are sought on the manifold of functions with fixed squared integral norm, the constraint's multiplier appearing as an unknown eigenvalue-like parameter in the associated nonlocal elliptic equation.",
+    "canonical_form": "(-\\Delta)^s u + V(\\varepsilon x)\\, u = \\lambda u + h(\\varepsilon x) f(u) \\ \\text{in } \\mathbb{R}^N, \\qquad \\int_{\\mathbb{R}^N} |u|^2\\, dx = a; \\qquad I(u) = \\tfrac{1}{2}\\int |(-\\Delta)^{s/2} u|^2 + \\tfrac{1}{2}\\int V(\\varepsilon x) u^2 - \\int h(\\varepsilon x) F(u)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "constrained_optimization",
+      "energy_functional",
+      "diffusion_term"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar function on unbounded continuum space, the unknown critical point"},
+      {"role": "space", "meaning": "N-dimensional continuous independent variable"},
+      {"role": "parameter", "meaning": "unknown multiplier enforcing the fixed-norm constraint, determined together with the solution"},
+      {"role": "parameter", "meaning": "prescribed value of the squared integral norm"},
+      {"role": "parameter", "meaning": "small scaling parameter dilating the two bounded coefficient functions; solution count tied to the number of global maxima of the coefficient modulating the nonlinear term"},
+      {"role": "objective", "meaning": "energy functional whose constrained critical points are the sought solutions"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The 'diffusion_term' tag refers to a fractional (nonlocal) power of the Laplacian, s in (0,1), not a literal second derivative. The model can equivalently be typed as a stationary nonlocal elliptic PDE with an unknown multiplier; the main multiplicity results are proved variationally on the fixed-norm sphere with subcritical-growth nonlinearity."
+}

@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2403.00971",
+  "assignments": [
+    {
+      "template_id": "langevin_sde",
+      "confidence": 0.75,
+      "twist": "leaky integrate-and-fire neuron with synaptic delay in drift term and reset boundary condition"
+    },
+    {
+      "template_id": "fokker_planck",
+      "confidence": 0.75,
+      "twist": "probability density evolution of neural membrane voltage with reset-at-threshold boundary condition"
+    }
+  ],
+  "core_model_summary": "The paper analyzes the long-time behavior of noisy leaky integrate-and-fire neural dynamics described by a Langevin SDE with delay and its associated Fokker-Planck equation for the voltage probability density.",
+  "_model": "claude-haiku-4-5"
+}

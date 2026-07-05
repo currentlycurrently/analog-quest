@@ -1,0 +1,41 @@
+{
+  "arxiv_id": "2401.00822",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A set of interacting positive scalars evolves under coupled stochastic differential equations with state-dependent noise and a deterministic drift containing pairwise logarithmic-repulsion terms of the form (x_a x_b)/(x_a - x_b), constrained to a simplex.",
+    "canonical_form": "dx_\\alpha = 4\\gamma\\Big[\\sum_{\\beta\\neq\\alpha}\\frac{x_\\alpha x_\\beta}{x_\\alpha-x_\\beta} + h(\\vec x)\\Big]dt + 2\\sqrt{\\gamma}\\,x_\\alpha\\Big(dB_\\alpha - \\sum_\\beta x_\\beta dB_\\beta\\Big);\\qquad \\partial_t P = \\tfrac{\\Gamma}{2}\\partial_\\omega\\big[(\\partial_\\omega + 2V'(\\omega))P\\big]",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "multiplicative_noise",
+      "pairwise_coupling",
+      "probability_flow",
+      "energy_functional",
+      "gradient_flow",
+      "normalization_constraint",
+      "fixed_point_equilibrium",
+      "first_order_in_time"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "collection of interacting positive scalars (spectrum) summing to one"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "noise", "meaning": "independent Brownian increments, state-multiplied and mean-subtracted"},
+      {"role": "parameter", "meaning": "monitoring/dephasing rates controlling drift and noise strength"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A gradient flow of interacting scalars down a potential combining pairwise logarithmic repulsion between all pairs and a confining single-body term, whose stationary state is the Coulomb-gas / equilibrium density.",
+    "structural_features": [
+      "gradient_flow",
+      "energy_functional",
+      "pairwise_coupling",
+      "fixed_point_equilibrium",
+      "first_order_in_time"
+    ]
+  },
+  "confidence": 0.83,
+  "notes": "Core is a Dyson-Brownian-motion-type coupled SDE for the spectrum with multiplicative (state-dependent) noise and log-repulsion drift; equivalently a Fokker-Planck equation for the density. Change of variables recasts the drift as minus-gradient of a potential V with log-sinh pairwise repulsion plus a confining term, so the deterministic skeleton is the corresponding gradient flow / Coulomb-gas equilibrium. Normalization (trace one) is structural.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

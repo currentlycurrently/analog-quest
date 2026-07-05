@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.00621",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "gross_pitaevskii",
+      "confidence": 0.6,
+      "twist": "stationary standing-wave problem of a fractional nonlinear Schrodinger equation with external potential, solved for L2-normalized solutions via a Lagrange multiplier"}
+  ],
+  "core_model_summary": "Existence and multiplicity of L2-normalized standing-wave solutions to a fractional Schrodinger equation with a bounded potential and subcritical nonlinearity."
+}

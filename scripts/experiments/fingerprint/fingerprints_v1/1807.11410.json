@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "1807.11410",
+  "core_model": {
+    "object_type": "network_dynamics",
+    "structure_summary": "A first-order ordinary differential system for angular variables on a graph, where each unit is driven by an intrinsic rate plus a weighted sum over neighbors of the sine of pairwise angle differences.",
+    "canonical_form": "\\dot{x}_i = \\omega_i - \\sum_{j} a_{ij}\\,\\sin(x_i - x_j),\\quad i \\in \\{1,\\dots,n\\}",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "phase_coupling",
+      "network_topology_matters",
+      "pairwise_coupling",
+      "oscillatory_dynamics",
+      "first_order_in_time",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "angular variable of unit i on the circle"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "intrinsic drift rate of unit i"},
+      {"role": "parameter", "meaning": "directed, weighted, signed coupling coefficient from unit j to unit i (adjacency/weight matrix, generally asymmetric)"}
+    ]
+  },
+  "confidence": 0.93,
+  "notes": "Core is the generalized coupled-phase-oscillator system on a weighted, signed, oriented graph. Equations clearly show the sin(x_i - x_j) phase coupling weighted by a possibly asymmetric matrix a_{ij}; the paper's results concern existence/uniqueness/stability of the phase-locked fixed points. The 1/n mean-field form and the mean-field order-parameter reduction (r,psi) appear as special/derived cases.",
+  "_model": "claude-fable-5-agent-20260705"
+}

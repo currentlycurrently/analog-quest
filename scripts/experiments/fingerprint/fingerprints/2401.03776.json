@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.03776",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A short-time asymptotic expansion of a derived quantity in terms of the cumulants of a random variable's distribution, yielding a polynomial-in-argument expression whose coefficients are set by the third and fourth cumulants scaled by powers of a small parameter.",
+    "canonical_form": "q_\\theta(x) = \\phi(x)\\big\\{1 + \\kappa_3 H_3(x)\\,\\theta^{\\beta_1} + \\kappa_4 H_4(x)\\,\\theta^{\\beta_2} + \\dots\\big\\}, \\quad \\sigma(z,\\theta) = \\kappa_2\\big(1 + \\kappa_3 c_1(z)\\theta^{\\beta_1} + \\kappa_4 c_2(z)\\theta^{\\beta_2}\\big) + o(\\cdot)",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": ["scale_invariance", "probability_flow", "additive_noise", "multiplicative_noise", "entropy_term"],
+    "variables": [
+      {"role": "state", "meaning": "log of the underlying random variable / driven process"},
+      {"role": "time", "meaning": "small time-to-maturity parameter driving the asymptotics"},
+      {"role": "parameter", "meaning": "cumulants (skewness, kurtosis) of the distribution"},
+      {"role": "parameter", "meaning": "scaling exponents controlling the rate of vanishing terms"},
+      {"role": "noise", "meaning": "Brownian driver of the underlying stochastic-volatility process"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "sde",
+    "summary": "A stochastic differential equation for the log-price with a variance process, dZ = -1/2 v dt + sqrt(v) dW, whose short-time distributional moments generate the expansion.",
+    "structural_features": ["multiplicative_noise", "additive_noise", "probability_flow", "first_order_in_time"]
+  },
+  "confidence": 0.55,
+  "notes": "The paper is deliberately model-independent / distribution-based: the central object is a cumulant/Edgeworth-type asymptotic expansion (Hermite polynomials H_n, cumulants kappa_3, kappa_4) of the return distribution and the resulting implied-volatility expansion, best tagged statistical_model. The dressing includes an underlying stochastic-volatility SDE dZ=-1/2 v dt + sqrt(v)dB, which is the natural process skeleton. Extraction is noisy and the model straddles statistical_model / algebraic asymptotics; moderate confidence.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

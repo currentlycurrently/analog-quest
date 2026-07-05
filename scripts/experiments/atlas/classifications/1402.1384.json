@@ -1,0 +1,8 @@
+{
+  "arxiv_id": "1402.1384",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "variational_inference_free_energy", "confidence": 0.85, "twist": "mean-field and Bethe variational free energies (sum of KL divergences) minimized for sparse Bayesian estimation, equivalent to approximate message passing fixed points"}
+  ],
+  "core_model_summary": "Sparse signal recovery cast as minimization of a variational (mean-field / Bethe) free energy, i.e. KL-divergence-based free-energy bound whose stationary points give the posterior estimate."
+}

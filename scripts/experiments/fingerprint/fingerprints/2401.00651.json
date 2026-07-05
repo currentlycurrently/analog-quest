@@ -1,0 +1,36 @@
+{
+  "arxiv_id": "2401.00651",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "Minimization of a composite loss over learned vector representations of graph nodes, combining a noise-contrastive term with log-sigmoid scoring of representation inner products and squared-error reconstruction terms, with representations produced by attention-based aggregations of random-walk statistics.",
+    "canonical_form": "\\min\\ \\mathcal{L} = -\\sum_{(i,j)\\in D}\\big[p_{ij}\\ln\\sigma(\\gamma_i^{\\top}\\tilde\\gamma_j/\\tau) + Q n_j \\ln\\sigma(-\\gamma_i^{\\top}\\tilde\\gamma_j/\\tau)\\big] + \\sum \\lVert \\rho - \\hat\\rho \\rVert_2^2,\\quad Z = \\mathrm{softmax}\\!\\left(\\frac{\\tilde Q\\tilde K^{\\top}}{\\sqrt{d}}\\right)\\tilde V",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "network",
+    "structural_features": [
+      "network_topology_matters",
+      "multiplicative_interaction",
+      "normalization_constraint",
+      "entropy_term",
+      "threshold_nonlinearity",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "learned node/context representation vectors"},
+      {"role": "objective", "meaning": "composite contrastive plus reconstruction loss to be minimized"},
+      {"role": "parameter", "meaning": "attention weight matrices, temperature, negative-sampling factor, random projection"},
+      {"role": "noise", "meaning": "random-walk sampling and Gaussian random-feature projection"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "algebraic",
+    "summary": "The stationarity condition of the contrastive objective, giving an algebraic fixed-point relation in which the optimal inner-product score equals a log-ratio of co-occurrence to negative-sampling frequency.",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "entropy_term",
+      "threshold_nonlinearity"
+    ]
+  },
+  "confidence": 0.58,
+  "notes": "Composite deep-learning model (attention over random-walk statistics jointly optimizing two embedding types). The central formal object is the noise-contrastive optimization objective; the paper itself derives its stationarity condition z_ij = ln p_ij - ln(Q n_j), a pointwise-mutual-information-style fixed point, which is taken as the deterministic skeleton. Many moving parts (multiple attention units, reconstruction regularizers) lower confidence in a single canonical core."
+}

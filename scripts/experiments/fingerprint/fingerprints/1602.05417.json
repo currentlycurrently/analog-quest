@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "1602.05417",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A linear second-order hyperbolic equation for a scalar field on a one-dimensional continuum, with second derivatives in both space and time, a first-order-in-time dissipative term, and a zeroth-order term, all with time-dependent coefficients arising from a time-varying domain, which upon mode decomposition reduces to second-order oscillator equations with time-dependent damping and frequency that can yield exponentially growing amplitudes.",
+    "canonical_form": "\\partial_x^2 u = a(t)\\,\\partial_t^2 u + b(t)\\,\\partial_t u + c(t)\\,u; \\qquad u(x,t) = \\sum_n A_n(t)\\,\\varphi_n(x), \\quad \\ddot{A}_n + b(t)\\,\\dot{A}_n + \\Omega_n^2(t)\\,A_n = 0",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "second_order_in_time",
+      "diffusion_term",
+      "damping_term",
+      "oscillatory_dynamics",
+      "exponential_growth_or_decay",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar field over the one-dimensional domain (a second dual field obeys the same equation)"},
+      {"role": "state", "meaning": "time-dependent amplitude of each spatial eigenmode after separation of variables"},
+      {"role": "space", "meaning": "coordinate along the one-dimensional continuum with a moving endpoint"},
+      {"role": "time", "meaning": "continuous independent variable"},
+      {"role": "parameter", "meaning": "time-dependent coefficients (per-unit-length densities and loss rates) whose time variation encodes the moving boundary and drives parametric amplification"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A second-order linear oscillator with time-dependent damping coefficient and time-dependent natural frequency, whose parametric time variation can convert oscillation into exponential amplitude growth.",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "oscillatory_dynamics",
+      "exponential_growth_or_decay"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "Two candidate framings: the full damped hyperbolic equation with time-dependent coefficients (chosen as core) and the per-mode parametric damped oscillator ODE it separates into (chosen as skeleton, since the paper's conclusions about oscillation character and exponential growth are read off the mode equations via a WKB-type two-exponential ansatz). The model is already deterministic; the skeleton is the mode-reduced form."
+}

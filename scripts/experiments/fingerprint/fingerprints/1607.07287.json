@@ -1,0 +1,37 @@
+{
+  "arxiv_id": "1607.07287",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "An exact identity stating that the ensemble average of an exponentially weighted functional over a probability measure on paths equals the ratio of two normalizing constants of exponential-family (Gibbs-type) distributions.",
+    "canonical_form": "\\left\\langle e^{-\\beta W[\\gamma]}\\right\\rangle = \\frac{Z_B}{Z_A} = e^{-\\beta\\,\\Delta F},\\qquad P(x)=\\frac{e^{-\\beta H(x)}}{Z},\\quad Z=\\int e^{-\\beta H(x)}\\,dx,\\qquad \\Delta F \\le \\langle W\\rangle",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "entropy_term",
+      "free_energy_minimization",
+      "normalization_constraint",
+      "convexity_central",
+      "variational_bound"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "path/trajectory in configuration space and its endpoints"},
+      {"role": "objective", "meaning": "scalar functional of a path being exponentially averaged"},
+      {"role": "parameter", "meaning": "inverse-scale multiplier in the exponential weighting"},
+      {"role": "noise", "meaning": "probability measure over the path ensemble"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Constrained maximization of an entropy functional over a probability measure, whose stationarity condition yields an exponential-family distribution normalized by a partition function.",
+    "structural_features": [
+      "entropy_term",
+      "constrained_optimization",
+      "normalization_constraint",
+      "free_energy_minimization"
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "Central object is the Jarzynski exponential-average identity derived from a maximum-path-entropy (MaxCaliber) inference principle. The bound Delta F <= <W> follows from convexity (Jensen), motivating convexity_central and variational_bound. The deterministic skeleton is the maximum-entropy variational/stationarity problem producing the Gibbs distribution; could alternatively be tagged 'variational'.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

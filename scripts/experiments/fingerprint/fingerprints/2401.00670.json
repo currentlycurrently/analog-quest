@@ -1,0 +1,37 @@
+{
+  "arxiv_id": "2401.00670",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A coupled system of first-order ODEs in which the reaction/production rates are supplied by a learned nonlinear surrogate function, with each state subject to a state-proportional growth-plus-decay (dilution) loss term and driven by external control inputs.",
+    "canonical_form": "\\dot{z} = b(t)\\,q_z\\!\\left(z,e;\\theta\\right),\\qquad \\dot{e} = q_e\\!\\left(u;\\theta\\right) - \\left(\\mu(z,e)\\,\\mathbf{1} + d(e)\\right)\\circ e,\\qquad q_z = f_{\\mathrm{NN}}(e)\\,h(z),\\qquad z(0)=z_0,\\ e(0)=e_0",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "driving_term",
+      "damping_term",
+      "multiplicative_interaction",
+      "constrained_optimization"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "extensive/concentration-like quantities and internal expression-level variables"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "control", "meaning": "externally manipulable input driving production rates"},
+      {"role": "parameter", "meaning": "kinetic parameters and neural-surrogate weights encoding the embedded network constraints"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A coupled system of first-order ODEs with externally driven production terms and state-proportional loss (dilution/decay) terms, with the surrogate reduced to a generic nonlinear rate function.",
+    "structural_features": [
+      "first_order_in_time",
+      "driving_term",
+      "damping_term",
+      "multiplicative_interaction"
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "Two candidate central models: (1) the hybrid physics-informed dynamic ODE system (chosen here, matches the abstract's stated framework), and (2) the embedded flux-balance constrained optimization (max F s.t. S v = 0, bounds) plus downstream MPC/MHE optimizations. The neural-network surrogate replaces the inner constrained optimization, so constrained_optimization is retained as a secondary feature of the core but dropped from the pure dynamical skeleton.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

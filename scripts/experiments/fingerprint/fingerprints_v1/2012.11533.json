@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "2012.11533",
+  "core_model": {
+    "object_type": "optimization",
+    "structure_summary": "An interconnection of maximal monotone (set-valued, generalized-nonexpansive) operators whose periodic steady behavior is characterized as the zero/fixed point of a sum operator and computed by a splitting forward-step fixed-point iteration.",
+    "canonical_form": "\\text{find } x:\\; y=S(x),\\; S=S_1+S_2 \\text{ maximal monotone};\\qquad x^{j+1}=x^{j}-\\alpha\\,S(x^{j}),\\quad \\alpha=m/L^2,\\quad S=(1-\\theta)I+\\theta G,\\quad G(x)=M^{\\top}F(Mx)",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "convexity_central",
+      "fixed_point_equilibrium",
+      "network_topology_matters",
+      "first_order_in_time",
+      "constrained_optimization"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "signal/vector sought as fixed point of the operator iteration (a periodic trajectory)"},
+      {"role": "objective", "meaning": "maximal monotone operator (generalization of a convex subgradient) whose zero is sought"},
+      {"role": "parameter", "meaning": "iteration step size set by monotonicity and Lipschitz constants"},
+      {"role": "parameter", "meaning": "interconnection/incidence operator coupling the component operators"},
+      {"role": "time", "meaning": "periodic continuous time over one period, plus discrete iteration index of the solver"}
+    ]
+  },
+  "confidence": 0.58,
+  "notes": "Extraction is noisy. Core structure is maximal-monotone-operator interconnection theory: the periodic behavior of a port interconnection is a fixed point of a monotone operator, solved by an operator-splitting forward-step iteration that respects the interconnection graph. Two candidate framings: (a) the static maximal-monotone operator inclusion (could be 'algebraic'), (b) the fixed-point iteration itself ('discrete_update'). Chose 'optimization' because maximal monotone operators and their splitting solvers are the paper's optimization-theoretic core.",
+  "_model": "claude-fable-5-agent-20260705"
+}

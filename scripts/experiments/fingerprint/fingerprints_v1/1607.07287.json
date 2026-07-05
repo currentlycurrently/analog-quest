@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "1607.07287",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "An identity stating that the expectation of an exponential functional over a probability measure on trajectories equals the ratio of two normalizing constants of exponential (Gibbs-type) weights, derived by maximizing an entropy functional over path space subject to constraints.",
+    "canonical_form": "\\left\\langle e^{-\\beta W[\\gamma]}\\right\\rangle = \\frac{Z_B}{Z_A} = e^{-\\beta\\Delta F}, \\qquad P[\\gamma] \\propto e^{-\\beta H(\\gamma)},\\; Z=\\int e^{-\\beta H}\\,d\\gamma",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "entropy_term",
+      "free_energy_minimization",
+      "exponential_growth_or_decay",
+      "normalization_constraint",
+      "constrained_optimization",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "trajectory/path in a state space, weighted by a probability measure"},
+      {"role": "objective", "meaning": "entropy of the path distribution being extremized under constraints"},
+      {"role": "parameter", "meaning": "inverse-scale weighting constant in the exponential Gibbs measure"},
+      {"role": "noise", "meaning": "path-ensemble randomness over which the exponential functional is averaged"}
+    ]
+  },
+  "confidence": 0.6,
+  "notes": "The paper is a derivation of an exponential-average identity (Jarzynski-type) from a maximum-path-entropy / maximum-caliber variational principle. Two defensible object_type choices: 'statistical_model' (inference over path space, chosen here) or 'variational' (the max-entropy extremization). The load-bearing structure is the equality of an ensemble exponential average to a ratio of partition functions, plus the inference/Bayesian ratio equations. Equations are conceptual identities rather than a single dynamical equation.",
+  "_model": "claude-fable-5-agent-20260705"
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2202.04557",
+  "assignments": [
+    {"template_id": "binary_spin_energy",
+      "confidence": 0.87,
+      "twist": "extended Hopfield networks with general similarity and separation functions replacing classical dot-product coupling"}
+  ],
+  "core_model_summary": "A generalized framework for associative memory networks (Hopfield networks, continuous Hopfield networks) derived from an energy function with pairwise interactions, parameterized by arbitrary similarity and separation functions.",
+  "_model": "claude-haiku-4-5"
+}

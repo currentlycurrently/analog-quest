@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2401.01397",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A continuous-time interacting-particle Markov jump process on a finite Cartesian lattice in which each site holds a binary state that transitions irreversibly from 0 to 1 at a rate equal to a constant spontaneous term plus a term proportional to the count of already-transitioned nearest neighbors.",
+    "canonical_form": "X_{\\mathbf{j}}(t)\\in\\{0,1\\},\\; X_{\\mathbf{j}}(0)=0;\\quad \\mathbb{P}(X_{\\mathbf{j}}(t+\\Delta t)=1\\mid \\mathbf{X}(t))=\\left(p+\\tfrac{q}{2D}N_{\\mathbf{j}}(t)\\right)\\Delta t \\text{ if } X_{\\mathbf{j}}(t)=0,\\; N_{\\mathbf{j}}=\\sum_{i}(X_{\\mathbf{j}-\\hat e_i}+X_{\\mathbf{j}+\\hat e_i});\\quad \\text{aggregate } f(t)=\\tfrac{1}{M}\\sum_{\\mathbf{j}}\\mathbb{E}X_{\\mathbf{j}}(t)",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "jump_process",
+      "spin_or_binary_units",
+      "boundary_conditions_central",
+      "network_topology_matters",
+      "pairwise_coupling",
+      "driving_term",
+      "first_order_in_time"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "per-site binary indicator that has crossed from 0 to 1 (absorbing at 1)"},
+      {"role": "time", "meaning": "continuous time of the jump process"},
+      {"role": "space", "meaning": "D-dimensional Cartesian lattice site index, with edges/boundaries central"},
+      {"role": "parameter", "meaning": "spontaneous transition rate (state-independent driving)"},
+      {"role": "parameter", "meaning": "neighbor-coupling rate scaling the count of transitioned nearest neighbors"}
+    ]
+  },
+  "confidence": 0.8,
+  "notes": "Core is the discrete Bass model as a lattice interacting-particle system; the paper's results are boundary corrections to the aggregate transitioned-fraction, so boundary_conditions_central is genuinely load-bearing. Closed-form 1D expression f=1-exp(-(p+q)t+(q/p)(1-e^{-pt})) is a derived quantity, not the core object. A separate panel-regression statistical model (last equation) is an auxiliary empirical tool, not the core.",
+  "_model": "claude-fable-5-agent-20260705"
+}

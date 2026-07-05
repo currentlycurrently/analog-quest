@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.00948",
+  "assignments": [
+    {"template_id": "binary_spin_energy",
+      "confidence": 0.92,
+      "twist": "one-dimensional two-sublattice Ising ferrimagnet with unequal magnetic moments in a field, exploiting a hidden degenerate excited state for finite-T phase switching"}
+  ],
+  "core_model_summary": "A one-dimensional Ising-type ferrimagnet with pairwise spin coupling and a magnetic field on two sublattices of unequal moment, whose energy Hamiltonian hosts a hidden half-ice half-fire excited state driving finite-temperature phase switching.",
+  "_model": "claude-fable-5-agent-20260705"
+}

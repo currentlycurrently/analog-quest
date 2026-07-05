@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "2401.00623",
+  "core_model": {
+    "object_type": "variational",
+    "structure_summary": "Constrained minimization of an energy functional whose quadratic gradient part is augmented by nonlocal coefficient fields determined self-consistently as convolution-type functionals of the squared state, minus a potential term with exponential-type growth, over the sphere of fixed squared integral norm in two dimensions, the multiplier appearing in the stationarity system.",
+    "canonical_form": "E(u) = \\frac{1}{2}\\int_{\\mathbb{R}^2} \\big[|\\nabla u|^2 + (v_1^2 + v_2^2)\\,u^2\\big]\\,dx - \\int_{\\mathbb{R}^2} G(u)\\,dx \\ \\text{on } \\Big\\{\\int u^2 = c\\Big\\}; \\qquad -\\Delta u + \\mu u + v_0 u + (v_1^2+v_2^2)u = g(u), \\quad \\partial_1 v_2 - \\partial_2 v_1 = -\\tfrac{1}{2}u^2, \\ \\partial_1 v_1 + \\partial_2 v_2 = 0, \\ \\partial_1 v_0 = v_2 u^2, \\ \\partial_2 v_0 = -v_1 u^2",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "constrained_optimization",
+      "energy_functional",
+      "diffusion_term",
+      "quadratic_self_interaction",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar function on the two-dimensional continuum whose constrained critical profile is sought"},
+      {"role": "state", "meaning": "auxiliary fields determined nonlocally by first-order equations sourced by the square of the primary function"},
+      {"role": "space", "meaning": "two-dimensional unbounded continuum coordinate"},
+      {"role": "parameter", "meaning": "unknown multiplier enforcing the fixed squared-norm constraint"},
+      {"role": "parameter", "meaning": "fixed value of the squared integral norm"},
+      {"role": "objective", "meaning": "energy functional whose constrained minimizer over a natural manifold is the sought ground state"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A stationary semilinear elliptic equation in the plane in which the state is multiplied by nonlocal convolution-type functionals of its own square (a cubic-order nonlocal self-interaction) and balanced against a linear multiplier term and a rapidly growing local nonlinearity, under a fixed-norm side condition.",
+    "structural_features": [
+      "diffusion_term",
+      "quadratic_self_interaction",
+      "fixed_point_equilibrium",
+      "constrained_optimization"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The elliptic system with self-consistent auxiliary fields is the standing-profile (single-frequency) reduction of a first-order-in-time gauge-coupled dispersive evolution system quoted as background; the paper works with the stationary constrained problem. The auxiliary fields can be eliminated via explicit convolution kernels, yielding a single nonlocal equation; an identity ties the v_0-weighted mass to twice the (v_1^2+v_2^2)-weighted mass. Supercritical exponential growth of the local nonlinearity is handled by a truncation family.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

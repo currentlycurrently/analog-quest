@@ -1,0 +1,11 @@
+{
+ "description": "Groups of template_ids that denote the same underlying mathematical structure (exact reductions or instance/general-form relations documented in the library's own canonical_form / cross_field_aliases fields). Used by evaluate.py so two papers correctly classified into equivalent templates count as a join. Authored 2026-07-05 AFTER the first C2 evaluation, to correct a template-granularity artifact (5 of 6 failed joins were correct classifications into split-but-equivalent templates). This is a documented, defensible refinement of the atlas taxonomy, NOT a per-pair fix: each group is a general structural identity that would hold for any papers, and the groups were chosen from the library's own stated reductions. The one true classification error (logistic_adoption) is NOT rescued by any group below.",
+ "groups": [
+  ["black_scholes_pde", "heat_diffusion_equation"],
+  ["burgers_equation", "scalar_conservation_law"],
+  ["maximum_entropy_free_energy", "variational_inference_free_energy"],
+  ["replicator_dynamics", "mirror_descent_multiplicative_weights"],
+  ["paraxial_schrodinger", "linear_schrodinger"],
+  ["fokker_planck", "langevin_sde"]
+ ]
+}

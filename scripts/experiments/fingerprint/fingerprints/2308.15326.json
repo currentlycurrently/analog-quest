@@ -1,0 +1,44 @@
+{
+  "arxiv_id": "2308.15326",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "network_dynamics",
+    "structure_summary": "Second-order phase variables on the nodes of a weighted graph, each with inertia, linear damping, a constant node-specific drive, and pairwise coupling through the sine of phase differences weighted by the graph's edge weights, exhibiting partial synchronization that depends on topology.",
+    "canonical_form": "\\ddot{\\theta}_i + a\\,\\dot{\\theta}_i = c_i + K \\sum_{j=1}^{N} W_{ij} \\sin(\\theta_j - \\theta_i)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "driving_term",
+      "phase_coupling",
+      "pairwise_coupling",
+      "network_topology_matters",
+      "oscillatory_dynamics",
+      "phase_transition",
+      "scale_invariance"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "phase angle attached to each node of the graph"},
+      {"role": "time", "meaning": "continuous independent variable"},
+      {"role": "parameter", "meaning": "uniform damping coefficient"},
+      {"role": "parameter", "meaning": "constant node-specific drive (quenched heterogeneity)"},
+      {"role": "parameter", "meaning": "weighted adjacency matrix whose entries follow heavy-tailed distributions"},
+      {"role": "parameter", "meaning": "global coupling strength"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "network_dynamics",
+    "summary": "Coupled second-order ODEs for node phases on a weighted graph with linear damping, constant heterogeneous drives, and sinusoidal pairwise coupling in phase differences.",
+    "structural_features": [
+      "second_order_in_time",
+      "damping_term",
+      "phase_coupling",
+      "pairwise_coupling",
+      "network_topology_matters"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The paper combines (a) simulation of the second-order phase-coupled oscillator system on empirical graphs and (b) extensive empirical statistical analysis (heavy-tailed/power-law fits of parameters and edge weights, q-Gaussian increment distributions via superstatistics, community-structure measures). The dynamical system is taken as the core model since the synchronization results are about it; the statistical fits characterize its inputs and outputs. scale_invariance and phase_transition tags reflect the heavy-tailed parameter distributions and the synchronization transition/chimera behavior central to the results."
+}

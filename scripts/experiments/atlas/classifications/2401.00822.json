@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2401.00822",
+  "assignments": [
+    {"template_id": "langevin_sde",
+      "confidence": 0.9,
+      "twist": "coupled Dyson-Brownian-motion SDEs for density-matrix eigenvalues with multiplicative noise and eigenvalue-repulsion drift"},
+    {"template_id": "fokker_planck",
+      "confidence": 0.8,
+      "twist": "corresponding forward equation for the eigenvalue distribution, with a Coulomb-gas/log-interaction potential"}
+  ],
+  "core_model_summary": "Monitored quantum dynamics reduced to stochastic differential equations for the density-matrix eigenvalues (a Dyson Brownian motion with drift plus multiplicative noise) together with the associated Fokker-Planck equation for their probability distribution.",
+  "_model": "claude-fable-5-agent-20260705"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00492",
+  "assignments": [
+    {
+      "template_id": "nash_equilibrium",
+      "confidence": 0.8,
+      "twist": "evolutionary game-theoretic dynamics evolving dominant strategies via genetic algorithm on network with heterogeneous node positions"
+    }
+  ],
+  "core_model_summary": "Game-theoretic model of consumer-generated media where users evolve dominant strategies via genetic algorithm in a multi-agent network game, constrained by monetary rewards and user network position.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00376",
+  "assignments": [
+    {
+      "template_id": "korteweg_de_vries",
+      "confidence": 0.95,
+      "twist": "generalized nonlinearity f(u) and spectral stability analysis of small-amplitude periodic traveling waves"
+    }
+  ],
+  "core_model_summary": "Generalized Korteweg-de Vries equation with arbitrary nonlinearity, analyzing linear asymptotic stability of cnoidal periodic wave solutions via spectral theory.",
+  "_model": "claude-haiku-4-5"
+}

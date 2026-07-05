@@ -1,0 +1,127 @@
+{
+ "generated_by": "fetch_distractors.py",
+ "window": "[202401010000 TO 202402010000]",
+ "per_category": 2,
+ "papers": [
+  {
+   "arxiv_id": "2401.00822",
+   "primary_category": "cond-mat.stat-mech",
+   "title": "A Dyson Brownian motion model for weak measurements in chaotic quantum systems"
+  },
+  {
+   "arxiv_id": "2401.00948",
+   "primary_category": "cond-mat.stat-mech",
+   "title": "Phase Switch Driven by the Hidden Half-Ice, Half-Fire State in a Ferrimagnet"
+  },
+  {
+   "arxiv_id": "2401.03776",
+   "primary_category": "q-fin.PR",
+   "title": "Understanding Short-Term Implied Volatility Dynamics: A Model-Independent Approach Beyond Stochastic Volatility"
+  },
+  {
+   "arxiv_id": "2401.09955",
+   "primary_category": "q-fin.PR",
+   "title": "Consistent asset modelling with random coefficients and switches between regimes"
+  },
+  {
+   "arxiv_id": "2401.00622",
+   "primary_category": "cs.LG",
+   "title": "Federated Class-Incremental Learning with New-Class Augmented Self-Distillation"
+  },
+  {
+   "arxiv_id": "2401.00625",
+   "primary_category": "cs.LG",
+   "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models"
+  },
+  {
+   "arxiv_id": "2401.00743",
+   "primary_category": "q-bio.PE",
+   "title": "Walsh coefficients and circuits for several alleles"
+  },
+  {
+   "arxiv_id": "2401.01632",
+   "primary_category": "q-bio.PE",
+   "title": "Out-of-equlibrium inference of feeding rates through population data from generic consumer-resource stochastic dynamics"
+  },
+  {
+   "arxiv_id": "2401.00621",
+   "primary_category": "math.AP",
+   "title": "Multiplicity of normalized solutions for the fractional Schr\u00f6dinger equation with potentials"
+  },
+  {
+   "arxiv_id": "2401.00623",
+   "primary_category": "math.AP",
+   "title": "Normalized solutions to the Chern-Simons-Schr\u00f6dinger system: the supercritical case"
+  },
+  {
+   "arxiv_id": "2401.01171",
+   "primary_category": "physics.soc-ph",
+   "title": "Human society under the COVID-19 as a complex system. Mean first-passage time methodology"
+  },
+  {
+   "arxiv_id": "2401.01397",
+   "primary_category": "physics.soc-ph",
+   "title": "Boundary Effects in the Diffusion of New Products on Cartesian Networks"
+  },
+  {
+   "arxiv_id": "2401.00661",
+   "primary_category": "eess.SY",
+   "title": "Personalized Dynamic Pricing Policy for Electric Vehicles: Reinforcement learning approach"
+  },
+  {
+   "arxiv_id": "2401.00670",
+   "primary_category": "eess.SY",
+   "title": "Hybrid physics-informed metabolic cybergenetics: process rates augmented with machine-learning surrogates informed by flux balance analysis"
+  },
+  {
+   "arxiv_id": "2401.01118",
+   "primary_category": "nlin.AO",
+   "title": "An internet reviews topic hierarchy mining method based on modified continuous renormalization procedure"
+  },
+  {
+   "arxiv_id": "2401.01850",
+   "primary_category": "nlin.AO",
+   "title": "Confinement-driven state transition and bistability in schooling fish"
+  },
+  {
+   "arxiv_id": "2401.00657",
+   "primary_category": "math.OC",
+   "title": "Optimizing ADMM and Over-Relaxed ADMM Parameters for Linear Quadratic Problems"
+  },
+  {
+   "arxiv_id": "2401.00664",
+   "primary_category": "math.OC",
+   "title": "Metric Entropy-Free Sample Complexity Bounds for Sample Average Approximation in Convex Stochastic Programming"
+  },
+  {
+   "arxiv_id": "2401.00651",
+   "primary_category": "cs.SI",
+   "title": "IRWE: Inductive Random Walk for Joint Inference of Identity and Position Network Embedding"
+  },
+  {
+   "arxiv_id": "2401.00688",
+   "primary_category": "cs.SI",
+   "title": "Inference and Visualization of Community Structure in Attributed Hypergraphs Using Mixed-Membership Stochastic Block Models"
+  },
+  {
+   "arxiv_id": "2401.00839",
+   "primary_category": "econ.TH",
+   "title": "Community Enforcement with Endogenous Records"
+  },
+  {
+   "arxiv_id": "2401.00940",
+   "primary_category": "econ.TH",
+   "title": "Theoretical Steps to Optimize Transportation in the Cubic Networks and the Congestion Paradox"
+  },
+  {
+   "arxiv_id": "2401.00640",
+   "primary_category": "math.PR",
+   "title": "On the Law of Large Numbers and Convergence Rates for the Discrete Fourier Transform of Random Fields"
+  },
+  {
+   "arxiv_id": "2401.00671",
+   "primary_category": "math.PR",
+   "title": "Large deviation principle for a two-time-scale McKean-Vlasov model with jumps"
+  }
+ ]
+}

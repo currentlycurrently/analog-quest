@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2401.00688",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A generative probabilistic model in which counts on higher-order interaction sets are Poisson-distributed with rates built from bilinear products of nonnegative node-membership vectors and a block-affinity matrix, and node attributes are Bernoulli with membership-mixed probabilities, all fit by maximum likelihood.",
+    "canonical_form": "P(A_e\\mid U,W) = \\mathrm{Poisson}\\!\\left(\\tfrac{\\lambda_e}{\\kappa_{|e|}}\\right),\\quad \\lambda_e = \\sum_{i,j\\in e}\\sum_{k,q} u_{ik}\\,u_{jq}\\,w_{kq}; \\qquad P(x_{iz}\\mid U,\\beta)=\\mathrm{Bernoulli}(\\pi_{iz}),\\ \\pi_{iz}=\\sum_k u_{ik}\\beta_{kz}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "network",
+    "structural_features": [
+      "network_topology_matters",
+      "multiplicative_interaction",
+      "pairwise_coupling",
+      "normalization_constraint",
+      "probability_flow"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "observed interaction counts on higher-order edges and binary attribute indicators on nodes"},
+      {"role": "parameter", "meaning": "nonnegative per-node membership vectors, a block-to-block affinity matrix, and attribute-emission weights"},
+      {"role": "objective", "meaning": "the joint log-likelihood of interactions and attributes, maximized over the parameters"}
+    ]
+  },
+  "confidence": 0.8,
+  "notes": "Mixed-membership stochastic block model for attributed hypergraphs: a latent-variable generative model with Poisson higher-order edge likelihood (rate bilinear in membership vectors via u_i W u_j) and a Bernoulli attribute likelihood, estimated by maximizing the combined log-likelihood. 'probability_flow' flags that the model specifies distributions over the data; the dimensionality-reduction/visualization step is downstream and not the core structure. Attribute weights carry a simplex normalization (sum_k beta_kz = 1).",
+  "_model": "claude-fable-5-agent-20260705"
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2402.13378",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "optimal_transport",
+      "confidence": 0.9,
+      "twist": "stable matching with aligned preferences recast as a parametric (Atkinson-inequality-indexed) family of Monge-Kantorovich optimal transport problems"}
+  ],
+  "core_model_summary": "Stable/efficient/fair matchings in a market with aligned preferences characterized as solutions of a parametric family of optimal transport (Monge-Kantorovich coupling) problems with inequality-averse cost functions."
+}

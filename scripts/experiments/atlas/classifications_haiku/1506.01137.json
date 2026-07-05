@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1506.01137",
+  "assignments": [
+    {
+      "template_id": "logistic_growth",
+      "confidence": 0.94,
+      "twist": "derived from stochastic microscopic birth-death-immigration master equation"
+    }
+  ],
+  "core_model_summary": "Logistic (Verhulst) growth equation derived as mean-field limit of stochastic population dynamics, with analysis of extinction and persistence."
+}

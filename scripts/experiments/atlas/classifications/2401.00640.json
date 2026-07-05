@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00640",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "Establishes Marcinkiewicz-Zygmund strong-law-of-large-numbers convergence rates for cubic partial sums of the discrete Fourier transform of random fields under weakened distributional assumptions; a pure probabilistic limit-theorem result with no dynamical, PDE, or optimization model."
+}

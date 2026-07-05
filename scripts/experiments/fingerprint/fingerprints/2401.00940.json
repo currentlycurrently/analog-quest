@@ -1,0 +1,40 @@
+{
+  "arxiv_id": "2401.00940",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "game_theoretic",
+    "structure_summary": "Strategic units on the nodes of a hypercube graph each maximize a payoff that is linear in a simplex-constrained allocation vector minus a linear cost activated by binary indicator variables tied to positive allocations, with best responses characterized by Karush-Kuhn-Tucker stationarity conditions and an added congestion cost producing an inefficient equilibrium.",
+    "canonical_form": "\\max_{x, v} \\; \\Pi_i = \\sum_j (b_{ij} - c_{ij})\\, v_{ij}\\, x_{ij} \\quad \\text{s.t.} \\quad \\sum_j x_{ij} = 1,\\; x_{ij} \\ge 0,\\; v_{ij} = \\mathbf{1}[x_{ij} > 0];\\qquad \\mathcal{L} = \\sum_j (b_{ij}-c_{ij}) x_{ij} + \\lambda^{\\top} h + \\mu\\Big(1 - \\sum_j x_{ij}\\Big)",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "constrained_optimization",
+      "normalization_constraint",
+      "fixed_point_equilibrium",
+      "network_topology_matters",
+      "threshold_nonlinearity",
+      "competitive_exclusion"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "simplex-constrained allocation vector distributing a unit of mass across edges/destinations"},
+      {"role": "state", "meaning": "binary indicators switching on exactly where the allocation is positive"},
+      {"role": "parameter", "meaning": "per-destination benefit coefficients"},
+      {"role": "parameter", "meaning": "per-destination cost coefficients, dominated by benefits on cross links"},
+      {"role": "parameter", "meaning": "additional cost term increasing with aggregate use of a link (congestion externality)"},
+      {"role": "objective", "meaning": "linear benefit-minus-cost payoff per unit"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Maximization of a linear objective over the probability simplex with sign-activated cost terms, solved by Lagrangian stationarity with complementary-slackness conditions selecting which coordinates are positive.",
+    "structural_features": [
+      "constrained_optimization",
+      "normalization_constraint",
+      "fixed_point_equilibrium",
+      "threshold_nonlinearity"
+    ]
+  },
+  "confidence": 0.7,
+  "notes": "The equations are idiosyncratic and partly redundant (case tables for indicator variables, repeated constraint blocks). The core object is clearly the per-unit constrained linear maximization embedded in a multi-unit strategic setting on hypercube graphs; the 'paradox' result concerns the equilibrium when a congestion cost is appended. The congestion cost's exact functional form is not shown in the extracted equations, so its structure is inferred from the abstract."
+}

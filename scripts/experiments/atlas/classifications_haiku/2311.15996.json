@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2311.15996",
+  "assignments": [
+    {
+      "template_id": "langevin_sde",
+      "confidence": 0.93,
+      "twist": "score-based reverse-time diffusion with neural score function approximation"
+    },
+    {
+      "template_id": "fokker_planck",
+      "confidence": 0.93,
+      "twist": "density evolution coupling neural score approximations and ODE/SDE dynamics"
+    }
+  ],
+  "core_model_summary": "Paired analysis of forward Langevin SDE dynamics and associated Fokker-Planck probability density evolution in score-based generative models, studying ODE-SDE discrepancy.",
+  "_model": "claude-haiku-4-5"
+}

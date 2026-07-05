@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2505.15526",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A pair of coupled Fokker-Planck-type equations for two evolving densities, each combining a state-dependent (multiplicative) diffusion term with a drift, whose first moments obey a closed system of two ordinary differential equations with cross products of the two means producing oscillatory predator-prey dynamics.",
+    "canonical_form": "\\partial_t f = \\partial_x^2[a(m_g) x f] + \\partial_x[(b\\,x - c\\,m_f) f], \\quad \\partial_t g = \\partial_y^2[a(m_f) y^2 g] + \\partial_y[(\\cdots) g]; \\qquad \\dot m_f = \\alpha m_f - \\beta m_f m_g, \\quad \\dot m_g = -\\gamma' m_g + \\gamma m_f m_g",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "first_order_in_time",
+      "diffusion_term",
+      "probability_flow",
+      "multiplicative_interaction",
+      "predator_prey_asymmetry",
+      "oscillatory_dynamics",
+      "multiplicative_noise",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "two probability densities over a scalar coordinate, plus their means"},
+      {"role": "time", "meaning": "evolution parameter, first order"},
+      {"role": "space", "meaning": "continuous scalar coordinate over which each density is distributed"},
+      {"role": "parameter", "meaning": "growth, decay, and coupling coefficients plus noise intensities setting local equilibria"}
+    ]
+  },
+  "confidence": 0.72,
+  "notes": "Two candidate cores: (a) the coupled Fokker-Planck kinetic PDE system for the densities (chosen, matches title 'kinetic equations' and the multiplicative-noise diffusion structure), and (b) the reduced Lotka-Volterra ODE for the means. They are linked (means of the PDE solve the ODE). The predator-prey/oscillatory bilinear coupling is the shared essential feature.",
+  "_model": "claude-fable-5-agent-20260705"
+}

@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00625",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "A survey of resource-efficiency techniques for large language models; it has no core mathematical model (only transformer attention appears as background), so nothing in the library fits."
+}

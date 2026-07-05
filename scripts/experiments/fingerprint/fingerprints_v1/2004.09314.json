@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2004.09314",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A system of coupled first-order ordinary differential equations in which mass flows irreversibly between labeled scalar compartments, with transfer rates proportional to bilinear products of two distinct state variables.",
+    "canonical_form": "\\dot{x} = -\\sum_i \\beta_i x\\, y,\\quad \\dot{y} = \\left(\\sum_i \\beta_i x\\right) y - \\gamma y,\\quad \\dot{z} = \\gamma y",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "compartmental_flow",
+      "mass_action_kinetics",
+      "multiplicative_interaction",
+      "first_order_in_time",
+      "conservation_law",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "size of an initial compartment that depletes as it converts"},
+      {"role": "state", "meaning": "size of an intermediate compartment fed by conversion and drained at a fixed rate"},
+      {"role": "state", "meaning": "size of a terminal absorbing compartment"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "per-pair transfer rate(s) governing conversion, differing across sub-populations"},
+      {"role": "parameter", "meaning": "fixed removal rate out of the intermediate compartment"}
+    ]
+  },
+  "confidence": 0.62,
+  "notes": "No display equations were extracted; identification rests on the abstract, which names a compartmental transfer system (with a split first-compartment into two rate classes) that is later discretized as an integrator. The discretization is a numerical tool, so I take the continuous differential system as the core model. Total mass is conserved across compartments.",
+  "_model": "claude-fable-5-agent-20260705"
+}

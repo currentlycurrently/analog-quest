@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "1506.01137",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A one-dimensional continuous-time Markov jump process on the non-negative integers whose master equation has gain/loss transition rates given by falling-factorial polynomials of the state, whose deterministic mean-field limit is a first-order ordinary differential equation with competing polynomial growth and decay terms.",
+    "canonical_form": "\\partial_t P(n,t)=\\sum_{r}\\big[W(n-r,r)P(n-r,t)-W(n,r)P(n,t)\\big],\\quad W(n,r)\\propto \\frac{n!}{(n-b)!};\\qquad \\dot{x}=\\alpha x^{b}-\\beta x^{c}-\\gamma x",
+    "linearity": "mixed",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "jump_process",
+      "probability_flow",
+      "mass_action_kinetics",
+      "first_order_in_time",
+      "logistic_saturation",
+      "quadratic_self_interaction",
+      "fixed_point_equilibrium",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "non-negative integer count; in the mean-field limit a continuous non-negative scalar density"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "parameter", "meaning": "transition-rate constants and the integer stoichiometry exponents of the falling-factorial rates"},
+      {"role": "objective", "meaning": "probability distribution P(n,t) over states whose evolution and mean extinction time are sought"}
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "The master equation (linear in P) is the true core; the generating-function PDE and the nonlinear mean-field rate equation dρ/dt are derived consequences. Extinction/persistence via spectral or WKB analysis makes the absorbing boundary at n=0 structurally essential. Marked mixed because the master equation is linear in P while the reduced dynamics are nonlinear in the state.",
+  "_model": "claude-fable-5-agent-20260705"
+}

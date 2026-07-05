@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "1702.01718",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A scalar first-order conservation law whose flux depends nonlinearly on the state, together with a coupled system of first-order ODEs that discretizes it in a Lagrangian frame and converges to its entropy weak solution.",
+    "canonical_form": "u_t + (f(u))_x = 0, \\quad f(u)=u\\,g(u); \\qquad \\dot z_i = g\\!\\left(\\frac{c}{z_{i+1}-z_i}\\right), \\quad \\dot y_i = \\frac{1}{c}\\bigl(g(1/y_{i+1})-g(1/y_i)\\bigr)",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": [
+      "conservation_law",
+      "nonlinear_flux",
+      "advection_term",
+      "shock_formation",
+      "first_order_in_time",
+      "boundary_conditions_central"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "conserved scalar density field, equivalently its reciprocal spacing variable in the Lagrangian discretization"},
+      {"role": "time", "meaning": "evolution parameter"},
+      {"role": "space", "meaning": "one-dimensional spatial (or Lagrangian label) coordinate"},
+      {"role": "parameter", "meaning": "discretization scale / spacing constant relating the ODE system to the continuum limit"}
+    ]
+  },
+  "confidence": 0.83,
+  "notes": "Two faces of one structure: the continuum scalar conservation law (Eulerian) and the coupled first-order ODE ladder (Lagrangian) that approximates it. Entropy weak solutions and the Kruzhkov entropy inequality are central; the discrete-vs-continuum duality could justify either 'pde' or 'discrete_update'/'ode' as object_type.",
+  "_model": "claude-fable-5-agent-20260705"
+}

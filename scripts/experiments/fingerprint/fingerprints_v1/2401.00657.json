@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "2401.00657",
+  "core_model": {
+    "object_type": "discrete_update",
+    "structure_summary": "An affine fixed-point iteration whose iteration matrix depends on scalar parameters, whose asymptotic contraction factor equals the spectral radius of that matrix, and which is optimized over those parameters by driving the extreme eigenvalues to symmetric bounds.",
+    "canonical_form": "u^{k+1} = (I+\\alpha Q(\\theta))\\,u^{k} + c(\\theta),\\qquad \\zeta=\\rho(I+\\alpha Q(\\theta))=\\max_i|1+\\alpha\\lambda_i(Q(\\theta))|,\\qquad \\min_{\\theta,\\alpha}\\zeta,\\quad \\alpha^*=-\\frac{2}{\\lambda_1(Q)+\\lambda_n(Q)}",
+    "linearity": "linear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "fixed_point_equilibrium",
+      "constrained_optimization",
+      "quadratic_self_interaction",
+      "convexity_central",
+      "gradient_flow"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "iterate vector converging to a fixed point of an affine map"},
+      {"role": "parameter", "meaning": "penalty and over-relaxation scalars controlling the iteration matrix"},
+      {"role": "objective", "meaning": "spectral radius / asymptotic contraction factor of the iteration matrix, minimized over the parameters"},
+      {"role": "control", "meaning": "step of the outer gradient/finite-difference scheme that tunes the parameters"}
+    ]
+  },
+  "confidence": 0.7,
+  "notes": "Two candidate cores: (a) the underlying linear-quadratic minimization solved by ADMM, and (b) the parameter-optimized affine fixed-point iteration whose convergence rate is the spectral radius. The paper's main results (closed-form optimal relaxation via extreme eigenvalues) are about (b), so I chose the discrete linear update / spectral-radius minimization. gradient_flow refers to the outer descent u over theta; convexity/quadratic tags reflect the LQP objective driving the iteration.",
+  "_model": "claude-fable-5-agent-20260705"
+}

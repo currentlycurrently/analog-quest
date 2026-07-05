@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2007.02182",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A linear second-order-in-space, first-order-in-time complex wave equation, recast through an amplitude-phase decomposition into a coupled pair of real equations: a Hamilton-Jacobi-type equation with an amplitude-curvature term and a continuity equation for the squared amplitude.",
+    "canonical_form": "\\Big(-\\tfrac{1}{2}\\partial_x^2 + V - i\\,\\partial_t\\Big)\\psi = 0, \\quad \\psi = A e^{iS}; \\qquad \\tfrac{1}{2}(S')^2 - \\tfrac{1}{2}\\tfrac{A''}{A} + V + \\dot S = 0, \\quad (A^2 S')' + \\partial_t A^2 = 0",
+    "linearity": "mixed",
+    "stochastic": false,
+    "spatial_structure": "continuum",
+    "structural_features": ["diffusion_term", "conservation_law", "probability_flow", "energy_functional", "first_order_in_time", "driving_term"],
+    "variables": [
+      {"role": "state", "meaning": "complex wave amplitude, equivalently its modulus and phase"},
+      {"role": "time", "meaning": "continuous time"},
+      {"role": "space", "meaning": "one-dimensional spatial coordinate"},
+      {"role": "parameter", "meaning": "external potential entering as a spatially varying coefficient"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "A coupled pair of real PDEs, a Hamilton-Jacobi equation for the phase with an amplitude-curvature (quantum-potential) term plus a continuity equation conserving the squared amplitude.",
+    "structural_features": ["conservation_law", "probability_flow", "diffusion_term", "first_order_in_time"]
+  },
+  "confidence": 0.78,
+  "notes": "Core is the 1D time-dependent Schrodinger PDE and its Madelung/Bohm reformulation via psi = A e^{iS/hbar}, giving a Hamilton-Jacobi equation (with the Bohm potential -A''/A term) coupled to a continuity equation. Linearity marked 'mixed': the original wave equation is linear, but the amplitude-phase system is nonlinear. The paper introduces f(x,t) as a potential function for A; the underlying skeleton remains the coupled HJ + continuity PDE pair.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

@@ -1,0 +1,33 @@
+{
+  "arxiv_id": "2401.00839",
+  "core_model": {
+    "object_type": "game_theoretic",
+    "structure_summary": "A repeated strategic interaction among randomly matched agents in which each agent's discounted continuation value satisfies a recursive optimality (incentive-compatibility) inequality, and the sustainable equilibria are characterized by bounds relating one-shot payoff gains to discounted value differences.",
+    "canonical_form": "V(r) = \\max_{a}\\Big\\{(1-\\delta)\\,u(a,\\alpha_{-i}) + \\delta\\sum_{r'}\\Psi(r'\\mid r,\\cdot)\\,V(r')\\Big\\};\\qquad (1-\\delta)\\big[u(a^*,\\cdot)-u(a,\\cdot)\\big] \\le \\delta\\,\\Delta V",
+    "linearity": "mixed",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "threshold_nonlinearity",
+      "mean_field_coupling"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "record/type label carried by an agent into a match"},
+      {"role": "objective", "meaning": "discounted continuation value function satisfying a recursive optimality equation"},
+      {"role": "control", "meaning": "action chosen each period, with a designated dominant action"},
+      {"role": "parameter", "meaning": "discount factor (expected lifespan) and one-shot payoff differences"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "A fixed-point (Bellman-type) condition in which a value function equals the discounted maximum over actions of current payoff plus expected continuation value, with incentive inequalities bounding payoff gains by discounted value gaps.",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "threshold_nonlinearity"
+    ]
+  },
+  "confidence": 0.78,
+  "notes": "Core is a repeated game with anonymous random matching and endogenous record disclosure; the operative mathematics is a recursive (Bellman/promise-keeping) value function plus incentive-compatibility inequalities yielding the anti-folk-theorem bounds. Random matching gives an average-of-others (mean-field) coupling. Stripped of the strategic/probabilistic dressing, the skeleton is the fixed-point value-maximization (dynamic-programming) condition with threshold incentive constraints.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

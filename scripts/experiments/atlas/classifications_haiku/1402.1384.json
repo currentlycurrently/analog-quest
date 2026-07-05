@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1402.1384",
+  "assignments": [
+    {
+      "template_id": "variational_inference_free_energy",
+      "confidence": 0.92,
+      "twist": "applied to compressed sensing with mean-field and Bethe approximations"
+    }
+  ],
+  "core_model_summary": "Variational free energy minimization (ELBO/Helmholtz) used to infer sparse signals in compressed sensing via iterative message passing algorithms."
+}

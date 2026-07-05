@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00359",
+  "assignments": [
+    {
+      "template_id": "poisson_process",
+      "confidence": 0.7,
+      "twist": "alternating two-state renewal process with heavy-tailed inter-event distributions and aging behavior"
+    }
+  ],
+  "core_model_summary": "Alternating renewal process generalizing the Poisson process to two distributions, exhibiting aging when mean inter-event times diverge and power-law distributed occupation times.",
+  "_model": "claude-haiku-4-5"
+}

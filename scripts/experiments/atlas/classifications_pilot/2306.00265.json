@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00265",
+  "assignments": [
+    {
+      "template_id": "gradient_descent",
+      "confidence": 0.85,
+      "twist": "reweighted loss balancing labeled and pseudo-labeled data"
+    }
+  ],
+  "core_model_summary": "Gradient descent optimization of a reweighted loss function that balances training on pseudo-labeled and true-labeled data to achieve robustness in semi-supervised learning.",
+  "_model": "claude-haiku-4-5"
+}

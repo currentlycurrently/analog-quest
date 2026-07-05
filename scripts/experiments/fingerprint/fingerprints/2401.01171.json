@@ -1,0 +1,34 @@
+{
+  "arxiv_id": "2401.01171",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "An ensemble of monotonically growing random trajectories of a discrete count variable, characterized by the mean first-passage time to reach a given level (averaged over realizations), whose derivative with respect to the level changes qualitatively at a critical level marking a crossover to accelerated growth.",
+    "canonical_form": "\\tau(x) = \\frac{1}{M} \\sum_{i=1}^{M} t_i(x), \\quad t_i(x) = \\inf\\{t : x_i(t) \\ge x\\}, \\quad \\text{threshold where } \\partial \\tau / \\partial x \\text{ changes regime}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "jump_process",
+      "threshold_nonlinearity",
+      "phase_transition"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "monotonically non-decreasing count coordinate of each realization"},
+      {"role": "time", "meaning": "index along each trajectory; the first time the count reaches a target level is the random quantity averaged"},
+      {"role": "parameter", "meaning": "target level at which passage is recorded"},
+      {"role": "objective", "meaning": "mean first-passage time as a function of the target level, whose slope diagnoses the regime"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A deterministic first-order growth law for a scalar level, obtained as the mean of the level-to-time passage map, whose inverse slope (growth rate) changes qualitatively at a critical level.",
+    "structural_features": [
+      "first_order_in_time",
+      "threshold_nonlinearity",
+      "phase_transition"
+    ]
+  },
+  "confidence": 0.45,
+  "notes": "Very sparse equation extraction: only the ensemble-average definition of the mean first-passage time and references to its derivative. The paper is a data-analysis methodology (applying a first-passage-time statistic to empirical growing counts) rather than a generative model, so no explicit transition kernel or master equation is given; the fingerprint describes the first-passage framework itself. Confidence lowered accordingly."
+}

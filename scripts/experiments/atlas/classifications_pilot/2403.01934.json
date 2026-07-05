@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2403.01934",
+  "assignments": [
+    {
+      "template_id": "master_equation",
+      "confidence": 0.95,
+      "twist": "multi-dimensional lattice with factorizable steady states"
+    }
+  ],
+  "core_model_summary": "A master equation governing the probability evolution of particle configurations in the asymmetric simple exclusion process on arbitrary-dimensional lattices with transition rates encoding hopping asymmetry.",
+  "_model": "claude-haiku-4-5"
+}

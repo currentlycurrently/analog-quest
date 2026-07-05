@@ -1,0 +1,526 @@
+{
+ "n_papers": 60,
+ "n_assigned_slots": 33,
+ "n_structures": 19,
+ "n_cross_domain": 7,
+ "structures": [
+  {
+   "template_class": "reaction_diffusion_turing",
+   "name": "Reaction-Diffusion (Turing Pattern) System",
+   "canonical_form": "\\partial_t u = D_u\\nabla^2 u + f(u,v),\\quad \\partial_t v = D_v\\nabla^2 v + g(u,v)",
+   "n_papers": 5,
+   "archives": [
+    "math",
+    "physics"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2306.00537",
+     "title": "Stable developmental patterns of gene expression without morphogen gradients",
+     "cat": "physics.bio-ph",
+     "archive": "physics",
+     "conf": 0.9,
+     "twist": "spatial stochastic reaction-diffusion for gene expression with bistable cross-repression motif"
+    },
+    {
+     "arxiv_id": "2306.00701",
+     "title": "Traveling Waves of Modified Leslie-Gower Predator-prey Systems",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.9,
+     "twist": "traveling wave solutions in modified Leslie-Gower reaction-diffusion predator-prey with heterogeneous functional response"
+    },
+    {
+     "arxiv_id": "2306.00649",
+     "title": "Persistence of solutions in a nonlocal predator-prey system with a shifting habitat",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.85,
+     "twist": "nonlocal dispersal predator-prey with shifting habitat (traveling wave front in moving frame)"
+    },
+    {
+     "arxiv_id": "2306.00713",
+     "title": "A sufficient condition on successful invasion by the predator",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.85,
+     "twist": "traveling wave persistence in reaction-diffusion predator-prey with heterogeneous growth and functional response"
+    },
+    {
+     "arxiv_id": "2403.00609",
+     "title": "Rotating spirals for three-component competition systems",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.85,
+     "twist": "three-species competition system with rotating spiral solutions instead of stationary patterns"
+    }
+   ]
+  },
+  {
+   "template_class": "gradient_descent",
+   "name": "Gradient Descent",
+   "canonical_form": "x_{t+1}=x_t-\\eta\\,\\nabla f(x_t)",
+   "n_papers": 3,
+   "archives": [
+    "cs",
+    "eess"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2306.00265",
+     "title": "Doubly Robust Self-Training",
+     "cat": "cs.LG",
+     "archive": "cs",
+     "conf": 0.85,
+     "twist": "reweighted loss balancing labeled and pseudo-labeled data"
+    },
+    {
+     "arxiv_id": "2403.01005",
+     "title": "Policy Optimization for PDE Control with a Warm Start",
+     "cat": "eess.SY",
+     "archive": "eess",
+     "conf": 0.8,
+     "twist": "policy gradient iteration over finite-dimensional control parameters with model-based warm start"
+    },
+    {
+     "arxiv_id": "2306.00315",
+     "title": "Explicit Feature Interaction-aware Uplift Network for Online Marketing",
+     "cat": "cs.LG",
+     "archive": "cs",
+     "conf": 0.75,
+     "twist": "gradient-based optimization of multi-component loss balancing treatment effect estimation and intervention constraint"
+    }
+   ]
+  },
+  {
+   "template_class": "fokker_planck",
+   "name": "Fokker-Planck / Kolmogorov Forward Equation",
+   "canonical_form": "\\partial_t p = -\\partial_x[\\mu(x) p] + \\tfrac{1}{2}\\partial_{xx}[\\sigma^2(x) p]",
+   "n_papers": 3,
+   "archives": [
+    "cs",
+    "math"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2306.00367",
+     "title": "On the Equivalence of Consistency-Type Models: Consistency Models, Consistent Diffusion Models, and Fokker-Planck Regularization",
+     "cat": "cs.LG",
+     "archive": "cs",
+     "conf": 0.9,
+     "twist": "diffusion sampling dynamics with score-based drift"
+    },
+    {
+     "arxiv_id": "2403.00552",
+     "title": "Sharp spectral gap of adaptive Langevin dynamics",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.75,
+     "twist": "adaptive overdamped Langevin dynamics with extra feedback coordinate affecting noise structure"
+    },
+    {
+     "arxiv_id": "2403.00971",
+     "title": "Sequence of pseudoequilibria describes the long-time behavior of the nonlinear noisy leaky integrate-and-fire model with large delay",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.75,
+     "twist": "leaky integrate-and-fire neuron with synaptic delay in drift term and reset boundary condition"
+    }
+   ]
+  },
+  {
+   "template_class": "maximum_entropy_free_energy",
+   "name": "Maximum Entropy / Free Energy Minimization",
+   "canonical_form": "\\max_p \\; H(p) = -\\sum_x p(x)\\log p(x)\\ \\text{s.t.}\\ \\mathbb{E}_p[\\phi]=\\mu \\;\\Rightarrow\\; p(x)\\propto e^{-\\lambda\\cdot\\phi(x)}",
+   "n_papers": 2,
+   "archives": [
+    "cs",
+    "physics"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2306.00281",
+     "title": "Transfer Learning for Underrepresented Music Generation",
+     "cat": "cs.LG",
+     "archive": "cs",
+     "conf": 0.8,
+     "twist": "transfer learning adaptation of VAE for out-of-distribution music generation"
+    },
+    {
+     "arxiv_id": "2403.00235",
+     "title": "Geometry-free renormalization of directed networks: scale-invariance and reciprocity",
+     "cat": "physics.soc-ph",
+     "archive": "physics",
+     "conf": 0.75,
+     "twist": "network probability distribution with effective Hamiltonian encoding adjacency structure"
+    }
+   ]
+  },
+  {
+   "template_class": "nash_equilibrium",
+   "name": "Nash Equilibrium",
+   "canonical_form": "u_i(s_i^*, s_{-i}^*) \\ge u_i(s_i, s_{-i}^*)\\ \\forall s_i, \\forall i",
+   "n_papers": 2,
+   "archives": [
+    "cs",
+    "nlin"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2306.00492",
+     "title": "Effect of Monetary Reward on Users' Individual Strategies Using Co-Evolutionary Learning",
+     "cat": "cs.SI",
+     "archive": "cs",
+     "conf": 0.8,
+     "twist": "evolutionary game-theoretic dynamics evolving dominant strategies via genetic algorithm on network with heterogeneous node positions"
+    },
+    {
+     "arxiv_id": "2306.07885",
+     "title": "The Impact of Meta-Strategy on Attendance Dynamics in the El Farol Bar Problem",
+     "cat": "nlin.AO",
+     "archive": "nlin",
+     "conf": 0.8,
+     "twist": "agents selecting predictive strategies to minimize error; fixed points via strategy fitness-based selection"
+    }
+   ]
+  },
+  {
+   "template_class": "sir_compartmental",
+   "name": "SIR Compartmental Epidemic Model",
+   "canonical_form": "\\dot{S} = -\\beta S I,\\quad \\dot{I} = \\beta S I - \\gamma I,\\quad \\dot{R} = \\gamma I",
+   "n_papers": 2,
+   "archives": [
+    "physics",
+    "q-bio"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2306.04733",
+     "title": "Epidemic spreading in group-structured populations",
+     "cat": "physics.soc-ph",
+     "archive": "physics",
+     "conf": 0.95,
+     "twist": "epidemic spread on group-structured populations with inter-group and intra-group contact rates"
+    },
+    {
+     "arxiv_id": "2403.00900",
+     "title": "Counting the uncounted : estimating the unaccounted COVID-19 infections in India",
+     "cat": "q-bio.PE",
+     "archive": "q-bio",
+     "conf": 0.85,
+     "twist": "extended with undetected infectious compartment and time-varying transmission rates"
+    }
+   ]
+  },
+  {
+   "template_class": "master_equation",
+   "name": "Master Equation",
+   "canonical_form": "\\dot{P}_n = \\sum_{m}\\big(W_{n\\leftarrow m}P_m - W_{m\\leftarrow n}P_n\\big)",
+   "n_papers": 2,
+   "archives": [
+    "cond-mat",
+    "q-bio"
+   ],
+   "n_archives": 2,
+   "cross_domain": true,
+   "papers": [
+    {
+     "arxiv_id": "2403.01934",
+     "title": "Exact steady states in the asymmetric simple exclusion process beyond one dimension",
+     "cat": "cond-mat.stat-mech",
+     "archive": "cond-mat",
+     "conf": 0.95,
+     "twist": "multi-dimensional lattice with factorizable steady states"
+    },
+    {
+     "arxiv_id": "2403.07670",
+     "title": "Linear and non-linear integrate-and-fire neurons driven by synaptic shot noise with reversal potentials",
+     "cat": "q-bio.NC",
+     "archive": "q-bio",
+     "conf": 0.9,
+     "twist": "population dynamics of stochastic neurons with synaptic shot noise and reversal potentials"
+    }
+   ]
+  },
+  {
+   "template_class": "poisson_equation",
+   "name": "Poisson / Laplace Equation",
+   "canonical_form": "\\nabla^2 \\phi = -\\rho/\\epsilon_0\\quad(\\nabla^2\\phi=0\\ \\text{when}\\ \\rho=0)",
+   "n_papers": 2,
+   "archives": [
+    "math"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2403.00279",
+     "title": "The sharp estimate of nodal sets for Dirichlet Laplace eigenfunctions in polytopes",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.85,
+     "twist": "eigenvalue problem for the Dirichlet Laplacian in polytopes with nodal set analysis"
+    },
+    {
+     "arxiv_id": "2306.00663",
+     "title": "Sign-changing solutions to the slightly supercritical Lane-Emden system with Neumann boundary conditions",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.75,
+     "twist": "coupled Lane-Emden system of two elliptic Poisson equations with nonlinear power-law coupling"
+    }
+   ]
+  },
+  {
+   "template_class": "binary_spin_energy",
+   "name": "Binary Spin Energy (Ising / Hopfield / Boltzmann machine)",
+   "canonical_form": "E(s) = -\\tfrac{1}{2}\\sum_{i,j} J_{ij} s_i s_j - \\sum_i h_i s_i,\\quad P(s)\\propto e^{-\\beta E(s)}",
+   "n_papers": 2,
+   "archives": [
+    "cond-mat"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.02220",
+     "title": "Kramers-Wannier Duality and Random Bond Ising Model",
+     "cat": "cond-mat.stat-mech",
+     "archive": "cond-mat",
+     "conf": 0.95,
+     "twist": "random bond weights on planar graphs with Kramers-Wannier duality"
+    },
+    {
+     "arxiv_id": "2403.01171",
+     "title": "Bethe $M$-layer construction on the Ising model",
+     "cat": "cond-mat.stat-mech",
+     "archive": "cond-mat",
+     "conf": 0.8,
+     "twist": "ferromagnetic Ising model expanded via renormalization group on Bethe lattice, recovered as continuum quartic field theory at one-loop order"
+    }
+   ]
+  },
+  {
+   "template_class": "poisson_process",
+   "name": "Poisson Process",
+   "canonical_form": "P(N(t)=n)=\\frac{(\\lambda t)^n e^{-\\lambda t}}{n!}",
+   "n_papers": 1,
+   "archives": [
+    "cond-mat"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.00359",
+     "title": "Statistics of the number of renewals, occupation times and correlation in ordinary, equilibrium and aging alternating renewal processes",
+     "cat": "cond-mat.stat-mech",
+     "archive": "cond-mat",
+     "conf": 0.7,
+     "twist": "alternating two-state renewal process with heavy-tailed inter-event distributions and aging behavior"
+    }
+   ]
+  },
+  {
+   "template_class": "korteweg_de_vries",
+   "name": "Korteweg-de Vries Equation",
+   "canonical_form": "\\partial_t u + 6u\\,\\partial_x u + \\partial_{xxx} u = 0",
+   "n_papers": 1,
+   "archives": [
+    "math"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.00376",
+     "title": "Linear asymptotic stability of small-amplitude periodic waves of the generalized Korteweg--de Vries equations",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.95,
+     "twist": "generalized nonlinearity f(u) and spectral stability analysis of small-amplitude periodic traveling waves"
+    }
+   ]
+  },
+  {
+   "template_class": "boltzmann_transport",
+   "name": "Boltzmann Transport Equation",
+   "canonical_form": "\\partial_t f + \\mathbf{v}\\cdot\\nabla_x f + \\mathbf{F}\\cdot\\nabla_p f = \\left(\\frac{\\partial f}{\\partial t}\\right)_{\\text{coll}}",
+   "n_papers": 1,
+   "archives": [
+    "math"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.00523",
+     "title": "Existence and stability of weak solutions of the Vlasov--Poisson system in localized Yudovich spaces",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.85,
+     "twist": "phase-space kinetic transport of charged particles with long-range mean-field coupling (Vlasov rather than collisional)"
+    }
+   ]
+  },
+  {
+   "template_class": "gross_pitaevskii",
+   "name": "Gross-Pitaevskii / Nonlinear Schrodinger Equation",
+   "canonical_form": "i\\hbar\\,\\partial_t\\psi = -\\frac{\\hbar^2}{2m}\\nabla^2\\psi + V\\psi + g|\\psi|^2\\psi",
+   "n_papers": 1,
+   "archives": [
+    "math"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.00570",
+     "title": "Global solutions for 1D cubic dispersive equations, Part III: the quasilinear Schr\u00f6dinger flow",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.8,
+     "twist": "quasilinear (cubic nonlinearity in dispersion coefficient) defocusing variant with global scattering for small data"
+    }
+   ]
+  },
+  {
+   "template_class": "wave_equation",
+   "name": "Wave Equation",
+   "canonical_form": "\\partial_{tt} u = c^2 \\nabla^2 u",
+   "n_papers": 1,
+   "archives": [
+    "math"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.01023",
+     "title": "Measure propagation along a $\\mathscr{C}^0$-vector field and wave controllability on a rough compact manifold",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.9,
+     "twist": "on rough (low regularity Lipschitz) manifolds with observability and microlocal defect measure propagation"
+    }
+   ]
+  },
+  {
+   "template_class": "markov_chain",
+   "name": "Markov Chain",
+   "canonical_form": "P(X_{t+1}=j\\mid X_t=i)=P_{ij},\\quad \\pi_{t+1}=\\pi_t P",
+   "n_papers": 1,
+   "archives": [
+    "q-bio"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2306.06407",
+     "title": "Effect of the degree of an initial mutant in Moran processes in structured populations",
+     "cat": "q-bio.PE",
+     "archive": "q-bio",
+     "conf": 0.85,
+     "twist": "birth-death Markov chain on network-structured populations with node degree dependence"
+    }
+   ]
+  },
+  {
+   "template_class": "bellman_equation",
+   "name": "Bellman Optimality Equation",
+   "canonical_form": "V(s)=\\max_a \\Big[ r(s,a)+\\gamma\\sum_{s'}P(s'\\mid s,a)V(s') \\Big]",
+   "n_papers": 1,
+   "archives": [
+    "cs"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2403.00222",
+     "title": "Efficient Reinforcement Learning for Global Decision Making in the Presence of Local Agents at Scale",
+     "cat": "cs.LG",
+     "archive": "cs",
+     "conf": 0.92,
+     "twist": "Q-learning with subsampling of local agents; value function convergence with Bellman noise"
+    }
+   ]
+  },
+  {
+   "template_class": "replicator_dynamics",
+   "name": "Replicator Dynamics",
+   "canonical_form": "\\dot{x}_i = x_i\\big(f_i(x) - \\bar{f}(x)\\big),\\quad \\bar{f}=\\sum_j x_j f_j(x)",
+   "n_papers": 1,
+   "archives": [
+    "physics"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2403.00311",
+     "title": "Enhancing social cohesion with cooperative bots in societies of greedy, mobile individuals",
+     "cat": "physics.soc-ph",
+     "archive": "physics",
+     "conf": 0.7,
+     "twist": "discrete spatial population with binary strategies (cooperate/defect) on a lattice with mobile agents"
+    }
+   ]
+  },
+  {
+   "template_class": "navier_stokes",
+   "name": "Navier-Stokes Equations",
+   "canonical_form": "\\rho(\\partial_t \\mathbf{u} + \\mathbf{u}\\cdot\\nabla\\mathbf{u}) = -\\nabla p + \\mu\\nabla^2\\mathbf{u} + \\mathbf{f},\\ \\nabla\\cdot\\mathbf{u}=0",
+   "n_papers": 1,
+   "archives": [
+    "math"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2403.00389",
+     "title": "Dynamics of helical vortex filaments in non viscous incompressible flows",
+     "cat": "math.AP",
+     "archive": "math",
+     "conf": 0.8,
+     "twist": "incompressible Euler/inviscid limit with helical symmetry reduction to 2D vorticity and Biot-Savart kernel"
+    }
+   ]
+  },
+  {
+   "template_class": "kuramoto_phase_oscillators",
+   "name": "Kuramoto Phase Oscillators",
+   "canonical_form": "\\dot{\\theta}_i = \\omega_i + \\frac{K}{N}\\sum_{j=1}^{N}\\sin(\\theta_j - \\theta_i)",
+   "n_papers": 1,
+   "archives": [
+    "q-bio"
+   ],
+   "n_archives": 1,
+   "cross_domain": false,
+   "papers": [
+    {
+     "arxiv_id": "2403.09723",
+     "title": "Texture Recognition Using a Biologically Plausible Spiking Phase-Locked Loop Model for Spike Train Frequency Decomposition",
+     "cat": "q-bio.NC",
+     "archive": "q-bio",
+     "conf": 0.72,
+     "twist": "phase synchronization implemented via spiking neural networks with leaky integration rather than continuous oscillators"
+    }
+   ]
+  }
+ ]
+}

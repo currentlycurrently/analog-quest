@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2004.09314",
+  "assignments": [
+    {"template_id": "sir_compartmental",
+      "confidence": 0.90,
+      "twist": "two-population SIR model with differential confinement rates and infection control policies"}
+  ],
+  "core_model_summary": "A compartmental epidemic model dividing the susceptible population into confined and non-confined subgroups with differing infection rates, analyzed for various exit strategies from lockdown.",
+  "_model": "claude-haiku-4-5"
+}

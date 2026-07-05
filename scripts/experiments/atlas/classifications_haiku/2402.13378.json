@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2402.13378",
+  "assignments": [
+    {
+      "template_id": "optimal_transport",
+      "confidence": 0.9,
+      "twist": "matching markets with parameterized welfare objectives controlling stability-efficiency trade-offs"
+    }
+  ],
+  "core_model_summary": "Stable matchings in markets with aligned preferences are characterized as solutions to a parameterized optimal transport problem with Atkinson inequality measures.",
+  "_model": "claude-haiku-4-5"
+}

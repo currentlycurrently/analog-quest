@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.00839",
+  "core_model": {
+    "object_type": "game_theoretic",
+    "structure_summary": "A repeated strategic-interaction model with geometric time-discounting and anonymous random pairing, whose equilibria are fixed points of a Bellman-type recursion in continuation values subject to incentive-compatibility inequalities, yielding threshold bounds on the discount factor for sustainable outcomes.",
+    "canonical_form": "V(r) = \\max_{a}\\Big\\{ (1-\\delta)\\,u(a,\\alpha_{-i}) + \\delta \\sum_{r'} \\Psi(r'\\mid r,a)\\,V(r') \\Big\\}; \\qquad \\text{IC: } V_{k+1}-V_k \\ge \\tfrac{1-\\delta}{\\delta} c^*\\,\\pi_k; \\qquad \\mu \\ge \\tfrac{1-\\delta}{\\delta}\\cdot\\tfrac{l}{1+g}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "exponential_growth_or_decay",
+      "mean_field_coupling",
+      "threshold_nonlinearity",
+      "constrained_optimization"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "continuation-value functions indexed by a player's disclosed record"},
+      {"role": "control", "meaning": "each agent's chosen action and disclosure decision"},
+      {"role": "parameter", "meaning": "discount factor / expected lifespan, payoff gains and losses, and action complementarity"},
+      {"role": "objective", "meaning": "discounted sum of stage payoffs entering the incentive-compatibility inequalities"}
+    ]
+  },
+  "confidence": 0.72,
+  "notes": "Core is a discounted repeated game with anonymous random matching whose equilibrium is characterized by Bellman/fixed-point value recursions plus incentive-compatibility inequality constraints; the geometric discount weights (1-delta)delta^k give the exponential structure, the population match distribution mu gives mean-field coupling, and max-operators/thresholds on the discount factor drive the anti-folk-theorem results. 'stochastic' set true for the random matching and stochastic signals.",
+  "_model": "claude-fable-5-agent-20260705"
+}

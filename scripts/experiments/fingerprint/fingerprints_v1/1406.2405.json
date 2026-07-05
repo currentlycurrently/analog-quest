@@ -1,0 +1,31 @@
+{
+  "arxiv_id": "1406.2405",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A scalar Ito stochastic differential equation on the unit interval whose drift is a cubic (logistic-type) polynomial in the state and whose state-dependent diffusion coefficient vanishes at both endpoints, with all coefficients switched by an external finite-state continuous-time Markov jump process.",
+    "canonical_form": "dx = x(1-x)\\big[-B_{r} + (A_{r}+B_{r})x\\big]\\,dt + \\sigma_{r}\\, x(1-x)\\, dW,\\quad r=r(t)\\text{ a finite-state Markov chain with generator }Q=(q_{ij})",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "multiplicative_noise",
+      "logistic_saturation",
+      "quadratic_self_interaction",
+      "replication_selection",
+      "jump_process",
+      "fixed_point_equilibrium",
+      "normalization_constraint"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar fraction confined to the unit interval [0,1], a two-component simplex coordinate"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "noise", "meaning": "scalar Brownian increment entering multiplicatively through the vanishing-at-boundary factor"},
+      {"role": "parameter", "meaning": "drift coefficients (relative-fitness differences) and noise intensity, each indexed by the current mode"},
+      {"role": "state", "meaning": "discrete mode of a finite-state continuous-time Markov chain that switches the coefficients, with transition-rate matrix Q"}
+    ]
+  },
+  "confidence": 0.83,
+  "notes": "Core is the 1-D switched replicator SDE dY(s,r); the vector A s(t) replicator ODE and the associated generator LV(x,i) are the deterministic/analytic tools around it. Extinction/boundary behavior on {0,1} is central to the results.",
+  "_model": "claude-fable-5-agent-20260705"
+}

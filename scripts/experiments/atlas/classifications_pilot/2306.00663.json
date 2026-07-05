@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00663",
+  "assignments": [
+    {
+      "template_id": "poisson_equation",
+      "confidence": 0.75,
+      "twist": "coupled Lane-Emden system of two elliptic Poisson equations with nonlinear power-law coupling"
+    }
+  ],
+  "core_model_summary": "System of coupled elliptic Poisson-type equations with power-law nonlinearity and symmetry-breaking concentrated solutions.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,1 @@
+{"arxiv_id": "2403.00311", "assignments": [{"template_id": "replicator_dynamics", "confidence": 0.7, "twist": "discrete spatial population with binary strategies (cooperate/defect) on a lattice with mobile agents"}], "core_model_summary": "Evolutionary game dynamics in a spatial heterogeneous population with strategy-dependent fitness selection.", "_model": "claude-haiku-4-5"}

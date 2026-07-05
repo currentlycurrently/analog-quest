@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00622",
+  "assignments": [],
+  "core_model_summary": "Federated learning optimization using self-distillation with knowledge transfer from historical to current models under class-incremental data streams.",
+  "_model": "claude-haiku-4-5"
+}

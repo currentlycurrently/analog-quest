@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2008.00245",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "An equilibrium probability distribution over configurations of binary units with nearest-neighbor pairwise coupling on a regular grid, in which each configuration's weight is an equal mixture of two exponential factors of the coupling energy with two distinct rate parameters, producing a critical curve in the two-parameter plane with power-law scaling on it.",
+    "canonical_form": "E(x) = -\\sum_{\\langle i,j \\rangle} x_i x_j, \\quad x_i \\in \\{\\pm 1\\}; \\qquad p(x) \\propto \\tfrac{1}{2}\\left(e^{-\\beta_1 E(x)} + e^{-\\beta_2 E(x)}\\right); \\qquad \\text{generalized: } p(x) \\propto \\tfrac{1}{n}\\sum_{i=1}^{n} e^{-\\beta_i E(x)}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "spin_or_binary_units",
+      "pairwise_coupling",
+      "energy_functional",
+      "phase_transition",
+      "scale_invariance",
+      "symmetry_breaking",
+      "jump_process",
+      "detailed_balance"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "array of binary (+1/-1) units on the grid sites"},
+      {"role": "parameter", "meaning": "two rate parameters weighting the exponential factors in the mixture; their plane contains the critical curve"},
+      {"role": "parameter", "meaning": "linear system size, used for finite-size scaling of the order parameter and fluctuation quantities"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The sampling dynamics (single-unit and cluster update rules with modified acceptance/link probabilities) are algorithms constructed to sample the two-rate mixture weight and satisfy detailed balance with respect to it; the paper also derives an effective single-rate mapping for the critical curve and generalizes to n-component mixtures. The core object is the mixture-weight equilibrium distribution itself."
+}

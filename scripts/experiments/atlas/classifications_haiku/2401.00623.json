@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2401.00623",
+  "assignments": [
+    {
+      "template_id": "linear_schrodinger",
+      "confidence": 0.82,
+      "twist": "coupled gauge fields and supercritical exponential nonlinearity in Chern-Simons gauge theory"
+    }
+  ],
+  "core_model_summary": "Nonlinear Schrödinger equation with Chern-Simons gauge coupling, seeking ground state normalized solutions under Trudinger-Moser supercritical growth constraints.",
+  "_model": "claude-haiku-4-5"
+}

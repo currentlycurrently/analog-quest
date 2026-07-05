@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2403.09723",
+  "assignments": [
+    {
+      "template_id": "kuramoto_phase_oscillators",
+      "confidence": 0.72,
+      "twist": "phase synchronization implemented via spiking neural networks with leaky integration rather than continuous oscillators"
+    }
+  ],
+  "core_model_summary": "Spiking neural network phase-locked loop that synchronizes frequency output to input frequency through phase error feedback.",
+  "_model": "claude-haiku-4-5"
+}

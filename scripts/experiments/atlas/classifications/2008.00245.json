@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2008.00245",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "binary_spin_energy",
+      "confidence": 0.95,
+      "twist": "superstatistical Ising model whose Boltzmann factor is a mixture over two (or n) temperatures rather than a single canonical exp(-beta E)"}
+  ],
+  "core_model_summary": "A ferromagnetic Ising spin system sampled under a superstatistical two-temperature (mixed-beta) Boltzmann weight, studied for its critical line and universality class."
+}

@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.01397",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A continuous-time Markov jump process of binary site variables on a Cartesian lattice, where each inactive site switches on irreversibly at a rate that is a constant plus a term proportional to the number of active nearest neighbors.",
+    "canonical_form": "X_j(t) \\in \\{0,1\\}, \\quad \\mathbb{P}(X_j(t+\\Delta t)=1 \\mid X_j(t)=0) = \\big(p + \\tfrac{q}{2D}\\textstyle\\sum_{k\\sim j} X_k(t)\\big)\\Delta t, \\quad X_j: 0 \\to 1 \\text{ irreversible}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": ["jump_process", "spin_or_binary_units", "network_topology_matters", "boundary_conditions_central", "threshold_nonlinearity", "first_order_in_time"],
+    "variables": [
+      {"role": "state", "meaning": "binary indicator at each lattice site (inactive/active)"},
+      {"role": "time", "meaning": "continuous time"},
+      {"role": "space", "meaning": "lattice site index / position on the Cartesian grid"},
+      {"role": "parameter", "meaning": "spontaneous activation rate"},
+      {"role": "parameter", "meaning": "neighbor-induced activation rate coefficient"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order relaxation for the site (or aggregate) activation fraction toward full activation, driven by a constant term plus a term proportional to neighboring activation, with boundary sites relaxing more slowly.",
+    "structural_features": ["first_order_in_time", "boundary_conditions_central", "exponential_growth_or_decay", "compartmental_flow"]
+  },
+  "confidence": 0.8,
+  "notes": "Core is the stochastic discrete Bass model (jump process on a lattice, irreversible 0->1 transitions with neighbor-dependent rate). The mean-field/expectation reduction gives the deterministic adoption-fraction dynamics f(t) satisfying a first-order ODE (the 1D closed form 1-exp(...)), which is the skeleton; boundary vs central node distinction is the paper's main structural result.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

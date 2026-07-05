@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2401.01632",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A multi-species continuous-time Markov jump process (master equation) with transition rates that are bilinear in counts, solved through a probability generating function that obeys a first-order linear transport PDE.",
+    "canonical_form": "\\frac{dP_n}{dt} = \\sum_i \\big[ T(n\\mid n+e_i)P_{n+e_i} + T(n\\mid n-e_i)P_{n-e_i} - (T(n+e_i\\mid n)+T(n-e_i\\mid n))P_n\\big], \\quad \\partial_t G = -n_0 m(z) G + \\sum_i [(1-z_i)\\nu_i + z_i m(z)]\\,\\partial_{z_i} G",
+    "linearity": "mixed",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": ["jump_process", "probability_flow", "mass_action_kinetics", "multiplicative_interaction", "compartmental_flow", "conservation_law", "fixed_point_equilibrium"],
+    "variables": [
+      {"role": "state", "meaning": "vector of nonnegative integer species counts"},
+      {"role": "time", "meaning": "continuous time"},
+      {"role": "parameter", "meaning": "per-pair binding/transition rates"},
+      {"role": "parameter", "meaning": "release/unbinding rates"},
+      {"role": "objective", "meaning": "generating-function variable indexing the count distribution"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "The characteristic ODE system of the generating-function transport equation, including a scalar Riccati equation dm/dt = -m^2 + Qm + const capturing the mean-field relaxation.",
+    "structural_features": ["first_order_in_time", "quadratic_self_interaction", "fixed_point_equilibrium", "mass_action_kinetics"]
+  },
+  "confidence": 0.75,
+  "notes": "Core is the multi-resource consumer-resource master equation (Markov jump process with bilinear rates). Its generating function solves a first-order linear PDE; the method-of-characteristics reduction yields an ODE system with a Riccati equation for m(t), which is the natural deterministic skeleton. Object_type could arguably be pde (for G) but the primary model is the stochastic_process/master equation.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

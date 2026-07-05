@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2306.00701",
+  "assignments": [
+    {
+      "template_id": "reaction_diffusion_turing",
+      "confidence": 0.9,
+      "twist": "traveling wave solutions in modified Leslie-Gower reaction-diffusion predator-prey with heterogeneous functional response"
+    }
+  ],
+  "core_model_summary": "Reaction-diffusion predator-prey system with density-dependent predation and diffusive prey and predator movement.",
+  "_model": "claude-haiku-4-5"
+}

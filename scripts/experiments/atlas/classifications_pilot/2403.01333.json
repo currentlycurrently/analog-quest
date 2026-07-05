@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2403.01333",
+  "assignments": [],
+  "core_model_summary": "A convex optimization framework for designing state-feedback control gains that maximize actuator degradation while meeting closed-loop H2/H-infinity performance constraints.",
+  "_model": "claude-haiku-4-5"
+}

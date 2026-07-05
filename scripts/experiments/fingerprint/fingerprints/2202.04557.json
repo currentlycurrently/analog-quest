@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "2202.04557",
+  "core_model": {
+    "object_type": "discrete_update",
+    "structure_summary": "A vector state is iteratively mapped by comparing it against a stored set of reference vectors through a similarity operator, passing the scores through a nonlinear separation function, and projecting back, with the fixed points characterized as minima of an associated scalar energy functional.",
+    "canonical_form": "x^{t+1} = P\\,\\mathrm{sep}\\big(\\mathrm{sim}(M,x^t)\\big);\\qquad \\tau\\,\\dot x = -\\nabla_x E(x),\\quad E(x)=\\tfrac{1}{2}\\lVert x\\rVert^2 - \\log\\!\\sum_j e^{\\,\\mathrm{sim}(M_j,x)}",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": [
+      "fixed_point_equilibrium",
+      "energy_functional",
+      "gradient_flow",
+      "multiplicative_update",
+      "pairwise_coupling",
+      "normalization_constraint",
+      "first_order_in_time"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "vector iterated toward a stored pattern"},
+      {"role": "parameter", "meaning": "matrix of stored reference vectors"},
+      {"role": "time", "meaning": "continuous relaxation parameter in the dynamical form"},
+      {"role": "objective", "meaning": "scalar energy functional whose minima are the fixed points"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A first-order gradient-flow relaxation of a state toward minima of a scalar energy functional built from a self-quadratic term minus a log-sum-exp of similarity scores against fixed reference vectors.",
+    "structural_features": [
+      "gradient_flow",
+      "energy_functional",
+      "fixed_point_equilibrium",
+      "first_order_in_time"
+    ]
+  },
+  "confidence": 0.82,
+  "notes": "Two equivalent framings appear: a discrete similarity-separation-projection update and its continuous gradient-flow ODE with a Lyapunov energy. I took the general update rule as the core object; the skeleton is the gradient flow / stationarity condition of that energy. The separation function (softmax/log-sum-exp) supplies the normalization and multiplicative-update character.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

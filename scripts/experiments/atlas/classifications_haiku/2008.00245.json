@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2008.00245",
+  "assignments": [
+    {"template_id": "binary_spin_energy",
+      "confidence": 0.88,
+      "twist": "superstatistic extension with mixture of two inverse temperatures in Gibbs distribution"}
+  ],
+  "core_model_summary": "A variant of the Ising model where the Gibbs probability distribution is superimposed over two distinct inverse temperatures, creating a non-trivial critical line separating ordered and disordered phases.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,41 @@
+{
+  "arxiv_id": "2208.02457",
+  "core_model": {
+    "object_type": "ode",
+    "structure_summary": "A planar autonomous first-order system in which each variable's rate combines a product of nonlinear functions of the two variables (entering the two equations with opposite signs) and a linear-in-that-function growth or decay term, admitting a conserved scalar first integral and a change of variables to canonical conjugate form.",
+    "canonical_form": "\\dot{x}_1 = a\\, f_1(x_1) f_2(x_2) - b\\, f_1(x_1), \\quad \\dot{x}_2 = -c\\, f_1(x_1) f_2(x_2) + d\\, f_2(x_2); \\qquad H = c\\,x_1 - d\\,F_1(x_1) + a\\,x_2 - b\\,F_2(x_2), \\quad F_i' = 1/f_i, \\quad \\dot{H}=0; \\qquad \\dot{y}_1 = \\partial H/\\partial y_2, \\; \\dot{y}_2 = -\\partial H/\\partial y_1",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "multiplicative_interaction",
+      "predator_prey_asymmetry",
+      "conservation_law",
+      "energy_functional",
+      "oscillatory_dynamics",
+      "exponential_growth_or_decay",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "two positive scalar quantities whose product-type coupling transfers growth from one to the other"},
+      {"role": "time", "meaning": "continuous evolution variable"},
+      {"role": "parameter", "meaning": "four coefficients weighting the cross-coupling and the self growth/decay terms"},
+      {"role": "parameter", "meaning": "two monotone functions shaping how each variable enters the coupling"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A planar first-order system with antisymmetric product coupling between the two variables plus linear self growth/decay, conserving a scalar first integral whose level sets are closed orbits around an interior equilibrium.",
+    "structural_features": [
+      "first_order_in_time",
+      "multiplicative_interaction",
+      "predator_prey_asymmetry",
+      "conservation_law",
+      "oscillatory_dynamics"
+    ]
+  },
+  "confidence": 0.9,
+  "notes": "The paper generalizes the classical bilinear antisymmetric two-variable system by composing each variable through a nonlinear function f_i; the main result identifies the unique choice (quadratic transform, phi_i(y)=2y) giving closed-form solutions in elementary functions. The conserved-integral / canonical-conjugate structure is the load-bearing framework; power-law and N-component extensions are secondary.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

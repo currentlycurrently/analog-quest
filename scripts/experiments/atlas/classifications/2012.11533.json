@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2012.11533",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "Interconnections of maximal monotone circuit elements (resistors, capacitors, inductors) whose periodic steady-state behavior is computed by a splitting fixed-point iteration for monotone operators, a framework not represented by any library template."
+}

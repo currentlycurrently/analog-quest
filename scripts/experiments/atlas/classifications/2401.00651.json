@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00651",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "A neural network graph-embedding architecture (attention units and MLP encoders over random-walk statistics) that jointly and inductively infers node identity and position embeddings via a contrastive/reconstruction loss; the core is a learned representation model, not any canonical closed-form dynamical or physical equation."
+}

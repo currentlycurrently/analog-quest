@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00670",
+  "assignments": [],
+  "core_model_summary": "The paper presents a hybrid framework combining machine learning surrogates informed by flux balance analysis with dynamical systems for metabolic control, which is an application-specific modeling technique without canonical mathematical model instantiation.",
+  "_model": "claude-haiku-4-5"
+}

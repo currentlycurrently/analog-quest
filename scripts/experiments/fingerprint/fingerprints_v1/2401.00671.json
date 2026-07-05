@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "2401.00671",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A coupled pair of first-order stochastic differential equations with two separated time scales in which the drift and diffusion depend on the current law (distribution) of the slow variable, driven by a Brownian term and a compensated jump measure.",
+    "canonical_form": "dX_t = b_1(X_t,\\mathcal{L}_{X_t},Y_t)\\,dt + \\sqrt{\\varepsilon}\\,\\sigma_1(X_t,\\mathcal{L}_{X_t})\\,dW_t + \\varepsilon\\!\\int g(t,X_t,\\mathcal{L}_{X_t},z)\\,\\tilde N(dt,dz), \\qquad dY_t = \\tfrac{1}{\\delta} b_2(X_t,\\mathcal{L}_{X_t},Y_t)\\,dt + \\tfrac{1}{\\sqrt{\\delta}}\\sigma_2(X_t,\\mathcal{L}_{X_t},Y_t)\\,dW_t",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "mean_field_coupling",
+      "jump_process",
+      "multiplicative_noise",
+      "first_order_in_time",
+      "scale_invariance",
+      "probability_flow"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "slow and fast components of a vector-valued process"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "noise", "meaning": "Brownian increments and a compensated Poisson jump measure"},
+      {"role": "parameter", "meaning": "small parameters setting the noise amplitude scaling and the fast/slow time-scale separation"}
+    ]
+  },
+  "confidence": 0.83,
+  "notes": "Two-time-scale McKean-Vlasov (distribution-dependent) SDE with jumps; the drift/diffusion depend on the law of the process, giving mean-field coupling and evolution of the associated distribution (probability_flow). The paper's results (large deviation principle, averaging) are asymptotic properties of this SDE system as the scale parameters vanish; 'scale_invariance' tags the epsilon/delta scaling structure. sigma_2(X,L,Y) is state-dependent hence multiplicative noise.",
+  "_model": "claude-fable-5-agent-20260705"
+}

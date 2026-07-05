@@ -1,0 +1,41 @@
+{
+  "arxiv_id": "1406.2405",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A scalar Ito stochastic differential equation on the unit interval whose drift is a cubic (logistic-type) polynomial with state-dependent noise, and whose coefficients are switched by a finite-state continuous-time Markov chain.",
+    "canonical_form": "dx = x(1-x)\\big[-B_{r(t)} + (A_{r(t)}+B_{r(t)})x\\big]\\,dt + \\sigma_{r(t)}\\,x(1-x)\\,dW,\\quad r(t)\\in\\{1,\\dots,n\\}\\text{ a Markov chain}",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "multiplicative_noise",
+      "logistic_saturation",
+      "replication_selection",
+      "normalization_constraint",
+      "jump_process",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "scalar fraction confined to the unit interval (a two-component simplex coordinate)"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "noise", "meaning": "Wiener increment driving state-dependent fluctuations"},
+      {"role": "parameter", "meaning": "drift coefficients and noise intensities selected by the active Markov-chain state"},
+      {"role": "control", "meaning": "discrete switching index following a finite-state continuous-time Markov chain with generator matrix"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "A scalar first-order ordinary differential equation with cubic logistic-type drift on the unit interval whose growth rate is proportional to a relative-fitness difference.",
+    "structural_features": [
+      "first_order_in_time",
+      "logistic_saturation",
+      "replication_selection",
+      "normalization_constraint",
+      "fixed_point_equilibrium"
+    ]
+  },
+  "confidence": 0.83,
+  "notes": "Core object is the regime-switching scalar SDE for the reduced simplex coordinate (eq. dS(t)); the multi-strategy replicator system and the generator LV are supporting. Skeleton is the deterministic replicator/logistic ODE obtained by dropping the noise and freezing the switching.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

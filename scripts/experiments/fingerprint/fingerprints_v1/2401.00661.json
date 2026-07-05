@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "2401.00661",
+  "core_model": {
+    "object_type": "discrete_update",
+    "structure_summary": "A temporal-difference (Q-learning) fixed-point iteration that updates a state-action value function toward the sum of an immediate reward and a discounted maximum over next-state values, so as to maximize an infinite-horizon discounted return, embedded in an environment whose transitions are set by a Nash-stable partition of self-interested agents maximizing utility.",
+    "canonical_form": "Q(s,a)\\leftarrow Q(s,a)+\\alpha\\big[r + \\gamma\\max_{a'}Q(s',a') - Q(s,a)\\big];\\qquad \\max_{\\{a\\}}\\sum_{t}\\gamma^{t} r_t,\\quad a^*=\\arg\\max_a Q(s,a)",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "first_order_in_time",
+      "fixed_point_equilibrium",
+      "threshold_nonlinearity",
+      "constrained_optimization",
+      "competitive_exclusion"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "action-value estimate indexed by environment state and action"},
+      {"role": "control", "meaning": "action (chosen scalar in a bounded interval) selected greedily to maximize the value function"},
+      {"role": "objective", "meaning": "infinite-horizon discounted cumulative reward"},
+      {"role": "parameter", "meaning": "learning rate and discount factor"},
+      {"role": "time", "meaning": "discrete decision epochs"}
+    ]
+  },
+  "confidence": 0.66,
+  "notes": "Two intertwined structures: (1) the Q-learning/Bellman value iteration maximizing discounted return, and (2) a game-theoretic selection layer (Nash-stable coalition partition with per-agent utility maximization) that generates the environment's dynamics/waiting times. I took the RL Bellman update as the single most central model since the proposed method (PeDP) is the Q-learning policy; the game defines the environment. max operator gives the threshold_nonlinearity; competitive_exclusion reflects agents competing for shared limited charging capacity. Could alternatively be tagged game_theoretic.",
+  "_model": "claude-fable-5-agent-20260705"
+}

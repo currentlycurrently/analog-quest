@@ -1,0 +1,30 @@
+{
+  "arxiv_id": "2401.01632",
+  "core_model": {
+    "object_type": "stochastic_process",
+    "structure_summary": "A multivariate continuous-time Markov jump process on integer occupation counts governed by a master equation with bilinear (mass-action) forward rates and linear reverse rates under a conserved total, solved via a generating function that satisfies a first-order linear transport PDE with a multinomial stationary distribution.",
+    "canonical_form": "\\frac{dP_{\\mathbf n}}{dt}=\\sum_i\\big[T(\\mathbf n\\mid\\mathbf n+\\mathbf e_i)P_{\\mathbf n+\\mathbf e_i}+T(\\mathbf n\\mid\\mathbf n-\\mathbf e_i)P_{\\mathbf n-\\mathbf e_i}-(T(\\mathbf n+\\mathbf e_i\\mid\\mathbf n)+T(\\mathbf n-\\mathbf e_i\\mid\\mathbf n))P_{\\mathbf n}\\big],\\; T(\\mathbf n+\\mathbf e_i\\mid\\mathbf n)\\propto n_A n_{R_i},\\; T(\\mathbf n-\\mathbf e_i\\mid\\mathbf n)=\\nu_i n_i,\\; n_A+\\sum_i n_i=\\text{const};\\quad G(\\mathbf z,t)=\\sum_{\\mathbf n}P_{\\mathbf n}z^{\\mathbf n},\\; \\partial_t G=\\sum_i[(1-z_i)\\nu_i+z_i m(\\mathbf z)]\\partial_{z_i}G - n_A^0 m(\\mathbf z)G",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "jump_process",
+      "mass_action_kinetics",
+      "multiplicative_interaction",
+      "conservation_law",
+      "probability_flow",
+      "fixed_point_equilibrium",
+      "normalization_constraint"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "vector of nonnegative integer occupation counts across labeled compartments"},
+      {"role": "time", "meaning": "continuous time of the Markov process"},
+      {"role": "parameter", "meaning": "bilinear forward (binding/feeding) rate constants"},
+      {"role": "parameter", "meaning": "linear reverse (release/return) rate constants"},
+      {"role": "parameter", "meaning": "conserved total count constraining the state simplex"}
+    ]
+  },
+  "confidence": 0.76,
+  "notes": "Core is the chemical-master-equation / birth-death Markov process for the count vector; the generating-function first-order linear PDE and its characteristic ODEs (including the Riccati dm/dt=-m^2+Qm+... ) are the solution machinery, and the multinomial P_n is the stationary law. Parameter-redundancy/identifiability results are downstream of this stochastic model. Forward rate is bilinear in two count species (multiplicative_interaction / mass_action).",
+  "_model": "claude-fable-5-agent-20260705"
+}

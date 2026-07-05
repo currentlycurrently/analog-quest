@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2203.16300",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "damped_driven_oscillator",
+      "confidence": 0.55,
+      "twist": "nonlinear Lur'e feedback (cross-coupled transconductor with a linear passive RLC/RC plant) engineered to sustain limit-cycle oscillations, certified via dominance/circle-criterion theory rather than a single linear forced ODE"}
+  ],
+  "core_model_summary": "A cross-coupled analog feedback controller modeled as a Lur'e system that drives a linear passive RLC/RC plant into self-sustained oscillations, with oscillation conditions from dominant-system theory."
+}

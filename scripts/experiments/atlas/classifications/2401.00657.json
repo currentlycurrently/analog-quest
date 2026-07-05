@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00657",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "Optimizes the penalty and over-relaxation parameters of the ADMM operator-splitting iteration for linear-quadratic problems by minimizing the spectral radius (convergence factor) of the fixed-point iteration matrix; ADMM/operator-splitting is not represented in the library."
+}

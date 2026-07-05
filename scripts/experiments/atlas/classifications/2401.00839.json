@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.00839",
+  "assignments": [
+    {"template_id": "bellman_equation",
+      "confidence": 0.55,
+      "twist": "recursive discounted continuation-value / promise-keeping equations characterizing equilibria of a repeated game rather than a single-agent optimal control problem"}
+  ],
+  "core_model_summary": "A repeated game with anonymous random matching and endogenous record disclosure, analyzed through recursive discounted continuation-value equations and incentive constraints to characterize sustainable cooperation.",
+  "_model": "claude-fable-5-agent-20260705"
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2203.16300",
+  "assignments": [
+    {"template_id": "damped_driven_oscillator",
+      "confidence": 0.80,
+      "twist": "feedback controller driving a passive linear plant into sustained oscillation via cross-coupled nonlinear forcing"}
+  ],
+  "core_model_summary": "An analog feedback control system modeled as a Lur'e system that drives a passive RLC or RC plant into sustained oscillations using a nonlinear cross-coupled oscillator structure.",
+  "_model": "claude-haiku-4-5"
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "2401.01850",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "markov_chain",
+      "confidence": 0.75,
+      "twist": "continuous-time two-state Markov process (polarized vs milling) with exponentially distributed dwell times, fit empirically to schooling-fish transitions"}
+  ],
+  "core_model_summary": "A two-state Markov process alternating between polarization and milling states, with exponential transition-time distributions whose rates depend on confinement density."
+}

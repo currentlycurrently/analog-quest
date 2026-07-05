@@ -1,0 +1,32 @@
+{
+  "arxiv_id": "2401.00948",
+  "_model": "claude-fable-5-agent-20260705",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "An equilibrium probabilistic model over two interleaved chains of binary units on a one-dimensional lattice, with an energy consisting of nearest-neighbor pairwise products within one chain, cross-chain pairwise products coupling each unit of the second chain to two adjacent units of the first, and linear external-field terms with different coefficients per chain, whose thermal averages exhibit a sharp switch between two ordered configurations at a temperature set by a transcendental balance condition.",
+    "canonical_form": "E = -J\\sum_i x_i x_{i+1} - J_1 \\sum_i (x_i + x_{i+1}) y_i - h_a \\sum_i x_i - h_b \\sum_i y_i, \\quad x_i, y_i \\in \\{\\pm 1\\}, \\quad \\langle x_i \\rangle = -\\partial f / \\partial h_a",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "spin_or_binary_units",
+      "pairwise_coupling",
+      "energy_functional",
+      "free_energy_minimization",
+      "driving_term",
+      "phase_transition",
+      "threshold_nonlinearity"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "binary units on the first sublattice with nearest-neighbor self-coupling"},
+      {"role": "state", "meaning": "binary units on the second sublattice, each coupled to two adjacent first-sublattice units"},
+      {"role": "parameter", "meaning": "intra-chain pairwise coupling strength"},
+      {"role": "parameter", "meaning": "cross-chain pairwise coupling strength"},
+      {"role": "parameter", "meaning": "external linear field with distinct weights on the two sublattices"},
+      {"role": "parameter", "meaning": "inverse temperature controlling the equilibrium distribution"},
+      {"role": "objective", "meaning": "free energy whose field-derivatives give the average unit values"}
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "Core model is a decorated one-dimensional binary-unit chain in thermal equilibrium at a critical external field, solved exactly (transfer-matrix-style); the key result is a degenerate configuration (one sublattice fully ordered, the other fully disordered, i.e. maximal entropy) and its hidden twin driving an abrupt switch of thermal averages at a finite crossover temperature given by a transcendental equation. The switch is a sharp crossover, tagged phase_transition/threshold_nonlinearity, even though a true finite-temperature singularity is forbidden in one dimension."
+}

@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00664",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "Derives metric-entropy-free sample-complexity bounds for the sample-average-approximation estimator of convex/strongly-convex stochastic programs (and compares its rate to stochastic mirror descent); the contribution is a statistical-learning-theory sample-complexity analysis, not an instantiation of any canonical dynamical/optimization-dynamics template."
+}

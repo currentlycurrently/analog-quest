@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.03776",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [],
+  "core_model_summary": "A model-independent, distribution-based short-maturity asymptotic expansion of the Black-Scholes implied-volatility surface from cumulant/moment conditions on the log-return distribution; the central object is an asymptotic ATM-skew/curvature expansion rather than any single canonical dynamical equation in the library."
+}

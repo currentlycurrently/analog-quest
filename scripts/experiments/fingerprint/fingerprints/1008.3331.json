@@ -1,0 +1,38 @@
+{
+  "arxiv_id": "1008.3331",
+  "core_model": {
+    "object_type": "sde",
+    "structure_summary": "A first-order stochastic differential equation for a single state variable driven by additive white noise, a linear dissipative term, and a piecewise-constant (sign-of-state) restoring term, with an optional constant forcing.",
+    "canonical_form": "\\dot{x} = -\\gamma x - \\Delta\\,\\mathrm{sgn}(x) + F + \\xi(t),\\quad \\langle \\xi(t)\\xi(t')\\rangle = 2D\\,\\delta(t-t')",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "none",
+    "structural_features": [
+      "additive_noise",
+      "damping_term",
+      "threshold_nonlinearity",
+      "first_order_in_time",
+      "driving_term",
+      "fixed_point_equilibrium"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "single scalar dynamical variable"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "noise", "meaning": "additive delta-correlated white noise"},
+      {"role": "parameter", "meaning": "linear damping coefficient, sign-term amplitude, noise strength, constant forcing"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "ode",
+    "summary": "First-order ODE with linear damping plus a piecewise-constant sign-of-state restoring term (and optional constant drive), relaxing to a fixed point.",
+    "structural_features": [
+      "damping_term",
+      "threshold_nonlinearity",
+      "first_order_in_time",
+      "fixed_point_equilibrium",
+      "driving_term"
+    ]
+  },
+  "confidence": 0.85,
+  "notes": "The core object is the Langevin SDE with combined viscous (linear) and dry (sign-function) friction. The extracted equations are the solved Fokker-Planck propagator and correlation functions (parabolic cylinder function expansions); the Fokker-Planck PDE is the analysis tool for this SDE. Stripping the noise gives a deterministic ODE dominated by damping and a threshold (sign) nonlinearity."
+}

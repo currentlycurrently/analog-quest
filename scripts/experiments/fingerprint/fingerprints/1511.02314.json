@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "1511.02314",
+  "core_model": {
+    "object_type": "pde",
+    "structure_summary": "A nonlinear second-order wave equation with a sinusoidal restoring term posed on the edges of a metric graph, coupled at vertices by continuity and flux-balance conditions derived from conservation laws.",
+    "canonical_form": "u_{tt} - a^2 u_{xx} + \\beta \\sin u = 0 \\text{ on each edge}; \\quad u_1=u_2=u_3 \\text{ at vertex}, \\quad \\sum_k \\tfrac{a_k^2}{\\beta_k} u_{kx}\\big|_{0} = 0",
+    "linearity": "nonlinear",
+    "stochastic": false,
+    "spatial_structure": "network",
+    "structural_features": ["second_order_in_time", "network_topology_matters", "boundary_conditions_central", "conservation_law", "oscillatory_dynamics"],
+    "variables": [
+      {"role": "state", "meaning": "a scalar field on each edge of the graph"},
+      {"role": "time", "meaning": "continuous evolution parameter"},
+      {"role": "space", "meaning": "arc-length coordinate along each edge of the metric graph"},
+      {"role": "parameter", "meaning": "edge-dependent wave speed and nonlinearity strength, constrained by a vertex sum rule for integrability"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "pde",
+    "summary": "The single-edge integrable sine-Gordon equation: a second-order nonlinear wave equation with sinusoidal restoring term admitting soliton solutions.",
+    "structural_features": ["second_order_in_time", "conservation_law", "oscillatory_dynamics"]
+  },
+  "confidence": 0.82,
+  "notes": "Core is the sine-Gordon PDE on a metric graph with conservation-law-derived vertex conditions; the sum rule a_1/sqrt(beta_1)=a_2/sqrt(beta_2)+a_3/sqrt(beta_3) makes the networked equation completely integrable and reflectionless. Skeleton strips the network to the canonical single-line sine-Gordon equation v_tt - v_xx + sin v = 0.",
+  "_model": "claude-fable-5-agent-20260705-v2"
+}

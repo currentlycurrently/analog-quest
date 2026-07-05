@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2401.00640",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "A multi-indexed family of random variables on an integer lattice whose power-normalized partial sums over rectangular index blocks are shown to converge almost surely, with convergence rate exponents controlled by tail-probability and moment conditions.",
+    "canonical_form": "\\frac{1}{|n|^{1/r}}\\sum_{k \\preceq n}\\big(X_k - EX_k\\big) \\to 0 \\ \\text{a.s.},\\quad \\text{under}\\ E\\big[|X|^p (\\log^+|X|)^{d-1}\\big] < \\infty",
+    "linearity": "linear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "scale_invariance",
+      "additive_noise"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "lattice-indexed family of random variables (summands)"},
+      {"role": "noise", "meaning": "the random fluctuations whose averaged behavior is studied"},
+      {"role": "parameter", "meaning": "normalization exponent, moment order, and lattice dimension controlling the rate"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "algebraic",
+    "summary": "A power-normalized block-averaging (summation) operation whose limit vanishes, i.e. a scaling limit of a normalized partial sum toward its mean.",
+    "structural_features": [
+      "scale_invariance"
+    ]
+  },
+  "confidence": 0.5,
+  "notes": "This is a probability limit theorem (Marcinkiewicz-Zygmund strong law of large numbers and convergence rates for the discrete Fourier transform of a random field), not a dynamical model, so the physics-oriented controlled vocabulary is a poor fit and few tags genuinely apply. Core object = a lattice-indexed random field and the a.s. convergence of its power-normalized cubic partial sums. Extracted equations are the tail/moment bounds driving the proof. Deterministic skeleton = the normalized averaging/scaling operation once the randomness is replaced by expectation."
+}

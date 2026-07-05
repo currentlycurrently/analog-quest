@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00657",
+  "assignments": [],
+  "core_model_summary": "The paper develops closed-form formulas to optimize penalty and relaxation parameters for the ADMM algorithm in linear quadratic problems, which is an algorithmic parameter selection method without canonical model instantiation.",
+  "_model": "claude-haiku-4-5"
+}

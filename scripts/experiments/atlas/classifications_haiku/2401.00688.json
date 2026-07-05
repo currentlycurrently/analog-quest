@@ -1,0 +1,6 @@
+{
+  "arxiv_id": "2401.00688",
+  "assignments": [],
+  "core_model_summary": "The paper proposes HyperNEO, a framework combining mixed-membership stochastic block models for hypergraphs with dimensionality reduction, which is a statistical network inference technique without canonical mathematical model instantiation.",
+  "_model": "claude-haiku-4-5"
+}

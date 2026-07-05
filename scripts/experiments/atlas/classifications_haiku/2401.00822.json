@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2401.00822",
+  "assignments": [
+    {
+      "template_id": "langevin_sde",
+      "confidence": 0.85,
+      "twist": "eigenvalue dynamics of density matrices under continuous quantum monitoring with dephasing"
+    }
+  ],
+  "core_model_summary": "Stochastic equations governing density matrix eigenvalue evolution in continuously monitored quantum systems undergoing pure dephasing or measurement-induced purification."
+}

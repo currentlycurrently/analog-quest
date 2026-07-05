@@ -1,0 +1,42 @@
+{
+  "arxiv_id": "2401.00948",
+  "_model": "claude-fable-5-agent-20260705-v2",
+  "core_model": {
+    "object_type": "statistical_model",
+    "structure_summary": "An equilibrium ensemble over configurations of two interleaved families of binary (plus-or-minus one) units on a one-dimensional chain, with an energy comprising nearest-neighbor bilinear couplings within one family, bilinear couplings linking each unit of the second family to its two neighbors in the first, and linear bias terms of unequal strength on the two families; exact ensemble averages exhibit a sharp switch of order between the families at a critical bias and crossover temperature.",
+    "canonical_form": "E = -a \\sum_{i} x_i x_{i+1} - b \\sum_{i} x_i - c \\sum_{i} (x_i + x_{i+1})\\, y_i - d \\sum_{i} y_i, \\quad x_i, y_i \\in \\{\\pm 1\\}, \\quad P(\\{x,y\\}) \\propto e^{-E/T}, \\quad \\langle x_i \\rangle = -\\partial_b F",
+    "linearity": "nonlinear",
+    "stochastic": true,
+    "spatial_structure": "lattice",
+    "structural_features": [
+      "spin_or_binary_units",
+      "pairwise_coupling",
+      "energy_functional",
+      "driving_term",
+      "free_energy_minimization",
+      "phase_transition",
+      "symmetry_breaking"
+    ],
+    "variables": [
+      {"role": "state", "meaning": "binary units of the first family on chain sites, coupled to nearest neighbors"},
+      {"role": "state", "meaning": "binary units of the second family, each coupled to two adjacent first-family units"},
+      {"role": "parameter", "meaning": "intra-family nearest-neighbor coupling strength"},
+      {"role": "parameter", "meaning": "inter-family coupling strength (sign frustrating alignment)"},
+      {"role": "parameter", "meaning": "external bias with different weights on the two families"},
+      {"role": "parameter", "meaning": "ensemble temperature controlling the order-disorder balance"}
+    ]
+  },
+  "deterministic_skeleton": {
+    "object_type": "optimization",
+    "summary": "Minimization of a quadratic-plus-linear energy over binary configurations on a one-dimensional chain, where at a critical bias value one family of units becomes exactly degenerate (macroscopically many minimizers) while the other stays fully ordered.",
+    "structural_features": [
+      "energy_functional",
+      "spin_or_binary_units",
+      "pairwise_coupling",
+      "driving_term",
+      "symmetry_breaking"
+    ]
+  },
+  "confidence": 0.8,
+  "notes": "Core model is the two-family binary-unit chain energy with unequal linear biases, studied exactly (transfer-matrix-type results, crossover temperature T0 from a transcendental condition). The 'phase switch' is a sharp finite-temperature crossover rather than a true singular transition (forbidden in one dimension); the phase_transition tag is used for this qualitative switch at critical parameter values. The skeleton is the zero-temperature energy-minimization problem whose field-tuned degeneracy structure (one sublattice degenerate, the other ordered) drives all results."
+}

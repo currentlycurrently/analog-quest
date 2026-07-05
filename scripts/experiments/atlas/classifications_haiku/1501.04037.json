@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "1501.04037",
+  "assignments": [
+    {
+      "template_id": "sine_gordon",
+      "confidence": 0.93,
+      "twist": "driven and damped with external ac-signal and thermal noise in Josephson junction"
+    }
+  ],
+  "core_model_summary": "Sine-Gordon equation describing phase dynamics in long Josephson junctions, driven by ac-signal and subject to damping and thermal fluctuations."
+}

@@ -1,0 +1,10 @@
+{
+  "arxiv_id": "1709.01726",
+  "_model": "claude-fable-5-agent-20260705",
+  "assignments": [
+    {"template_id": "sir_compartmental",
+      "confidence": 0.92,
+      "twist": "SIRS-type compartmental model with temporary immunity applied to rumor spreading, extended by a second counter-rumor compartment acting like a vaccination term, analyzed via basic reproduction number and equilibrium stability"}
+  ],
+  "core_model_summary": "A deterministic compartmental epidemic (SIRS) model of rumor propagation with mass-action transmission and a second, vaccination-like counter-rumor that lowers the effective reproduction number."
+}
